@@ -28,6 +28,6 @@ class ShowWindowButtons(Tweak):
 
 TWEAK_GROUPS = (
         TweakGroup(
-            "GNOME Shell",
+            "Shell",
             ShowWindowButtons()),
 )
