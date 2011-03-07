@@ -6,7 +6,8 @@ class TweakSwitch(Gtk.HBox):
 
         self._settings = settings
         lbl = Gtk.Label(self._settings.schema_get_summary(key))
-        self.pack_start(lbl, False, False, 0)
+        lbl.props.xalign = 0.0
+        self.pack_start(lbl, True, False, 0)
 
         self._sw = Gtk.Switch()
         self.pack_start(self._sw, False, False, 0)

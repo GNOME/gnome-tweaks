@@ -42,5 +42,5 @@ class GSettingsSetting(Gio.Settings):
 
 if __name__ == "__main__":
     key = "draw-background"
-    setting = GSettingsSetting("org.gnome.desktop.background")
-    print setting.schema_get_summary(key),setting.schema_get_description(key)
+    s = GSettingsSetting("org.gnome.desktop.background")
+    print s.schema_get_summary(key), s.schema_get_description(key)

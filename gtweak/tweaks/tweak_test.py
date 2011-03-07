@@ -9,11 +9,10 @@ class _TestTweak(Tweak):
 
 TWEAK_GROUPS = (
         TweakGroup(
-            "foo",
+            "Test Foo Bar",
             _TestTweak("foo bar", "does foo bar"),
             _TestTweak("foo baz", "does foo baz")),
         TweakGroup(
-            "red",
-            _TestTweak("red blue", "red blue green"),
-            _TestTweak("blue green", "orange yellow"))
+            "Test Many Settings",
+            *[_TestTweak("name: " + str(d), "desc: " + str(d)) for d in range(50)]),
 )
