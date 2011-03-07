@@ -14,6 +14,7 @@ class GConfSetting:
 
     def _run_gconftool(self, command):
         if command not in self._cmd_cache:
+            print "executing gconftool. YUCK!"
             p = subprocess.Popen(["gconftool-2", command, self._key], stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
             stdout, stderr = p.communicate()
             if p.returncode == 0:
@@ -36,6 +37,14 @@ class GConfSetting:
             return self._client.get_bool(self._key)
         elif self._type == str:
             return self._client.get_string(self._key)
+        else:
+            assert(False)
+
+    def set_value(self, value):
+        if self._type == bool:
+            self._client.set_bool(self._key, value)
+        elif self._type == str:
+            self._client.set_string(self._key, value)
         else:
             assert(False)
 
