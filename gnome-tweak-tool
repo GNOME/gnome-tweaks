@@ -9,17 +9,25 @@ import gtweak
 from gtweak.tweakmodel import TweakModel
 
 class TweakView:
-    def __init__(self, pre_selection_change_cb, post_selection_change_cb, model):
-        self._pre_selection_change_cb = pre_selection_change_cb
-        self._post_selection_change_cb = post_selection_change_cb
+    def __init__(self, notebook, entry, tweak_box, model):
+        self._notebook = notebook
+        self._entry_manager = EntryManager(
+            entry,
+            self._on_search,
+            self._on_search_cancel)
 
         self._model = model
-        self._treeview = Gtk.TreeView(model=model)        
-        self._treeview.props.headers_visible = False
-        column = Gtk.TreeViewColumn("Tweak", Gtk.CellRendererText(), text=TweakModel.COLUMN_NAME)
-        self._treeview.append_column(column)
-        
-        self._treeview.get_selection().connect("changed", self._on_selection_changed)
+        self._model.load_tweaks()
+
+        self.treeview = Gtk.TreeView(model=model)        
+        self.treeview.props.headers_visible = False
+        self.treeview.append_column(
+                Gtk.TreeViewColumn(
+                        "Tweak", Gtk.CellRendererText(), text=TweakModel.COLUMN_NAME))
+        self.treeview.get_selection().connect("changed", self._on_selection_changed)
+
+        #add all tweaks
+        map(lambda t: tweak_box.pack_start(t.widget, False, False, 0), self._model.tweaks)
 
     def show_tweaks(self, tweaks):
         map(Gtk.Widget.show_all, [t.widget for t in tweaks])
@@ -35,12 +43,27 @@ class TweakView:
                 t.widget.hide()
 
     def select_none(self):
-        self._treeview.get_selection().unselect_all()
+        self.treeview.get_selection().unselect_all()
+
+    def _on_search(self, txt):
+        tweaks = self._model.search_matches(txt)
+        self.show_only_tweaks(tweaks)
+        self.select_none()
+        self._notebook.set_current_page(1)
+
+    def _on_search_cancel(self):
+        self._notebook.set_current_page(0)
+
+    def _on_pre_selection_change(self):
+        self._notebook.set_current_page(0)
+
+    def _on_post_selection_change(self):
+        self._notebook.set_current_page(1)
 
     def _on_selection_changed(self, selection):
         model, selected = selection.get_selected()
         if selected:
-            self._pre_selection_change_cb()
+            self._on_pre_selection_change()
             
             #apparently iters do not persist over iteration, so use treepaths instead
             path_selected = model.get_path(selected)
@@ -57,7 +80,7 @@ class TweakView:
             print "show", tweakgroup.name
             self.show_tweaks(tweakgroup.tweaks)
             
-            self._post_selection_change_cb()
+            self._on_post_selection_change()
             
 class EntryManager:
 
@@ -116,46 +139,22 @@ class MainWindow:
         welcome = self._builder.get_object('welcome_image')
         welcome.set_from_file(os.path.join(gtweak.DATA_DIR, 'welcome.png'))
         
-        self._model = TweakModel()
-        self._model.load_tweaks()
-        
+        notebook = self._builder.get_object('notebook')
+        entry = self._builder.get_object('search_entry')
+        tweak_box = self._builder.get_object('tweak_vbox')
+        model = TweakModel()
         self._view = TweakView(
-                    self._on_pre_selection_change,
-                    self._on_post_selection_change,
-                    self._model)
-        self._builder.get_object('overview_sw').add(self._view._treeview)
-        self._notebook = self._builder.get_object('notebook')
-        
-        self._tweak_box = self._builder.get_object('tweak_vbox')
-        map(lambda t: self._tweak_box.pack_start(t.widget, False, False, 0), self._model.tweaks)
-        
-        EntryManager(
-            self._builder.get_object('search_entry'),
-            self._on_search,
-            self._on_search_cancel)
+                        notebook,
+                        entry,
+                        tweak_box,
+                        model)
+        self._builder.get_object('overview_sw').add(self._view.treeview)
 
         window = self._builder.get_object('main_window')
         window.set_size_request(640, 480)
         window.connect('destroy', Gtk.main_quit)
         window.show_all()
         
-    def _on_search(self, txt):
-        tweaks = self._model.search_matches(txt)
-        self._view.show_only_tweaks(tweaks)
-        self._view.select_none()
-        self._notebook.set_current_page(1)
-
-    def _on_search_cancel(self):
-        self._notebook.set_current_page(0)
-        pass
-
-    def _on_pre_selection_change(self):
-        self._notebook.set_current_page(0)
-        pass
-
-    def _on_post_selection_change(self):
-        self._notebook.set_current_page(1)
-
     def run(self):
         Gtk.main()
 

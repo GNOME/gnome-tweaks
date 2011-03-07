@@ -14,13 +14,19 @@ class Tweak:
     def widget(self):
         raise NotImplementedError
 
+    @property
+    def widget_for_size_group(self):
+        return None
+
     def search_matches(self, txt):
         return txt in self.name or txt in self.description
 
 class TweakGroup:
-    def __init__(self, name, *tweaks):
+    def __init__(self, name, *tweaks, **options):
         self.name = name
         self.tweaks = [t for t in tweaks]
+
+        self.enable_size_group = options.get('size_group')
 
 class TweakModel(Gtk.ListStore):
     (COLUMN_NAME,
