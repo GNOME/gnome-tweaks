@@ -17,15 +17,6 @@ class TweakGroup:
         self.name = name
         self.tweaks = [t for t in tweaks]
 
-    def show_all_tweaks(self):
-        map(Gtk.Widget.show_all, [t.widget for t in self.tweaks])
-
-    def hide_all_tweaks(self):
-        map(Gtk.Widget.hide, [t.widget for t in self.tweaks])
-        
-    def get_tweak_widgets(self):
-        return [t.widget for t in self.tweaks]
-
 class _TestTweak(Tweak):
     def __init__(self, name, description):
         Tweak.__init__(self, name, description)
@@ -37,6 +28,14 @@ class TweakModel(Gtk.ListStore):
 
     def __init__(self):
         super(TweakModel, self).__init__(str, object)
+
+    @property
+    def tweaks(self):
+        return [t for row in self for t in row[TweakModel.COLUMN_TWEAK].tweaks]
+
+    @property
+    def tweak_groups(self):
+        return [row[TweakModel.COLUMN_TWEAK] for row in self]
 
     def load_tweaks(self):
         self.add_tweak_group(
@@ -52,27 +51,7 @@ class TweakModel(Gtk.ListStore):
 
     def add_tweak_group(self, tweakgroup):
         self.append([tweakgroup.name, tweakgroup])
-
-    #You almost have it! The way to do nested list comprehensions is to put the for statements in the same order as they would go in regular nested for statements.
-    #
-    #Thus, this
-    #
-    #for inner_list in outer_list:
-    #    for item in inner_list:
-    #        ...
-    #corresponds to
-    #
-    #[... for inner_list in outer_list for item in inner_list]        
-    def foreach_tweak_widget(self, func, *args):
-        for row in self:
-            for t in row[TweakModel.COLUMN_TWEAK].get_tweak_widgets():
-                func(t, *args)
-                
-    def get_matching(self, txt):
-        m = []
-        for row in self:
-            for t in row[TweakModel.COLUMN_TWEAK].tweaks:
-                if t.search_matches(txt):
-                    m.append(t)
-        return m
+      
+    def search_matches(self, txt):
+        return [t for t in self.tweaks if t.search_matches(txt)]
         

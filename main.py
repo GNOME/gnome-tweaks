@@ -6,19 +6,32 @@ from gi.repository import Gtk, Gdk
 
 from tweakmodel import TweakModel
 
-class TweakView(Gtk.TreeView):
-    def __init__(self, pre_selection_change_cb, post_selection_change_cb, *args, **kwargs):
-        super(TweakView, self).__init__(*args, **kwargs)
-
+class TweakView:
+    def __init__(self, pre_selection_change_cb, post_selection_change_cb, model):
         self._pre_selection_change_cb = pre_selection_change_cb
         self._post_selection_change_cb = post_selection_change_cb
-        
-        self.props.headers_visible = False
+
+        self._model = model
+        self._treeview = Gtk.TreeView(model=model)        
+        self._treeview.props.headers_visible = False
         column = Gtk.TreeViewColumn("Tweak", Gtk.CellRendererText(), text=TweakModel.COLUMN_NAME)
-        self.append_column(column)
+        self._treeview.append_column(column)
         
-        self.get_selection().connect("changed", self._on_selection_changed)
-        
+        self._treeview.get_selection().connect("changed", self._on_selection_changed)
+
+    def show_tweaks(self, tweaks):
+        map(Gtk.Widget.show_all, [t.widget for t in tweaks])
+
+    def hide_tweaks(self, tweaks):
+        map(Gtk.Widget.hide, [t.widget for t in tweaks])
+
+    def show_only_tweaks(self, show_tweaks):
+        for t in self._model.tweaks:
+            if t in show_tweaks:
+                t.widget.show_all()
+            else:
+                t.widget.hide()
+
     def _on_selection_changed(self, selection):
         model, selected = selection.get_selected()
         if selected:
@@ -32,19 +45,15 @@ class TweakView(Gtk.TreeView):
                 if model.get_path(root) != path_selected:
                     tweakgroup = model.get_value(root, model.COLUMN_TWEAK)
                     print "hide", tweakgroup.name
-                    tweakgroup.hide_all_tweaks()
+                    self.hide_tweaks(tweakgroup.tweaks)
                 root = model.iter_next(root)
             #show selected
             tweakgroup = model.get_value(selected, model.COLUMN_TWEAK)
             print "show", tweakgroup.name
-            tweakgroup.show_all_tweaks()
+            self.show_tweaks(tweakgroup.tweaks)
             
             self._post_selection_change_cb()
             
-    def add_tweak_widget(self, tweak):
-        pass
-        
-
 class EntryManager:
 
     SYMBOLIC = ""#"-symbolic"
@@ -98,15 +107,15 @@ class MainWindow:
         self._model = TweakModel()
         self._model.load_tweaks()
         
-        view = TweakView(
+        self._view = TweakView(
                     self._on_pre_selection_change,
                     self._on_post_selection_change,
-                    model=self._model)
-        self._builder.get_object('overview_sw').add(view)
+                    self._model)
+        self._builder.get_object('overview_sw').add(self._view._treeview)
         self._notebook = self._builder.get_object('notebook')
         
         self._tweak_box = self._builder.get_object('tweak_vbox')
-        self._model.foreach_tweak_widget(lambda w, box: box.pack_start(w, False, False, 0), self._tweak_box)
+        map(lambda t: self._tweak_box.pack_start(t.widget, False, False, 0), self._model.tweaks)
         
         EntryManager(
             self._builder.get_object('search_entry'),
@@ -118,20 +127,14 @@ class MainWindow:
         window.show_all()
         
     def _on_search(self, txt):
-        print "SEARCH", txt
-        print self._model.get_matching(txt)
+        tweaks = self._model.search_matches(txt)
+        self._view.show_only_tweaks(tweaks)
 
     def _on_pre_selection_change(self):
-        print "pre -", self._notebook.get_current_page()
         self._notebook.set_current_page(0)
-        
-        #if on welcome screen, switch to main page (only happens once)
-        if self._notebook.get_current_page() == 0:
-            self._notebook.set_current_page(1)
 
     def _on_post_selection_change(self):
         self._notebook.set_current_page(1)
-        print "post -", self._notebook.get_current_page()
 
     def run(self):
         Gtk.main()
