@@ -24,7 +24,7 @@ class _GSettingsSchema:
 
 class GSettingsSetting:
     def __init__(self, schema_name):
-        self._settings = Gio.Settings(schema_name)
+        self.gsettings = Gio.Settings(schema_name)
         self._schema = _GSettingsSchema(schema_name)
 
     def get_summary(self, key):
@@ -34,10 +34,10 @@ class GSettingsSetting:
         return self._schema._schema[key]["description"]
 
     def get_value(self, key):
-        return self._settings[key]
+        return self.gsettings[key]
 
     def get_all(self, key):
-        return dict(key=key, value=self._settings[key], **self._schema._schema[key])
+        return dict(key=key, value=self.gsettings[key], **self._schema._schema[key])
 
 if __name__ == "__main__":
     setting = GSettingsSetting("org.gnome.desktop.background")
