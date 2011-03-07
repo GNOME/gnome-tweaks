@@ -30,25 +30,31 @@ def build_combo_box_text(selected, *values):
 
     return combo
 
+def build_horizontal_sizegroup():
+    sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
+    sg.props.ignore_hidden = True
+    return sg
+
 class _GSettingsTweak(Tweak):
-    def __init__(self, schema_name, key_name):
+    def __init__(self, schema_name, key_name, **options):
         self.settings = GSettingsSetting(schema_name)
-        Tweak.__init__(self, self.settings.schema_get_summary(key_name), self.settings.schema_get_description(key_name))
+        Tweak.__init__(self, self.settings.schema_get_summary(key_name), self.settings.schema_get_description(key_name), **options)
 
 class GSettingsSwitchTweak(_GSettingsTweak):
-    def __init__(self, schema_name, key_name):
-        _GSettingsTweak.__init__(self, schema_name, key_name)
+    def __init__(self, schema_name, key_name, **options):
+        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
 
         w = Gtk.Switch()
         self.settings.bind(key_name, w, "active", Gio.SettingsBindFlags.DEFAULT)
         self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+        self.widget_for_size_group = w
 
 class GSettingsFontButtonTweak(_GSettingsTweak):
-    def __init__(self, schema_name, key_name):
-        _GSettingsTweak.__init__(self, schema_name, key_name)
+    def __init__(self, schema_name, key_name, **options):
+        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
 
         w = Gtk.FontButton()
         self.settings.bind(key_name, w, "font-name", Gio.SettingsBindFlags.DEFAULT)
         self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
-
+        self.widget_for_size_group = w
 

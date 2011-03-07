@@ -6,9 +6,11 @@ import gtweak
 from gi.repository import Gtk
 
 class Tweak:
-    def __init__(self, name, description):
+    def __init__(self, name, description, **options):
         self.name = name
         self.description = description
+
+        self.size_group = options.get('size_group')
 
     @property
     def widget(self):
@@ -22,11 +24,13 @@ class Tweak:
         return txt in self.name or txt in self.description
 
 class TweakGroup:
-    def __init__(self, name, *tweaks, **options):
+    def __init__(self, name, *tweaks):
         self.name = name
         self.tweaks = [t for t in tweaks]
 
-        self.enable_size_group = options.get('size_group')
+        for t in tweaks:
+            if t.size_group and t.widget_for_size_group:
+                t.size_group.add_widget(t.widget_for_size_group)
 
 class TweakModel(Gtk.ListStore):
     (COLUMN_NAME,
