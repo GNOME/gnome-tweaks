@@ -8,7 +8,7 @@ def build_label_beside_widget(txt, widget, hbox=None):
         hbox = Gtk.HBox()
     lbl = Gtk.Label(txt)
     lbl.props.xalign = 0.0
-    hbox.pack_start(lbl, True, False, 0)
+    hbox.pack_start(lbl, True, True, 0)
     hbox.pack_start(widget, False, False, 0)
     return hbox
 
