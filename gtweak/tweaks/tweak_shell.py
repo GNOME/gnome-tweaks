@@ -4,12 +4,6 @@ from gtweak.gconf import GConfSetting
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.widgets import build_label_beside_widget, build_combo_box_text
 
-#class GSettingsSwitchTweak(Tweak):
-#    def __init__(self, schema_name, key_name):
-#        settings = GSettingsSetting(schema_name)
-#        Tweak.__init__(self, settings.schema_get_summary(key_name), settings.schema_get_description(key_name))
-#        self.widget = TweakSwitch(settings, key_name)
-
 class ShowWindowButtons(Tweak):
     def __init__(self):
         Tweak.__init__(self, "Window buttons", "Should the maximize and minimize buttons be shown")
