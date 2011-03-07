@@ -22,23 +22,25 @@ class _GSettingsSchema:
             import traceback
             traceback.print_exc()
 
-class GSettingsSetting:
-    def __init__(self, schema_name):
-        self.gsettings = Gio.Settings(schema_name)
-        self._schema = _GSettingsSchema(schema_name)
+_SCHEMA_CACHE = {}
 
-    def get_summary(self, key):
+class GSettingsSetting(Gio.Settings):
+    def __init__(self, schema_name):
+        Gio.Settings.__init__(self, schema_name)
+        if schema_name not in _SCHEMA_CACHE:
+            _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name)
+        self._schema = _SCHEMA_CACHE[schema_name]
+
+    def schema_get_summary(self, key):
         return self._schema._schema[key]["summary"]
         
-    def get_description(self, key):
+    def schema_get_description(self, key):
         return self._schema._schema[key]["description"]
 
-    def get_value(self, key):
-        return self.gsettings[key]
-
-    def get_all(self, key):
-        return dict(key=key, value=self.gsettings[key], **self._schema._schema[key])
+    def schema_get_all(self, key):
+        return self._schema._schema[key]
 
 if __name__ == "__main__":
+    key = "draw-background"
     setting = GSettingsSetting("org.gnome.desktop.background")
-    print setting.get_all("draw-background")
+    print setting.schema_get_summary(key),setting.schema_get_description(key)

@@ -7,7 +7,7 @@ from gtweak.widgets import TweakSwitch
 class GSettingsSwitchTweak(Tweak):
     def __init__(self, schema_name, key_name):
         settings = GSettingsSetting(schema_name)
-        Tweak.__init__(self, settings.get_summary(key_name), settings.get_description(key_name))
+        Tweak.__init__(self, settings.schema_get_summary(key_name), settings.schema_get_description(key_name))
         self.widget = TweakSwitch(settings, key_name)
 
 TWEAK_GROUPS = (

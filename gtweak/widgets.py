@@ -5,13 +5,13 @@ class TweakSwitch(Gtk.HBox):
         Gtk.HBox.__init__(self)
 
         self._settings = settings
-        lbl = Gtk.Label(self._settings.get_summary(key))
+        lbl = Gtk.Label(self._settings.schema_get_summary(key))
         self.pack_start(lbl, False, False, 0)
 
         self._sw = Gtk.Switch()
         self.pack_start(self._sw, False, False, 0)
 
-        self._settings.gsettings.bind(key, self._sw, "active", Gio.SettingsBindFlags.DEFAULT)
+        self._settings.bind(key, self._sw, "active", Gio.SettingsBindFlags.DEFAULT)
 
         self.show_all()
 
