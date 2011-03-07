@@ -4,7 +4,7 @@ import os.path
 
 from gi.repository import Gtk, Gdk
 
-from tweakmodel import TweakModel
+from gtweak.tweakmodel import TweakModel
 
 class TweakView:
     def __init__(self, pre_selection_change_cb, post_selection_change_cb, model):
