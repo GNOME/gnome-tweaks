@@ -63,23 +63,28 @@ class EntryManager:
 
     SYMBOLIC = ""#"-symbolic"
 
-    def __init__(self, search_entry, search_cb):
+    def __init__(self, search_entry, search_cb, search_cancel_cb):
         self._entry = search_entry
         self._search_cb = search_cb
-        self._entry.props.secondary_icon_name = "edit-find" + EntryManager.SYMBOLIC
+        self._search_cancel_cb = search_cancel_cb
         self._entry.connect("changed", self._on_changed)
         self._entry.connect("key-press-event", self._on_key_press)
         self._entry.connect("icon-release", self._on_clear_icon_release)
+        self._on_changed(self._entry)
 
         self._entry_filter = ""
+
+    def _search(self):
+        txt = self._entry.get_text()
+        if txt:
+            self._search_cb(txt)
+
+    def _search_cancel(self):
+        self._search_cancel_cb()
+        self._entry.set_text("")
         
     def _on_changed(self, entry):
-        txt = self._entry.get_text()
-        if txt == self._entry_filter:
-            return
-        
-        self._entry_filter = txt
-        if not self._entry_filter:
+        if not self._entry.get_text():
             self._entry.set_properties(
                     secondary_icon_name="edit-find" + EntryManager.SYMBOLIC,
                     secondary_icon_activatable=False,
@@ -92,13 +97,13 @@ class EntryManager:
     
     def _on_key_press(self, entry, event):
         if event.keyval == Gdk.KEY_Return:
-            self._search_cb(self._entry.get_text())
+            self._search()
         elif event.keyval == Gdk.KEY_Escape:
-            self._entry.set_text("")
+            self._search_cancel()
     
     def _on_clear_icon_release(self, *args):
-        self._entry.set_text("")
-
+        self._search_cancel()
+        
 class MainWindow:
     def __init__(self):
         self._builder = Gtk.Builder()
@@ -126,7 +131,8 @@ class MainWindow:
         
         EntryManager(
             self._builder.get_object('search_entry'),
-            self._on_search)
+            self._on_search,
+            self._on_search_cancel)
 
         window = self._builder.get_object('main_window')
         window.set_size_request(640, 480)
@@ -137,9 +143,15 @@ class MainWindow:
         tweaks = self._model.search_matches(txt)
         self._view.show_only_tweaks(tweaks)
         self._view.select_none()
+        self._notebook.set_current_page(1)
+
+    def _on_search_cancel(self):
+        self._notebook.set_current_page(0)
+        pass
 
     def _on_pre_selection_change(self):
         self._notebook.set_current_page(0)
+        pass
 
     def _on_post_selection_change(self):
         self._notebook.set_current_page(1)
