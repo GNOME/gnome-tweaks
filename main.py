@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
 import os.path
+import optparse
 
 from gi.repository import Gtk, Gdk
 
+import gtweak
 from gtweak.tweakmodel import TweakModel
 
 class TweakView:
@@ -101,11 +103,13 @@ class MainWindow:
     def __init__(self):
         self._builder = Gtk.Builder()
 
-        filename = os.path.join('data', 'shell.ui')
+        assert(os.path.exists(gtweak.DATA_DIR))
+
+        filename = os.path.join(gtweak.DATA_DIR, 'shell.ui')
         self._builder.add_from_file(filename)
         
         welcome = self._builder.get_object('welcome_image')
-        welcome.set_from_file(os.path.join('data', 'welcome2.png'))
+        welcome.set_from_file(os.path.join(gtweak.DATA_DIR, 'welcome.png'))
         
         self._model = TweakModel()
         self._model.load_tweaks()
@@ -144,4 +148,25 @@ class MainWindow:
         Gtk.main()
 
 if __name__ == '__main__':
+    parser = optparse.OptionParser()
+    parser.add_option("-t", "--test", action="store_true",
+                  help="Enable test code")
+    parser.add_option("-s", "--schema-dir",
+                  help="GSesettings schema dir", metavar="FILE")
+    options, args = parser.parse_args()
+
+    try:
+        from gtweak.defs import GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR
+    except ImportError:
+        GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas/"
+        _me = os.path.abspath(os.path.dirname(__file__))
+        TWEAK_DIR = os.path.join(_me, "gtweak", "tweaks")
+        DATA_DIR = os.path.join(_me, "data")
+
+    gtweak.GSETTINGS_SCHEMA_DIR = options.schema_dir or GSETTINGS_SCHEMA_DIR
+    gtweak.TWEAK_DIR = TWEAK_DIR
+    gtweak.DATA_DIR = DATA_DIR
+    gtweak.ENABLE_TEST = options.test
+
     MainWindow().run()
+

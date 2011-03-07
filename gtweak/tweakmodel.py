@@ -1,6 +1,8 @@
 import glob
 import os.path
 
+import gtweak
+
 from gi.repository import Gtk
 
 class Tweak:
@@ -26,6 +28,8 @@ class TweakModel(Gtk.ListStore):
 
     def __init__(self):
         super(TweakModel, self).__init__(str, object)
+        self._tweak_dir = gtweak.TWEAK_DIR
+        assert(os.path.exists(self._tweak_dir))
 
     @property
     def tweaks(self):
@@ -39,9 +43,15 @@ class TweakModel(Gtk.ListStore):
         if 1:
             tweak_files = [
                     os.path.splitext(os.path.split(f)[-1])[0]
-                        for f in glob.glob(os.path.join("gtweak", "tweaks", "tweak_*.py"))]
+                        for f in glob.glob(os.path.join(self._tweak_dir, "tweak_*.py"))]
         else:
             tweak_files = ["tweak_test"]
+
+        if not gtweak.ENABLE_TEST:
+            try:
+                tweak_files.remove("tweak_test")
+            except ValueError:
+                pass
         
         mods = __import__("gtweak.tweaks", globals(), locals(), tweak_files, 0)
         for mod in [getattr(mods, file_name) for file_name in tweak_files]:

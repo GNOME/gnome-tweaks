@@ -1,16 +1,22 @@
 import os.path
 import xml.dom.minidom
 
+import gtweak
+
 from gi.repository import Gio
 
 class _GSettingsSchema:
-    def __init__(self, schema_name, schema_dir="/home/john/GNOME/install/share/glib-2.0/schemas/", schema_file=None):
+    def __init__(self, schema_name, schema_dir=None, schema_file=None):
+        if not schema_dir:
+            schema_dir = gtweak.GSETTINGS_SCHEMA_DIR
         if not schema_file:
             schema_file = schema_dir + schema_name + ".gschema.xml"
         
+        print "creating schema cache: ", schema_file
+
         assert(os.path.exists(schema_file))
         self._schema = {}
-        
+
         try:
             dom = xml.dom.minidom.parse(schema_file)
             for schema in dom.getElementsByTagName("schema"):

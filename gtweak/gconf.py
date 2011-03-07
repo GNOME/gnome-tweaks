@@ -3,8 +3,12 @@ import subprocess
 from gi.repository import GConf
 
 class GConfSetting:
-    def __init__(self, key):
+    def __init__(self, key, _type):
         self._key = key
+        self._type = _type
+
+        assert(self._type in (str, bool))
+
         self._client = GConf.Client.get_default()
         self._cmd_cache = {}
 
@@ -27,8 +31,16 @@ class GConfSetting:
     def schema_get_all(self):
         return {"summary":self.schema_get_summary(), "description":self.schema_get_description()}
 
+    def get_value(self):
+        if self._type == bool:
+            return self._client.get_bool(self._key)
+        elif self._type == str:
+            return self._client.get_string(self._key)
+        else:
+            assert(False)
+
 if __name__ == "__main__":
     key = "/apps/metacity/general/compositing_manager"
-    s = GConfSetting(key)
+    s = GConfSetting(key, bool)
     print s.schema_get_summary(), s.schema_get_description()
-    print s.schema_get_all()
+    print s.get_value()
