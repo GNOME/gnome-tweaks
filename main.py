@@ -32,6 +32,9 @@ class TweakView:
             else:
                 t.widget.hide()
 
+    def select_none(self):
+        self._treeview.get_selection().unselect_all()
+
     def _on_selection_changed(self, selection):
         model, selected = selection.get_selected()
         if selected:
@@ -129,6 +132,7 @@ class MainWindow:
     def _on_search(self, txt):
         tweaks = self._model.search_matches(txt)
         self._view.show_only_tweaks(tweaks)
+        self._view.select_none()
 
     def _on_pre_selection_change(self):
         self._notebook.set_current_page(0)
