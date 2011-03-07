@@ -30,21 +30,25 @@ def build_combo_box_text(selected, *values):
 
     return combo
 
-class GSettingsSwitch(Gtk.HBox):
-    def __init__(self, settings, key):
-        Gtk.HBox.__init__(self)
-        self._settings = settings
-
-        self._sw = Gtk.Switch()
-        self._settings.bind(key, self._sw, "active", Gio.SettingsBindFlags.DEFAULT)
-
-        build_label_beside_widget(self._settings.schema_get_summary(key), self._sw, self)
-        self.show_all()
-
-class GSettingsSwitchTweak(Tweak):
+class _GSettingsTweak(Tweak):
     def __init__(self, schema_name, key_name):
-        settings = GSettingsSetting(schema_name)
-        Tweak.__init__(self, settings.schema_get_summary(key_name), settings.schema_get_description(key_name))
-        self.widget = GSettingsSwitch(settings, key_name)
+        self.settings = GSettingsSetting(schema_name)
+        Tweak.__init__(self, self.settings.schema_get_summary(key_name), self.settings.schema_get_description(key_name))
+
+class GSettingsSwitchTweak(_GSettingsTweak):
+    def __init__(self, schema_name, key_name):
+        _GSettingsTweak.__init__(self, schema_name, key_name)
+
+        w = Gtk.Switch()
+        self.settings.bind(key_name, w, "active", Gio.SettingsBindFlags.DEFAULT)
+        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+
+class GSettingsFontButtonTweak(_GSettingsTweak):
+    def __init__(self, schema_name, key_name):
+        _GSettingsTweak.__init__(self, schema_name, key_name)
+
+        w = Gtk.FontButton()
+        self.settings.bind(key_name, w, "font-name", Gio.SettingsBindFlags.DEFAULT)
+        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
 
 
