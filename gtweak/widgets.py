@@ -61,3 +61,15 @@ class GSettingsFontButtonTweak(_GSettingsTweak):
         self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
         self.widget_for_size_group = w
 
+class GSettingsRangeTweak(_GSettingsTweak):
+    def __init__(self, schema_name, key_name, **options):
+        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+
+        #returned variant is range:(min, max)
+        _min, _max = self.settings.get_range(key_name)[1]
+
+        w = Gtk.HScale.new_with_range(_min, _max, options.get('adjustment_step', 1))
+        self.settings.bind(key_name, w.get_adjustment(), "value", Gio.SettingsBindFlags.DEFAULT)
+        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+        self.widget_for_size_group = w
+
