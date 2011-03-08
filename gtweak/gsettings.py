@@ -3,7 +3,7 @@ import xml.dom.minidom
 
 import gtweak
 
-from gi.repository import Gio
+from gi.repository import Gio, GLib
 
 class _GSettingsSchema:
     def __init__(self, schema_name, schema_dir=None, schema_file=None):
@@ -45,6 +45,12 @@ class GSettingsSetting(Gio.Settings):
 
     def schema_get_all(self, key):
         return self._schema._schema[key]
+
+    def get_value(self, key):
+        return Gio.Settings.get_value(self,key).unpack()
+
+    def set_value(self, key, value):
+        Gio.Settings.set_value(self, key, GLib.Variant('s', value))
 
 if __name__ == "__main__":
     key = "draw-background"

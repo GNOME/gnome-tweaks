@@ -5,8 +5,8 @@ from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.widgets import build_label_beside_widget, build_combo_box_text
 
 class ShowWindowButtons(Tweak):
-    def __init__(self):
-        Tweak.__init__(self, "Window buttons", "Should the maximize and minimize buttons be shown")
+    def __init__(self, **options):
+        Tweak.__init__(self, "Window buttons", "Should the maximize and minimize buttons be shown", **options)
 
         self._gconf = GConfSetting("/desktop/gnome/shell/windows/button_layout", str)
 
@@ -23,7 +23,6 @@ class ShowWindowButtons(Tweak):
         _iter = combo.get_active_iter()
         if _iter:
             value = combo.get_model().get_value(_iter, 0)
-            print "selected", value
             self._gconf.set_value(value)
 
 TWEAK_GROUPS = (
