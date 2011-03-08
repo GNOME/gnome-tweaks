@@ -45,15 +45,15 @@ if __name__ == '__main__':
     parser.add_option("-t", "--test", action="store_true",
                   help="Enable test and debug code")
     parser.add_option("-p", "--prefix",
-                  help="Installation prefix (for gsettings schema, themes, etc)", metavar="FILE")
+                  help="Installation prefix (for gsettings schema, themes, etc)", metavar="[/, /usr]")
     options, args = parser.parse_args()
 
     try:
         from gtweak.defs import GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR, PKG_DATA_DIR
     except ImportError:
-        _prefix = options.prefix or "/"
-        DATA_DIR = os.path.join(_prefix, "usr", "share")
-        GSETTINGS_SCHEMA_DIR = os.path.join(_prefix, "usr", "share", "glib-2.0", "schemas")
+        _prefix = options.prefix or "/usr"
+        DATA_DIR = os.path.join(_prefix, "share")
+        GSETTINGS_SCHEMA_DIR = os.path.join(_prefix, "share", "glib-2.0", "schemas")
         _me = os.path.abspath(os.path.dirname(__file__))
         TWEAK_DIR = os.path.join(_me, "gtweak", "tweaks")
         PKG_DATA_DIR = os.path.join(_me, "data")
