@@ -15,3 +15,10 @@ gui_DATA = \
 EXTRA_DIST = \
 	$(bin_SCRIPTS) \
 	$(gui_DATA)
+
+CLEANFILES = \
+	$(wildcard $(srcdir)/gtweak/*.pyc) \
+	$(wildcard $(srcdir)/gtweak/tweaks/*.pyc)
+
+DISTCLEANFILES = \
+	gtweak/defs.py
