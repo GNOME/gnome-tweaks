@@ -12,6 +12,9 @@ gui_DATA = \
 	data/shell.ui \
 	data/welcome.png
 
+sysdir = $(datadir)/applications
+sys_DATA = gnome-tweak-tool.desktop
+
 EXTRA_DIST = \
 	$(bin_SCRIPTS) \
 	$(gui_DATA)
