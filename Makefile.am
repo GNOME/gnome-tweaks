@@ -12,12 +12,13 @@ gui_DATA = \
 	data/shell.ui \
 	data/welcome.png
 
-sysdir = $(datadir)/applications
-sys_DATA = gnome-tweak-tool.desktop
+desktopdir = $(datadir)/applications
+desktop_DATA = data/gnome-tweak-tool.desktop
 
 EXTRA_DIST = \
 	$(bin_SCRIPTS) \
-	$(gui_DATA)
+	$(gui_DATA) \
+	$(desktop_DATA)
 
 CLEANFILES = \
 	$(wildcard $(srcdir)/gtweak/*.pyc) \
