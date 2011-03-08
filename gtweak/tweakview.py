@@ -29,9 +29,9 @@ class TweakView:
     def hide_tweaks(self, tweaks):
         map(Gtk.Widget.hide, [t.widget for t in tweaks])
 
-    def show_only_tweaks(self, show_tweaks):
+    def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
-            if t in show_tweaks:
+            if t in tweaks:
                 t.widget.show_all()
             else:
                 t.widget.hide()
@@ -66,12 +66,10 @@ class TweakView:
             while root:
                 if model.get_path(root) != path_selected:
                     tweakgroup = model.get_value(root, model.COLUMN_TWEAK)
-                    print "hide", tweakgroup.name
                     self.hide_tweaks(tweakgroup.tweaks)
                 root = model.iter_next(root)
             #show selected
             tweakgroup = model.get_value(selected, model.COLUMN_TWEAK)
-            print "show", tweakgroup.name
             self.show_tweaks(tweakgroup.tweaks)
             
             self._on_post_selection_change()
@@ -88,8 +86,6 @@ class EntryManager:
         self._entry.connect("key-press-event", self._on_key_press)
         self._entry.connect("icon-release", self._on_clear_icon_release)
         self._on_changed(self._entry)
-
-        self._entry_filter = ""
 
     def _search(self):
         txt = self._entry.get_text()

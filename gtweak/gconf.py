@@ -15,7 +15,9 @@ class GConfSetting:
     def _run_gconftool(self, command):
         if command not in self._cmd_cache:
             print "executing gconftool. YUCK!"
-            p = subprocess.Popen(["gconftool-2", command, self._key], stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
+            p = subprocess.Popen(
+                    ["gconftool-2", command, self._key],
+                    stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
             stdout, stderr = p.communicate()
             if p.returncode == 0:
                 self._cmd_cache[command] = stdout.strip()

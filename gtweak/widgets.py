@@ -38,7 +38,10 @@ def build_horizontal_sizegroup():
 class _GSettingsTweak(Tweak):
     def __init__(self, schema_name, key_name, **options):
         self.settings = GSettingsSetting(schema_name)
-        Tweak.__init__(self, self.settings.schema_get_summary(key_name), self.settings.schema_get_description(key_name), **options)
+        Tweak.__init__(self,
+            self.settings.schema_get_summary(key_name),
+            self.settings.schema_get_description(key_name),
+            **options)
 
 class GSettingsSwitchTweak(_GSettingsTweak):
     def __init__(self, schema_name, key_name, **options):
