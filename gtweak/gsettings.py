@@ -10,7 +10,7 @@ class _GSettingsSchema:
         if not schema_dir:
             schema_dir = gtweak.GSETTINGS_SCHEMA_DIR
         if not schema_file:
-            schema_file = schema_dir + schema_name + ".gschema.xml"
+            schema_file = os.path.join(schema_dir,schema_name) + ".gschema.xml"
         
         print "creating schema cache: ", schema_file
 
