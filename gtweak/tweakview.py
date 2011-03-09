@@ -38,7 +38,9 @@ class TweakView:
             tweak_container.add(sw)
 
         #add all tweaks
-        map(lambda t: tweak_box.pack_start(t.widget, False, False, 0), self._model.tweaks)
+        for t in self._model.tweaks:
+            tweak_box.pack_start(t.widget, False, False, 0)
+            t.set_notify_cb(self._on_tweak_notify)
 
     def show_tweaks(self, tweaks):
         map(Gtk.Widget.show_all, [t.widget for t in tweaks])
@@ -55,6 +57,9 @@ class TweakView:
 
     def select_none(self):
         self.treeview.get_selection().unselect_all()
+
+    def _on_tweak_notify(self, tweak, desc, btn, func):
+        print desc
 
     def _on_search(self, txt):
         tweaks = self._model.search_matches(txt)

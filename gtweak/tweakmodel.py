@@ -9,8 +9,11 @@ class Tweak:
     def __init__(self, name, description, **options):
         self.name = name
         self.description = description
-
         self.size_group = options.get('size_group')
+
+        #FIXME: I would have rather done this as a GObject signal, but it
+        #would prohibit other tweaks from inheriting from GtkWidgets
+        self._notify_cb = None
 
     @property
     def widget(self):
@@ -22,6 +25,17 @@ class Tweak:
 
     def search_matches(self, txt):
         return txt in self.name or txt in self.description
+
+    def set_notify_cb(self, func):
+        self._notify_cb = func
+
+    def notify_action_required(self, desc, btn, func):
+        if self._notify_cb:
+            self._notify_cb(self, desc, btn, func)
+
+    def notify_error(self, desc):
+        if self._notify_cb:
+            self._notify_cb(self, desc, None, None)
 
 class TweakGroup:
     def __init__(self, name, *tweaks):
