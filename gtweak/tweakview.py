@@ -1,4 +1,4 @@
-from gi.repository import Gtk, Gdk
+from gi.repository import Gtk, Gdk, GObject
 
 import gtweak
 from gtweak.tweakmodel import TweakModel
@@ -6,6 +6,7 @@ from gtweak.tweakmodel import TweakModel
 class TweakView:
     def __init__(self, builder, model):
         self._notebook = builder.get_object('notebook')
+        self._detail_vbox = builder.get_object('detail_vbox')
         self._entry_manager = EntryManager(
             builder.get_object('search_entry'),
             self._on_search,
@@ -57,8 +58,24 @@ class TweakView:
     def select_none(self):
         self.treeview.get_selection().unselect_all()
 
+    def _on_tweak_notify_response(self, info, response, func):
+        self._detail_vbox.remove(info)
+        func()
+
     def _on_tweak_notify(self, tweak, desc, btn, func):
-        print desc
+        info = Gtk.InfoBar()
+        info.get_content_area().add(Gtk.Label(desc))
+        self._detail_vbox.pack_end(info, False, False, 0)
+
+        if btn and func:
+            info.props.message_type = Gtk.MessageType.INFO
+            info.add_button(btn, Gtk.ResponseType.OK)
+            info.connect("response", self._on_tweak_notify_response, func)
+        else:
+            info.props.message_type = Gtk.MessageType.ERROR
+            GObject.timeout_add_seconds(2, lambda box, widget: box.remove(widget), self._detail_vbox, info)
+
+        info.show_all()
 
     def _on_search(self, txt):
         tweaks = self._model.search_matches(txt)

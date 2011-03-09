@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 from gi.repository import Gtk
 
 from gtweak.tweakmodel import Tweak, TweakGroup
@@ -18,8 +20,8 @@ class _TestButtonTweak(Tweak):
         if self._need_action:
             self.notify_action_required(
                     self.name,
-                    Gtk.Button("Ack: " + self.name),
-                    lambda x: x)
+                    Gtk.STOCK_OK,
+                    lambda : print("GOT CALLBACK"))
         else:
             self.notify_error(self.name)
 
