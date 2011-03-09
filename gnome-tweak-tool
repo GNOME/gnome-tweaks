@@ -21,14 +21,9 @@ class MainWindow:
         welcome = builder.get_object('welcome_image')
         welcome.set_from_file(os.path.join(gtweak.PKG_DATA_DIR, 'welcome.png'))
         
-        notebook = builder.get_object('notebook')
-        entry = builder.get_object('search_entry')
-        tweak_box = builder.get_object('tweak_vbox')
         model = TweakModel()
         view = TweakView(
-                    notebook,
-                    entry,
-                    tweak_box,
+                    builder,
                     model)
         builder.get_object('overview_sw').add(view.treeview)
 

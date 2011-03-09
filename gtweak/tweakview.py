@@ -3,10 +3,10 @@ from gi.repository import Gtk, Gdk
 from gtweak.tweakmodel import TweakModel
 
 class TweakView:
-    def __init__(self, notebook, entry, tweak_box, model):
-        self._notebook = notebook
+    def __init__(self, builder, model):
+        self._notebook = builder.get_object('notebook')
         self._entry_manager = EntryManager(
-            entry,
+            builder.get_object('search_entry'),
             self._on_search,
             self._on_search_cancel)
 
@@ -19,6 +19,23 @@ class TweakView:
                 Gtk.TreeViewColumn(
                         "Tweak", Gtk.CellRendererText(), text=TweakModel.COLUMN_NAME))
         self.treeview.get_selection().connect("changed", self._on_selection_changed)
+
+        tweak_container = builder.get_object('tweak_container')
+        tweak_box = Gtk.VBox(spacing=10)
+        if 1:
+            #works, but window grows
+            tweak_container.add(tweak_box)
+            #FIXME: BUG - if tabs are shown then
+            #self._notebook.props.show_tabs = True
+        else:
+            #This is what I want to work the above is fixed
+            sw = Gtk.ScrolledWindow()
+            sw.props.shadow_type = Gtk.ShadowType.NONE
+            vp = Gtk.Viewport()
+            vp.props.shadow_type = Gtk.ShadowType.NONE
+            sw.add(vp)
+            vp.add(tweak_box)
+            tweak_container.add(sw)
 
         #add all tweaks
         map(lambda t: tweak_box.pack_start(t.widget, False, False, 0), self._model.tweaks)
