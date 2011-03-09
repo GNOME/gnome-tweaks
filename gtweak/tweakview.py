@@ -1,5 +1,6 @@
 from gi.repository import Gtk, Gdk
 
+import gtweak
 from gtweak.tweakmodel import TweakModel
 
 class TweakView:
@@ -22,11 +23,9 @@ class TweakView:
 
         tweak_container = builder.get_object('tweak_container')
         tweak_box = Gtk.VBox(spacing=10)
-        if 1:
+        if not gtweak.ENABLE_TEST:
             #works, but window grows
             tweak_container.add(tweak_box)
-            #FIXME: BUG - if tabs are shown then
-            #self._notebook.props.show_tabs = True
         else:
             #This is what I want to work the above is fixed
             sw = Gtk.ScrolledWindow()
