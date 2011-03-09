@@ -2,7 +2,7 @@ AC_INIT([gnome-tweak-tool], [0.1], [john.stowers@gmail.com])
 
 AM_INIT_AUTOMAKE([foreign])
 
-AM_PATH_PYTHON 
+AM_PATH_PYTHON([2.6])
 GLIB_GSETTINGS
 
 DESKTOP_SCHEMAS_REQUIRED_VERSION=0.1.7
