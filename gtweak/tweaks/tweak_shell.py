@@ -110,13 +110,17 @@ class ThemeInstaller(Tweak):
             self.notify_error("Error installing theme")
 
     def _shell_reload_theme(self):
-        #reloading the theme does not work, shell must be restarted
+        #reloading the theme works OK, however there are some problems with reloading images.
+        #https://bugzilla.gnome.org/show_bug.cgi?id=644125
+        #however, smashing the whole shell just to change themes is pretty extreme. So we
+        #just let the user-theme extension pick up the change by itself
+        #
         #self._shell.reload_theme()
-        self.notify_action_required(
-                "The shell must be restarted to apply the theme",
-                "Restart",
-                lambda: self._shell.restart())
-        
+        #self.notify_action_required(
+        #        "The shell must be restarted to apply the theme",
+        #        "Restart",
+        #        lambda: self._shell.restart())
+        pass
 
     def _on_file_set(self, chooser):
         f = chooser.get_filename()
