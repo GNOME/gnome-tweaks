@@ -37,6 +37,8 @@ def build_horizontal_sizegroup():
 
 class _GSettingsTweak(Tweak):
     def __init__(self, schema_name, key_name, **options):
+        self.schema_name = schema_name
+        self.key_name = key_name
         self.settings = GSettingsSetting(schema_name)
         Tweak.__init__(self,
             self.settings.schema_get_summary(key_name),
@@ -72,4 +74,31 @@ class GSettingsRangeTweak(_GSettingsTweak):
         self.settings.bind(key_name, w.get_adjustment(), "value", Gio.SettingsBindFlags.DEFAULT)
         self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
         self.widget_for_size_group = w
+
+class GSettingsComboEnumTweak(_GSettingsTweak):
+    def __init__(self, schema_name, key_name, **options):
+        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+
+        _type, values = self.settings.get_range(key_name)
+        value = self.settings.get_string(key_name)
+        self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
+
+        w = build_combo_box_text(value, *[(v,v) for v in values])
+        w.connect('changed', self._on_combo_changed)
+        self.combo = w
+
+        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+        self.widget_for_size_group = w
+
+
+    def _values_are_different(self, combo):
+        #to stop bouncing back and forth between changed signals
+        return self.settings.get_string(self.key_name) != \
+               combo.get_model().get_value(combo.get_active_iter(), 0)
+
+    def _on_setting_changed(self, setting, key):
+        print "%s SETTING CHANGED: %s" % (key, self.setting.get_string(key))
+
+    def _on_combo_changed(self, combo):
+        print "COMBO CHANGED", combo.get_model().get_value(combo.get_active_iter(), 0)
 

@@ -10,7 +10,7 @@ from gtweak.gconf import GConfSetting
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gshellwrapper import GnomeShell
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import build_label_beside_widget, build_combo_box_text, build_horizontal_sizegroup
+from gtweak.widgets import GSettingsComboEnumTweak, build_label_beside_widget, build_combo_box_text, build_horizontal_sizegroup
 
 class ShowWindowButtons(Tweak):
     def __init__(self, **options):
@@ -144,11 +144,14 @@ class ThemeInstaller(Tweak):
         self._settings.set_value(ThemeInstaller.THEME_GSETTINGS_NAME, "")
         self._shell_reload_theme()
 
+
+
 sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = (
         TweakGroup(
             "Shell",
             ShowWindowButtons(size_group=sg),
-            ThemeInstaller(size_group=sg)),
+            ThemeInstaller(size_group=sg),
+            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg)),
 )
