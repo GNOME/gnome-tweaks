@@ -25,6 +25,7 @@ AS_AC_EXPAND(TWEAKDIR, "${pythondir}/gtweak/tweaks")
 
 AC_CONFIG_FILES([ po/Makefile.in
 Makefile
+data/Makefile
 gtweak/defs.py
 ])
 AC_OUTPUT
