@@ -7,18 +7,8 @@ nobase_dist_app_PYTHON = \
 	$(wildcard $(srcdir)/gtweak/*.py) \
 	$(wildcard $(srcdir)/gtweak/tweaks/*.py)
 
-guidir = $(pkgdatadir)
-gui_DATA = \
-	data/shell.ui \
-	data/welcome.png
-
-desktopdir = $(datadir)/applications
-desktop_DATA = data/gnome-tweak-tool.desktop
-
 EXTRA_DIST = config.rpath m4/ChangeLog  \
-	$(bin_SCRIPTS) \
-	$(gui_DATA) \
-	$(desktop_DATA)
+	$(bin_SCRIPTS)
 
 CLEANFILES = \
 	$(wildcard $(srcdir)/gtweak/*.pyc) \
@@ -27,6 +17,6 @@ CLEANFILES = \
 DISTCLEANFILES = \
 	gtweak/defs.py
 
-SUBDIRS = po
+SUBDIRS = data po
 
 ACLOCAL_AMFLAGS = -I m4
