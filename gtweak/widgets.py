@@ -91,14 +91,23 @@ class GSettingsComboEnumTweak(_GSettingsTweak):
         self.widget_for_size_group = w
 
 
-    def _values_are_different(self, combo):
-        #to stop bouncing back and forth between changed signals
+    def _values_are_different(self):
+        #to stop bouncing back and forth between changed signals. I suspect there must be a nicer
+        #Gio.settings_bind way to fix this
         return self.settings.get_string(self.key_name) != \
-               combo.get_model().get_value(combo.get_active_iter(), 0)
+               self.combo.get_model().get_value(self.combo.get_active_iter(), 0)
 
     def _on_setting_changed(self, setting, key):
-        print "%s SETTING CHANGED: %s" % (key, self.setting.get_string(key))
+        assert key == self.key_name
+        val = self.settings.get_string(key)
+        model = self.combo.get_model()
+        for row in model:
+            if val == row[0]:
+                self.combo.set_active_iter(row.iter) #iter_ = self.combo.get_model().get_iter(row)
+                break
 
     def _on_combo_changed(self, combo):
-        print "COMBO CHANGED", combo.get_model().get_value(combo.get_active_iter(), 0)
+        val = self.combo.get_model().get_value(self.combo.get_active_iter(), 0)
+        if self._values_are_different():
+            self.settings.set_value(self.key_name, val)
 
