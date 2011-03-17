@@ -26,10 +26,10 @@ class GConfSetting:
         return self._cmd_cache[command]
 
     def schema_get_summary(self):
-        return self._run_gconftool("--short-docs")
+        return self._run_gconftool("--short-docs") or self._key.split("/")[-1].replace("_"," ").title()
         
     def schema_get_description(self):
-        return self._run_gconftool("--long-docs").strip()
+        return self._run_gconftool("--long-docs")
 
     def schema_get_all(self):
         return {"summary":self.schema_get_summary(), "description":self.schema_get_description()}
