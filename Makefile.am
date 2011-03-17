@@ -15,7 +15,7 @@ gui_DATA = \
 desktopdir = $(datadir)/applications
 desktop_DATA = data/gnome-tweak-tool.desktop
 
-EXTRA_DIST = \
+EXTRA_DIST = config.rpath m4/ChangeLog  \
 	$(bin_SCRIPTS) \
 	$(gui_DATA) \
 	$(desktop_DATA)
@@ -26,3 +26,7 @@ CLEANFILES = \
 
 DISTCLEANFILES = \
 	gtweak/defs.py
+
+SUBDIRS = po
+
+ACLOCAL_AMFLAGS = -I m4
