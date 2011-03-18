@@ -7,6 +7,11 @@ class TweakView:
     def __init__(self, builder, model):
         self._notebook = builder.get_object('notebook')
         self._detail_vbox = builder.get_object('detail_vbox')
+        self._main_window = builder.get_object('main_window')
+
+        self._main_window.set_size_request(640, 480)
+        self._main_window.connect('destroy', Gtk.main_quit)
+
         self._entry_manager = EntryManager(
             builder.get_object('search_entry'),
             self._on_search,
@@ -41,6 +46,11 @@ class TweakView:
         for t in self._model.tweaks:
             tweak_box.pack_start(t.widget, False, False, 0)
             t.set_notify_cb(self._on_tweak_notify)
+
+    def run(self):
+        self._main_window.show_all()
+        self.hide_tweaks(self._model.tweaks)
+        Gtk.main()
 
     def show_tweaks(self, tweaks):
         map(Gtk.Widget.show_all, [t.widget for t in tweaks])

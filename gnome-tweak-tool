@@ -30,14 +30,8 @@ class MainWindow:
                     model)
         builder.get_object('overview_sw').add(view.treeview)
 
-        window = builder.get_object('main_window')
-        window.set_size_request(640, 480)
-        window.connect('destroy', Gtk.main_quit)
-        window.show_all()
+        view.run()
         
-    def run(self):
-        Gtk.main()
-
 if __name__ == '__main__':
     parser = optparse.OptionParser()
     parser.add_option("-t", "--test", action="store_true",
@@ -62,5 +56,5 @@ if __name__ == '__main__':
     gtweak.PKG_DATA_DIR = PKG_DATA_DIR
     gtweak.ENABLE_TEST = options.test
 
-    MainWindow().run()
+    MainWindow()
 
