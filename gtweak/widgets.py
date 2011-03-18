@@ -140,3 +140,16 @@ class GConfComboTweak(_GConfTweak):
             value = combo.get_model().get_value(_iter, 0)
             self.gconf.set_value(value)
 
+class GConfFontButtonTweak(_GConfTweak):
+    def __init__(self, key_name, key_type, **options):
+        _GConfTweak.__init__(self, key_name, key_type, **options)
+
+        w = Gtk.FontButton()
+        w.props.font_name = self.gconf.get_value()
+        w.connect("notify::font-name", self._on_fontbutton_changed)
+        self.widget = build_label_beside_widget(self.gconf.schema_get_summary(), w)
+        self.widget_for_size_group = w
+
+    def _on_fontbutton_changed(self, btn, param):
+        self.gconf.set_value(btn.props.font_name)
+
