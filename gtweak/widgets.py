@@ -2,6 +2,7 @@ from gi.repository import Gtk, Gio
 
 from gtweak.tweakmodel import Tweak
 from gtweak.gsettings import GSettingsSetting
+from gtweak.gconf import GConfSetting
 
 def build_label_beside_widget(txt, widget, hbox=None):
     if not hbox:
@@ -103,11 +104,39 @@ class GSettingsComboEnumTweak(_GSettingsTweak):
         model = self.combo.get_model()
         for row in model:
             if val == row[0]:
-                self.combo.set_active_iter(row.iter) #iter_ = self.combo.get_model().get_iter(row)
+                self.combo.set_active_iter(row.iter)
                 break
 
     def _on_combo_changed(self, combo):
         val = self.combo.get_model().get_value(self.combo.get_active_iter(), 0)
         if self._values_are_different():
             self.settings.set_value(self.key_name, val)
+
+class _GConfTweak(Tweak):
+    def __init__(self, key_name, key_type, **options):
+        self.gconf = GConfSetting(key_name, key_type)
+        Tweak.__init__(self,
+            self.gconf.schema_get_summary(),
+            self.gconf.schema_get_description(),
+            **options)
+
+class GConfComboTweak(_GConfTweak):
+    def __init__(self, key_name, key_type, key_options, **options):
+        _GConfTweak.__init__(self, key_name, key_type, **options)
+
+        assert len(key_options) > 0
+        assert len(key_options[0]) == 2
+
+        combo = build_combo_box_text(
+            self.gconf.get_value(),
+            *key_options)
+        combo.connect('changed', self._on_combo_changed)
+        self.widget = build_label_beside_widget(self.name, combo)
+        self.widget_for_size_group = combo
+
+    def _on_combo_changed(self, combo):
+        _iter = combo.get_active_iter()
+        if _iter:
+            value = combo.get_model().get_value(_iter, 0)
+            self.gconf.set_value(value)
 

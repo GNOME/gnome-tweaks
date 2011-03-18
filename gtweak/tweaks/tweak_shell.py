@@ -6,33 +6,21 @@ import tempfile
 from gi.repository import Gtk
 from gi.repository import GLib
 
-from gtweak.gconf import GConfSetting
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gshellwrapper import GnomeShell
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import GSettingsComboEnumTweak, build_label_beside_widget, build_combo_box_text, build_horizontal_sizegroup
+from gtweak.widgets import GConfComboTweak, GSettingsComboEnumTweak, build_label_beside_widget, build_horizontal_sizegroup
 
-class ShowWindowButtons(Tweak):
+class ShowWindowButtons(GConfComboTweak):
     def __init__(self, **options):
-        Tweak.__init__(self, "Window buttons", "Should the maximize and minimize buttons be shown", **options)
-
-        self._gconf = GConfSetting("/desktop/gnome/shell/windows/button_layout", str)
-
-        combo = build_combo_box_text(
-            self._gconf.get_value(),
-            (':close', 'Close Only'),
+        GConfComboTweak.__init__(self,
+            "/desktop/gnome/shell/windows/button_layout",
+            str,
+            ((':close', 'Close Only'),
             (':minimize,close', 'Minimize and Close'),
             (':maximize,close', 'Maximize and Close'),
-            (':minimize,maximize,close', 'All'))
-        combo.connect('changed', self._on_combo_changed)
-        self.widget = build_label_beside_widget(self.name, combo)
-        self.widget_for_size_group = combo
-
-    def _on_combo_changed(self, combo):
-        _iter = combo.get_active_iter()
-        if _iter:
-            value = combo.get_model().get_value(_iter, 0)
-            self._gconf.set_value(value)
+            (':minimize,maximize,close', 'All')),
+            **options)
 
 class _ThemeZipChooser(Gtk.FileChooserButton):
     def __init__(self):
