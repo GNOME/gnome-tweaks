@@ -112,6 +112,26 @@ class GSettingsComboEnumTweak(_GSettingsTweak):
         if self._values_are_different():
             self.settings.set_value(self.key_name, val)
 
+class GSettingsComboTweak(_GSettingsTweak):
+    def __init__(self, schema_name, key_name, key_options, **options):
+        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+
+        assert len(key_options) > 0
+        assert len(key_options[0]) == 2
+
+        combo = build_combo_box_text(
+                    self.settings.get_value(self.key_name),
+                    *key_options)
+        combo.connect('changed', self._on_combo_changed)
+        self.widget = build_label_beside_widget(self.name, combo)
+        self.widget_for_size_group = combo
+
+    def _on_combo_changed(self, combo):
+        _iter = combo.get_active_iter()
+        if _iter:
+            value = combo.get_model().get_value(_iter, 0)
+            self.settings.set_value(self.key_name, value)
+
 class _GConfTweak(Tweak):
     def __init__(self, key_name, key_type, **options):
         self.gconf = GConfSetting(key_name, key_type)
