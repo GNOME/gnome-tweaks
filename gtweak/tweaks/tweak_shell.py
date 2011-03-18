@@ -141,5 +141,6 @@ TWEAK_GROUPS = (
             "Shell",
             ShowWindowButtons(size_group=sg),
             ThemeInstaller(size_group=sg),
-            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg)),
+            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
+            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg)),
 )
