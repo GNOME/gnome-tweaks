@@ -9,7 +9,7 @@ from gi.repository import GLib
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gshellwrapper import GnomeShell
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import GConfComboTweak, GSettingsComboEnumTweak, build_label_beside_widget, build_horizontal_sizegroup
+from gtweak.widgets import GConfComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup
 
 class ShowWindowButtons(GConfComboTweak):
     def __init__(self, **options):
@@ -141,6 +141,7 @@ TWEAK_GROUPS = (
             "Shell",
             ShowWindowButtons(size_group=sg),
             ThemeInstaller(size_group=sg),
+            GSettingsSwitchTweak("org.gnome.shell.clock", "show-date", schema_filename="org.gnome.shell.gschema.xml"),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg)),
 )
