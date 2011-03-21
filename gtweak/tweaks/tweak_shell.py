@@ -139,9 +139,9 @@ sg = build_horizontal_sizegroup()
 TWEAK_GROUPS = (
         TweakGroup(
             "Shell",
+            GSettingsSwitchTweak("org.gnome.shell.clock", "show-date", schema_filename="org.gnome.shell.gschema.xml"),
             ShowWindowButtons(size_group=sg),
             ThemeInstaller(size_group=sg),
-            GSettingsSwitchTweak("org.gnome.shell.clock", "show-date", schema_filename="org.gnome.shell.gschema.xml"),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg)),
 )
