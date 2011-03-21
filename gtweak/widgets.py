@@ -40,7 +40,7 @@ class _GSettingsTweak(Tweak):
     def __init__(self, schema_name, key_name, **options):
         self.schema_name = schema_name
         self.key_name = key_name
-        self.settings = GSettingsSetting(schema_name)
+        self.settings = GSettingsSetting(schema_name, **options)
         Tweak.__init__(self,
             self.settings.schema_get_summary(key_name),
             self.settings.schema_get_description(key_name),
