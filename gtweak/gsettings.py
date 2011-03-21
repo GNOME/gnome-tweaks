@@ -40,7 +40,7 @@ class GSettingsSetting(Gio.Settings):
         Gio.Settings.__init__(self, schema_name)
         if schema_name not in _SCHEMA_CACHE:
             _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, **options)
-            print "Caching schema: ", _SCHEMA_CACHE[schema_name]
+            print "Caching gsettings: %s" % _SCHEMA_CACHE[schema_name]
 
         self._schema = _SCHEMA_CACHE[schema_name]
 

@@ -14,7 +14,6 @@ class GConfSetting:
 
     def _run_gconftool(self, command):
         if command not in self._cmd_cache:
-            print "executing gconftool. YUCK!"
             p = subprocess.Popen(
                     ["gconftool-2", command, self._key],
                     stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
@@ -23,6 +22,8 @@ class GConfSetting:
                 self._cmd_cache[command] = stdout.strip()
             else:
                 self._cmd_cache[command] = "ERROR: %s" % stderr.strip()
+
+        print "Caching gconf: %s (%s)" % (self, command)
         return self._cmd_cache[command]
 
     def schema_get_summary(self):
@@ -49,6 +50,9 @@ class GConfSetting:
             self._client.set_string(self._key, value)
         else:
             assert(False)
+
+    def __repr__(self):
+        return "<gtweak.gconf.GConfSetting: %s>" % self._key
 
 if __name__ == "__main__":
     key = "/apps/metacity/general/compositing_manager"
