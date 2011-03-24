@@ -1,7 +1,7 @@
 from gi.repository import Gtk
 
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import GSettingsRangeTweak, GSettingsFontButtonTweak, GConfFontButtonTweak, build_horizontal_sizegroup
+from gtweak.widgets import GSettingsRangeTweak, GSettingsFontButtonTweak, GConfFontButtonTweak, GSettingsComboTweak, build_horizontal_sizegroup
 
 sg = build_horizontal_sizegroup()
 
@@ -12,5 +12,7 @@ TWEAK_GROUPS = (
             GSettingsFontButtonTweak("org.gnome.desktop.interface", "font-name", size_group=sg),
             GSettingsFontButtonTweak("org.gnome.desktop.interface", "document-font-name", size_group=sg),
             GSettingsFontButtonTweak("org.gnome.desktop.interface", "monospace-font-name", size_group=sg),
-            GConfFontButtonTweak("/apps/metacity/general/titlebar_font", str, size_group=sg)),
+            GConfFontButtonTweak("/apps/metacity/general/titlebar_font", str, size_group=sg),
+            GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "hinting",
+                [(i, i.title()) for i in ("none", "slight", "medium", "full")], size_group=sg)),
 )
