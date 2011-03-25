@@ -39,10 +39,20 @@ class ThemeSwitcher(GSettingsComboTweak):
             [(t, t) for t in valid_themes],
             **options)
 
+class IconThemeSwitcher(GSettingsComboTweak):
+    def __init__(self, **options):
+        iconthemedir = os.path.join(gtweak.DATA_DIR, "icons")
+        GSettingsComboTweak.__init__(self,
+            "org.gnome.desktop.interface",
+            "icon-theme",
+            [(t, t) for t in os.listdir(iconthemedir)],
+            **options)
+            
 TWEAK_GROUPS = (
         TweakGroup(
             "Interface",
             GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons"),
-            ThemeSwitcher()),
+            ThemeSwitcher(),
+            IconThemeSwitcher()),
 )
