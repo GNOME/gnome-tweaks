@@ -31,5 +31,7 @@ TWEAK_GROUPS = (
             GSettingsFontButtonTweak("org.gnome.desktop.interface", "monospace-font-name", size_group=sg),
             GConfFontButtonTweak("/apps/metacity/general/titlebar_font", str, size_group=sg),
             GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "hinting",
-                [(i, i.title()) for i in ("none", "slight", "medium", "full")], size_group=sg)),
+                [(i, i.title()) for i in ("none", "slight", "medium", "full")], size_group=sg),
+            GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "antialiasing",
+                [(i, i.title()) for i in ("none", "grayscale", "rgba")], size_group=sg)),
 )
