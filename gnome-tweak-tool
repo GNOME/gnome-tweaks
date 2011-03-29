@@ -55,7 +55,13 @@ if __name__ == '__main__':
 
     try:
         from gtweak.defs import GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR, PKG_DATA_DIR
+        _defs_present = True
     except ImportError:
+        GSETTINGS_SCHEMA_DIR = TWEAK_DIR = DATA_DIR = PKG_DATA_DIR = ""
+        _defs_present = False
+
+    #the supplied prefix always beats the contents of defs
+    if options.prefix or not _defs_present:
         _prefix = options.prefix or "/usr"
         DATA_DIR = os.path.join(_prefix, "share")
         GSETTINGS_SCHEMA_DIR = os.path.join(_prefix, "share", "glib-2.0", "schemas")
