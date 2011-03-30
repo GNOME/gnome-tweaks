@@ -22,4 +22,4 @@ if ! which gnome-autogen.sh ; then
   exit 1
 fi
 
-. gnome-autogen.sh
+USE_GNOME2_MACROS=1 . gnome-autogen.sh

@@ -10,5 +10,8 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 
 EXTRA_DIST = \
 	$(gui_DATA) \
+	$(desktop_in_files)
+
+CLEANFILES = \
 	$(desktop_DATA)
 

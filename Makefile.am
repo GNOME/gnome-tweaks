@@ -7,7 +7,7 @@ nobase_dist_app_PYTHON = \
 	$(wildcard $(srcdir)/gtweak/*.py) \
 	$(wildcard $(srcdir)/gtweak/tweaks/*.py)
 
-EXTRA_DIST = config.rpath m4/ChangeLog  \
+EXTRA_DIST = \
 	$(bin_SCRIPTS)
 
 CLEANFILES = \
