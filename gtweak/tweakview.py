@@ -141,7 +141,7 @@ class TweakView:
             
 class EntryManager:
 
-    SYMBOLIC = ""#"-symbolic"
+    SYMBOLIC = "-symbolic"
 
     def __init__(self, search_entry, search_cb, search_cancel_cb):
         self._entry = search_entry
