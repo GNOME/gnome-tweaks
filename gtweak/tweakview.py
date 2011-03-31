@@ -46,18 +46,17 @@ class TweakView:
 
         tweak_container = builder.get_object('tweak_container')
         tweak_box = Gtk.VBox(spacing=10)
-        if not gtweak.ENABLE_TEST:
-            #works, but window grows
-            tweak_container.add(tweak_box)
-        else:
-            #This is what I want to work the above is fixed
-            sw = Gtk.ScrolledWindow()
-            sw.props.shadow_type = Gtk.ShadowType.NONE
-            vp = Gtk.Viewport()
-            vp.props.shadow_type = Gtk.ShadowType.NONE
-            sw.add(vp)
-            vp.add(tweak_box)
-            tweak_container.add(sw)
+
+        #FIXME: I may as well do this in the glade file now that
+        #https://bugzilla.gnome.org/show_bug.cgi?id=644268 is fixed
+        sw = Gtk.ScrolledWindow()
+        sw.props.shadow_type = Gtk.ShadowType.NONE
+        sw.props.hscrollbar_policy = Gtk.PolicyType.NEVER
+        vp = Gtk.Viewport()
+        vp.props.shadow_type = Gtk.ShadowType.NONE
+        sw.add(vp)
+        vp.add(tweak_box)
+        tweak_container.add(sw)
 
         #add all tweaks
         for t in self._model.tweaks:

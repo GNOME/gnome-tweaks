@@ -21,7 +21,7 @@ from gi.repository import Gtk
 
 import gtweak
 from gtweak.tweakmodel import TweakGroup
-from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak
+from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, build_horizontal_sizegroup
 
 class ThemeSwitcher(GSettingsComboTweak):
     """ Only shows themes that have variations for gtk+-3 and gtk+-2 """
@@ -47,12 +47,14 @@ class IconThemeSwitcher(GSettingsComboTweak):
             "icon-theme",
             [(t, t) for t in os.listdir(iconthemedir)],
             **options)
-            
+
+sg = build_horizontal_sizegroup()
+
 TWEAK_GROUPS = (
         TweakGroup(
             "Interface",
             GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons"),
-            ThemeSwitcher(),
-            IconThemeSwitcher()),
+            ThemeSwitcher(size_group=sg),
+            IconThemeSwitcher(size_group=sg)),
 )
