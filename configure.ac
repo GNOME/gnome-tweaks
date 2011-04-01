@@ -1,4 +1,4 @@
-AC_INIT([gnome-tweak-tool], [3.0.0], [john.stowers@gmail.com])
+AC_INIT([gnome-tweak-tool], [3.1.0], [john.stowers@gmail.com])
 
 AM_INIT_AUTOMAKE([foreign])
 
