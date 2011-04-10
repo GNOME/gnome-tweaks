@@ -41,11 +41,32 @@ class ThemeSwitcher(GSettingsComboTweak):
 
 class IconThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
+        valid_icon_themes = []
         iconthemedir = os.path.join(gtweak.DATA_DIR, "icons")
+        for t in os.listdir(iconthemedir):
+            if os.path.isdir(os.path.join(thdir, t)) and \
+                not os.path.exists(os.path.join(thdir, t, "cursors")):
+                 valid.append(t)
+
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "icon-theme",
             [(t, t) for t in os.listdir(iconthemedir)],
+            **options)
+
+class CursorThemeSwitcher(GSettingsComboTweak):
+    def __init__(self, **options):
+        valid_cursor_themes = []
+        cursorthemedir = os.path.join(gtweak.DATA_DIR, "icons")
+        for t in os.listdir(cursorthemedir):
+            if os.path.isdir(os.path.join(thdir, t)) and \
+                os.path.exists(os.path.join(thdir, t, "cursors")):
+                 valid.append(t)
+
+        GSettingsComboTweak.__init__(self,
+            "org.gnome.desktop.interface",
+            "cursor-theme",
+            [(t, t) for t in valid_cursor_themes],
             **options)
 
 sg = build_horizontal_sizegroup()
@@ -56,5 +77,6 @@ TWEAK_GROUPS = (
             GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons"),
             ThemeSwitcher(size_group=sg),
-            IconThemeSwitcher(size_group=sg)),
+            IconThemeSwitcher(size_group=sg),
+            CursorThemeSwitcher(size_group=sg)),
 )
