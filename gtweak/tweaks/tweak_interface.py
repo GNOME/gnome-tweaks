@@ -15,6 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
+import os
 import os.path
 
 from gi.repository import Gtk
@@ -25,13 +26,19 @@ from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, build_hori
 
 class ThemeSwitcher(GSettingsComboTweak):
     """ Only shows themes that have variations for gtk+-3 and gtk+-2 """
+    def getValidThemes(self, valid, thdir):
+        for t in os.listdir(thdir):
+            if os.path.exists(os.path.join(thdir, t, "gtk-2.0")) and \
+                os.path.exists(os.path.join(thdir, t, "gtk-3.0")):
+                 valid.append(t)
+            
     def __init__(self, **options):
         valid_themes = []
         themedir = os.path.join(gtweak.DATA_DIR, "themes")
-        for t in os.listdir(themedir):
-            if os.path.exists(os.path.join(themedir, t, "gtk-2.0")) and \
-               os.path.exists(os.path.join(themedir, t, "gtk-3.0")):
-                valid_themes.append(t)
+        self.getValidThemes(valid_themes, themedir)
+
+        themedir = os.path.join(os.getenv("HOME"), ".themes")
+        self.getValidThemes(valid_themes, themedir)
 
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
@@ -40,28 +47,40 @@ class ThemeSwitcher(GSettingsComboTweak):
             **options)
 
 class IconThemeSwitcher(GSettingsComboTweak):
+    def getValidIconThemes(self, valid, thdir):
+        for t in os.listdir(thdir):
+            if os.path.isdir(os.path.join(thdir, t)) and \
+                    not os.path.exists(os.path.join(thdir, t, "cursors")):
+                valid.append(t)
+
     def __init__(self, **options):
         valid_icon_themes = []
         iconthemedir = os.path.join(gtweak.DATA_DIR, "icons")
-        for t in os.listdir(iconthemedir):
-            if os.path.isdir(os.path.join(thdir, t)) and \
-                not os.path.exists(os.path.join(thdir, t, "cursors")):
-                 valid.append(t)
+        self.getValidIconThemes(valid_icon_themes, iconthemedir)
+
+        iconthemedir = os.path.join(os.getenv("HOME"), ".icons")
+        self.getValidIconThemes(valid_icon_themes, iconthemedir)
 
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "icon-theme",
-            [(t, t) for t in os.listdir(iconthemedir)],
+            [(t, t) for t in valid_icon_themes],
             **options)
 
 class CursorThemeSwitcher(GSettingsComboTweak):
-    def __init__(self, **options):
-        valid_cursor_themes = []
-        cursorthemedir = os.path.join(gtweak.DATA_DIR, "icons")
-        for t in os.listdir(cursorthemedir):
+    def getValidCursorThemes(self, valid, thdir):
+        for t in os.listdir(thdir):
             if os.path.isdir(os.path.join(thdir, t)) and \
                 os.path.exists(os.path.join(thdir, t, "cursors")):
                  valid.append(t)
+
+    def __init__(self, **options):
+        valid_cursor_themes = []
+        cursorthemedir = os.path.join(gtweak.DATA_DIR, "icons")
+        self.getValidCursorThemes(valid_cursor_themes, cursorthemedir)
+
+        cursorthemedir = os.path.join(os.getenv("HOME"), ".icons")
+        self.getValidCursorThemes(valid_cursor_themes, cursorthemedir)
 
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
