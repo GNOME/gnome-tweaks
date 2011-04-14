@@ -25,68 +25,62 @@ from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, build_horizontal_sizegroup
 
 class ThemeSwitcher(GSettingsComboTweak):
-    """ Only shows themes that have variations for gtk+-3 and gtk+-2 """
-    def getValidThemes(self, valid, thdir):
-        for t in os.listdir(thdir):
-            if os.path.exists(os.path.join(thdir, t, "gtk-2.0")) and \
-                os.path.exists(os.path.join(thdir, t, "gtk-3.0")):
-                 valid.append(t)
-            
     def __init__(self, **options):
-        valid_themes = []
-        themedir = os.path.join(gtweak.DATA_DIR, "themes")
-        self.getValidThemes(valid_themes, themedir)
-
-        themedir = os.path.join(os.getenv("HOME"), ".themes")
-        self.getValidThemes(valid_themes, themedir)
-
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "gtk-theme",
-            [(t, t) for t in valid_themes],
+            [(t, t) for t in self._get_valid_themes()],
             **options)
 
+    def _get_valid_themes(self):
+        """ Only shows themes that have variations for gtk+-3 and gtk+-2 """
+        valid = []
+        dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
+                 os.path.join(os.path.expanduser("~"), ".themes"))
+        for thdir in dirs:
+            for t in os.listdir(thdir):
+                if os.path.exists(os.path.join(thdir, t, "gtk-2.0")) and \
+                    os.path.exists(os.path.join(thdir, t, "gtk-3.0")):
+                     valid.append(t)
+        return valid
+
 class IconThemeSwitcher(GSettingsComboTweak):
-    def getValidIconThemes(self, valid, thdir):
-        for t in os.listdir(thdir):
-            if os.path.isdir(os.path.join(thdir, t)) and \
-                    not os.path.exists(os.path.join(thdir, t, "cursors")):
-                valid.append(t)
-
     def __init__(self, **options):
-        valid_icon_themes = []
-        iconthemedir = os.path.join(gtweak.DATA_DIR, "icons")
-        self.getValidIconThemes(valid_icon_themes, iconthemedir)
-
-        iconthemedir = os.path.join(os.getenv("HOME"), ".icons")
-        self.getValidIconThemes(valid_icon_themes, iconthemedir)
-
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "icon-theme",
-            [(t, t) for t in valid_icon_themes],
+            [(t, t) for t in self._get_valid_icon_themes()],
             **options)
 
+    def _get_valid_icon_themes(self):
+        valid = []
+        dirs = ( os.path.join(gtweak.DATA_DIR, "icons"),
+                 os.path.join(os.path.expanduser("~"), ".icons"))
+        for thdir in dirs:
+            for t in os.listdir(thdir):
+                if os.path.isdir(os.path.join(thdir, t)) and \
+                        not os.path.exists(os.path.join(thdir, t, "cursors")):
+                    valid.append(t)
+        return valid
+
 class CursorThemeSwitcher(GSettingsComboTweak):
-    def getValidCursorThemes(self, valid, thdir):
-        for t in os.listdir(thdir):
-            if os.path.isdir(os.path.join(thdir, t)) and \
-                os.path.exists(os.path.join(thdir, t, "cursors")):
-                 valid.append(t)
-
     def __init__(self, **options):
-        valid_cursor_themes = []
-        cursorthemedir = os.path.join(gtweak.DATA_DIR, "icons")
-        self.getValidCursorThemes(valid_cursor_themes, cursorthemedir)
-
-        cursorthemedir = os.path.join(os.getenv("HOME"), ".icons")
-        self.getValidCursorThemes(valid_cursor_themes, cursorthemedir)
-
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "cursor-theme",
-            [(t, t) for t in valid_cursor_themes],
+            [(t, t) for t in self._get_valid_cursor_themes()],
             **options)
+
+    def _get_valid_cursor_themes(self):
+        valid = []
+        dirs = ( os.path.join(gtweak.DATA_DIR, "icons"),
+                 os.path.join(os.path.expanduser("~"), ".icons"))
+        for thdir in dirs:
+            for t in os.listdir(thdir):
+                if os.path.isdir(os.path.join(thdir, t)) and \
+                    os.path.exists(os.path.join(thdir, t, "cursors")):
+                     valid.append(t)
+        return valid
 
 sg = build_horizontal_sizegroup()
 
