@@ -73,7 +73,6 @@ class ThemeInstaller(Tweak):
                 try:
                     self._settings = GSettingsSetting(ThemeInstaller.THEME_GSETTINGS_SCHEMA)
                     name = self._settings.get_value(ThemeInstaller.THEME_GSETTINGS_NAME)
-                    print "!!!!", name
                     error = None
                 except:
                     error = "User Theme extension schema missing"
