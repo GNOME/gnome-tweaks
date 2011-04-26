@@ -15,6 +15,9 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
+import os.path
+
+import gtweak
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GConfComboTweak, build_horizontal_sizegroup
 
@@ -31,11 +34,30 @@ class ActionClickTitlebarTweak(GConfComboTweak):
             [(o, o.replace("_"," ").title()) for o in schema_options],
             **options)
 
+class WindowThemeSwitcher(GConfComboTweak):
+    def __init__(self, **options):
+        GConfComboTweak.__init__(self,
+            "/apps/metacity/general/theme",
+            str,
+            [(t, t) for t in self._get_valid_themes()],
+            **options)
+
+    def _get_valid_themes(self):
+        valid = []
+        dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
+                 os.path.join(os.path.expanduser("~"), ".themes"))
+        for thdir in dirs:
+            for t in os.listdir(thdir):
+                if os.path.exists(os.path.join(thdir, t, "metacity-1")):
+                     valid.append(t)
+        return valid
+
 sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = (
         TweakGroup(
             "Windows",
+            WindowThemeSwitcher(size_group=sg),
             ActionClickTitlebarTweak("/apps/metacity/general/action_double_click_titlebar", size_group=sg),
             ActionClickTitlebarTweak("/apps/metacity/general/action_middle_click_titlebar", size_group=sg),
             ActionClickTitlebarTweak("/apps/metacity/general/action_right_click_titlebar", size_group=sg)),

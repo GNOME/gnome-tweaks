@@ -15,7 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
-import os
 import os.path
 
 from gi.repository import Gtk
@@ -24,7 +23,7 @@ import gtweak
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, build_horizontal_sizegroup
 
-class ThemeSwitcher(GSettingsComboTweak):
+class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
@@ -89,7 +88,7 @@ TWEAK_GROUPS = (
             "Interface",
             GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons"),
-            ThemeSwitcher(size_group=sg),
+            GtkThemeSwitcher(size_group=sg),
             IconThemeSwitcher(size_group=sg),
             CursorThemeSwitcher(size_group=sg)),
 )
