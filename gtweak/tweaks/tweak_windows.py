@@ -20,6 +20,7 @@ import os.path
 import gtweak
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GConfComboTweak, build_horizontal_sizegroup
+from gtweak.gconf import GConfSetting
 
 class ActionClickTitlebarTweak(GConfComboTweak):
     def __init__(self, key_name, **options):
@@ -37,11 +38,13 @@ class ActionClickTitlebarTweak(GConfComboTweak):
 class WindowThemeSwitcher(GConfComboTweak):
     def __init__(self, **options):
         GConfComboTweak.__init__(self,
-            "/apps/metacity/general/theme",
+            "/desktop/gnome/shell/windows/theme",
             str,
             [(t, t) for t in self._get_valid_themes()],
             **options)
 
+        #also need to change the fallback (metacity) window theme
+        self.gconf_metacity = GConfSetting("/apps/metacity/general/theme", str)
     def _get_valid_themes(self):
         valid = []
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
@@ -51,6 +54,15 @@ class WindowThemeSwitcher(GConfComboTweak):
                 if os.path.exists(os.path.join(thdir, t, "metacity-1")):
                      valid.append(t)
         return valid
+
+    def _on_combo_changed(self, combo):
+        #its probbably not too nice to dupe this function here, but i'm lazy
+        #and the real cause is the hidious gconf/shell/metacity override business
+        _iter = combo.get_active_iter()
+        if _iter:
+            value = combo.get_model().get_value(_iter, 0)
+            self.gconf.set_value(value)
+            self.gconf_metacity.set_value(value)
 
 sg = build_horizontal_sizegroup()
 
