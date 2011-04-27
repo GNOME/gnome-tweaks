@@ -31,6 +31,10 @@ def build_label_beside_widget(txt, widget, hbox=None):
     return hbox
 
 def build_combo_box_text(selected, *values):
+    """
+    builds a GtkComboBox and model containing the supplied values.
+    @values: a list of 2-tuples (value, name)
+    """
     store = Gtk.ListStore(str, str)
 
     selected_iter = None
