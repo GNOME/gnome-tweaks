@@ -20,6 +20,7 @@ import os.path
 from gi.repository import Gtk
 
 import gtweak
+from gtweak.utils import walk_directories
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, build_horizontal_sizegroup
 
@@ -33,14 +34,11 @@ class GtkThemeSwitcher(GSettingsComboTweak):
 
     def _get_valid_themes(self):
         """ Only shows themes that have variations for gtk+-3 and gtk+-2 """
-        valid = []
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
                  os.path.join(os.path.expanduser("~"), ".themes"))
-        for thdir in dirs:
-            for t in os.listdir(thdir):
-                if os.path.exists(os.path.join(thdir, t, "gtk-2.0")) and \
-                    os.path.exists(os.path.join(thdir, t, "gtk-3.0")):
-                     valid.append(t)
+        valid = walk_directories(dirs, lambda d:
+                    os.path.exists(os.path.join(d, "gtk-2.0")) and \
+                        os.path.exists(os.path.join(d, "gtk-3.0")))
         return valid
 
 class IconThemeSwitcher(GSettingsComboTweak):
@@ -52,14 +50,11 @@ class IconThemeSwitcher(GSettingsComboTweak):
             **options)
 
     def _get_valid_icon_themes(self):
-        valid = []
         dirs = ( os.path.join(gtweak.DATA_DIR, "icons"),
                  os.path.join(os.path.expanduser("~"), ".icons"))
-        for thdir in dirs:
-            for t in os.listdir(thdir):
-                if os.path.isdir(os.path.join(thdir, t)) and \
-                        not os.path.exists(os.path.join(thdir, t, "cursors")):
-                    valid.append(t)
+        valid = walk_directories(dirs, lambda d:
+                    os.path.isdir(d) and \
+                        not os.path.exists(os.path.join(d, "cursors")))
         return valid
 
 class CursorThemeSwitcher(GSettingsComboTweak):
@@ -71,14 +66,11 @@ class CursorThemeSwitcher(GSettingsComboTweak):
             **options)
 
     def _get_valid_cursor_themes(self):
-        valid = []
         dirs = ( os.path.join(gtweak.DATA_DIR, "icons"),
                  os.path.join(os.path.expanduser("~"), ".icons"))
-        for thdir in dirs:
-            for t in os.listdir(thdir):
-                if os.path.isdir(os.path.join(thdir, t)) and \
-                    os.path.exists(os.path.join(thdir, t, "cursors")):
-                     valid.append(t)
+        valid = walk_directories(dirs, lambda d:
+                    os.path.isdir(d) and \
+                        os.path.exists(os.path.join(d, "cursors")))
         return valid
 
 sg = build_horizontal_sizegroup()

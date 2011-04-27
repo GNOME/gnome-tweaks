@@ -18,6 +18,7 @@
 import os.path
 
 import gtweak
+from gtweak.utils import walk_directories
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GConfComboTweak, build_horizontal_sizegroup
 from gtweak.gconf import GConfSetting
@@ -45,14 +46,12 @@ class WindowThemeSwitcher(GConfComboTweak):
 
         #also need to change the fallback (metacity) window theme
         self.gconf_metacity = GConfSetting("/apps/metacity/general/theme", str)
+
     def _get_valid_themes(self):
-        valid = []
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
                  os.path.join(os.path.expanduser("~"), ".themes"))
-        for thdir in dirs:
-            for t in os.listdir(thdir):
-                if os.path.exists(os.path.join(thdir, t, "metacity-1")):
-                     valid.append(t)
+        valid = walk_directories(dirs, lambda d:
+                    os.path.exists(os.path.join(d, "metacity-1")))
         return valid
 
     def _on_combo_changed(self, combo):

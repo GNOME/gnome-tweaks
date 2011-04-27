@@ -20,6 +20,18 @@ import logging
 
 from gi.repository import GLib
 
+def walk_directories(dirs, filter_func):
+    valid = []
+    try:
+        for thdir in dirs:
+            if os.path.isdir(thdir):
+                for t in os.listdir(thdir):
+                    if filter_func(os.path.join(thdir, t)):
+                         valid.append(t)
+    except:
+        logging.critical("Error parsing directories", exc_info=True)
+    return valid
+
 class AutostartManager:
     def __init__(self, DATA_DIR, desktop_filename, exec_cmd="", extra_exec_args=""):
         self._desktop_file = os.path.join(DATA_DIR, "applications", desktop_filename)
