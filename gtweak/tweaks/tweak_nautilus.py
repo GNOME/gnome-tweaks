@@ -17,11 +17,29 @@
 
 from gi.repository import Gtk
 
+import gtweak
+from gtweak.utils import AutostartManager
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GSettingsSwitchTweak
+
+class DesktopIconTweak(GSettingsSwitchTweak):
+    def __init__(self, **options):
+        GSettingsSwitchTweak.__init__(self,
+            "org.gnome.desktop.background",
+            "show-desktop-icons",
+            **options)
+
+        #when the user enables nautilus to draw the desktop icons, set nautilus
+        #to autostart
+        self.nautilus = AutostartManager(gtweak.DATA_DIR, "nautilus.desktop", "nautilus -n")
+        self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
+
+    def _on_setting_changed(self, setting, key):
+        self.nautilus.update_start_at_login(
+                self.settings.get_boolean(key))
 
 TWEAK_GROUPS = (
         TweakGroup(
             "File Manager",
-            GSettingsSwitchTweak("org.gnome.desktop.background", "show-desktop-icons")),
+            DesktopIconTweak()),
 )

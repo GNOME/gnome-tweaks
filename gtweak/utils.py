@@ -16,14 +16,16 @@
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
 import os.path
+import logging
 
 from gi.repository import GLib
 
 class AutostartManager:
-    def __init__(self, DATA_DIR, desktop_filename, extra_exec_args=""):
-        self._desktop_file = os.path.join(DATA_DIR, desktop_filename)
+    def __init__(self, DATA_DIR, desktop_filename, exec_cmd="", extra_exec_args=""):
+        self._desktop_file = os.path.join(DATA_DIR, "applications", desktop_filename)
         self._autostart_file = os.path.join(
                                     GLib.get_user_config_dir(), "autostart", desktop_filename)
+        self._exec_cmd = exec_cmd
         self._extra_exec_args = " %s\n" % extra_exec_args
 
     def is_start_at_login_enabled(self):
@@ -36,25 +38,29 @@ class AutostartManager:
             return False
 
     def update_start_at_login(self, update):
+        logging.debug("updating autostart desktop file: %s" % update)
 
         if os.path.exists(self._autostart_file):
-            log.info("Removing autostart desktop file")
+            logging.info("Removing autostart desktop file")
             os.remove(self._autostart_file)
 
         if update:
             if not os.path.exists(self._desktop_file):
-                log.critical("Could not find desktop file: %s" % self._desktop_file)
+                logging.critical("Could not find desktop file: %s" % self._desktop_file)
                 return
 
-            log.info("Adding autostart desktop file")
+            logging.info("Adding autostart desktop file")
             #copy the original file to the new file, but add the extra exec args
             old = open(self._desktop_file, "r")
             new = open(self._autostart_file, "w")
 
             for l in old.readlines():         
                 if l.startswith("Exec="):
-                    new.write(l[0:-1])
-                    new.write(self._extra_exec_args)
+                    if self._exec_cmd:
+                        new.write("Exec=%s\n" % self._exec_cmd)
+                    else:
+                        new.write(l[0:-1])
+                        new.write(self._extra_exec_args)
                 else:
                     new.write(l)
 
