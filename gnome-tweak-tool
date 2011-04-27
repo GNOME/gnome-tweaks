@@ -79,7 +79,7 @@ if __name__ == '__main__':
     gtweak.PKG_DATA_DIR = PKG_DATA_DIR
     gtweak.ENABLE_TEST = options.test
 
-    logging.basicConfig()
+    logging.basicConfig(format="%(levelname)-8s: %(message)s", level=logging.INFO)
 
     MainWindow()
 

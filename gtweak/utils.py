@@ -34,6 +34,7 @@ def walk_directories(dirs, filter_func):
 
 class AutostartManager:
     def __init__(self, DATA_DIR, desktop_filename, exec_cmd="", extra_exec_args=""):
+        self._desktop_filename = desktop_filename
         self._desktop_file = os.path.join(DATA_DIR, "applications", desktop_filename)
         self._autostart_file = os.path.join(
                                     GLib.get_user_config_dir(), "autostart", desktop_filename)
@@ -50,10 +51,10 @@ class AutostartManager:
             return False
 
     def update_start_at_login(self, update):
-        logging.debug("updating autostart desktop file: %s" % update)
+        logging.debug("Updating autostart %s -> %s" % (self._desktop_filename, update))
 
         if os.path.exists(self._autostart_file):
-            logging.info("Removing autostart desktop file")
+            logging.info("Removing autostart %s" % self._autostart_file)
             os.remove(self._autostart_file)
 
         if update:
@@ -61,7 +62,7 @@ class AutostartManager:
                 logging.critical("Could not find desktop file: %s" % self._desktop_file)
                 return
 
-            logging.info("Adding autostart desktop file")
+            logging.info("Adding autostart %s" % self._autostart_file)
             #copy the original file to the new file, but add the extra exec args
             old = open(self._desktop_file, "r")
             new = open(self._autostart_file, "w")

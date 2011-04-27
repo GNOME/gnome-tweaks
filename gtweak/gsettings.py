@@ -15,6 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
+import logging
 import os.path
 import xml.dom.minidom
 
@@ -44,8 +45,7 @@ class _GSettingsSchema:
                                 "summary"       :   key.getElementsByTagName("summary")[0].childNodes[0].data,
                                 "description"   :   key.getElementsByTagName("description")[0].childNodes[0].data}
         except:
-            import traceback
-            traceback.print_exc()
+            logging.critical("Error parsing schema", exc_info=True)
 
     def __repr__(self):
         return "<gtweak.gsettings._GSettingsSchema: %s>" % self._schema_name
@@ -57,7 +57,7 @@ class GSettingsSetting(Gio.Settings):
         Gio.Settings.__init__(self, schema_name)
         if schema_name not in _SCHEMA_CACHE:
             _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, **options)
-            print "Caching gsettings: %s" % _SCHEMA_CACHE[schema_name]
+            logging.info("Caching gsettings: %s" % _SCHEMA_CACHE[schema_name])
 
         self._schema = _SCHEMA_CACHE[schema_name]
 

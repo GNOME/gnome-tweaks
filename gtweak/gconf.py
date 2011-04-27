@@ -16,6 +16,7 @@
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
 import subprocess
+import logging
 
 from gi.repository import GConf
 
@@ -40,7 +41,7 @@ class GConfSetting:
             else:
                 self._cmd_cache[command] = "ERROR: %s" % stderr.strip()
 
-        print "Caching gconf: %s (%s)" % (self, command)
+        logging.info("Caching gconf: %s (%s)" % (self, command))
         return self._cmd_cache[command]
 
     def schema_get_summary(self):
