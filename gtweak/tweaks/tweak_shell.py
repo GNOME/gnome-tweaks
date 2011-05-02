@@ -98,13 +98,18 @@ class ShellThemeTweak(Tweak):
         else:
             hb = Gtk.HBox()
 
-            #build a combo box with all the valid theme options
-            valid = walk_directories( (ShellThemeTweak.THEME_DIR,), lambda d:
+            #include both system, and user themes
+            #note: the default theme lives in /system/data/dir/gnome-shell/theme
+            #      and not themes/, so add it manually later
+            dirs = [os.path.join(d, "themes") for d in GLib.get_system_data_dirs()]
+            dirs += [ShellThemeTweak.THEME_DIR]
+
+            valid = walk_directories(dirs, lambda d:
                         os.path.exists(os.path.join(d, "gnome-shell")) and \
                         os.path.exists(os.path.join(d, "gnome-shell", "gnome-shell.css")))
-            #manually add Adwiata to represent the default
-            #valid.append( ("Adwiata", "") )
 
+            #build a combo box with all the valid theme options
+            #manually add Adwiata to represent the default
             cb = build_combo_box_text(
                     self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME),
                     ("", "Adwiata"),
