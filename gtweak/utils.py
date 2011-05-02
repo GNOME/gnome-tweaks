@@ -36,10 +36,16 @@ class AutostartManager:
     def __init__(self, DATA_DIR, desktop_filename, exec_cmd="", extra_exec_args=""):
         self._desktop_filename = desktop_filename
         self._desktop_file = os.path.join(DATA_DIR, "applications", desktop_filename)
-        self._autostart_file = os.path.join(
-                                    GLib.get_user_config_dir(), "autostart", desktop_filename)
         self._exec_cmd = exec_cmd
         self._extra_exec_args = " %s\n" % extra_exec_args
+        
+        user_autostart_dir = os.path.join(GLib.get_user_config_dir(), "autostart")
+        if not os.path.isdir(user_autostart_dir):
+            try:
+                os.makedirs(user_autostart_dir)
+            except:
+                logging.critical("Could not create autostart dir: %s" % user_autostart_dir)
+        self._autostart_file = os.path.join(user_autostart_dir, desktop_filename)
 
     def is_start_at_login_enabled(self):
         if os.path.exists(self._autostart_file):
