@@ -137,8 +137,11 @@ class GSettingsComboTweak(_GSettingsTweak):
     def __init__(self, schema_name, key_name, key_options, **options):
         _GSettingsTweak.__init__(self, schema_name, key_name, **options)
 
-        assert len(key_options) > 0
-        assert len(key_options[0]) == 2
+        #check key_options is iterable
+        #and if supplied, check it is a list of 2-tuples
+        assert len(key_options) >= 0
+        if len(key_options):
+            assert len(key_options[0]) == 2
 
         combo = build_combo_box_text(
                     self.settings.get_value(self.key_name),
