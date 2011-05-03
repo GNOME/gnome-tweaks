@@ -168,8 +168,11 @@ class GConfComboTweak(_GConfTweak):
     def __init__(self, key_name, key_type, key_options, **options):
         _GConfTweak.__init__(self, key_name, key_type, **options)
 
-        assert len(key_options) > 0
-        assert len(key_options[0]) == 2
+        #check key_options is iterable
+        #and if supplied, check it is a list of 2-tuples
+        assert len(key_options) >= 0
+        if len(key_options):
+            assert len(key_options[0]) == 2
 
         combo = build_combo_box_text(
             self.gconf.get_value(),
