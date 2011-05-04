@@ -88,17 +88,20 @@ class TweakView:
         self._detail_vbox.remove(info)
         func()
 
-    def _on_tweak_notify(self, tweak, desc, btn, func):
+    def _on_tweak_notify(self, tweak, desc, error, btn, func):
         info = Gtk.InfoBar()
         info.get_content_area().add(Gtk.Label(desc))
         self._detail_vbox.pack_end(info, False, False, 0)
 
-        if btn and func:
+        if error:
+            info.props.message_type = Gtk.MessageType.ERROR
+        else:
             info.props.message_type = Gtk.MessageType.INFO
+
+        if btn and func:
             info.add_button(btn, Gtk.ResponseType.OK)
             info.connect("response", self._on_tweak_notify_response, func)
         else:
-            info.props.message_type = Gtk.MessageType.ERROR
             GObject.timeout_add_seconds(2, lambda box, widget: box.remove(widget), self._detail_vbox, info)
 
         info.show_all()

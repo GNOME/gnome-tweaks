@@ -32,6 +32,7 @@ class _TestButtonTweak(Tweak):
         self.widget = Gtk.Button(name)
         self.widget.connect("clicked", self._on_click)
         self._need_action = options.get("need_action")
+        self._action_error = options.get("action_error")
 
     def _on_click(self, sender):
         if self._need_action:
@@ -40,7 +41,10 @@ class _TestButtonTweak(Tweak):
                     Gtk.STOCK_OK,
                     lambda : print("GOT CALLBACK"))
         else:
-            self.notify_error(self.name)
+            if self._action_error:
+                self.notify_error(self.name)
+            else:
+                self.notify_info(self.name)
 
 TWEAK_GROUPS = (
         TweakGroup(
@@ -48,7 +52,8 @@ TWEAK_GROUPS = (
             _TestTweak("foo bar", "does foo bar"),
             _TestTweak("foo baz", "does foo baz"),
             _TestButtonTweak("Need Action", "foo bar", need_action=True),
-            _TestButtonTweak("Report Error", "foo baz", need_action=False)),
+            _TestButtonTweak("Report Error", "foo baz", action_error=True),
+            _TestButtonTweak("Report Info", "foo bob", action_error=False)),
         TweakGroup(
             "Test Many Settings",
             *[_TestTweak("name: " + str(d), "desc: " + str(d)) for d in range(50)]),

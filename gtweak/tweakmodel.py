@@ -46,13 +46,17 @@ class Tweak:
     def set_notify_cb(self, func):
         self._notify_cb = func
 
-    def notify_action_required(self, desc, btn, func):
+    def notify_action_required(self, desc, btn, func, error=False):
         if self._notify_cb:
-            self._notify_cb(self, desc, btn, func)
+            self._notify_cb(self, desc, error, btn, func)
 
     def notify_error(self, desc):
         if self._notify_cb:
-            self._notify_cb(self, desc, None, None)
+            self._notify_cb(self, desc, True, None, None)
+
+    def notify_info(self, desc):
+        if self._notify_cb:
+            self._notify_cb(self, desc, False, None, None)
 
 class TweakGroup:
     def __init__(self, name, *tweaks):
