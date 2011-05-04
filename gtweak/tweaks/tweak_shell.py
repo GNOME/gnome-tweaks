@@ -168,6 +168,7 @@ class ShellThemeTweak(Tweak):
                                         theme_members_path)
                 if installed_name:
                     print self.combo.get_model().append( (installed_name, installed_name) )
+                    self.notify_info("Installed %s theme successfully" % installed_name)
 
             except:
                 #does not look like a valid theme
