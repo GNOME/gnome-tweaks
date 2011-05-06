@@ -109,10 +109,10 @@ class ShellThemeTweak(Tweak):
                         os.path.exists(os.path.join(d, "gnome-shell", "gnome-shell.css")))
 
             #build a combo box with all the valid theme options
-            #manually add Adwiata to represent the default
+            #manually add Adwaita to represent the default
             cb = build_combo_box_text(
                     self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME),
-                    ("", "Adwiata"),
+                    ("", "Adwaita"),
                     *[(v,v) for v in valid])
             cb.connect('changed', self._on_combo_changed)
             hb.pack_start(cb, False, False, 5)
