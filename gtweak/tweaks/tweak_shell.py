@@ -126,20 +126,24 @@ class ShellThemeTweak(Tweak):
             self.widget_for_size_group = chooser
     
     def _extract_theme_zip(self, z, theme_name, theme_members_path):
+        """ returns (theme_name, true_if_updated) """
         tmp = tempfile.mkdtemp()
         dest = os.path.join(ShellThemeTweak.THEME_DIR, theme_name, "gnome-shell")
 
         logging.info("Extracting theme %s to %s" % (theme_name, tmp))
 
+        updated = False
         try:
             if os.path.exists(dest):
                 shutil.rmtree(dest)
+                updated = True
             z.extractall(tmp)
             shutil.copytree(os.path.join(tmp, theme_members_path), dest)
-            return theme_name
         except OSError:
             self.notify_error("Error installing theme")
-            return None
+            theme_name = None
+
+        return theme_name, updated
 
     def _on_file_set(self, chooser):
         f = chooser.get_filename()
@@ -162,13 +166,22 @@ class ShellThemeTweak(Tweak):
                     theme_name = fragment[0]
                 theme_members_path = "/".join(fragment)
 
-                installed_name = self._extract_theme_zip(
-                                        z,
-                                        theme_name,
-                                        theme_members_path)
+                installed_name, updated = self._extract_theme_zip(
+                                                z,
+                                                theme_name,
+                                                theme_members_path)
                 if installed_name:
-                    print self.combo.get_model().append( (installed_name, installed_name) )
-                    self.notify_info("Installed %s theme successfully" % installed_name)
+                    if updated:
+                        self.notify_info("Updated %s theme successfully" % installed_name)
+                    else:
+                        self.notify_info("Installed %s theme successfully" % installed_name)
+
+                    #I suppose I could rely on updated as indicating whether to add the theme
+                    #name to the combo, but just check to see if it is already there
+                    model = self.combo.get_model()
+                    if installed_name not in [r[0] for r in model]:
+                        model.append( (installed_name, installed_name) )
+
 
             except:
                 #does not look like a valid theme
