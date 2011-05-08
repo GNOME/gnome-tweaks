@@ -20,6 +20,7 @@ import shutil
 import zipfile
 import tempfile
 import logging
+import json
 
 from gi.repository import Gtk
 from gi.repository import GLib
@@ -151,19 +152,32 @@ class ShellThemeTweak(Tweak):
         with zipfile.ZipFile(f, 'r') as z:
             try:
                 fragment = ()
+                theme_name = None
                 for n in z.namelist():
                     if n.endswith("gnome-shell.css"):
                         fragment = n.split("/")[0:-1]
-                        break
+                    if n.endswith("gnome-shell/theme.json"):
+                        logging.info("New style theme detected (theme.json)")
+                        #new style theme - extract the name from the json file
+                        tmp = tempfile.mkdtemp()
+                        z.extract(n, tmp)
+                        with open(os.path.join(tmp,n)) as f:
+                            try:
+                                theme_name = json.load(f)["shell-theme"]["name"]
+                            except:
+                                logging.warning("Invalid theme format", exc_info=True)
 
                 if not fragment:
                     raise Exception("Could not find gnome-shell.css")
 
-                #old style themes name was taken from the zip name
-                if fragment[0] == "theme" and len(fragment) == 1:
-                    theme_name = os.path.basename(f)
-                else:
-                    theme_name = fragment[0]
+                if not theme_name:
+                    logging.info("Old style theme detected (theme.json)")
+                    #old style themes name was taken from the zip name
+                    if fragment[0] == "theme" and len(fragment) == 1:
+                        theme_name = os.path.basename(f)
+                    else:
+                        theme_name = fragment[0]
+
                 theme_members_path = "/".join(fragment)
 
                 installed_name, updated = self._extract_theme_zip(
@@ -186,6 +200,8 @@ class ShellThemeTweak(Tweak):
             except:
                 #does not look like a valid theme
                 self.notify_error("Invalid theme file")
+                logging.warning("Error parsing theme zip", exc_info=True)
+
         #set button back to default state
         chooser.unselect_all()
 
