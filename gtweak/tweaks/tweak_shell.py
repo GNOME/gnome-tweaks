@@ -186,9 +186,9 @@ class ShellThemeTweak(Tweak):
                                                 theme_members_path)
                 if installed_name:
                     if updated:
-                        self.notify_info("Updated %s theme successfully" % installed_name)
+                        self.notify_info("%s theme updated successfully" % installed_name)
                     else:
-                        self.notify_info("Installed %s theme successfully" % installed_name)
+                        self.notify_info("%s theme installed successfully" % installed_name)
 
                     #I suppose I could rely on updated as indicating whether to add the theme
                     #name to the combo, but just check to see if it is already there
