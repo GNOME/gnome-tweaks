@@ -78,6 +78,8 @@ class _ShellExtensionInstallerTweak(Tweak):
                         file_metadata = n
                     if n.endswith("extension.js"):
                         extension = True
+                        if file_extension:
+                            raise Exception("Only one extension per zip file")
                         file_extension = n
 
                 if not file_metadata:
