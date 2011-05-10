@@ -75,7 +75,7 @@ class ShellThemeTweak(Tweak):
                 #check the correct gsettings key is present
                 try:
                     self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
-                    name = self._settings.get_value(ShellThemeTweak.THEME_GSETTINGS_NAME)
+                    name = self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME)
 
                     #assume the usertheme version is that version of the shell which
                     #it most supports (this is a poor assumption)
@@ -207,7 +207,7 @@ class ShellThemeTweak(Tweak):
 
     def _on_combo_changed(self, combo):
         val = combo.get_model().get_value(combo.get_active_iter(), 0)
-        self._settings.set_value(ShellThemeTweak.THEME_GSETTINGS_NAME, val)
+        self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, val)
 
         #reloading the theme is not really necessary, the user-theme should pick
         #pick up the change.
