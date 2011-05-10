@@ -17,6 +17,8 @@
 
 import os.path
 import logging
+import tempfile
+import shutil
 
 from gi.repository import GLib
 
@@ -31,6 +33,28 @@ def walk_directories(dirs, filter_func):
     except:
         logging.critical("Error parsing directories", exc_info=True)
     return valid
+
+def extract_zip_file(z, members_path, dest):
+    """ returns (true_if_extracted_ok, true_if_updated) """
+    tmp = tempfile.mkdtemp()
+    tmpdest = os.path.join(tmp, members_path)
+
+    ok = True
+    updated = False
+    try:
+        if os.path.exists(dest):
+            shutil.rmtree(dest)
+            updated = True
+        z.extractall(tmp)
+        shutil.copytree(tmpdest, dest)
+    except OSError:
+        ok = False
+        logging.warning("Error extracting zip", exc_info=True)
+
+    if ok:
+        logging.info("Extracted zip to %s, copied to %s" % (tmpdest, dest))
+
+    return ok, updated
 
 class AutostartManager:
     def __init__(self, DATA_DIR, desktop_filename, exec_cmd="", extra_exec_args=""):

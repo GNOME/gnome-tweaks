@@ -16,7 +16,6 @@
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
 import os.path
-import shutil
 import zipfile
 import tempfile
 import logging
@@ -25,11 +24,11 @@ import json
 from gi.repository import Gtk
 from gi.repository import GLib
 
-from gtweak.utils import walk_directories
+from gtweak.utils import walk_directories, extract_zip_file
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gshellwrapper import GnomeShell
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import GConfComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
+from gtweak.widgets import ZipFileChooserButton, GConfComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
 
 class ShowWindowButtons(GConfComboTweak):
     def __init__(self, **options):
@@ -41,17 +40,6 @@ class ShowWindowButtons(GConfComboTweak):
             (':maximize,close', 'Maximize and Close'),
             (':minimize,maximize,close', 'All')),
             **options)
-
-class _ThemeZipChooser(Gtk.FileChooserButton):
-    def __init__(self):
-        Gtk.FileChooserButton.__init__(self, title="Select theme file")
-
-        f = Gtk.FileFilter()
-        f.add_mime_type("application/zip")
-        self.set_filter(f)
-
-        #self.set_width_chars(15)
-        self.set_local_only(True)
 
 class ShellThemeTweak(Tweak):
 
@@ -119,33 +107,13 @@ class ShellThemeTweak(Tweak):
             hb.pack_start(cb, False, False, 5)
             self.combo = cb
 
-            chooser = _ThemeZipChooser()
+            chooser = ZipFileChooserButton("Select a theme file")
             chooser.connect("file-set", self._on_file_set)
             hb.pack_start(chooser, False, False, 0)
 
             self.widget = build_label_beside_widget(self.name, hb)
             self.widget_for_size_group = chooser
     
-    def _extract_theme_zip(self, z, theme_name, theme_members_path):
-        """ returns (theme_name, true_if_updated) """
-        tmp = tempfile.mkdtemp()
-        dest = os.path.join(ShellThemeTweak.THEME_DIR, theme_name, "gnome-shell")
-
-        logging.info("Extracting theme %s to %s" % (theme_name, tmp))
-
-        updated = False
-        try:
-            if os.path.exists(dest):
-                shutil.rmtree(dest)
-                updated = True
-            z.extractall(tmp)
-            shutil.copytree(os.path.join(tmp, theme_members_path), dest)
-        except OSError:
-            self.notify_error("Error installing theme")
-            theme_name = None
-
-        return theme_name, updated
-
     def _on_file_set(self, chooser):
         f = chooser.get_filename()
 
@@ -180,21 +148,24 @@ class ShellThemeTweak(Tweak):
 
                 theme_members_path = "/".join(fragment)
 
-                installed_name, updated = self._extract_theme_zip(
-                                                z,
-                                                theme_name,
-                                                theme_members_path)
-                if installed_name:
+                ok, updated = extract_zip_file(
+                                z,
+                                theme_members_path,
+                                os.path.join(ShellThemeTweak.THEME_DIR, theme_name, "gnome-shell"))
+
+                if ok:
                     if updated:
-                        self.notify_info("%s theme updated successfully" % installed_name)
+                        self.notify_info("%s theme updated successfully" % theme_name)
                     else:
-                        self.notify_info("%s theme installed successfully" % installed_name)
+                        self.notify_info("%s theme installed successfully" % theme_name)
 
                     #I suppose I could rely on updated as indicating whether to add the theme
                     #name to the combo, but just check to see if it is already there
                     model = self.combo.get_model()
-                    if installed_name not in [r[0] for r in model]:
-                        model.append( (installed_name, installed_name) )
+                    if theme_name not in [r[0] for r in model]:
+                        model.append( (theme_name, theme_name) )
+                else:
+                    self.notify_error("Error installing theme")
 
 
             except:

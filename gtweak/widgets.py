@@ -200,3 +200,14 @@ class GConfFontButtonTweak(_GConfTweak):
     def _on_fontbutton_changed(self, btn, param):
         self.gconf.set_value(btn.props.font_name)
 
+class ZipFileChooserButton(Gtk.FileChooserButton):
+    def __init__(self, title):
+        Gtk.FileChooserButton.__init__(self, title=title)
+
+        f = Gtk.FileFilter()
+        f.add_mime_type("application/zip")
+        self.set_filter(f)
+
+        #self.set_width_chars(15)
+        self.set_local_only(True)
+
