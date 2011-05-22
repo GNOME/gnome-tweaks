@@ -49,7 +49,7 @@ class ShellThemeTweak(Tweak):
     THEME_DIR = os.path.join(GLib.get_home_dir(), ".themes")
 
     def __init__(self, **options):
-        Tweak.__init__(self, "Shell theme", "Install custom or user themes for gnome-shell", **options)
+        Tweak.__init__(self, "Shell Theme", "Install custom or user themes for gnome-shell", **options)
 
         #check the shell is running and the usertheme extension is present
         error = "Unknown"

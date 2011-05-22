@@ -54,7 +54,7 @@ class _ShellExtensionInstallerTweak(Tweak):
     EXTENSION_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions")
 
     def __init__(self, shell, **options):
-        Tweak.__init__(self, "Install shell extension", "", **options)
+        Tweak.__init__(self, "Install Shell Extension", "", **options)
 
         self._shell = shell
 
