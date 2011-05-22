@@ -137,8 +137,8 @@ class ShellExtensionTweakGroup(TweakGroup):
             shell = GnomeShell()
 
             #add the extension installer
-            extension_tweaks.append(
-                _ShellExtensionInstallerTweak(shell, size_group=sg))
+            #extension_tweaks.append(
+            #    _ShellExtensionInstallerTweak(shell, size_group=sg))
 
             try:
                 settings = GSettingsSetting("org.gnome.shell")
