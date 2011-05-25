@@ -31,7 +31,9 @@ class DesktopIconTweak(GSettingsSwitchTweak):
 
         #when the user enables nautilus to draw the desktop icons, set nautilus
         #to autostart
-        self.nautilus = AutostartManager(gtweak.DATA_DIR, "nautilus.desktop", "nautilus -n")
+        self.nautilus = AutostartManager("nautilus.desktop",
+                            autostart_desktop_filename="nautilus-autostart.desktop",
+                            exec_cmd="nautilus -n")
         self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
 
     def _on_setting_changed(self, setting, key):
