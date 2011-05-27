@@ -15,6 +15,8 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
+import logging
+
 from gi.repository import Gtk, Gdk, GObject
 
 import gtweak
@@ -63,6 +65,9 @@ class TweakView:
             tweak_box.pack_start(t.widget, False, False, 0)
             t.set_notify_cb(self._on_tweak_notify)
 
+        #dict of pending notifications, the key is the function to be called
+        self._notification_functions = {}
+
     def run(self):
         self._main_window.show_all()
         self.hide_tweaks(self._model.tweaks)
@@ -87,11 +92,14 @@ class TweakView:
     def _on_tweak_notify_response(self, info, response, func):
         self._detail_vbox.remove(info)
         func()
+        try:
+            del(self._notification_functions[func])
+        except KeyError:
+            logging.warning("Could not remove notification function")
 
     def _on_tweak_notify(self, tweak, desc, error, btn, func):
         info = Gtk.InfoBar()
         info.get_content_area().add(Gtk.Label(desc))
-        self._detail_vbox.pack_end(info, False, False, 0)
 
         if error:
             info.props.message_type = Gtk.MessageType.ERROR
@@ -99,10 +107,15 @@ class TweakView:
             info.props.message_type = Gtk.MessageType.INFO
 
         if btn and func:
+            if func in self._notification_functions:
+                return
+            self._notification_functions[func] = True
             info.add_button(btn, Gtk.ResponseType.OK)
             info.connect("response", self._on_tweak_notify_response, func)
         else:
             GObject.timeout_add_seconds(2, lambda box, widget: box.remove(widget), self._detail_vbox, info)
+
+        self._detail_vbox.pack_end(info, False, False, 0)
 
         info.show_all()
 

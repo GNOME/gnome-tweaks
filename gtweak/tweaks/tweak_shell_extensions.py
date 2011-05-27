@@ -47,7 +47,7 @@ class _ShellExtensionTweak(Tweak):
         self.notify_action_required(
             "The shell must be restarted for changes to take effect",
             "Restart",
-            lambda: self._shell.restart())
+            self._shell.restart)
 
 class _ShellExtensionInstallerTweak(Tweak):
 
@@ -113,7 +113,7 @@ class _ShellExtensionInstallerTweak(Tweak):
                     self.notify_action_required(
                         verb,
                         "Restart",
-                        lambda: self._shell.restart())
+                        self._shell.restart)
 
                 else:
                     self.notify_error("Error installing extension")
@@ -137,8 +137,8 @@ class ShellExtensionTweakGroup(TweakGroup):
             shell = GnomeShell()
 
             #add the extension installer
-            #extension_tweaks.append(
-            #    _ShellExtensionInstallerTweak(shell, size_group=sg))
+            extension_tweaks.append(
+                _ShellExtensionInstallerTweak(shell, size_group=sg))
 
             try:
                 settings = GSettingsSetting("org.gnome.shell")
