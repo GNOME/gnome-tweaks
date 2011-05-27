@@ -97,6 +97,10 @@ class ShellThemeTweak(Tweak):
                         os.path.exists(os.path.join(d, "gnome-shell")) and \
                         os.path.exists(os.path.join(d, "gnome-shell", "gnome-shell.css")))
 
+            chooser = ZipFileChooserButton("Select a theme file")
+            chooser.connect("file-set", self._on_file_set)
+            hb.pack_start(chooser, False, False, 5)
+
             #build a combo box with all the valid theme options
             #manually add Adwaita to represent the default
             cb = build_combo_box_text(
@@ -104,15 +108,11 @@ class ShellThemeTweak(Tweak):
                     ("", "Adwaita"),
                     *[(v,v) for v in valid])
             cb.connect('changed', self._on_combo_changed)
-            hb.pack_start(cb, False, False, 5)
+            hb.pack_start(cb, False, False, 0)
             self.combo = cb
 
-            chooser = ZipFileChooserButton("Select a theme file")
-            chooser.connect("file-set", self._on_file_set)
-            hb.pack_start(chooser, False, False, 0)
-
             self.widget = build_label_beside_widget(self.name, hb)
-            self.widget_for_size_group = chooser
+            self.widget_for_size_group = cb
     
     def _on_file_set(self, chooser):
         f = chooser.get_filename()
