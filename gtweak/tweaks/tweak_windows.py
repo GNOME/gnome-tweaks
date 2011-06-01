@@ -36,6 +36,14 @@ class ActionClickTitlebarTweak(GConfComboTweak):
             [(o, o.replace("_"," ").title()) for o in schema_options],
             **options)
 
+class FocusModeTweak(GConfComboTweak):
+    def __init__(self, **options):
+        GConfComboTweak.__init__(self,
+            "/apps/metacity/general/focus_mode",
+            str,
+            [(o, o.title()) for o in ("click","sloppy","mouse")],
+            **options)
+
 class WindowThemeSwitcher(GConfComboTweak):
     def __init__(self, **options):
         GConfComboTweak.__init__(self,
@@ -71,5 +79,6 @@ TWEAK_GROUPS = (
             WindowThemeSwitcher(size_group=sg),
             ActionClickTitlebarTweak("/apps/metacity/general/action_double_click_titlebar", size_group=sg),
             ActionClickTitlebarTweak("/apps/metacity/general/action_middle_click_titlebar", size_group=sg),
-            ActionClickTitlebarTweak("/apps/metacity/general/action_right_click_titlebar", size_group=sg)),
+            ActionClickTitlebarTweak("/apps/metacity/general/action_right_click_titlebar", size_group=sg),
+            FocusModeTweak(size_group=sg)),
 )
