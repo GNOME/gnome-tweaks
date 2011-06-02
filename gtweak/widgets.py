@@ -36,6 +36,7 @@ def build_combo_box_text(selected, *values):
     @values: a list of 2-tuples (value, name)
     """
     store = Gtk.ListStore(str, str)
+    store.set_sort_column_id(1, Gtk.SortType.ASCENDING)
 
     selected_iter = None
     for (val, name) in values:
