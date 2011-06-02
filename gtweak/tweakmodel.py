@@ -76,11 +76,7 @@ class TweakModel(Gtk.ListStore):
         self._tweak_dir = gtweak.TWEAK_DIR
         assert(os.path.exists(self._tweak_dir))
 
-        self.set_sort_func(self.COLUMN_NAME, self._sort_tweak_groups)
         self.set_sort_column_id(self.COLUMN_NAME, Gtk.SortType.ASCENDING)
-
-    def _sort_tweak_groups(self, model, iter1, iter2, user_data):
-        return cmp(model.get_value(iter1, self.COLUMN_NAME), model.get_value(iter2, self.COLUMN_NAME))
 
     @property
     def tweaks(self):
