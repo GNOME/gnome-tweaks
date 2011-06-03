@@ -21,6 +21,8 @@ import tempfile
 import shutil
 
 import gtweak
+from gtweak.gsettings import GSettingsSetting
+from gtweak.gconf import GConfSetting
 
 from gi.repository import GLib
 
@@ -92,11 +94,17 @@ class AutostartManager:
         dirs.extend(GLib.get_system_data_dirs())
         return [os.path.join(d, "applications", self.desktop_filename) for d in dirs]
 
-    def uses_autostart_condition(self):
+    def get_autostart_condition(self):
         for f in self._get_system_autostart_files():
-            if os.path.exists(f) and open(f).read().find("AutostartCondition=") != -1:
-                return True
-        return False
+            if os.path.exists(f):
+                with open(f, 'r') as f:
+                    for l in f.readlines():
+                        if l.startswith("AutostartCondition="):
+                            return l.split("=")[-1].strip()
+        return None
+
+    def uses_autostart_condition(self):
+        return self.get_autostart_condition() != None
 
     def is_start_at_login_enabled(self):
         if os.path.exists(self._user_autostart_file):
@@ -118,13 +126,29 @@ class AutostartManager:
             logging.info("Removing user autostart file %s" % self._user_autostart_file)
             os.remove(self._user_autostart_file)
 
+        asc = self.get_autostart_condition()
+        if asc:
+            #AutostartCondition=GNOME /desktop/gnome/interface/accessibility
+            #AutostartCondition=GNOME3 if-session gnome-fallback
+            #AutostartCondition=GSettings org.gnome.desktop.background show-desktop-icons
+            method, value = asc.split(" ", 1)
+            try:
+                logging.info("Changing AutostartCondition %s -> %s" % (method, update))
+                if method == "GSettings":
+                    schema, key = value.split(" ")
+                    GSettingsSetting(schema).set_boolean(key, update)
+                elif method == "GNOME":
+                    GConfSetting(shema, bool).set_value(update)
+                else:
+                    raise Exception("Method not supported")
+            except:
+                logging.warning("Autostart desktop file unsupported AutostartCondition (%s)" % asc, exc_info=True)
+
+            return
+
         if update:
             if (not self._desktop_file) or (not os.path.exists(self._desktop_file)):
                 logging.critical("Could not find desktop file: %s" % self._desktop_file)
-                return
-
-            if self.uses_autostart_condition():
-                logging.warning("Autostart desktop file uses AutostartCondition. Skipping")
                 return
 
             logging.info("Adding autostart %s" % self._user_autostart_file)
@@ -147,6 +171,7 @@ class AutostartManager:
 
 if __name__ == "__main__":
     gtweak.DATA_DIR = "/usr/share"
+    gtweak.GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas/"
 
     logging.basicConfig(format="%(levelname)-8s: %(message)s", level=logging.DEBUG)
 
@@ -160,11 +185,14 @@ if __name__ == "__main__":
 
     d = AutostartManager("orca.desktop", "orca-autostart.desktop")
     print d.desktop_filename, "uses autostartcondition", d.uses_autostart_condition()
+    print d.desktop_filename, "autostartcondition is:", d.get_autostart_condition()
     print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
-    d.update_start_at_login(True)
     print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
 
     d = AutostartManager("dropbox.desktop")
     print d.desktop_filename, "uses autostartcondition", d.uses_autostart_condition()
     print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
 
+    d = AutostartManager("nautilus.desktop", "nautilus-autostart.desktop")
+    print d.desktop_filename, "uses autostartcondition", d.uses_autostart_condition()
+    d.update_start_at_login(False)
