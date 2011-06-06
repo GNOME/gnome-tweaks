@@ -34,7 +34,10 @@ class DesktopIconTweak(GSettingsSwitchTweak):
         self.nautilus = AutostartManager("nautilus.desktop",
                             autostart_desktop_filename="nautilus-autostart.desktop",
                             exec_cmd="nautilus -n")
-        self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
+        #we only need to install the desktop file on old versions of nautilus/gnome-session.
+        #new ones use the new AutostartCondition and watch the gsettings key automatically
+        if not self.nautilus.uses_autostart_condition("GSettings"):
+            self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
 
     def _on_setting_changed(self, setting, key):
         self.nautilus.update_start_at_login(

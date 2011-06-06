@@ -120,8 +120,16 @@ class AutostartManager:
                             return l.split("=")[-1].strip()
         return None
 
-    def uses_autostart_condition(self):
-        return self.get_autostart_condition() != None
+    def uses_autostart_condition(self, autostart_type=None):
+        asc = self.get_autostart_condition()
+        try:
+            if autostart_type:
+                return asc.split(" ", 1)[0] == autostart_type
+            else:
+                return asc != None
+        except:
+            logging.warning("Testing for expected AutostartCondition failed: Got (%s)" % asc, exc_info=True)
+            return False
 
     def is_start_at_login_enabled(self):
         if os.path.exists(self._user_autostart_file):
@@ -203,7 +211,7 @@ if __name__ == "__main__":
     d = AutostartManager("orca.desktop", "orca-autostart.desktop")
     print d.desktop_filename, "uses autostartcondition", d.uses_autostart_condition()
     print d.desktop_filename, "autostartcondition is:", d.get_autostart_condition()
-    print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
+    print d.desktop_filename, "uses GSettings autostartcondition", d.uses_autostart_condition("GSettings")
     print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
 
     d = AutostartManager("dropbox.desktop")
