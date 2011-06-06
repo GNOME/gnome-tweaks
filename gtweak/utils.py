@@ -26,6 +26,23 @@ from gtweak.gconf import GConfSetting
 
 from gi.repository import GLib
 
+def make_combo_list_with_default(opts, default, title=True):
+    themes = []
+    for t in opts:
+        if t == "default":
+            continue
+
+        if title:
+            name = t[0].upper() + t[1:]
+        else:
+            name = t
+
+        if t == default:
+            name ="%s <i>(default)</i>" % name
+
+        themes.append((t, name))
+    return themes
+
 def walk_directories(dirs, filter_func):
     valid = []
     try:

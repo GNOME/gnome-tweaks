@@ -105,7 +105,7 @@ class ShellThemeTweak(Tweak):
             #manually add Adwaita to represent the default
             cb = build_combo_box_text(
                     self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME),
-                    ("", "Adwaita"),
+                    ("", "default"),
                     *[(v,v) for v in valid])
             cb.connect('changed', self._on_combo_changed)
             hb.pack_start(cb, False, False, 0)

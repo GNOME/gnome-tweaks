@@ -18,7 +18,7 @@
 import os.path
 
 import gtweak
-from gtweak.utils import walk_directories
+from gtweak.utils import walk_directories, make_combo_list_with_default
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GConfComboTweak, build_horizontal_sizegroup
 from gtweak.gconf import GConfSetting
@@ -49,7 +49,7 @@ class WindowThemeSwitcher(GConfComboTweak):
         GConfComboTweak.__init__(self,
             "/desktop/gnome/shell/windows/theme",
             str,
-            [(t, t) for t in self._get_valid_themes()],
+            make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
             **options)
 
         #also need to change the fallback (metacity) window theme

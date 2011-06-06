@@ -47,7 +47,7 @@ def build_combo_box_text(selected, *values):
     combo = Gtk.ComboBox(model=store)
     renderer = Gtk.CellRendererText()
     combo.pack_start(renderer, True)
-    combo.add_attribute(renderer, 'text', 1)
+    combo.add_attribute(renderer, 'markup', 1)
     if selected_iter:
         combo.set_active_iter(selected_iter)
 

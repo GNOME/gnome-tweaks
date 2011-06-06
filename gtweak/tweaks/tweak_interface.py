@@ -20,7 +20,7 @@ import os.path
 from gi.repository import Gtk
 
 import gtweak
-from gtweak.utils import walk_directories
+from gtweak.utils import walk_directories, make_combo_list_with_default
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, build_horizontal_sizegroup
 
@@ -29,7 +29,7 @@ class GtkThemeSwitcher(GSettingsComboTweak):
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "gtk-theme",
-            [(t, t) for t in self._get_valid_themes()],
+            make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
             **options)
 
     def _get_valid_themes(self):
@@ -46,7 +46,7 @@ class IconThemeSwitcher(GSettingsComboTweak):
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "icon-theme",
-            [(t, t) for t in self._get_valid_icon_themes()],
+            make_combo_list_with_default(self._get_valid_icon_themes(), "gnome"),
             **options)
 
     def _get_valid_icon_themes(self):
@@ -62,7 +62,7 @@ class CursorThemeSwitcher(GSettingsComboTweak):
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "cursor-theme",
-            [(t, t) for t in self._get_valid_cursor_themes()],
+            make_combo_list_with_default(self._get_valid_cursor_themes(), "Adwaita"),
             **options)
 
     def _get_valid_cursor_themes(self):
