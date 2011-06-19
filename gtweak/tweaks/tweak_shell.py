@@ -24,7 +24,7 @@ import json
 from gi.repository import Gtk
 from gi.repository import GLib
 
-from gtweak.utils import walk_directories, extract_zip_file
+from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_with_default
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gshellwrapper import GnomeShell
 from gtweak.tweakmodel import Tweak, TweakGroup
@@ -93,13 +93,17 @@ class ShellThemeTweak(Tweak):
             valid = walk_directories(dirs, lambda d:
                         os.path.exists(os.path.join(d, "gnome-shell")) and \
                         os.path.exists(os.path.join(d, "gnome-shell", "gnome-shell.css")))
+            #the default value to reset the shell is an empty string
+            valid.extend( ("",) )
 
             #build a combo box with all the valid theme options
             #manually add Adwaita to represent the default
             cb = build_combo_box_text(
                     self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME),
-                    ("", "<i>Default</i>"),
-                    *[(v,v) for v in valid])
+                    *make_combo_list_with_default(
+                        valid,
+                        "",
+                        default_text="<i>Default</i>"))
             cb.connect('changed', self._on_combo_changed)
             self._combo = cb
 

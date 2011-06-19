@@ -26,7 +26,7 @@ from gtweak.gconf import GConfSetting
 
 from gi.repository import GLib
 
-def make_combo_list_with_default(opts, default, title=True):
+def make_combo_list_with_default(opts, default, title=True, default_text=None):
     """
     Turns a list of values into a list of value,name (where name is the
     display name a user will see in a combo box). If a value is opt is
@@ -38,18 +38,18 @@ def make_combo_list_with_default(opts, default, title=True):
     """
     themes = []
     for t in opts:
-        if t == "default" and t != default:
+        if t.lower() == "default" and t != default:
             #some themes etc are actually called default. Ick. Dont show them if they
             #are not the actual default value
             continue
 
-        if title:
+        if title and len(t):
             name = t[0].upper() + t[1:]
         else:
             name = t
 
         if t == default:
-            name ="%s <i>(default)</i>" % name
+            name = default_text or "%s <i>(default)</i>" % name
 
         themes.append((t, name))
     return themes

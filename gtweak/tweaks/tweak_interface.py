@@ -78,7 +78,10 @@ class KeyThemeSwitcher(GSettingsComboTweak):
         GSettingsComboTweak.__init__(self,
             "org.gnome.desktop.interface",
             "gtk-key-theme",
-            make_combo_list_with_default(self._get_valid_key_themes(), "Default"),
+            make_combo_list_with_default(
+                self._get_valid_key_themes(),
+                "Default",
+                default_text="<i>Default</i>"),
             **options)
 
     def _get_valid_key_themes(self):
