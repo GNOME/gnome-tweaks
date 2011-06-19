@@ -39,6 +39,18 @@ class _ShellProxy:
 
 class GnomeShell:
 
+    EXTENSION_STATE = {
+        1 : "ENABLED",
+        2 : "DISABLED",
+        3 : "ERROR",
+        4 : "OUT_OF_DATE"
+    }
+
+    EXTENSION_TYPE = {
+        1 : "SYSTEM",
+        2 : "PER_USER"
+    }
+
     DATA_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell")
 
     def __init__(self):
