@@ -20,6 +20,17 @@ from __future__ import print_function
 from gi.repository import Gtk
 
 from gtweak.tweakmodel import Tweak, TweakGroup
+from gtweak.widgets import build_label_beside_widget
+
+class _TestInfoTweak(Tweak):
+    def __init__(self, name, description, **options):
+        Tweak.__init__(self, name, description, **options)
+
+        self.widget = build_label_beside_widget(
+                        name,
+                        Gtk.Button(name),
+                        info=options.get("tweak_info"),
+                        warning=options.get("tweak_warning"))
 
 class _TestTweak(Tweak):
     def __init__(self, name, description, **options):
@@ -51,6 +62,8 @@ TWEAK_GROUPS = (
             "Test Foo Bar",
             _TestTweak("foo bar", "does foo bar"),
             _TestTweak("foo baz", "does foo baz"),
+            _TestInfoTweak("foo info", "info widget", tweak_info="Information"),
+            _TestInfoTweak("foo warning", "info widget", tweak_warning="Warning"),
             _TestButtonTweak("Need Action", "foo bar", need_action=True),
             _TestButtonTweak("Report Error", "foo baz", action_error=True),
             _TestButtonTweak("Report Info", "foo bob", action_error=False)),

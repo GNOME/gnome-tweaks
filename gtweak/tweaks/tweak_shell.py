@@ -68,6 +68,7 @@ class ShellThemeTweak(Tweak):
                     #assume the usertheme version is that version of the shell which
                     #it most supports (this is a poor assumption)
                     self._usertheme_extension_version = max(extensions[ShellThemeTweak.THEME_EXT_NAME]["shell-version"])
+                    logging.info("Shell user-theme extension v%s", self._usertheme_extension_version)
 
                     error = None
                 except:
@@ -79,14 +80,10 @@ class ShellThemeTweak(Tweak):
             error = "Could not list shell extensions"
 
         if error:
-            info = Gtk.InfoBar()
-            info.props.message_type = Gtk.MessageType.INFO
-            info.get_content_area().add(Gtk.Label(error))
-            self.widget = build_label_beside_widget(self.name, info)
-            self.widget_for_size_group = info
+            cb = build_combo_box_text(None)
+            self.widget = build_label_beside_widget(self.name, cb, warning=error)
+            self.widget_for_size_group = cb
         else:
-            hb = Gtk.HBox()
-
             #include both system, and user themes
             #note: the default theme lives in /system/data/dir/gnome-shell/theme
             #      and not themes/, so add it manually later
@@ -97,10 +94,6 @@ class ShellThemeTweak(Tweak):
                         os.path.exists(os.path.join(d, "gnome-shell")) and \
                         os.path.exists(os.path.join(d, "gnome-shell", "gnome-shell.css")))
 
-            chooser = ZipFileChooserButton("Select a theme file")
-            chooser.connect("file-set", self._on_file_set)
-            hb.pack_start(chooser, False, False, 5)
-
             #build a combo box with all the valid theme options
             #manually add Adwaita to represent the default
             cb = build_combo_box_text(
@@ -108,10 +101,13 @@ class ShellThemeTweak(Tweak):
                     ("", "default"),
                     *[(v,v) for v in valid])
             cb.connect('changed', self._on_combo_changed)
-            hb.pack_start(cb, False, False, 0)
-            self.combo = cb
+            self._combo = cb
 
-            self.widget = build_label_beside_widget(self.name, hb)
+            #a filechooser to install new themes
+            chooser = ZipFileChooserButton("Select a theme file")
+            chooser.connect("file-set", self._on_file_set)
+
+            self.widget = build_label_beside_widget(self.name, chooser, cb)
             self.widget_for_size_group = cb
     
     def _on_file_set(self, chooser):
@@ -161,7 +157,7 @@ class ShellThemeTweak(Tweak):
 
                     #I suppose I could rely on updated as indicating whether to add the theme
                     #name to the combo, but just check to see if it is already there
-                    model = self.combo.get_model()
+                    model = self._combo.get_model()
                     if theme_name not in [r[0] for r in model]:
                         model.append( (theme_name, theme_name) )
                 else:

@@ -15,19 +15,48 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Gio
+from gi.repository import Gtk, Gdk, Gio
 
 from gtweak.tweakmodel import Tweak
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gconf import GConfSetting
 
-def build_label_beside_widget(txt, widget, hbox=None):
-    if not hbox:
+def build_label_beside_widget(txt, *widget, **kwargs):
+    """
+    Builds a HBox containing widgets.
+
+    Optional Kwargs:
+        hbox: Use an existing HBox, not a new one
+        info: Informational text to be shown after the label
+        warning: Warning text to be shown after the label
+    """
+    if kwargs.get("hbox"):
+        hbox = kwargs.get("hbox")
+    else:
         hbox = Gtk.HBox()
+
+    hbox.props.spacing = 4
     lbl = Gtk.Label(txt)
     lbl.props.xalign = 0.0
     hbox.pack_start(lbl, True, True, 0)
-    hbox.pack_start(widget, False, False, 0)
+
+    if kwargs.get("info"):
+        icon = "dialog-information-symbolic"
+        tip = kwargs.get("info")
+    elif kwargs.get("warning"):
+        icon = "dialog-warning-symbolic"
+        tip = kwargs.get("warning")
+    else:
+        icon = ""
+
+    if icon:
+        image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU)
+        image.set_tooltip_text(tip)
+        hbox.pack_start(image, False, False, 0)
+
+    for w in widget:
+        hbox.pack_start(w, False, False, 0)
+
     return hbox
 
 def build_combo_box_text(selected, *values):
