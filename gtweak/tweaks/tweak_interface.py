@@ -73,6 +73,22 @@ class CursorThemeSwitcher(GSettingsComboTweak):
                         os.path.exists(os.path.join(d, "cursors")))
         return valid
 
+class KeyThemeSwitcher(GSettingsComboTweak):
+    def __init__(self, **options):
+        GSettingsComboTweak.__init__(self,
+            "org.gnome.desktop.interface",
+            "gtk-key-theme",
+            make_combo_list_with_default(self._get_valid_key_themes(), "Default"),
+            **options)
+
+    def _get_valid_key_themes(self):
+        dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
+                 os.path.join(os.path.expanduser("~"), ".themes"))
+        valid = walk_directories(dirs, lambda d:
+                    os.path.isfile(os.path.join(d, "gtk-3.0", "gtk-keys.css")) and \
+                    os.path.isfile(os.path.join(d, "gtk-2.0-key", "gtkrc")))
+        return valid
+
 sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = (
@@ -81,6 +97,7 @@ TWEAK_GROUPS = (
             GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons"),
             GtkThemeSwitcher(size_group=sg),
+            KeyThemeSwitcher(size_group=sg),
             IconThemeSwitcher(size_group=sg),
             CursorThemeSwitcher(size_group=sg)),
 )
