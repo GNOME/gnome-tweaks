@@ -27,15 +27,29 @@ class _ShellExtensionTweak(Tweak):
         sw = Gtk.Switch()
         state = ext.get("state")
         sw.set_active(
-                state == 1 and \
+                state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
                 not self._settings.setting_is_in_list(self.EXTENSION_DISABLED_KEY, ext["uuid"])
         )
-        sw.set_sensitive(state in (1,2))
         sw.connect('notify::active', self._on_extension_toggled, ext["uuid"])
+
+        warning = None
+        sensitive = False
+        if state == GnomeShell.EXTENSION_STATE["ENABLED"] or \
+           state == GnomeShell.EXTENSION_STATE["DISABLED"]:
+            sensitive = True
+        elif state == GnomeShell.EXTENSION_STATE["ERROR"]:
+            warning = "Error loading"
+        elif state == GnomeShell.EXTENSION_STATE["OUT_OF_DATE"]:
+            warning = "Extension does not support shell version"
+        else:
+            warning = "Unknown extension state"
+            logging.critical(warning)
+        sw.set_sensitive(sensitive)
 
         self.widget = build_label_beside_widget(
                         "%s Extension" % ext["name"],
-                        sw)
+                        sw,
+                        warning=warning)
         self.widget_for_size_group = sw
 
     def _on_extension_toggled(self, sw, active, uuid):

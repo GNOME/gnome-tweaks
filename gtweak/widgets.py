@@ -30,6 +30,11 @@ def build_label_beside_widget(txt, *widget, **kwargs):
         info: Informational text to be shown after the label
         warning: Warning text to be shown after the label
     """
+    def make_image(icon, tip):
+        image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU)
+        image.set_tooltip_text(tip)
+        return image
+
     if kwargs.get("hbox"):
         hbox = kwargs.get("hbox")
     else:
@@ -41,18 +46,13 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     hbox.pack_start(lbl, True, True, 0)
 
     if kwargs.get("info"):
-        icon = "dialog-information-symbolic"
-        tip = kwargs.get("info")
-    elif kwargs.get("warning"):
-        icon = "dialog-warning-symbolic"
-        tip = kwargs.get("warning")
-    else:
-        icon = ""
-
-    if icon:
-        image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU)
-        image.set_tooltip_text(tip)
-        hbox.pack_start(image, False, False, 0)
+        hbox.pack_start(
+                make_image("dialog-information-symbolic", kwargs.get("info")),
+                False, False, 0)
+    if kwargs.get("warning"):
+        hbox.pack_start(
+                make_image("dialog-warning-symbolic", kwargs.get("warning")),
+                False, False, 0)
 
     for w in widget:
         hbox.pack_start(w, False, False, 0)
