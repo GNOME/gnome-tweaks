@@ -191,7 +191,7 @@ class ShellThemeTweak(Tweak):
         if not val:
             if self._usertheme_extension_version < "3.0.2":
                 self.notify_action_required(
-                    "The shell must be restarted to apply the theme",
+                    "The shell may need to be restarted to apply the theme",
                     "Restart",
                     lambda: self._shell.restart())
 

@@ -66,9 +66,13 @@ class GnomeShell:
         out = self._proxy.execute_js('const ExtensionSystem = imports.ui.extensionSystem; ExtensionSystem.extensionMeta')
         return json.loads(out)
 
-    def get_version(self):
+    @property
+    def version(self):
         return json.loads(self._proxy.execute_js('const Config = imports.misc.config; Config.PACKAGE_VERSION'))
+
+
 
 if __name__ == "__main__":
     s = GnomeShell()
+    print "Shell Version: %s" % s.version
     print s.list_extensions()
