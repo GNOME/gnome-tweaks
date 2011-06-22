@@ -57,6 +57,11 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     for w in widget:
         hbox.pack_start(w, False, False, 0)
 
+    #For Atk, indicate that the rightmost widget, usually the switch relates to the
+    #label. By convention this is true in the great majority of cases. Settings that
+    #construct their own widgets will need to set this themselves
+    lbl.set_mnemonic_widget(widget[-1])
+
     return hbox
 
 def build_combo_box_text(selected, *values):
