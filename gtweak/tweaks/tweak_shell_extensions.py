@@ -1,5 +1,4 @@
 import os.path
-import shutil
 import zipfile
 import tempfile
 import logging
@@ -91,7 +90,6 @@ class _ShellExtensionInstallerTweak(Tweak):
                         fragment = n.split("/")[0:-1]
                         file_metadata = n
                     if n.endswith("extension.js"):
-                        extension = True
                         if file_extension:
                             raise Exception("Only one extension per zip file")
                         file_extension = n
@@ -105,7 +103,7 @@ class _ShellExtensionInstallerTweak(Tweak):
                 extension_uuid = None
                 tmp = tempfile.mkdtemp()
                 z.extract(file_metadata, tmp)
-                with open(os.path.join(tmp,file_metadata)) as f:
+                with open(os.path.join(tmp, file_metadata)) as f:
                     try:
                         extension_uuid = json.load(f)["uuid"]
                     except:
