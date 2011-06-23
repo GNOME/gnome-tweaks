@@ -45,7 +45,7 @@ class DesktopIconTweak(GSettingsSwitchTweak):
 
 TWEAK_GROUPS = (
         TweakGroup(
-            "File Manager",
+            _("File Manager"),
             DesktopIconTweak(),
             GSettingsSwitchTweak("org.gnome.nautilus.desktop", "computer-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.nautilus.desktop", "home-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml"),

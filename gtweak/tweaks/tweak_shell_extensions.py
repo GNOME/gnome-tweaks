@@ -38,16 +38,16 @@ class _ShellExtensionTweak(Tweak):
            state == GnomeShell.EXTENSION_STATE["DISABLED"]:
             sensitive = True
         elif state == GnomeShell.EXTENSION_STATE["ERROR"]:
-            warning = "Error loading"
+            warning = _("Error loading extension")
         elif state == GnomeShell.EXTENSION_STATE["OUT_OF_DATE"]:
-            warning = "Extension does not support shell version"
+            warning = _("Extension does not support shell version")
         else:
-            warning = "Unknown extension state"
+            warning = _("Unknown extension error")
             logging.critical(warning)
         sw.set_sensitive(sensitive)
 
         self.widget = build_label_beside_widget(
-                        "%s Extension" % ext["name"],
+                        _("%s Extension") % ext["name"],
                         sw,
                         warning=warning)
         self.widget_for_size_group = sw
@@ -59,8 +59,8 @@ class _ShellExtensionTweak(Tweak):
             self._settings.setting_remove_from_list(self.EXTENSION_DISABLED_KEY, uuid)
 
         self.notify_action_required(
-            "The shell must be restarted for changes to take effect",
-            "Restart",
+            _("The shell must be restarted for changes to take effect"),
+            _("Restart"),
             self._shell.restart)
 
 class _ShellExtensionInstallerTweak(Tweak):
@@ -68,11 +68,11 @@ class _ShellExtensionInstallerTweak(Tweak):
     EXTENSION_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions")
 
     def __init__(self, shell, **options):
-        Tweak.__init__(self, "Install Shell Extension", "", **options)
+        Tweak.__init__(self, _("Install Shell Extension"), "", **options)
 
         self._shell = shell
 
-        chooser = ZipFileChooserButton("Select a theme file")
+        chooser = ZipFileChooserButton(_("Select an extension"))
         chooser.connect("file-set", self._on_file_set)
 
         self.widget = build_label_beside_widget(self.name, chooser)
@@ -120,22 +120,22 @@ class _ShellExtensionInstallerTweak(Tweak):
 
                 if ok:
                     if updated:
-                        verb = "%s extension updated successfully" % extension_uuid
+                        verb = _("%s extension updated successfully") % extension_uuid
                     else:
-                        verb = "%s extension installed successfully" % extension_uuid
+                        verb = _("%s extension installed successfully") % extension_uuid
 
                     self.notify_action_required(
                         verb,
-                        "Restart",
+                        _("Restart"),
                         self._shell.restart)
 
                 else:
-                    self.notify_error("Error installing extension")
+                    self.notify_error(_("Error installing extension"))
 
 
             except:
                 #does not look like a valid theme
-                self.notify_error("Invalid extension file")
+                self.notify_error(_("Invalid extension"))
                 logging.warning("Error parsing theme zip", exc_info=True)
 
         #set button back to default state
@@ -168,7 +168,7 @@ class ShellExtensionTweakGroup(TweakGroup):
         except:
             logging.warning("Error detecting shell")
 
-        TweakGroup.__init__(self, "Shell Extensions", *extension_tweaks)
+        TweakGroup.__init__(self, _("Shell Extensions"), *extension_tweaks)
 
 TWEAK_GROUPS = (
         ShellExtensionTweakGroup(),

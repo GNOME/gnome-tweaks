@@ -81,7 +81,7 @@ class KeyThemeSwitcher(GSettingsComboTweak):
             make_combo_list_with_default(
                 self._get_valid_key_themes(),
                 "Default",
-                default_text="<i>Default</i>"),
+                default_text=_("<i>Default</i>")),
             **options)
 
     def _get_valid_key_themes(self):
@@ -96,7 +96,7 @@ sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = (
         TweakGroup(
-            "Interface",
+            _("Interface"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons"),
             GtkThemeSwitcher(size_group=sg),

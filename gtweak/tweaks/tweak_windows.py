@@ -75,7 +75,7 @@ sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = (
         TweakGroup(
-            "Windows",
+            _("Windows"),
             WindowThemeSwitcher(size_group=sg),
             ActionClickTitlebarTweak("/apps/metacity/general/action_double_click_titlebar", size_group=sg),
             ActionClickTitlebarTweak("/apps/metacity/general/action_middle_click_titlebar", size_group=sg),

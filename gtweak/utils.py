@@ -49,7 +49,7 @@ def make_combo_list_with_default(opts, default, title=True, default_text=None):
             name = t
 
         if t == default:
-            name = default_text or "%s <i>(default)</i>" % name
+            name = default_text or _("%s <i>(default)</i>") % name
 
         themes.append((t, name))
     return themes

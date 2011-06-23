@@ -27,6 +27,7 @@ AS_AC_EXPAND(DATADIR, "${datadir}")
 AS_AC_EXPAND(PKGDATADIR, "${datadir}/${PACKAGE}")
 AS_AC_EXPAND(GSETTINGSSCHEMADIR, "${gsettingsschemadir}")
 AS_AC_EXPAND(TWEAKDIR, "${pythondir}/gtweak/tweaks")
+AS_AC_EXPAND(LOCALEDIR, "${localedir}")
 
 AC_CONFIG_FILES([ po/Makefile.in
 Makefile

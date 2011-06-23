@@ -52,11 +52,11 @@ class ShellThemeTweak(Tweak):
         Tweak.__init__(self, "Shell Theme", "Install custom or user themes for gnome-shell", **options)
 
         #check the shell is running and the usertheme extension is present
-        error = "Unknown"
+        error = _("Unknown error")
         try:
             self._shell = GnomeShell()
         except:
-            error = "Shell not running"
+            error = _("Shell not running")
         try:
             extensions = self._shell.list_extensions()
             if ShellThemeTweak.THEME_EXT_NAME in extensions and extensions[ShellThemeTweak.THEME_EXT_NAME]["state"] == 1:
@@ -72,12 +72,12 @@ class ShellThemeTweak(Tweak):
 
                     error = None
                 except:
-                    error = "User Theme extension schema missing"
+                    error = _("Shell user-theme extension incorrectly installed")
 
             else:
-                error = "User Theme extension not enabled"
+                error = _("Shell user-theme extension not enabled")
         except Exception, e:
-            error = "Could not list shell extensions"
+            error = _("Could not list shell extensions")
 
         if error:
             cb = build_combo_box_text(None)
@@ -103,12 +103,12 @@ class ShellThemeTweak(Tweak):
                     *make_combo_list_with_default(
                         valid,
                         "",
-                        default_text="<i>Default</i>"))
+                        default_text=_("<i>Default</i>")))
             cb.connect('changed', self._on_combo_changed)
             self._combo = cb
 
             #a filechooser to install new themes
-            chooser = ZipFileChooserButton("Select a theme file")
+            chooser = ZipFileChooserButton(_("Select a theme"))
             chooser.connect("file-set", self._on_file_set)
 
             self.widget = build_label_beside_widget(self.name, chooser, cb)
@@ -155,9 +155,9 @@ class ShellThemeTweak(Tweak):
 
                 if ok:
                     if updated:
-                        self.notify_info("%s theme updated successfully" % theme_name)
+                        self.notify_info(_("%s theme updated successfully") % theme_name)
                     else:
-                        self.notify_info("%s theme installed successfully" % theme_name)
+                        self.notify_info(_("%s theme installed successfully") % theme_name)
 
                     #I suppose I could rely on updated as indicating whether to add the theme
                     #name to the combo, but just check to see if it is already there
@@ -165,12 +165,12 @@ class ShellThemeTweak(Tweak):
                     if theme_name not in [r[0] for r in model]:
                         model.append( (theme_name, theme_name) )
                 else:
-                    self.notify_error("Error installing theme")
+                    self.notify_error(_("Error installing theme"))
 
 
             except:
                 #does not look like a valid theme
-                self.notify_error("Invalid theme file")
+                self.notify_error(_("Invalid theme"))
                 logging.warning("Error parsing theme zip", exc_info=True)
 
         #set button back to default state
@@ -191,15 +191,15 @@ class ShellThemeTweak(Tweak):
         if not val:
             if self._usertheme_extension_version < "3.0.2":
                 self.notify_action_required(
-                    "The shell may need to be restarted to apply the theme",
-                    "Restart",
+                    _("The shell may need to be restarted to apply the theme"),
+                    _("Restart"),
                     lambda: self._shell.restart())
 
 sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = (
         TweakGroup(
-            "Shell",
+            _("Shell"),
             GSettingsSwitchTweak("org.gnome.shell.clock", "show-date", schema_filename="org.gnome.shell.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),
             ShowWindowButtons(size_group=sg),
