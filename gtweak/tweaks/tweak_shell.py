@@ -201,6 +201,7 @@ TWEAK_GROUPS = (
         TweakGroup(
             _("Shell"),
             GSettingsSwitchTweak("org.gnome.shell.clock", "show-date", schema_filename="org.gnome.shell.gschema.xml"),
+            GSettingsSwitchTweak("org.gnome.shell.clock", "show-seconds", schema_filename="org.gnome.shell.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),
             ShowWindowButtons(size_group=sg),
             ShellThemeTweak(size_group=sg),
