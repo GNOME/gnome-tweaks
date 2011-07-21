@@ -49,6 +49,7 @@ def make_combo_list_with_default(opts, default, title=True, default_text=None):
             name = t
 
         if t == default:
+            #indicates the default theme, e.g Adwaita (default)
             name = default_text or _("%s <i>(default)</i>") % name
 
         themes.append((t, name))
