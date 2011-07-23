@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-06-29 19:46+0000\n"
-"PO-Revision-Date: 2011-07-22 11:17+0200\n"
+"POT-Creation-Date: 2011-07-23 07:44+0000\n"
+"PO-Revision-Date: 2011-07-23 09:48+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -31,8 +31,14 @@ msgid "welcome"
 msgstr "bienvenido"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Ajustes de retoques avanzados"
+#| msgid "Tweak Advanced Settings"
+msgid "Advanced Settings"
+msgstr "Configuración avanzada"
+
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+#| msgid "Tweak Advanced Settings"
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Ajustes de retoques avanzados en GNOME 3"
 
 #: ../gtweak/tweaks/tweak_font.py:27
 msgid "Fonts"
@@ -101,8 +107,8 @@ msgid "The shell may need to be restarted to apply the theme"
 msgstr "Puede que sea necesario reiniciar GNOME-Shell para aplicar el tema"
 
 #: ../gtweak/tweaks/tweak_shell.py:195
-#: ../gtweak/tweaks/tweak_shell_extensions.py:63
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_shell_extensions.py:62
+#: ../gtweak/tweaks/tweak_shell_extensions.py:127
 msgid "Restart"
 msgstr "Reiniciar"
 
@@ -110,55 +116,55 @@ msgstr "Reiniciar"
 msgid "Shell"
 msgstr "GNOME-Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_shell_extensions.py:40
 msgid "Error loading extension"
 msgstr "Error al cargar la extensión"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:43
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
 msgid "Extension does not support shell version"
 msgstr "La extensión no soporta la versión de GNOME-Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:45
+#: ../gtweak/tweaks/tweak_shell_extensions.py:44
 msgid "Unknown extension error"
 msgstr "Error de la extensión desconocido"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:50
+#: ../gtweak/tweaks/tweak_shell_extensions.py:49
 #, python-format
 msgid "%s Extension"
 msgstr "Extensión %s"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:62
+#: ../gtweak/tweaks/tweak_shell_extensions.py:61
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Se debe reiniciar GNOME-Shell para que los cambios tengan efecto"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:71
+#: ../gtweak/tweaks/tweak_shell_extensions.py:70
 msgid "Install Shell Extension"
 msgstr "Instalar extensión de GNOME-Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:75
+#: ../gtweak/tweaks/tweak_shell_extensions.py:74
 msgid "Select an extension"
 msgstr "Seleccionar una extensión"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:123
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Extensión %s actualizada correctamente"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_shell_extensions.py:123
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Extensión %s instalada correctamente"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_shell_extensions.py:131
 msgid "Error installing extension"
 msgstr "Error la instalar la extensión"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:138
+#: ../gtweak/tweaks/tweak_shell_extensions.py:136
 msgid "Invalid extension"
 msgstr "Extensión no válida"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_shell_extensions.py:169
 msgid "Shell Extensions"
 msgstr "Extensiones de GNOME-Shell"
 
@@ -166,7 +172,8 @@ msgstr "Extensiones de GNOME-Shell"
 msgid "Windows"
 msgstr "Ventanas"
 
-#: ../gtweak/utils.py:52
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:53
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predeterminado)</i>"
