@@ -2,34 +2,176 @@
 # Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Sergiy Gavrylov <sergiovana@bigmir.net>, 2011.
-#
+# Korostil Daniel <ted.korostiled@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-04-20 12:20+0000\n"
-"PO-Revision-Date: 2011-04-21 18:33+0300\n"
-"Last-Translator: Sergiy Gavrylov <sergiovana@bigmir.net>\n"
-"Language-Team: Ukrainian <uk@li.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-07-28 23:34+0300\n"
+"PO-Revision-Date: 2011-07-28 23:47+0300\n"
+"Last-Translator: Korostil Daniel <ted.korostiled@gmail.com>\n"
+"Language-Team: translation@linux.org.ua\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Virtaal 0.6.1\n"
 
 #: ../data/shell.ui.h:1
 msgid "Tweak Tool"
-msgstr "Інструмент оптимізації"
+msgstr "Засіб налаштування"
 
 #: ../data/shell.ui.h:2
 msgid "tweaks"
-msgstr "оптимізації"
+msgstr "Налаштування"
 
 #: ../data/shell.ui.h:3
 msgid "welcome"
 msgstr "ласкаво просимо!"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Оптимізація додаткових налаштувань"
+msgid "Advanced Settings"
+msgstr "Додаткові налаштування"
+
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Додаткові налаштування для GNOME 3"
+
+#: ../gtweak/tweaks/tweak_font.py:27
+msgid "Fonts"
+msgstr "Шрифти"
+
+#: ../gtweak/tweaks/tweak_interface.py:84 ../gtweak/tweaks/tweak_shell.py:106
+msgid "<i>Default</i>"
+msgstr "<i>Типово</i>"
+
+#: ../gtweak/tweaks/tweak_interface.py:99
+msgid "Interface"
+msgstr "Інтерфейс"
+
+#: ../gtweak/tweaks/tweak_nautilus.py:48
+msgid "File Manager"
+msgstr "Файловий менеджер"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:55
+msgid "Unknown error"
+msgstr "Невідома помилка"
+
+#: ../gtweak/tweaks/tweak_shell.py:59
+msgid "Shell not running"
+msgstr "Оболонку не запущено"
+
+#: ../gtweak/tweaks/tweak_shell.py:75
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Розширення користувацької теми для оболонки неправильно встановлено"
+
+#: ../gtweak/tweaks/tweak_shell.py:78
+msgid "Shell user-theme extension not enabled"
+msgstr "Розширення користувацької тема для оболонки не ввімкнено"
+
+#: ../gtweak/tweaks/tweak_shell.py:80
+msgid "Could not list shell extensions"
+msgstr "Неможливо перелічити розширення оболонки"
+
+#. a filechooser to install new themes
+#: ../gtweak/tweaks/tweak_shell.py:111
+msgid "Select a theme"
+msgstr "Вибрати тему"
+
+#: ../gtweak/tweaks/tweak_shell.py:158
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "Тему %s успішно оновлено"
+
+#: ../gtweak/tweaks/tweak_shell.py:160
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "Тему %s успішно встановлено."
+
+#: ../gtweak/tweaks/tweak_shell.py:168
+msgid "Error installing theme"
+msgstr "Помилка встановлення теми"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:173
+msgid "Invalid theme"
+msgstr "Неправильна тема"
+
+#: ../gtweak/tweaks/tweak_shell.py:194
+msgid "The shell may need to be restarted to apply the theme"
+msgstr "Можливо, щоб застосувати тему, потрібно перезавантажити Shell"
+
+#: ../gtweak/tweaks/tweak_shell.py:195
+#: ../gtweak/tweaks/tweak_shell_extensions.py:62
+#: ../gtweak/tweaks/tweak_shell_extensions.py:127
+msgid "Restart"
+msgstr "Перезавантажити"
+
+#: ../gtweak/tweaks/tweak_shell.py:202
+msgid "Shell"
+msgstr "Оболонка"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:40
+msgid "Error loading extension"
+msgstr "Помилка завантаження розширення"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+msgid "Extension does not support shell version"
+msgstr "Розширення не підтримує версію оболонки"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:44
+msgid "Unknown extension error"
+msgstr "Невідома помилка розширення"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:49
+#, python-format
+msgid "%s Extension"
+msgstr "Розширення %s"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:61
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Щоб зміни набрали чинності, перезавантажте оболонку"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:70
+msgid "Install Shell Extension"
+msgstr "Встановити розширення оболонки"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:74
+msgid "Select an extension"
+msgstr "Вибрати розширення"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "Розширення %s успішно оновлено"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:123
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "Розширення %s успішно встановлено"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:131
+msgid "Error installing extension"
+msgstr "Помилка встановлення розширення"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell_extensions.py:136
+msgid "Invalid extension"
+msgstr "Неправильне розширення"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:169
+msgid "Shell Extensions"
+msgstr "Розширення оболонки"
+
+#: ../gtweak/tweaks/tweak_windows.py:78
+msgid "Windows"
+msgstr "Вікна"
+
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:53
+#, python-format
+msgid "%s <i>(default)</i>"
+msgstr "%s <i>(типово)</i>"
