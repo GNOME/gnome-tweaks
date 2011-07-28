@@ -59,6 +59,8 @@ if __name__ == '__main__':
                   help="Installation prefix (for gsettings schema, themes, etc)", metavar="[/, /usr]")
     parser.add_option("-v", "--verbose", action="store_true",
                   help="Print the names of settings modified")
+    parser.add_option("-d", "--debug", action="store_true",
+                  help="Enable debug output")
     options, args = parser.parse_args()
 
     try:
@@ -86,7 +88,11 @@ if __name__ == '__main__':
     gtweak.APP_NAME = "gnome-tweak-tool"
     gtweak.VERBOSE = options.verbose
 
-    logging.basicConfig(format="%(levelname)-8s: %(message)s", level=logging.INFO)
+    if options.debug:
+        level=logging.DEBUG
+    else:
+        level=logging.INFO
+    logging.basicConfig(format="%(levelname)-8s: %(message)s", level=level)
 
     locale.setlocale(locale.LC_ALL, None)
     gettext.bindtextdomain(gtweak.APP_NAME, LOCALE_DIR)

@@ -43,7 +43,7 @@ class GConfSetting:
             else:
                 self._cmd_cache[command] = "ERROR: %s" % stderr.strip()
 
-        logging.info("Caching gconf: %s (%s)" % (self, command))
+        logging.debug("Caching gconf: %s (%s)" % (self, command))
         return self._cmd_cache[command]
 
     def schema_get_summary(self):

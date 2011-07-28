@@ -68,7 +68,7 @@ class ShellThemeTweak(Tweak):
                     #assume the usertheme version is that version of the shell which
                     #it most supports (this is a poor assumption)
                     self._usertheme_extension_version = max(extensions[ShellThemeTweak.THEME_EXT_NAME]["shell-version"])
-                    logging.info("Shell user-theme extension v%s", self._usertheme_extension_version)
+                    logging.debug("Shell user-theme extension v%s", self._usertheme_extension_version)
 
                     error = None
                 except:
@@ -139,7 +139,7 @@ class ShellThemeTweak(Tweak):
                     raise Exception("Could not find gnome-shell.css")
 
                 if not theme_name:
-                    logging.info("Old style theme detected (theme.json)")
+                    logging.info("Old style theme detected (missing theme.json)")
                     #old style themes name was taken from the zip name
                     if fragment[0] == "theme" and len(fragment) == 1:
                         theme_name = os.path.basename(f)
