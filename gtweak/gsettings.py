@@ -68,6 +68,12 @@ class GSettingsSetting(Gio.Settings):
 
         self._schema = _SCHEMA_CACHE[schema_name]
 
+        if gtweak.VERBOSE:
+            self.connect("changed", self._on_changed)
+
+    def _on_changed(self, settings, key_name):
+        print "Change: %s %s -> %s" % (self.props.schema, key_name, self[key_name])
+
     def _setting_check_is_list(self, key):
         variant = Gio.Settings.get_value(self, key)
         return variant.get_type_string() == "as"

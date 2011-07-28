@@ -18,6 +18,8 @@
 import subprocess
 import logging
 
+import gtweak
+
 from gi.repository import GConf
 
 class GConfSetting:
@@ -62,6 +64,9 @@ class GConfSetting:
             assert(False)
 
     def set_value(self, value):
+        if gtweak.VERBOSE:
+            print "Change: %s -> %s" % (self._key, value)
+
         if self._type == bool:
             self._client.set_bool(self._key, value)
         elif self._type == str:
