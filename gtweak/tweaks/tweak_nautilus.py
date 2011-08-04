@@ -51,5 +51,6 @@ TWEAK_GROUPS = (
             GSettingsSwitchTweak("org.gnome.nautilus.desktop", "home-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.nautilus.desktop", "network-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.nautilus.desktop", "trash-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml"),
+            GSettingsSwitchTweak("org.gnome.nautilus.desktop", "volumes-visible", schema_filename="org.gnome.nautilus.gschema.xml"),
             ),
 )
