@@ -21,8 +21,8 @@ from gi.repository import Gtk
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
-from gtweak.tweakmodel import TweakGroup
-from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, build_horizontal_sizegroup
+from gtweak.tweakmodel import TWEAK_GROUP_INTERFACE
+from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak
 
 class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
@@ -92,15 +92,11 @@ class KeyThemeSwitcher(GSettingsComboTweak):
                     os.path.isfile(os.path.join(d, "gtk-2.0-key", "gtkrc")))
         return valid
 
-sg = build_horizontal_sizegroup()
-
-TWEAK_GROUPS = (
-        TweakGroup(
-            _("Interface"),
-            GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons"),
-            GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons"),
-            GtkThemeSwitcher(size_group=sg),
-            KeyThemeSwitcher(size_group=sg),
-            IconThemeSwitcher(size_group=sg),
-            CursorThemeSwitcher(size_group=sg)),
+TWEAKS = (
+    GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons", group_name=TWEAK_GROUP_INTERFACE),
+    GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons", group_name=TWEAK_GROUP_INTERFACE),
+    GtkThemeSwitcher(group_name=TWEAK_GROUP_INTERFACE),
+    KeyThemeSwitcher(group_name=TWEAK_GROUP_INTERFACE),
+    IconThemeSwitcher(group_name=TWEAK_GROUP_INTERFACE),
+    CursorThemeSwitcher(group_name=TWEAK_GROUP_INTERFACE),
 )

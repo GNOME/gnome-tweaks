@@ -141,6 +141,8 @@ class _ShellExtensionInstallerTweak(Tweak):
 
 class ShellExtensionTweakGroup(TweakGroup):
     def __init__(self):
+        TweakGroup.__init__(self, _("Shell Extensions"))
+
         extension_tweaks = []
         sg = build_horizontal_sizegroup()
 
@@ -166,7 +168,7 @@ class ShellExtensionTweakGroup(TweakGroup):
         except:
             logging.warning("Error detecting shell")
 
-        TweakGroup.__init__(self, _("Shell Extensions"), *extension_tweaks)
+        self.set_tweaks(*extension_tweaks)
 
 TWEAK_GROUPS = (
         ShellExtensionTweakGroup(),

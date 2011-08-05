@@ -15,6 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
+import logging
 import glob
 import os.path
 
@@ -22,11 +23,18 @@ import gtweak
 
 from gi.repository import Gtk
 
+TWEAK_GROUP_FONTS = _("Fonts")
+TWEAK_GROUP_INTERFACE = _("Interface")
+TWEAK_GROUP_FILE_MANAGER = _("File Manager")
+TWEAK_GROUP_WINDOWS = _("Windows")
+
+LOG = logging.getLogger(__name__)
+
 class Tweak:
     def __init__(self, name, description, **options):
         self.name = name
         self.description = description
-        self.size_group = options.get('size_group')
+        self.group_name = options.get("group_name",_("Miscellaneous"))
 
         #FIXME: I would have rather done this as a GObject signal, but it
         #would prohibit other tweaks from inheriting from GtkWidgets
@@ -61,11 +69,19 @@ class Tweak:
 class TweakGroup:
     def __init__(self, name, *tweaks):
         self.name = name
-        self.tweaks = [t for t in tweaks]
+        self.tweaks = []
+
+        self._sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
+        self._sg.props.ignore_hidden = True
+
+        self.set_tweaks(*tweaks)
+
+    def set_tweaks(self, *tweaks):
+        self.tweaks += [t for t in tweaks]
 
         for t in tweaks:
-            if t.size_group and t.widget_for_size_group:
-                t.size_group.add_widget(t.widget_for_size_group)
+            if t.widget_for_size_group:
+                self._sg.add_widget(t.widget_for_size_group)
 
 class TweakModel(Gtk.ListStore):
     (COLUMN_NAME,
@@ -77,6 +93,9 @@ class TweakModel(Gtk.ListStore):
         assert(os.path.exists(self._tweak_dir))
 
         self.set_sort_column_id(self.COLUMN_NAME, Gtk.SortType.ASCENDING)
+
+        # map of tweakgroup.name -> tweakgroup
+        self._tweak_group_names = {}
 
     @property
     def tweaks(self):
@@ -100,13 +119,37 @@ class TweakModel(Gtk.ListStore):
             except ValueError:
                 pass
         
+        groups = []
+        tweaks = []
+
         mods = __import__("gtweak.tweaks", globals(), locals(), tweak_files, 0)
         for mod in [getattr(mods, file_name) for file_name in tweak_files]:
-            for group in mod.TWEAK_GROUPS:
-                self.add_tweak_group(group)
+            groups.extend( getattr(mod, "TWEAK_GROUPS", []) )
+            tweaks.extend( getattr(mod, "TWEAKS", []) )
+
+        for g in groups:
+            self.add_tweak_group(g)
+
+        for t in tweaks:
+            self.add_tweak_auto_to_group(t)
 
     def add_tweak_group(self, tweakgroup):
+        if tweakgroup.name in self._tweak_group_names:
+            LOG.critical("Tweak group named: %s already exists" % tweakgroup.name)
+            return
+
         self.append([tweakgroup.name, tweakgroup])
+        self._tweak_group_names[tweakgroup.name] = tweakgroup
+
+    def add_tweak_auto_to_group(self, tweak):
+        name = tweak.group_name
+        try:
+            group = self._tweak_group_names[name]
+        except KeyError:
+            group = TweakGroup(name)
+            self.add_tweak_group(group)
+
+        group.set_tweaks(tweak)
       
     def search_matches(self, txt):
         return [t for t in self.tweaks if t.search_matches(txt)]

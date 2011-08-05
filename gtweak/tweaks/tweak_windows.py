@@ -19,8 +19,8 @@ import os.path
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
-from gtweak.tweakmodel import TweakGroup
-from gtweak.widgets import GConfComboTweak, build_horizontal_sizegroup
+from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, TWEAK_GROUP_INTERFACE
+from gtweak.widgets import GConfComboTweak
 from gtweak.gconf import GConfSetting
 
 class ActionClickTitlebarTweak(GConfComboTweak):
@@ -72,14 +72,10 @@ class WindowThemeSwitcher(GConfComboTweak):
             self.gconf.set_value(value)
             self.gconf_metacity.set_value(value)
 
-sg = build_horizontal_sizegroup()
-
-TWEAK_GROUPS = (
-        TweakGroup(
-            _("Windows"),
-            WindowThemeSwitcher(size_group=sg),
-            ActionClickTitlebarTweak("/apps/metacity/general/action_double_click_titlebar", size_group=sg),
-            ActionClickTitlebarTweak("/apps/metacity/general/action_middle_click_titlebar", size_group=sg),
-            ActionClickTitlebarTweak("/apps/metacity/general/action_right_click_titlebar", size_group=sg),
-            FocusModeTweak(size_group=sg)),
+TWEAKS = (
+    WindowThemeSwitcher(group_name=TWEAK_GROUP_INTERFACE),
+    ActionClickTitlebarTweak("/apps/metacity/general/action_double_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    ActionClickTitlebarTweak("/apps/metacity/general/action_middle_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    ActionClickTitlebarTweak("/apps/metacity/general/action_right_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    FocusModeTweak(group_name=TWEAK_GROUP_WINDOWS),
 )

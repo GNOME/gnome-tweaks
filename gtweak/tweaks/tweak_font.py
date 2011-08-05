@@ -17,21 +17,17 @@
 
 from gi.repository import Gtk
 
-from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import GSettingsRangeTweak, GSettingsFontButtonTweak, GConfFontButtonTweak, GSettingsComboTweak, build_horizontal_sizegroup
+from gtweak.tweakmodel import Tweak, TWEAK_GROUP_FONTS
+from gtweak.widgets import GSettingsRangeTweak, GSettingsFontButtonTweak, GConfFontButtonTweak, GSettingsComboTweak
 
-sg = build_horizontal_sizegroup()
-
-TWEAK_GROUPS = (
-        TweakGroup(
-            _("Fonts"),
-            GSettingsRangeTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, size_group=sg),
-            GSettingsFontButtonTweak("org.gnome.desktop.interface", "font-name", size_group=sg),
-            GSettingsFontButtonTweak("org.gnome.desktop.interface", "document-font-name", size_group=sg),
-            GSettingsFontButtonTweak("org.gnome.desktop.interface", "monospace-font-name", size_group=sg),
-            GConfFontButtonTweak("/apps/metacity/general/titlebar_font", str, size_group=sg),
-            GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "hinting",
-                [(i, i.title()) for i in ("none", "slight", "medium", "full")], size_group=sg),
-            GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "antialiasing",
-                [(i, i.title()) for i in ("none", "grayscale", "rgba")], size_group=sg)),
+TWEAKS = (
+    GSettingsRangeTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, group_name=TWEAK_GROUP_FONTS),
+    GSettingsFontButtonTweak("org.gnome.desktop.interface", "font-name", group_name=TWEAK_GROUP_FONTS),
+    GSettingsFontButtonTweak("org.gnome.desktop.interface", "document-font-name", group_name=TWEAK_GROUP_FONTS),
+    GSettingsFontButtonTweak("org.gnome.desktop.interface", "monospace-font-name", group_name=TWEAK_GROUP_FONTS),
+    GConfFontButtonTweak("/apps/metacity/general/titlebar_font", str, group_name=TWEAK_GROUP_FONTS),
+    GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "hinting",
+        [(i, i.title()) for i in ("none", "slight", "medium", "full")], group_name=TWEAK_GROUP_FONTS),
+    GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "antialiasing",
+        [(i, i.title()) for i in ("none", "grayscale", "rgba")], group_name=TWEAK_GROUP_FONTS),
 )

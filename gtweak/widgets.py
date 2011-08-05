@@ -109,7 +109,8 @@ class GSettingsSwitchTweak(_GSettingsTweak):
         w = Gtk.Switch()
         self.settings.bind(key_name, w, "active", Gio.SettingsBindFlags.DEFAULT)
         self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
-        self.widget_for_size_group = w
+        # never change the size of a switch
+        self.widget_for_size_group = None
 
 class GSettingsFontButtonTweak(_GSettingsTweak):
     def __init__(self, schema_name, key_name, **options):

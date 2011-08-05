@@ -58,16 +58,20 @@ class _TestButtonTweak(Tweak):
                 self.notify_info(self.name)
 
 TWEAK_GROUPS = (
-        TweakGroup(
-            "Test Foo Bar",
-            _TestTweak("foo bar", "does foo bar"),
-            _TestTweak("foo baz", "does foo baz"),
-            _TestInfoTweak("foo info", "info widget", tweak_info="Information"),
-            _TestInfoTweak("foo warning", "info widget", tweak_warning="Warning"),
-            _TestButtonTweak("Need Action", "foo bar", need_action=True),
-            _TestButtonTweak("Report Error", "foo baz", action_error=True),
-            _TestButtonTweak("Report Info", "foo bob", action_error=False)),
-        TweakGroup(
-            "Test Many Settings",
-            *[_TestTweak("name: " + str(d), "desc: " + str(d)) for d in range(50)]),
+    TweakGroup(
+        "Test Settings Group",
+        *[_TestTweak("name: " + str(d), "desc: " + str(d)) for d in range(50)]),
 )
+
+group_name = "Test Settings"
+
+TWEAKS = (
+    _TestTweak("foo bar", "does foo bar", group_name=group_name),
+    _TestTweak("foo baz", "does foo baz", group_name=group_name),
+    _TestInfoTweak("foo info", "info widget", tweak_info="Information", group_name=group_name),
+    _TestInfoTweak("foo warning", "info widget", tweak_warning="Warning", group_name=group_name),
+    _TestButtonTweak("Need Action", "foo bar", need_action=True, group_name=group_name),
+    _TestButtonTweak("Report Error", "foo baz", action_error=True, group_name=group_name),
+    _TestButtonTweak("Report Info", "foo bob", action_error=False, group_name=group_name),
+)
+
