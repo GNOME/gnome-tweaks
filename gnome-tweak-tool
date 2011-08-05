@@ -22,35 +22,8 @@ import gettext
 import gi
 gi.require_version("Gtk", "3.0")
 
-from gi.repository import Gtk
-
 import gtweak
-from gtweak.tweakmodel import TweakModel
-from gtweak.tweakview import TweakView
 
-class MainWindow:
-    def __init__(self):
-        builder = Gtk.Builder()
-
-        assert(os.path.exists(gtweak.PKG_DATA_DIR))
-
-        filename = os.path.join(gtweak.PKG_DATA_DIR, 'shell.ui')
-        builder.add_from_file(filename)
-        
-        welcome = builder.get_object('welcome_image')
-        welcome.set_from_file(os.path.join(gtweak.PKG_DATA_DIR, 'welcome.png'))
-
-        toolbar = builder.get_object('toolbar')
-        toolbar.get_style_context().add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
-        
-        model = TweakModel()
-        view = TweakView(
-                    builder,
-                    model)
-        builder.get_object('overview_sw').add(view.treeview)
-
-        view.run()
-        
 if __name__ == '__main__':
     parser = optparse.OptionParser()
     parser.add_option("-t", "--test", action="store_true",
@@ -99,5 +72,6 @@ if __name__ == '__main__':
     gettext.textdomain(gtweak.APP_NAME)
     gettext.install(gtweak.APP_NAME)
 
+    from gtweak.mainwindow import MainWindow
     MainWindow()
 
