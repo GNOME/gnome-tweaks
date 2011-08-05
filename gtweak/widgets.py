@@ -98,8 +98,8 @@ class _GSettingsTweak(Tweak):
         self.key_name = key_name
         self.settings = GSettingsSetting(schema_name, **options)
         Tweak.__init__(self,
-            self.settings.schema_get_summary(key_name),
-            self.settings.schema_get_description(key_name),
+            options.get("summary",self.settings.schema_get_summary(key_name)),
+            options.get("description",self.settings.schema_get_description(key_name)),
             **options)
 
 class GSettingsSwitchTweak(_GSettingsTweak):
@@ -195,8 +195,8 @@ class _GConfTweak(Tweak):
     def __init__(self, key_name, key_type, **options):
         self.gconf = GConfSetting(key_name, key_type)
         Tweak.__init__(self,
-            self.gconf.schema_get_summary(),
-            self.gconf.schema_get_description(),
+            options.get("summary",self.gconf.schema_get_summary()),
+            options.get("description",self.gconf.schema_get_description()),
             **options)
 
 class GConfComboTweak(_GConfTweak):
