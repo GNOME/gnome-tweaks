@@ -50,6 +50,7 @@ class WindowThemeSwitcher(GConfComboTweak):
             "/desktop/gnome/shell/windows/theme",
             str,
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
+            summary=_("Window theme"),
             **options)
 
         #also need to change the fallback (metacity) window theme
