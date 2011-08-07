@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-08-05 10:26+0000\n"
-"PO-Revision-Date: 2011-08-06 12:56+0200\n"
+"POT-Creation-Date: 2011-08-06 22:01+0000\n"
+"PO-Revision-Date: 2011-08-07 18:37+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -38,21 +38,9 @@ msgstr "Configuración avanzada"
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Ajustes de retoques avanzados en GNOME 3"
 
-#: ../gtweak/tweaks/tweak_font.py:27
-msgid "Fonts"
-msgstr "Tipografías"
-
 #: ../gtweak/tweaks/tweak_interface.py:84 ../gtweak/tweaks/tweak_shell.py:106
 msgid "<i>Default</i>"
 msgstr "<i>Predeterminada</i>"
-
-#: ../gtweak/tweaks/tweak_interface.py:99
-msgid "Interface"
-msgstr "Interfaz"
-
-#: ../gtweak/tweaks/tweak_nautilus.py:48
-msgid "File Manager"
-msgstr "Gestor de archivos"
 
 #. check the shell is running and the usertheme extension is present
 #: ../gtweak/tweaks/tweak_shell.py:55
@@ -162,21 +150,36 @@ msgstr "Error la instalar la extensión"
 msgid "Invalid extension"
 msgstr "Extensión no válida"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:169
+#: ../gtweak/tweaks/tweak_shell_extensions.py:144
 msgid "Shell Extensions"
 msgstr "Extensiones de GNOME-Shell"
 
 #: ../gtweak/tweaks/tweak_windows.py:53
-#| msgid "Invalid theme"
 msgid "Window theme"
 msgstr "Tema de la ventana"
-
-#: ../gtweak/tweaks/tweak_windows.py:79
-msgid "Windows"
-msgstr "Ventanas"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: ../gtweak/utils.py:53
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predeterminado)</i>"
+
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "Tipografías"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Interface"
+msgstr "Interfaz"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "File Manager"
+msgstr "Gestor de archivos"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "Ventanas"
+
+#: ../gtweak/tweakmodel.py:37
+msgid "Miscellaneous"
+msgstr "Miscelánea"
