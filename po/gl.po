@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-03 19:53+0200\n"
-"PO-Revision-Date: 2011-07-03 20:14+0200\n"
+"POT-Creation-Date: 2011-08-16 23:03+0200\n"
+"PO-Revision-Date: 2011-08-16 23:04+0200\n"
 "Last-Translator: Fran Diéguez <frandieguez@gnome.org>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
 "Language: gl_ES\n"
@@ -31,24 +31,16 @@ msgid "welcome"
 msgstr "benvido"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Axustes de retoques avanzados"
+msgid "Advanced Settings"
+msgstr "Configuración avanzada"
 
-#: ../gtweak/tweaks/tweak_font.py:27
-msgid "Fonts"
-msgstr "Tipografías"
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Axustes de retoques avanzados en GNOME 3"
 
 #: ../gtweak/tweaks/tweak_interface.py:84 ../gtweak/tweaks/tweak_shell.py:106
 msgid "<i>Default</i>"
 msgstr "<i>Predeterminada</i>"
-
-#: ../gtweak/tweaks/tweak_interface.py:99
-msgid "Interface"
-msgstr "Interface"
-
-#: ../gtweak/tweaks/tweak_nautilus.py:48
-msgid "File Manager"
-msgstr "Xestor de ficheiros"
 
 #. check the shell is running and the usertheme extension is present
 #: ../gtweak/tweaks/tweak_shell.py:55
@@ -158,15 +150,36 @@ msgstr "Produciuse un erro ao instalar a extensión"
 msgid "Invalid extension"
 msgstr "Extensión non válida"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:169
+#: ../gtweak/tweaks/tweak_shell_extensions.py:144
 msgid "Shell Extensions"
 msgstr "Extensións de GNOME-Shell"
 
-#: ../gtweak/tweaks/tweak_windows.py:78
-msgid "Windows"
-msgstr "Xanelas"
+#: ../gtweak/tweaks/tweak_windows.py:53
+msgid "Window theme"
+msgstr "Tema da xanela"
 
-#: ../gtweak/utils.py:52
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:53
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "<i>(predeterminado)</i> %s"
+
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "Tipografías"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Interface"
+msgstr "Interface"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "File Manager"
+msgstr "Xestor de ficheiros"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "Xanelas"
+
+#: ../gtweak/tweakmodel.py:37
+msgid "Miscellaneous"
+msgstr "Miscelánea"
