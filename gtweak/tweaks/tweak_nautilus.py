@@ -19,7 +19,7 @@ from gi.repository import Gtk
 
 import gtweak
 from gtweak.utils import AutostartManager
-from gtweak.tweakmodel import TWEAK_GROUP_FILE_MANAGER
+from gtweak.tweakmodel import TWEAK_GROUP_DESKTOP
 from gtweak.widgets import GSettingsSwitchTweak
 
 class DesktopIconTweak(GSettingsSwitchTweak):
@@ -44,10 +44,10 @@ class DesktopIconTweak(GSettingsSwitchTweak):
                 self.settings.get_boolean(key))
 
 TWEAKS = (
-    DesktopIconTweak(group_name=TWEAK_GROUP_FILE_MANAGER),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "computer-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILE_MANAGER),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "home-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILE_MANAGER),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "network-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILE_MANAGER),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "trash-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILE_MANAGER),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "volumes-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILE_MANAGER),
+    DesktopIconTweak(group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "computer-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "home-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "network-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "trash-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "volumes-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
 )

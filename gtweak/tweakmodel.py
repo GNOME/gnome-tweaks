@@ -25,7 +25,7 @@ from gi.repository import Gtk
 
 TWEAK_GROUP_FONTS = _("Fonts")
 TWEAK_GROUP_INTERFACE = _("Interface")
-TWEAK_GROUP_FILE_MANAGER = _("File Manager")
+TWEAK_GROUP_DESKTOP = _("Desktop")
 TWEAK_GROUP_WINDOWS = _("Windows")
 
 LOG = logging.getLogger(__name__)
