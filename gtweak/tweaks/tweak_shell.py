@@ -27,7 +27,7 @@ from gi.repository import GLib
 from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_with_default
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gshellwrapper import GnomeShell
-from gtweak.tweakmodel import Tweak, TweakGroup
+from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME
 from gtweak.widgets import ZipFileChooserButton, GConfComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
 
 class ShowWindowButtons(GConfComboTweak):
@@ -49,7 +49,7 @@ class ShellThemeTweak(Tweak):
     THEME_DIR = os.path.join(GLib.get_home_dir(), ".themes")
 
     def __init__(self, **options):
-        Tweak.__init__(self, "Shell Theme", "Install custom or user themes for gnome-shell", **options)
+        Tweak.__init__(self, "Shell theme", "Install custom or user themes for gnome-shell", **options)
 
         #check the shell is running and the usertheme extension is present
         error = _("Unknown error")
@@ -197,6 +197,10 @@ class ShellThemeTweak(Tweak):
 
 sg = build_horizontal_sizegroup()
 
+TWEAKS = (
+    ShellThemeTweak(group_name=TWEAK_GROUP_THEME),
+)
+
 TWEAK_GROUPS = (
         TweakGroup(
             _("Shell"),
@@ -204,7 +208,6 @@ TWEAK_GROUPS = (
             GSettingsSwitchTweak("org.gnome.shell.clock", "show-seconds", schema_filename="org.gnome.shell.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),
             ShowWindowButtons(size_group=sg),
-            ShellThemeTweak(size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg)),
 )

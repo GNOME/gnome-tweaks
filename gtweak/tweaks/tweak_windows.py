@@ -19,7 +19,7 @@ import os.path
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
-from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, TWEAK_GROUP_INTERFACE
+from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, TWEAK_GROUP_THEME
 from gtweak.widgets import GConfComboTweak
 from gtweak.gconf import GConfSetting
 
@@ -73,7 +73,7 @@ class WindowThemeSwitcher(GConfComboTweak):
             self.gconf_metacity.set_value(value)
 
 TWEAKS = (
-    WindowThemeSwitcher(group_name=TWEAK_GROUP_INTERFACE),
+    WindowThemeSwitcher(group_name=TWEAK_GROUP_THEME),
     ActionClickTitlebarTweak("/apps/metacity/general/action_double_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),
     ActionClickTitlebarTweak("/apps/metacity/general/action_middle_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),
     ActionClickTitlebarTweak("/apps/metacity/general/action_right_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),

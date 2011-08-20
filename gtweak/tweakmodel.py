@@ -24,7 +24,7 @@ import gtweak
 from gi.repository import Gtk
 
 TWEAK_GROUP_FONTS = _("Fonts")
-TWEAK_GROUP_INTERFACE = _("Interface")
+TWEAK_GROUP_THEME = _("Theme")
 TWEAK_GROUP_DESKTOP = _("Desktop")
 TWEAK_GROUP_WINDOWS = _("Windows")
 
