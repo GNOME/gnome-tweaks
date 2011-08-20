@@ -36,6 +36,8 @@ class Tweak:
         self.description = description
         self.group_name = options.get("group_name",_("Miscellaneous"))
 
+        self._search_cache = None
+
         #FIXME: I would have rather done this as a GObject signal, but it
         #would prohibit other tweaks from inheriting from GtkWidgets
         self._notify_cb = None
@@ -49,7 +51,11 @@ class Tweak:
         return None
 
     def search_matches(self, txt):
-        return txt in self.name or txt in self.description
+        if self._search_cache == None:
+            self._search_cache = set([i.strip(" .,\n'\"").lower() for j in (
+                    self.name.split(' '),self.description.split(' ')) for i in j])
+
+        return txt.strip().lower() in self._search_cache
 
     def set_notify_cb(self, func):
         self._notify_cb = func
