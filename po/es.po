@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-08-06 22:01+0000\n"
-"PO-Revision-Date: 2011-08-07 18:37+0200\n"
+"POT-Creation-Date: 2011-08-20 22:54+0000\n"
+"PO-Revision-Date: 2011-08-22 09:55+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,9 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/shell.ui.h:1
-msgid "Tweak Tool"
-msgstr "Herramienta de retoques"
+#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
+msgid "Advanced Settings"
+msgstr "Configuración avanzada"
 
 #: ../data/shell.ui.h:2
 msgid "tweaks"
@@ -30,17 +30,27 @@ msgstr "retoques"
 msgid "welcome"
 msgstr "bienvenido"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Advanced Settings"
-msgstr "Configuración avanzada"
-
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Ajustes de retoques avanzados en GNOME 3"
 
-#: ../gtweak/tweaks/tweak_interface.py:84 ../gtweak/tweaks/tweak_shell.py:106
+#: ../gtweak/tweaks/tweak_interface.py:33
+msgid "GTK+ theme"
+msgstr "Tema de GTK+"
+
+#: ../gtweak/tweaks/tweak_interface.py:51
+#| msgid "Invalid theme"
+msgid "Icon theme"
+msgstr "Tema de iconos"
+
+#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:106
 msgid "<i>Default</i>"
 msgstr "<i>Predeterminada</i>"
+
+#: ../gtweak/tweaks/tweak_interface.py:87
+#| msgid "Window theme"
+msgid "Keybinding theme"
+msgstr "Tema de asociación de teclas"
 
 #. check the shell is running and the usertheme extension is present
 #: ../gtweak/tweaks/tweak_shell.py:55
@@ -98,7 +108,7 @@ msgstr "Puede que sea necesario reiniciar GNOME-Shell para aplicar el tema"
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: ../gtweak/tweaks/tweak_shell.py:202
+#: ../gtweak/tweaks/tweak_shell.py:206
 msgid "Shell"
 msgstr "GNOME-Shell"
 
@@ -169,12 +179,12 @@ msgid "Fonts"
 msgstr "Tipografías"
 
 #: ../gtweak/tweakmodel.py:27
-msgid "Interface"
-msgstr "Interfaz"
+msgid "Theme"
+msgstr "Tema"
 
 #: ../gtweak/tweakmodel.py:28
-msgid "File Manager"
-msgstr "Gestor de archivos"
+msgid "Desktop"
+msgstr "Escritorio"
 
 #: ../gtweak/tweakmodel.py:29
 msgid "Windows"
@@ -183,3 +193,12 @@ msgstr "Ventanas"
 #: ../gtweak/tweakmodel.py:37
 msgid "Miscellaneous"
 msgstr "Miscelánea"
+
+#~ msgid "Tweak Tool"
+#~ msgstr "Herramienta de retoques"
+
+#~ msgid "Interface"
+#~ msgstr "Interfaz"
+
+#~ msgid "File Manager"
+#~ msgstr "Gestor de archivos"
