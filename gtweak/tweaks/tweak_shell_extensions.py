@@ -15,7 +15,7 @@ from gtweak.widgets import ZipFileChooserButton, build_label_beside_widget, buil
 
 class _ShellExtensionTweak(Tweak):
 
-    EXTENSION_DISABLED_KEY = "disabled-extensions"
+    EXTENSION_ENABLED_KEY = "enabled-extensions"
 
     def __init__(self, shell, ext, settings, **options):
         Tweak.__init__(self, ext["name"], ext.get("description",""), **options)
@@ -27,7 +27,7 @@ class _ShellExtensionTweak(Tweak):
         state = ext.get("state")
         sw.set_active(
                 state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
-                not self._settings.setting_is_in_list(self.EXTENSION_DISABLED_KEY, ext["uuid"])
+                self._settings.setting_is_in_list(self.EXTENSION_ENABLED_KEY, ext["uuid"])
         )
         sw.connect('notify::active', self._on_extension_toggled, ext["uuid"])
 
@@ -53,14 +53,9 @@ class _ShellExtensionTweak(Tweak):
 
     def _on_extension_toggled(self, sw, active, uuid):
         if not sw.get_active():
-            self._settings.setting_add_to_list(self.EXTENSION_DISABLED_KEY, uuid)
+            self._settings.setting_remove_from_list(self.EXTENSION_ENABLED_KEY, uuid)
         else:
-            self._settings.setting_remove_from_list(self.EXTENSION_DISABLED_KEY, uuid)
-
-        self.notify_action_required(
-            _("The shell must be restarted for changes to take effect"),
-            _("Restart"),
-            self._shell.restart)
+            self._settings.setting_add_to_list(self.EXTENSION_ENABLED_KEY, uuid)
 
 class _ShellExtensionInstallerTweak(Tweak):
 
