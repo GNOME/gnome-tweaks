@@ -8,27 +8,20 @@ from gi.repository import Gtk
 from gi.repository import GLib
 
 from gtweak.utils import extract_zip_file
-from gtweak.gsettings import GSettingsSetting
-from gtweak.gshellwrapper import GnomeShell
+from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.widgets import ZipFileChooserButton, build_label_beside_widget, build_horizontal_sizegroup
 
 class _ShellExtensionTweak(Tweak):
 
-    EXTENSION_ENABLED_KEY = "enabled-extensions"
-
-    def __init__(self, shell, ext, settings, **options):
+    def __init__(self, shell, ext, **options):
         Tweak.__init__(self, ext["name"], ext.get("description",""), **options)
 
         self._shell = shell
-        self._settings = settings
+        state = ext.get("state")
 
         sw = Gtk.Switch()
-        state = ext.get("state")
-        sw.set_active(
-                state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
-                self._settings.setting_is_in_list(self.EXTENSION_ENABLED_KEY, ext["uuid"])
-        )
+        sw.set_active(self._shell.extension_is_active(state, ext["uuid"]))
         sw.connect('notify::active', self._on_extension_toggled, ext["uuid"])
 
         warning = None
@@ -53,9 +46,15 @@ class _ShellExtensionTweak(Tweak):
 
     def _on_extension_toggled(self, sw, active, uuid):
         if not sw.get_active():
-            self._settings.setting_remove_from_list(self.EXTENSION_ENABLED_KEY, uuid)
+            self._shell.disable_extension(uuid)
         else:
-            self._settings.setting_add_to_list(self.EXTENSION_ENABLED_KEY, uuid)
+            self._shell.enable_extension(uuid)
+
+        if self._shell.EXTENSION_NEED_RESTART:
+            self.notify_action_required(
+                _("The shell must be restarted for changes to take effect"),
+                _("Restart"),
+                self._shell.restart)
 
 class _ShellExtensionInstallerTweak(Tweak):
 
@@ -143,25 +142,24 @@ class ShellExtensionTweakGroup(TweakGroup):
 
         #check the shell is running
         try:
-            shell = GnomeShell()
+            shell = GnomeShellFactory().get_shell()
 
             #add the extension installer
             extension_tweaks.append(
                 _ShellExtensionInstallerTweak(shell, size_group=sg))
 
             try:
-                settings = GSettingsSetting("org.gnome.shell")
                 #add a tweak for each installed extension
                 for extension in shell.list_extensions().values():
                     try:
                         extension_tweaks.append(
-                            _ShellExtensionTweak(shell, extension, settings, size_group=sg))
+                            _ShellExtensionTweak(shell, extension, size_group=sg))
                     except:
                         logging.warning("Invalid extension", exc_info=True)
             except:
                 logging.warning("Error listing extensions", exc_info=True)
         except:
-            logging.warning("Error detecting shell")
+            logging.warning("Error detecting shell", exc_info=True)
 
         self.set_tweaks(*extension_tweaks)
 

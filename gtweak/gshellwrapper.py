@@ -17,14 +17,18 @@
 
 import os.path
 import json
+import logging
 
 from gi.repository import Gio
 from gi.repository import GLib
 
+import gtweak.utils
+from gtweak.gsettings import GSettingsSetting
+
 class _ShellProxy:
     def __init__(self):
         d = Gio.bus_get_sync(Gio.BusType.SESSION, None)
-        self._proxy = Gio.DBusProxy.new_sync(
+        self.proxy = Gio.DBusProxy.new_sync(
                             d, 0, None,
                             'org.gnome.Shell',
                             '/org/gnome/Shell',
@@ -32,10 +36,14 @@ class _ShellProxy:
                             None)
 
     def execute_js(self, js):
-        result, output = self._proxy.Eval('(s)', js)
+        result, output = self.proxy.Eval('(s)', js)
         if not result:
             raise Exception(output)
         return output
+
+    @property
+    def version(self):
+        return json.loads(self.execute_js('const Config = imports.misc.config; Config.PACKAGE_VERSION'))
 
 class GnomeShell:
 
@@ -53,8 +61,9 @@ class GnomeShell:
 
     DATA_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell")
 
-    def __init__(self):
-        self._proxy = _ShellProxy()
+    def __init__(self, shellproxy, shellsettings):
+        self._proxy = shellproxy
+        self._settings = shellsettings
 
     def restart(self):
         self._proxy.execute_js('global.reexec_self();')
@@ -62,17 +71,69 @@ class GnomeShell:
     def reload_theme(self):
         self._proxy.execute_js('const Main = imports.ui.main; Main.loadTheme();')
 
+    @property
+    def version(self):
+        return self._proxy.version
+
+class GnomeShell30(GnomeShell):
+
+    EXTENSION_DISABLED_KEY = "disabled-extensions"
+    EXTENSION_NEED_RESTART = True
+
+    def __init__(self, *args, **kwargs):
+        GnomeShell.__init__(self, *args, **kwargs)
+
     def list_extensions(self):
         out = self._proxy.execute_js('const ExtensionSystem = imports.ui.extensionSystem; ExtensionSystem.extensionMeta')
         return json.loads(out)
 
-    @property
-    def version(self):
-        return json.loads(self._proxy.execute_js('const Config = imports.misc.config; Config.PACKAGE_VERSION'))
+    def extension_is_active(self, state, uuid):
+        return state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
+                not self._settings.setting_is_in_list(self.EXTENSION_DISABLED_KEY, uuid)
 
+    def enable_extension(self, uuid):
+        self._settings.setting_remove_from_list(self.EXTENSION_DISABLED_KEY, uuid)
 
+    def disable_extension(self, uuid):
+        self._settings.setting_add_to_list(self.EXTENSION_DISABLED_KEY, uuid)
+
+class GnomeShell32(GnomeShell):
+
+    EXTENSION_ENABLED_KEY = "enabled-extensions"
+    EXTENSION_NEED_RESTART = False
+
+    def extension_is_active(self, state, uuid):
+        return state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
+                self._settings.setting_is_in_list(self.EXTENSION_ENABLED_KEY, uuid)
+
+    def enable_extension(self, uuid):
+        self._settings.setting_add_to_list(self.EXTENSION_ENABLED_KEY, uuid)
+
+    def disable_extension(self, uuid):
+        self._settings.setting_remove_from_list(self.EXTENSION_ENABLED_KEY, uuid)
+
+@gtweak.utils.singleton
+class GnomeShellFactory:
+    def __init__(self):
+        proxy = _ShellProxy()
+        settings = GSettingsSetting("org.gnome.shell")
+        v = map(int,proxy.version.split("."))
+
+        if v >= [3,1,4]:
+            self.shell = GnomeShell32(proxy, settings)
+        else:
+            self.shell = GnomeShell30(proxy, settings)
+
+        logging.debug("Shell version: %s", str(v))
+
+    def get_shell(self):
+        return self.shell
 
 if __name__ == "__main__":
-    s = GnomeShell()
+    gtweak.GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas/"
+
+    s = GnomeShellFactory().get_shell()
     print "Shell Version: %s" % s.version
     print s.list_extensions()
+
+    print s == GnomeShellFactory().get_shell()
