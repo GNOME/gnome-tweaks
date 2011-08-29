@@ -26,7 +26,7 @@ from gi.repository import GLib
 
 from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_with_default
 from gtweak.gsettings import GSettingsSetting
-from gtweak.gshellwrapper import GnomeShell
+from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME
 from gtweak.widgets import ZipFileChooserButton, GConfComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
 
@@ -54,8 +54,9 @@ class ShellThemeTweak(Tweak):
         #check the shell is running and the usertheme extension is present
         error = _("Unknown error")
         try:
-            self._shell = GnomeShell()
+            self._shell = GnomeShellFactory().get_shell()
         except:
+            logging.warning("Shell not running", exc_info=True)
             error = _("Shell not running")
         try:
             extensions = self._shell.list_extensions()
@@ -77,6 +78,7 @@ class ShellThemeTweak(Tweak):
             else:
                 error = _("Shell user-theme extension not enabled")
         except Exception, e:
+            logging.warning("Could not list shell extensions", exc_info=True)
             error = _("Could not list shell extensions")
 
         if error:
