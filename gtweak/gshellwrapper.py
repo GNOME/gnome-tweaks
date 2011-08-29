@@ -102,6 +102,9 @@ class GnomeShell32(GnomeShell):
     EXTENSION_ENABLED_KEY = "enabled-extensions"
     EXTENSION_NEED_RESTART = False
 
+    def list_extensions(self):
+        return self._proxy.ListExtensions()
+
     def extension_is_active(self, state, uuid):
         return state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
                 self._settings.setting_is_in_list(self.EXTENSION_ENABLED_KEY, uuid)
