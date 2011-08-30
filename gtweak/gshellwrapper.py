@@ -103,7 +103,7 @@ class GnomeShell32(GnomeShell):
     EXTENSION_NEED_RESTART = False
 
     def list_extensions(self):
-        return self._proxy.ListExtensions()
+        return self._proxy.proxy.ListExtensions()
 
     def extension_is_active(self, state, uuid):
         return state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
