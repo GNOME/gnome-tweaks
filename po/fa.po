@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-06-23 16:42+0000\n"
-"PO-Revision-Date: 2011-06-24 22:08+0330\n"
+"POT-Creation-Date: 2011-08-28 00:29+0000\n"
+"PO-Revision-Date: 2011-09-07 11:27+0330\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian <translate@ifsug.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,8 +20,10 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 
 #: ../data/shell.ui.h:1
-msgid "Tweak Tool"
-msgstr "ابزار سیخونک"
+#: ../data/gnome-tweak-tool.desktop.in.h:1
+#| msgid "Tweak Advanced Settings"
+msgid "Advanced Settings"
+msgstr "تنظیمات پیشرفته"
 
 #: ../data/shell.ui.h:2
 msgid "tweaks"
@@ -31,26 +33,28 @@ msgstr "سیخونک‌ها"
 msgid "welcome"
 msgstr "خوش آمدید"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "تنظیمات پیشرفته سیخونک"
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+#| msgid "Tweak Advanced Settings"
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "به تنظیمات پیشرفته گنوم ۳ سیخونک بزنید"
 
-#: ../gtweak/tweaks/tweak_font.py:27
-msgid "Fonts"
-msgstr "قلم‌ها"
+#: ../gtweak/tweaks/tweak_interface.py:33
+msgid "GTK+ theme"
+msgstr "تم GTK+"
 
-#: ../gtweak/tweaks/tweak_interface.py:84
+#: ../gtweak/tweaks/tweak_interface.py:51
+#| msgid "Invalid theme"
+msgid "Icon theme"
+msgstr "تم شمایل"
+
+#: ../gtweak/tweaks/tweak_interface.py:86
 #: ../gtweak/tweaks/tweak_shell.py:106
 msgid "<i>Default</i>"
 msgstr "<i>پیش‌فرض</i>"
 
-#: ../gtweak/tweaks/tweak_interface.py:99
-msgid "Interface"
-msgstr "واسط"
-
-#: ../gtweak/tweaks/tweak_nautilus.py:48
-msgid "File Manager"
-msgstr "مدیر پرونده"
+#: ../gtweak/tweaks/tweak_interface.py:87
+msgid "Keybinding theme"
+msgstr "تم Keybinding"
 
 #. check the shell is running and the usertheme extension is present
 #: ../gtweak/tweaks/tweak_shell.py:55
@@ -102,73 +106,103 @@ msgid "The shell may need to be restarted to apply the theme"
 msgstr "ممکن است لازم باشد پوسته مجددا راه‌اندازی شود تا تم اعمال شود"
 
 #: ../gtweak/tweaks/tweak_shell.py:195
-#: ../gtweak/tweaks/tweak_shell_extensions.py:63
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_shell_extensions.py:56
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
 msgid "Restart"
 msgstr "راه‌اندازی مجدد"
 
-#: ../gtweak/tweaks/tweak_shell.py:202
+#: ../gtweak/tweaks/tweak_shell.py:206
 msgid "Shell"
 msgstr "پوسته"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_shell_extensions.py:33
 msgid "Error loading extension"
 msgstr "خطا در هنگام بارکردن افزونه"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:43
+#: ../gtweak/tweaks/tweak_shell_extensions.py:35
 msgid "Extension does not support shell version"
 msgstr "افزونه از این نسخه پوسته پشتیبانی نمی‌کند"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:45
+#: ../gtweak/tweaks/tweak_shell_extensions.py:37
 msgid "Unknown extension error"
 msgstr "خطا افزونه ناشناس"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:50
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
 #, python-format
 msgid "%s Extension"
 msgstr "افزونه %s"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:62
+#: ../gtweak/tweaks/tweak_shell_extensions.py:55
 msgid "The shell must be restarted for changes to take effect"
 msgstr "پوسته باید مجددا راه‌اندازی شود تا تغییرات اعمال شوند"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:71
+#: ../gtweak/tweaks/tweak_shell_extensions.py:64
 msgid "Install Shell Extension"
 msgstr "نصب افزونه‌های پوسته"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:75
+#: ../gtweak/tweaks/tweak_shell_extensions.py:68
 msgid "Select an extension"
 msgstr "انتخاب یک افزونه"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:123
+#: ../gtweak/tweaks/tweak_shell_extensions.py:115
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "بروزرسانی افزونه %s موفقیت‌آمیز بود"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_shell_extensions.py:117
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "نصب افزونه %s موفقیت‌آمیز بود"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_shell_extensions.py:125
 msgid "Error installing extension"
 msgstr "خطا در هنگام نصب افزونه"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:138
+#: ../gtweak/tweaks/tweak_shell_extensions.py:130
 msgid "Invalid extension"
 msgstr "افزونه نامعتبر"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_shell_extensions.py:138
 msgid "Shell Extensions"
 msgstr "افزونه‌های پوسته"
 
-#: ../gtweak/tweaks/tweak_windows.py:78
-msgid "Windows"
-msgstr "پنجره‌ها"
+#: ../gtweak/tweaks/tweak_windows.py:53
+#| msgid "Invalid theme"
+msgid "Window theme"
+msgstr "تم پنجره"
 
-#: ../gtweak/utils.py:52
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:66
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(پیش‌فرض)</i>"
 
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "قلم‌ها"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Theme"
+msgstr "تم"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Desktop"
+msgstr "رومیزی"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "پنجره‌ها"
+
+#: ../gtweak/tweakmodel.py:37
+msgid "Miscellaneous"
+msgstr "متفرقه"
+
+#~ msgid "Tweak Tool"
+#~ msgstr "ابزار سیخونک"
+
+#~ msgid "Interface"
+#~ msgstr "واسط"
+
+#~ msgid "File Manager"
+#~ msgstr "مدیر پرونده"
