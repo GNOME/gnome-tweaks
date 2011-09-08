@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-04 08:21+0200\n"
-"PO-Revision-Date: 2011-04-04 08:22+0200\n"
+"POT-Creation-Date: 2011-09-08 22:12+0200\n"
+"PO-Revision-Date: 2011-09-08 22:13+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -21,9 +21,9 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../data/shell.ui.h:1
-msgid "Tweak Tool"
-msgstr "Narzędzie dostrajania"
+#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
+msgid "Advanced Settings"
+msgstr "Zaawansowane ustawienia"
 
 #: ../data/shell.ui.h:2
 msgid "tweaks"
@@ -33,6 +33,163 @@ msgstr "dostrajanie"
 msgid "welcome"
 msgstr "witamy"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Dostrajanie zaawansowanych ustawień"
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Dostrajanie zaawansowanych ustawień GNOME 3"
+
+#: ../gtweak/tweaks/tweak_interface.py:33
+msgid "GTK+ theme"
+msgstr "Motyw biblioteki GTK+"
+
+#: ../gtweak/tweaks/tweak_interface.py:51
+msgid "Icon theme"
+msgstr "Motyw ikon"
+
+#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:108
+msgid "<i>Default</i>"
+msgstr "<i>Domyślne</i>"
+
+#: ../gtweak/tweaks/tweak_interface.py:87
+msgid "Keybinding theme"
+msgstr "Motyw skrótów klawiszowych"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:55
+msgid "Unknown error"
+msgstr "Nieznany błąd"
+
+#: ../gtweak/tweaks/tweak_shell.py:60
+msgid "Shell not running"
+msgstr "Powłoka nie jest uruchomiona"
+
+#: ../gtweak/tweaks/tweak_shell.py:76
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Niepoprawnie zainstalowano rozszerzenie motywu użytkownika powłoki"
+
+#: ../gtweak/tweaks/tweak_shell.py:79
+msgid "Shell user-theme extension not enabled"
+msgstr "Rozszerzenie motywu użytkownika powłoki nie jest włączone"
+
+#: ../gtweak/tweaks/tweak_shell.py:82
+msgid "Could not list shell extensions"
+msgstr "Nie można wyświetlić listy rozszerzeń powłoki"
+
+#. a filechooser to install new themes
+#: ../gtweak/tweaks/tweak_shell.py:113
+msgid "Select a theme"
+msgstr "Wybór motywu"
+
+#: ../gtweak/tweaks/tweak_shell.py:160
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "Pomyślnie zaktualizowano motyw %s"
+
+#: ../gtweak/tweaks/tweak_shell.py:162
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "Pomyślnie zainstalowano motyw %s"
+
+#: ../gtweak/tweaks/tweak_shell.py:170
+msgid "Error installing theme"
+msgstr "Błąd podczas instalowania motywu"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:175
+msgid "Invalid theme"
+msgstr "Nieprawidłowy motyw"
+
+#: ../gtweak/tweaks/tweak_shell.py:196
+msgid "The shell may need to be restarted to apply the theme"
+msgstr "Należy ponownie uruchomić powłokę, aby zastosować motyw"
+
+#: ../gtweak/tweaks/tweak_shell.py:197
+#: ../gtweak/tweaks/tweak_shell_extensions.py:56
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+msgid "Restart"
+msgstr "Uruchom ponownie"
+
+#: ../gtweak/tweaks/tweak_shell.py:208
+msgid "Shell"
+msgstr "Powłoka"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:33
+msgid "Error loading extension"
+msgstr "Błąd podczas wczytywania rozszerzenia"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+msgid "Extension does not support shell version"
+msgstr "Rozszerzenie nie obsługuje tej wersji powłoki"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+msgid "Unknown extension error"
+msgstr "Nieznany błąd rozszerzenia"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+#, python-format
+msgid "%s Extension"
+msgstr "Rozszerzenie %s"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:55
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Należy ponownie uruchomić powłokę, aby zmiany zostały uwzględnione"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:64
+msgid "Install Shell Extension"
+msgstr "Zainstaluj rozszerzenie powłoki"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+msgid "Select an extension"
+msgstr "Wybierz rozszerzenie"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:115
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "Pomyślnie zaktualizowano rozszerzenie %s"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:117
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "Pomyślnie zainstalowano rozszerzenie %s"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+msgid "Error installing extension"
+msgstr "Błąd podczas instalowania rozszerzenia"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell_extensions.py:130
+msgid "Invalid extension"
+msgstr "Nieprawidłowe rozszerzenie"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:138
+msgid "Shell Extensions"
+msgstr "Rozszerzenia powłoki"
+
+#: ../gtweak/tweaks/tweak_windows.py:53
+msgid "Window theme"
+msgstr "Motyw okien"
+
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:66
+#, python-format
+msgid "%s <i>(default)</i>"
+msgstr "%s <i>(domyślny)</i>"
+
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "Czcionki"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Theme"
+msgstr "Motyw"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Desktop"
+msgstr "Pulpit"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "Okna"
+
+#: ../gtweak/tweakmodel.py:37
+msgid "Miscellaneous"
+msgstr "Różne"
