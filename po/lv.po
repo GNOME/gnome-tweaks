@@ -7,20 +7,22 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
 "cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-04-12 19:55+0000\n"
-"PO-Revision-Date: 2011-04-18 20:57+0300\n"
+"POT-Creation-Date: 2011-08-28 00:29+0000\n"
+"PO-Revision-Date: 2011-09-16 14:38+0300\n"
 "Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
+"Language: lv\n"
 
-#: ../data/shell.ui.h:1
-msgid "Tweak Tool"
-msgstr "Piedares rīks"
+#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
+#| msgid "Tweak Advanced Settings"
+msgid "Advanced Settings"
+msgstr "Paplašinātie iestatījumi"
 
 #: ../data/shell.ui.h:2
 msgid "tweaks"
@@ -30,7 +32,167 @@ msgstr "piedares"
 msgid "welcome"
 msgstr "laipni lūdzam"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Piedares paplašinātie iestatījumi"
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+#| msgid "Tweak Advanced Settings"
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Pieregulēt paplašinātos GNOME 3 iestatījumus"
 
+#: ../gtweak/tweaks/tweak_interface.py:33
+msgid "GTK+ theme"
+msgstr "GTK+ tēma"
+
+#: ../gtweak/tweaks/tweak_interface.py:51
+msgid "Icon theme"
+msgstr "Ikonu tēma"
+
+#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:106
+msgid "<i>Default</i>"
+msgstr "<i>Noklusētais</i>"
+
+#: ../gtweak/tweaks/tweak_interface.py:87
+msgid "Keybinding theme"
+msgstr "Taustiņu sasaistes tēma"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:55
+msgid "Unknown error"
+msgstr "Nezināma kļūda"
+
+#: ../gtweak/tweaks/tweak_shell.py:59
+msgid "Shell not running"
+msgstr "Čaula nedarbojas"
+
+#: ../gtweak/tweaks/tweak_shell.py:75
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Čaulas user-theme paplašinājums nav pareizi uzinstalēts"
+
+#: ../gtweak/tweaks/tweak_shell.py:78
+msgid "Shell user-theme extension not enabled"
+msgstr "Čaulas user-theme paplašinājums nav aktivēts"
+
+#: ../gtweak/tweaks/tweak_shell.py:80
+msgid "Could not list shell extensions"
+msgstr "Nevarēja uzskaitīt čaulas paplašinājumus"
+
+#. a filechooser to install new themes
+#: ../gtweak/tweaks/tweak_shell.py:111
+msgid "Select a theme"
+msgstr "Izvēlieties tēmu"
+
+#: ../gtweak/tweaks/tweak_shell.py:158
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "%s tēma ir veiksmīgi atjaunināta"
+
+#: ../gtweak/tweaks/tweak_shell.py:160
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "%s tēma ir veiksmīgi uzinstalēta"
+
+#: ../gtweak/tweaks/tweak_shell.py:168
+msgid "Error installing theme"
+msgstr "Kļūda, instalējot tēmu"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:173
+msgid "Invalid theme"
+msgstr "Nederīga tēma"
+
+#: ../gtweak/tweaks/tweak_shell.py:194
+msgid "The shell may need to be restarted to apply the theme"
+msgstr "Lai izmantotu tēmu, jāpārstartē čaula"
+
+#: ../gtweak/tweaks/tweak_shell.py:195
+#: ../gtweak/tweaks/tweak_shell_extensions.py:56
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+msgid "Restart"
+msgstr "Pārstartēt"
+
+#: ../gtweak/tweaks/tweak_shell.py:206
+msgid "Shell"
+msgstr "Čaula"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:33
+msgid "Error loading extension"
+msgstr "Kļūda, ielādējot paplašinājumu"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+msgid "Extension does not support shell version"
+msgstr "Paplašinājums neatbalsta šo čaulas versiju"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+msgid "Unknown extension error"
+msgstr "Nezināma paplašinājuma kļūda"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+#, python-format
+msgid "%s Extension"
+msgstr "%s paplašinājums"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:55
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Čaula jāpārstartē, lai izmaiņas stātos spēkā"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:64
+msgid "Install Shell Extension"
+msgstr "Instalē čaulas paplašinājumu"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+msgid "Select an extension"
+msgstr "Izvēlieties paplašinājumu"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:115
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "%s paplašinājums ir veiksmīgi atjaunināts"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:117
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "%s paplašinājums ir veiksmīgi uzinstalēts"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+msgid "Error installing extension"
+msgstr "Kļūda, instalējot paplašinājumu"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell_extensions.py:130
+msgid "Invalid extension"
+msgstr "Nederīgs paplašinājums"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:138
+msgid "Shell Extensions"
+msgstr "Čaulas paplašinājumi"
+
+#: ../gtweak/tweaks/tweak_windows.py:53
+msgid "Window theme"
+msgstr "Logu tēma"
+
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:66
+#, python-format
+msgid "%s <i>(default)</i>"
+msgstr "%s <i>(noklusētais)</i>"
+
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "Fonti"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Theme"
+msgstr "Tēma"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Desktop"
+msgstr "Darbvirsma"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "Logi"
+
+#: ../gtweak/tweakmodel.py:37
+msgid "Miscellaneous"
+msgstr "Dažādi"
+
+#~ msgid "Tweak Tool"
+#~ msgstr "Piedares rīks"
