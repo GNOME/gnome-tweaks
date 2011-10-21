@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk, Gdk, Gio
+from gi.repository import Gtk, Gdk, Gio, Pango
 
 from gtweak.tweakmodel import Tweak
 from gtweak.gsettings import GSettingsSetting
@@ -42,6 +42,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
 
     hbox.props.spacing = 4
     lbl = Gtk.Label(txt)
+    lbl.props.ellipsize = Pango.EllipsizeMode.END
     lbl.props.xalign = 0.0
     hbox.pack_start(lbl, True, True, 0)
 

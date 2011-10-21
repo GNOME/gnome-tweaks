@@ -28,7 +28,7 @@ class _TestInfoTweak(Tweak):
 
         self.widget = build_label_beside_widget(
                         name,
-                        Gtk.Button(name),
+                        Gtk.Button(options.get("test_button_name",name)),
                         info=options.get("tweak_info"),
                         warning=options.get("tweak_warning"))
 
@@ -68,6 +68,7 @@ group_name = "Test Settings"
 TWEAKS = (
     _TestTweak("foo bar", "does foo bar", group_name=group_name),
     _TestTweak("foo baz", "does foo baz", group_name=group_name),
+    _TestInfoTweak("long string "*10, "long description "*10, test_button_name="short",group_name=group_name),
     _TestInfoTweak("foo info", "info widget", tweak_info="Information", group_name=group_name),
     _TestInfoTweak("foo warning", "info widget", tweak_warning="Warning", group_name=group_name),
     _TestButtonTweak("Need Action", "foo bar", need_action=True, group_name=group_name),
