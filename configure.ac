@@ -1,6 +1,6 @@
 AC_INIT([gnome-tweak-tool], [3.2.1], [john.stowers@gmail.com])
 
-AM_INIT_AUTOMAKE([foreign])
+AM_INIT_AUTOMAKE([foreign tar-ustar dist-xz no-dist-gzip])
 
 AM_PATH_PYTHON([2.6])
 GLIB_GSETTINGS
