@@ -42,13 +42,18 @@ class _GSettingsSchema:
                 if schema_name == schema.getAttribute("id"):
                     for key in schema.getElementsByTagName("key"):
                         #summary is compulsory, description is optional
-                        summary = key.getElementsByTagName("summary")[0].childNodes[0].data
+                        summary = key.getElementsByTagName("summary")
+                        try:
+                            summary_text = summary[0].childNodes[0].data
+                        except:
+                            summary_text = ""
+                            logging.warning("Schema %s missing summary text: %s" % (schema_path, key.toxml()))
                         try:
                             description = key.getElementsByTagName("description")[0].childNodes[0].data
                         except:
                             description = ""
                         self._schema[key.getAttribute("name")] = {
-                                "summary"       :   summary,
+                                "summary"       :   summary_text,
                                 "description"   :   description
                         }
         except:
