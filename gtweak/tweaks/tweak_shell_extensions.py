@@ -24,11 +24,15 @@ class _ShellExtensionTweak(Tweak):
         sw.set_active(self._shell.extension_is_active(state, ext["uuid"]))
         sw.connect('notify::active', self._on_extension_toggled, ext["uuid"])
 
+        info = None
         warning = None
         sensitive = False
         if state == GnomeShell.EXTENSION_STATE["ENABLED"] or \
-           state == GnomeShell.EXTENSION_STATE["DISABLED"]:
+           state == GnomeShell.EXTENSION_STATE["DISABLED"] or \
+           state == GnomeShell.EXTENSION_STATE["INITIALIZED"]:
             sensitive = True
+        elif state == GnomeShell.EXTENSION_STATE["DOWNLOADING"]:
+            info = _("Extension downloading")
         elif state == GnomeShell.EXTENSION_STATE["ERROR"]:
             warning = _("Error loading extension")
         elif state == GnomeShell.EXTENSION_STATE["OUT_OF_DATE"]:

@@ -51,7 +51,9 @@ class GnomeShell:
         "ENABLED"       :   1,
         "DISABLED"      :   2,
         "ERROR"         :   3,
-        "OUT_OF_DATE"   :   4
+        "OUT_OF_DATE"   :   4,
+        "DOWNLOADING"   :   5,
+        "INITIALIZED"   :   6,
     }
 
     EXTENSION_TYPE = {
