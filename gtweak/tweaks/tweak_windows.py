@@ -20,41 +20,16 @@ import os.path
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
 from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, TWEAK_GROUP_THEME
-from gtweak.widgets import GConfComboTweak
-from gtweak.gconf import GConfSetting
+from gtweak.widgets import GSettingsComboTweak, GSettingsComboEnumTweak
 
-class ActionClickTitlebarTweak(GConfComboTweak):
-    def __init__(self, key_name, **options):
-
-        #from the metacity schema
-        schema_options = ('toggle_shade', 'toggle_maximize', 'toggle_maximize_horizontally',
-                          'toggle_maximize_vertically', 'minimize', 'shade', 'menu', 'lower', 'none')
-
-        GConfComboTweak.__init__(self,
-            key_name,
-            str,
-            [(o, o.replace("_"," ").title()) for o in schema_options],
-            **options)
-
-class FocusModeTweak(GConfComboTweak):
+class WindowThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
-        GConfComboTweak.__init__(self,
-            "/apps/metacity/general/focus_mode",
-            str,
-            [(o, o.title()) for o in ("click","sloppy","mouse")],
-            **options)
-
-class WindowThemeSwitcher(GConfComboTweak):
-    def __init__(self, **options):
-        GConfComboTweak.__init__(self,
-            "/desktop/gnome/shell/windows/theme",
-            str,
+        GSettingsComboTweak.__init__(self,
+            "org.gnome.desktop.wm.preferences",
+            "theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
             summary=_("Window theme"),
             **options)
-
-        #also need to change the fallback (metacity) window theme
-        self.gconf_metacity = GConfSetting("/apps/metacity/general/theme", str)
 
     def _get_valid_themes(self):
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
@@ -63,19 +38,10 @@ class WindowThemeSwitcher(GConfComboTweak):
                     os.path.exists(os.path.join(d, "metacity-1")))
         return valid
 
-    def _on_combo_changed(self, combo):
-        #its probbably not too nice to dupe this function here, but i'm lazy
-        #and the real cause is the hidious gconf/shell/metacity override business
-        _iter = combo.get_active_iter()
-        if _iter:
-            value = combo.get_model().get_value(_iter, 0)
-            self.gconf.set_value(value)
-            self.gconf_metacity.set_value(value)
-
 TWEAKS = (
     WindowThemeSwitcher(group_name=TWEAK_GROUP_THEME),
-    ActionClickTitlebarTweak("/apps/metacity/general/action_double_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),
-    ActionClickTitlebarTweak("/apps/metacity/general/action_middle_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),
-    ActionClickTitlebarTweak("/apps/metacity/general/action_right_click_titlebar", group_name=TWEAK_GROUP_WINDOWS),
-    FocusModeTweak(group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "action-double-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "action-middle-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "action-right-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "focus-mode", group_name=TWEAK_GROUP_WINDOWS),
 )

@@ -28,13 +28,13 @@ from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_wit
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME
-from gtweak.widgets import ZipFileChooserButton, GConfComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
+from gtweak.widgets import ZipFileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
 
-class ShowWindowButtons(GConfComboTweak):
+class ShowWindowButtons(GSettingsComboTweak):
     def __init__(self, **options):
-        GConfComboTweak.__init__(self,
-            "/desktop/gnome/shell/windows/button_layout",
-            str,
+        GSettingsComboTweak.__init__(self,
+            "org.gnome.shell.overrides",
+            "button-layout",
             ((':close', 'Close Only'),
             (':minimize,close', 'Minimize and Close'),
             (':maximize,close', 'Maximize and Close'),

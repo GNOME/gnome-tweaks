@@ -18,14 +18,14 @@
 from gi.repository import Gtk
 
 from gtweak.tweakmodel import Tweak, TWEAK_GROUP_FONTS
-from gtweak.widgets import GSettingsRangeTweak, GSettingsFontButtonTweak, GConfFontButtonTweak, GSettingsComboTweak
+from gtweak.widgets import GSettingsRangeTweak, GSettingsFontButtonTweak, GSettingsComboTweak
 
 TWEAKS = (
     GSettingsRangeTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("org.gnome.desktop.interface", "font-name", group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("org.gnome.desktop.interface", "document-font-name", group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("org.gnome.desktop.interface", "monospace-font-name", group_name=TWEAK_GROUP_FONTS),
-    GConfFontButtonTweak("/apps/metacity/general/titlebar_font", str, group_name=TWEAK_GROUP_FONTS),
+    GSettingsFontButtonTweak("org.gnome.desktop.wm.preferences", "titlebar-font", group_name=TWEAK_GROUP_FONTS),
     GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "hinting",
         [(i, i.title()) for i in ("none", "slight", "medium", "full")], group_name=TWEAK_GROUP_FONTS),
     GSettingsComboTweak("org.gnome.settings-daemon.plugins.xsettings", "antialiasing",
