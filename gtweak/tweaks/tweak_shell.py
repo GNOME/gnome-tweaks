@@ -73,6 +73,9 @@ class ShellThemeTweak(Tweak):
 
                     error = None
                 except:
+                    logging.warning(
+                        "Could not find user-theme extension in %s" % ','.join(extensions.keys()),
+                        exc_info=True)
                     error = _("Shell user-theme extension incorrectly installed")
 
             else:
