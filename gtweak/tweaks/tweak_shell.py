@@ -20,6 +20,7 @@ import zipfile
 import tempfile
 import logging
 import json
+import pprint
 
 from gi.repository import Gtk
 from gi.repository import GLib
@@ -66,10 +67,8 @@ class ShellThemeTweak(Tweak):
                     self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
                     name = self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME)
 
-                    #assume the usertheme version is that version of the shell which
-                    #it most supports (this is a poor assumption)
-                    self._usertheme_extension_version = max(extensions[ShellThemeTweak.THEME_EXT_NAME]["shell-version"])
-                    logging.debug("Shell user-theme extension v%s", self._usertheme_extension_version)
+                    ext = extensions[ShellThemeTweak.THEME_EXT_NAME]
+                    logging.debug("Shell user-theme extension\n%s" % pprint.pformat(ext))
 
                     error = None
                 except:
@@ -184,21 +183,6 @@ class ShellThemeTweak(Tweak):
     def _on_combo_changed(self, combo):
         val = combo.get_model().get_value(combo.get_active_iter(), 0)
         self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, val)
-
-        #reloading the theme is not really necessary, the user-theme should pick
-        #pick up the change.
-        #
-        #however there are some problems with reloading images.
-        #https://bugzilla.gnome.org/show_bug.cgi?id=644125
-        #
-        #resetting to the default theme is also fucked
-        #https://bugzilla.gnome.org/show_bug.cgi?id=647386
-        if not val:
-            if self._usertheme_extension_version < "3.0.2":
-                self.notify_action_required(
-                    _("The shell may need to be restarted to apply the theme"),
-                    _("Restart"),
-                    lambda: self._shell.restart())
 
 sg = build_horizontal_sizegroup()
 
