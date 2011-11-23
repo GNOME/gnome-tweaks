@@ -142,7 +142,7 @@ class GSettingsComboEnumTweak(_GSettingsTweak):
         value = self.settings.get_string(key_name)
         self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
 
-        w = build_combo_box_text(value, *[(v,v) for v in values])
+        w = build_combo_box_text(value, *[(v,v.replace("-"," ").title()) for v in values])
         w.connect('changed', self._on_combo_changed)
         self.combo = w
 
