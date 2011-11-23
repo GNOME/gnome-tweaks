@@ -209,7 +209,7 @@ TWEAK_GROUPS = (
             GSettingsSwitchTweak("org.gnome.shell.clock", "show-date", schema_filename="org.gnome.shell.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.shell.clock", "show-seconds", schema_filename="org.gnome.shell.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),
-            ShowWindowButtons(size_group=sg),
+            ShowWindowButtons(schema_filename="org.gnome.shell.gschema.xml", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg)),
 )
