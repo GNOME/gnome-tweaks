@@ -43,7 +43,7 @@ class ShowWindowButtons(GConfComboTweak):
 
 class ShellThemeTweak(Tweak):
 
-    THEME_EXT_NAME = "user-theme@gnome-shell-extensions.gnome.org"
+    THEME_EXT_NAME = "user-theme@gnome-shell-extensions.gcampax.github.com"
     THEME_GSETTINGS_SCHEMA = "org.gnome.shell.extensions.user-theme"
     THEME_GSETTINGS_NAME = "name"
     THEME_DIR = os.path.join(GLib.get_home_dir(), ".themes")
