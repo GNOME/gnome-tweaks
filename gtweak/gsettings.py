@@ -31,7 +31,9 @@ class _GSettingsSchema:
             schema_filename = schema_name + ".gschema.xml"
 
         schema_path = os.path.join(schema_dir, schema_filename)
-        assert(os.path.exists(schema_path))
+        if not os.path.exists(schema_path):
+            logging.critical("Could not find schema %s" % schema_path)
+            assert(False)
 
         self._schema_name = schema_name
         self._schema = {}
