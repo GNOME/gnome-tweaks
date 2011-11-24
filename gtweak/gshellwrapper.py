@@ -35,15 +35,21 @@ class _ShellProxy:
                             'org.gnome.Shell',
                             None)
 
-    def execute_js(self, js):
-        result, output = self.proxy.Eval('(s)', js)
-        if not result:
-            raise Exception(output)
-        return output
+        #GNOME Shell > 3.3 added the Version to the DBus API and disabled execute_js
+        ver = self.proxy.get_cached_property("ShellVersion")
+        if ver != None:
+            self._version = ver.unpack()
+        else:
+            js = 'const Config = imports.misc.config; Config.PACKAGE_VERSION'
+            result, output = self.proxy.Eval('(s)', js)
+            if not result:
+                logging.critical("Error getting shell version via Eval JS")
+                self._version = "0.0.0"
+            self._version = json.loads(output)
 
     @property
     def version(self):
-        return json.loads(self.execute_js('const Config = imports.misc.config; Config.PACKAGE_VERSION'))
+        return self._version
 
 class GnomeShell:
 
@@ -67,11 +73,17 @@ class GnomeShell:
         self._proxy = shellproxy
         self._settings = shellsettings
 
+    def _execute_js(self, js):
+        result, output = self._proxy.proxy.Eval('(s)', js)
+        if not result:
+            raise Exception(output)
+        return output
+
     def restart(self):
-        self._proxy.execute_js('global.reexec_self();')
+        self._execute_js('global.reexec_self();')
 
     def reload_theme(self):
-        self._proxy.execute_js('const Main = imports.ui.main; Main.loadTheme();')
+        self._execute_js('const Main = imports.ui.main; Main.loadTheme();')
 
     @property
     def version(self):
@@ -86,7 +98,7 @@ class GnomeShell30(GnomeShell):
         GnomeShell.__init__(self, *args, **kwargs)
 
     def list_extensions(self):
-        out = self._proxy.execute_js('const ExtensionSystem = imports.ui.extensionSystem; ExtensionSystem.extensionMeta')
+        out = self._execute_js('const ExtensionSystem = imports.ui.extensionSystem; ExtensionSystem.extensionMeta')
         return json.loads(out)
 
     def extension_is_active(self, state, uuid):
@@ -117,6 +129,14 @@ class GnomeShell32(GnomeShell):
     def disable_extension(self, uuid):
         self._settings.setting_remove_from_list(self.EXTENSION_ENABLED_KEY, uuid)
 
+class GnomeShell34(GnomeShell32):
+
+    def restart(self):
+        logging.warning("Restarting Shell Not Supported")
+
+    def reload_theme(self):
+        logging.warning("Reloading Theme Not Supported")
+
 @gtweak.utils.singleton
 class GnomeShellFactory:
     def __init__(self):
@@ -124,7 +144,9 @@ class GnomeShellFactory:
         settings = GSettingsSetting("org.gnome.shell")
         v = map(int,proxy.version.split("."))
 
-        if v >= [3,1,4]:
+        if v >= [3,3,2]:
+            self.shell = GnomeShell34(proxy, settings)
+        elif v >= [3,1,4]:
             self.shell = GnomeShell32(proxy, settings)
         else:
             self.shell = GnomeShell30(proxy, settings)
@@ -137,8 +159,12 @@ class GnomeShellFactory:
 if __name__ == "__main__":
     gtweak.GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas/"
 
+    logging.basicConfig(format="%(levelname)-8s: %(message)s", level=logging.DEBUG)
+
     s = GnomeShellFactory().get_shell()
     print "Shell Version: %s" % s.version
     print s.list_extensions()
 
     print s == GnomeShellFactory().get_shell()
+
+
