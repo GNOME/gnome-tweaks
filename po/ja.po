@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-09-04 01:41+0000\n"
-"PO-Revision-Date: 2011-09-07 00:54+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
+"POT-Creation-Date: 2011-11-24 00:15+0000\n"
+"PO-Revision-Date: 2011-11-24 12:59+0900\n"
+"Last-Translator: Shushi Kurose <md81bird@hitaki.net>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -42,7 +42,7 @@ msgstr "GTK+ のテーマ"
 msgid "Icon theme"
 msgstr "アイコンのテーマ"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:108
+#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:110
 msgid "<i>Default</i>"
 msgstr "<i>標準</i>"
 
@@ -51,117 +51,118 @@ msgid "Keybinding theme"
 msgstr "キーバインド"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:56
 msgid "Unknown error"
 msgstr "原因不明のエラー"
 
-#: ../gtweak/tweaks/tweak_shell.py:60
+#: ../gtweak/tweaks/tweak_shell.py:61
 msgid "Shell not running"
 msgstr "GNOME Shell が起動していません"
 
-#: ../gtweak/tweaks/tweak_shell.py:76
+#: ../gtweak/tweaks/tweak_shell.py:78
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "GNOME Shell ユーザーテーマ拡張機能が正しくインストールされていません"
 
-#: ../gtweak/tweaks/tweak_shell.py:79
+#: ../gtweak/tweaks/tweak_shell.py:81
 msgid "Shell user-theme extension not enabled"
 msgstr "GNOME Shell ユーザーテーマ拡張機能が有効ではありません"
 
-#: ../gtweak/tweaks/tweak_shell.py:82
+#: ../gtweak/tweaks/tweak_shell.py:84
 msgid "Could not list shell extensions"
 msgstr "Shell 拡張機能を一覧表示できません"
 
 #. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:113
+#: ../gtweak/tweaks/tweak_shell.py:115
 msgid "Select a theme"
 msgstr "テーマを選択"
 
-#: ../gtweak/tweaks/tweak_shell.py:160
+#: ../gtweak/tweaks/tweak_shell.py:162
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s のテーマの更新に成功"
 
-#: ../gtweak/tweaks/tweak_shell.py:162
+#: ../gtweak/tweaks/tweak_shell.py:164
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s のテーマのインストールに成功"
 
-#: ../gtweak/tweaks/tweak_shell.py:170
+#: ../gtweak/tweaks/tweak_shell.py:172
 msgid "Error installing theme"
 msgstr "テーマのインストールに失敗"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:175
+#: ../gtweak/tweaks/tweak_shell.py:177
 msgid "Invalid theme"
 msgstr "無効なテーマ"
 
-#: ../gtweak/tweaks/tweak_shell.py:196
-msgid "The shell may need to be restarted to apply the theme"
-msgstr "テーマを適用するには、GNOME Shell を再起動が必要な場合があります"
-
-#: ../gtweak/tweaks/tweak_shell.py:197
-#: ../gtweak/tweaks/tweak_shell_extensions.py:56
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
-msgid "Restart"
-msgstr "再起動"
-
-#: ../gtweak/tweaks/tweak_shell.py:208
+#: ../gtweak/tweaks/tweak_shell.py:195
 msgid "Shell"
 msgstr "GNOME Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:33
+# 2011-11-24現在メッセージが使用されていないようで妥当性不明 fuzzyとしておく
+#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#, fuzzy
+msgid "Extension downloading"
+msgstr "拡張機能をダウンロードしています"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:37
 msgid "Error loading extension"
 msgstr "拡張機能のロードに失敗"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweaks/tweak_shell_extensions.py:39
 msgid "Extension does not support shell version"
 msgstr "拡張機能が GNOME Shell のバージョンに対応していません"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_shell_extensions.py:41
 msgid "Unknown extension error"
 msgstr "原因不明の拡張機能エラー"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+#: ../gtweak/tweaks/tweak_shell_extensions.py:46
 #, python-format
 msgid "%s Extension"
 msgstr "%s 拡張機能"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:55
+#: ../gtweak/tweaks/tweak_shell_extensions.py:59
 msgid "The shell must be restarted for changes to take effect"
 msgstr "変更を有効にするには、GNOME Shell を再起動する必要があります"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:64
+#: ../gtweak/tweaks/tweak_shell_extensions.py:60
+#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+msgid "Restart"
+msgstr "再起動"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:68
 msgid "Install Shell Extension"
 msgstr "GNOME Shell 拡張機能をインストール"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_shell_extensions.py:72
 msgid "Select an extension"
 msgstr "拡張機能を選択"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:115
+#: ../gtweak/tweaks/tweak_shell_extensions.py:119
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s の拡張機能の更新に成功"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:117
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s の拡張機能のインストールに成功"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_shell_extensions.py:129
 msgid "Error installing extension"
-msgstr "テーマの拡張機能に失敗"
+msgstr "拡張機能のインストールに失敗"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:130
+#: ../gtweak/tweaks/tweak_shell_extensions.py:134
 msgid "Invalid extension"
 msgstr "無効な拡張機能"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:138
+#: ../gtweak/tweaks/tweak_shell_extensions.py:142
 msgid "Shell Extensions"
 msgstr "GNOME Shell 拡張機能"
 
-#: ../gtweak/tweaks/tweak_windows.py:53
+#: ../gtweak/tweaks/tweak_windows.py:31
 msgid "Window theme"
 msgstr "ウィンドウのテーマ"
 
@@ -191,6 +192,9 @@ msgstr "ウィンドウ"
 msgid "Miscellaneous"
 msgstr "その他"
 
+#~ msgid "The shell may need to be restarted to apply the theme"
+#~ msgstr "テーマを適用するには、GNOME Shell を再起動が必要な場合があります"
+
 #~ msgid "Tweak Tool"
 #~ msgstr "カスタマイズツール"
 
@@ -199,4 +203,3 @@ msgstr "その他"
 
 #~ msgid "File Manager"
 #~ msgstr "ファイルマネージャー"
-
