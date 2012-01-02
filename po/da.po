@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-06 22:31+0200\n"
-"PO-Revision-Date: 2011-04-02 14:28+0000\n"
+"POT-Creation-Date: 2012-01-02 12:31+0100\n"
+"PO-Revision-Date: 2011-12-27 00:41+0000\n"
 "Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -17,9 +17,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/shell.ui.h:1
-msgid "Tweak Tool"
-msgstr "Tilpasningsværktøj"
+#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
+msgid "Advanced Settings"
+msgstr "Avancerede indstillinger"
 
 #: ../data/shell.ui.h:2
 msgid "tweaks"
@@ -29,6 +29,162 @@ msgstr "tilpasninger"
 msgid "welcome"
 msgstr "velkommen"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Tilpas avancerede indstillinger"
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Tilpas avancerede indstillinger for GNOME 3"
+
+#: ../gtweak/tweaks/tweak_interface.py:33
+msgid "GTK+ theme"
+msgstr "GTK+-tema"
+
+#: ../gtweak/tweaks/tweak_interface.py:51
+msgid "Icon theme"
+msgstr "Ikontema"
+
+#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:110
+msgid "<i>Default</i>"
+msgstr "<i>Standard</i>"
+
+#: ../gtweak/tweaks/tweak_interface.py:87
+msgid "Keybinding theme"
+msgstr "Tastebindingstema"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:56
+msgid "Unknown error"
+msgstr "Ukendt fejl"
+
+#: ../gtweak/tweaks/tweak_shell.py:61
+msgid "Shell not running"
+msgstr "Shell kører ikke"
+
+#: ../gtweak/tweaks/tweak_shell.py:78
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Shell-user-theme-udvidelse er ikke korrekt installeret"
+
+#: ../gtweak/tweaks/tweak_shell.py:81
+msgid "Shell user-theme extension not enabled"
+msgstr "Shell-user-theme-udvidelse er ikke aktiveret"
+
+#: ../gtweak/tweaks/tweak_shell.py:84
+msgid "Could not list shell extensions"
+msgstr "Kunne ikke vise shell-udvidelser"
+
+#. a filechooser to install new themes
+#: ../gtweak/tweaks/tweak_shell.py:115
+msgid "Select a theme"
+msgstr "Vælg et tema"
+
+#: ../gtweak/tweaks/tweak_shell.py:162
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "%s-temaet blev opdateret"
+
+#: ../gtweak/tweaks/tweak_shell.py:164
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "%s-temaet blev installeret"
+
+#: ../gtweak/tweaks/tweak_shell.py:172
+msgid "Error installing theme"
+msgstr "Fejl under installation af tema"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:177
+msgid "Invalid theme"
+msgstr "Ugyldigt tema"
+
+#: ../gtweak/tweaks/tweak_shell.py:195
+msgid "Shell"
+msgstr "Shell"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+msgid "Extension downloading"
+msgstr "Henter udvidelse"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+msgid "Error loading extension"
+msgstr "Fejl under indlæsning af udvidelse"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+msgid "Extension does not support shell version"
+msgstr "Udvidelse understøtter ikke shell-version"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+msgid "Unknown extension error"
+msgstr "Ukendt udvidelsesfejl"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:46
+#, python-format
+msgid "%s Extension"
+msgstr "%s-udvidelse"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:59
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Shell'en skal genstartes for at ændringer træder i kraft"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:60
+#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+msgid "Restart"
+msgstr "Genstart"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+msgid "Install Shell Extension"
+msgstr "Installér Shell-udvidelse"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+msgid "Select an extension"
+msgstr "Vælg en udvidelse"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "%s-udvidelsen blev opdateret"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "%s-udvidelsen blev installeret"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+msgid "Error installing extension"
+msgstr "Fejl under installation af udvidelse"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+msgid "Invalid extension"
+msgstr "Ugyldig udvidelse"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:142
+msgid "Shell Extensions"
+msgstr "Shell-udvidelser"
+
+#: ../gtweak/tweaks/tweak_windows.py:31
+msgid "Window theme"
+msgstr "Vinduestema"
+
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:66
+#, python-format
+msgid "%s <i>(default)</i>"
+msgstr "%s <i>(standard)</i>"
+
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "Skrifttyper"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Theme"
+msgstr "Tema"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Desktop"
+msgstr "Skrivebord"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "Vinduer"
+
+#: ../gtweak/tweakmodel.py:37
+msgid "Miscellaneous"
+msgstr "Diverse"
