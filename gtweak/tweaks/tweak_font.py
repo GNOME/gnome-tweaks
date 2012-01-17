@@ -18,10 +18,10 @@
 from gi.repository import Gtk
 
 from gtweak.tweakmodel import Tweak, TWEAK_GROUP_FONTS
-from gtweak.widgets import GSettingsRangeTweak, GSettingsFontButtonTweak, GSettingsComboTweak
+from gtweak.widgets import GSettingsSpinButtonTweak, GSettingsFontButtonTweak, GSettingsComboTweak
 
 TWEAKS = (
-    GSettingsRangeTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, group_name=TWEAK_GROUP_FONTS),
+    GSettingsSpinButtonTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, digits=1, group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("org.gnome.desktop.interface", "font-name", group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("org.gnome.desktop.interface", "document-font-name", group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("org.gnome.desktop.interface", "monospace-font-name", group_name=TWEAK_GROUP_FONTS),
