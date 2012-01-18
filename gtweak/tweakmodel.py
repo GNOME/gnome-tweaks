@@ -35,6 +35,7 @@ class Tweak:
         self.name = name
         self.description = description
         self.group_name = options.get("group_name",_("Miscellaneous"))
+        self.loaded = True
 
         self._search_cache = None
 
@@ -148,6 +149,8 @@ class TweakModel(Gtk.ListStore):
         self._tweak_group_names[tweakgroup.name] = tweakgroup
 
     def add_tweak_auto_to_group(self, tweak):
+        if not tweak.loaded:
+            return
         name = tweak.group_name
         try:
             group = self._tweak_group_names[name]

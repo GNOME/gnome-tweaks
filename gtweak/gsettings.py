@@ -23,6 +23,12 @@ import gtweak
 
 from gi.repository import Gio, GLib
 
+_SCHEMA_CACHE = {}
+_GSETTINGS_SCHEMAS = set(Gio.Settings.list_schemas())
+
+class GSettingsMissingError(Exception):
+    pass
+
 class _GSettingsSchema:
     def __init__(self, schema_name, schema_dir=None, schema_filename=None, **options):
         if not schema_dir:
@@ -64,10 +70,25 @@ class _GSettingsSchema:
     def __repr__(self):
         return "<gtweak.gsettings._GSettingsSchema: %s>" % self._schema_name
 
-_SCHEMA_CACHE = {}
+class GSettingsFakeSetting:
+    def __init__(self):
+        pass
+
+    def get_range(self, *args, **kwargs):
+        return False, []
+
+    def get_string(self, *args, **kwargs):
+        return ""
+
+    def __getattr__(self, name):
+        def noop(*args, **kwargs):
+            pass
+        return noop
 
 class GSettingsSetting(Gio.Settings):
     def __init__(self, schema_name, **options):
+        if schema_name not in _GSETTINGS_SCHEMAS:
+            raise GSettingsMissingError(schema_name)
         Gio.Settings.__init__(self, schema_name)
         if schema_name not in _SCHEMA_CACHE:
             _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, **options)

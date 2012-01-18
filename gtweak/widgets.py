@@ -15,10 +15,12 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
+import logging
+
 from gi.repository import Gtk, Gdk, Gio, Pango
 
 from gtweak.tweakmodel import Tweak
-from gtweak.gsettings import GSettingsSetting
+from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
 from gtweak.gconf import GConfSetting
 
 def build_label_beside_widget(txt, *widget, **kwargs):
@@ -97,11 +99,17 @@ class _GSettingsTweak(Tweak):
     def __init__(self, schema_name, key_name, **options):
         self.schema_name = schema_name
         self.key_name = key_name
-        self.settings = GSettingsSetting(schema_name, **options)
-        Tweak.__init__(self,
-            options.get("summary",self.settings.schema_get_summary(key_name)),
-            options.get("description",self.settings.schema_get_description(key_name)),
-            **options)
+        try:
+            self.settings = GSettingsSetting(schema_name, **options)
+            Tweak.__init__(self,
+                options.get("summary",self.settings.schema_get_summary(key_name)),
+                options.get("description",self.settings.schema_get_description(key_name)),
+                **options)
+        except GSettingsMissingError, e:
+            self.settings = GSettingsFakeSetting()
+            Tweak.__init__(self,"","")
+            self.loaded = False
+            logging.info("Missing gsettings %s (key %s)" % (e.message, key_name))
 
 class GSettingsSwitchTweak(_GSettingsTweak):
     def __init__(self, schema_name, key_name, **options):
@@ -109,7 +117,7 @@ class GSettingsSwitchTweak(_GSettingsTweak):
 
         w = Gtk.Switch()
         self.settings.bind(key_name, w, "active", Gio.SettingsBindFlags.DEFAULT)
-        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+        self.widget = build_label_beside_widget(self.name, w)
         # never change the size of a switch
         self.widget_for_size_group = None
 
@@ -119,7 +127,7 @@ class GSettingsFontButtonTweak(_GSettingsTweak):
 
         w = Gtk.FontButton()
         self.settings.bind(key_name, w, "font-name", Gio.SettingsBindFlags.DEFAULT)
-        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+        self.widget = build_label_beside_widget(self.name, w)
         self.widget_for_size_group = w
 
 class GSettingsRangeTweak(_GSettingsTweak):
@@ -131,7 +139,7 @@ class GSettingsRangeTweak(_GSettingsTweak):
 
         w = Gtk.HScale.new_with_range(_min, _max, options.get('adjustment_step', 1))
         self.settings.bind(key_name, w.get_adjustment(), "value", Gio.SettingsBindFlags.DEFAULT)
-        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+        self.widget = build_label_beside_widget(self.name, w)
         self.widget_for_size_group = w
 
 class GSettingsSpinButtonTweak(_GSettingsTweak):
@@ -146,7 +154,7 @@ class GSettingsSpinButtonTweak(_GSettingsTweak):
         w.set_adjustment(adjustment)
         w.set_digits(options.get('digits', 0))
         self.settings.bind(key_name, adjustment, "value", Gio.SettingsBindFlags.DEFAULT)
-        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+        self.widget = build_label_beside_widget(self.name, w)
         self.widget_for_size_group = w
 
 class GSettingsComboEnumTweak(_GSettingsTweak):
@@ -161,7 +169,7 @@ class GSettingsComboEnumTweak(_GSettingsTweak):
         w.connect('changed', self._on_combo_changed)
         self.combo = w
 
-        self.widget = build_label_beside_widget(self.settings.schema_get_summary(key_name), w)
+        self.widget = build_label_beside_widget(self.name, w)
         self.widget_for_size_group = w
 
 
@@ -246,7 +254,7 @@ class GConfFontButtonTweak(_GConfTweak):
         w = Gtk.FontButton()
         w.props.font_name = self.gconf.get_value()
         w.connect("notify::font-name", self._on_fontbutton_changed)
-        self.widget = build_label_beside_widget(self.gconf.schema_get_summary(), w)
+        self.widget = build_label_beside_widget(self.name, w)
         self.widget_for_size_group = w
 
     def _on_fontbutton_changed(self, btn, param):
