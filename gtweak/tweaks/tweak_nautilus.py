@@ -19,7 +19,7 @@ from gi.repository import Gtk
 
 import gtweak
 from gtweak.utils import AutostartManager
-from gtweak.tweakmodel import TWEAK_GROUP_DESKTOP
+from gtweak.tweakmodel import TWEAK_GROUP_DESKTOP, TWEAK_GROUP_FILES
 from gtweak.widgets import GSettingsSwitchTweak
 
 class DesktopIconTweak(GSettingsSwitchTweak):
@@ -50,4 +50,6 @@ TWEAKS = (
     GSettingsSwitchTweak("org.gnome.nautilus.desktop", "network-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
     GSettingsSwitchTweak("org.gnome.nautilus.desktop", "trash-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
     GSettingsSwitchTweak("org.gnome.nautilus.desktop", "volumes-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.preferences", "always-use-location-entry",
+schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILES),
 )
