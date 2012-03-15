@@ -27,6 +27,8 @@ TWEAK_GROUP_FONTS = _("Fonts")
 TWEAK_GROUP_THEME = _("Theme")
 TWEAK_GROUP_DESKTOP = _("Desktop")
 TWEAK_GROUP_WINDOWS = _("Windows")
+
+#translate this the same as the name of the file manager (nautilus)
 TWEAK_GROUP_FILES = _("Files")
 
 LOG = logging.getLogger(__name__)
