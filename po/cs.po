@@ -2,15 +2,15 @@
 # Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
-# Marek Černocký <marek@manet.cz>, 2011.
+# Marek Černocký <marek@manet.cz>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-11-20 09:55+0000\n"
-"PO-Revision-Date: 2011-11-20 12:31+0100\n"
+"POT-Creation-Date: 2012-03-19 09:31+0000\n"
+"PO-Revision-Date: 2012-03-25 14:14+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -24,12 +24,12 @@ msgid "Advanced Settings"
 msgstr "Pokročilá nastavení"
 
 #: ../data/shell.ui.h:2
-msgid "tweaks"
-msgstr "vyladění"
-
-#: ../data/shell.ui.h:3
 msgid "welcome"
 msgstr "vítejte"
+
+#: ../data/shell.ui.h:3
+msgid "tweaks"
+msgstr "vyladění"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
@@ -43,7 +43,7 @@ msgstr "Motiv GTK+"
 msgid "Icon theme"
 msgstr "Motiv ikon"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:108
+#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:110
 msgid "<i>Default</i>"
 msgstr "<i>Výchozí</i>"
 
@@ -52,61 +52,51 @@ msgid "Keybinding theme"
 msgstr "Motiv klávesových zkratek"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:56
 msgid "Unknown error"
 msgstr "Neznámá chyba"
 
-#: ../gtweak/tweaks/tweak_shell.py:60
+#: ../gtweak/tweaks/tweak_shell.py:61
 msgid "Shell not running"
 msgstr "Shell neběží"
 
-#: ../gtweak/tweaks/tweak_shell.py:76
+#: ../gtweak/tweaks/tweak_shell.py:78
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Rozšíření s uživatelským motivem shellu je nesprávně nainstalováno"
 
-#: ../gtweak/tweaks/tweak_shell.py:79
+#: ../gtweak/tweaks/tweak_shell.py:81
 msgid "Shell user-theme extension not enabled"
 msgstr "Rozšíření s uživatelským motivem shellu není povoleno"
 
-#: ../gtweak/tweaks/tweak_shell.py:82
+#: ../gtweak/tweaks/tweak_shell.py:84
 msgid "Could not list shell extensions"
 msgstr "Nelze vypsat seznam rozšíření shellu"
 
 #. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:113
+#: ../gtweak/tweaks/tweak_shell.py:115
 msgid "Select a theme"
 msgstr "Vybrat motiv"
 
-#: ../gtweak/tweaks/tweak_shell.py:160
+#: ../gtweak/tweaks/tweak_shell.py:162
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Motiv %s úspěšně aktualizován"
 
-#: ../gtweak/tweaks/tweak_shell.py:162
+#: ../gtweak/tweaks/tweak_shell.py:164
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Motiv %s úspěšně nainstalován"
 
-#: ../gtweak/tweaks/tweak_shell.py:170
+#: ../gtweak/tweaks/tweak_shell.py:172
 msgid "Error installing theme"
 msgstr "Chyba instalace motivu"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:175
+#: ../gtweak/tweaks/tweak_shell.py:177
 msgid "Invalid theme"
 msgstr "Neplatný motiv"
 
-#: ../gtweak/tweaks/tweak_shell.py:196
-msgid "The shell may need to be restarted to apply the theme"
-msgstr "Shell možná bude zapotřebí restartovat, aby se motiv použil"
-
-#: ../gtweak/tweaks/tweak_shell.py:197
-#: ../gtweak/tweaks/tweak_shell_extensions.py:60
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
-msgid "Restart"
-msgstr "Restartovat"
-
-#: ../gtweak/tweaks/tweak_shell.py:208
+#: ../gtweak/tweaks/tweak_shell.py:195
 msgid "Shell"
 msgstr "Shell"
 
@@ -134,6 +124,11 @@ msgstr "Rozšíření %s"
 #: ../gtweak/tweaks/tweak_shell_extensions.py:59
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Shell musí být restartován, aby se změny projevily"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:60
+#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+msgid "Restart"
+msgstr "Restartovat"
 
 #: ../gtweak/tweaks/tweak_shell_extensions.py:68
 msgid "Install Shell Extension"
@@ -166,7 +161,7 @@ msgstr "Neplatné rozšíření"
 msgid "Shell Extensions"
 msgstr "Rozšíření Shellu"
 
-#: ../gtweak/tweaks/tweak_windows.py:53
+#: ../gtweak/tweaks/tweak_windows.py:31
 msgid "Window theme"
 msgstr "Motiv okna"
 
@@ -192,6 +187,11 @@ msgstr "Pracovní plocha"
 msgid "Windows"
 msgstr "Okna"
 
-#: ../gtweak/tweakmodel.py:37
+#. translate this the same as the name of the file manager (nautilus)
+#: ../gtweak/tweakmodel.py:32
+msgid "Files"
+msgstr "Soubory"
+
+#: ../gtweak/tweakmodel.py:40
 msgid "Miscellaneous"
 msgstr "Různé"
