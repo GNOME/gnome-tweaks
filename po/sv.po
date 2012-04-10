@@ -1,34 +1,202 @@
 # Swedish translation for gnome-tweak-tool.
-# Copyright (C) 2011 Free Software Foundation, Inc.
+# Copyright (C) 2011, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Daniel Nylander <po@danielnylander.se>, 2011.
+# Daniel Nylander <po@danielnylander.se>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-02 16:26+0200\n"
-"PO-Revision-Date: 2011-04-02 16:28+0100\n"
+"POT-Creation-Date: 2012-04-10 20:22+0200\n"
+"PO-Revision-Date: 2012-04-10 20:22+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/shell.ui.h:1
-msgid "Tweak Tool"
-msgstr "Justeringsverktyg"
+#: ../data/gnome-tweak-tool.desktop.in.h:1
+msgid "Advanced Settings"
+msgstr "Avancerade inställningar"
 
 #: ../data/shell.ui.h:2
-msgid "tweaks"
-msgstr "justeringar"
-
-#: ../data/shell.ui.h:3
 msgid "welcome"
 msgstr "välkommen"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Justera avancerade inställningar"
+#: ../data/shell.ui.h:3
+msgid "tweaks"
+msgstr "justeringar"
 
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Justera avancerade GNOME 3-inställningar"
+
+#: ../gtweak/tweaks/tweak_interface.py:33
+msgid "GTK+ theme"
+msgstr "GTK+-tema"
+
+#: ../gtweak/tweaks/tweak_interface.py:51
+msgid "Icon theme"
+msgstr "Ikontema"
+
+#: ../gtweak/tweaks/tweak_interface.py:86
+#: ../gtweak/tweaks/tweak_shell.py:108
+msgid "<i>Default</i>"
+msgstr "<i>Standard</i>"
+
+#: ../gtweak/tweaks/tweak_interface.py:87
+msgid "Keybinding theme"
+msgstr "Tangentbindningstema"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:55
+msgid "Unknown error"
+msgstr "Okänt fel"
+
+#: ../gtweak/tweaks/tweak_shell.py:60
+msgid "Shell not running"
+msgstr "Skal är inte igång"
+
+#: ../gtweak/tweaks/tweak_shell.py:76
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Tillägg för skalets användartema är inte korrekt installerat"
+
+#: ../gtweak/tweaks/tweak_shell.py:79
+msgid "Shell user-theme extension not enabled"
+msgstr "Tillägg för skalets användartema är inte aktiverat"
+
+#: ../gtweak/tweaks/tweak_shell.py:82
+msgid "Could not list shell extensions"
+msgstr "Kunde inte lista skaltillägg"
+
+#. a filechooser to install new themes
+#: ../gtweak/tweaks/tweak_shell.py:113
+msgid "Select a theme"
+msgstr "Välj ett tema"
+
+#: ../gtweak/tweaks/tweak_shell.py:160
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "%s tema uppdaterades"
+
+#: ../gtweak/tweaks/tweak_shell.py:162
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "%s tema installerades"
+
+#: ../gtweak/tweaks/tweak_shell.py:170
+msgid "Error installing theme"
+msgstr "Fel vid installation av tema"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:175
+msgid "Invalid theme"
+msgstr "Ogiltigt tema"
+
+#: ../gtweak/tweaks/tweak_shell.py:196
+msgid "The shell may need to be restarted to apply the theme"
+msgstr "Skalet kanske måste startas om för att tillämpa temat"
+
+#: ../gtweak/tweaks/tweak_shell.py:197
+#: ../gtweak/tweaks/tweak_shell_extensions.py:56
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+msgid "Restart"
+msgstr "Starta om"
+
+#: ../gtweak/tweaks/tweak_shell.py:208
+msgid "Shell"
+msgstr "Skal"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:33
+msgid "Error loading extension"
+msgstr "Fel vid inläsning av tillägget"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+msgid "Extension does not support shell version"
+msgstr "Tillägget saknar stöd för skalversionen"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+msgid "Unknown extension error"
+msgstr "Okänt tilläggsfel"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+#, python-format
+msgid "%s Extension"
+msgstr "%s tillägg"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:55
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Skalet måste startas om för att ändringarna ska aktiveras"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:64
+msgid "Install Shell Extension"
+msgstr "Installera skaltillägg"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+msgid "Select an extension"
+msgstr "Välj ett tillägg"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:115
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "%s tillägg uppdaterades"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:117
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "%s tillägg installerades"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+msgid "Error installing extension"
+msgstr "Fel vid installation av tillägget"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell_extensions.py:130
+msgid "Invalid extension"
+msgstr "Ogiltigt tillägg"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:138
+msgid "Shell Extensions"
+msgstr "Skaltillägg"
+
+#: ../gtweak/tweaks/tweak_windows.py:53
+msgid "Window theme"
+msgstr "Fönstertema"
+
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:66
+#, python-format
+msgid "%s <i>(default)</i>"
+msgstr "%s <i>(standard)</i>"
+
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "Typsnitt"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Theme"
+msgstr "Tema"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Desktop"
+msgstr "Skrivbord"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "Fönster"
+
+#: ../gtweak/tweakmodel.py:37
+msgid "Miscellaneous"
+msgstr "Diverse"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Tillägget hämtas"
+
+#~ msgid "Files"
+#~ msgstr "Filer"
+
+#~ msgid "Tweak Tool"
+#~ msgstr "Justeringsverktyg"
