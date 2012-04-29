@@ -46,6 +46,8 @@ class ShellThemeTweak(Tweak):
     THEME_EXT_NAME = "user-theme@gnome-shell-extensions.gcampax.github.com"
     THEME_GSETTINGS_SCHEMA = "org.gnome.shell.extensions.user-theme"
     THEME_GSETTINGS_NAME = "name"
+    THEME_GSETTINGS_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions",
+                                       THEME_EXT_NAME, "schemas")
     THEME_DIR = os.path.join(GLib.get_home_dir(), ".themes")
 
     def __init__(self, **options):
@@ -63,7 +65,11 @@ class ShellThemeTweak(Tweak):
             if ShellThemeTweak.THEME_EXT_NAME in extensions and extensions[ShellThemeTweak.THEME_EXT_NAME]["state"] == 1:
                 #check the correct gsettings key is present
                 try:
-                    self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
+                    if os.path.exists(ShellThemeTweak.THEME_GSETTINGS_DIR):
+                        self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA,
+                                                          schema_dir=ShellThemeTweak.THEME_GSETTINGS_DIR)
+                    else:
+                        self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
                     name = self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME)
 
                     ext = extensions[ShellThemeTweak.THEME_EXT_NAME]

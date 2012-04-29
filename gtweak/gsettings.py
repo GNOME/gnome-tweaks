@@ -86,12 +86,24 @@ class GSettingsFakeSetting:
         return noop
 
 class GSettingsSetting(Gio.Settings):
-    def __init__(self, schema_name, **options):
-        if schema_name not in _GSETTINGS_SCHEMAS:
+    def __init__(self, schema_name, schema_dir=None, **options):
+        if schema_dir is None and schema_name not in _GSETTINGS_SCHEMAS:
             raise GSettingsMissingError(schema_name)
-        Gio.Settings.__init__(self, schema_name)
+        if schema_dir is None:
+            Gio.Settings.__init__(self, schema_name)
+        else:
+            GioSSS = Gio.SettingsSchemaSource
+            schema_source = GioSSS.new_from_directory(schema_dir,
+                                                      GioSSS.get_default(),
+                                                      False)
+            schema_obj = schema_source.lookup(schema_name, True)
+            if not schema_obj:
+                raise GSettingsMissingError(schema_name)
+
+            Gio.Settings.__init__(self, None, settings_schema=schema_obj)
+
         if schema_name not in _SCHEMA_CACHE:
-            _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, **options)
+            _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, schema_dir=schema_dir, **options)
             logging.debug("Caching gsettings: %s" % _SCHEMA_CACHE[schema_name])
 
         self._schema = _SCHEMA_CACHE[schema_name]
