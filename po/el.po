@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-21 23:50+0300\n"
-"PO-Revision-Date: 2011-05-18 23:38+0300\n"
-"Last-Translator: Mel Argyropoulou <bunnydee93@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-11-23 23:36+0000\n"
+"PO-Revision-Date: 2012-03-15 02:54+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,8 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../data/shell.ui.h:1
-msgid "Tweak Tool"
-msgstr "Εργαλείο μικρορυθμίσεων"
+#: ../data/gnome-tweak-tool.desktop.in.h:1
+#| msgid "Tweak Advanced Settings"
+msgid "Advanced Settings"
+msgstr "Προχωρημένες ρυθμίσεις"
 
 #: ../data/shell.ui.h:2
 msgid "tweaks"
@@ -29,6 +31,167 @@ msgstr "μικρορυθμίσεις"
 msgid "welcome"
 msgstr "καλωσήλθατε"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Προχωρημένες μικρορυθμίσεις"
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+#| msgid "Tweak Advanced Settings"
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Επεξεργαστείτε τις προχωρημένες ρυθμίσεις του GNOME 3"
+
+#: ../gtweak/tweaks/tweak_interface.py:33
+msgid "GTK+ theme"
+msgstr "Θέμα GTK+ "
+
+#: ../gtweak/tweaks/tweak_interface.py:51
+msgid "Icon theme"
+msgstr "Θέμα εικονιδίων"
+
+#: ../gtweak/tweaks/tweak_interface.py:86
+#: ../gtweak/tweaks/tweak_shell.py:110
+msgid "<i>Default</i>"
+msgstr "<i>Προεπιλογή</i>"
+
+#: ../gtweak/tweaks/tweak_interface.py:87
+msgid "Keybinding theme"
+msgstr "Θέμα συνδιασμών πλήκτρων"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:56
+msgid "Unknown error"
+msgstr "Άγνωστο σφάλμα"
+
+#: ../gtweak/tweaks/tweak_shell.py:61
+msgid "Shell not running"
+msgstr "Το κέλυφος δεν εκτελείται"
+
+#: ../gtweak/tweaks/tweak_shell.py:78
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Δεν έχει εγκατασταθεί σωστά η επέκταση του κελύφους user-theme "
+
+#: ../gtweak/tweaks/tweak_shell.py:81
+msgid "Shell user-theme extension not enabled"
+msgstr "Η επέκταση του κελύφους user-theme δεν είναι ενεργοποιημένη"
+
+#: ../gtweak/tweaks/tweak_shell.py:84
+msgid "Could not list shell extensions"
+msgstr "Αδυναμία καταγραφής των επεκτάσεων του κελύφους"
+
+#. a filechooser to install new themes
+#: ../gtweak/tweaks/tweak_shell.py:115
+msgid "Select a theme"
+msgstr "Επιλέξτε ένα θέμα"
+
+#: ../gtweak/tweaks/tweak_shell.py:162
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "Το θέμα %s ενημερώθηκε με επιτυχία"
+
+#: ../gtweak/tweaks/tweak_shell.py:164
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "Το θέμα %s εγκαταστάθηκε με επιτυχία"
+
+#: ../gtweak/tweaks/tweak_shell.py:172
+msgid "Error installing theme"
+msgstr "Σφάλμα εγκατάστασης θέματος"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:177
+msgid "Invalid theme"
+msgstr "Μη έγκυρο θέμα"
+
+#: ../gtweak/tweaks/tweak_shell.py:195
+msgid "Shell"
+msgstr "Κέλυφος"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+msgid "Extension downloading"
+msgstr "Λήψη επέκτασης"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+msgid "Error loading extension"
+msgstr "Σφάλμα κατά το άνοιγμα της επέκτασης"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+msgid "Extension does not support shell version"
+msgstr "Η επέκταση δεν υποστηρίζεται από την έκδοση του κελύφους"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+msgid "Unknown extension error"
+msgstr "Άγνωστο σφάλμα επέκτασης"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:46
+#, python-format
+msgid "%s Extension"
+msgstr "Επέκταση %s "
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:59
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Το κέλυφος πρέπει να επανεκκινηθεί για να εφαρμοστούν οι αλλαγές"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:60
+#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+msgid "Restart"
+msgstr "Επανεκκίνηση"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+msgid "Install Shell Extension"
+msgstr "Εγκατάσταση επέκτασης κελύφους"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+msgid "Select an extension"
+msgstr "Επιλέξτε μια επέκταση"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "Η επέκταση %s ενημερώθηκε με επιτυχία"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "Η επέκταση %s εγκαταστάθηκε με επιτυχία"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+msgid "Error installing extension"
+msgstr "Σφάλμα κατά την εγκατάσταση της επέκτασης"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+msgid "Invalid extension"
+msgstr "Μη έγκυρη επέκταση"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:142
+msgid "Shell Extensions"
+msgstr "Eπεκτάσεις κελύφους"
+
+#: ../gtweak/tweaks/tweak_windows.py:31
+msgid "Window theme"
+msgstr "Θέμα παραθύρων"
+
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:66
+#, python-format
+msgid "%s <i>(default)</i>"
+msgstr "%s <i>(προεπιλογή)</i>"
+
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "Γραμματοσειρές"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Theme"
+msgstr "Θέμα"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "Παράθυρα"
+
+#: ../gtweak/tweakmodel.py:37
+msgid "Miscellaneous"
+msgstr "Διάφορα"
+
+#~ msgid "Tweak Tool"
+#~ msgstr "Εργαλείο μικρορυθμίσεων"
