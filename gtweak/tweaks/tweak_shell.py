@@ -22,8 +22,7 @@ import logging
 import json
 import pprint
 
-from gi.repository import Gtk
-from gi.repository import GLib
+from gi.repository import Gtk, GLib, GObject, Gio
 
 from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_with_default
 from gtweak.gsettings import GSettingsSetting
@@ -184,6 +183,37 @@ class ShellThemeTweak(Tweak):
         val = combo.get_model().get_value(combo.get_active_iter(), 0)
         self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, val)
 
+class StaticWorkspaceTweak(Tweak):
+
+    NUM_WORKSPACES_SCHEMA = "org.gnome.desktop.wm.preferences"
+    NUM_WORKSPACES_KEY = "num-workspaces"
+
+    DYNAMIC_SCHEMA = "org.gnome.shell.overrides"
+    DYNAMIC_KEY = "dynamic-workspaces"
+
+    def __init__(self, **options):
+        Tweak.__init__(self, "Dynamic workspaces", "Disable gnome-shell dynamic workspace management, use static workspaces", **options)
+
+        settings = GSettingsSetting(self.NUM_WORKSPACES_SCHEMA, **options)
+        adj = Gtk.Adjustment(1, 1, 99, 1)
+        sb = Gtk.SpinButton(adjustment=adj, digits=0)
+        settings.bind(self.NUM_WORKSPACES_KEY, adj, "value", Gio.SettingsBindFlags.DEFAULT)
+
+        settings = GSettingsSetting(self.DYNAMIC_SCHEMA, **options)
+        sw = Gtk.Switch()
+        settings.bind(self.DYNAMIC_KEY, sw, "active", Gio.SettingsBindFlags.DEFAULT)
+
+        #sw.bind_property ("active", sb, "sensitive", GObject.BindingFlags.SYNC_CREATE)
+        sb.set_sensitive(not settings[self.DYNAMIC_KEY])
+        sw.connect('notify::active', lambda _sw,_param,_sb: _sb.set_sensitive(not _sw.get_active()), sb)
+
+        hb = Gtk.HBox(spacing = 4)
+        hb.pack_start(sw, False, False, 0)
+        hb.pack_start(sb, True, True, 0)
+
+        self.widget = build_label_beside_widget(self.name, hb)
+        self.widget_for_size_group = hb
+
 sg = build_horizontal_sizegroup()
 
 TWEAKS = (
@@ -198,5 +228,6 @@ TWEAK_GROUPS = (
             GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),
             ShowWindowButtons(schema_filename="org.gnome.shell.gschema.xml", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
-            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg)),
+            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
+            StaticWorkspaceTweak(size_group=sg)),
 )
