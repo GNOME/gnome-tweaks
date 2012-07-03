@@ -22,7 +22,7 @@ from gi.repository import Gtk
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
 from gtweak.tweakmodel import TWEAK_GROUP_THEME
-from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak
+from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher
 
 class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
@@ -98,6 +98,7 @@ class KeyThemeSwitcher(GSettingsComboTweak):
 TWEAKS = (
     GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons", group_name=TWEAK_GROUP_THEME),
     GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons", group_name=TWEAK_GROUP_THEME),
+    DarkThemeSwitcher(group_name=TWEAK_GROUP_THEME),
     CursorThemeSwitcher(group_name=TWEAK_GROUP_THEME),
     KeyThemeSwitcher(group_name=TWEAK_GROUP_THEME),
     IconThemeSwitcher(group_name=TWEAK_GROUP_THEME),

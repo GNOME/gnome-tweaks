@@ -16,11 +16,13 @@
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
+import os.path
 
-from gi.repository import Gtk, Gdk, Gio, Pango
+from gi.repository import GLib, Gtk, Gdk, Gio, Pango
 
 from gtweak.tweakmodel import Tweak
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
+from gtweak.gtksettings import GtkSettingsManager
 from gtweak.gconf import GConfSetting
 
 def build_label_beside_widget(txt, *widget, **kwargs):
@@ -277,3 +279,25 @@ class ZipFileChooserButton(Gtk.FileChooserButton):
         #self.set_width_chars(15)
         self.set_local_only(True)
 
+class DarkThemeSwitcher(Tweak):
+    def __init__(self, **options):
+        Tweak.__init__(self, _("Enable dark theme for all applications"),
+                       _("Enable the dark theme hint for all the applications in the session"),
+                       **options)
+
+        self._gtksettings = GtkSettingsManager()
+
+        w = Gtk.Switch()
+        w.set_active(self._gtksettings.get_integer("gtk-application-prefer-dark-theme"))
+
+        w.connect("notify::active", self._on_switch_changed)
+        self.widget = build_label_beside_widget(self.name, w)
+
+    def _on_switch_changed(self, switch, param):
+        active = switch.get_active()
+
+        try:
+            self._gtksettings.set_integer("gtk-application-prefer-dark-theme",
+                                          active)
+        except:
+            self.notify_error(_("Error writing setting"))
