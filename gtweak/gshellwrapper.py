@@ -32,7 +32,7 @@ class _ShellProxy:
                             d, 0, None,
                             'org.gnome.Shell',
                             '/org/gnome/Shell',
-                            'org.gnome.Shell',
+                            'org.gnome.Shell.Extensions',
                             None)
 
         #GNOME Shell > 3.3 added the Version to the DBus API and disabled execute_js
