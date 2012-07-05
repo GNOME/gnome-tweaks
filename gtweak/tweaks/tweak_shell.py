@@ -229,8 +229,8 @@ TWEAKS = (
 TWEAK_GROUPS = (
         TweakGroup(
             _("Shell"),
-            GSettingsSwitchTweak("org.gnome.shell.clock", "show-date", schema_filename="org.gnome.shell.gschema.xml"),
-            GSettingsSwitchTweak("org.gnome.shell.clock", "show-seconds", schema_filename="org.gnome.shell.gschema.xml"),
+            GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
+            GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),
             ShowWindowButtons(schema_filename="org.gnome.shell.gschema.xml", size_group=sg),
             GSettingsSwitchTweak("org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
