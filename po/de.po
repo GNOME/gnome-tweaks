@@ -2,29 +2,33 @@
 # Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
-# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011.
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2011, 2012.
+# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-03-19 09:31+0000\n"
-"PO-Revision-Date: 2012-03-20 03:25+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
-"Language-Team: German <gnome-de@gnome.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-15 15:21+0200\n"
+"PO-Revision-Date: 2012-07-15 15:22+0200\n"
+"Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
+"Language-Team: Deutsch <gnome-de@gnome.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: German\n"
 "X-Poedit-Country: GERMANY\n"
+"X-Generator: Gtranslator 2.91.5\n"
 
-#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
+#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
 msgid "Advanced Settings"
 msgstr "Erweiterte Einstellungen"
+
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Erweiterte Einstellungen für GNOME 3 optimieren"
 
 #: ../data/shell.ui.h:2
 msgid "welcome"
@@ -34,9 +38,30 @@ msgstr "Willkommen"
 msgid "tweaks"
 msgstr "Optimierungen"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Erweiterte Einstellungen für GNOME 3 optimieren"
+#: ../gtweak/tweakmodel.py:26
+msgid "Fonts"
+msgstr "Schriften"
+
+#: ../gtweak/tweakmodel.py:27
+msgid "Theme"
+msgstr "Thema "
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Desktop"
+msgstr "Arbeitsoberfläche"
+
+#: ../gtweak/tweakmodel.py:29
+msgid "Windows"
+msgstr "Fenster"
+
+#. translate this the same as the name of the file manager (nautilus)
+#: ../gtweak/tweakmodel.py:32
+msgid "Files"
+msgstr "Dateien"
+
+#: ../gtweak/tweakmodel.py:40
+msgid "Miscellaneous"
+msgstr "Verschiedenes"
 
 #: ../gtweak/tweaks/tweak_interface.py:33
 msgid "GTK+ theme"
@@ -46,62 +71,13 @@ msgstr "GTK+ Thema"
 msgid "Icon theme"
 msgstr "Symbolthema"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:110
+#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:115
 msgid "<i>Default</i>"
 msgstr "Vorgabe"
 
 #: ../gtweak/tweaks/tweak_interface.py:87
 msgid "Keybinding theme"
 msgstr "Tastenkombinationsthema"
-
-#. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:56
-msgid "Unknown error"
-msgstr "Unbekannter Fehler"
-
-#: ../gtweak/tweaks/tweak_shell.py:61
-msgid "Shell not running"
-msgstr "Shell wird nicht ausgeführt"
-
-#: ../gtweak/tweaks/tweak_shell.py:78
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Benutzerthema-Erweiterung wurde nicht korrekt installiert"
-
-#: ../gtweak/tweaks/tweak_shell.py:81
-msgid "Shell user-theme extension not enabled"
-msgstr "Benutzerthema-Erweiterung ist nicht aktiviert"
-
-#: ../gtweak/tweaks/tweak_shell.py:84
-msgid "Could not list shell extensions"
-msgstr "Shell-Erweiterungen konnten nicht aufgelistet werden"
-
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:115
-msgid "Select a theme"
-msgstr "Thema wählen"
-
-#: ../gtweak/tweaks/tweak_shell.py:162
-#, python-format
-msgid "%s theme updated successfully"
-msgstr "Thema %s wurde erfolgreich aktualisiert"
-
-#: ../gtweak/tweaks/tweak_shell.py:164
-#, python-format
-msgid "%s theme installed successfully"
-msgstr "Thema %s wurde erfolgreich installiert"
-
-#: ../gtweak/tweaks/tweak_shell.py:172
-msgid "Error installing theme"
-msgstr "Fehler beim Installieren des Themas"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:177
-msgid "Invalid theme"
-msgstr "Ungültiges Thema"
-
-#: ../gtweak/tweaks/tweak_shell.py:195
-msgid "Shell"
-msgstr "Shell"
 
 #: ../gtweak/tweaks/tweak_shell_extensions.py:35
 msgid "Extension downloading"
@@ -166,6 +142,55 @@ msgstr "Ungültige Erweiterung"
 msgid "Shell Extensions"
 msgstr "Shell-Erweiterungen"
 
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:57
+msgid "Unknown error"
+msgstr "Unbekannter Fehler"
+
+#: ../gtweak/tweaks/tweak_shell.py:62
+msgid "Shell not running"
+msgstr "Shell wird nicht ausgeführt"
+
+#: ../gtweak/tweaks/tweak_shell.py:83
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Benutzerthema-Erweiterung wurde nicht korrekt installiert"
+
+#: ../gtweak/tweaks/tweak_shell.py:86
+msgid "Shell user-theme extension not enabled"
+msgstr "Benutzerthema-Erweiterung ist nicht aktiviert"
+
+#: ../gtweak/tweaks/tweak_shell.py:89
+msgid "Could not list shell extensions"
+msgstr "Shell-Erweiterungen konnten nicht aufgelistet werden"
+
+#. a filechooser to install new themes
+#: ../gtweak/tweaks/tweak_shell.py:120
+msgid "Select a theme"
+msgstr "Thema wählen"
+
+#: ../gtweak/tweaks/tweak_shell.py:167
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "Thema %s wurde erfolgreich aktualisiert"
+
+#: ../gtweak/tweaks/tweak_shell.py:169
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "Thema %s wurde erfolgreich installiert"
+
+#: ../gtweak/tweaks/tweak_shell.py:177
+msgid "Error installing theme"
+msgstr "Fehler beim Installieren des Themas"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:182
+msgid "Invalid theme"
+msgstr "Ungültiges Thema"
+
+#: ../gtweak/tweaks/tweak_shell.py:231
+msgid "Shell"
+msgstr "Shell"
+
 #: ../gtweak/tweaks/tweak_windows.py:31
 msgid "Window theme"
 msgstr "Fensterthema"
@@ -176,30 +201,18 @@ msgstr "Fensterthema"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(Vorgabe)</i>"
 
-#: ../gtweak/tweakmodel.py:26
-msgid "Fonts"
-msgstr "Schriften"
+#: ../gtweak/widgets.py:284
+msgid "Enable dark theme for all applications"
+msgstr "Dunkles Thema für alle Anwendungen aktivieren"
 
-#: ../gtweak/tweakmodel.py:27
-msgid "Theme"
-msgstr "Thema "
+#: ../gtweak/widgets.py:285
+#, fuzzy
+msgid "Enable the dark theme hint for all the applications in the session"
+msgstr "Das dunkle Thema für alle Anwendungen in der Sitzung aktivieren"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Desktop"
-msgstr "Arbeitsoberfläche"
-
-#: ../gtweak/tweakmodel.py:29
-msgid "Windows"
-msgstr "Fenster"
-
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:32
-msgid "Files"
-msgstr "Dateien"
-
-#: ../gtweak/tweakmodel.py:40
-msgid "Miscellaneous"
-msgstr "Verschiedenes"
+#: ../gtweak/widgets.py:303
+msgid "Error writing setting"
+msgstr "Fehler beim Festlegen"
 
 #~ msgid "The shell may need to be restarted to apply the theme"
 #~ msgstr ""
