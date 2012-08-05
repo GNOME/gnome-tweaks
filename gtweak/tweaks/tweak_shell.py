@@ -25,7 +25,7 @@ import pprint
 from gi.repository import Gtk, GLib, GObject, Gio
 
 from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_with_default
-from gtweak.gsettings import GSettingsSetting
+from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME
 from gtweak.widgets import ZipFileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
@@ -200,17 +200,26 @@ class StaticWorkspaceTweak(Tweak):
     def __init__(self, **options):
         Tweak.__init__(self, "Dynamic workspaces", "Disable gnome-shell dynamic workspace management, use static workspaces", **options)
 
-        settings = GSettingsSetting(self.NUM_WORKSPACES_SCHEMA, **options)
+        try:
+            nwsettings = GSettingsSetting(self.NUM_WORKSPACES_SCHEMA, **options)
+        except GSettingsMissingError:
+            self.loaded = False
+            nwsettings = GSettingsFakeSetting()
+
+        try:
+            dsettings = GSettingsSetting(self.DYNAMIC_SCHEMA, **options)
+        except GSettingsMissingError:
+            self.loaded = False
+            dsettings = GSettingsFakeSetting()
+
         adj = Gtk.Adjustment(1, 1, 99, 1)
         sb = Gtk.SpinButton(adjustment=adj, digits=0)
-        settings.bind(self.NUM_WORKSPACES_KEY, adj, "value", Gio.SettingsBindFlags.DEFAULT)
+        nwsettings.bind(self.NUM_WORKSPACES_KEY, adj, "value", Gio.SettingsBindFlags.DEFAULT)
 
-        settings = GSettingsSetting(self.DYNAMIC_SCHEMA, **options)
         sw = Gtk.Switch()
-        settings.bind(self.DYNAMIC_KEY, sw, "active", Gio.SettingsBindFlags.DEFAULT)
-
+        dsettings.bind(self.DYNAMIC_KEY, sw, "active", Gio.SettingsBindFlags.DEFAULT)
         #sw.bind_property ("active", sb, "sensitive", GObject.BindingFlags.SYNC_CREATE)
-        sb.set_sensitive(not settings[self.DYNAMIC_KEY])
+        sb.set_sensitive(not dsettings[self.DYNAMIC_KEY])
         sw.connect('notify::active', lambda _sw,_param,_sb: _sb.set_sensitive(not _sw.get_active()), sb)
 
         hb = Gtk.HBox(spacing = 4)
