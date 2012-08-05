@@ -1,3 +1,5 @@
+SUBDIRS = icons
+
 guidir = $(pkgdatadir)
 gui_DATA = \
         shell.ui \

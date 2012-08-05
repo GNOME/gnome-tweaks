@@ -33,6 +33,7 @@ AS_AC_EXPAND(LOCALEDIR, "${localedir}")
 AC_CONFIG_FILES([ po/Makefile.in
 Makefile
 data/Makefile
+data/icons/Makefile
 gtweak/defs.py
 ])
 AC_OUTPUT
