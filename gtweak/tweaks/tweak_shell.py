@@ -48,7 +48,8 @@ class ShellThemeTweak(Tweak):
     THEME_GSETTINGS_NAME = "name"
     THEME_GSETTINGS_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions",
                                        THEME_EXT_NAME, "schemas")
-    THEME_DIR = os.path.join(GLib.get_home_dir(), ".themes")
+    LEGACY_THEME_DIR = os.path.join(GLib.get_home_dir(), ".themes")
+    THEME_DIR = os.path.join(GLib.get_user_data_dir(), "themes")
 
     def __init__(self, **options):
         Tweak.__init__(self, "Shell theme", "Install custom or user themes for gnome-shell", **options)
@@ -98,6 +99,7 @@ class ShellThemeTweak(Tweak):
             #      and not themes/, so add it manually later
             dirs = [os.path.join(d, "themes") for d in GLib.get_system_data_dirs()]
             dirs += [ShellThemeTweak.THEME_DIR]
+            dirs += [ShellThemeTweak.LEGACY_THEME_DIR]
 
             valid = walk_directories(dirs, lambda d:
                         os.path.exists(os.path.join(d, "gnome-shell")) and \
