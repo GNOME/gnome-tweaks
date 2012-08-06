@@ -28,7 +28,16 @@ from gtweak.gsettings import GSettingsSetting
 class _ShellProxy:
     def __init__(self):
         d = Gio.bus_get_sync(Gio.BusType.SESSION, None)
+
         self.proxy = Gio.DBusProxy.new_sync(
+                            d, 0, None,
+                            'org.gnome.Shell',
+                            '/org/gnome/Shell',
+                            'org.gnome.Shell',
+                            None)
+
+        #GNOME Shell > 3.5 added a separate extension interface
+        self.proxy_extension = Gio.DBusProxy.new_sync(
                             d, 0, None,
                             'org.gnome.Shell',
                             '/org/gnome/Shell',
@@ -89,28 +98,6 @@ class GnomeShell:
     def version(self):
         return self._proxy.version
 
-class GnomeShell30(GnomeShell):
-
-    EXTENSION_DISABLED_KEY = "disabled-extensions"
-    EXTENSION_NEED_RESTART = True
-
-    def __init__(self, *args, **kwargs):
-        GnomeShell.__init__(self, *args, **kwargs)
-
-    def list_extensions(self):
-        out = self._execute_js('const ExtensionSystem = imports.ui.extensionSystem; ExtensionSystem.extensionMeta')
-        return json.loads(out)
-
-    def extension_is_active(self, state, uuid):
-        return state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
-                not self._settings.setting_is_in_list(self.EXTENSION_DISABLED_KEY, uuid)
-
-    def enable_extension(self, uuid):
-        self._settings.setting_remove_from_list(self.EXTENSION_DISABLED_KEY, uuid)
-
-    def disable_extension(self, uuid):
-        self._settings.setting_add_to_list(self.EXTENSION_DISABLED_KEY, uuid)
-
 class GnomeShell32(GnomeShell):
 
     EXTENSION_ENABLED_KEY = "enabled-extensions"
@@ -137,6 +124,11 @@ class GnomeShell34(GnomeShell32):
     def reload_theme(self):
         logging.warning("Reloading Theme Not Supported")
 
+class GnomeShell36(GnomeShell34):
+
+    def list_extensions(self):
+        return self._proxy.proxy_extensions.ListExtensions()
+
 @gtweak.utils.singleton
 class GnomeShellFactory:
     def __init__(self):
@@ -144,12 +136,15 @@ class GnomeShellFactory:
         settings = GSettingsSetting("org.gnome.shell")
         v = map(int,proxy.version.split("."))
 
-        if v >= [3,3,2]:
+        if v >= [3,5,0]:
+            self.shell = GnomeShell36(proxy, settings)
+        elif v >= [3,3,2]:
             self.shell = GnomeShell34(proxy, settings)
         elif v >= [3,1,4]:
             self.shell = GnomeShell32(proxy, settings)
         else:
-            self.shell = GnomeShell30(proxy, settings)
+            logging.warn("Shell version not supported")
+            self.shell = None
 
         logging.debug("Shell version: %s", str(v))
 
