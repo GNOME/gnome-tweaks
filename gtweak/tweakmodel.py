@@ -87,9 +87,11 @@ class TweakGroup:
         self.set_tweaks(*tweaks)
 
     def set_tweaks(self, *tweaks):
-        self.tweaks += [t for t in tweaks]
+        self.tweaks += [t for t in tweaks if t.loaded]
 
         for t in tweaks:
+            if not t.loaded:
+                continue
             if t.widget_for_size_group:
                 self._sg.add_widget(t.widget_for_size_group)
 
