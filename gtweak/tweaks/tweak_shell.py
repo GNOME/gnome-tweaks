@@ -27,7 +27,7 @@ from gi.repository import Gtk, GLib, GObject, Gio
 from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_with_default
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME
+from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME, TWEAK_GROUP_SHELL
 from gtweak.widgets import ZipFileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
 
 class ShowWindowButtons(GSettingsComboTweak):
@@ -239,7 +239,7 @@ TWEAKS = (
 
 TWEAK_GROUPS = (
         TweakGroup(
-            _("Shell"),
+            TWEAK_GROUP_SHELL,
             GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),

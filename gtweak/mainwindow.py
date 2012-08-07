@@ -32,8 +32,8 @@ class MainWindow:
         filename = os.path.join(gtweak.PKG_DATA_DIR, 'shell.ui')
         builder.add_from_file(filename)
         
-        welcome = builder.get_object('welcome_image')
-        welcome.set_from_file(os.path.join(gtweak.PKG_DATA_DIR, 'welcome.png'))
+#        welcome = builder.get_object('welcome_image')
+#        welcome.set_from_file(os.path.join(gtweak.PKG_DATA_DIR, 'welcome.png'))
 
         toolbar = builder.get_object('toolbar')
         toolbar.get_style_context().add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)

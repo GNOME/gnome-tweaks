@@ -27,6 +27,7 @@ TWEAK_GROUP_FONTS = _("Fonts")
 TWEAK_GROUP_THEME = _("Theme")
 TWEAK_GROUP_DESKTOP = _("Desktop")
 TWEAK_GROUP_WINDOWS = _("Windows")
+TWEAK_GROUP_SHELL = _("Shell")
 
 #translate this the same as the name of the file manager (nautilus)
 TWEAK_GROUP_FILES = _("Files")
@@ -108,6 +109,7 @@ class TweakModel(Gtk.ListStore):
 
         # map of tweakgroup.name -> tweakgroup
         self._tweak_group_names = {}
+        self._tweak_group_iters = {}
 
     @property
     def tweaks(self):
@@ -150,8 +152,11 @@ class TweakModel(Gtk.ListStore):
             LOG.critical("Tweak group named: %s already exists" % tweakgroup.name)
             return
 
-        self.append([tweakgroup.name, tweakgroup])
+        print "ssssssssssssssssssssssS",tweakgroup.name
+
+        _iter = self.append([tweakgroup.name, tweakgroup])
         self._tweak_group_names[tweakgroup.name] = tweakgroup
+        self._tweak_group_iters[tweakgroup.name] = _iter
 
     def add_tweak_auto_to_group(self, tweak):
         if not tweak.loaded:
@@ -167,4 +172,7 @@ class TweakModel(Gtk.ListStore):
       
     def search_matches(self, txt):
         return [t for t in self.tweaks if t.search_matches(txt)]
+
+    def get_tweakgroup_iter(self, name):
+        return self._tweak_group_iters[name]
         

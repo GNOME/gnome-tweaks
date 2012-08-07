@@ -2,8 +2,7 @@ SUBDIRS = icons
 
 guidir = $(pkgdatadir)
 gui_DATA = \
-        shell.ui \
-        welcome.png
+        shell.ui
 
 desktop_in_files = gnome-tweak-tool.desktop.in
 desktopdir = $(datadir)/applications

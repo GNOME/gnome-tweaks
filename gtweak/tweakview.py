@@ -20,8 +20,10 @@ import datetime
 
 from gi.repository import Gtk, Gdk, GObject
 
-import gtweak
+import gtweak.tweakmodel
 from gtweak.tweakmodel import TweakModel
+
+DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_DESKTOP
 
 class TweakView:
     def __init__(self, builder, model):
@@ -66,7 +68,8 @@ class TweakView:
 
     def run(self):
         self._main_window.show_all()
-        self.show_only_tweaks([])
+        self.treeview.get_selection().select_iter(
+                self._model.get_tweakgroup_iter(DEFAULT_TWEAKGROUP))
         Gtk.main()
 
     def show_only_tweaks(self, tweaks):
