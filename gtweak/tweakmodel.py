@@ -32,6 +32,9 @@ TWEAK_GROUP_SHELL = _("Shell")
 #translate this the same as the name of the file manager (nautilus)
 TWEAK_GROUP_FILES = _("Files")
 
+TWEAK_SORT_FIRST = -1e3
+TWEAK_SORT_LAST = 1e3
+
 LOG = logging.getLogger(__name__)
 
 class Tweak:
@@ -40,6 +43,7 @@ class Tweak:
         self.description = description
         self.group_name = options.get("group_name",_("Miscellaneous"))
         self.loaded = True
+        self.widget_sort_hint = None
 
         self._search_cache = None
 

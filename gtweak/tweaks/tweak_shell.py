@@ -27,7 +27,7 @@ from gi.repository import Gtk, GLib, GObject, Gio
 from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_with_default
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME, TWEAK_GROUP_SHELL
+from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME, TWEAK_GROUP_SHELL, TWEAK_SORT_LAST
 from gtweak.widgets import ZipFileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING
 
 class ShowWindowButtons(GSettingsComboTweak):
@@ -124,6 +124,8 @@ class ShellThemeTweak(Tweak):
 
             self.widget = build_label_beside_widget(self.name, chooser, cb)
             self.widget_for_size_group = cb
+
+            self.widget_sort_hint = TWEAK_SORT_LAST
     
     def _on_file_set(self, chooser):
         f = chooser.get_filename()
