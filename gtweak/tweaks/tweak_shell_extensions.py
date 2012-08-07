@@ -10,7 +10,7 @@ from gi.repository import GLib
 from gtweak.utils import extract_zip_file
 from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import ZipFileChooserButton, build_label_beside_widget, build_horizontal_sizegroup
+from gtweak.widgets import ZipFileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, UI_BOX_SPACING
 
 class _ShellExtensionTweak(Tweak):
 
@@ -46,7 +46,7 @@ class _ShellExtensionTweak(Tweak):
                         _("%s Extension") % ext["name"],
                         sw,
                         warning=warning)
-        self.widget_for_size_group = sw
+        self.widget_for_size_group = None
 
     def _on_extension_toggled(self, sw, active, uuid):
         if not sw.get_active():
@@ -72,8 +72,14 @@ class _ShellExtensionInstallerTweak(Tweak):
         chooser = ZipFileChooserButton(_("Select an extension"))
         chooser.connect("file-set", self._on_file_set)
 
-        self.widget = build_label_beside_widget(self.name, chooser)
-        self.widget_for_size_group = chooser
+        hb = Gtk.HBox(spacing=UI_BOX_SPACING)
+        hb.pack_start(
+                Gtk.LinkButton.new_with_label("https://extensions.gnome.org",_("Get more extensions")),
+                False, False, 0)
+        hb.pack_start(chooser, False, False, 0)
+
+        self.widget = build_label_beside_widget(self.name, hb)
+        self.widget_for_size_group = hb
 
     def _on_file_set(self, chooser):
         f = chooser.get_filename()

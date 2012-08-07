@@ -25,6 +25,8 @@ from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMi
 from gtweak.gtksettings import GtkSettingsManager
 from gtweak.gconf import GConfSetting
 
+UI_BOX_SPACING = 4
+
 def build_label_beside_widget(txt, *widget, **kwargs):
     """
     Builds a HBox containing widgets.
@@ -44,7 +46,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     else:
         hbox = Gtk.HBox()
 
-    hbox.props.spacing = 4
+    hbox.props.spacing = UI_BOX_SPACING
     lbl = Gtk.Label(txt)
     lbl.props.ellipsize = Pango.EllipsizeMode.END
     lbl.props.xalign = 0.0

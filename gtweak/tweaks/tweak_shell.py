@@ -28,7 +28,7 @@ from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_wit
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME, TWEAK_GROUP_SHELL
-from gtweak.widgets import ZipFileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text
+from gtweak.widgets import ZipFileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING
 
 class ShowWindowButtons(GSettingsComboTweak):
     def __init__(self, **options):
@@ -224,7 +224,7 @@ class StaticWorkspaceTweak(Tweak):
         sb.set_sensitive(not dsettings[self.DYNAMIC_KEY])
         sw.connect('notify::active', lambda _sw,_param,_sb: _sb.set_sensitive(not _sw.get_active()), sb)
 
-        hb = Gtk.HBox(spacing = 4)
+        hb = Gtk.HBox(spacing=UI_BOX_SPACING)
         hb.pack_start(sw, False, False, 0)
         hb.pack_start(sb, True, True, 0)
 
