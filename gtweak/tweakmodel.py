@@ -152,8 +152,6 @@ class TweakModel(Gtk.ListStore):
             LOG.critical("Tweak group named: %s already exists" % tweakgroup.name)
             return
 
-        print "ssssssssssssssssssssssS",tweakgroup.name
-
         _iter = self.append([tweakgroup.name, tweakgroup])
         self._tweak_group_names[tweakgroup.name] = tweakgroup
         self._tweak_group_iters[tweakgroup.name] = _iter

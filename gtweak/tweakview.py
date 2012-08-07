@@ -23,7 +23,18 @@ from gi.repository import Gtk, Gdk, GObject
 import gtweak.tweakmodel
 from gtweak.tweakmodel import TweakModel
 
-DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_DESKTOP
+DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_SHELL
+WIDGET_SORT_ORDER = (Gtk.Switch, Gtk.SpinButton, Gtk.ComboBox)
+
+def _sort_tweak_widgets_by_widget_type(tweak):
+    #for appearance tries to make small widgets be packed first, followed by larger widgets,
+    #followed by widgets of the same type
+    if not tweak.widget_for_size_group:
+        return -1
+    try:
+        return WIDGET_SORT_ORDER.index(type(tweak.widget_for_size_group))
+    except ValueError:
+        return len(WIDGET_SORT_ORDER) #last
 
 class TweakView:
     def __init__(self, builder, model):
@@ -59,7 +70,7 @@ class TweakView:
 
         #add all tweaks
         self._tweak_vbox = builder.get_object('tweak_vbox')
-        for t in self._model.tweaks:
+        for t in sorted(self._model.tweaks, key=_sort_tweak_widgets_by_widget_type):
             self._tweak_vbox.pack_start(t.widget, False, False, 0)
             t.set_notify_cb(self._on_tweak_notify)
 
