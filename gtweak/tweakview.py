@@ -16,6 +16,7 @@
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
 import logging
+import datetime
 
 from gi.repository import Gtk, Gdk, GObject
 
@@ -46,23 +47,18 @@ class TweakView:
                         "Tweak", Gtk.CellRendererText(), text=TweakModel.COLUMN_NAME))
         self.treeview.get_selection().connect("changed", self._on_selection_changed)
 
-        tweak_container = builder.get_object('tweak_container')
-        tweak_box = Gtk.VBox(spacing=10)
-
-        #FIXME: I may as well do this in the glade file now that
-        #https://bugzilla.gnome.org/show_bug.cgi?id=644268 is fixed
-        sw = Gtk.ScrolledWindow()
-        sw.props.shadow_type = Gtk.ShadowType.NONE
-        sw.props.hscrollbar_policy = Gtk.PolicyType.NEVER
-        vp = Gtk.Viewport()
-        vp.props.shadow_type = Gtk.ShadowType.NONE
-        sw.add(vp)
-        vp.add(tweak_box)
-        tweak_container.add(sw)
+        #make sure the tweak background is the correct color
+        ctx = builder.get_object('tweak_viewport').get_style_context ()
+        provider = Gtk.CssProvider()
+        provider.load_from_data ("GtkViewport {\n"
+                                 "   background-color: @bg_color;\n"
+                                 "}\n")
+        ctx.add_provider (provider,6000)
 
         #add all tweaks
+        self._tweak_vbox = builder.get_object('tweak_vbox')
         for t in self._model.tweaks:
-            tweak_box.pack_start(t.widget, False, False, 0)
+            self._tweak_vbox.pack_start(t.widget, False, False, 0)
             t.set_notify_cb(self._on_tweak_notify)
 
         #dict of pending notifications, the key is the function to be called
@@ -70,14 +66,8 @@ class TweakView:
 
     def run(self):
         self._main_window.show_all()
-        self.hide_tweaks(self._model.tweaks)
+        self.show_only_tweaks([])
         Gtk.main()
-
-    def show_tweaks(self, tweaks):
-        map(Gtk.Widget.show_all, [t.widget for t in tweaks])
-
-    def hide_tweaks(self, tweaks):
-        map(Gtk.Widget.hide, [t.widget for t in tweaks])
 
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
@@ -135,24 +125,15 @@ class TweakView:
         self._notebook.set_current_page(1)
 
     def _on_selection_changed(self, selection):
+        t1 = datetime.datetime.now()
         model, selected = selection.get_selected()
         if selected:
             self._on_pre_selection_change()
-            
-            #apparently iters do not persist over iteration, so use treepaths instead
-            path_selected = model.get_path(selected)
-            #hide other tweakgroups
-            root = model.get_iter_first()
-            while root:
-                if model.get_path(root) != path_selected:
-                    tweakgroup = model.get_value(root, model.COLUMN_TWEAK)
-                    self.hide_tweaks(tweakgroup.tweaks)
-                root = model.iter_next(root)
-            #show selected
             tweakgroup = model.get_value(selected, model.COLUMN_TWEAK)
-            self.show_tweaks(tweakgroup.tweaks)
-            
+            self.show_only_tweaks(tweakgroup.tweaks)
             self._on_post_selection_change()
+        t2 = datetime.datetime.now()
+        #print "TTTTTT=",t2-t1
             
 class EntryManager:
 
