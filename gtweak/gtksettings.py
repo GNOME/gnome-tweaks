@@ -16,12 +16,15 @@
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
 import os.path
+import logging
 
 from gi.repository import GLib
 
 import gtweak.utils
 
 SETTINGS_GROUP_NAME = "Settings"
+
+LOG = logging.getLogger(__name__)
 
 @gtweak.utils.singleton
 class GtkSettingsManager:
@@ -30,9 +33,12 @@ class GtkSettingsManager:
                                   "gtk-3.0",
                                   "settings.ini")
     def _get_keyfile(self):
-        keyfile = GLib.KeyFile()
+        keyfile = None
         try:
-            keyfile.load_from_file(self._path, 0) 
+            keyfile = GLib.KeyFile()
+            keyfile.load_from_file(self._path, 0)
+        except MemoryError:
+            LOG.critical("You have an old PyGObject, no support fo KeyFiles", exc_info=True)
         finally:
             return keyfile
 
