@@ -37,7 +37,7 @@ class _ShellProxy:
                             None)
 
         #GNOME Shell > 3.5 added a separate extension interface
-        self.proxy_extension = Gio.DBusProxy.new_sync(
+        self.proxy_extensions = Gio.DBusProxy.new_sync(
                             d, 0, None,
                             'org.gnome.Shell',
                             '/org/gnome/Shell',
