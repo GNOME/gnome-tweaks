@@ -54,7 +54,7 @@ class _ShellExtensionTweak(Tweak):
         widgets.append(sw)
 
         self.widget = build_label_beside_widget(
-                        _("%s Extension") % ext["name"],
+                        ext["name"].lower().capitalize(),
                         *widgets,
                         warning=warning)
         self.widget_for_size_group = None
