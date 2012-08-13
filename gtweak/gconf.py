@@ -15,10 +15,10 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
-import subprocess
 import logging
 
 import gtweak
+import gtweak.utils
 
 from gi.repository import GConf
 
@@ -34,11 +34,8 @@ class GConfSetting:
 
     def _run_gconftool(self, command):
         if command not in self._cmd_cache:
-            p = subprocess.Popen(
-                    ["gconftool-2", command, self._key],
-                    stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
-            stdout, stderr = p.communicate()
-            if p.returncode == 0:
+            stdout, stderr, returncode = gtweak.utils.execute_subprocess(["gconftool-2", command, self._key], block=True)
+            if returncode == 0:
                 self._cmd_cache[command] = stdout.strip()
             else:
                 self._cmd_cache[command] = "ERROR: %s" % stderr.strip()

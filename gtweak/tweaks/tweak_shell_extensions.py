@@ -7,10 +7,10 @@ import json
 from gi.repository import Gtk
 from gi.repository import GLib
 
-from gtweak.utils import extract_zip_file
+from gtweak.utils import extract_zip_file, execute_subprocess
 from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import ZipFileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, UI_BOX_SPACING
+from gtweak.widgets import ZipFileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING
 
 class _ShellExtensionTweak(Tweak):
 
@@ -19,10 +19,11 @@ class _ShellExtensionTweak(Tweak):
 
         self._shell = shell
         state = ext.get("state")
+        uuid = ext["uuid"]
 
         sw = Gtk.Switch()
-        sw.set_active(self._shell.extension_is_active(state, ext["uuid"]))
-        sw.connect('notify::active', self._on_extension_toggled, ext["uuid"])
+        sw.set_active(self._shell.extension_is_active(state, uuid))
+        sw.connect('notify::active', self._on_extension_toggled, uuid)
 
         info = None
         warning = None
@@ -42,11 +43,24 @@ class _ShellExtensionTweak(Tweak):
             logging.critical(warning)
         sw.set_sensitive(sensitive)
 
+        widgets = []
+        if self._shell.SUPPORTS_EXTENSION_PREFS:
+            prefs = os.path.join(self._shell.EXTENSION_DIR, uuid, "prefs.js")
+            if os.path.exists(prefs):
+                cfg = build_tight_button(Gtk.STOCK_PREFERENCES)
+                cfg.connect("clicked", self._on_configure_clicked, uuid)
+                widgets.append(cfg)
+
+        widgets.append(sw)
+
         self.widget = build_label_beside_widget(
                         _("%s Extension") % ext["name"],
-                        sw,
+                        *widgets,
                         warning=warning)
         self.widget_for_size_group = None
+
+    def _on_configure_clicked(self, btn, uuid):
+        execute_subprocess(['gnome-shell-extension-prefs', uuid], block=False)
 
     def _on_extension_toggled(self, sw, active, uuid):
         if not sw.get_active():
@@ -61,8 +75,6 @@ class _ShellExtensionTweak(Tweak):
                 self._shell.restart)
 
 class _ShellExtensionInstallerTweak(Tweak):
-
-    EXTENSION_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions")
 
     def __init__(self, shell, **options):
         Tweak.__init__(self, _("Install Shell Extension"), "", **options)
@@ -118,7 +130,7 @@ class _ShellExtensionInstallerTweak(Tweak):
                     ok, updated = extract_zip_file(
                                     z,
                                     "/".join(fragment),
-                                    os.path.join(self.EXTENSION_DIR, extension_uuid))
+                                    os.path.join(self._shell.EXTENSION_DIR, extension_uuid))
 
                 if ok:
                     if updated:

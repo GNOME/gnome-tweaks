@@ -77,6 +77,7 @@ class GnomeShell:
     }
 
     DATA_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell")
+    EXTENSION_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions")
 
     def __init__(self, shellproxy, shellsettings):
         self._proxy = shellproxy
@@ -102,6 +103,7 @@ class GnomeShell32(GnomeShell):
 
     EXTENSION_ENABLED_KEY = "enabled-extensions"
     EXTENSION_NEED_RESTART = False
+    SUPPORTS_EXTENSION_PREFS = False
 
     def list_extensions(self):
         return self._proxy.proxy.ListExtensions()
@@ -117,6 +119,8 @@ class GnomeShell32(GnomeShell):
         self._settings.setting_remove_from_list(self.EXTENSION_ENABLED_KEY, uuid)
 
 class GnomeShell34(GnomeShell32):
+
+    SUPPORTS_EXTENSION_PREFS = True
 
     def restart(self):
         logging.warning("Restarting Shell Not Supported")

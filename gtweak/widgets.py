@@ -99,6 +99,25 @@ def build_horizontal_sizegroup():
     sg.props.ignore_hidden = True
     return sg
 
+def build_tight_button(stock_id):
+    button = Gtk.Button()
+    button.set_relief(Gtk.ReliefStyle.NONE)
+    button.set_focus_on_click(False)
+    button.add(Gtk.Image.new_from_stock(stock_id, Gtk.IconSize.MENU))
+    data =  ".button {\n" \
+            "-GtkButton-default-border : 0px;\n" \
+            "-GtkButton-default-outside-border : 0px;\n" \
+            "-GtkButton-inner-border: 0px;\n" \
+            "-GtkWidget-focus-line-width : 0px;\n" \
+            "-GtkWidget-focus-padding : 0px;\n" \
+            "padding: 0px;\n" \
+            "}"
+    provider = Gtk.CssProvider()
+    provider.load_from_data(data)
+    # 600 = GTK_STYLE_PROVIDER_PRIORITY_APPLICATION
+    button.get_style_context().add_provider(provider, 600) 
+    return button
+
 class _GSettingsTweak(Tweak):
     def __init__(self, schema_name, key_name, **options):
         self.schema_name = schema_name

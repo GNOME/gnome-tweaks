@@ -19,6 +19,7 @@ import os.path
 import logging
 import tempfile
 import shutil
+import subprocess
 
 import gtweak
 from gtweak.gsettings import GSettingsSetting
@@ -101,6 +102,14 @@ def extract_zip_file(z, members_path, dest):
         logging.info("Extracted zip to %s, copied to %s" % (tmpdest, dest))
 
     return ok, updated
+
+def execute_subprocess(cmd_then_args, block=True):
+    p = subprocess.Popen(
+            cmd_then_args,
+            stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
+    if block:
+        stdout, stderr = p.communicate()
+        return stdout, stderr, p.returncode
 
 class AutostartManager:
     def __init__(self, desktop_filename, autostart_desktop_filename="", exec_cmd="", extra_exec_args=""):
