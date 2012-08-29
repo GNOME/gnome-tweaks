@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-07-06 10:25+0000\n"
-"PO-Revision-Date: 2012-07-10 09:06+0100\n"
+"POT-Creation-Date: 2012-08-23 04:21+0000\n"
+"PO-Revision-Date: 2012-08-29 08:46+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: \n"
@@ -24,8 +24,8 @@ msgstr ""
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 #: ../data/shell.ui.h:1
-msgid "Advanced Settings"
-msgstr "Napredne nastavitve"
+msgid "Tweak Tool"
+msgstr "Urejevalnik naprednih nastavitev"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
@@ -55,12 +55,16 @@ msgstr "Namizje"
 msgid "Windows"
 msgstr "Okna"
 
+#: ../gtweak/tweakmodel.py:30
+msgid "Shell"
+msgstr "Lupina"
+
 #. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:32
+#: ../gtweak/tweakmodel.py:33
 msgid "Files"
 msgstr "Datoteke"
 
-#: ../gtweak/tweakmodel.py:40
+#: ../gtweak/tweakmodel.py:44
 msgid "Miscellaneous"
 msgstr "Razno"
 
@@ -73,7 +77,7 @@ msgid "Icon theme"
 msgstr "Ikonska tema"
 
 #: ../gtweak/tweaks/tweak_interface.py:86
-#: ../gtweak/tweaks/tweak_shell.py:115
+#: ../gtweak/tweaks/tweak_shell.py:117
 msgid "<i>Default</i>"
 msgstr "<i>Privzeto</i>"
 
@@ -81,137 +85,138 @@ msgstr "<i>Privzeto</i>"
 msgid "Keybinding theme"
 msgstr "Tema tipkovnih bližnjic"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweaks/tweak_shell_extensions.py:36
 msgid "Extension downloading"
 msgstr "Prejemanje razširitve"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_shell_extensions.py:38
 msgid "Error loading extension"
 msgstr "Napaka med nalaganjem razširitve"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+#: ../gtweak/tweaks/tweak_shell_extensions.py:40
 msgid "Extension does not support shell version"
 msgstr "Razširitev ni priprejena za trenutno različico lupine"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
 msgid "Unknown extension error"
 msgstr "Neznana napaka razširitve"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:46
-#, python-format
-msgid "%s Extension"
-msgstr "Razširitev %s"
-
-#: ../gtweak/tweaks/tweak_shell_extensions.py:59
+#: ../gtweak/tweaks/tweak_shell_extensions.py:73
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Lupino je treba po posodobitvi za uveljavitev sprememb ponovno zagnati."
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:60
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_shell_extensions.py:74
+#: ../gtweak/tweaks/tweak_shell_extensions.py:143
 msgid "Restart"
 msgstr "Ponoven zagon"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_shell_extensions.py:80
 msgid "Install Shell Extension"
 msgstr "Namestitev razširitve lupine"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+#: ../gtweak/tweaks/tweak_shell_extensions.py:84
 msgid "Select an extension"
 msgstr "Izbor razširitve"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#: ../gtweak/tweaks/tweak_shell_extensions.py:89
+msgid "Get more extensions"
+msgstr "Iskanje razširitev"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:137
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Razširitev %s je uspešno posodobljena"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#: ../gtweak/tweaks/tweak_shell_extensions.py:139
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Razširitev %s je uspešno nameščena"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_shell_extensions.py:147
 msgid "Error installing extension"
 msgstr "Napaka nameščanja razširitve"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+#: ../gtweak/tweaks/tweak_shell_extensions.py:152
 msgid "Invalid extension"
 msgstr "Neveljavna razširitev"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
+#: ../gtweak/tweaks/tweak_shell_extensions.py:160
 msgid "Shell Extensions"
 msgstr "Razširitve lupine"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:57
+#: ../gtweak/tweaks/tweak_shell.py:58
 msgid "Unknown error"
 msgstr "Neznana napaka"
 
-#: ../gtweak/tweaks/tweak_shell.py:62
+#: ../gtweak/tweaks/tweak_shell.py:63
 msgid "Shell not running"
 msgstr "Lupina ni zagnana"
 
-#: ../gtweak/tweaks/tweak_shell.py:83
+#: ../gtweak/tweaks/tweak_shell.py:84
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Razširitev uporabniške teme je nepravilno nameščena"
 
-#: ../gtweak/tweaks/tweak_shell.py:86
+#: ../gtweak/tweaks/tweak_shell.py:87
 msgid "Shell user-theme extension not enabled"
 msgstr "Razširitev uporabniške teme ni omogočena"
 
-#: ../gtweak/tweaks/tweak_shell.py:89
+#: ../gtweak/tweaks/tweak_shell.py:90
 msgid "Could not list shell extensions"
 msgstr "Ni mogoče izpisati seznama razširitev lupine"
 
 #. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:120
+#: ../gtweak/tweaks/tweak_shell.py:122
 msgid "Select a theme"
 msgstr "Izbor teme"
 
-#: ../gtweak/tweaks/tweak_shell.py:167
+#: ../gtweak/tweaks/tweak_shell.py:171
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Tema %s je uspešno posodobljena"
 
-#: ../gtweak/tweaks/tweak_shell.py:169
+#: ../gtweak/tweaks/tweak_shell.py:173
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Tema %s je uspešno nameščena"
 
-#: ../gtweak/tweaks/tweak_shell.py:177
+#: ../gtweak/tweaks/tweak_shell.py:181
 msgid "Error installing theme"
 msgstr "Napaka nameščanja teme"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:182
+#: ../gtweak/tweaks/tweak_shell.py:186
 msgid "Invalid theme"
 msgstr "Neveljavna tema"
-
-#: ../gtweak/tweaks/tweak_shell.py:231
-msgid "Shell"
-msgstr "Lupina"
 
 #: ../gtweak/tweaks/tweak_windows.py:31
 msgid "Window theme"
 msgstr "Okenska tema"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:67
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(privzeto)</i>"
 
-#: ../gtweak/widgets.py:284
+#: ../gtweak/widgets.py:305
 msgid "Enable dark theme for all applications"
 msgstr "Omogoči temno temo za vse programe"
 
-#: ../gtweak/widgets.py:285
+#: ../gtweak/widgets.py:306
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Omogoči namig temne teme za vse programe te seje"
 
-#: ../gtweak/widgets.py:303
+#: ../gtweak/widgets.py:324
 msgid "Error writing setting"
 msgstr "Napaka med zapisovanjem nastavitev"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Napredne nastavitve"
+
+#~ msgid "%s Extension"
+#~ msgstr "Razširitev %s"
 
 #~ msgid "The shell may need to be restarted to apply the theme"
 #~ msgstr "Lupino je treba ponovno zagnati za uveljavitev teme"
