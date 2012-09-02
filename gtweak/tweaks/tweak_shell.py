@@ -249,6 +249,7 @@ TWEAK_GROUPS = (
             GSettingsSwitchTweak("org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
+            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg),
             GSettingsSwitchTweak("org.gnome.shell.overrides", "workspaces-only-on-primary"),
             StaticWorkspaceTweak(size_group=sg)),
 )
