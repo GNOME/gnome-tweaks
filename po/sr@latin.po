@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-07-03 20:21+0000\n"
-"PO-Revision-Date: 2012-08-07 10:54+0200\n"
+"POT-Creation-Date: 2012-08-13 16:25+0000\n"
+"PO-Revision-Date: 2012-09-07 10:59+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -21,12 +21,12 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
-msgid "Advanced Settings"
-msgstr "Napredna podešavanja"
+msgid "Tweak Tool"
+msgstr "Alat za lickanje"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
-msgstr "Podešavanja naprednih štimovanje za Gnom 3"
+msgstr "Nalickajte napredna podešavanja Gnoma 3"
 
 #: ../data/shell.ui.h:2
 msgid "welcome"
@@ -34,7 +34,7 @@ msgstr "Dobrodošli"
 
 #: ../data/shell.ui.h:3
 msgid "tweaks"
-msgstr "Štimovanja"
+msgstr "Lickanja"
 
 #: ../gtweak/tweakmodel.py:26
 msgid "Fonts"
@@ -52,12 +52,16 @@ msgstr "Radna površ"
 msgid "Windows"
 msgstr "Prozori"
 
+#: ../gtweak/tweakmodel.py:30
+msgid "Shell"
+msgstr "Školjka"
+
 #. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:32
+#: ../gtweak/tweakmodel.py:33
 msgid "Files"
 msgstr "Datoteke"
 
-#: ../gtweak/tweakmodel.py:40
+#: ../gtweak/tweakmodel.py:44
 msgid "Miscellaneous"
 msgstr "Ostalo"
 
@@ -69,7 +73,7 @@ msgstr "Gtk+ tema"
 msgid "Icon theme"
 msgstr "Tema ikonica"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:115
+#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:117
 msgid "<i>Default</i>"
 msgstr "<i>Podrazumevano</i>"
 
@@ -77,134 +81,136 @@ msgstr "<i>Podrazumevano</i>"
 msgid "Keybinding theme"
 msgstr "Kombinacija tastera"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweaks/tweak_shell_extensions.py:36
 msgid "Extension downloading"
 msgstr "Preuzimanje proširenja"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_shell_extensions.py:38
 msgid "Error loading extension"
 msgstr "Ne mogu da učitam proširenje"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+#: ../gtweak/tweaks/tweak_shell_extensions.py:40
 msgid "Extension does not support shell version"
 msgstr "Proširenje ne podržava ovo izdanje školjke"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
 msgid "Unknown extension error"
 msgstr "Nepoznata greška proširenja"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:46
-#, python-format
-msgid "%s Extension"
-msgstr "Proširenje „%s“"
-
-#: ../gtweak/tweaks/tweak_shell_extensions.py:59
+#: ../gtweak/tweaks/tweak_shell_extensions.py:73
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Morate ponovo da pokrenete školjku kako bi primenili izmene"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:60
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_shell_extensions.py:74
+#: ../gtweak/tweaks/tweak_shell_extensions.py:143
 msgid "Restart"
 msgstr "Ponovo pokreni"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_shell_extensions.py:80
 msgid "Install Shell Extension"
 msgstr "Instaliraj proširenje školjke"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+#: ../gtweak/tweaks/tweak_shell_extensions.py:84
 msgid "Select an extension"
 msgstr "Izaberite proširenje"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#: ../gtweak/tweaks/tweak_shell_extensions.py:89
+#| msgid "Select an extension"
+msgid "Get more extensions"
+msgstr "Dobavite još proširenja"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:137
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s proširenje je uspešno ažurirano"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#: ../gtweak/tweaks/tweak_shell_extensions.py:139
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s proširenje je uspešno instalirano"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_shell_extensions.py:147
 msgid "Error installing extension"
 msgstr "Ne mogu da instaliram proširenje"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+#: ../gtweak/tweaks/tweak_shell_extensions.py:152
 msgid "Invalid extension"
 msgstr "Neispravno proširenje"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
+#: ../gtweak/tweaks/tweak_shell_extensions.py:160
 msgid "Shell Extensions"
 msgstr "Proširenja školjke"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:57
+#: ../gtweak/tweaks/tweak_shell.py:58
 msgid "Unknown error"
 msgstr "Nepoznata greška"
 
-#: ../gtweak/tweaks/tweak_shell.py:62
+#: ../gtweak/tweaks/tweak_shell.py:63
 msgid "Shell not running"
 msgstr "Školjka nije pokrenuta"
 
-#: ../gtweak/tweaks/tweak_shell.py:83
+#: ../gtweak/tweaks/tweak_shell.py:84
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Proširenje korisničke teme školjke nije ispravno instalirano"
 
-#: ../gtweak/tweaks/tweak_shell.py:86
+#: ../gtweak/tweaks/tweak_shell.py:87
 msgid "Shell user-theme extension not enabled"
 msgstr "Proširenje korisničke teme školjke nije omogućeno"
 
-#: ../gtweak/tweaks/tweak_shell.py:89
+#: ../gtweak/tweaks/tweak_shell.py:90
 msgid "Could not list shell extensions"
 msgstr "Ne mogu da ispišem proširenja školjke"
 
 #. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:120
+#: ../gtweak/tweaks/tweak_shell.py:122
 msgid "Select a theme"
 msgstr "Izaberite temu"
 
-#: ../gtweak/tweaks/tweak_shell.py:167
+#: ../gtweak/tweaks/tweak_shell.py:171
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s tema je uspešno ažurirana"
 
-#: ../gtweak/tweaks/tweak_shell.py:169
+#: ../gtweak/tweaks/tweak_shell.py:173
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s tema je uspešno instalirana"
 
-#: ../gtweak/tweaks/tweak_shell.py:177
+#: ../gtweak/tweaks/tweak_shell.py:181
 msgid "Error installing theme"
 msgstr "Ne mogu da instaliram temu"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:182
+#: ../gtweak/tweaks/tweak_shell.py:186
 msgid "Invalid theme"
 msgstr "Neispravna tema"
-
-#: ../gtweak/tweaks/tweak_shell.py:231
-msgid "Shell"
-msgstr "Školjka"
 
 #: ../gtweak/tweaks/tweak_windows.py:31
 msgid "Window theme"
 msgstr "Tema prozora"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:67
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(osnovno)</i>"
 
-#: ../gtweak/widgets.py:284
+#: ../gtweak/widgets.py:305
 msgid "Enable dark theme for all applications"
 msgstr "Uključite tamnu temu za sve programe"
 
-#: ../gtweak/widgets.py:285
+#: ../gtweak/widgets.py:306
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Uključite savet tamne teme za sve programe u sesiji"
 
-#: ../gtweak/widgets.py:303
+#: ../gtweak/widgets.py:324
 msgid "Error writing setting"
 msgstr "Greška zapisivanja podešavanja"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Napredna podešavanja"
+
+#~ msgid "%s Extension"
+#~ msgstr "Proširenje „%s“"
