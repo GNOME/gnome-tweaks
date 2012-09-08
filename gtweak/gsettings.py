@@ -18,6 +18,7 @@
 import logging
 import os.path
 import xml.dom.minidom
+import gettext
 
 import gtweak
 
@@ -46,7 +47,17 @@ class _GSettingsSchema:
 
         try:
             dom = xml.dom.minidom.parse(schema_path)
+            global_gettext_domain = dom.documentElement.getAttribute('gettext-domain')
+            if global_gettext_domain:
+                # We can't know where the schema owner was installed, let's assume it's
+                # the same prefix as ours
+                gettext.bindtextdomain(global_gettext_domain, gtweak.LOCALE_DIR)
             for schema in dom.getElementsByTagName("schema"):
+                gettext_domain = schema.getAttribute('gettext-domain')
+                if gettext_domain:
+                    gettext.bindtextdomain(gettext_domain, gtweak.LOCALE_DIR)
+                else:
+                    gettext_domain = global_gettext_domain
                 if schema_name == schema.getAttribute("id"):
                     for key in schema.getElementsByTagName("key"):
                         #summary is compulsory, description is optional
@@ -61,8 +72,8 @@ class _GSettingsSchema:
                         except:
                             description = ""
                         self._schema[key.getAttribute("name")] = {
-                                "summary"       :   summary,
-                                "description"   :   description
+                                "summary"       :   gettext.dgettext(gettext_domain, summary),
+                                "description"   :   gettext.dgettext(gettext_domain, description)
                         }
         except:
             logging.critical("Error parsing schema %s (%s)" % (schema_name, schema_path), exc_info=True)

@@ -28,7 +28,6 @@ class WindowThemeSwitcher(GSettingsComboTweak):
             "org.gnome.desktop.wm.preferences",
             "theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
-            summary=_("Window theme"),
             **options)
 
     def _get_valid_themes(self):

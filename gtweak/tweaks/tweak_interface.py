@@ -30,7 +30,6 @@ class GtkThemeSwitcher(GSettingsComboTweak):
             "org.gnome.desktop.interface",
             "gtk-theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
-            summary=_("GTK+ theme"),
             **options)
 
     def _get_valid_themes(self):
@@ -48,7 +47,6 @@ class IconThemeSwitcher(GSettingsComboTweak):
             "org.gnome.desktop.interface",
             "icon-theme",
             make_combo_list_with_default(self._get_valid_icon_themes(), "gnome"),
-            summary=_("Icon theme"),
             **options)
 
     def _get_valid_icon_themes(self):
@@ -84,7 +82,6 @@ class KeyThemeSwitcher(GSettingsComboTweak):
                 self._get_valid_key_themes(),
                 "Default",
                 default_text=_("<i>Default</i>")),
-            summary=_("Keybinding theme"),
             **options)
 
     def _get_valid_key_themes(self):
