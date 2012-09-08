@@ -18,19 +18,22 @@
 import logging
 import glob
 import os.path
+import gettext
 
 import gtweak
 
 from gi.repository import Gtk
 
-TWEAK_GROUP_FONTS = _("Fonts")
-TWEAK_GROUP_THEME = _("Theme")
-TWEAK_GROUP_DESKTOP = _("Desktop")
-TWEAK_GROUP_WINDOWS = _("Windows")
-TWEAK_GROUP_SHELL = _("Shell")
+def N_(x): return x
+
+TWEAK_GROUP_FONTS = N_("Fonts")
+TWEAK_GROUP_THEME = N_("Theme")
+TWEAK_GROUP_DESKTOP = N_("Desktop")
+TWEAK_GROUP_WINDOWS = N_("Windows")
+TWEAK_GROUP_SHELL = N_("Shell")
 
 #translate this the same as the name of the file manager (nautilus)
-TWEAK_GROUP_FILES = _("Files")
+TWEAK_GROUP_FILES = N_("Files")
 
 TWEAK_SORT_FIRST = -1e3
 TWEAK_SORT_LAST = 1e3
@@ -156,7 +159,7 @@ class TweakModel(Gtk.ListStore):
             LOG.critical("Tweak group named: %s already exists" % tweakgroup.name)
             return
 
-        _iter = self.append([tweakgroup.name, tweakgroup])
+        _iter = self.append([gettext.gettext(tweakgroup.name), tweakgroup])
         self._tweak_group_names[tweakgroup.name] = tweakgroup
         self._tweak_group_iters[tweakgroup.name] = _iter
 

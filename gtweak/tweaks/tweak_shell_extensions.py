@@ -12,6 +12,8 @@ from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.widgets import ZipFileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING
 
+def N_(x): return x
+
 class _ShellExtensionTweak(Tweak):
 
     def __init__(self, shell, ext, **options):
@@ -157,7 +159,7 @@ class _ShellExtensionInstallerTweak(Tweak):
 
 class ShellExtensionTweakGroup(TweakGroup):
     def __init__(self):
-        TweakGroup.__init__(self, _("Shell Extensions"))
+        TweakGroup.__init__(self, N_("Shell Extensions"))
 
         extension_tweaks = []
         sg = build_horizontal_sizegroup()
