@@ -35,10 +35,10 @@ class ShowWindowButtons(GSettingsComboTweak):
         GSettingsComboTweak.__init__(self,
             "org.gnome.shell.overrides",
             "button-layout",
-            ((':close', 'Close Only'),
-            (':minimize,close', 'Minimize and Close'),
-            (':maximize,close', 'Maximize and Close'),
-            (':minimize,maximize,close', 'All')),
+            ((':close', _("Close Only")),
+            (':minimize,close', _("Minimize and Close")),
+            (':maximize,close', _("Maximize and Close")),
+            (':minimize,maximize,close', _("All"))),
             **options)
 
 class ShellThemeTweak(Tweak):
@@ -52,7 +52,7 @@ class ShellThemeTweak(Tweak):
     THEME_DIR = os.path.join(GLib.get_user_data_dir(), "themes")
 
     def __init__(self, **options):
-        Tweak.__init__(self, "Shell theme", "Install custom or user themes for gnome-shell", **options)
+        Tweak.__init__(self, _("Shell theme"), _("Install custom or user themes for gnome-shell"), **options)
 
         #check the shell is running and the usertheme extension is present
         error = _("Unknown error")
@@ -202,7 +202,7 @@ class StaticWorkspaceTweak(Tweak):
     DYNAMIC_KEY = "dynamic-workspaces"
 
     def __init__(self, **options):
-        Tweak.__init__(self, "Dynamic workspaces", "Disable gnome-shell dynamic workspace management, use static workspaces", **options)
+        Tweak.__init__(self, _("Dynamic workspaces"), _("Disable gnome-shell dynamic workspace management, use static workspaces"), **options)
 
         try:
             nwsettings = GSettingsSetting(self.NUM_WORKSPACES_SCHEMA, **options)
