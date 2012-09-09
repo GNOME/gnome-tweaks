@@ -44,6 +44,7 @@ class TweakView:
         self._detail_vbox = builder.get_object('detail_vbox')
         self._main_window = builder.get_object('main_window')
 
+        self._main_window.props.title = gettext(self._main_window.props.title)
         self._main_window.set_size_request(640, 480)
         self._main_window.connect('destroy', Gtk.main_quit)
 
