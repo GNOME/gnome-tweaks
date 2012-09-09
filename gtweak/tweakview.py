@@ -45,7 +45,8 @@ class TweakView:
         self._main_window = builder.get_object('main_window')
 
         self._main_window.props.title = gettext(self._main_window.props.title)
-        self._main_window.set_size_request(640, 480)
+
+        self._main_window.set_size_request(740, 636)
         self._main_window.connect('destroy', Gtk.main_quit)
 
         self._entry_manager = EntryManager(
@@ -67,7 +68,7 @@ class TweakView:
         ctx = builder.get_object('tweak_viewport').get_style_context ()
         provider = Gtk.CssProvider()
         provider.load_from_data ("GtkViewport {\n"
-                                 "   background-color: @bg_color;\n"
+                                 "   background-color: @theme_bg_color;\n"
                                  "}\n")
         ctx.add_provider (provider,6000)
 
