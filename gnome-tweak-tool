@@ -69,9 +69,7 @@ if __name__ == '__main__':
     logging.basicConfig(format="%(levelname)-8s: %(message)s", level=level)
 
     locale.setlocale(locale.LC_ALL, None)
-    gettext.bindtextdomain(gtweak.APP_NAME, LOCALE_DIR)
-    gettext.textdomain(gtweak.APP_NAME)
-    gettext.install(gtweak.APP_NAME)
+    gettext.install(gtweak.APP_NAME, LOCALE_DIR, names=('gettext', 'ngettext'))
 
     from gtweak.mainwindow import MainWindow
     MainWindow()

@@ -51,13 +51,15 @@ class _GSettingsSchema:
             if global_gettext_domain:
                 # We can't know where the schema owner was installed, let's assume it's
                 # the same prefix as ours
-                gettext.bindtextdomain(global_gettext_domain, gtweak.LOCALE_DIR)
+                global_translation = gettext.translation(global_gettext_domain, gtweak.LOCALE_DIR)
+            else:
+                global_translation = gettext.NullTranslations()
             for schema in dom.getElementsByTagName("schema"):
                 gettext_domain = schema.getAttribute('gettext-domain')
                 if gettext_domain:
-                    gettext.bindtextdomain(gettext_domain, gtweak.LOCALE_DIR)
+                    translation = gettext.translation(gettext_domain, gtweak.LOCALE_DIR)
                 else:
-                    gettext_domain = global_gettext_domain
+                    translation = global_translation
                 if schema_name == schema.getAttribute("id"):
                     for key in schema.getElementsByTagName("key"):
                         #summary is compulsory, description is optional
@@ -72,8 +74,8 @@ class _GSettingsSchema:
                         except:
                             description = ""
                         self._schema[key.getAttribute("name")] = {
-                                "summary"       :   gettext.dgettext(gettext_domain, summary),
-                                "description"   :   gettext.dgettext(gettext_domain, description)
+                                "summary"       :   translation.gettext(summary),
+                                "description"   :   translation.gettext(description)
                         }
         except:
             logging.critical("Error parsing schema %s (%s)" % (schema_name, schema_path), exc_info=True)

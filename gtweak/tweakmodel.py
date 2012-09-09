@@ -18,7 +18,6 @@
 import logging
 import glob
 import os.path
-import gettext
 
 import gtweak
 
@@ -159,7 +158,7 @@ class TweakModel(Gtk.ListStore):
             LOG.critical("Tweak group named: %s already exists" % tweakgroup.name)
             return
 
-        _iter = self.append([gettext.gettext(tweakgroup.name), tweakgroup])
+        _iter = self.append([gettext(tweakgroup.name), tweakgroup])
         self._tweak_group_names[tweakgroup.name] = tweakgroup
         self._tweak_group_iters[tweakgroup.name] = _iter
 
