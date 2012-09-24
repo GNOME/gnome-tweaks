@@ -30,6 +30,7 @@ TWEAK_GROUP_THEME = N_("Theme")
 TWEAK_GROUP_DESKTOP = N_("Desktop")
 TWEAK_GROUP_WINDOWS = N_("Windows")
 TWEAK_GROUP_SHELL = N_("Shell")
+TWEAK_GROUP_TYPING = N_("Typing")
 
 #translate this the same as the name of the file manager (nautilus)
 TWEAK_GROUP_FILES = N_("Files")
