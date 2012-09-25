@@ -27,7 +27,11 @@ from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsF
 
 class _XkbOption(Tweak):
     def __init__(self, group_id, parent_settings, xkb_info, **options):
-        Tweak.__init__(self, group_id, "", **options) # FIXME: should be the id's description
+        try:
+            desc = xkb_info.description_for_group(group_id)
+        except AttributeError:
+            desc = group_id
+        Tweak.__init__(self, desc, desc, **options)
 
         self._group_id = group_id
         self._parent_settings = parent_settings
