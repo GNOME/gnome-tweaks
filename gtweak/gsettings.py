@@ -48,18 +48,26 @@ class _GSettingsSchema:
         try:
             dom = xml.dom.minidom.parse(schema_path)
             global_gettext_domain = dom.documentElement.getAttribute('gettext-domain')
-            if global_gettext_domain:
-                # We can't know where the schema owner was installed, let's assume it's
-                # the same prefix as ours
-                global_translation = gettext.translation(global_gettext_domain, gtweak.LOCALE_DIR)
-            else:
-                global_translation = gettext.NullTranslations()
+            try:
+                if global_gettext_domain:
+                    # We can't know where the schema owner was installed, let's assume it's
+                    # the same prefix as ours
+                    global_translation = gettext.translation(global_gettext_domain, gtweak.LOCALE_DIR)
+                else:
+                    global_translation = gettext.NullTranslations()
+            except IOError:
+                global_translation = None
+                logging.info("No translated schema for %s (domain: %s)" % (schema_name, global_gettext_domain))
             for schema in dom.getElementsByTagName("schema"):
                 gettext_domain = schema.getAttribute('gettext-domain')
-                if gettext_domain:
-                    translation = gettext.translation(gettext_domain, gtweak.LOCALE_DIR)
-                else:
-                    translation = global_translation
+                try:
+                    if gettext_domain:
+                        translation = gettext.translation(gettext_domain, gtweak.LOCALE_DIR)
+                    else:
+                        translation = global_translation
+                except IOError:
+                    translation = None
+                    logging.info("No translated schema for %s (domain: %s)" % (schema_name, gettext_domain))
                 if schema_name == schema.getAttribute("id"):
                     for key in schema.getElementsByTagName("key"):
                         #summary is compulsory, description is optional
@@ -73,10 +81,13 @@ class _GSettingsSchema:
                             description = key.getElementsByTagName("description")[0].childNodes[0].data
                         except:
                             description = ""
-                        self._schema[key.getAttribute("name")] = {
-                                "summary"       :   translation.gettext(summary),
-                                "description"   :   translation.gettext(description)
-                        }
+
+                        #if missing translations, use the untranslated values
+                        self._schema[key.getAttribute("name")] = dict(
+                            summary=translation.gettext(summary) if translation else summary,
+                            description=translation.gettext(description) if translation else description
+                        )
+
         except:
             logging.critical("Error parsing schema %s (%s)" % (schema_name, schema_path), exc_info=True)
 
