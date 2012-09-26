@@ -17,6 +17,8 @@
 # Authors:
 #       Rui Matos
 
+import logging
+
 from gi.repository import Pango, Gtk, GnomeDesktop
 
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_TYPING
@@ -89,27 +91,31 @@ class _XkbOption(Tweak):
 
 class TypingTweakGroup(TweakGroup):
 
+    XKB_GSETTINGS_SCHEMA = "org.gnome.desktop.input-sources"
     XKB_GSETTINGS_NAME = "xkb-options"
     XKB_OPTIONS = ("ctrl","grp_led","keypad","kpdl","caps","altwin","compat","eurosign",
                    "lv5","nbsp","japan","esperanto","terminate")
 
     def __init__(self):
         TweakGroup.__init__(self, TWEAK_GROUP_TYPING)
-
         self._option_objects = []
 
+        ok = False
         try:
-            self._kbdsettings = GSettingsSetting("org.gnome.desktop.input-sources")
+            self._kbdsettings = GSettingsSetting(self.XKB_GSETTINGS_SCHEMA)
             self._kbdsettings.connect("changed::"+self.XKB_GSETTINGS_NAME, self._on_changed)
+            self._xkb_info = GnomeDesktop.XkbInfo()
+            ok = True
         except GSettingsMissingError:
-            self._kbdsettings = GSettingsFakeSetting()
-
-        self._xkb_info = GnomeDesktop.XkbInfo()
-
-        for opt in self.XKB_OPTIONS:
-            self._option_objects.append(
-                    _XkbOption(opt, self._kbdsettings, self._xkb_info)
-            )
+            logging.warning("Missing schema %s" % self.XKB_GSETTINGS_SCHEMA)
+        except AttributeError:
+            logging.warning("Missing GnomeDesktop.gir with Xkb support")
+        finally:
+            if ok:
+                for opt in self.XKB_OPTIONS:
+                    self._option_objects.append(
+                            _XkbOption(opt, self._kbdsettings, self._xkb_info)
+                    )
 
         self.set_tweaks(*self._option_objects)
 
