@@ -232,12 +232,25 @@ class GSettingsComboTweak(_GSettingsTweak):
         if len(key_options):
             assert len(key_options[0]) == 2
 
-        combo = build_combo_box_text(
+        self.combo = build_combo_box_text(
                     self.settings.get_string(self.key_name),
                     *key_options)
-        combo.connect('changed', self._on_combo_changed)
-        self.widget = build_label_beside_widget(self.name, combo)
-        self.widget_for_size_group = combo
+        self.combo.connect('changed', self._on_combo_changed)
+        self.widget = build_label_beside_widget(self.name, self.combo)
+        self.widget_for_size_group = self.combo
+
+        self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
+
+    def _on_setting_changed(self, setting, key):
+        assert key == self.key_name
+        val = self.settings.get_string(key)
+        model = self.combo.get_model()
+        for row in model:
+            if val == row[0]:
+                self.combo.set_active_iter(row.iter)
+                return
+
+        self.combo.set_active(-1)
 
     def _on_combo_changed(self, combo):
         _iter = combo.get_active_iter()
