@@ -20,7 +20,7 @@ import os.path
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
 from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, TWEAK_GROUP_THEME
-from gtweak.widgets import GSettingsComboTweak, GSettingsComboEnumTweak
+from gtweak.widgets import GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak
 
 class WindowThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
@@ -47,4 +47,5 @@ TWEAKS = (
                         "mouse-button-modifier",
                         [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")],
                         group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "resize-with-right-button", group_name=TWEAK_GROUP_WINDOWS),
 )
