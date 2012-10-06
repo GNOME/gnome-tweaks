@@ -43,4 +43,8 @@ TWEAKS = (
     GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "action-middle-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
     GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "action-right-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
     GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "focus-mode", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsComboTweak("org.gnome.desktop.wm.preferences",
+                        "mouse-button-modifier",
+                        [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")],
+                        group_name=TWEAK_GROUP_WINDOWS),
 )
