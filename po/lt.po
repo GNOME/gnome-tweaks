@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lithuanian-gnome tweak tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-09-09 12:14+0000\n"
-"PO-Revision-Date: 2012-09-22 13:27+0300\n"
+"POT-Creation-Date: 2012-10-11 20:07+0000\n"
+"PO-Revision-Date: 2012-10-20 21:54+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lithuanian\n"
 "Language: lt\n"
@@ -37,32 +37,40 @@ msgstr "sveiki"
 msgid "tweaks"
 msgstr "reguliavimai"
 
-#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweakmodel.py:28
 msgid "Fonts"
 msgstr "Šriftai"
 
-#: ../gtweak/tweakmodel.py:30
+#: ../gtweak/tweakmodel.py:29
 msgid "Theme"
 msgstr "Tema"
 
-#: ../gtweak/tweakmodel.py:31
+#: ../gtweak/tweakmodel.py:30
 msgid "Desktop"
 msgstr "Darbastalis"
 
-#: ../gtweak/tweakmodel.py:32
+#: ../gtweak/tweakmodel.py:31
 msgid "Windows"
 msgstr "Langai"
 
-#: ../gtweak/tweakmodel.py:33
+#: ../gtweak/tweakmodel.py:32
 msgid "Shell"
 msgstr "Apvalkalas"
 
+#: ../gtweak/tweakmodel.py:33
+msgid "Typing"
+msgstr "Spausdinimas"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Mouse"
+msgstr "Pelė"
+
 #. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:36
+#: ../gtweak/tweakmodel.py:37
 msgid "Files"
 msgstr "Failai"
 
-#: ../gtweak/tweakmodel.py:47
+#: ../gtweak/tweakmodel.py:48
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
@@ -105,7 +113,6 @@ msgid "Select an extension"
 msgstr "Pasirinkite plėtinį"
 
 #: ../gtweak/tweaks/tweak_shell_extensions.py:91
-#| msgid "Select an extension"
 msgid "Get more extensions"
 msgstr "Gauti daugiau plėtinių"
 
@@ -149,7 +156,6 @@ msgid "All"
 msgstr "Visi"
 
 #: ../gtweak/tweaks/tweak_shell.py:55
-#| msgid "Select a theme"
 msgid "Shell theme"
 msgstr "Apvalkalo tema"
 
@@ -210,21 +216,26 @@ msgstr "Dinaminiai darbalaukiai"
 msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 msgstr "Išjungti gnome-shell dinaminį darbalaukių valdymą, naudoti statinius darbalaukius"
 
+#: ../gtweak/tweaks/tweak_typing.py:38
+#: ../gtweak/tweaks/tweak_windows.py:48
+msgid "Disabled"
+msgstr "Išjungta"
+
 #. indicates the default theme, e.g Adwaita (default)
 #: ../gtweak/utils.py:67
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(numatytoji)</i>"
 
-#: ../gtweak/widgets.py:305
+#: ../gtweak/widgets.py:318
 msgid "Enable dark theme for all applications"
 msgstr "Įjungti tamsiąją temą visoms programoms"
 
-#: ../gtweak/widgets.py:306
+#: ../gtweak/widgets.py:319
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Įjungti tamsiosios temos parametrą visoms seanso programoms"
 
-#: ../gtweak/widgets.py:324
+#: ../gtweak/widgets.py:337
 msgid "Error writing setting"
 msgstr "Klaida rašant parametrą"
 
