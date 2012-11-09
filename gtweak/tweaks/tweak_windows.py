@@ -17,6 +17,8 @@
 
 import os.path
 
+from gi.repository import GLib
+
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
 from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, TWEAK_GROUP_THEME
@@ -32,6 +34,7 @@ class WindowThemeSwitcher(GSettingsComboTweak):
 
     def _get_valid_themes(self):
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
+                 os.path.join(GLib.get_user_data_dir(), "themes"),
                  os.path.join(os.path.expanduser("~"), ".themes"))
         valid = walk_directories(dirs, lambda d:
                     os.path.exists(os.path.join(d, "metacity-1")))

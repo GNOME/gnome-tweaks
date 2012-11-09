@@ -18,6 +18,7 @@
 import os.path
 
 from gi.repository import Gtk
+from gi.repository import GLib
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
@@ -35,6 +36,7 @@ class GtkThemeSwitcher(GSettingsComboTweak):
     def _get_valid_themes(self):
         """ Only shows themes that have variations for gtk+-3 and gtk+-2 """
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
+                 os.path.join(GLib.get_user_data_dir(), "themes"),
                  os.path.join(os.path.expanduser("~"), ".themes"))
         valid = walk_directories(dirs, lambda d:
                     os.path.exists(os.path.join(d, "gtk-2.0")) and \
@@ -51,6 +53,7 @@ class IconThemeSwitcher(GSettingsComboTweak):
 
     def _get_valid_icon_themes(self):
         dirs = ( os.path.join(gtweak.DATA_DIR, "icons"),
+                 os.path.join(GLib.get_user_data_dir(), "icons"),
                  os.path.join(os.path.expanduser("~"), ".icons"))
         valid = walk_directories(dirs, lambda d:
                     os.path.isdir(d) and \
@@ -67,6 +70,7 @@ class CursorThemeSwitcher(GSettingsComboTweak):
 
     def _get_valid_cursor_themes(self):
         dirs = ( os.path.join(gtweak.DATA_DIR, "icons"),
+                 os.path.join(GLib.get_user_data_dir(), "icons"),
                  os.path.join(os.path.expanduser("~"), ".icons"))
         valid = walk_directories(dirs, lambda d:
                     os.path.isdir(d) and \
@@ -86,6 +90,7 @@ class KeyThemeSwitcher(GSettingsComboTweak):
 
     def _get_valid_key_themes(self):
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
+                 os.path.join(GLib.get_user_data_dir(), "themes"),
                  os.path.join(os.path.expanduser("~"), ".themes"))
         valid = walk_directories(dirs, lambda d:
                     os.path.isfile(os.path.join(d, "gtk-3.0", "gtk-keys.css")) and \
