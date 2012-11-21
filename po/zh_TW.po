@@ -7,9 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool 3.1.90\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-25 06:46+0800\n"
-"PO-Revision-Date: 2012-03-23 11:43+0800\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-11-12 01:18+0000\n"
+"PO-Revision-Date: 2012-11-19 22:09+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@lists.linux.org.tw>\n"
 "Language: \n"
@@ -17,185 +18,245 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Advanced Settings"
-msgstr "進階設定值"
-
-#: ../data/shell.ui.h:2
-msgid "tweaks"
-msgstr "調校"
-
-#: ../data/shell.ui.h:3
-msgid "welcome"
-msgstr "歡迎"
+#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
+msgid "Tweak Tool"
+msgstr "調校工具"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "調校進階 GNOME 3 設定值"
 
-#: ../gtweak/tweaks/tweak_interface.py:33
-msgid "GTK+ theme"
-msgstr "GTK+ 主題"
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;"
+msgstr ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;設定值;設定;進階;偏好設"
+"定;擴充;擴展;擴充套件;字型;主題;"
 
-#: ../gtweak/tweaks/tweak_interface.py:51
-msgid "Icon theme"
-msgstr "圖示主題"
+#: ../data/shell.ui.h:2
+msgid "welcome"
+msgstr "歡迎"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:110
-msgid "<i>Default</i>"
-msgstr "<i>預設</i>"
+#: ../data/shell.ui.h:3
+msgid "tweaks"
+msgstr "調校"
 
-#: ../gtweak/tweaks/tweak_interface.py:87
-msgid "Keybinding theme"
-msgstr "按鍵繫結主題"
+#: ../gtweak/tweakmodel.py:28
+msgid "Fonts"
+msgstr "字型"
 
-#. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:56
-msgid "Unknown error"
-msgstr "未知錯誤"
+#: ../gtweak/tweakmodel.py:29
+msgid "Theme"
+msgstr "主題"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
-msgid "Shell not running"
-msgstr "Shell 不在執行中"
+#: ../gtweak/tweakmodel.py:30
+msgid "Desktop"
+msgstr "桌面"
 
-#: ../gtweak/tweaks/tweak_shell.py:78
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Shell 使用者主題擴充套件安裝不正確"
+#: ../gtweak/tweakmodel.py:31
+msgid "Windows"
+msgstr "視窗"
 
-#: ../gtweak/tweaks/tweak_shell.py:81
-msgid "Shell user-theme extension not enabled"
-msgstr "Shell 使用者主題擴充套件未啟用"
-
-#: ../gtweak/tweaks/tweak_shell.py:84
-msgid "Could not list shell extensions"
-msgstr "無法列出 Shell 擴充套件"
-
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:115
-msgid "Select a theme"
-msgstr "選取主題"
-
-#: ../gtweak/tweaks/tweak_shell.py:162
-#, python-format
-msgid "%s theme updated successfully"
-msgstr "%s 主題成功更新"
-
-#: ../gtweak/tweaks/tweak_shell.py:164
-#, python-format
-msgid "%s theme installed successfully"
-msgstr "%s 主題成功安裝"
-
-#: ../gtweak/tweaks/tweak_shell.py:172
-msgid "Error installing theme"
-msgstr "安裝主題時發生錯誤"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:177
-msgid "Invalid theme"
-msgstr "無效的主題"
-
-#: ../gtweak/tweaks/tweak_shell.py:195
+#: ../gtweak/tweakmodel.py:32
 msgid "Shell"
 msgstr "Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweakmodel.py:33
+msgid "Typing"
+msgstr "輸入"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Mouse"
+msgstr "滑鼠"
+
+#. translate this the same as the name of the file manager (nautilus)
+#: ../gtweak/tweakmodel.py:37
+msgid "Files"
+msgstr "檔案"
+
+#: ../gtweak/tweakmodel.py:48
+msgid "Miscellaneous"
+msgstr "雜項"
+
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:117
+msgid "<i>Default</i>"
+msgstr "<i>預設</i>"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:38
 msgid "Extension downloading"
 msgstr "擴充套件下載中"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_shell_extensions.py:40
 msgid "Error loading extension"
 msgstr "載入擴充套件時發生錯誤"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
 msgid "Extension does not support shell version"
 msgstr "擴充套件不支援 Shell 版本"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_shell_extensions.py:44
 msgid "Unknown extension error"
 msgstr "未知的擴充套件錯誤"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:46
-#, python-format
-msgid "%s Extension"
-msgstr "%s 擴充套件"
-
-#: ../gtweak/tweaks/tweak_shell_extensions.py:59
+#: ../gtweak/tweaks/tweak_shell_extensions.py:75
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Shell 的變更必須重新啟動才能套用效果"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:60
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_shell_extensions.py:76
+#: ../gtweak/tweaks/tweak_shell_extensions.py:145
 msgid "Restart"
 msgstr "重新啟動"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_shell_extensions.py:82
 msgid "Install Shell Extension"
 msgstr "安裝 Shell 擴充套件"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+#: ../gtweak/tweaks/tweak_shell_extensions.py:86
 msgid "Select an extension"
 msgstr "選取擴充套件"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#: ../gtweak/tweaks/tweak_shell_extensions.py:91
+msgid "Get more extensions"
+msgstr "取得更多擴充套件"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:139
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s 擴充套件已成功更新"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#: ../gtweak/tweaks/tweak_shell_extensions.py:141
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s 擴充套件已成功安裝"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_shell_extensions.py:149
 msgid "Error installing extension"
 msgstr "安裝擴充套件時發生錯誤"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+#: ../gtweak/tweaks/tweak_shell_extensions.py:154
 msgid "Invalid extension"
 msgstr "無效的擴充套件"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
+#: ../gtweak/tweaks/tweak_shell_extensions.py:162
 msgid "Shell Extensions"
 msgstr "Shell 擴充套件"
 
-#: ../gtweak/tweaks/tweak_windows.py:31
-msgid "Window theme"
-msgstr "視窗主題"
+#: ../gtweak/tweaks/tweak_shell.py:38
+msgid "Close Only"
+msgstr "僅關閉"
+
+#: ../gtweak/tweaks/tweak_shell.py:39
+msgid "Minimize and Close"
+msgstr "最小化與關閉"
+
+#: ../gtweak/tweaks/tweak_shell.py:40
+msgid "Maximize and Close"
+msgstr "最大化與關閉"
+
+#: ../gtweak/tweaks/tweak_shell.py:41
+msgid "All"
+msgstr "全部"
+
+#: ../gtweak/tweaks/tweak_shell.py:55
+msgid "Shell theme"
+msgstr "Shell 主題"
+
+#: ../gtweak/tweaks/tweak_shell.py:55
+msgid "Install custom or user themes for gnome-shell"
+msgstr "為 gnome-shell 安裝自訂主題或使用者主題"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:58
+msgid "Unknown error"
+msgstr "未知錯誤"
+
+#: ../gtweak/tweaks/tweak_shell.py:63
+msgid "Shell not running"
+msgstr "Shell 不在執行中"
+
+#: ../gtweak/tweaks/tweak_shell.py:84
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Shell 使用者主題擴充套件安裝不正確"
+
+#: ../gtweak/tweaks/tweak_shell.py:87
+msgid "Shell user-theme extension not enabled"
+msgstr "Shell 使用者主題擴充套件未啟用"
+
+#: ../gtweak/tweaks/tweak_shell.py:90
+msgid "Could not list shell extensions"
+msgstr "無法列出 Shell 擴充套件"
+
+#. a filechooser to install new themes
+#: ../gtweak/tweaks/tweak_shell.py:122
+msgid "Select a theme"
+msgstr "選取主題"
+
+#: ../gtweak/tweaks/tweak_shell.py:171
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "%s 主題成功更新"
+
+#: ../gtweak/tweaks/tweak_shell.py:173
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "%s 主題成功安裝"
+
+#: ../gtweak/tweaks/tweak_shell.py:181
+msgid "Error installing theme"
+msgstr "安裝主題時發生錯誤"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:186
+msgid "Invalid theme"
+msgstr "無效的主題"
+
+#: ../gtweak/tweaks/tweak_shell.py:205
+msgid "Dynamic workspaces"
+msgstr "動態工作區"
+
+#: ../gtweak/tweaks/tweak_shell.py:205
+msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
+msgstr "停用 gnome-shell 動態工作區管理，改使用靜態工作區"
+
+#: ../gtweak/tweaks/tweak_typing.py:38 ../gtweak/tweaks/tweak_windows.py:51
+msgid "Disabled"
+msgstr "已停用"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:67
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(預設)</i>"
 
-#: ../gtweak/tweakmodel.py:26
-msgid "Fonts"
-msgstr "字型"
+#: ../gtweak/widgets.py:318
+msgid "Enable dark theme for all applications"
+msgstr "為所有應用程式啟用深黑主題"
 
-#: ../gtweak/tweakmodel.py:27
-msgid "Theme"
-msgstr "主題"
+#: ../gtweak/widgets.py:319
+msgid "Enable the dark theme hint for all the applications in the session"
+msgstr "為工作階段中的所有應用程式啟用深黑主題指示"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Desktop"
-msgstr "桌面"
+#: ../gtweak/widgets.py:337
+msgid "Error writing setting"
+msgstr "寫入設定值時發生錯誤"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Windows"
-msgstr "視窗"
+#~ msgid "Advanced Settings"
+#~ msgstr "進階設定值"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:32
-msgid "Files"
-msgstr "檔案"
+#~ msgid "GTK+ theme"
+#~ msgstr "GTK+ 主題"
 
-#: ../gtweak/tweakmodel.py:40
-msgid "Miscellaneous"
-msgstr "雜項"
+#~ msgid "Icon theme"
+#~ msgstr "圖示主題"
+
+#~ msgid "Keybinding theme"
+#~ msgstr "按鍵繫結主題"
+
+#~ msgid "%s Extension"
+#~ msgstr "%s 擴充套件"
+
+#~ msgid "Window theme"
+#~ msgstr "視窗主題"
 
 #~ msgid "The shell may need to be restarted to apply the theme"
 #~ msgstr "Shell 可能需要重新啟動才能套用主題"
-
-#~ msgid "Tweak Tool"
-#~ msgstr "調校工具"
