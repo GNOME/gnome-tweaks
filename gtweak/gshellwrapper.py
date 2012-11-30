@@ -44,6 +44,19 @@ class _ShellProxy:
                             'org.gnome.Shell.Extensions',
                             None)
 
+        #GNOME Shell > 3.7.2 added the Mode to the DBus API
+        ver = self.proxy.get_cached_property("Mode")
+        if ver != None:
+            self._mode = ver.unpack()
+        else:
+            js = 'global.session_mode'
+            result, output = self.proxy.Eval('(s)', js)
+            if not result:
+                logging.critical("Error getting shell version via Eval JS")
+                self._mode = "user"
+            else:
+                self._mode = json.loads(output)
+
         #GNOME Shell > 3.3 added the Version to the DBus API and disabled execute_js
         ver = self.proxy.get_cached_property("ShellVersion")
         if ver != None:
@@ -55,6 +68,10 @@ class _ShellProxy:
                 logging.critical("Error getting shell version via Eval JS")
                 self._version = "0.0.0"
             self._version = json.loads(output)
+
+    @property
+    def mode(self):
+        return self._mode
 
     @property
     def version(self):
@@ -94,6 +111,10 @@ class GnomeShell:
 
     def reload_theme(self):
         self._execute_js('const Main = imports.ui.main; Main.loadTheme();')
+
+    @property
+    def mode(self):
+        return self._proxy.mode
 
     @property
     def version(self):
@@ -165,5 +186,3 @@ if __name__ == "__main__":
     print s.list_extensions()
 
     print s == GnomeShellFactory().get_shell()
-
-

@@ -32,8 +32,14 @@ from gtweak.widgets import ZipFileChooserButton, GSettingsComboTweak, GSettingsC
 
 class ShowWindowButtons(GSettingsComboTweak):
     def __init__(self, **options):
+        _shell = GnomeShellFactory().get_shell()
+        if _shell.mode in ['gdm', 'initial-setup', 'user']:
+            schema = "org.gnome.shell.overrides"
+        else:
+            schema = "org.gnome.desktop.wm.preferences"
+
         GSettingsComboTweak.__init__(self,
-            "org.gnome.shell.overrides",
+            schema,
             "button-layout",
             ((':close', _("Close Only")),
             (':minimize,close', _("Minimize and Close")),
