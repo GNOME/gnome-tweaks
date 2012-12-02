@@ -45,29 +45,30 @@ class _ShellProxy:
                             None)
 
         #GNOME Shell > 3.7.2 added the Mode to the DBus API
-        ver = self.proxy.get_cached_property("Mode")
-        if ver != None:
-            self._mode = ver.unpack()
+        val = self.proxy.get_cached_property("Mode")
+        if val is not None:
+            self._mode = val.unpack()
         else:
             js = 'global.session_mode'
             result, output = self.proxy.Eval('(s)', js)
-            if not result:
-                logging.critical("Error getting shell version via Eval JS")
-                self._mode = "user"
-            else:
+            if result and output:
                 self._mode = json.loads(output)
+            else:
+                logging.critical("Error getting shell mode via Eval JS")
+                self._mode = "user"
 
         #GNOME Shell > 3.3 added the Version to the DBus API and disabled execute_js
-        ver = self.proxy.get_cached_property("ShellVersion")
-        if ver != None:
-            self._version = ver.unpack()
+        val = self.proxy.get_cached_property("ShellVersion")
+        if val is not None:
+            self._version = val.unpack()
         else:
             js = 'const Config = imports.misc.config; Config.PACKAGE_VERSION'
             result, output = self.proxy.Eval('(s)', js)
-            if not result:
+            if result and output:
+                self._version = json.loads(output)
+            else:
                 logging.critical("Error getting shell version via Eval JS")
                 self._version = "0.0.0"
-            self._version = json.loads(output)
 
     @property
     def mode(self):
