@@ -28,7 +28,7 @@ from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_wit
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME, TWEAK_GROUP_SHELL, TWEAK_SORT_LAST
-from gtweak.widgets import FileChooserButtonTweak, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING
+from gtweak.widgets import FileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING
 
 class ShowWindowButtons(GSettingsComboTweak):
     def __init__(self, **options):
@@ -125,7 +125,7 @@ class ShellThemeTweak(Tweak):
             self._combo = cb
 
             #a filechooser to install new themes
-            chooser = FileChooserButtonTweak(
+            chooser = FileChooserButton(
                         _("Select a theme"),
                         True,
                         "application/zip")
