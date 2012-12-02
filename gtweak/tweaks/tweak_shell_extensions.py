@@ -10,7 +10,7 @@ from gi.repository import GLib
 from gtweak.utils import extract_zip_file, execute_subprocess
 from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import ZipFileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING
+from gtweak.widgets import FileChooserButtonTweak, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING
 
 def N_(x): return x
 
@@ -83,7 +83,10 @@ class _ShellExtensionInstallerTweak(Tweak):
 
         self._shell = shell
 
-        chooser = ZipFileChooserButton(_("Select an extension"))
+        chooser = FileChooserButtonTweak(
+                        _("Select an extension"),
+                        True,
+                        "application/zip")
         chooser.connect("file-set", self._on_file_set)
 
         hb = Gtk.HBox(spacing=UI_BOX_SPACING)
