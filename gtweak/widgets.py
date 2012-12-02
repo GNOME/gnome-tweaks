@@ -302,8 +302,8 @@ class GConfFontButtonTweak(_GConfTweak):
     def _on_fontbutton_changed(self, btn, param):
         self.gconf.set_value(btn.props.font_name)
 
-class FileChooserButtonTweak(Gtk.FileChooserButton):
-    def __init__(self, title, local_only, mimetypes=()):
+class FileChooserButton(Gtk.FileChooserButton):
+    def __init__(self, title, local_only, mimetypes):
         Gtk.FileChooserButton.__init__(self, title=title)
 
         if mimetypes:
@@ -314,6 +314,31 @@ class FileChooserButtonTweak(Gtk.FileChooserButton):
 
         #self.set_width_chars(15)
         self.set_local_only(local_only)
+        self.set_action(Gtk.FileChooserAction.OPEN)
+
+class GSettingsFileChooserButtonTweak(_GSettingsTweak):
+    def __init__(self, schema_name, key_name, local_only, mimetypes, **options):
+        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+
+        self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
+
+        self.filechooser = FileChooserButton(self.name,local_only,mimetypes)
+        self.filechooser.set_uri(self.settings.get_string(self.key_name))
+        self.filechooser.connect("file-set", self._on_file_set)
+
+        self.widget = build_label_beside_widget(self.name, self.filechooser)
+        self.widget_for_size_group = self.filechooser
+
+    def _values_are_different(self):
+        return self.settings.get_string(self.key_name) != self.filechooser.get_uri()
+
+    def _on_setting_changed(self, setting, key):
+        self.filechooser.set_uri(self.settings.get_string(key))
+
+    def _on_file_set(self, chooser):
+        uri = self.filechooser.get_uri()
+        if uri and self._values_are_different():
+            self.settings.set_string(self.key_name, uri)
 
 class DarkThemeSwitcher(Tweak):
     def __init__(self, **options):
