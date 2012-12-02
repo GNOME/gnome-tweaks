@@ -302,16 +302,18 @@ class GConfFontButtonTweak(_GConfTweak):
     def _on_fontbutton_changed(self, btn, param):
         self.gconf.set_value(btn.props.font_name)
 
-class ZipFileChooserButton(Gtk.FileChooserButton):
-    def __init__(self, title):
+class FileChooserButtonTweak(Gtk.FileChooserButton):
+    def __init__(self, title, local_only, mimetypes=()):
         Gtk.FileChooserButton.__init__(self, title=title)
 
-        f = Gtk.FileFilter()
-        f.add_mime_type("application/zip")
-        self.set_filter(f)
+        if mimetypes:
+            f = Gtk.FileFilter()
+            for m in mimetypes:
+                f.add_mime_type(m)
+            self.set_filter(f)
 
         #self.set_width_chars(15)
-        self.set_local_only(True)
+        self.set_local_only(local_only)
 
 class DarkThemeSwitcher(Tweak):
     def __init__(self, **options):
