@@ -65,35 +65,39 @@ class ShellThemeTweak(Tweak):
         try:
             self._shell = GnomeShellFactory().get_shell()
         except:
+            self._shell = None
+
+        if self._shell is None:
             logging.warning("Shell not running", exc_info=True)
             error = _("Shell not running")
-        try:
-            extensions = self._shell.list_extensions()
-            if ShellThemeTweak.THEME_EXT_NAME in extensions and extensions[ShellThemeTweak.THEME_EXT_NAME]["state"] == 1:
-                #check the correct gsettings key is present
-                try:
-                    if os.path.exists(ShellThemeTweak.THEME_GSETTINGS_DIR):
-                        self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA,
-                                                          schema_dir=ShellThemeTweak.THEME_GSETTINGS_DIR)
-                    else:
-                        self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
-                    name = self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME)
+        else:
+            try:
+                extensions = self._shell.list_extensions()
+                if ShellThemeTweak.THEME_EXT_NAME in extensions and extensions[ShellThemeTweak.THEME_EXT_NAME]["state"] == 1:
+                    #check the correct gsettings key is present
+                    try:
+                        if os.path.exists(ShellThemeTweak.THEME_GSETTINGS_DIR):
+                            self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA,
+                                                              schema_dir=ShellThemeTweak.THEME_GSETTINGS_DIR)
+                        else:
+                            self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
+                        name = self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME)
 
-                    ext = extensions[ShellThemeTweak.THEME_EXT_NAME]
-                    logging.debug("Shell user-theme extension\n%s" % pprint.pformat(ext))
+                        ext = extensions[ShellThemeTweak.THEME_EXT_NAME]
+                        logging.debug("Shell user-theme extension\n%s" % pprint.pformat(ext))
 
-                    error = None
-                except:
-                    logging.warning(
-                        "Could not find user-theme extension in %s" % ','.join(extensions.keys()),
-                        exc_info=True)
-                    error = _("Shell user-theme extension incorrectly installed")
+                        error = None
+                    except:
+                        logging.warning(
+                            "Could not find user-theme extension in %s" % ','.join(extensions.keys()),
+                            exc_info=True)
+                        error = _("Shell user-theme extension incorrectly installed")
 
-            else:
-                error = _("Shell user-theme extension not enabled")
-        except Exception, e:
-            logging.warning("Could not list shell extensions", exc_info=True)
-            error = _("Could not list shell extensions")
+                else:
+                    error = _("Shell user-theme extension not enabled")
+            except Exception, e:
+                logging.warning("Could not list shell extensions", exc_info=True)
+                error = _("Could not list shell extensions")
 
         if error:
             cb = build_combo_box_text(None)
