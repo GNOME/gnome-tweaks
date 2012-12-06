@@ -211,7 +211,12 @@ class StaticWorkspaceTweak(Tweak):
     NUM_WORKSPACES_SCHEMA = "org.gnome.desktop.wm.preferences"
     NUM_WORKSPACES_KEY = "num-workspaces"
 
-    DYNAMIC_SCHEMA = "org.gnome.shell.overrides"
+    _shell = GnomeShellFactory().get_shell()
+    if _shell.mode in ['gdm', 'initial-setup', 'user']:
+        DYNAMIC_SCHEMA = "org.gnome.shell.overrides"
+    else:
+        DYNAMIC_SCHEMA = "org.gnome.mutter"
+
     DYNAMIC_KEY = "dynamic-workspaces"
 
     def __init__(self, **options):
