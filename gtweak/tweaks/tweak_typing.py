@@ -111,9 +111,9 @@ class TypingTweakGroup(TweakGroup):
             self._xkb_info = GnomeDesktop.XkbInfo()
             ok = True
         except GSettingsMissingError:
-            logging.warning("Missing schema %s" % self.XKB_GSETTINGS_SCHEMA)
+            logging.info("Typing missing schema %s" % self.XKB_GSETTINGS_SCHEMA)
         except AttributeError:
-            logging.warning("Missing GnomeDesktop.gir with Xkb support")
+            logging.warning("Typing missing GnomeDesktop.gir with Xkb support")
         finally:
             if ok:
                 for opt in self.XKB_OPTIONS:

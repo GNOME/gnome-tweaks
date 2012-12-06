@@ -132,12 +132,12 @@ class _GSettingsTweak(Tweak):
             self.settings = GSettingsFakeSetting()
             Tweak.__init__(self,"","")
             self.loaded = False
-            logging.info("Missing gsettings %s" % (e.message))
+            logging.info("GSetting missing %s" % (e.message))
         except KeyError:
             self.settings = GSettingsFakeSetting()
             Tweak.__init__(self,"","")
             self.loaded = False
-            logging.info("Missing gsettings %s (key %s)" % (schema_name, key_name))
+            logging.info("GSettings missing key %s (key %s)" % (schema_name, key_name))
 
 
 class GSettingsSwitchTweak(_GSettingsTweak):

@@ -57,7 +57,7 @@ class _GSettingsSchema:
                     global_translation = gettext.NullTranslations()
             except IOError:
                 global_translation = None
-                logging.info("No translated schema for %s (domain: %s)" % (schema_name, global_gettext_domain))
+                logging.debug("No translated schema for %s (domain: %s)" % (schema_name, global_gettext_domain))
             for schema in dom.getElementsByTagName("schema"):
                 gettext_domain = schema.getAttribute('gettext-domain')
                 try:
@@ -67,23 +67,24 @@ class _GSettingsSchema:
                         translation = global_translation
                 except IOError:
                     translation = None
-                    logging.info("No translated schema for %s (domain: %s)" % (schema_name, gettext_domain))
+                    logging.debug("Schema not translated %s (domain: %s)" % (schema_name, gettext_domain))
                 if schema_name == schema.getAttribute("id"):
                     for key in schema.getElementsByTagName("key"):
-                        #summary is compulsory, description is optional
+                        name = key.getAttribute("name")
+                        #summary is 'compulsory', description is optional
                         #... in theory, but we should not barf on bad schemas ever
                         try:
                             summary = key.getElementsByTagName("summary")[0].childNodes[0].data
                         except:
                             summary = ""
-                            logging.warning("Schema %s missing summary text: %s" % (schema_path, key.toxml()))
+                            logging.info("Schema missing summary %s (key %s)" % (os.path.basename(schema_path),name))
                         try:
                             description = key.getElementsByTagName("description")[0].childNodes[0].data
                         except:
                             description = ""
 
                         #if missing translations, use the untranslated values
-                        self._schema[key.getAttribute("name")] = dict(
+                        self._schema[name] = dict(
                             summary=translation.gettext(summary) if translation else summary,
                             description=translation.gettext(description) if translation else description
                         )

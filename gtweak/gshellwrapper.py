@@ -54,7 +54,7 @@ class _ShellProxy:
             if result and output:
                 self._mode = json.loads(output)
             else:
-                logging.critical("Error getting shell mode via Eval JS")
+                logging.warning("Error getting shell mode via Eval JS")
                 self._mode = "user"
 
         #GNOME Shell > 3.3 added the Version to the DBus API and disabled execute_js
