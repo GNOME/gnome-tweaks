@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-09-17 21:01+0200\n"
-"PO-Revision-Date: 2012-09-17 21:01+0200\n"
+"POT-Creation-Date: 2012-12-23 19:07+0200\n"
+"PO-Revision-Date: 2012-12-23 19:08+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -27,6 +27,10 @@ msgstr "أداة التطويع"
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "طوّع إعدادات جنوم 3 المتقدمة"
+
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;"
+msgstr "إعدادات;متقدم;تفضيلات;امتدادات;خطوط;سمة;"
 
 #: ../data/shell.ui.h:2
 msgid "welcome"
@@ -56,16 +60,24 @@ msgstr "النوافذ"
 msgid "Shell"
 msgstr "الصدفة"
 
+#: ../gtweak/tweakmodel.py:33
+msgid "Typing"
+msgstr "الكتابة"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Mouse"
+msgstr "الفأرة"
+
 #. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:35
+#: ../gtweak/tweakmodel.py:37
 msgid "Files"
 msgstr "الملفات"
 
-#: ../gtweak/tweakmodel.py:46
+#: ../gtweak/tweakmodel.py:48
 msgid "Miscellaneous"
 msgstr "متفرقات"
 
-#: ../gtweak/tweaks/tweak_interface.py:84 ../gtweak/tweaks/tweak_shell.py:117
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:127
 msgid "<i>Default</i>"
 msgstr "<i>مبدئيّ</i>"
 
@@ -90,7 +102,7 @@ msgid "The shell must be restarted for changes to take effect"
 msgstr "يجب إعادة تشغيل الصدفة لتطبيق التغييرات"
 
 #: ../gtweak/tweaks/tweak_shell_extensions.py:76
-#: ../gtweak/tweaks/tweak_shell_extensions.py:145
+#: ../gtweak/tweaks/tweak_shell_extensions.py:148
 msgid "Restart"
 msgstr "أعِد التشغيل"
 
@@ -98,113 +110,116 @@ msgstr "أعِد التشغيل"
 msgid "Install Shell Extension"
 msgstr "ثبت امتداد الصدفة"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:86
+#: ../gtweak/tweaks/tweak_shell_extensions.py:87
 msgid "Select an extension"
 msgstr "اختر امتدادًا"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:91
+#: ../gtweak/tweaks/tweak_shell_extensions.py:94
 msgid "Get more extensions"
 msgstr "احصل على المزيد من الامتدادات"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:139
+#: ../gtweak/tweaks/tweak_shell_extensions.py:142
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "تم تحديث الامتداد %s بنجاح"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_shell_extensions.py:144
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "تم تثبيت الامتداد %s بنجاح"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:149
+#: ../gtweak/tweaks/tweak_shell_extensions.py:152
 msgid "Error installing extension"
 msgstr "خطأ في تثبيت الامتداد"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:154
+#: ../gtweak/tweaks/tweak_shell_extensions.py:157
 msgid "Invalid extension"
 msgstr "امتداد غير سليم"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:162
+#: ../gtweak/tweaks/tweak_shell_extensions.py:165
 msgid "Shell Extensions"
 msgstr "امتدادات الصدفة"
 
-#: ../gtweak/tweaks/tweak_shell.py:38
+#: ../gtweak/tweaks/tweak_shell.py:44
 msgid "Close Only"
 msgstr "الغلق فقط"
 
-#: ../gtweak/tweaks/tweak_shell.py:39
+#: ../gtweak/tweaks/tweak_shell.py:45
 msgid "Minimize and Close"
 msgstr "التصغير والغلق"
 
-#: ../gtweak/tweaks/tweak_shell.py:40
+#: ../gtweak/tweaks/tweak_shell.py:46
 msgid "Maximize and Close"
 msgstr "التكبير والغلق"
 
-#: ../gtweak/tweaks/tweak_shell.py:41
+#: ../gtweak/tweaks/tweak_shell.py:47
 msgid "All"
 msgstr "الكل"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:61
 msgid "Shell theme"
 msgstr "سمة الصدفة"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:61
 msgid "Install custom or user themes for gnome-shell"
 msgstr "ثبت سمة مخصصة لصدفة جنوم"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:58
+#: ../gtweak/tweaks/tweak_shell.py:64
 msgid "Unknown error"
 msgstr "خطأ مجهول"
 
-#: ../gtweak/tweaks/tweak_shell.py:63
+#: ../gtweak/tweaks/tweak_shell.py:72
 msgid "Shell not running"
 msgstr "الصدفة ليست مشتغلة"
 
-#: ../gtweak/tweaks/tweak_shell.py:84
+#: ../gtweak/tweaks/tweak_shell.py:94
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "ثبتت سمة الصدفة بشكل غير صحيح"
 
-#: ../gtweak/tweaks/tweak_shell.py:87
+#: ../gtweak/tweaks/tweak_shell.py:97
 msgid "Shell user-theme extension not enabled"
 msgstr "لم تفعل صمة الصدفة"
 
-#: ../gtweak/tweaks/tweak_shell.py:90
+#: ../gtweak/tweaks/tweak_shell.py:100
 msgid "Could not list shell extensions"
 msgstr "تعذّر عرض قائمة امتدادات الصدفة"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:122
+#: ../gtweak/tweaks/tweak_shell.py:133
 msgid "Select a theme"
 msgstr "اختر سِمة"
 
-#: ../gtweak/tweaks/tweak_shell.py:171
+#: ../gtweak/tweaks/tweak_shell.py:184
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "تم تحديث السِمة %s بنجاح"
 
-#: ../gtweak/tweaks/tweak_shell.py:173
+#: ../gtweak/tweaks/tweak_shell.py:186
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "تم تثبيت السِمة %s بنجاح"
 
-#: ../gtweak/tweaks/tweak_shell.py:181
+#: ../gtweak/tweaks/tweak_shell.py:194
 msgid "Error installing theme"
 msgstr "خطأ في تثبيت السِمة"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:186
+#: ../gtweak/tweaks/tweak_shell.py:199
 msgid "Invalid theme"
 msgstr "سِمة غير صالحة"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
+#: ../gtweak/tweaks/tweak_shell.py:223
 msgid "Dynamic workspaces"
 msgstr "مناطق العمل الديناميكية"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
+#: ../gtweak/tweaks/tweak_shell.py:223
 msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 msgstr "عطّل إدارة صدفة جنوم لمناطق العمل الديناميكية، استخدم مناطق عمل ثابتة"
+
+#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:51
+msgid "Disabled"
+msgstr "معطّل"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: ../gtweak/utils.py:67
@@ -212,15 +227,15 @@ msgstr "عطّل إدارة صدفة جنوم لمناطق العمل الدين
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(مبدئيّ)</i>"
 
-#: ../gtweak/widgets.py:305
+#: ../gtweak/widgets.py:345
 msgid "Enable dark theme for all applications"
 msgstr "فعّل السمة الداكنة لكل التطبيقات"
 
-#: ../gtweak/widgets.py:306
+#: ../gtweak/widgets.py:346
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "فعّل تلميحة السمة الداكنة لكل التطبيقات في الجلسة"
 
-#: ../gtweak/widgets.py:324
+#: ../gtweak/widgets.py:364
 msgid "Error writing setting"
 msgstr "خطأ في كتابة الإعداد"
 
