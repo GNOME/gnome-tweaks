@@ -22,7 +22,7 @@ import logging
 from gi.repository import Pango, Gtk, GnomeDesktop
 
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_TYPING
-from gtweak.widgets import GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget
+from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 
 class _XkbOption(Tweak):
@@ -132,10 +132,6 @@ TWEAK_GROUPS = (
 )
 
 TWEAKS = (
-    GSettingsComboEnumTweak("org.gnome.settings-daemon.peripherals.keyboard",
-                            "input-sources-switcher",
-                            schema_filename="org.gnome.settings-daemon.peripherals.gschema.xml",
-                            group_name=TWEAK_GROUP_TYPING),
     GSettingsSwitchTweak("org.gnome.desktop.input-sources",
                          "show-all-sources",
                          group_name=TWEAK_GROUP_TYPING),
