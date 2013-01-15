@@ -97,8 +97,8 @@ class TypingTweakGroup(TweakGroup):
 
     XKB_GSETTINGS_SCHEMA = "org.gnome.desktop.input-sources"
     XKB_GSETTINGS_NAME = "xkb-options"
-    XKB_OPTIONS = ("ctrl","grp_led","keypad","kpdl","caps","altwin","compat","eurosign",
-                   "lv5","nbsp","japan","esperanto","terminate")
+    # These are configurable in gnome-control-center
+    XKB_OPTIONS_BLACKLIST = {"lv3","Compose key"}
 
     def __init__(self):
         TweakGroup.__init__(self, TWEAK_GROUP_TYPING)
@@ -116,7 +116,7 @@ class TypingTweakGroup(TweakGroup):
             logging.warning("Typing missing GnomeDesktop.gir with Xkb support")
         finally:
             if ok:
-                for opt in self.XKB_OPTIONS:
+                for opt in set(self._xkb_info.get_all_option_groups()) - self.XKB_OPTIONS_BLACKLIST:
                     self._option_objects.append(
                             _XkbOption(opt, self._kbdsettings, self._xkb_info)
                     )
