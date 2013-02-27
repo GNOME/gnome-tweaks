@@ -35,8 +35,10 @@ class ShowWindowButtons(GSettingsComboTweak):
         _shell = GnomeShellFactory().get_shell()
         if _shell.mode in ['gdm', 'initial-setup', 'user']:
             schema = "org.gnome.shell.overrides"
+            filename = "org.gnome.shell.gschema.xml"
         else:
             schema = "org.gnome.desktop.wm.preferences"
+            filename = None
 
         GSettingsComboTweak.__init__(self,
             schema,
@@ -45,6 +47,7 @@ class ShowWindowButtons(GSettingsComboTweak):
             (':minimize,close', _("Minimize and Close")),
             (':maximize,close', _("Maximize and Close")),
             (':minimize,maximize,close', _("All"))),
+            schema_filename=filename,
             **options)
 
 class ShellThemeTweak(Tweak):
@@ -214,8 +217,10 @@ class StaticWorkspaceTweak(Tweak):
     _shell = GnomeShellFactory().get_shell()
     if _shell.mode in ['gdm', 'initial-setup', 'user']:
         DYNAMIC_SCHEMA = "org.gnome.shell.overrides"
+        DYNAMIC_SCHEMA_FILENAME = "org.gnome.shell.gschema.xml"
     else:
         DYNAMIC_SCHEMA = "org.gnome.mutter"
+        DYNAMIC_SCHEMA_FILENAME = None
 
     DYNAMIC_KEY = "dynamic-workspaces"
 
@@ -229,7 +234,7 @@ class StaticWorkspaceTweak(Tweak):
             nwsettings = GSettingsFakeSetting()
 
         try:
-            dsettings = GSettingsSetting(self.DYNAMIC_SCHEMA, **options)
+            dsettings = GSettingsSetting(self.DYNAMIC_SCHEMA, schema_filename=self.DYNAMIC_SCHEMA_FILENAME, **options)
         except GSettingsMissingError:
             self.loaded = False
             dsettings = GSettingsFakeSetting()
@@ -263,12 +268,12 @@ TWEAK_GROUPS = (
             GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),
-            ShowWindowButtons(schema_filename="org.gnome.shell.gschema.xml", size_group=sg),
+            ShowWindowButtons(size_group=sg),
             GSettingsSwitchTweak("org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup", size_group=sg),
-            GSettingsSwitchTweak("org.gnome.shell.overrides", "workspaces-only-on-primary"),
+            GSettingsSwitchTweak("org.gnome.shell.overrides", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml"),
             StaticWorkspaceTweak(size_group=sg)),
 )
