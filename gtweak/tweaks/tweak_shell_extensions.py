@@ -7,6 +7,7 @@ import json
 from gi.repository import Gtk
 from gi.repository import GLib
 
+from operator import itemgetter
 from gtweak.utils import extract_zip_file, execute_subprocess
 from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup
@@ -177,7 +178,8 @@ class ShellExtensionTweakGroup(TweakGroup):
 
             try:
                 #add a tweak for each installed extension
-                for extension in shell.list_extensions().values():
+                extensions = sorted(shell.list_extensions().values(), key=itemgetter("name"))
+                for extension in extensions:
                     try:
                         extension_tweaks.append(
                             _ShellExtensionTweak(shell, extension, size_group=sg))
