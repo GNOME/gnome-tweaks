@@ -5,14 +5,14 @@
 # n0m4dm4n <n0m4dm4n at gmail dot com>, 2011.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012.
 # Attila Hammer <hammera at pickup dot hu>, 2012.
-# Balázs Úr <urbalazs at gmail dot com>, 2012.
+# Balázs Úr <urbalazs at gmail dot com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-11-10 09:25+0000\n"
-"PO-Revision-Date: 2012-12-26 15:37+0100\n"
+"POT-Creation-Date: 2013-01-27 11:57+0000\n"
+"PO-Revision-Date: 2013-03-16 22:48+0100\n"
 "Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
@@ -31,8 +31,12 @@ msgid "Tweak advanced GNOME 3 settings"
 msgstr "A GNOME 3 speciális beállításainak módosítása"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;"
-msgstr "Beállítások;Speciális;Tulajdonságok;Kiterjesztések;Betűkészletek;Téma;"
+#| msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Beállítások;Speciális;Tulajdonságok;Kiterjesztések;Betűkészletek;Téma;XKB;Bill"
+"entyűzet;Gépelés;"
 
 #: ../data/shell.ui.h:2
 msgid "welcome"
@@ -79,7 +83,7 @@ msgstr "Fájlok"
 msgid "Miscellaneous"
 msgstr "Egyebek"
 
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:117
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:127
 msgid "<i>Default</i>"
 msgstr "<i>Alapértelmezett</i>"
 
@@ -104,7 +108,7 @@ msgid "The shell must be restarted for changes to take effect"
 msgstr "A változtatások életbe lépéséhez újra kell indítani a Gnome Shellt"
 
 #: ../gtweak/tweaks/tweak_shell_extensions.py:76
-#: ../gtweak/tweaks/tweak_shell_extensions.py:145
+#: ../gtweak/tweaks/tweak_shell_extensions.py:148
 msgid "Restart"
 msgstr "Újraindítás"
 
@@ -112,118 +116,117 @@ msgstr "Újraindítás"
 msgid "Install Shell Extension"
 msgstr "Shell-bővítmények telepítése"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:86
+#: ../gtweak/tweaks/tweak_shell_extensions.py:87
 msgid "Select an extension"
 msgstr "Válasszon egy bővítményt"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:91
+#: ../gtweak/tweaks/tweak_shell_extensions.py:94
 msgid "Get more extensions"
 msgstr "További bővítmények beszerzése"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:139
+#: ../gtweak/tweaks/tweak_shell_extensions.py:142
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s bővítmény sikeresen frissítve"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_shell_extensions.py:144
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s bővítmény sikeresen telepítve"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:149
+#: ../gtweak/tweaks/tweak_shell_extensions.py:152
 msgid "Error installing extension"
 msgstr "Hiba a bővítmény telepítésekor"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:154
+#: ../gtweak/tweaks/tweak_shell_extensions.py:157
 msgid "Invalid extension"
 msgstr "Érvénytelen bővítmény"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:162
+#: ../gtweak/tweaks/tweak_shell_extensions.py:165
 msgid "Shell Extensions"
 msgstr "A Shell bővítményei"
 
-#: ../gtweak/tweaks/tweak_shell.py:38
+#: ../gtweak/tweaks/tweak_shell.py:44
 msgid "Close Only"
 msgstr "Csak bezárás"
 
-#: ../gtweak/tweaks/tweak_shell.py:39
+#: ../gtweak/tweaks/tweak_shell.py:45
 msgid "Minimize and Close"
 msgstr "Minimalizálás és bezárás"
 
-#: ../gtweak/tweaks/tweak_shell.py:40
+#: ../gtweak/tweaks/tweak_shell.py:46
 msgid "Maximize and Close"
 msgstr "Maximalizálás és bezárás"
 
-#: ../gtweak/tweaks/tweak_shell.py:41
+#: ../gtweak/tweaks/tweak_shell.py:47
 msgid "All"
 msgstr "Összes"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:61
 msgid "Shell theme"
 msgstr "Shell téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:61
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Egyéni vagy felhasználói témák telepítése a Gnome Shellhez"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:58
+#: ../gtweak/tweaks/tweak_shell.py:64
 msgid "Unknown error"
 msgstr "Ismeretlen hiba"
 
-#: ../gtweak/tweaks/tweak_shell.py:63
+#: ../gtweak/tweaks/tweak_shell.py:72
 msgid "Shell not running"
 msgstr "A Gnome Shell nem fut"
 
-#: ../gtweak/tweaks/tweak_shell.py:84
+#: ../gtweak/tweaks/tweak_shell.py:94
 msgid "Shell user-theme extension incorrectly installed"
 msgstr ""
 "A Gnome Shell felhasználóitéma-bővítménye nem megfelelően lett telepítve"
 
-#: ../gtweak/tweaks/tweak_shell.py:87
+#: ../gtweak/tweaks/tweak_shell.py:97
 msgid "Shell user-theme extension not enabled"
 msgstr "A Gnome Shell felhasználóitéma-bővítménye nincs engedélyezve"
 
-#: ../gtweak/tweaks/tweak_shell.py:90
+#: ../gtweak/tweaks/tweak_shell.py:100
 msgid "Could not list shell extensions"
 msgstr "A bővítmények nem sorolhatók fel"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:122
+#: ../gtweak/tweaks/tweak_shell.py:133
 msgid "Select a theme"
 msgstr "Válasszon témát"
 
-#: ../gtweak/tweaks/tweak_shell.py:171
+#: ../gtweak/tweaks/tweak_shell.py:184
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s téma sikeresen frissítve"
 
-#: ../gtweak/tweaks/tweak_shell.py:173
+#: ../gtweak/tweaks/tweak_shell.py:186
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s téma telepítése sikerült"
 
-#: ../gtweak/tweaks/tweak_shell.py:181
+#: ../gtweak/tweaks/tweak_shell.py:194
 msgid "Error installing theme"
 msgstr "Hiba a téma telepítése közben"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:186
+#: ../gtweak/tweaks/tweak_shell.py:199
 msgid "Invalid theme"
 msgstr "Nem megfelelő téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
+#: ../gtweak/tweaks/tweak_shell.py:223
 msgid "Dynamic workspaces"
 msgstr "Dinamikus munkaterületek"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
+#: ../gtweak/tweaks/tweak_shell.py:223
 msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 msgstr ""
 "A Gnome Shell dinamikus munkaterület-kezelésének letiltása, statikus "
 "munkaterületek használata"
 
-#: ../gtweak/tweaks/tweak_typing.py:38 ../gtweak/tweaks/tweak_windows.py:51
+#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:51
 msgid "Disabled"
 msgstr "Letiltva"
 
@@ -233,15 +236,15 @@ msgstr "Letiltva"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(alapértelmezett)</i>"
 
-#: ../gtweak/widgets.py:318
+#: ../gtweak/widgets.py:345
 msgid "Enable dark theme for all applications"
 msgstr "A sötét téma engedélyezése minden alkalmazáshoz"
 
-#: ../gtweak/widgets.py:319
+#: ../gtweak/widgets.py:346
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "A munkamenetben a sötét téma engedélyezése minden futó alkalmazáshoz"
 
-#: ../gtweak/widgets.py:337
+#: ../gtweak/widgets.py:364
 msgid "Error writing setting"
 msgstr "Hiba a beállítás írásakor"
 
