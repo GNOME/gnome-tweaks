@@ -54,6 +54,11 @@ class _ShellExtensionTweak(Tweak):
                 cfg.connect("clicked", self._on_configure_clicked, uuid)
                 widgets.append(cfg)
 
+        if ext.get("type") == GnomeShell.EXTENSION_TYPE["PER_USER"]:
+            deleteButton = build_tight_button(Gtk.STOCK_DELETE)
+            deleteButton.connect("clicked", self._on_extension_delete, uuid, ext["name"])
+            widgets.append(deleteButton)
+
         widgets.append(sw)
 
         self.widget = build_label_beside_widget(
@@ -76,6 +81,20 @@ class _ShellExtensionTweak(Tweak):
                 _("The shell must be restarted for changes to take effect"),
                 _("Restart"),
                 self._shell.restart)
+
+    def _on_extension_delete(self, btn, uuid, name):
+        path = os.path.join(self._shell.EXTENSION_DIR, uuid)
+        if os.path.exists(path):
+            first_message = _("Delete an extension")        
+            second_message = _("Do you want to delete the extension ")+name+"?"
+            dialog = Gtk.MessageDialog(None,0,type=Gtk.MessageType.QUESTION,
+                                   buttons=Gtk.ButtonsType.YES_NO,
+                                   message_format=first_message)
+            dialog.format_secondary_text(second_message)
+            response = dialog.run()
+            if response == Gtk.ResponseType.YES:
+                self._shell.uninstall_extension(uuid)
+            dialog.destroy()
 
 class _ShellExtensionInstallerTweak(Tweak):
 

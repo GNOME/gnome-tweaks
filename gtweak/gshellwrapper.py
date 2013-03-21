@@ -113,6 +113,9 @@ class GnomeShell:
     def reload_theme(self):
         self._execute_js('const Main = imports.ui.main; Main.loadTheme();')
 
+    def uninstall_extension(self, uuid):
+        return self._proxy.proxy_extensions.UninstallExtension('(s)', uuid)
+
     @property
     def mode(self):
         return self._proxy.mode
@@ -149,6 +152,9 @@ class GnomeShell34(GnomeShell32):
 
     def reload_theme(self):
         logging.warning("Reloading Theme Not Supported")
+
+    def uninstall_extension(self, uuid):
+        return self._proxy.proxy_extensions.UninstallExtension('(s)', uuid)
 
 class GnomeShell36(GnomeShell34):
 
