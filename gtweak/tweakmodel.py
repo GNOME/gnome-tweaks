@@ -122,11 +122,11 @@ class TweakModel(Gtk.ListStore):
 
     @property
     def tweaks(self):
-        return [t for row in self for t in row[TweakModel.COLUMN_TWEAK].tweaks]
+        return (t for row in self for t in row[TweakModel.COLUMN_TWEAK].tweaks)
 
     @property
     def tweak_groups(self):
-        return [row[TweakModel.COLUMN_TWEAK] for row in self]
+        return (row[TweakModel.COLUMN_TWEAK] for row in self)
 
     def load_tweaks(self):
         if 1:
@@ -178,7 +178,7 @@ class TweakModel(Gtk.ListStore):
         group.set_tweaks(tweak)
       
     def search_matches(self, txt):
-        return [t for t in self.tweaks if t.search_matches(txt)]
+        return (t for t in self.tweaks if t.search_matches(txt))
 
     def get_tweakgroup_iter(self, name):
         return self._tweak_group_iters[name]
