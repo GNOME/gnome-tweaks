@@ -96,6 +96,7 @@ class _ShellExtensionTweak(Tweak):
             response = dialog.run()
             if response == Gtk.ResponseType.YES:
                 self._shell.uninstall_extension(uuid)
+                self.widget.set_sensitive(False)
             dialog.destroy()
 
 class _ShellExtensionInstallerTweak(Tweak):
