@@ -75,6 +75,7 @@ class TweakView:
         #add all tweaks
         self._tweak_vbox = builder.get_object('tweak_vbox')
         for t in sorted(self._model.tweaks, key=_sort_tweak_widgets_by_widget_type):
+            t.main_window = self._main_window
             self._tweak_vbox.pack_start(t.widget, False, False, 0)
             t.set_notify_cb(self._on_tweak_notify)
 

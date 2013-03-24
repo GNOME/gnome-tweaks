@@ -87,7 +87,9 @@ class _ShellExtensionTweak(Tweak):
         if os.path.exists(path):
             first_message = _("Delete an extension")        
             second_message = _("Do you want to delete the extension ")+name+"?"
-            dialog = Gtk.MessageDialog(None,0,type=Gtk.MessageType.QUESTION,
+            dialog = Gtk.MessageDialog(
+                                   self.main_window,0,
+                                   type=Gtk.MessageType.QUESTION,
                                    buttons=Gtk.ButtonsType.YES_NO,
                                    message_format=first_message)
             dialog.format_secondary_text(second_message)

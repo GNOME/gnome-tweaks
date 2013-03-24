@@ -42,6 +42,7 @@ TWEAK_SORT_LAST = 1e3
 LOG = logging.getLogger(__name__)
 
 class Tweak:
+    main_window = None
     def __init__(self, name, description, **options):
         self.name = name
         self.description = description
