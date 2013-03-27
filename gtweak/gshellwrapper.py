@@ -167,21 +167,25 @@ class GnomeShell36(GnomeShell34):
 @gtweak.utils.singleton
 class GnomeShellFactory:
     def __init__(self):
-        proxy = _ShellProxy()
-        settings = GSettingsSetting("org.gnome.shell")
-        v = map(int,proxy.version.split("."))
+        try:
+            proxy = _ShellProxy()
+            settings = GSettingsSetting("org.gnome.shell")
+            v = map(int,proxy.version.split("."))
 
-        if v >= [3,5,0]:
-            self.shell = GnomeShell36(proxy, settings)
-        elif v >= [3,3,2]:
-            self.shell = GnomeShell34(proxy, settings)
-        elif v >= [3,1,4]:
-            self.shell = GnomeShell32(proxy, settings)
-        else:
-            logging.warn("Shell version not supported")
+            if v >= [3,5,0]:
+                self.shell = GnomeShell36(proxy, settings)
+            elif v >= [3,3,2]:
+                self.shell = GnomeShell34(proxy, settings)
+            elif v >= [3,1,4]:
+                self.shell = GnomeShell32(proxy, settings)
+            else:
+                logging.warn("Shell version not supported")
+                self.shell = None
+
+            logging.debug("Shell version: %s", str(v))
+        except:
             self.shell = None
-
-        logging.debug("Shell version: %s", str(v))
+            logging.warn("Shell not installed or running")
 
     def get_shell(self):
         return self.shell

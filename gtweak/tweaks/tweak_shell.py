@@ -30,10 +30,12 @@ from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME, TWEAK_GROUP_SHELL, TWEAK_SORT_LAST
 from gtweak.widgets import FileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING
 
+_shell = GnomeShellFactory().get_shell()
+_shell_loaded = _shell is not None
+
 class ShowWindowButtons(GSettingsComboTweak):
     def __init__(self, **options):
-        _shell = GnomeShellFactory().get_shell()
-        if _shell.mode in ['gdm', 'initial-setup', 'user']:
+        if (_shell is not None) and (_shell.mode in ['gdm', 'initial-setup', 'user']):
             schema = "org.gnome.shell.overrides"
             filename = "org.gnome.shell.gschema.xml"
         else:
@@ -48,6 +50,7 @@ class ShowWindowButtons(GSettingsComboTweak):
             (':maximize,close', _("Maximize and Close")),
             (':minimize,maximize,close', _("All"))),
             schema_filename=filename,
+            loaded=_shell_loaded,
             **options)
 
 class ShellThemeTweak(Tweak):
@@ -65,10 +68,7 @@ class ShellThemeTweak(Tweak):
 
         #check the shell is running and the usertheme extension is present
         error = _("Unknown error")
-        try:
-            self._shell = GnomeShellFactory().get_shell()
-        except:
-            self._shell = None
+        self._shell = _shell
 
         if self._shell is None:
             logging.warning("Shell not running", exc_info=True)
@@ -214,8 +214,7 @@ class StaticWorkspaceTweak(Tweak):
     NUM_WORKSPACES_SCHEMA = "org.gnome.desktop.wm.preferences"
     NUM_WORKSPACES_KEY = "num-workspaces"
 
-    _shell = GnomeShellFactory().get_shell()
-    if _shell.mode in ['gdm', 'initial-setup', 'user']:
+    if (_shell is not None) and (_shell.mode in ['gdm', 'initial-setup', 'user']):
         DYNAMIC_SCHEMA = "org.gnome.shell.overrides"
         DYNAMIC_SCHEMA_FILENAME = "org.gnome.shell.gschema.xml"
     else:
@@ -259,7 +258,7 @@ class StaticWorkspaceTweak(Tweak):
 sg = build_horizontal_sizegroup()
 
 TWEAKS = (
-    ShellThemeTweak(group_name=TWEAK_GROUP_THEME),
+    ShellThemeTweak(group_name=TWEAK_GROUP_THEME, loaded=_shell_loaded),
 )
 
 TWEAK_GROUPS = (
@@ -267,13 +266,13 @@ TWEAK_GROUPS = (
             TWEAK_GROUP_SHELL,
             GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
             GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-            GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml"),
+            GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
             ShowWindowButtons(size_group=sg),
             GSettingsSwitchTweak("org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup", size_group=sg),
-            GSettingsSwitchTweak("org.gnome.shell.overrides", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml"),
-            StaticWorkspaceTweak(size_group=sg)),
+            GSettingsSwitchTweak("org.gnome.shell.overrides", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
+            StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded)),
 )

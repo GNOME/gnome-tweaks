@@ -121,6 +121,8 @@ class _ShellExtensionInstallerTweak(Tweak):
         self.widget = build_label_beside_widget(self.name, hb)
         self.widget_for_size_group = hb
 
+        self.loaded = self._shell is not None
+
     def _on_file_set(self, chooser):
         f = chooser.get_filename()
 
@@ -193,6 +195,8 @@ class ShellExtensionTweakGroup(TweakGroup):
         #check the shell is running
         try:
             shell = GnomeShellFactory().get_shell()
+            if shell is None:
+                raise Exception("Shell not running or DBus service not available")
 
             #add the extension installer
             extension_tweaks.append(

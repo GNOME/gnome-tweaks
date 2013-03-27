@@ -47,7 +47,7 @@ class Tweak:
         self.name = name
         self.description = description
         self.group_name = options.get("group_name",_("Miscellaneous"))
-        self.loaded = True
+        self.loaded = options.get("loaded", True)
         self.widget_sort_hint = None
 
         self._search_cache = None
