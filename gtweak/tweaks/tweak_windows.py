@@ -51,4 +51,5 @@ TWEAKS = (
                         [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")],
                         group_name=TWEAK_GROUP_WINDOWS),
     GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "resize-with-right-button", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "raise-on-click", group_name=TWEAK_GROUP_WINDOWS),
 )
