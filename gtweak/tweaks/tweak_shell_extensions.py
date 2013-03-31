@@ -109,7 +109,7 @@ class _ShellExtensionInstallerTweak(Tweak):
         chooser = FileChooserButton(
                         _("Select an extension"),
                         True,
-                        "application/zip")
+                        ["application/zip"])
         chooser.connect("file-set", self._on_file_set)
 
         hb = Gtk.HBox(spacing=UI_BOX_SPACING)

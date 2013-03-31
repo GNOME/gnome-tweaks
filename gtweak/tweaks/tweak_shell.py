@@ -135,7 +135,7 @@ class ShellThemeTweak(Tweak):
             chooser = FileChooserButton(
                         _("Select a theme"),
                         True,
-                        "application/zip")
+                        ["application/zip"])
             chooser.connect("file-set", self._on_file_set)
 
             self.widget = build_label_beside_widget(self.name, chooser, cb)
