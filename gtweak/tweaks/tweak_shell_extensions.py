@@ -3,17 +3,21 @@ import zipfile
 import tempfile
 import logging
 import json
+import threading
 
 from gi.repository import Gtk
 from gi.repository import GLib
+from gi.repository import GObject
 
 from operator import itemgetter
 from gtweak.utils import extract_zip_file, execute_subprocess
 from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.widgets import FileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING
+from gtweak.egowrapper import ExtensionsDotGnomeDotOrg
 
 def N_(x): return x
+GObject.threads_init()
 
 class _ShellExtensionTweak(Tweak):
 
@@ -98,6 +102,27 @@ class _ShellExtensionTweak(Tweak):
                 self._shell.uninstall_extension(uuid)
                 self.widget.set_sensitive(False)
             dialog.destroy()
+
+    def _on_extension_update(self, btn, uuid):
+        self._shell.uninstall_extension(uuid)
+        self.widget.set_sensitive(False)
+        thread = threading.Thread(target=self.download_extension, args=(btn,uuid,))
+        thread.start()
+
+    def download_extension(self, btn,uuid):
+        status = self._shell.install_remote_extension(uuid)
+        if status == 's':
+            GObject.idle_add(btn.set_sensitive, False)
+            GObject.idle_add(self.widget.set_sensitive, True) 
+
+    def add_update_button(self, uuid):
+        button = build_tight_button(Gtk.STOCK_REFRESH)
+        button.connect("clicked", self._on_extension_update, uuid)
+        self.widget.pack_start(button, False, False, 0)
+        self.widget.reorder_child(button, 1)
+        #if the widget calls directly the show_all method, This will be shown in any visible parent widget.
+        if self.widget.get_visible() == True:
+            self.widget.show_all()
 
 class _ShellExtensionInstallerTweak(Tweak):
 
@@ -201,14 +226,19 @@ class ShellExtensionTweakGroup(TweakGroup):
             #add the extension installer
             extension_tweaks.append(
                 _ShellExtensionInstallerTweak(shell, size_group=sg))
-
+            
+            version =  tuple(shell.version.split("."))
+            ego = ExtensionsDotGnomeDotOrg(version)
             try:
                 #add a tweak for each installed extension
                 extensions = sorted(shell.list_extensions().values(), key=itemgetter("name"))
                 for extension in extensions:
                     try:
-                        extension_tweaks.append(
-                            _ShellExtensionTweak(shell, extension, size_group=sg))
+                        extension_widget = _ShellExtensionTweak(shell, extension, size_group=sg)
+                        extension_tweaks.append(extension_widget)
+                        if extension.get("type") == GnomeShell.EXTENSION_TYPE["PER_USER"]:
+                            ego.connect("got-extension-info", self._got_info, extension, extension_widget)
+                            ego.query_extension_info(extension["uuid"])
                     except:
                         logging.warning("Invalid extension", exc_info=True)
             except:
@@ -217,6 +247,19 @@ class ShellExtensionTweakGroup(TweakGroup):
             logging.warning("Error detecting shell", exc_info=True)
 
         self.set_tweaks(*extension_tweaks)
+
+    def _got_info(self, ego, resp, uuid, extension, widget):
+        if uuid == extension["uuid"]:
+            resp = resp['shell_version_map']
+            shell = GnomeShellFactory().get_shell()
+            version = shell.version[0:3]
+            try:
+                resp = resp[version]
+                if int(resp["version"]) > extension["version"]:
+                    widget.add_update_button(uuid)
+
+            except KeyError:
+                print "Older/Unknown Version"
 
 TWEAK_GROUPS = (
         ShellExtensionTweakGroup(),

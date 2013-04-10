@@ -164,6 +164,9 @@ class GnomeShell36(GnomeShell34):
     def uninstall_extension(self, uuid):
         return self._proxy.proxy_extensions.UninstallExtension('(s)', uuid)
 
+    def install_remote_extension(self, uuid):
+        return self._proxy.proxy_extensions.InstallRemoteExtension('(s)', uuid)
+
 @gtweak.utils.singleton
 class GnomeShellFactory:
     def __init__(self):
