@@ -48,7 +48,7 @@ class _ShellExtensionTweak(Tweak):
 
         widgets = []
         if self._shell.SUPPORTS_EXTENSION_PREFS:
-            prefs = os.path.join(self._shell.EXTENSION_DIR, uuid, "prefs.js")
+            prefs = os.path.join(ext['path'], "prefs.js")
             if os.path.exists(prefs):
                 cfg = build_tight_button(Gtk.STOCK_PREFERENCES)
                 cfg.connect("clicked", self._on_configure_clicked, uuid)
