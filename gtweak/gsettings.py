@@ -26,6 +26,7 @@ from gi.repository import Gio, GLib
 
 _SCHEMA_CACHE = {}
 _GSETTINGS_SCHEMAS = set(Gio.Settings.list_schemas())
+_GSETTINGS_RELOCATABLE_SCHEMAS = set(Gio.Settings.list_relocatable_schemas())
 
 class GSettingsMissingError(Exception):
     pass
@@ -111,11 +112,17 @@ class GSettingsFakeSetting:
         return noop
 
 class GSettingsSetting(Gio.Settings):
-    def __init__(self, schema_name, schema_dir=None, **options):
-        if schema_dir is None and schema_name not in _GSETTINGS_SCHEMAS:
-            raise GSettingsMissingError(schema_name)
+    def __init__(self, schema_name, schema_dir=None, schema_path=None, **options):
         if schema_dir is None:
-            Gio.Settings.__init__(self, schema_name)
+            if schema_name not in _GSETTINGS_SCHEMAS and \
+               (schema_path is not None and \
+                schema_name not in _GSETTINGS_RELOCATABLE_SCHEMAS):
+                raise GSettingsMissingError(schema_name)
+
+            if schema_path is None:
+                Gio.Settings.__init__(self, schema_name)
+            else:
+                Gio.Settings.__init__(self, schema_name, path=schema_path)
         else:
             GioSSS = Gio.SettingsSchemaSource
             schema_source = GioSSS.new_from_directory(schema_dir,
