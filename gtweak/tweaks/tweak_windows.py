@@ -34,8 +34,7 @@ class WindowThemeSwitcher(GSettingsComboTweak):
 
     def _get_valid_themes(self):
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
-                 os.path.join(GLib.get_user_data_dir(), "themes"),
-                 os.path.join(os.path.expanduser("~"), ".themes"))
+                 os.path.join(GLib.get_user_data_dir(), "themes"))
         valid = walk_directories(dirs, lambda d:
                     os.path.exists(os.path.join(d, "metacity-1")))
         return valid
