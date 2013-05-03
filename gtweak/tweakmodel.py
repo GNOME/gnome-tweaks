@@ -151,7 +151,8 @@ class TweakModel(Gtk.ListStore):
             tweaks.extend( getattr(mod, "TWEAKS", []) )
 
         for g in groups:
-            self.add_tweak_group(g)
+            if g.tweaks:
+                self.add_tweak_group(g)
 
         for t in tweaks:
             self.add_tweak_auto_to_group(t)
