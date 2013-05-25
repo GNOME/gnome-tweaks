@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-12 10:09+0000\n"
-"PO-Revision-Date: 2012-12-02 22:36+0100\n"
+"POT-Creation-Date: 2013-04-10 09:45+0000\n"
+"PO-Revision-Date: 2013-05-22 20:14+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -29,8 +29,9 @@ msgid "Tweak advanced GNOME 3 settings"
 msgstr "Vyladenie pokročilých nastavení prostredia GNOME 3"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;"
-msgstr "Nastavenia;Pokročilé;Rozšírenia;Písma;Téma;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr "Nastavenia;Pokročilé;Rozšírenia;Písma;Téma;XKB;Klávesnica;Písanie;"
 
 #: ../data/shell.ui.h:2
 msgid "welcome"
@@ -73,149 +74,158 @@ msgstr "Myš"
 msgid "Files"
 msgstr "Súbory"
 
-#: ../gtweak/tweakmodel.py:48
+#: ../gtweak/tweakmodel.py:49
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
 # tema klavesovych skratiek, druhy vyskyt som nenasiel v programe
 # tyka sa to aj temy gnome-shell (Adwaita == default)
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:127
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:130
 msgid "<i>Default</i>"
 msgstr "<i>Predvolená</i>"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:38
+#: ../gtweak/tweaks/tweak_shell_extensions.py:39
 msgid "Extension downloading"
 msgstr "Rozšírenie sa sťahuje"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:40
+#: ../gtweak/tweaks/tweak_shell_extensions.py:41
 msgid "Error loading extension"
 msgstr "Chyba počas načítavania rozšírenia"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+#: ../gtweak/tweaks/tweak_shell_extensions.py:43
 msgid "Extension does not support shell version"
 msgstr "Rozšírenie nepodporuje verziu shellu"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:44
+#: ../gtweak/tweaks/tweak_shell_extensions.py:45
 msgid "Unknown extension error"
 msgstr "Neznáma chyba rozšírenia"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:75
+#: ../gtweak/tweaks/tweak_shell_extensions.py:81
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Aby sa prejavili zmeny, musíte reštartovať shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:76
-#: ../gtweak/tweaks/tweak_shell_extensions.py:148
+#: ../gtweak/tweaks/tweak_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_shell_extensions.py:173
 msgid "Restart"
 msgstr "Reštartovať"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_shell_extensions.py:88
+msgid "Uninstall Extension"
+msgstr "Odinštalovať rozšírenie"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:89
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Chcete odinštalovať rozšírenie „%s“?"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:105
 msgid "Install Shell Extension"
 msgstr "Nainštalovať rozšírenie shellu"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:87
+#: ../gtweak/tweaks/tweak_shell_extensions.py:110
 msgid "Select an extension"
 msgstr "Výber rozšírenia"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:94
+#: ../gtweak/tweaks/tweak_shell_extensions.py:117
 msgid "Get more extensions"
 msgstr "Získať viac rozšírení"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
+#: ../gtweak/tweaks/tweak_shell_extensions.py:167
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Rozšírenie %s bolo úspešne aktualizované"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:144
+#: ../gtweak/tweaks/tweak_shell_extensions.py:169
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Rozšírenie %s bolo úspešne nainštalované"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:152
+#: ../gtweak/tweaks/tweak_shell_extensions.py:177
 msgid "Error installing extension"
 msgstr "Chyba pri inštalácii rozšírenia"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:157
+#: ../gtweak/tweaks/tweak_shell_extensions.py:182
 msgid "Invalid extension"
 msgstr "Neplatné rozšírenie"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:165
+#: ../gtweak/tweaks/tweak_shell_extensions.py:190
 msgid "Shell Extensions"
 msgstr "Rozšírenia pre Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:44
+#: ../gtweak/tweaks/tweak_shell.py:48
 msgid "Close Only"
 msgstr "Iba zavrieť"
 
-#: ../gtweak/tweaks/tweak_shell.py:45
+#: ../gtweak/tweaks/tweak_shell.py:49
 msgid "Minimize and Close"
 msgstr "Minimalizovať a zavrieť"
 
-#: ../gtweak/tweaks/tweak_shell.py:46
+#: ../gtweak/tweaks/tweak_shell.py:50
 msgid "Maximize and Close"
 msgstr "Maximalizovať a zavrieť"
 
-#: ../gtweak/tweaks/tweak_shell.py:47
+#: ../gtweak/tweaks/tweak_shell.py:51
 msgid "All"
 msgstr "Všetky"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
+#: ../gtweak/tweaks/tweak_shell.py:67
 msgid "Shell theme"
 msgstr "Téma pre Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
+#: ../gtweak/tweaks/tweak_shell.py:67
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Nainštalovať vlastné alebo používateľské témy pre gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:64
+#: ../gtweak/tweaks/tweak_shell.py:70
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: ../gtweak/tweaks/tweak_shell.py:72
+#: ../gtweak/tweaks/tweak_shell.py:75
 msgid "Shell not running"
 msgstr "Shell nie je spustený"
 
-#: ../gtweak/tweaks/tweak_shell.py:94
+#: ../gtweak/tweaks/tweak_shell.py:97
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Rozšírenie s používateľskou témou shellu je nesprávne nainštalované"
 
-#: ../gtweak/tweaks/tweak_shell.py:97
+#: ../gtweak/tweaks/tweak_shell.py:100
 msgid "Shell user-theme extension not enabled"
 msgstr "Rozšírenie s používateľskou témou shellu nie je povolené"
 
-#: ../gtweak/tweaks/tweak_shell.py:100
+#: ../gtweak/tweaks/tweak_shell.py:103
 msgid "Could not list shell extensions"
 msgstr "Nepodarilo sa zobraziť rozšírenia shellu"
 
-#: ../gtweak/tweaks/tweak_shell.py:133
+#: ../gtweak/tweaks/tweak_shell.py:136
 msgid "Select a theme"
 msgstr "Výber témy"
 
-#: ../gtweak/tweaks/tweak_shell.py:184
+#: ../gtweak/tweaks/tweak_shell.py:187
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Téma %s bola úspešne aktualizovaná"
 
-#: ../gtweak/tweaks/tweak_shell.py:186
+#: ../gtweak/tweaks/tweak_shell.py:189
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Téma %s bola úspešne nainštalovaná"
 
-#: ../gtweak/tweaks/tweak_shell.py:194
+#: ../gtweak/tweaks/tweak_shell.py:197
 msgid "Error installing theme"
 msgstr "Chyba pri inštalácii témy"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:199
+#: ../gtweak/tweaks/tweak_shell.py:202
 msgid "Invalid theme"
 msgstr "Neplatná téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:223
+#: ../gtweak/tweaks/tweak_shell.py:227
 msgid "Dynamic workspaces"
 msgstr "Dynamické pracovné priestory"
 
-#: ../gtweak/tweaks/tweak_shell.py:223
+#: ../gtweak/tweaks/tweak_shell.py:227
 msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 msgstr ""
 "Zakázať správu dynamických pracovných priestorov prostredia gnome-shell, "
