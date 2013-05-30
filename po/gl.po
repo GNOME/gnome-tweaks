@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # fran <frandieguez@gnome.org>, 2011.
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-11-27 09:55+0100\n"
-"PO-Revision-Date: 2012-11-27 10:09+0200\n"
+"POT-Creation-Date: 2013-05-31 01:20+0200\n"
+"PO-Revision-Date: 2013-05-31 01:21+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -29,8 +29,11 @@ msgid "Tweak advanced GNOME 3 settings"
 msgstr "Axustes avanzados en GNOME 3"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;"
-msgstr "Preferencias;Avanzado;Configuracións;Extensións;Tipos de letra;Tema;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Preferencias;Avanzado;Configuracións;Extensións;Tipos de "
+"letra;Tema;XKB;Teclado;Escritura;"
 
 #: ../data/shell.ui.h:2
 msgid "welcome"
@@ -73,156 +76,164 @@ msgstr "Rato"
 msgid "Files"
 msgstr "Ficheiros"
 
-#: ../gtweak/tweakmodel.py:48
+#: ../gtweak/tweakmodel.py:49
 msgid "Miscellaneous"
 msgstr "Miscelánea"
 
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:117
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:130
 msgid "<i>Default</i>"
 msgstr "<i>Predeterminada</i>"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:38
+#: ../gtweak/tweaks/tweak_shell_extensions.py:43
 msgid "Extension downloading"
 msgstr "Descarga de extensións"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:40
+#: ../gtweak/tweaks/tweak_shell_extensions.py:45
 msgid "Error loading extension"
 msgstr "Produciuse un erro ao cargar a extensión"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+#: ../gtweak/tweaks/tweak_shell_extensions.py:47
 msgid "Extension does not support shell version"
 msgstr "A extensión non é compatíbel con esta versión do Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:44
+#: ../gtweak/tweaks/tweak_shell_extensions.py:49
 msgid "Unknown extension error"
 msgstr "Produciuse un erro descoñecido na extensión "
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:75
+#: ../gtweak/tweaks/tweak_shell_extensions.py:85
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Debe reiniciar o shell para que se apliquen os cambios"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:76
-#: ../gtweak/tweaks/tweak_shell_extensions.py:145
+#: ../gtweak/tweaks/tweak_shell_extensions.py:86
+#: ../gtweak/tweaks/tweak_shell_extensions.py:198
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_shell_extensions.py:92
+msgid "Uninstall Extension"
+msgstr "Desinstalar extensión"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:93
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Desexa desinstalar a extensión «%s»?"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:130
 msgid "Install Shell Extension"
 msgstr "Instalar extensión do Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:86
+#: ../gtweak/tweaks/tweak_shell_extensions.py:135
 msgid "Select an extension"
 msgstr "Seleccionar unha extensión"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:91
+#: ../gtweak/tweaks/tweak_shell_extensions.py:142
 msgid "Get more extensions"
 msgstr "Obter máis extensións"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:139
+#: ../gtweak/tweaks/tweak_shell_extensions.py:192
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Extensión %s anovada correctamente"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_shell_extensions.py:194
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Extensión %s instalada correctamente"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:149
+#: ../gtweak/tweaks/tweak_shell_extensions.py:202
 msgid "Error installing extension"
 msgstr "Produciuse un erro ao instalar a extensión"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:154
+#: ../gtweak/tweaks/tweak_shell_extensions.py:207
 msgid "Invalid extension"
 msgstr "Extensión non válida"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:162
+#: ../gtweak/tweaks/tweak_shell_extensions.py:215
 msgid "Shell Extensions"
 msgstr "Extensións do Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:38
+#: ../gtweak/tweaks/tweak_shell.py:48
 msgid "Close Only"
 msgstr "Só pechar"
 
-#: ../gtweak/tweaks/tweak_shell.py:39
+#: ../gtweak/tweaks/tweak_shell.py:49
 msgid "Minimize and Close"
 msgstr "Minimizar e pechar"
 
-#: ../gtweak/tweaks/tweak_shell.py:40
+#: ../gtweak/tweaks/tweak_shell.py:50
 msgid "Maximize and Close"
 msgstr "Maximizar e pechar"
 
-#: ../gtweak/tweaks/tweak_shell.py:41
+#: ../gtweak/tweaks/tweak_shell.py:51
 msgid "All"
 msgstr "Todos"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:67
 msgid "Shell theme"
 msgstr "Tema do Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:67
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Instalar temas de usuario ou personalizados para gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:58
+#: ../gtweak/tweaks/tweak_shell.py:70
 msgid "Unknown error"
 msgstr "Erro descoñecido"
 
-#: ../gtweak/tweaks/tweak_shell.py:63
+#: ../gtweak/tweaks/tweak_shell.py:75
 msgid "Shell not running"
 msgstr "Non se está executando o Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:84
+#: ../gtweak/tweaks/tweak_shell.py:97
 msgid "Shell user-theme extension incorrectly installed"
 msgstr ""
 "Non foi posíbel instalar correctamente a extensión do tema de usuario do "
 "Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:87
+#: ../gtweak/tweaks/tweak_shell.py:100
 msgid "Shell user-theme extension not enabled"
 msgstr "Extensión do tema de usuario do Shell non activado"
 
-#: ../gtweak/tweaks/tweak_shell.py:90
+#: ../gtweak/tweaks/tweak_shell.py:103
 msgid "Could not list shell extensions"
 msgstr "Non foi posíbel listar as extensión do Shell"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:122
+#: ../gtweak/tweaks/tweak_shell.py:136
 msgid "Select a theme"
 msgstr "Seleccionar un tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:171
+#: ../gtweak/tweaks/tweak_shell.py:187
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Tema %s actualizado correctamente"
 
-#: ../gtweak/tweaks/tweak_shell.py:173
+#: ../gtweak/tweaks/tweak_shell.py:189
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Tema %s instalado correctamente"
 
-#: ../gtweak/tweaks/tweak_shell.py:181
+#: ../gtweak/tweaks/tweak_shell.py:197
 msgid "Error installing theme"
 msgstr "Produciuse un erro ao instalar o tema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:186
+#: ../gtweak/tweaks/tweak_shell.py:202
 msgid "Invalid theme"
 msgstr "Tema non válido"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
+#: ../gtweak/tweaks/tweak_shell.py:227
 msgid "Dynamic workspaces"
 msgstr "Espazos de traballo dinámicos"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
+#: ../gtweak/tweaks/tweak_shell.py:227
 msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 msgstr ""
 "Desactivar a xestión dinámica de espazos de traballo de gnome-shell, usar "
 "espazos de traballo estáticos"
 
-#: ../gtweak/tweaks/tweak_typing.py:38 ../gtweak/tweaks/tweak_windows.py:51
+#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:50
 msgid "Disabled"
 msgstr "Desactivado"
 
@@ -232,15 +243,15 @@ msgstr "Desactivado"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predeterminado)</i>"
 
-#: ../gtweak/widgets.py:318
+#: ../gtweak/widgets.py:345
 msgid "Enable dark theme for all applications"
 msgstr "Activar o tema escuro para todos os aplicativos"
 
-#: ../gtweak/widgets.py:319
+#: ../gtweak/widgets.py:346
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Activar a suxestión de tema escuro para todos os aplicativos na sesión"
 
-#: ../gtweak/widgets.py:337
+#: ../gtweak/widgets.py:364
 msgid "Error writing setting"
 msgstr "Produciuse un erro ao gravar a configuración"
 
