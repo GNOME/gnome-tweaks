@@ -24,8 +24,10 @@ from gtweak.tweakmodel import Tweak
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
 from gtweak.gtksettings import GtkSettingsManager
 from gtweak.gconf import GConfSetting
+from gtweak.gshellwrapper import GnomeShellFactory
 
 UI_BOX_SPACING = 4
+_shell = GnomeShellFactory().get_shell()
 
 def build_label_beside_widget(txt, *widget, **kwargs):
     """
@@ -118,8 +120,26 @@ def build_tight_button(stock_id):
     button.get_style_context().add_provider(provider, 600) 
     return button
 
+def adjust_schema_for_overrides(originalSchema, key, options):
+    if (_shell is None):
+        return originalSchema
+
+    if (_shell.mode == 'classic'):
+        overridesSchema = "org.gnome.shell.extensions.classic-overrides"
+        overridesFile = None
+    else:
+        overridesSchema = "org.gnome.shell.overrides"
+        overridesFile = "org.gnome.shell.gschema.xml"
+
+    if (key in Gio.Settings(overridesSchema).list_keys()):
+        options['schema_filename'] = overridesFile
+        return overridesSchema
+    return originalSchema
+
+
 class _GSettingsTweak(Tweak):
     def __init__(self, schema_name, key_name, **options):
+        schema_name = adjust_schema_for_overrides(schema_name, key_name, options)
         self.schema_name = schema_name
         self.key_name = key_name
         try:

@@ -28,28 +28,20 @@ from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_wit
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME, TWEAK_GROUP_SHELL, TWEAK_SORT_LAST
-from gtweak.widgets import FileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING
+from gtweak.widgets import FileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, adjust_schema_for_overrides, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
 class ShowWindowButtons(GSettingsComboTweak):
     def __init__(self, **options):
-        if (_shell is not None) and (_shell.mode in ['gdm', 'initial-setup', 'user']):
-            schema = "org.gnome.shell.overrides"
-            filename = "org.gnome.shell.gschema.xml"
-        else:
-            schema = "org.gnome.desktop.wm.preferences"
-            filename = None
-
         GSettingsComboTweak.__init__(self,
-            schema,
+            "org.gnome.desktop.wm.preferences",
             "button-layout",
             ((':close', _("Close Only")),
             (':minimize,close', _("Minimize and Close")),
             (':maximize,close', _("Maximize and Close")),
             (':minimize,maximize,close', _("All"))),
-            schema_filename=filename,
             loaded=_shell_loaded,
             **options)
 
@@ -214,16 +206,11 @@ class StaticWorkspaceTweak(Tweak):
     NUM_WORKSPACES_SCHEMA = "org.gnome.desktop.wm.preferences"
     NUM_WORKSPACES_KEY = "num-workspaces"
 
-    if (_shell is not None) and (_shell.mode in ['gdm', 'initial-setup', 'user']):
-        DYNAMIC_SCHEMA = "org.gnome.shell.overrides"
-        DYNAMIC_SCHEMA_FILENAME = "org.gnome.shell.gschema.xml"
-    else:
-        DYNAMIC_SCHEMA = "org.gnome.mutter"
-        DYNAMIC_SCHEMA_FILENAME = None
-
     DYNAMIC_KEY = "dynamic-workspaces"
+    DYNAMIC_SCHEMA = "org.gnome.mutter"
 
     def __init__(self, **options):
+        schema = adjust_schema_for_overrides(self.DYNAMIC_SCHEMA, self.DYNAMIC_KEY, options)
         Tweak.__init__(self, _("Dynamic workspaces"), _("Disable gnome-shell dynamic workspace management, use static workspaces"), **options)
 
         try:
@@ -233,7 +220,7 @@ class StaticWorkspaceTweak(Tweak):
             nwsettings = GSettingsFakeSetting()
 
         try:
-            dsettings = GSettingsSetting(self.DYNAMIC_SCHEMA, schema_filename=self.DYNAMIC_SCHEMA_FILENAME, **options)
+            dsettings = GSettingsSetting(schema, **options)
         except GSettingsMissingError:
             self.loaded = False
             dsettings = GSettingsFakeSetting()
@@ -273,6 +260,6 @@ TWEAK_GROUPS = (
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg),
             GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup", size_group=sg),
-            GSettingsSwitchTweak("org.gnome.shell.overrides", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
+            GSettingsSwitchTweak("org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
             StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded)),
 )
