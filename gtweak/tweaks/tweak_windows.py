@@ -51,5 +51,5 @@ TWEAKS = (
                         group_name=TWEAK_GROUP_WINDOWS),
     GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "resize-with-right-button", group_name=TWEAK_GROUP_WINDOWS),
     GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "raise-on-click", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsSwitchTweak("org.gnome.shell.overrides", "attach-modal-dialogs", schema_filename="org.gnome.shell.gschema.xml", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsSwitchTweak("org.gnome.mutter", "attach-modal-dialogs", group_name=TWEAK_GROUP_WINDOWS),
 )
