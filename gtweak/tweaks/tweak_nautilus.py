@@ -25,6 +25,7 @@ from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboEnumTweak, GSetti
 class DesktopIconTweak(GSettingsSwitchTweak):
     def __init__(self, **options):
         GSettingsSwitchTweak.__init__(self,
+			"Icons on Desktop",
             "org.gnome.desktop.background",
             "show-desktop-icons",
             **options)
@@ -47,13 +48,12 @@ dicons = DesktopIconTweak(group_name=TWEAK_GROUP_DESKTOP)
 
 TWEAKS = (
     dicons,
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "computer-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "home-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.preferences", "always-use-location-entry",
-schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILES),
-    GSettingsComboEnumTweak("org.gnome.desktop.background", "picture-options", group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsFileChooserButtonTweak("org.gnome.desktop.background", "picture-uri", local_only=True, mimetypes=["application/xml","image/png","image/jpeg"], group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("Computer","org.gnome.nautilus.desktop", "computer-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("Home","org.gnome.nautilus.desktop", "home-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("Network Servers","org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("Trash","org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("Mounted Volumes","org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    #GSettingsSwitchTweak("org.gnome.nautilus.preferences", "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILES),
+    #GSettingsComboEnumTweak("org.gnome.desktop.background", "picture-options", group_name=TWEAK_GROUP_DESKTOP),
+    #GSettingsFileChooserButtonTweak("org.gnome.desktop.background", "picture-uri", local_only=True, mimetypes=["application/xml","image/png","image/jpeg"], group_name=TWEAK_GROUP_DESKTOP),
 )

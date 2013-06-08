@@ -132,7 +132,8 @@ TWEAK_GROUPS = (
 )
 
 TWEAKS = (
-    GSettingsSwitchTweak("org.gnome.desktop.input-sources",
+    GSettingsSwitchTweak("Show All Sources",
+                         "org.gnome.desktop.input-sources",
                          "show-all-sources",
                          logout_required=True,
                          group_name=TWEAK_GROUP_TYPING),

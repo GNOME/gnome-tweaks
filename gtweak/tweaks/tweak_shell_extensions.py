@@ -15,6 +15,7 @@ from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.widgets import FileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING
 from gtweak.egowrapper import ExtensionsDotGnomeDotOrg
+from gtweak.utils import DisableExtension
 
 def N_(x): return x
 
@@ -62,6 +63,9 @@ class _ShellExtensionTweak(Tweak):
             deleteButton.connect("clicked", self._on_extension_delete, uuid, ext["name"])
             widgets.append(deleteButton)
 
+        de = DisableExtension()
+        de.connect('disable-extension', self._on_disable_extension, sw)
+         
         widgets.append(sw)
 
         self.widget = build_label_beside_widget(
@@ -69,6 +73,9 @@ class _ShellExtensionTweak(Tweak):
                         *widgets,
                         warning=warning)
         self.widget_for_size_group = None
+
+    def _on_disable_extension(self, de, sw):
+        sw.set_active(False)
 
     def _on_configure_clicked(self, btn, uuid):
         execute_subprocess(['gnome-shell-extension-prefs', uuid], block=False)
@@ -211,7 +218,7 @@ class _ShellExtensionInstallerTweak(Tweak):
 
 class ShellExtensionTweakGroup(TweakGroup):
     def __init__(self):
-        TweakGroup.__init__(self, N_("Shell Extensions"))
+        TweakGroup.__init__(self, N_("Extensions"))
 
         extension_tweaks = []
         sg = build_horizontal_sizegroup()

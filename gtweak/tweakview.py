@@ -23,7 +23,7 @@ from gi.repository import Gtk, Gdk, GObject
 import gtweak.tweakmodel
 from gtweak.tweakmodel import TweakModel
 
-DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_SHELL
+DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_APPEARANCE
 WIDGET_SORT_ORDER = (Gtk.Switch, Gtk.SpinButton, Gtk.ComboBox, Gtk.Box, Gtk.VBox, Gtk.HBox)
 
 def _sort_tweak_widgets_by_widget_type(tweak):
@@ -43,21 +43,32 @@ class TweakView:
         self._notebook = builder.get_object('notebook')
         self._detail_vbox = builder.get_object('detail_vbox')
 
+        self.headerbar = Gtk.HeaderBar()
+        searchToggle = Gtk.ToggleButton()
+        searchToggle.add(Gtk.Image.new_from_stock(Gtk.STOCK_FIND, Gtk.IconSize.MENU))
+
+        top = builder.get_object('topbox')
+        top.pack_start(self.headerbar, True, True, 0)
+        
+        self.headerbar.pack_start(searchToggle)
+        leftbox = builder.get_object('leftbox')
+        revealer = Gtk.Revealer();
+
+        entry = Gtk.SearchEntry()
         self._entry_manager = EntryManager(
-            builder.get_object('search_entry'),
+            entry,
             self._on_search,
             self._on_search_cancel)
 
+        revealer.add(entry)
+        leftbox.pack_start(revealer, False, True, 0)
+        searchToggle.connect("toggled", self.transition, entry, revealer)
         self._model = model
         self._model.load_tweaks()
-
-        self.treeview = Gtk.TreeView(model=model)        
-        self.treeview.props.headers_visible = False
-        self.treeview.append_column(
-                Gtk.TreeViewColumn(
-                        "Tweak", Gtk.CellRendererText(), text=TweakModel.COLUMN_NAME))
-        self.treeview.get_selection().connect("changed", self._on_selection_changed)
-        self.treeview.show_all()
+        groups = self._model._tweak_group_names.keys()
+ 	groups = sorted(groups)
+        listbox = self.init_listbox(groups)
+        leftbox.pack_start(listbox, True, True, 0)
 
         #make sure the tweak background is the correct color
         ctx = builder.get_object('tweak_viewport').get_style_context ()
@@ -77,9 +88,13 @@ class TweakView:
         self._notification_functions = {}
 
     def run(self):
-        self.treeview.get_selection().select_iter(
-                self._model.get_tweakgroup_iter(DEFAULT_TWEAKGROUP))
-
+        itere = self._model.get_tweakgroup_iter(DEFAULT_TWEAKGROUP)  
+        self._on_pre_selection_change()
+        tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
+        self.show_only_tweaks(tweakgroup.tweaks)
+        self._on_post_selection_change()
+        self.headerbar.set_title(tweakgroup.name)
+	
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
             if t in tweaks:
@@ -88,7 +103,7 @@ class TweakView:
                 t.widget.hide()
 
     def select_none(self):
-        self.treeview.get_selection().unselect_all()
+        print "filter"
 
     def _on_tweak_notify_response(self, info, response, func):
         self._detail_vbox.remove(info)
@@ -138,17 +153,38 @@ class TweakView:
     def _on_post_selection_change(self):
         self._notebook.set_current_page(1)
 
-    def _on_selection_changed(self, selection):
-        t1 = datetime.datetime.now()
-        model, selected = selection.get_selected()
-        if selected:
+    def _on_selection_changed(self, lista, row):
+        if row is not None:
+            text = row.get_child().get_text()
+            itere = self._model._tweak_group_iters[text]
             self._on_pre_selection_change()
-            tweakgroup = model.get_value(selected, model.COLUMN_TWEAK)
+            tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
             self.show_only_tweaks(tweakgroup.tweaks)
             self._on_post_selection_change()
-        t2 = datetime.datetime.now()
-        #print "TTTTTT=",t2-t1
-            
+            self.headerbar.set_title(tweakgroup.name)  
+    
+    def init_listbox(self, values):
+        listbox = Gtk.ListBox()
+        for i in values:
+            lbl = Gtk.Label(i)
+            lbl.props.xalign = 0.0
+            row = Gtk.ListBoxRow()
+            listbox.add(lbl)
+        widget = listbox.get_row_at_index(0)
+        listbox.select_row (widget)        
+        listbox.connect("row-selected", self._on_selection_changed)
+        return listbox          
+    
+    def transition(self, btn, entry, revealer):
+        if revealer.get_reveal_child():
+            revealer.set_reveal_child(False) 
+            entry.set_text("") 
+            btn.grab_focus()      
+        else:
+            revealer.set_reveal_child(True)
+            entry.grab_focus()
+
+
 class EntryManager:
 
     SYMBOLIC = "-symbolic"

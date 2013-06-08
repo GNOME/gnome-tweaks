@@ -21,12 +21,13 @@ from gi.repository import GLib
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
-from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, TWEAK_GROUP_THEME
-from gtweak.widgets import GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak
+from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, TWEAK_GROUP_APPEARANCE, TWEAK_SORT_FIRST, TWEAK_SORT_LAST
+from gtweak.widgets import GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, Title
 
 class WindowThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
+			"Window",
             "org.gnome.desktop.wm.preferences",
             "theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
@@ -40,16 +41,17 @@ class WindowThemeSwitcher(GSettingsComboTweak):
         return valid
 
 TWEAKS = (
-    WindowThemeSwitcher(group_name=TWEAK_GROUP_THEME),
-    GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "action-double-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "action-middle-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "action-right-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsComboEnumTweak("org.gnome.desktop.wm.preferences", "focus-mode", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsComboTweak("org.gnome.desktop.wm.preferences",
-                        "mouse-button-modifier",
-                        [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")],
-                        group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "resize-with-right-button", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "raise-on-click", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsSwitchTweak("org.gnome.mutter", "attach-modal-dialogs", group_name=TWEAK_GROUP_WINDOWS),
+	GSettingsComboEnumTweak("Focus Mode", "org.gnome.desktop.wm.preferences", "focus-mode", group_name=TWEAK_GROUP_WINDOWS),    
+	WindowThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
+	Title("Titlebar Actions", "", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsComboEnumTweak("Double-click","org.gnome.desktop.wm.preferences", "action-double-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsComboEnumTweak("Middle-click","org.gnome.desktop.wm.preferences", "action-middle-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    GSettingsComboEnumTweak("Secondary-click","org.gnome.desktop.wm.preferences", "action-right-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
+    #GSettingsComboTweak("org.gnome.desktop.wm.preferences",
+    #                    "mouse-button-modifier",
+    #                    [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")],
+    #                    group_name=TWEAK_GROUP_WINDOWS),
+    #GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "resize-with-right-button", group_name=TWEAK_GROUP_WINDOWS),
+    #GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "raise-on-click", group_name=TWEAK_GROUP_WINDOWS),
+    #GSettingsSwitchTweak("org.gnome.mutter", "attach-modal-dialogs", group_name=TWEAK_GROUP_WINDOWS),
 )

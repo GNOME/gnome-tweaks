@@ -22,12 +22,13 @@ from gi.repository import GLib
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
-from gtweak.tweakmodel import TWEAK_GROUP_THEME
-from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher
+from gtweak.tweakmodel import TWEAK_GROUP_APPEARANCE, TWEAK_GROUP_KEYBOARD, TWEAK_SORT_FIRST
+from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher, Title
 
 class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
+			"GTK+",
             "org.gnome.desktop.interface",
             "gtk-theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
@@ -46,7 +47,8 @@ class GtkThemeSwitcher(GSettingsComboTweak):
 class IconThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-            "org.gnome.desktop.interface",
+			"Icons",            
+			"org.gnome.desktop.interface",
             "icon-theme",
             make_combo_list_with_default(self._get_valid_icon_themes(), "gnome"),
             **options)
@@ -63,6 +65,7 @@ class IconThemeSwitcher(GSettingsComboTweak):
 class CursorThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
+			"Cursor",
             "org.gnome.desktop.interface",
             "cursor-theme",
             make_combo_list_with_default(self._get_valid_cursor_themes(), "Adwaita"),
@@ -80,6 +83,7 @@ class CursorThemeSwitcher(GSettingsComboTweak):
 class KeyThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
+			"Key",
             "org.gnome.desktop.interface",
             "gtk-key-theme",
             make_combo_list_with_default(
@@ -98,11 +102,12 @@ class KeyThemeSwitcher(GSettingsComboTweak):
         return valid
 
 TWEAKS = (
-    GSettingsSwitchTweak("org.gnome.desktop.interface", "menus-have-icons", group_name=TWEAK_GROUP_THEME),
-    GSettingsSwitchTweak("org.gnome.desktop.interface", "buttons-have-icons", group_name=TWEAK_GROUP_THEME),
-    DarkThemeSwitcher(group_name=TWEAK_GROUP_THEME),
-    CursorThemeSwitcher(group_name=TWEAK_GROUP_THEME),
-    KeyThemeSwitcher(group_name=TWEAK_GROUP_THEME),
-    IconThemeSwitcher(group_name=TWEAK_GROUP_THEME),
-    GtkThemeSwitcher(group_name=TWEAK_GROUP_THEME),
+    #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons", group_name=TWEAK_GROUP_APPEARANCE),
+	#GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons", group_name=TWEAK_GROUP_APPEARANCE),
+    DarkThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
+	Title("Theme", "", group_name=TWEAK_GROUP_APPEARANCE),     
+    KeyThemeSwitcher(group_name=TWEAK_GROUP_KEYBOARD),
+    GtkThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
+	IconThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
+    CursorThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
 )

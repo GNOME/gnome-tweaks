@@ -24,6 +24,7 @@ import subprocess
 import gtweak
 from gtweak.gsettings import GSettingsSetting
 
+from gi.repository import GObject
 from gi.repository import GLib
 from gi.repository import Gio
 def singleton(cls):
@@ -245,6 +246,18 @@ class SchemaList:
         for i in SchemaList.__list:
             s = Gio.Settings(i[1])
             s.reset(i[0])
+@singleton
+class DisableExtension(GObject.GObject):
+    
+    __gsignals__ = {
+        "disable-extension": (GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE,()),
+    }    
+    
+    def __init__(self):
+        GObject.GObject.__init__(self)
+    
+    def disable(self):
+        self.emit("disable-extension")
 
 @singleton
 class XSettingsOverrides:

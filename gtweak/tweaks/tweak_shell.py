@@ -27,8 +27,8 @@ from gi.repository import Gtk, GLib, GObject, Gio
 from gtweak.utils import walk_directories, extract_zip_file, make_combo_list_with_default
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_THEME, TWEAK_GROUP_SHELL, TWEAK_SORT_LAST
-from gtweak.widgets import FileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, adjust_schema_for_overrides, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING
+from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_APPEARANCE, TWEAK_GROUP_TOPBAR, TWEAK_GROUP_WINDOWS, TWEAK_GROUP_WORKSPACES, TWEAK_GROUP_POWER, TWEAK_SORT_FIRST, TWEAK_SORT_LAST
+from gtweak.widgets import FileChooserButton, GSettingsComboTweak, GSettingsComboEnumTweak, GSettingsSwitchTweak, adjust_schema_for_overrides, build_label_beside_widget, build_horizontal_sizegroup, build_combo_box_text, UI_BOX_SPACING, Title
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -36,6 +36,7 @@ _shell_loaded = _shell is not None
 class ShowWindowButtons(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
+			"Title Bar Buttons",
             "org.gnome.desktop.wm.preferences",
             "button-layout",
             ((':close', _("Close Only")),
@@ -245,21 +246,24 @@ class StaticWorkspaceTweak(Tweak):
 sg = build_horizontal_sizegroup()
 
 TWEAKS = (
-    ShellThemeTweak(group_name=TWEAK_GROUP_THEME, loaded=_shell_loaded),
+    ShellThemeTweak(group_name=TWEAK_GROUP_APPEARANCE, loaded=_shell_loaded),
+	ShowWindowButtons(group_name=TWEAK_GROUP_WINDOWS, size_group=sg),
+	StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded, group_name=TWEAK_GROUP_WORKSPACES),
+    GSettingsComboEnumTweak("Power Button Action", "org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg, group_name=TWEAK_GROUP_POWER, sort=TWEAK_SORT_FIRST),
+	Title("When Laptop Lid is Closed", "", group_name=TWEAK_GROUP_POWER),
+	#GSettingsSwitchTweak("org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
+    GSettingsComboEnumTweak("On Battery Power","org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg, group_name=TWEAK_GROUP_POWER),
+   	GSettingsComboEnumTweak("When plugged in","org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg, group_name=TWEAK_GROUP_POWER),
+    
 )
 
 TWEAK_GROUPS = (
         TweakGroup(
-            TWEAK_GROUP_SHELL,
-            GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-            GSettingsSwitchTweak("org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-            GSettingsSwitchTweak("org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
-            ShowWindowButtons(size_group=sg),
-            GSettingsSwitchTweak("org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
-            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
-            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
-            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg),
-            GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup", size_group=sg),
-            GSettingsSwitchTweak("org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
-            StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded)),
+            TWEAK_GROUP_TOPBAR,
+            GSettingsSwitchTweak("Show date","org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
+            GSettingsSwitchTweak("Show seconds", "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
+            GSettingsSwitchTweak("Show week numbers","org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
+            #GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup", size_group=sg),
+            #GSettingsSwitchTweak("org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),	
+		),
 )

@@ -25,8 +25,10 @@ from gtweak.tweakmodel import TweakModel
 from gtweak.tweakview import TweakView
 from gtweak.utils import SchemaList
 from gtweak.gshellwrapper import GnomeShellFactory
+from gtweak.utils import DisableExtension
         
 class GnomeTweakTool(Gtk.Application):
+
     def __init__(self):
         Gtk.Application.__init__(self,application_id="org.gnome.TweakTool")
     
@@ -35,12 +37,9 @@ class GnomeTweakTool(Gtk.Application):
         self.win.set_position(Gtk.WindowPosition.CENTER)
         self.win.set_application(self)
         self.win.set_size_request(720, 580)
-        toolbar = self.builder.get_object('toolbar')
-        toolbar.get_style_context().add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
         
         model = TweakModel()
         view = TweakView(self.builder, model)
-        self.builder.get_object('overview_sw').add(view.treeview)
         
         self.win.show_all()
         view.run()
@@ -58,7 +57,11 @@ class GnomeTweakTool(Gtk.Application):
 
         reset_action = Gio.SimpleAction.new("reset", None)
         reset_action.connect("activate", self.reset_cb)
-        self.add_action(reset_action)        
+        self.add_action(reset_action)      
+
+        disable_extension_action = Gio.SimpleAction.new("disable_extension", None)
+        disable_extension_action.connect("activate", self.disable_cb)
+        self.add_action(disable_extension_action)  
 
         help_action = Gio.SimpleAction.new("help", None)
         help_action.connect("activate", self.help_cb)
@@ -72,7 +75,6 @@ class GnomeTweakTool(Gtk.Application):
         quit_action.connect("activate", self.quit_cb)
         self.add_action(quit_action)
 
-
     def reset_cb(self, action, parameter):
         dialog = Gtk.MessageDialog(self.win,0, Gtk.MessageType.QUESTION,
                     Gtk.ButtonsType.OK_CANCEL, "Reset to Defaults")
@@ -85,6 +87,10 @@ class GnomeTweakTool(Gtk.Application):
             
     def help_cb(self, action, parameter):
         print "This does nothing. It is only a demonstration."
+
+    def disable_cb(self, action, parameter):
+        ds = DisableExtension()
+        ds.disable()
 
     def about_cb(self, action, parameter):
         aboutdialog = Gtk.AboutDialog()
@@ -113,4 +119,4 @@ class GnomeTweakTool(Gtk.Application):
 
     def quit_cb(self, action, parameter):
         self.quit()
-    
+
