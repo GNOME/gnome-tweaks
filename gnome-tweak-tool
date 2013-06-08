@@ -18,11 +18,14 @@ import optparse
 import logging
 import locale
 import gettext
+import sys
 
 import gi
 gi.require_version("Gtk", "3.0")
 
 import gtweak
+from gi.repository import GObject
+GObject.threads_init()
 
 if __name__ == '__main__':
     parser = optparse.OptionParser()
@@ -71,6 +74,8 @@ if __name__ == '__main__':
     locale.setlocale(locale.LC_ALL, None)
     gettext.install(gtweak.APP_NAME, LOCALE_DIR, names=('gettext', 'ngettext'))
 
-    from gtweak.mainwindow import MainWindow
-    MainWindow()
+    from gtweak.app import GnomeTweakTool
+    app = GnomeTweakTool()
+    exit_status = app.run(None)
+    sys.exit(exit_status)
 

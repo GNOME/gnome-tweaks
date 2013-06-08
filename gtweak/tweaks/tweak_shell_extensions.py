@@ -17,7 +17,6 @@ from gtweak.widgets import FileChooserButton, build_label_beside_widget, build_h
 from gtweak.egowrapper import ExtensionsDotGnomeDotOrg
 
 def N_(x): return x
-GObject.threads_init()
 
 class _ShellExtensionTweak(Tweak):
 

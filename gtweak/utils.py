@@ -25,7 +25,7 @@ import gtweak
 from gtweak.gsettings import GSettingsSetting
 
 from gi.repository import GLib
-
+from gi.repository import Gio
 def singleton(cls):
     """
     Singleton decorator that works with GObject derived types. The 'recommended'
@@ -224,6 +224,27 @@ class AutostartManager:
 
             old.close()
             new.close()
+
+class SchemaList:
+
+    __list = None
+
+    def __init__(self):
+
+        if SchemaList.__list == None:
+            SchemaList.__list = []
+            
+    def get(self):
+        return SchemaList.__list
+    
+    def insert(self, key_name, schema_name):
+        v = [key_name, schema_name]
+        SchemaList.__list.append(v)
+    
+    def reset(self):
+        for i in SchemaList.__list:
+            s = Gio.Settings(i[1])
+            s.reset(i[0])
 
 if __name__ == "__main__":
     gtweak.DATA_DIR = "/usr/share"

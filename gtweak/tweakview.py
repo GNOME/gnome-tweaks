@@ -42,12 +42,6 @@ class TweakView:
     def __init__(self, builder, model):
         self._notebook = builder.get_object('notebook')
         self._detail_vbox = builder.get_object('detail_vbox')
-        self._main_window = builder.get_object('main_window')
-
-        self._main_window.props.title = gettext(self._main_window.props.title)
-
-        self._main_window.set_size_request(740, 636)
-        self._main_window.connect('destroy', Gtk.main_quit)
 
         self._entry_manager = EntryManager(
             builder.get_object('search_entry'),
@@ -63,6 +57,7 @@ class TweakView:
                 Gtk.TreeViewColumn(
                         "Tweak", Gtk.CellRendererText(), text=TweakModel.COLUMN_NAME))
         self.treeview.get_selection().connect("changed", self._on_selection_changed)
+        self.treeview.show_all()
 
         #make sure the tweak background is the correct color
         ctx = builder.get_object('tweak_viewport').get_style_context ()
@@ -75,7 +70,6 @@ class TweakView:
         #add all tweaks
         self._tweak_vbox = builder.get_object('tweak_vbox')
         for t in sorted(self._model.tweaks, key=_sort_tweak_widgets_by_widget_type):
-            t.main_window = self._main_window
             self._tweak_vbox.pack_start(t.widget, False, False, 0)
             t.set_notify_cb(self._on_tweak_notify)
 
@@ -83,10 +77,8 @@ class TweakView:
         self._notification_functions = {}
 
     def run(self):
-        self._main_window.show_all()
         self.treeview.get_selection().select_iter(
                 self._model.get_tweakgroup_iter(DEFAULT_TWEAKGROUP))
-        Gtk.main()
 
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:

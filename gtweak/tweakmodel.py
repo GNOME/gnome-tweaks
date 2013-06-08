@@ -20,7 +20,7 @@ import glob
 import os.path
 
 import gtweak
-
+from gtweak.utils import SchemaList
 from gi.repository import Gtk
 
 def N_(x): return x
@@ -149,13 +149,23 @@ class TweakModel(Gtk.ListStore):
         for mod in [getattr(mods, file_name) for file_name in tweak_files]:
             groups.extend( getattr(mod, "TWEAK_GROUPS", []) )
             tweaks.extend( getattr(mod, "TWEAKS", []) )
-
+            
+        schemas = SchemaList() 
+   
         for g in groups:
             if g.tweaks:
                 self.add_tweak_group(g)
-
+                for i in g.tweaks:
+                    try:
+                        schemas.insert(i.key_name, i.schema_name)
+                    except:
+                        pass
         for t in tweaks:
             self.add_tweak_auto_to_group(t)
+            try:
+                schemas.insert(t.key_name, t.schema_name)
+            except:
+                pass
 
     def add_tweak_group(self, tweakgroup):
         if tweakgroup.name in self._tweak_group_names:
