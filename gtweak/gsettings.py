@@ -113,10 +113,12 @@ class GSettingsFakeSetting:
 
 class GSettingsSetting(Gio.Settings):
     def __init__(self, schema_name, schema_dir=None, schema_path=None, **options):
+
         if schema_dir is None:
-            if schema_name not in _GSETTINGS_SCHEMAS and \
-               (schema_path is not None and \
-                schema_name not in _GSETTINGS_RELOCATABLE_SCHEMAS):
+            if schema_path is None and schema_name not in _GSETTINGS_SCHEMAS:
+                raise GSettingsMissingError(schema_name)
+
+            if schema_path is not None and schema_name not in _GSETTINGS_RELOCATABLE_SCHEMAS:
                 raise GSettingsMissingError(schema_name)
 
             if schema_path is None:
