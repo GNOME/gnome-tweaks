@@ -156,7 +156,7 @@ class AutostartManager:
     def uses_autostart_condition(self, autostart_type=None):
         asc = self.get_autostart_condition()
         try:
-            if autostart_type:
+            if asc and autostart_type:
                 return asc.split(" ", 1)[0] == autostart_type
             else:
                 return asc != None
