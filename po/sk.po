@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-05-15 13:08+0000\n"
-"PO-Revision-Date: 2013-05-18 16:35+0100\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"POT-Creation-Date: 2013-06-13 19:50+0000\n"
+"PO-Revision-Date: 2013-07-01 17:38+0100\n"
+"Last-Translator: Ján Kyselica <kyselica.jan@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -83,7 +83,7 @@ msgstr "Rôzne"
 
 # tema klavesovych skratiek, druhy vyskyt som nenasiel v programe
 # tyka sa to aj temy gnome-shell (Adwaita == default)
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:130
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:122
 msgid "<i>Default</i>"
 msgstr "<i>Predvolená</i>"
 
@@ -157,79 +157,79 @@ msgstr "Neplatné rozšírenie"
 msgid "Shell Extensions"
 msgstr "Rozšírenia pre Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:48
+#: ../gtweak/tweaks/tweak_shell.py:41
 msgid "Close Only"
 msgstr "Iba zavrieť"
 
-#: ../gtweak/tweaks/tweak_shell.py:49
+#: ../gtweak/tweaks/tweak_shell.py:42
 msgid "Minimize and Close"
 msgstr "Minimalizovať a zavrieť"
 
-#: ../gtweak/tweaks/tweak_shell.py:50
+#: ../gtweak/tweaks/tweak_shell.py:43
 msgid "Maximize and Close"
 msgstr "Maximalizovať a zavrieť"
 
-#: ../gtweak/tweaks/tweak_shell.py:51
+#: ../gtweak/tweaks/tweak_shell.py:44
 msgid "All"
 msgstr "Všetky"
 
-#: ../gtweak/tweaks/tweak_shell.py:67
+#: ../gtweak/tweaks/tweak_shell.py:59
 msgid "Shell theme"
 msgstr "Téma pre Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:67
+#: ../gtweak/tweaks/tweak_shell.py:59
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Nainštalovať vlastné alebo používateľské témy pre gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:70
+#: ../gtweak/tweaks/tweak_shell.py:62
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: ../gtweak/tweaks/tweak_shell.py:75
+#: ../gtweak/tweaks/tweak_shell.py:67
 msgid "Shell not running"
 msgstr "Shell nie je spustený"
 
-#: ../gtweak/tweaks/tweak_shell.py:97
+#: ../gtweak/tweaks/tweak_shell.py:89
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Rozšírenie s používateľskou témou shellu je nesprávne nainštalované"
 
-#: ../gtweak/tweaks/tweak_shell.py:100
+#: ../gtweak/tweaks/tweak_shell.py:92
 msgid "Shell user-theme extension not enabled"
 msgstr "Rozšírenie s používateľskou témou shellu nie je povolené"
 
-#: ../gtweak/tweaks/tweak_shell.py:103
+#: ../gtweak/tweaks/tweak_shell.py:95
 msgid "Could not list shell extensions"
 msgstr "Nepodarilo sa zobraziť rozšírenia shellu"
 
-#: ../gtweak/tweaks/tweak_shell.py:136
+#: ../gtweak/tweaks/tweak_shell.py:128
 msgid "Select a theme"
 msgstr "Výber témy"
 
-#: ../gtweak/tweaks/tweak_shell.py:187
+#: ../gtweak/tweaks/tweak_shell.py:179
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Téma %s bola úspešne aktualizovaná"
 
-#: ../gtweak/tweaks/tweak_shell.py:189
+#: ../gtweak/tweaks/tweak_shell.py:181
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Téma %s bola úspešne nainštalovaná"
 
-#: ../gtweak/tweaks/tweak_shell.py:197
+#: ../gtweak/tweaks/tweak_shell.py:189
 msgid "Error installing theme"
 msgstr "Chyba pri inštalácii témy"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:202
+#: ../gtweak/tweaks/tweak_shell.py:194
 msgid "Invalid theme"
 msgstr "Neplatná téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:227
+#: ../gtweak/tweaks/tweak_shell.py:214
 msgid "Dynamic workspaces"
 msgstr "Dynamické pracovné priestory"
 
-#: ../gtweak/tweaks/tweak_shell.py:227
+#: ../gtweak/tweaks/tweak_shell.py:214
 msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 msgstr ""
 "Zakázať správu dynamických pracovných priestorov prostredia gnome-shell, "
@@ -239,21 +239,25 @@ msgstr ""
 msgid "Disabled"
 msgstr "Zakázané"
 
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Wacom"
+
 #. indicates the default theme, e.g Adwaita (default)
 #: ../gtweak/utils.py:67
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predvolená)</i>"
 
-#: ../gtweak/widgets.py:345
+#: ../gtweak/widgets.py:365
 msgid "Enable dark theme for all applications"
 msgstr "Povoliť tmavú tému pre všetky aplikácie"
 
-# description 
-#: ../gtweak/widgets.py:346
+# description
+#: ../gtweak/widgets.py:366
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Povolí radu o tmavej téme pre všetky aplikácie v relácii"
 
-#: ../gtweak/widgets.py:364
+#: ../gtweak/widgets.py:384
 msgid "Error writing setting"
 msgstr "Chyba pri zapisovaní nastavení"
