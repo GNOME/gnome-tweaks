@@ -43,6 +43,14 @@ def build_label_beside_widget(txt, *widget, **kwargs):
         image.set_tooltip_text(tip)
         return image
 
+    def show_tooltip_when_ellipsized(label, x, y, keyboard_mode, tooltip):
+        layout = label.get_layout()
+        if layout.is_ellipsized():
+            tooltip.set_text(label.get_text())
+            return True
+        else:
+            return False
+
     if kwargs.get("hbox"):
         hbox = kwargs.get("hbox")
     else:
@@ -52,6 +60,8 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     lbl = Gtk.Label(txt)
     lbl.props.ellipsize = Pango.EllipsizeMode.END
     lbl.props.xalign = 0.0
+    lbl.set_has_tooltip(True)
+    lbl.connect("query-tooltip", show_tooltip_when_ellipsized)
     hbox.pack_start(lbl, True, True, 0)
 
     if kwargs.get("info"):
