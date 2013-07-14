@@ -23,7 +23,6 @@ from gi.repository import GLib, Gtk, Gdk, Gio, Pango
 from gtweak.tweakmodel import Tweak
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
 from gtweak.gtksettings import GtkSettingsManager
-from gtweak.gconf import GConfSetting
 from gtweak.gshellwrapper import GnomeShellFactory
 
 UI_BOX_SPACING = 4
@@ -287,50 +286,6 @@ class GSettingsComboTweak(_GSettingsTweak):
         if _iter:
             value = combo.get_model().get_value(_iter, 0)
             self.settings.set_string(self.key_name, value)
-
-class _GConfTweak(Tweak):
-    def __init__(self, key_name, key_type, **options):
-        self.gconf = GConfSetting(key_name, key_type)
-        Tweak.__init__(self,
-            options.get("summary",self.gconf.schema_get_summary()),
-            options.get("description",self.gconf.schema_get_description()),
-            **options)
-
-class GConfComboTweak(_GConfTweak):
-    def __init__(self, key_name, key_type, key_options, **options):
-        _GConfTweak.__init__(self, key_name, key_type, **options)
-
-        #check key_options is iterable
-        #and if supplied, check it is a list of 2-tuples
-        assert len(key_options) >= 0
-        if len(key_options):
-            assert len(key_options[0]) == 2
-
-        combo = build_combo_box_text(
-            self.gconf.get_value(),
-            *key_options)
-        combo.connect('changed', self._on_combo_changed)
-        self.widget = build_label_beside_widget(self.name, combo)
-        self.widget_for_size_group = combo
-
-    def _on_combo_changed(self, combo):
-        _iter = combo.get_active_iter()
-        if _iter:
-            value = combo.get_model().get_value(_iter, 0)
-            self.gconf.set_value(value)
-
-class GConfFontButtonTweak(_GConfTweak):
-    def __init__(self, key_name, key_type, **options):
-        _GConfTweak.__init__(self, key_name, key_type, **options)
-
-        w = Gtk.FontButton()
-        w.props.font_name = self.gconf.get_value()
-        w.connect("notify::font-name", self._on_fontbutton_changed)
-        self.widget = build_label_beside_widget(self.name, w)
-        self.widget_for_size_group = w
-
-    def _on_fontbutton_changed(self, btn, param):
-        self.gconf.set_value(btn.props.font_name)
 
 class FileChooserButton(Gtk.FileChooserButton):
     def __init__(self, title, local_only, mimetypes):

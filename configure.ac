@@ -12,11 +12,6 @@ PKG_CHECK_MODULES([GSETTINGS_DESKTOP_SCHEMAS], [gsettings-desktop-schemas >= $DE
 PKG_CHECK_MODULES([PYGOBJECT3], [pygobject-3.0 >= $PYGOBJECT_REQUIRED_VERSION],,
     [PKG_CHECK_MODULES([PYGOBJECT2], [pygobject-2.0 >= 2.28.0])])
 
-AC_CHECK_PROG(GCONFTOOL,gconftool-2,gconftool-2,no)
-if test "$GCONFTOOL" = no ; then
-	AC_MSG_ERROR(Cannot find gconftool-2)
-fi
-
 IT_PROG_INTLTOOL([0.40.0])
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.17])
