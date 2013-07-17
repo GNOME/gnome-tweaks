@@ -43,13 +43,15 @@ class DesktopIconTweak(GSettingsSwitchTweak):
         self.nautilus.update_start_at_login(
                 self.settings.get_boolean(key))
 
+dicons = DesktopIconTweak(group_name=TWEAK_GROUP_DESKTOP)
+
 TWEAKS = (
-    DesktopIconTweak(group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "computer-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "home-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "network-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "trash-icon-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "volumes-visible", schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    dicons,
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "computer-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "home-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
+    GSettingsSwitchTweak("org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
     GSettingsSwitchTweak("org.gnome.nautilus.preferences", "always-use-location-entry",
 schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILES),
     GSettingsComboEnumTweak("org.gnome.desktop.background", "picture-options", group_name=TWEAK_GROUP_DESKTOP),
