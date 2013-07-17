@@ -168,6 +168,17 @@ class _GSettingsTweak(Tweak):
             self.loaded = False
             logging.info("GSettings missing key %s (key %s)" % (schema_name, key_name))
 
+        if options.get("logout_required") and self.loaded:
+            self.settings.connect("changed::%s" % key_name, self._on_changed_notify_logout)
+
+    def _on_changed_notify_logout(self, settings, key_name):
+        self.notify_action_required(
+                "Configuration changes require restart",
+                btn="Restart Session",
+                func=None,
+                need_logout=True,
+        )
+
 
 class GSettingsSwitchTweak(_GSettingsTweak):
     def __init__(self, schema_name, key_name, **options):

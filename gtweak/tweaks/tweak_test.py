@@ -28,9 +28,9 @@ class _TestInfoTweak(Tweak):
 
         self.widget = build_label_beside_widget(
                         name,
-                        Gtk.Button(options.get("test_button_name",name)),
-                        info=options.get("tweak_info"),
-                        warning=options.get("tweak_warning"))
+                        Gtk.Button(options.get("_test_button_name",name)),
+                        info=options.get("_tweak_info"),
+                        warning=options.get("_tweak_warning"))
 
 class _TestTweak(Tweak):
     def __init__(self, name, description, **options):
@@ -42,8 +42,9 @@ class _TestButtonTweak(Tweak):
         Tweak.__init__(self, name, description, **options)
         self.widget = Gtk.Button(name)
         self.widget.connect("clicked", self._on_click)
-        self._need_action = options.get("need_action")
-        self._action_error = options.get("action_error")
+        self._need_action = options.get("_need_action")
+        self._action_error = options.get("_action_error")
+        self._need_logout = options.get("_need_logout")
 
     def _on_click(self, sender):
         if self._need_action:
@@ -51,6 +52,13 @@ class _TestButtonTweak(Tweak):
                     self.name,
                     Gtk.STOCK_OK,
                     lambda : print("GOT CALLBACK"))
+        elif self._need_logout:
+            self.notify_action_required(
+                    self.name,
+                    Gtk.STOCK_OK,
+                    func=None,
+                    need_logout=True,
+            )
         else:
             if self._action_error:
                 self.notify_error(self.name)
@@ -68,11 +76,12 @@ group_name = "Test Settings"
 TWEAKS = (
     _TestTweak("foo bar", "does foo bar", group_name=group_name),
     _TestTweak("foo baz", "does foo baz", group_name=group_name),
-    _TestInfoTweak("long string "*10, "long description "*10, test_button_name="short",group_name=group_name),
-    _TestInfoTweak("foo info", "info widget", tweak_info="Information", group_name=group_name),
-    _TestInfoTweak("foo warning", "info widget", tweak_warning="Warning", group_name=group_name),
-    _TestButtonTweak("Need Action", "foo bar", need_action=True, group_name=group_name),
-    _TestButtonTweak("Report Error", "foo baz", action_error=True, group_name=group_name),
-    _TestButtonTweak("Report Info", "foo bob", action_error=False, group_name=group_name),
+    _TestInfoTweak("long string "*10, "long description "*10, _test_button_name="short",group_name=group_name),
+    _TestInfoTweak("foo info", "info widget", _tweak_info="Information", group_name=group_name),
+    _TestInfoTweak("foo warning", "info widget", _tweak_warning="Warning", group_name=group_name),
+    _TestButtonTweak("Need Action", "foo bar", _need_action=True, group_name=group_name),
+    _TestButtonTweak("Report Error", "foo baz", _action_error=True, group_name=group_name),
+    _TestButtonTweak("Report Info", "foo bob", _action_error=False, group_name=group_name),
+    _TestButtonTweak("Need Log Out", "foo bar log", _need_logout=True, group_name=group_name),
 )
 

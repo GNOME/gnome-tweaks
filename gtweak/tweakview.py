@@ -106,7 +106,10 @@ class TweakView:
         except KeyError:
             logging.warning("Could not remove notification function")
 
-    def _on_tweak_notify(self, tweak, desc, error, btn, func):
+    def _on_tweak_notify(self, tweak, desc, error, btn, func, need_logout):
+        #if need to log out, do this as a notification area thing, not a note inside
+        #the main window
+
         info = Gtk.InfoBar()
         info.get_content_area().add(Gtk.Label(desc))
 

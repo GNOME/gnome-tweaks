@@ -74,17 +74,17 @@ class Tweak:
     def set_notify_cb(self, func):
         self._notify_cb = func
 
-    def notify_action_required(self, desc, btn, func, error=False):
+    def notify_action_required(self, desc, btn, func, need_logout=False):
         if self._notify_cb:
-            self._notify_cb(self, desc, error, btn, func)
+            self._notify_cb(self, desc, error=False, btn=btn, func=func, need_logout=need_logout)
 
-    def notify_error(self, desc):
+    def notify_error(self, desc, need_logout=False):
         if self._notify_cb:
-            self._notify_cb(self, desc, True, None, None)
+            self._notify_cb(self, desc, error=True, btn=None, func=None, need_logout=need_logout)
 
-    def notify_info(self, desc):
+    def notify_info(self, desc, need_logout=False):
         if self._notify_cb:
-            self._notify_cb(self, desc, False, None, None)
+            self._notify_cb(self, desc, error=False, btn=None, func=None, need_logout=need_logout)
 
 class TweakGroup:
     def __init__(self, name, *tweaks):
