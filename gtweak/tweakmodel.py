@@ -52,7 +52,7 @@ class Tweak:
 
         self._search_cache = None
 
-        #FIXME: I would have rather done this as a GObject signal, but it
+        #FIXME: I would have rather done these as a GObject signal, but it
         #would prohibit other tweaks from inheriting from GtkWidgets
         self._notify_cb = None
 
