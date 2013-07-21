@@ -24,6 +24,7 @@ import gtweak
 from gtweak.tweakmodel import TweakModel
 from gtweak.tweakview import TweakView
 from gtweak.utils import SchemaList
+from gtweak.gshellwrapper import GnomeShellFactory
         
 class GnomeTweakTool(Gtk.Application):
     def __init__(self):
@@ -82,14 +83,20 @@ class GnomeTweakTool(Gtk.Application):
             s.reset()
         dialog.destroy()
             
-            
     def help_cb(self, action, parameter):
         print "This does nothing. It is only a demonstration."
 
     def about_cb(self, action, parameter):
         aboutdialog = Gtk.AboutDialog()
         aboutdialog.set_title("About Gnome Tweak Tool")
-        aboutdialog.set_program_name("Gnome Tweak Tool")            
+        aboutdialog.set_program_name("Gnome Tweak Tool")
+
+        _shell = GnomeShellFactory().get_shell()
+        if _shell is not None:
+            aboutdialog.set_comments("Gnome Shell v%s (%s mode)" % (_shell.version, _shell.mode))
+        else:
+            aboutdialog.set_comments("Gnome Shell not running")
+
         aboutdialog.set_copyright("Copyright \xc2\xa9 2011 - 2013 John Stowers.")
         aboutdialog.set_logo_icon_name("gnome-tweak-tool")
         aboutdialog.set_website("http://live.gnome.org/GnomeTweakTool") 
