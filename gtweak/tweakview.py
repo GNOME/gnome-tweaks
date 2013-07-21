@@ -22,6 +22,7 @@ from gi.repository import Gtk, Gdk, GObject
 
 import gtweak.tweakmodel
 from gtweak.tweakmodel import TweakModel
+from gtweak.utils import Notification
 
 DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_APPEARANCE
 WIDGET_SORT_ORDER = (Gtk.Switch, Gtk.SpinButton, Gtk.ComboBox, Gtk.Box, Gtk.VBox, Gtk.HBox)
@@ -116,7 +117,11 @@ class TweakView:
     def _on_tweak_notify(self, tweak, desc, error, btn, func, need_logout):
         #if need to log out, do this as a notification area thing, not a note inside
         #the main window
-
+        
+        if need_logout:
+            notification = Notification()
+            notification.show()
+        
         info = Gtk.InfoBar()
         info.get_content_area().add(Gtk.Label(desc))
 

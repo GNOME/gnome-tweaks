@@ -20,6 +20,7 @@ import logging
 import tempfile
 import shutil
 import subprocess
+import dbus
 
 import gtweak
 from gtweak.gsettings import GSettingsSetting
@@ -27,6 +28,8 @@ from gtweak.gsettings import GSettingsSetting
 from gi.repository import GObject
 from gi.repository import GLib
 from gi.repository import Gio
+from gi.repository import Notify
+
 def singleton(cls):
     """
     Singleton decorator that works with GObject derived types. The 'recommended'
@@ -309,6 +312,23 @@ class XSettingsOverrides:
     def get_enable_primary_paste(self):
         self._get_override('Gtk/EnablePrimaryPaste', True)
 
+class Notification:
+    def __init__(self):       
+        self.notification = None
+        if Notify.is_initted() or Notify.init("GNOME Tweak Tool"):
+            self.notification = Notify.Notification.new("Configuration changes requiere restart","Your session needs to be restarted for settings to take effect", 'gnome-tweak-tool')
+            self.notification.add_action("restart", "Restart Session",self.logout,None,None)
+        else:
+            print "Error: Could not create the notification"
+
+    def show(self):
+        if self.notification:
+            self.notification.show()
+
+    def logout(self, btn, action, unknown):
+        bus = dbus.SessionBus()
+        serviceManager = bus.get_object('org.gnome.SessionManager', '/org/gnome/SessionManager')
+        serviceManager.Logout(dbus.UInt32(0))
 
 if __name__ == "__main__":
     gtweak.DATA_DIR = "/usr/share"
