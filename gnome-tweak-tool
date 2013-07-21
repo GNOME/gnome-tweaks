@@ -31,6 +31,8 @@ if __name__ == '__main__':
     parser = optparse.OptionParser()
     parser.add_option("-t", "--test", action="store_true",
                   help="Enable test and debug code")
+    parser.add_option("-l", "--load", action="store_true",
+                  help="Load all tweaks")
     parser.add_option("-p", "--prefix",
                   help="Installation prefix (for gsettings schema, themes, etc)", metavar="[/, /usr]")
     parser.add_option("-v", "--verbose", action="store_true",
@@ -62,6 +64,7 @@ if __name__ == '__main__':
     gtweak.PKG_DATA_DIR = PKG_DATA_DIR
     gtweak.LOCALE_DIR = LOCALE_DIR
     gtweak.ENABLE_TEST = options.test
+    gtweak.ALL_TWEAKS = options.load
     gtweak.APP_NAME = "gnome-tweak-tool"
     gtweak.VERBOSE = options.verbose
 
