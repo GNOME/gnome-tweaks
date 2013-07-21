@@ -21,7 +21,6 @@ from gtweak.tweakmodel import Tweak, TWEAK_GROUP_FONTS, TWEAK_SORT_FIRST, TWEAK_
 from gtweak.widgets import GSettingsSpinButtonTweak, GSettingsFontButtonTweak, GSettingsComboTweak
 
 TWEAKS = (
-    #GSettingsSpinButtonTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, digits=1, group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("Interface","org.gnome.desktop.interface", "font-name", group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("Documents", "org.gnome.desktop.interface", "document-font-name", group_name=TWEAK_GROUP_FONTS),
     GSettingsFontButtonTweak("Monospace", "org.gnome.desktop.interface", "monospace-font-name", group_name=TWEAK_GROUP_FONTS),

@@ -251,19 +251,16 @@ TWEAKS = (
 	StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded, group_name=TWEAK_GROUP_WORKSPACES),
     GSettingsComboEnumTweak("Power Button Action", "org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg, group_name=TWEAK_GROUP_POWER, sort=TWEAK_SORT_FIRST),
 	Title("When Laptop Lid is Closed", "", group_name=TWEAK_GROUP_POWER),
-	#GSettingsSwitchTweak("org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
     GSettingsComboEnumTweak("On Battery Power","org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg, group_name=TWEAK_GROUP_POWER),
    	GSettingsComboEnumTweak("When plugged in","org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg, group_name=TWEAK_GROUP_POWER),
     
 )
 
 TWEAK_GROUPS = (
-        TweakGroup(
-            TWEAK_GROUP_TOPBAR,
-            GSettingsSwitchTweak("Show date","org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-            GSettingsSwitchTweak("Show seconds", "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-            GSettingsSwitchTweak("Show week numbers","org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
-            #GSettingsComboEnumTweak("org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup", size_group=sg),
-            #GSettingsSwitchTweak("org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),	
-		),
+    TweakGroup(
+        TWEAK_GROUP_TOPBAR,
+        GSettingsSwitchTweak("Show date","org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
+        GSettingsSwitchTweak("Show seconds", "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
+        GSettingsSwitchTweak("Show week numbers","org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
+        ),
 )

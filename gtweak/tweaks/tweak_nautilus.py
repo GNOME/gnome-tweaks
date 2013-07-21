@@ -19,7 +19,7 @@ from gi.repository import Gtk
 
 import gtweak
 from gtweak.utils import AutostartManager
-from gtweak.tweakmodel import TWEAK_GROUP_DESKTOP, TWEAK_GROUP_FILES
+from gtweak.tweakmodel import TWEAK_GROUP_DESKTOP
 from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboEnumTweak, GSettingsFileChooserButtonTweak
 
 class DesktopIconTweak(GSettingsSwitchTweak):
@@ -53,7 +53,4 @@ TWEAKS = (
     GSettingsSwitchTweak("Network Servers","org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
     GSettingsSwitchTweak("Trash","org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
     GSettingsSwitchTweak("Mounted Volumes","org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    #GSettingsSwitchTweak("org.gnome.nautilus.preferences", "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILES),
-    #GSettingsComboEnumTweak("org.gnome.desktop.background", "picture-options", group_name=TWEAK_GROUP_DESKTOP),
-    #GSettingsFileChooserButtonTweak("org.gnome.desktop.background", "picture-uri", local_only=True, mimetypes=["application/xml","image/png","image/jpeg"], group_name=TWEAK_GROUP_DESKTOP),
 )

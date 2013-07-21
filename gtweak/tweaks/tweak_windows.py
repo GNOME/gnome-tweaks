@@ -47,11 +47,4 @@ TWEAKS = (
     GSettingsComboEnumTweak("Double-click","org.gnome.desktop.wm.preferences", "action-double-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
     GSettingsComboEnumTweak("Middle-click","org.gnome.desktop.wm.preferences", "action-middle-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
     GSettingsComboEnumTweak("Secondary-click","org.gnome.desktop.wm.preferences", "action-right-click-titlebar", group_name=TWEAK_GROUP_WINDOWS),
-    #GSettingsComboTweak("org.gnome.desktop.wm.preferences",
-    #                    "mouse-button-modifier",
-    #                    [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")],
-    #                    group_name=TWEAK_GROUP_WINDOWS),
-    #GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "resize-with-right-button", group_name=TWEAK_GROUP_WINDOWS),
-    #GSettingsSwitchTweak("org.gnome.desktop.wm.preferences", "raise-on-click", group_name=TWEAK_GROUP_WINDOWS),
-    #GSettingsSwitchTweak("org.gnome.mutter", "attach-modal-dialogs", group_name=TWEAK_GROUP_WINDOWS),
 )
