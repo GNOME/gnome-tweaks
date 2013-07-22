@@ -88,14 +88,14 @@ class GnomeTweakTool(Gtk.Application):
 
     def about_cb(self, action, parameter):
         aboutdialog = Gtk.AboutDialog()
-        aboutdialog.set_title("About Gnome Tweak Tool")
-        aboutdialog.set_program_name("Gnome Tweak Tool")
+        aboutdialog.set_title("About GNOME Tweak Tool")
+        aboutdialog.set_program_name("GNOME Tweak Tool")
 
         _shell = GnomeShellFactory().get_shell()
         if _shell is not None:
-            aboutdialog.set_comments("Gnome Shell v%s (%s mode)" % (_shell.version, _shell.mode))
+            aboutdialog.set_comments("GNOME Shell v%s (%s mode)" % (_shell.version, _shell.mode))
         else:
-            aboutdialog.set_comments("Gnome Shell not running")
+            aboutdialog.set_comments("GNOME Shell not running")
 
         aboutdialog.set_copyright("Copyright \xc2\xa9 2011 - 2013 John Stowers.")
         aboutdialog.set_logo_icon_name("gnome-tweak-tool")
