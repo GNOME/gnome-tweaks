@@ -326,9 +326,14 @@ class Notification:
             self.notification.show()
 
     def logout(self, btn, action, unknown):
-        bus = dbus.SessionBus()
-        serviceManager = bus.get_object('org.gnome.SessionManager', '/org/gnome/SessionManager')
-        serviceManager.Logout(dbus.UInt32(0))
+        d = Gio.bus_get_sync(Gio.BusType.SESSION, None)
+        proxy = Gio.DBusProxy.new_sync(
+                       d,Gio.DBusProxyFlags.NONE, None,
+                       'org.gnome.SessionManager', 
+                       '/org/gnome/SessionManager', 
+                       'org.gnome.SessionManager',
+                       None)
+        proxy.Logout('(u)', 0)
 
 if __name__ == "__main__":
     gtweak.DATA_DIR = "/usr/share"
