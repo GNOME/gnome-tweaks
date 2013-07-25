@@ -79,22 +79,24 @@ class TweakView:
                                  "}\n")
         ctx.add_provider (provider,6000)
 
-        #add all tweaks
+        self.stack = Gtk.Stack()
+        for g in groups:
+            itere = self._model.get_tweakgroup_iter(g)  
+            tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
+            box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+            for t in sorted(tweakgroup.tweaks, key=_sort_tweak_widgets_by_widget_type):            
+                box.pack_start(t.widget, False, False, 5)
+                t.set_notify_cb(self._on_tweak_notify)
+            self.stack.add_named(box, g)
         self._tweak_vbox = builder.get_object('tweak_vbox')
-        for t in sorted(self._model.tweaks, key=_sort_tweak_widgets_by_widget_type):
-            self._tweak_vbox.pack_start(t.widget, False, False, 0)
-            t.set_notify_cb(self._on_tweak_notify)
-
+        self._tweak_vbox.pack_start(self.stack, False, False, 0)
+        self._on_post_selection_change()
         #dict of pending notifications, the key is the function to be called
         self._notification_functions = {}
 
     def run(self):
-        itere = self._model.get_tweakgroup_iter(DEFAULT_TWEAKGROUP)  
-        self._on_pre_selection_change()
-        tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
-        self.show_only_tweaks(tweakgroup.tweaks)
-        self._on_post_selection_change()
-        self.headerbar.set_title(tweakgroup.name)
+        self.stack.set_visible_child_name(DEFAULT_TWEAKGROUP)  
+        self.headerbar.set_title(DEFAULT_TWEAKGROUP)
 	
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
@@ -160,14 +162,10 @@ class TweakView:
 
     def _on_selection_changed(self, lista, row):
         if row is not None:
-            text = row.get_child().get_text()
-            itere = self._model._tweak_group_iters[text]
-            self._on_pre_selection_change()
-            tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
-            self.show_only_tweaks(tweakgroup.tweaks)
-            self._on_post_selection_change()
-            self.headerbar.set_title(tweakgroup.name)  
-    
+            text = row.get_child().get_text()  
+            self.stack.set_visible_child_name(text)
+            self.headerbar.set_title(text)
+
     def init_listbox(self, values):
         listbox = Gtk.ListBox()
         for i in values:
