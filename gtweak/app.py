@@ -31,18 +31,21 @@ class GnomeTweakTool(Gtk.Application):
 
     def __init__(self):
         Gtk.Application.__init__(self,application_id="org.gnome.TweakTool")
-    
-    def do_activate(self):                                           
-        self.win = self.builder.get_object('main_window')
-        self.win.set_position(Gtk.WindowPosition.CENTER)
-        self.win.set_application(self)
-        self.win.set_size_request(720, 580)
+        self.win = None
+
+    def do_activate(self):
+        if not self.win:
+            self.win = self.builder.get_object('main_window')
+            self.win.set_position(Gtk.WindowPosition.CENTER)
+            self.win.set_application(self)
+            self.win.set_size_request(720, 580)
         
-        model = TweakModel()
-        view = TweakView(self.builder, model)
-        
-        self.win.show_all()
-        view.run()
+            model = TweakModel()
+            view = TweakView(self.builder, model)
+            
+            self.win.show_all()
+            view.run()
+        self.win.present()
         
     def do_startup(self):
         Gtk.Application.do_startup(self)
