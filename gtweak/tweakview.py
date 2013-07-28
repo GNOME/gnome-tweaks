@@ -80,6 +80,7 @@ class TweakView:
         ctx.add_provider (provider,6000)
 
         self.stack = Gtk.Stack()
+        self.stack.set_homogeneous(False)
         for g in groups:
             itere = self._model.get_tweakgroup_iter(g)  
             tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
