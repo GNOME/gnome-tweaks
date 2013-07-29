@@ -71,10 +71,8 @@ class Tweak:
 
     def search_matches(self, txt):
         if self._search_cache == None:
-            self._search_cache = set([i.strip(" .,\n'\"").lower() for j in (
-                    self.name.split(' '),self.description.split(' ')) for i in j])
-
-        return txt.strip().lower() in self._search_cache
+            self._search_cache = self.name.lower() + " " + self.description.lower()
+        return  txt in self._search_cache
 
     def set_notify_cb(self, func):
         self._notify_cb = func
@@ -200,7 +198,16 @@ class TweakModel(Gtk.ListStore):
         group.set_tweaks(tweak)
       
     def search_matches(self, txt):
-        return (t for t in self.tweaks if t.search_matches(txt))
+        tweaks = []                                          
+        groups = []                                                             
+        
+        for g in self.tweak_groups:
+            for t in  g.tweaks:                                             
+                if t.search_matches(txt): 
+                    tweaks.append(t)
+                    if not g.name in groups:                          
+                        groups.append(g.name)
+        return tweaks, groups 
 
     def get_tweakgroup_iter(self, name):
         return self._tweak_group_iters[name]

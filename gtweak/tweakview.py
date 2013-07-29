@@ -68,8 +68,8 @@ class TweakView:
         self._model.load_tweaks()
         groups = self._model._tweak_group_names.keys()
  	groups = sorted(groups)
-        listbox = self.init_listbox(groups)
-        leftbox.pack_start(listbox, True, True, 0)
+        self.listbox = self.init_listbox(groups)
+        leftbox.pack_start(self.listbox, True, True, 0)
 
         #make sure the tweak background is the correct color
         ctx = builder.get_object('tweak_viewport').get_style_context ()
@@ -106,8 +106,18 @@ class TweakView:
             else:
                 t.widget.hide()
 
-    def select_none(self):
-        print "filter"
+    def on_list_changed(self, groups):
+        self.listbox.set_filter_func(self.on_list_filtered,groups)
+        selected = self.listbox.get_selected_row().get_child().get_text()
+        if groups and not selected in groups:
+            index =  sorted(self._model._tweak_group_names.keys()).index(groups[0])
+            row = self.listbox.get_row_at_index(index)
+            self.listbox.select_row(row)
+        
+    def on_list_filtered(self, row, groups):
+        lbl = row.get_child()
+        if lbl.get_text() in groups:
+            return row        
 
     def _on_tweak_notify_response(self, info, response, func):
         self._detail_vbox.remove(info)
@@ -147,13 +157,16 @@ class TweakView:
         info.show_all()
 
     def _on_search(self, txt):
-        tweaks = self._model.search_matches(txt)
+        tweaks, group = self._model.search_matches(txt)
         self.show_only_tweaks(tweaks)
-        self.select_none()
+        self.on_list_changed(group)
         self._notebook.set_current_page(1)
 
     def _on_search_cancel(self):
-        self._notebook.set_current_page(0)
+        self.stack.show_all()
+        groups = self._model._tweak_group_names.keys()
+        groups = sorted(groups)
+        self.on_list_changed(groups)
 
     def _on_pre_selection_change(self):
         self._notebook.set_current_page(0)
@@ -183,7 +196,8 @@ class TweakView:
         if revealer.get_reveal_child():
             revealer.set_reveal_child(False) 
             entry.set_text("") 
-            btn.grab_focus()      
+            btn.grab_focus()
+            self._on_search_cancel()
         else:
             revealer.set_reveal_child(True)
             entry.grab_focus()
@@ -197,13 +211,14 @@ class EntryManager:
         self._entry = search_entry
         self._search_cb = search_cb
         self._search_cancel_cb = search_cancel_cb
-        self._entry.connect("changed", self._on_changed)
+        self._entry.connect("changed", self._search)
         self._entry.connect("key-press-event", self._on_key_press)
         self._entry.connect("icon-release", self._on_clear_icon_release)
-        self._on_changed(self._entry)
+        self._on_changed()
 
-    def _search(self):
-        txt = self._entry.get_text()
+    def _search(self, entry):
+        txt = entry.get_text()
+        self._on_changed()
         if txt:
             self._search_cb(txt)
 
@@ -211,7 +226,7 @@ class EntryManager:
         self._search_cancel_cb()
         self._entry.set_text("")
         
-    def _on_changed(self, entry):
+    def _on_changed(self):
         if not self._entry.get_text():
             self._entry.set_properties(
                     secondary_icon_name="edit-find" + EntryManager.SYMBOLIC,
