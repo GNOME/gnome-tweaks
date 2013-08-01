@@ -43,15 +43,20 @@ class TweakView:
     def __init__(self, builder, model):
         self._notebook = builder.get_object('notebook')
         self._detail_vbox = builder.get_object('detail_vbox')
+        top = builder.get_object('topbox')
+        topleft = builder.get_object('topleft')
 
         self.headerbar = Gtk.HeaderBar()
+        top.pack_start(self.headerbar, True, True, 0)
+
+
+        headleft = Gtk.HeaderBar()
+	headleft.set_title("Tweaks")
         searchToggle = Gtk.ToggleButton()
         searchToggle.add(Gtk.Image.new_from_stock(Gtk.STOCK_FIND, Gtk.IconSize.MENU))
+        headleft.pack_start(searchToggle)
+        topleft.pack_start(headleft, True, True, 0)
 
-        top = builder.get_object('topbox')
-        top.pack_start(self.headerbar, True, True, 0)
-        
-        self.headerbar.pack_start(searchToggle)
         leftbox = builder.get_object('leftbox')
         revealer = Gtk.Revealer();
 
