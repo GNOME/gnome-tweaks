@@ -81,7 +81,7 @@ class TweakView:
         for g in groups:
             itere = self._model.get_tweakgroup_iter(g)  
             tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
-            box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+            box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, border_width=20)
             for t in sorted(tweakgroup.tweaks, key=_sort_tweak_widgets_by_widget_type):            
                 box.pack_start(t.widget, False, False, 5)
                 t.set_notify_cb(self._on_tweak_notify)
