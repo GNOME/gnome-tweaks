@@ -61,10 +61,7 @@ class TweakView:
         revealer = Gtk.Revealer();
 
         entry = Gtk.SearchEntry()
-        self._entry_manager = EntryManager(
-            entry,
-            self._on_search,
-            self._on_search_cancel)
+        entry.connect("search-changed", self._on_search)
 
         revealer.add(entry)
         leftbox.pack_start(revealer, False, True, 0)
@@ -153,17 +150,12 @@ class TweakView:
 
         info.show_all()
 
-    def _on_search(self, txt):
+    def _on_search(self, entry):
+        txt = entry.get_text()
         tweaks, group = self._model.search_matches(txt)
         self.show_only_tweaks(tweaks)
         self.on_list_changed(group)
         self._notebook.set_current_page(1)
-
-    def _on_search_cancel(self):
-        self.stack.show_all()
-        groups = self._model._tweak_group_names.keys()
-        groups = sorted(groups)
-        self.on_list_changed(groups)
 
     def _on_pre_selection_change(self):
         self._notebook.set_current_page(0)
@@ -199,49 +191,4 @@ class TweakView:
             revealer.set_reveal_child(True)
             entry.grab_focus()
 
-
-class EntryManager:
-
-    SYMBOLIC = "-symbolic"
-
-    def __init__(self, search_entry, search_cb, search_cancel_cb):
-        self._entry = search_entry
-        self._search_cb = search_cb
-        self._search_cancel_cb = search_cancel_cb
-        self._entry.connect("changed", self._search)
-        self._entry.connect("key-press-event", self._on_key_press)
-        self._entry.connect("icon-release", self._on_clear_icon_release)
-        self._on_changed()
-
-    def _search(self, entry):
-        txt = entry.get_text()
-        self._on_changed()
-        if txt:
-            self._search_cb(txt)
-
-    def _search_cancel(self):
-        self._search_cancel_cb()
-        self._entry.set_text("")
-        
-    def _on_changed(self):
-        if not self._entry.get_text():
-            self._entry.set_properties(
-                    secondary_icon_name="edit-find" + EntryManager.SYMBOLIC,
-                    secondary_icon_activatable=False,
-                    secondary_icon_sensitive=False)
-        else:
-            self._entry.set_properties(
-                    secondary_icon_name="edit-clear" + EntryManager.SYMBOLIC,
-                    secondary_icon_activatable=True,
-                    secondary_icon_sensitive=True)
-    
-    def _on_key_press(self, entry, event):
-        if event.keyval == Gdk.KEY_Return:
-            self._search()
-        elif event.keyval == Gdk.KEY_Escape:
-            self._search_cancel()
-    
-    def _on_clear_icon_release(self, *args):
-        self._search_cancel()
-        
 
