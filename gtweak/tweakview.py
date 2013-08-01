@@ -76,14 +76,6 @@ class TweakView:
         self.listbox = self.init_listbox(groups)
         leftbox.pack_start(self.listbox, True, True, 0)
 
-        #make sure the tweak background is the correct color
-        ctx = builder.get_object('tweak_viewport').get_style_context ()
-        provider = Gtk.CssProvider()
-        provider.load_from_data ("GtkViewport {\n"
-                                 "   background-color: @theme_bg_color;\n"
-                                 "}\n")
-        ctx.add_provider (provider,6000)
-
         self.stack = Gtk.Stack()
         self.stack.set_homogeneous(False)
         for g in groups:
