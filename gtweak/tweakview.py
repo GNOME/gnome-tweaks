@@ -72,7 +72,7 @@ class TweakView:
  	groups = sorted(groups)
         self.listbox = self.init_listbox(groups)
         leftbox.pack_start(self.listbox, True, True, 0)
-
+        self.listbox.set_header_func(self._on_header_func, None)        
         self.stack = Gtk.Stack()
         self.stack.set_homogeneous(False)
         for g in groups:
@@ -88,6 +88,20 @@ class TweakView:
         self._on_post_selection_change()
         #dict of pending notifications, the key is the function to be called
         self._notification_functions = {}
+        css = """
+	#row
+	{
+		padding: 10px;
+	}
+
+	"""
+	css_provider = Gtk.CssProvider()
+	css_provider.load_from_data(css)
+        screen = Gdk.Screen.get_default()
+	context = Gtk.StyleContext()
+	context.add_provider_for_screen(screen, css_provider,
+                                Gtk.STYLE_PROVIDER_PRIORITY_USER)
+
 
     def run(self):
         self.stack.set_visible_child_name(DEFAULT_TWEAKGROUP)  
@@ -174,8 +188,10 @@ class TweakView:
         for i in values:
             lbl = Gtk.Label(i)
             lbl.props.xalign = 0.0
+            lbl.set_name('row')
             row = Gtk.ListBoxRow()
-            listbox.add(lbl)
+            row.add(lbl)
+            listbox.add(row)
         widget = listbox.get_row_at_index(0)
         listbox.select_row (widget)        
         listbox.connect("row-selected", self._on_selection_changed)
@@ -191,4 +207,7 @@ class TweakView:
             revealer.set_reveal_child(True)
             entry.grab_focus()
 
-
+    def _on_header_func(self, row, before, user_data):
+        if not row.get_header():
+            separator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
+            row.set_header(separator)
