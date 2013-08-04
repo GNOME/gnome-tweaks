@@ -246,6 +246,57 @@ class SchemaList:
             s = Gio.Settings(i[1])
             s.reset(i[0])
 
+@singleton
+class XSettingsOverrides:
+
+    VARIANT_TYPES = {
+        'Gtk/ShellShowsAppMenu': GLib.Variant.new_int32,
+        'Gtk/EnablePrimaryPaste': GLib.Variant.new_int32,
+    }
+
+    def __init__(self):
+        self._settings = Gio.Settings('org.gnome.settings-daemon.plugins.xsettings')
+        self._variant = self._settings.get_value("overrides")
+
+    def _dup_variant_as_dict(self):
+        items = {}
+        for k in self._variant.keys():
+            try:
+                #variant override doesnt support .items()
+                v = self._variant[k]
+                items[k] = self.VARIANT_TYPES[k](v)
+            except KeyError:
+                pass
+        return items
+
+    def _dup_variant(self):
+        return GLib.Variant('a{sv}', self._dup_variant_as_dict())
+
+    def _set_override(self, name, v):
+        items = self._dup_variant_as_dict()
+        items[name] = self.VARIANT_TYPES[name](v)
+        n = GLib.Variant('a{sv}', items)
+        self._settings.set_value('overrides', n)
+
+    def _get_override(self, name, default):
+        try:
+            return self._variant[name]
+        except KeyError:
+            return default
+
+    #while I could store meta type information in the VARIANT_TYPES
+    #dict, its easiest to do default value handling and missing value
+    #checks in dedicated functions
+    def set_shell_shows_app_menu(self, v):
+        self._set_override('Gtk/ShellShowsAppMenu', int(v))
+    def get_shell_shows_app_menu(self):
+        self._get_override('Gtk/ShellShowsAppMenu', True)
+    def set_enable_primary_paste(self, v):
+        self._set_override('Gtk/EnablePrimaryPaste', int(v))
+    def get_enable_primary_paste(self):
+        self._get_override('Gtk/EnablePrimaryPaste', True)
+
+
 if __name__ == "__main__":
     gtweak.DATA_DIR = "/usr/share"
     gtweak.GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas/"
