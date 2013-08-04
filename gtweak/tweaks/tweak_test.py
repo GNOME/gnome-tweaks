@@ -22,26 +22,31 @@ from gi.repository import Gtk
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.widgets import build_label_beside_widget
 
-class _TestInfoTweak(Tweak):
+class _TestInfoTweak(Gtk.Box, Tweak):
     def __init__(self, name, description, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, name, description, **options)
 
-        self.widget = build_label_beside_widget(
+        build_label_beside_widget(
                         name,
                         Gtk.Button(options.get("_test_button_name",name)),
                         info=options.get("_tweak_info"),
-                        warning=options.get("_tweak_warning"))
+                        warning=options.get("_tweak_warning"),
+                        hbox=self)
 
-class _TestTweak(Tweak):
+class _TestTweak(Gtk.Box, Tweak):
     def __init__(self, name, description, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, name, description, **options)
-        self.widget = Gtk.Label("... " + name + " ...")
+        self.add(Gtk.Label("... " + name + " ..."))
 
-class _TestButtonTweak(Tweak):
+class _TestButtonTweak(Gtk.Box, Tweak):
     def __init__(self, name, description, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, name, description, **options)
-        self.widget = Gtk.Button(name)
-        self.widget.connect("clicked", self._on_click)
+        widget = Gtk.Button(name)
+        widget.connect("clicked", self._on_click)
+        self.add(widget)
         self._need_action = options.get("_need_action")
         self._action_error = options.get("_action_error")
         self._need_logout = options.get("_need_logout")

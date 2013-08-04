@@ -28,12 +28,13 @@ from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsF
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
-class _XkbOption(Tweak):
+class _XkbOption(Gtk.Box, Tweak):
     def __init__(self, group_id, parent_settings, xkb_info, **options):
         try:
             desc = xkb_info.description_for_group(group_id)
         except AttributeError:
             desc = group_id
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, desc, desc, **options)
 
         self._group_id = group_id
@@ -61,7 +62,7 @@ class _XkbOption(Tweak):
         self._combo.add_attribute(renderer, "text", 1)
         self._combo_changed_handler_id = self._combo.connect("changed", self._on_combo_changed)
 
-        self.widget = build_label_beside_widget(self.name, self._combo)
+        build_label_beside_widget(self.name, self._combo, hbox=self)
         self.widget_for_size_group = self._combo
 
         self.reload()
