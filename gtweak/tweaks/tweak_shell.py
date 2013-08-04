@@ -46,7 +46,7 @@ class ShowWindowButtons(GSettingsComboTweak):
             loaded=_shell_loaded,
             **options)
 
-class ShellThemeTweak(Tweak):
+class ShellThemeTweak(Gtk.Box, Tweak):
 
     THEME_EXT_NAME = "user-theme@gnome-shell-extensions.gcampax.github.com"
     THEME_GSETTINGS_SCHEMA = "org.gnome.shell.extensions.user-theme"
@@ -57,6 +57,7 @@ class ShellThemeTweak(Tweak):
     THEME_DIR = os.path.join(GLib.get_user_data_dir(), "themes")
 
     def __init__(self, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, _("Shell theme"), _("Install custom or user themes for gnome-shell"), **options)
 
         #check the shell is running and the usertheme extension is present
@@ -97,7 +98,9 @@ class ShellThemeTweak(Tweak):
 
         if error:
             cb = build_combo_box_text(None)
-            self.widget = build_label_beside_widget(self.name, cb, warning=error)
+            build_label_beside_widget(self.name, cb,
+                        warning=error,
+                        hbox=self)
             self.widget_for_size_group = cb
         else:
             #include both system, and user themes
@@ -131,7 +134,7 @@ class ShellThemeTweak(Tweak):
                         ["application/zip"])
             chooser.connect("file-set", self._on_file_set)
 
-            self.widget = build_label_beside_widget(self.name, chooser, cb)
+            build_label_beside_widget(self.name, chooser, cb, hbox=self)
             self.widget_for_size_group = cb
 
             self.widget_sort_hint = TWEAK_SORT_LAST
@@ -202,7 +205,7 @@ class ShellThemeTweak(Tweak):
         val = combo.get_model().get_value(combo.get_active_iter(), 0)
         self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, val)
 
-class StaticWorkspaceTweak(Tweak):
+class StaticWorkspaceTweak(Gtk.Box, Tweak):
 
     NUM_WORKSPACES_SCHEMA = "org.gnome.desktop.wm.preferences"
     NUM_WORKSPACES_KEY = "num-workspaces"
@@ -212,6 +215,7 @@ class StaticWorkspaceTweak(Tweak):
 
     def __init__(self, **options):
         schema = adjust_schema_for_overrides(self.DYNAMIC_SCHEMA, self.DYNAMIC_KEY, options)
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, _("Dynamic workspaces"), _("Disable gnome-shell dynamic workspace management, use static workspaces"), **options)
 
         try:
@@ -240,7 +244,7 @@ class StaticWorkspaceTweak(Tweak):
         hb.pack_start(sw, False, False, 0)
         hb.pack_start(sb, True, True, 0)
 
-        self.widget = build_label_beside_widget(self.name, hb)
+        build_label_beside_widget(self.name, hb, hbox=self)
         self.widget_for_size_group = hb
 
 sg = build_horizontal_sizegroup()

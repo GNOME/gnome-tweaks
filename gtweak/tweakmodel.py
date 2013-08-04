@@ -45,8 +45,11 @@ TWEAK_SORT_LAST = 1e3
 
 LOG = logging.getLogger(__name__)
 
-class Tweak:
+class Tweak(object):
+
     main_window = None
+    widget_for_size_group = None
+
     def __init__(self, name, description, **options):
         self.name = name
         self.description = description
@@ -60,14 +63,6 @@ class Tweak:
         #FIXME: I would have rather done these as a GObject signal, but it
         #would prohibit other tweaks from inheriting from GtkWidgets
         self._notify_cb = None
-
-    @property
-    def widget(self):
-        raise NotImplementedError
-
-    @property
-    def widget_for_size_group(self):
-        return None
 
     def search_matches(self, txt):
         if self._search_cache == None:

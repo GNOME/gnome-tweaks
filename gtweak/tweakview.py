@@ -149,7 +149,7 @@ class Window(Gtk.ApplicationWindow):
                 if isinstance(t, Title):
                     cssname = "tweak-title"
                 row = Gtk.ListBoxRow(name=cssname)
-                row.add(t.widget)
+                row.add(t)
                 box.add(row)
                 t.set_notify_cb(self._on_tweak_notify)
             scroll = Gtk.ScrolledWindow()
@@ -216,9 +216,9 @@ class Window(Gtk.ApplicationWindow):
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
             if t in tweaks:
-                t.widget.show_all()
+                t.show_all()
             else:
-                t.widget.hide()
+                t.hide()
 
     def _on_tweak_notify_response(self, info, response, func):
         self._detail_vbox.remove(info)

@@ -19,9 +19,10 @@ from gtweak.utils import DisableExtension
 
 def N_(x): return x
 
-class _ShellExtensionTweak(Tweak):
+class _ShellExtensionTweak(Gtk.Box, Tweak):
 
     def __init__(self, shell, ext, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, ext["name"], ext.get("description",""), **options)
 
         self._shell = shell
@@ -68,10 +69,11 @@ class _ShellExtensionTweak(Tweak):
          
         widgets.append(sw)
 
-        self.widget = build_label_beside_widget(
+        build_label_beside_widget(
                         ext["name"].lower().capitalize(),
                         *widgets,
-                        warning=warning)
+                        warning=warning,
+                        hbox=self)
         self.widget_for_size_group = None
 
     def _on_disable_extension(self, de, sw):
@@ -130,9 +132,10 @@ class _ShellExtensionTweak(Tweak):
         if self.widget.get_visible() == True:
             self.widget.show_all()
 
-class _ShellExtensionInstallerTweak(Tweak):
+class _ShellExtensionInstallerTweak(Gtk.Box, Tweak):
 
     def __init__(self, shell, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, _("Install Shell Extension"), "", **options)
 
         self._shell = shell
@@ -149,7 +152,7 @@ class _ShellExtensionInstallerTweak(Tweak):
                 False, False, 0)
         hb.pack_start(chooser, False, False, 0)
 
-        self.widget = build_label_beside_widget(self.name, hb)
+        build_label_beside_widget(self.name, hb, hbox=self)
         self.widget_for_size_group = hb
 
         self.loaded = self._shell is not None
