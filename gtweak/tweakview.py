@@ -109,8 +109,10 @@ class Window(Gtk.ApplicationWindow):
     def main_content(self):        
         right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         
-        self.right_header = Gtk.HeaderBar()    
-        self.stack = Gtk.Stack()
+        self.right_header = Gtk.HeaderBar()
+        #GRR why can I not put margin in the CSS?
+        self.stack = Gtk.Stack(name="main-container",
+                               margin=20)
         self._detail_vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         right_box.pack_start(self.right_header, False, False, 0)
@@ -140,14 +142,15 @@ class Window(Gtk.ApplicationWindow):
         def _load_tweaks(group):
             itere = self._model.get_tweakgroup_iter(group)  
             tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
-            box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
-                          border_width=30,
-                          spacing=5)
+            box = Gtk.ListBox(name="tweak-group",
+                              selection_mode=Gtk.SelectionMode.NONE)
             for t in sorted(tweakgroup.tweaks, key=_sort_tweak_widgets_by_widget_type):
-                padding = 0
+                cssname = "tweak"
                 if isinstance(t, Title):
-                    padding = 20
-                box.pack_start(t.widget, False, False, padding)
+                    cssname = "tweak-title"
+                row = Gtk.ListBoxRow(name=cssname)
+                row.add(t.widget)
+                box.add(row)
                 t.set_notify_cb(self._on_tweak_notify)
             scroll = Gtk.ScrolledWindow()
             scroll.add(box)
