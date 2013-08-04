@@ -23,7 +23,7 @@ from gi.repository import Gtk, Gdk, GObject
 
 import gtweak.tweakmodel
 from gtweak.tweakmodel import TweakModel
-from gtweak.utils import Notification
+from gtweak.utils import LogoutNotification
 from gtweak.widgets import Title
 
 DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_APPEARANCE
@@ -232,8 +232,12 @@ class Window(Gtk.ApplicationWindow):
         #the main window
         
         if need_logout:
-            notification = Notification()
-            notification.show()
+            try:
+                notification = LogoutNotification()
+                notification.show()
+                return
+            except:
+                pass
         
         info = Gtk.InfoBar()
         info.get_content_area().add(Gtk.Label(desc))
