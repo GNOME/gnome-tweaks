@@ -15,6 +15,7 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
+import os.path
 import logging
 import datetime
 
@@ -89,10 +90,13 @@ class Window(Gtk.ApplicationWindow):
         self.entry.connect("search-changed", self._on_search)
         self.revealer.add(self.entry)
         
-        self.listbox = Gtk.ListBox()
+        self.listbox = Gtk.ListBox(name="tweak-categories")
+        self.listbox.set_size_request(200,-1)
         self.listbox.connect("row-selected", self._on_select_row)
         self.listbox.set_header_func(self._list_header_func, None)
         scroll = Gtk.ScrolledWindow()
+        scroll.set_policy(Gtk.PolicyType.NEVER,
+                          Gtk.PolicyType.AUTOMATIC)
         scroll.add(self.listbox)
         
         left_header.pack_start(self.button)
@@ -116,14 +120,9 @@ class Window(Gtk.ApplicationWindow):
         return right_box
 
     def load_css(self):
-        css = """
-        #row
-        {
-           padding: 10px;
-        }
-        """
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_data(css)
+        css_provider.load_from_path(
+                        os.path.join(gtweak.PKG_DATA_DIR, 'shell.css'))
         screen = Gdk.Screen.get_default()
         context = Gtk.StyleContext()
         context.add_provider_for_screen(screen, css_provider,
@@ -134,7 +133,7 @@ class Window(Gtk.ApplicationWindow):
         def _items_listbox(text):
             lbl = Gtk.Label(text, xalign=0.0)
             lbl.set_name('row')
-            row = Gtk.ListBoxRow()
+            row = Gtk.ListBoxRow(name="tweak-category")
             row.add(lbl)
             return row
 
