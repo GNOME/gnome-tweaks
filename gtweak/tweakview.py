@@ -79,7 +79,7 @@ class Window(Gtk.ApplicationWindow):
         icon.set_from_icon_name("edit-find-symbolic", Gtk.IconSize.BUTTON)
         self.button = Gtk.ToggleButton()
         self.button.add(icon)
-        self.button.connect("toggled", self._on_transition)
+        self.button.connect("toggled", self._on_find_toggled)
          
         self.revealer = Gtk.Revealer()
         self.entry = Gtk.SearchEntry(placeholder_text="Search Tweaks...")
@@ -205,12 +205,13 @@ class Window(Gtk.ApplicationWindow):
             self.stack.set_visible_child_name(group)
             self.right_header.set_title(group)
 
-    def _on_transition(self, btn):
+    def _on_find_toggled(self, btn):
         if self.revealer.get_reveal_child():
             self.revealer.set_reveal_child(False)
             self.revealer.get_child().set_text("")
         else:
-            self.revealer.set_reveal_child(True) 
+            self.revealer.set_reveal_child(True)
+            self.entry.grab_focus()
             
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
