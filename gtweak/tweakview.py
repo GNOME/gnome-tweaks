@@ -82,8 +82,8 @@ class Window(Gtk.ApplicationWindow):
          
         self.revealer = Gtk.Revealer()
         self.entry = Gtk.SearchEntry(placeholder_text="Search Tweaks...")
-        self.entry.props.margin_left = 15
-        self.entry.props.margin_right = 15
+        self.entry.props.margin_left = 5
+        self.entry.props.margin_right = 5
         self.entry.props.margin_top = 5
         self.entry.props.margin_bottom = 5
         self.entry.connect("search-changed", self._on_search)
