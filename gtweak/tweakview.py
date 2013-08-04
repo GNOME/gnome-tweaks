@@ -23,6 +23,7 @@ from gi.repository import Gtk, Gdk, GObject
 import gtweak.tweakmodel
 from gtweak.tweakmodel import TweakModel
 from gtweak.utils import Notification
+from gtweak.widgets import Title
 
 DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_APPEARANCE
 WIDGET_SORT_ORDER = (Gtk.Switch, Gtk.SpinButton, Gtk.ComboBox, Gtk.Box, Gtk.VBox, Gtk.HBox)
@@ -39,93 +40,182 @@ def _sort_tweak_widgets_by_widget_type(tweak):
     except ValueError:
         return len(WIDGET_SORT_ORDER) #last
 
-class TweakView:
-    def __init__(self, builder, model):
-        self._notebook = builder.get_object('notebook')
-        self._detail_vbox = builder.get_object('detail_vbox')
-        top = builder.get_object('topbox')
-        topleft = builder.get_object('topleft')
+class Window(Gtk.ApplicationWindow):
 
-        self.headerbar = Gtk.HeaderBar()
-        top.pack_start(self.headerbar, True, True, 0)
-
-
-        headleft = Gtk.HeaderBar()
-	headleft.set_title("Tweaks")
-        searchToggle = Gtk.ToggleButton()
-        searchToggle.add(Gtk.Image.new_from_stock(Gtk.STOCK_FIND, Gtk.IconSize.MENU))
-        headleft.pack_start(searchToggle)
-        topleft.pack_start(headleft, True, True, 0)
-
-        leftbox = builder.get_object('leftbox')
-        revealer = Gtk.Revealer();
-
-        entry = Gtk.SearchEntry()
-        entry.connect("search-changed", self._on_search)
-
-        revealer.add(entry)
-        leftbox.pack_start(revealer, False, True, 0)
-        searchToggle.connect("toggled", self.transition, entry, revealer)
+    def __init__(self, app, model):
+        Gtk.ApplicationWindow.__init__(self,
+                              title="Tweak Tool",
+                              application=app,
+                              hide_titlebar_when_maximized=True)
+        
+        self.set_size_request(800, 600)
+        self.set_position(Gtk.WindowPosition.CENTER)
+        
+        main_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        left_box = self.sidebar()
+        right_box = self.main_content()
+        separator = Gtk.Separator(orientation=Gtk.Orientation.VERTICAL)
+        
+        main_box.pack_start(left_box, False, False, 0)
+        main_box.pack_start(separator, False, False, 0)
+        main_box.pack_start(right_box, True, True, 0)
+        
+        self.load_css()      
         self._model = model
         self._model.load_tweaks()
-        groups = self._model._tweak_group_names.keys()
- 	groups = sorted(groups)
-        self.listbox = self.init_listbox(groups)
-        leftbox.pack_start(self.listbox, True, True, 0)
-        self.listbox.set_header_func(self._on_header_func, None)        
-        self.stack = Gtk.Stack()
-        self.stack.set_homogeneous(False)
-        for g in groups:
-            itere = self._model.get_tweakgroup_iter(g)  
-            tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
-            box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, border_width=20)
-            for t in sorted(tweakgroup.tweaks, key=_sort_tweak_widgets_by_widget_type):            
-                box.pack_start(t.widget, False, False, 5)
-                t.set_notify_cb(self._on_tweak_notify)
-            self.stack.add_named(box, g)
-        self._tweak_vbox = builder.get_object('tweak_vbox')
-        self._tweak_vbox.pack_start(self.stack, False, False, 0)
-        self._on_post_selection_change()
-        #dict of pending notifications, the key is the function to be called
-        self._notification_functions = {}
-        css = """
-	#row
-	{
-		padding: 10px;
-	}
+        self.load_model_data()
 
-	"""
-	css_provider = Gtk.CssProvider()
-	css_provider.load_from_data(css)
+        self.connect("key-press-event", self._on_key_press)
+        self.add(main_box)
+        
+    def sidebar(self):
+        left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+       
+        left_header = Gtk.HeaderBar()
+        left_header.set_title("Tweaks")
+        
+        icon = Gtk.Image()
+        icon.set_from_icon_name("edit-find-symbolic", Gtk.IconSize.BUTTON)
+        self.button = Gtk.ToggleButton()
+        self.button.add(icon)
+        self.button.connect("toggled", self._on_transition)
+         
+        self.revealer = Gtk.Revealer()
+        self.entry = Gtk.SearchEntry(placeholder_text="Search Tweaks...")
+        self.entry.props.margin_left = 15
+        self.entry.props.margin_right = 15
+        self.entry.props.margin_top = 5
+        self.entry.props.margin_bottom = 5
+        self.entry.connect("search-changed", self._on_search)
+        self.revealer.add(self.entry)
+        
+        self.listbox = Gtk.ListBox()
+        self.listbox.connect("row-selected", self._on_select_row)
+        self.listbox.set_header_func(self._list_header_func, None)
+        scroll = Gtk.ScrolledWindow()
+        scroll.add(self.listbox)
+        
+        left_header.pack_start(self.button)
+        left_box.pack_start(left_header, False, False, 0)
+        left_box.pack_start(self.revealer, False, False, 0)
+        left_box.pack_start(scroll, True, True, 0)
+        
+        return left_box
+        
+    def main_content(self):        
+        right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        
+        self.right_header = Gtk.HeaderBar()    
+        self.stack = Gtk.Stack()
+        self._detail_vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+
+        right_box.pack_start(self.right_header, False, False, 0)
+        right_box.pack_start(self.stack, True, True, 0)
+        right_box.pack_start(self._detail_vbox, False, False, 0)
+        
+        return right_box
+
+    def load_css(self):
+        css = """
+        #row
+        {
+           padding: 10px;
+        }
+        """
+        css_provider = Gtk.CssProvider()
+        css_provider.load_from_data(css)
         screen = Gdk.Screen.get_default()
-	context = Gtk.StyleContext()
-	context.add_provider_for_screen(screen, css_provider,
+        context = Gtk.StyleContext()
+        context.add_provider_for_screen(screen, css_provider,
                                 Gtk.STYLE_PROVIDER_PRIORITY_USER)
 
+    def load_model_data(self):
 
-    def run(self):
-        self.stack.set_visible_child_name(DEFAULT_TWEAKGROUP)  
-        self.headerbar.set_title(DEFAULT_TWEAKGROUP)
-	
+        def _items_listbox(text):
+            lbl = Gtk.Label(text, xalign=0.0)
+            lbl.set_name('row')
+            row = Gtk.ListBoxRow()
+            row.add(lbl)
+            return row
+
+        def _load_tweaks(group):
+            itere = self._model.get_tweakgroup_iter(group)  
+            tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
+            box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
+                          border_width=30,
+                          spacing=5)
+            for t in sorted(tweakgroup.tweaks, key=_sort_tweak_widgets_by_widget_type):
+                padding = 0
+                if isinstance(t, Title):
+                    padding = 20
+                box.pack_start(t.widget, False, False, padding)
+                t.set_notify_cb(self._on_tweak_notify)
+            scroll = Gtk.ScrolledWindow()
+            scroll.add(box)
+            self.stack.add_named(scroll, group)
+
+        groups = self._model._tweak_group_names.keys()
+        groups = sorted(groups)
+
+        for g in groups:
+            row = _items_listbox(g)
+            self.listbox.add(row)
+            _load_tweaks(g)
+
+        widget = self.listbox.get_row_at_index(0)
+        self.listbox.select_row (widget)
+        self._notification_functions = {}
+
+    def _list_filter_func(self, row, user_data):
+        lbl = row.get_child()
+        if lbl.get_text() in user_data:
+            return row
+    
+    def _list_header_func(self, row, before, user_data):
+        if not row.get_header():
+            row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
+
+    def _on_key_press(self, widget, event):
+        keyname = Gdk.keyval_name(event.keyval)
+        if keyname == 'Escape':
+            self.button.set_active(False)
+        if event.state and Gdk.ModifierType.CONTROL_MASK:
+            if keyname == 'f':
+                self.button.set_active(True)
+
+    def _on_list_changed(self, group):
+        self.listbox.set_filter_func(self._list_filter_func, group)
+        selected = self.listbox.get_selected_row().get_child().get_text()
+        if group and not selected in group:
+            index =  sorted(self._model._tweak_group_names.keys()).index(group[0])
+            row = self.listbox.get_row_at_index(index)
+            self.listbox.select_row(row)
+
+    def _on_search(self, entry):
+        txt = entry.get_text()
+        tweaks, group = self._model.search_matches(txt)
+        self.show_only_tweaks(tweaks)        
+        self._on_list_changed(group)
+        
+    def _on_select_row(self, listbox, row):
+        if row:
+            group = row.get_child().get_text()
+            self.stack.set_visible_child_name(group)
+            self.right_header.set_title(group)
+
+    def _on_transition(self, btn):
+        if self.revealer.get_reveal_child():
+            self.revealer.set_reveal_child(False)
+            self.revealer.get_child().set_text("")
+        else:
+            self.revealer.set_reveal_child(True) 
+            
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
             if t in tweaks:
                 t.widget.show_all()
             else:
                 t.widget.hide()
-
-    def on_list_changed(self, groups):
-        self.listbox.set_filter_func(self.on_list_filtered,groups)
-        selected = self.listbox.get_selected_row().get_child().get_text()
-        if groups and not selected in groups:
-            index =  sorted(self._model._tweak_group_names.keys()).index(groups[0])
-            row = self.listbox.get_row_at_index(index)
-            self.listbox.select_row(row)
-        
-    def on_list_filtered(self, row, groups):
-        lbl = row.get_child()
-        if lbl.get_text() in groups:
-            return row        
 
     def _on_tweak_notify_response(self, info, response, func):
         self._detail_vbox.remove(info)
@@ -163,51 +253,3 @@ class TweakView:
         self._detail_vbox.pack_end(info, False, False, 0)
 
         info.show_all()
-
-    def _on_search(self, entry):
-        txt = entry.get_text()
-        tweaks, group = self._model.search_matches(txt)
-        self.show_only_tweaks(tweaks)
-        self.on_list_changed(group)
-        self._notebook.set_current_page(1)
-
-    def _on_pre_selection_change(self):
-        self._notebook.set_current_page(0)
-
-    def _on_post_selection_change(self):
-        self._notebook.set_current_page(1)
-
-    def _on_selection_changed(self, lista, row):
-        if row is not None:
-            text = row.get_child().get_text()  
-            self.stack.set_visible_child_name(text)
-            self.headerbar.set_title(text)
-
-    def init_listbox(self, values):
-        listbox = Gtk.ListBox()
-        for i in values:
-            lbl = Gtk.Label(i)
-            lbl.props.xalign = 0.0
-            lbl.set_name('row')
-            row = Gtk.ListBoxRow()
-            row.add(lbl)
-            listbox.add(row)
-        widget = listbox.get_row_at_index(0)
-        listbox.select_row (widget)        
-        listbox.connect("row-selected", self._on_selection_changed)
-        return listbox          
-    
-    def transition(self, btn, entry, revealer):
-        if revealer.get_reveal_child():
-            revealer.set_reveal_child(False) 
-            entry.set_text("") 
-            btn.grab_focus()
-            self._on_search_cancel()
-        else:
-            revealer.set_reveal_child(True)
-            entry.grab_focus()
-
-    def _on_header_func(self, row, before, user_data):
-        if not row.get_header():
-            separator = Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL)
-            row.set_header(separator)

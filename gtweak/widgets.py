@@ -61,19 +61,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     lbl.props.xalign = 0.0
     lbl.set_has_tooltip(True)
     lbl.connect("query-tooltip", show_tooltip_when_ellipsized)
-	
-    if kwargs.get("desc"):
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        box.pack_start(lbl, True, True, 0)
-        desc = kwargs.get("desc")
-        lbl_des = Gtk.Label()
-        lbl_des.props.xalign = 0.0
-        lbl_des.set_markup("<span size='x-small'>"+desc+"</span>")
-        box.pack_start(lbl_des, True, True,0)
-        hbox.pack_start(box, True, True,0)
-        
-    else:    
-        hbox.pack_start(lbl, True, True, 0)
+    hbox.pack_start(lbl, True, True, 0)
 
     if kwargs.get("info"):
         hbox.pack_start(
@@ -91,8 +79,19 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     #label. By convention this is true in the great majority of cases. Settings that
     #construct their own widgets will need to set this themselves
     lbl.set_mnemonic_widget(widget[-1])
-
-    return hbox
+    
+    if kwargs.get("desc"):
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        box.pack_start(hbox, False, False, 0)
+        desc = kwargs.get("desc")
+        lbl_des = Gtk.Label()
+        lbl_des.props.xalign = 0.0
+        lbl_des.set_markup("<span size='x-small'>"+desc+"</span>")
+        box.pack_start(lbl_des, False, False,0)
+        return box
+        
+    else:
+        return hbox
 
 def build_combo_box_text(selected, *values):
     """

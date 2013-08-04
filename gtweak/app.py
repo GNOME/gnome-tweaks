@@ -22,7 +22,7 @@ from gi.repository import Gio
 
 import gtweak 
 from gtweak.tweakmodel import TweakModel
-from gtweak.tweakview import TweakView
+from gtweak.tweakview import Window
 from gtweak.utils import SchemaList
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.utils import DisableExtension
@@ -35,16 +35,9 @@ class GnomeTweakTool(Gtk.Application):
 
     def do_activate(self):
         if not self.win:
-            self.win = self.builder.get_object('main_window')
-            self.win.set_position(Gtk.WindowPosition.CENTER)
-            self.win.set_application(self)
-            self.win.set_size_request(720, 580)
-        
-            model = TweakModel()
-            view = TweakView(self.builder, model)
-            
+            model = TweakModel()            
+            self.win = Window(self, model)
             self.win.show_all()
-            view.run()
         self.win.present()
         
     def do_startup(self):
