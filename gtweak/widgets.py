@@ -211,6 +211,22 @@ class _DependableMixin:
         sensitive = self._depends_how(settings,key_name)
         self.widget.set_sensitive(sensitive)
 
+class GSettingsCheckTweak(_GSettingsTweak, _DependableMixin):
+    def __init__(self, name, schema_name, key_name, **options):
+        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+
+        self.widget = Gtk.CheckButton.new_with_label(name)
+        self.settings.bind(
+                key_name,
+                self.widget,
+                "active", Gio.SettingsBindFlags.DEFAULT)
+        self.widget_for_size_group = None
+
+        self.add_dependency_on_tweak(
+                options.get("depends_on"),
+                options.get("depends_how")
+        )
+
 class GSettingsSwitchTweak(_GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
         _GSettingsTweak.__init__(self, schema_name, key_name, **options)
