@@ -20,7 +20,7 @@ import os.path
 
 from gi.repository import GLib, Gtk, Gdk, Gio, Pango
 
-from gtweak.tweakmodel import Tweak
+from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
 from gtweak.gtksettings import GtkSettingsManager
 from gtweak.gshellwrapper import GnomeShellFactory
@@ -210,6 +210,26 @@ class _DependableMixin(object):
     def _on_changed_depend(self, settings, key_name):
         sensitive = self._depends_how(settings,key_name)
         self.set_sensitive(sensitive)
+
+class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
+    def __init__(self, name, *tweaks):
+        Gtk.ListBox.__init__(self,
+                        name="tweak-group",
+                        selection_mode=Gtk.SelectionMode.NONE)         
+        TweakGroup.__init__(self, name, *tweaks)
+        self._sg = Gtk.SizeGroup(
+                        mode=Gtk.SizeGroupMode.HORIZONTAL)
+        self._sg.props.ignore_hidden = True
+
+        for t in self.tweaks:
+            cssname = "tweak"
+            if isinstance(t, Title):
+                cssname = "tweak-title"
+            row = Gtk.ListBoxRow(name=cssname)
+            row.add(t)
+            self.add(row)
+            if t.widget_for_size_group:
+                self._sg.add_widget(t.widget_for_size_group)
 
 class GSettingsCheckTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):

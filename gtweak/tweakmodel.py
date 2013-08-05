@@ -84,24 +84,10 @@ class Tweak(object):
         if self._notify_cb:
             self._notify_cb(self, desc, error=False, btn=None, func=None, need_logout=need_logout)
 
-class TweakGroup:
+class TweakGroup(object):
     def __init__(self, name, *tweaks):
         self.name = name
-        self.tweaks = []
-
-        self._sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
-        self._sg.props.ignore_hidden = True
-
-        self.set_tweaks(*tweaks)
-
-    def set_tweaks(self, *tweaks):
-        self.tweaks += [t for t in tweaks if t.loaded]
-
-        for t in tweaks:
-            if not t.loaded:
-                continue
-            if t.widget_for_size_group:
-                self._sg.add_widget(t.widget_for_size_group)
+        self.tweaks = [t for t in tweaks if t.loaded]
 
 class TweakModel(Gtk.ListStore):
     (COLUMN_NAME,
@@ -130,7 +116,7 @@ class TweakModel(Gtk.ListStore):
         if 1:
             tweak_files = [
                     os.path.splitext(os.path.split(f)[-1])[0]
-                        for f in glob.glob(os.path.join(self._tweak_dir, "tweak_*.py"))]
+                        for f in glob.glob(os.path.join(self._tweak_dir, "tweak_group_*.py"))]
         else:
             tweak_files = ["tweak_test"]
 
@@ -152,7 +138,6 @@ class TweakModel(Gtk.ListStore):
         mods = __import__("gtweak.tweaks", globals(), locals(), tweak_files, 0)
         for mod in [getattr(mods, file_name) for file_name in tweak_files]:
             groups.extend( getattr(mod, "TWEAK_GROUPS", []) )
-            tweaks.extend( getattr(mod, "TWEAKS", []) )
             
         schemas = SchemaList() 
    
@@ -164,12 +149,6 @@ class TweakModel(Gtk.ListStore):
                         schemas.insert(i.key_name, i.schema_name)
                     except:
                         pass
-        for t in tweaks:
-            self.add_tweak_auto_to_group(t)
-            try:
-                schemas.insert(t.key_name, t.schema_name)
-            except:
-                pass
 
     def add_tweak_group(self, tweakgroup):
         if tweakgroup.name in self._tweak_group_names:
@@ -180,18 +159,6 @@ class TweakModel(Gtk.ListStore):
         self._tweak_group_names[tweakgroup.name] = tweakgroup
         self._tweak_group_iters[tweakgroup.name] = _iter
 
-    def add_tweak_auto_to_group(self, tweak):
-        if not tweak.loaded:
-            return
-        name = tweak.group_name
-        try:
-            group = self._tweak_group_names[name]
-        except KeyError:
-            group = TweakGroup(name)
-            self.add_tweak_group(group)
-
-        group.set_tweaks(tweak)
-      
     def search_matches(self, txt):
         tweaks = []                                          
         groups = []                                                             

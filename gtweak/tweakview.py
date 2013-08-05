@@ -132,37 +132,25 @@ class Window(Gtk.ApplicationWindow):
 
     def load_model_data(self):
 
-        def _items_listbox(text):
+        def _make_items_listbox(text):
             lbl = Gtk.Label(text, xalign=0.0)
             lbl.set_name('row')
             row = Gtk.ListBoxRow(name="tweak-category")
             row.add(lbl)
             return row
 
-        def _load_tweaks(group):
-            itere = self._model.get_tweakgroup_iter(group)  
-            tweakgroup = self._model.get_value(itere, self._model.COLUMN_TWEAK)
-            box = Gtk.ListBox(name="tweak-group",
-                              selection_mode=Gtk.SelectionMode.NONE)
-            for t in sorted(tweakgroup.tweaks, key=_sort_tweak_widgets_by_widget_type):
-                cssname = "tweak"
-                if isinstance(t, Title):
-                    cssname = "tweak-title"
-                row = Gtk.ListBoxRow(name=cssname)
-                row.add(t)
-                box.add(row)
-                t.set_notify_cb(self._on_tweak_notify)
-            scroll = Gtk.ScrolledWindow()
-            scroll.add(box)
-            self.stack.add_named(scroll, group)
-
         groups = self._model._tweak_group_names.keys()
         groups = sorted(groups)
 
         for g in groups:
-            row = _items_listbox(g)
+            row = _make_items_listbox(g)
             self.listbox.add(row)
-            _load_tweaks(g)
+            tweakgroup = self._model.get_value(
+                                self._model.get_tweakgroup_iter(g), 
+                                self._model.COLUMN_TWEAK)
+            scroll = Gtk.ScrolledWindow()
+            scroll.add(tweakgroup)
+            self.stack.add_named(scroll, g)
 
         widget = self.listbox.get_row_at_index(0)
         self.listbox.select_row (widget)

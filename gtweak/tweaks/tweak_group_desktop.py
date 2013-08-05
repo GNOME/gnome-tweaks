@@ -19,8 +19,7 @@ from gi.repository import Gtk
 
 import gtweak
 from gtweak.utils import AutostartManager
-from gtweak.tweakmodel import TWEAK_GROUP_DESKTOP
-from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboEnumTweak, GSettingsFileChooserButtonTweak, GSettingsCheckTweak
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboEnumTweak, GSettingsFileChooserButtonTweak, GSettingsCheckTweak
 
 class DesktopIconTweak(GSettingsSwitchTweak):
     def __init__(self, **options):
@@ -44,13 +43,16 @@ class DesktopIconTweak(GSettingsSwitchTweak):
         self.nautilus.update_start_at_login(
                 self.settings.get_boolean(key))
 
-dicons = DesktopIconTweak(group_name=TWEAK_GROUP_DESKTOP)
 
-TWEAKS = (
-    dicons,
-    GSettingsCheckTweak("Computer","org.gnome.nautilus.desktop", "computer-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsCheckTweak("Home","org.gnome.nautilus.desktop", "home-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsCheckTweak("Network Servers","org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsCheckTweak("Trash","org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsCheckTweak("Mounted Volumes","org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_DESKTOP),
-)
+dicons = DesktopIconTweak()
+
+TWEAK_GROUPS = [
+    ListBoxTweakGroup("Desktop",
+        dicons,
+        GSettingsCheckTweak("Computer","org.gnome.nautilus.desktop", "computer-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak("Home","org.gnome.nautilus.desktop", "home-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak("Network Servers","org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak("Trash","org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak("Mounted Volumes","org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+    )
+]
