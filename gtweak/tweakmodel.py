@@ -20,7 +20,7 @@ import glob
 import os.path
 
 import gtweak
-from gtweak.utils import SchemaList
+from gtweak.utils import SchemaList, LogoutNotification, Notification
 from gi.repository import Gtk
 
 def N_(x): return x
@@ -60,29 +60,17 @@ class Tweak(object):
         self._search_cache = None
         if options.get("sort"):
             self.widget_sort_hint = options.get("sort")
-        #FIXME: I would have rather done these as a GObject signal, but it
-        #would prohibit other tweaks from inheriting from GtkWidgets
-        self._notify_cb = None
 
     def search_matches(self, txt):
         if self._search_cache == None:
             self._search_cache = self.name.lower() + " " + self.description.lower()
         return  txt in self._search_cache
 
-    def set_notify_cb(self, func):
-        self._notify_cb = func
+    def notify_logout(self):
+        self._logoutnotification = LogoutNotification()
 
-    def notify_action_required(self, desc, btn, func, need_logout=False):
-        if self._notify_cb:
-            self._notify_cb(self, desc, error=False, btn=btn, func=func, need_logout=need_logout)
-
-    def notify_error(self, desc, need_logout=False):
-        if self._notify_cb:
-            self._notify_cb(self, desc, error=True, btn=None, func=None, need_logout=need_logout)
-
-    def notify_info(self, desc, need_logout=False):
-        if self._notify_cb:
-            self._notify_cb(self, desc, error=False, btn=None, func=None, need_logout=need_logout)
+    def notify_information(self, summary, desc=""):
+        self._notification = Notification(summary, desc)
 
 class TweakGroup(object):
     def __init__(self, name, *tweaks):

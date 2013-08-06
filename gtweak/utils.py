@@ -312,29 +312,41 @@ class XSettingsOverrides:
     def get_enable_primary_paste(self):
         self._get_override('Gtk/EnablePrimaryPaste', True)
 
-class LogoutNotification:
-    def __init__(self):
-        self.notification = None
+class Notification:
+    def __init__(self, summary, body):
         if Notify.is_initted() or Notify.init("GNOME Tweak Tool"):
-            self.notification = Notify.Notification.new("Configuration changes requiere restart","Your session needs to be restarted for settings to take effect", 'gnome-tweak-tool')
-            self.notification.add_action(
-                                "restart",
-                                "Restart Session",
-                                self.logout,None,None)
-            self.notification.set_hint(
-                                "resident",
-                                GLib.Variant('b', True))
+            self.notification = Notify.Notification.new(
+                                    summary,
+                                    body,
+                                    'gnome-tweak-tool'
+            )
             self.notification.set_hint(
                                 "desktop-entry",
                                 GLib.Variant('s', 'gnome-tweak-tool'))
+            self.notification.show()
         else:
             raise Exception("Not Supported")
 
-    def show(self):
-        if self.notification:
+@singleton
+class LogoutNotification:
+    def __init__(self):
+        if Notify.is_initted() or Notify.init("GNOME Tweak Tool"):
+            self.notification = Notify.Notification.new(
+                                "Configuration changes requiere restart",
+                                "Your session needs to be restarted for settings to take effect",
+                                'gnome-tweak-tool')
+            self.notification.add_action(
+                                "restart",
+                                "Restart Session",
+                                self._logout, None, None)
+            self.notification.set_hint(
+                                "desktop-entry",
+                                GLib.Variant('s', 'gnome-tweak-tool'))
             self.notification.show()
+        else:
+            raise Exception("Not Supported")
 
-    def logout(self, btn, action, unknown):
+    def _logout(self, btn, action, unknown):
         d = Gio.bus_get_sync(Gio.BusType.SESSION, None)
         proxy = Gio.DBusProxy.new_sync(
                        d,Gio.DBusProxyFlags.NONE, None,

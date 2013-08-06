@@ -23,7 +23,6 @@ from gi.repository import Gtk, Gdk, GObject
 
 import gtweak.tweakmodel
 from gtweak.tweakmodel import TweakModel
-from gtweak.utils import LogoutNotification
 from gtweak.widgets import Title
 
 DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_APPEARANCE
@@ -113,11 +112,9 @@ class Window(Gtk.ApplicationWindow):
         #GRR why can I not put margin in the CSS?
         self.stack = Gtk.Stack(name="main-container",
                                margin=20)
-        self._detail_vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         right_box.pack_start(self.right_header, False, False, 0)
         right_box.pack_start(self.stack, True, True, 0)
-        right_box.pack_start(self._detail_vbox, False, False, 0)
         
         return right_box
 
@@ -154,7 +151,6 @@ class Window(Gtk.ApplicationWindow):
 
         widget = self.listbox.get_row_at_index(0)
         self.listbox.select_row (widget)
-        self._notification_functions = {}
 
     def _list_filter_func(self, row, user_data):
         lbl = row.get_child()
@@ -207,44 +203,3 @@ class Window(Gtk.ApplicationWindow):
                 t.show_all()
             else:
                 t.hide()
-
-    def _on_tweak_notify_response(self, info, response, func):
-        self._detail_vbox.remove(info)
-        func()
-        try:
-            del(self._notification_functions[func])
-        except KeyError:
-            logging.warning("Could not remove notification function")
-
-    def _on_tweak_notify(self, tweak, desc, error, btn, func, need_logout):
-        #if need to log out, do this as a notification area thing, not a note inside
-        #the main window
-        
-        if need_logout:
-            try:
-                notification = LogoutNotification()
-                notification.show()
-                return
-            except:
-                pass
-        
-        info = Gtk.InfoBar()
-        info.get_content_area().add(Gtk.Label(desc))
-
-        if error:
-            info.props.message_type = Gtk.MessageType.ERROR
-        else:
-            info.props.message_type = Gtk.MessageType.INFO
-
-        if btn and func:
-            if func in self._notification_functions:
-                return
-            self._notification_functions[func] = True
-            info.add_button(btn, Gtk.ResponseType.OK)
-            info.connect("response", self._on_tweak_notify_response, func)
-        else:
-            GObject.timeout_add_seconds(2, lambda box, widget: box.remove(widget), self._detail_vbox, info)
-
-        self._detail_vbox.pack_end(info, False, False, 0)
-
-        info.show_all()
