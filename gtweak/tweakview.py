@@ -89,7 +89,8 @@ class Window(Gtk.ApplicationWindow):
         self.entry.connect("search-changed", self._on_search)
         self.revealer.add(self.entry)
         
-        self.listbox = Gtk.ListBox(name="tweak-categories")
+        self.listbox = Gtk.ListBox()
+        self.listbox.get_style_context().add_class("tweak-categories")
         self.listbox.set_size_request(200,-1)
         self.listbox.connect("row-selected", self._on_select_row)
         self.listbox.set_header_func(self._list_header_func, None)
@@ -109,10 +110,10 @@ class Window(Gtk.ApplicationWindow):
         right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         
         self.right_header = Gtk.HeaderBar()
-        #GRR why can I not put margin in the CSS?
-        self.stack = Gtk.Stack(name="main-container",
-                               margin=20)
-
+        #GRR why can I not put margin in the CSS of a GtkStack
+        self.stack = Gtk.Stack()
+        self.stack.get_style_context().add_class("main-container")
+        self.stack.props.margin = 20
         right_box.pack_start(self.right_header, False, False, 0)
         right_box.pack_start(self.stack, True, True, 0)
         
@@ -132,7 +133,8 @@ class Window(Gtk.ApplicationWindow):
         def _make_items_listbox(text):
             lbl = Gtk.Label(text, xalign=0.0)
             lbl.set_name('row')
-            row = Gtk.ListBoxRow(name="tweak-category")
+            row = Gtk.ListBoxRow()
+            row.get_style_context().add_class("tweak-category")
             row.add(lbl)
             return row
 

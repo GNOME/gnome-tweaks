@@ -1,28 +1,33 @@
-.list#tweak-group {
-    background-color: @theme_bg_color;
-}
-.list#tweak-categories {
+/* the sidebar */
+.list.tweak-categories {
     background-color: #ebedeb;
 }
-.list-row#tweak-category {
+.list-row.tweak-category {
     padding: 10px;
 }
-.list-row#tweak {
+
+/* the container and tweaks in a group */
+.list.tweak-group {
+    background-color: @theme_bg_color;
+}
+.list-row.tweak {
     padding: 3px 3px 0px 0px;
     background-color: @theme_bg_color;
 }
-.list-row:hover#tweak {
+.list-row.tweak:hover {
     background-color: @theme_bg_color;
 }
-.list-row#tweak-title {
+.list-row.tweak.title {
     padding: 10px 10px 0px 0px;
     background-color: @theme_bg_color;
 }
-.list-row:hover#tweak-title {
+.list-row.tweak.title:hover {
     padding: 10px 10px 0px 0px;
     background-color: @theme_bg_color;
 }
-/* GtkStack {
- *     margin: 20px;
- * }
- */
+
+
+.main-container {
+    padding: 20px;
+}
+

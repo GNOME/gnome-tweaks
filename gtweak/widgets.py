@@ -214,18 +214,18 @@ class _DependableMixin(object):
 class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
     def __init__(self, name, *tweaks):
         Gtk.ListBox.__init__(self,
-                        name="tweak-group",
                         selection_mode=Gtk.SelectionMode.NONE)         
+        self.get_style_context().add_class("tweak-group")
         TweakGroup.__init__(self, name, *tweaks)
         self._sg = Gtk.SizeGroup(
                         mode=Gtk.SizeGroupMode.HORIZONTAL)
         self._sg.props.ignore_hidden = True
 
         for t in self.tweaks:
-            cssname = "tweak"
+            row = Gtk.ListBoxRow()
+            row.get_style_context().add_class("tweak")
             if isinstance(t, Title):
-                cssname = "tweak-title"
-            row = Gtk.ListBoxRow(name=cssname)
+                row.get_style_context().add_class("title")
             row.add(t)
             self.add(row)
             if t.widget_for_size_group:
