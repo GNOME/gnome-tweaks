@@ -101,16 +101,13 @@ class TweakModel(Gtk.ListStore):
         return (row[TweakModel.COLUMN_TWEAK] for row in self)
 
     def load_tweaks(self):
-        if 1:
-            tweak_files = [
-                    os.path.splitext(os.path.split(f)[-1])[0]
-                        for f in glob.glob(os.path.join(self._tweak_dir, "tweak_group_*.py"))]
-        else:
-            tweak_files = ["tweak_test"]
+        tweak_files = [
+                os.path.splitext(os.path.split(f)[-1])[0]
+                    for f in glob.glob(os.path.join(self._tweak_dir, "tweak_group_*.py"))]
 
         if not gtweak.ENABLE_TEST:
             try:
-                tweak_files.remove("tweak_test")
+                tweak_files.remove("tweak_group_test")
             except ValueError:
                 pass
         
