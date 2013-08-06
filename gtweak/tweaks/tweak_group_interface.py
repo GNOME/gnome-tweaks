@@ -124,7 +124,7 @@ TWEAK_GROUPS = [
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
         DarkThemeSwitcher(),
-        Title("Theme", ""),
+        Title("Theme", "", uid="title-theme"),
         WindowThemeSwitcher(),
         GtkThemeSwitcher(),
 	IconThemeSwitcher(),

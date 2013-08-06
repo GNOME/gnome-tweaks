@@ -22,7 +22,7 @@ from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, Title
 TWEAK_GROUPS = [ 
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
         GSettingsComboEnumTweak("Focus Mode", "org.gnome.desktop.wm.preferences", "focus-mode"),
-        Title("Titlebar Actions", ""),
+        Title("Titlebar Actions", "", uid="title-titlebar-actions"),
         GSettingsComboEnumTweak("Double-click","org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
         GSettingsComboEnumTweak("Middle-click","org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
         GSettingsComboEnumTweak("Secondary-click","org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),

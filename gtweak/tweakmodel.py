@@ -53,6 +53,7 @@ class Tweak(object):
     def __init__(self, name, description, **options):
         self.name = name
         self.description = description
+        self.uid = options.get("uid", self.__class__.__name__)
         self.group_name = options.get("group_name",_("Miscellaneous"))
         self.loaded = options.get("loaded", True)
         self.widget_sort_hint = None
@@ -73,9 +74,10 @@ class Tweak(object):
         self._notification = Notification(summary, desc)
 
 class TweakGroup(object):
-    def __init__(self, name, *tweaks):
+    def __init__(self, name, *tweaks, **options):
         self.name = name
         self.tweaks = [t for t in tweaks if t.loaded]
+        self.uid = options.get('uid', self.__class__.__name__)
 
 class TweakModel(Gtk.ListStore):
     (COLUMN_NAME,

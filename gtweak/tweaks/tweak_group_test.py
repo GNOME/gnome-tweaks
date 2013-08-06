@@ -20,7 +20,7 @@ from __future__ import print_function
 from gi.repository import Gtk
 
 from gtweak.tweakmodel import Tweak
-from gtweak.widgets import ListBoxTweakGroup, build_label_beside_widget
+from gtweak.widgets import ListBoxTweakGroup, Title, build_label_beside_widget
 
 class _TestInfoTweak(Gtk.Box, Tweak):
     def __init__(self, name, description, **options):
@@ -59,15 +59,17 @@ class _TestButtonTweak(Gtk.Box, Tweak):
 TWEAK_GROUPS = [
     ListBoxTweakGroup(
         "Test Many Settings",
-        *[_TestTweak("name: " + str(d), "desc: " + str(d)) for d in range(50)]),
+        *[_TestTweak("name: " + str(d), "desc: " + str(d)) for d in range(10)],
+        uid="group-tweak-test"),
     ListBoxTweakGroup(
         "Test Settings",
-        _TestTweak("foo bar", "does foo bar"),
+        _TestTweak("foo bar", "does foo bar", uid="tweak-test-foo"),
         _TestTweak("foo baz", "does foo baz"),
         _TestInfoTweak("long string "*10, "long description "*10, _test_button_name="short"),
         _TestInfoTweak("foo info", "info widget", _tweak_info="Information"),
         _TestInfoTweak("foo warning", "info widget", _tweak_warning="Warning"),
-        _TestButtonTweak("Notify Information", "foo bar", _need_action=True),
-        _TestButtonTweak("Notify Logout", "foo bar log", _need_logout=True))
+        Title("Test Notifications", "", uid="title-tweak-test"),
+        _TestButtonTweak("Shows Information", "foo bar", _need_action=True),
+        _TestButtonTweak("Needs Logout", "foo bar log", _need_logout=True))
 ]
 

@@ -162,6 +162,8 @@ class _GSettingsTweak(Tweak):
         schema_name = adjust_schema_for_overrides(schema_name, key_name, options)
         self.schema_name = schema_name
         self.key_name = key_name
+        if 'uid' not in options:
+            options['uid'] = key_name
         try:
             self.settings = GSettingsSetting(schema_name, **options)
             Tweak.__init__(self,
@@ -212,17 +214,20 @@ class _DependableMixin(object):
         self.set_sensitive(sensitive)
 
 class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
-    def __init__(self, name, *tweaks):
+    def __init__(self, name, *tweaks, **options):
+        if 'uid' not in options:
+            options['uid'] = self.__class__.__name__
         Gtk.ListBox.__init__(self,
-                        selection_mode=Gtk.SelectionMode.NONE)         
+                        selection_mode=Gtk.SelectionMode.NONE,
+                        name=options['uid'])
         self.get_style_context().add_class("tweak-group")
-        TweakGroup.__init__(self, name, *tweaks)
+        TweakGroup.__init__(self, name, *tweaks, **options)
         self._sg = Gtk.SizeGroup(
                         mode=Gtk.SizeGroupMode.HORIZONTAL)
         self._sg.props.ignore_hidden = True
 
         for t in self.tweaks:
-            row = Gtk.ListBoxRow()
+            row = Gtk.ListBoxRow(name=t.uid)
             row.get_style_context().add_class("tweak")
             if isinstance(t, Title):
                 row.get_style_context().add_class("title")
