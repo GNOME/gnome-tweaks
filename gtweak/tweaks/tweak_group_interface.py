@@ -22,8 +22,8 @@ from gi.repository import GLib
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default
-from gtweak.tweakmodel import TWEAK_GROUP_APPEARANCE, TWEAK_GROUP_KEYBOARD, TWEAK_SORT_FIRST
-from gtweak.widgets import GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher, Title
+from gtweak.tweakmodel import TWEAK_GROUP_APPEARANCE, TWEAK_GROUP_KEYBOARD
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher, Title
 
 class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
@@ -101,13 +101,36 @@ class KeyThemeSwitcher(GSettingsComboTweak):
                     os.path.isfile(os.path.join(d, "gtk-2.0-key", "gtkrc")))
         return valid
 
-TWEAKS = (
-    #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons", group_name=TWEAK_GROUP_APPEARANCE),
-	#GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons", group_name=TWEAK_GROUP_APPEARANCE),
-    DarkThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
-	Title("Theme", "", group_name=TWEAK_GROUP_APPEARANCE),     
-    KeyThemeSwitcher(group_name=TWEAK_GROUP_KEYBOARD),
-    GtkThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
-	IconThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
-    CursorThemeSwitcher(group_name=TWEAK_GROUP_APPEARANCE),
-)
+class WindowThemeSwitcher(GSettingsComboTweak):
+    def __init__(self, **options):
+        GSettingsComboTweak.__init__(self,
+			"Window",
+            "org.gnome.desktop.wm.preferences",
+            "theme",
+            make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
+            **options)
+
+    def _get_valid_themes(self):
+        dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
+                 os.path.join(GLib.get_user_data_dir(), "themes"))
+        valid = walk_directories(dirs, lambda d:
+                    os.path.exists(os.path.join(d, "metacity-1")))
+        return valid
+
+
+
+TWEAK_GROUPS = [
+    ListBoxTweakGroup(TWEAK_GROUP_APPEARANCE,
+        #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+        #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+        DarkThemeSwitcher(),
+        Title("Theme", ""),
+        WindowThemeSwitcher(),
+        GtkThemeSwitcher(),
+	IconThemeSwitcher(),
+        CursorThemeSwitcher(),
+    ),
+    ListBoxTweakGroup(TWEAK_GROUP_KEYBOARD,
+        KeyThemeSwitcher(),
+    ),
+]
