@@ -220,18 +220,22 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
         Gtk.ListBox.__init__(self,
                         selection_mode=Gtk.SelectionMode.NONE,
                         name=options['uid'])
-        self.get_style_context().add_class("tweak-group")
+        self.get_style_context().add_class(
+                        options.get('css_class','tweak-group'))
         TweakGroup.__init__(self, name, *tweaks, **options)
         self._sg = Gtk.SizeGroup(
                         mode=Gtk.SizeGroupMode.HORIZONTAL)
         self._sg.props.ignore_hidden = True
 
         for t in self.tweaks:
-            row = Gtk.ListBoxRow(name=t.uid)
-            row.get_style_context().add_class("tweak")
-            if isinstance(t, Title):
-                row.get_style_context().add_class("title")
-            row.add(t)
+            if isinstance(t, Gtk.ListBoxRow):
+                row = t
+            else:
+                row = Gtk.ListBoxRow(name=t.uid)
+                row.get_style_context().add_class("tweak")
+                if isinstance(t, Title):
+                    row.get_style_context().add_class("title")
+                row.add(t)
             self.add(row)
             if t.widget_for_size_group:
                 self._sg.add_widget(t.widget_for_size_group)
