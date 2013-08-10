@@ -17,7 +17,7 @@
 
 from __future__ import print_function
 
-from gi.repository import Gtk
+from gi.repository import Gtk, Gdk
 
 from gtweak.tweakmodel import Tweak
 from gtweak.widgets import ListBoxTweakGroup, Title, build_label_beside_widget
@@ -55,6 +55,25 @@ class _TestButtonTweak(Gtk.Box, Tweak):
             self.notify_information(self.name)
         elif self._need_logout:
             self.notify_logout()
+
+css_provider = Gtk.CssProvider()
+css_provider.load_from_data("""
+.list-row.tweak#tweak-test-foo {
+        background-color: red;
+}
+.list-row.tweak.title#title-tweak-test {
+        background-color: blue;
+}
+.list.tweak-group#group-tweak-test {
+        background-color: green;
+}
+""")
+screen = Gdk.Screen.get_default()
+context = Gtk.StyleContext()
+context.add_provider_for_screen(
+            screen,
+            css_provider,
+            1 + Gtk.STYLE_PROVIDER_PRIORITY_USER)
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(
