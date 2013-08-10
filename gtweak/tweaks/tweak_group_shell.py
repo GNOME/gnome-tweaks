@@ -21,9 +21,33 @@ from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsF
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TWEAK_GROUP_TOPBAR, TWEAK_GROUP_WORKSPACES, TWEAK_GROUP_POWER
 from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsSwitchTweak, GSettingsCheckTweak, adjust_schema_for_overrides, build_label_beside_widget, build_horizontal_sizegroup, UI_BOX_SPACING, Title
+from gtweak.utils import XSettingsOverrides
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
+
+class ApplicationMenuTweak(Gtk.Box, Tweak):
+    def __init__(self, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+
+        name = "Show Application Menu"
+        description = ""
+        Tweak.__init__(self, name, description, **options)
+
+        self._xsettings = XSettingsOverrides()
+
+        sw = Gtk.Switch()
+        sw.set_active(self._xsettings.get_shell_shows_app_menu())
+        sw.connect("notify::active", self._on_toggled)
+
+        build_label_beside_widget(
+                name,
+                sw,
+                hbox=self)
+
+
+    def _on_toggled(self, sw, pspec):
+        self._xsettings.set_shell_shows_app_menu(sw.get_active())
 
 class StaticWorkspaceTweak(Gtk.Box, Tweak):
 
@@ -71,6 +95,7 @@ sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_TOPBAR,
+        ApplicationMenuTweak(),
         Title("Clock",""),
         GSettingsCheckTweak("Show date","org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
         GSettingsCheckTweak("Show seconds", "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),

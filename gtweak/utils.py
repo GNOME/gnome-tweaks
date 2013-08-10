@@ -306,11 +306,11 @@ class XSettingsOverrides:
     def set_shell_shows_app_menu(self, v):
         self._set_override('Gtk/ShellShowsAppMenu', int(v))
     def get_shell_shows_app_menu(self):
-        self._get_override('Gtk/ShellShowsAppMenu', True)
+        return self._get_override('Gtk/ShellShowsAppMenu', True)
     def set_enable_primary_paste(self, v):
         self._set_override('Gtk/EnablePrimaryPaste', int(v))
     def get_enable_primary_paste(self):
-        self._get_override('Gtk/EnablePrimaryPaste', True)
+        return self._get_override('Gtk/EnablePrimaryPaste', True)
 
 class Notification:
     def __init__(self, summary, body):
