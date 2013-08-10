@@ -12,8 +12,8 @@ from gi.repository import GObject
 from operator import itemgetter
 from gtweak.utils import extract_zip_file, execute_subprocess
 from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
-from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import FileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING
+from gtweak.tweakmodel import Tweak
+from gtweak.widgets import FileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING, ListBoxTweakGroup
 from gtweak.egowrapper import ExtensionsDotGnomeDotOrg
 from gtweak.utils import DisableExtension
 
@@ -219,10 +219,8 @@ class _ShellExtensionInstallerTweak(Gtk.Box, Tweak):
         #set button back to default state
         chooser.unselect_all()
 
-class ShellExtensionTweakGroup(TweakGroup):
+class ShellExtensionTweakGroup(ListBoxTweakGroup):
     def __init__(self):
-        TweakGroup.__init__(self, N_("Extensions"))
-
         extension_tweaks = []
         sg = build_horizontal_sizegroup()
 
@@ -232,10 +230,6 @@ class ShellExtensionTweakGroup(TweakGroup):
             if shell is None:
                 raise Exception("Shell not running or DBus service not available")
 
-            #add the extension installer
-            extension_tweaks.append(
-                _ShellExtensionInstallerTweak(shell, size_group=sg))
-            
             version =  tuple(shell.version.split("."))
             ego = ExtensionsDotGnomeDotOrg(version)
             try:
@@ -254,8 +248,14 @@ class ShellExtensionTweakGroup(TweakGroup):
                 logging.warning("Error listing extensions", exc_info=True)
         except:
             logging.warning("Error detecting shell", exc_info=True)
-
-        self.set_tweaks(*extension_tweaks)
+        
+        #add the extension installer
+        extension_tweaks.append(
+                _ShellExtensionInstallerTweak(shell, size_group=sg))
+            
+        ListBoxTweakGroup.__init__(self,
+                                   _("Extensions"),
+                                   *extension_tweaks)
 
     def _got_info(self, ego, resp, uuid, extension, widget):
         if uuid == extension["uuid"]:
@@ -270,6 +270,6 @@ class ShellExtensionTweakGroup(TweakGroup):
             except KeyError:
                 print "Older/Unknown Version"
 
-TWEAK_GROUPS = (
+TWEAK_GROUPS = [
         ShellExtensionTweakGroup(),
-)
+]
