@@ -160,7 +160,7 @@ class Window(Gtk.ApplicationWindow):
             return row
     
     def _list_header_func(self, row, before, user_data):
-        if not row.get_header():
+        if before and not row.get_header():
             row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
 
     def _on_key_press(self, widget, event):
