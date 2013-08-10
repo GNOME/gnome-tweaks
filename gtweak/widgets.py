@@ -222,9 +222,12 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
                         name=options['uid'])
         self.get_style_context().add_class(
                         options.get('css_class','tweak-group'))
+        self.props.vexpand = False
+        self.props.valign = Gtk.Align.START
+
         TweakGroup.__init__(self, name, *tweaks, **options)
-        self._sg = Gtk.SizeGroup(
-                        mode=Gtk.SizeGroupMode.HORIZONTAL)
+
+        self._sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
         self._sg.props.ignore_hidden = True
 
         for t in self.tweaks:
