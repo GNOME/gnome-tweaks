@@ -8,6 +8,7 @@ import threading
 from gi.repository import Gtk
 from gi.repository import GLib
 from gi.repository import GObject
+from gi.repository import Pango
 
 from operator import itemgetter
 from gtweak.utils import extract_zip_file, execute_subprocess
@@ -19,12 +20,16 @@ from gtweak.utils import DisableExtension
 
 def N_(x): return x
 
-class _ShellExtensionTweak(Gtk.Box, Tweak):
+class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
     def __init__(self, shell, ext, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.ListBoxRow.__init__(self)
         Tweak.__init__(self, ext["name"], ext.get("description",""), **options)
 
+        self.hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        self.hbox.props.border_width = 10
+        self.hbox.props.spacing = UI_BOX_SPACING
+    
         self._shell = shell
         state = ext.get("state")
         uuid = ext["uuid"]
@@ -32,6 +37,20 @@ class _ShellExtensionTweak(Gtk.Box, Tweak):
         sw = Gtk.Switch()
         sw.set_active(self._shell.extension_is_active(state, uuid))
         sw.connect('notify::active', self._on_extension_toggled, uuid)
+        self.hbox.pack_start(sw, False, False, 0)
+                        
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        lbl_name = Gtk.Label(xalign=0.0)
+        lbl_name.set_markup("<span size='medium'><b>"+ext["name"].lower().capitalize()+"</b></span>")
+        lbl_desc = Gtk.Label(xalign=0.0)
+        desc = ext["description"].lower().capitalize().split('\n')[0]
+        lbl_desc.set_markup("<span foreground='#A19C9C' size='small'>"+desc+"</span>")
+        lbl_desc.props.ellipsize = Pango.EllipsizeMode.END 
+        
+        vbox.pack_start(lbl_name, False, False, 0)
+        vbox.pack_start(lbl_desc, False, False, 0)
+        
+        self.hbox.pack_start(vbox, True, True, 10)
 
         info = None
         warning = None
@@ -51,30 +70,40 @@ class _ShellExtensionTweak(Gtk.Box, Tweak):
             logging.critical(warning)
         sw.set_sensitive(sensitive)
 
-        widgets = []
+
+        if info:
+            inf = make_image("dialog-information-symbolic", info)
+            self.hbox.pack_start(inf, False, False, 0)
+
+        if warning:
+            wg = make_image("dialog-warning-symbolic", warning)
+            self.hbox.pack_start(wg, False, False, 0)
+
         if self._shell.SUPPORTS_EXTENSION_PREFS:
             prefs = os.path.join(ext['path'], "prefs.js")
             if os.path.exists(prefs):
-                cfg = build_tight_button(Gtk.STOCK_PREFERENCES)
+                icon = Gtk.Image()  
+                icon.set_from_icon_name("emblem-system-symbolic", Gtk.IconSize.BUTTON)
+                cfg = Gtk.Button()
+                cfg.add(icon)
                 cfg.connect("clicked", self._on_configure_clicked, uuid)
-                widgets.append(cfg)
+                self.hbox.pack_start(cfg, False, False, 0)
+
+        self.deleteButton = Gtk.Button("Remove")   
+        self.deleteButton.set_sensitive(False)
+        self.hbox.pack_start(self.deleteButton, False, False, 0)
 
         if ext.get("type") == GnomeShell.EXTENSION_TYPE["PER_USER"]:
-            deleteButton = build_tight_button(Gtk.STOCK_DELETE)
-            deleteButton.connect("clicked", self._on_extension_delete, uuid, ext["name"])
-            widgets.append(deleteButton)
+            self.deleteButton.get_style_context().add_class("suggested-action")
+            self.deleteButton.set_sensitive(True)
+            self.deleteButton.connect("clicked", self._on_extension_delete, uuid, ext["name"])
 
         de = DisableExtension()
         de.connect('disable-extension', self._on_disable_extension, sw)
-         
-        widgets.append(sw)
-
-        build_label_beside_widget(
-                        ext["name"].lower().capitalize(),
-                        *widgets,
-                        warning=warning,
-                        hbox=self)
+    
+        self.add(self.hbox)
         self.widget_for_size_group = None
+        self.get_style_context().add_class('tweak-white')
 
     def _on_disable_extension(self, de, sw):
         sw.set_active(False)
@@ -108,29 +137,37 @@ class _ShellExtensionTweak(Gtk.Box, Tweak):
             response = dialog.run()
             if response == Gtk.ResponseType.YES:
                 self._shell.uninstall_extension(uuid)
-                self.widget.set_sensitive(False)
+                self.set_sensitive(False)
+                btn.get_style_context().remove_class("suggested-action")
             dialog.destroy()
 
     def _on_extension_update(self, btn, uuid):
         self._shell.uninstall_extension(uuid)
-        self.widget.set_sensitive(False)
+        btn.get_style_context().remove_class("suggested-action")
+        btn.set_label("Updating")
+        self.set_sensitive(False)
         thread = threading.Thread(target=self.download_extension, args=(btn,uuid,))
         thread.start()
 
     def download_extension(self, btn,uuid):
         status = self._shell.install_remote_extension(uuid)
         if status == 's':
-            GObject.idle_add(btn.set_sensitive, False)
-            GObject.idle_add(self.widget.set_sensitive, True) 
+            GObject.idle_add(self.deleteButton.show)
+            GObject.idle_add(btn.hide)
+            GObject.idle_add(self.set_sensitive, True) 
 
     def add_update_button(self, uuid):
-        button = build_tight_button(Gtk.STOCK_REFRESH)
-        button.connect("clicked", self._on_extension_update, uuid)
-        self.widget.pack_start(button, False, False, 0)
-        self.widget.reorder_child(button, 1)
-        #if the widget calls directly the show_all method, This will be shown in any visible parent widget.
-        if self.widget.get_visible() == True:
-            self.widget.show_all()
+        self.deleteButton.hide()
+        updateButton = Gtk.Button("Update")   
+        updateButton.get_style_context().add_class("suggested-action")
+        updateButton.connect("clicked", self._on_extension_update, uuid)
+        updateButton.show()
+        self.hbox.pack_end(updateButton, False, False, 0)
+
+    def make_image(icon, tip):
+        image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU)
+        image.set_tooltip_text(tip)
+        return image    
 
 class _ShellExtensionInstallerTweak(Gtk.Box, Tweak):
 
@@ -255,7 +292,10 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
             
         ListBoxTweakGroup.__init__(self,
                                    _("Extensions"),
-                                   *extension_tweaks)
+                                   *extension_tweaks,
+                                   css_class='tweak-group-white')
+        
+        self.set_header_func(self._list_header_func, None)
 
     def _got_info(self, ego, resp, uuid, extension, widget):
         if uuid == extension["uuid"]:
@@ -269,6 +309,10 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
 
             except KeyError:
                 print "Older/Unknown Version"
+
+    def _list_header_func(self, row, before, user_data):
+        if before and not row.get_header():
+            row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
 
 TWEAK_GROUPS = [
         ShellExtensionTweakGroup(),
