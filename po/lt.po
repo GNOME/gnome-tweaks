@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: lithuanian-gnome tweak tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-28 16:55+0000\n"
-"PO-Revision-Date: 2013-04-01 20:13+0300\n"
+"POT-Creation-Date: 2013-07-22 21:09+0000\n"
+"PO-Revision-Date: 2013-08-15 21:27+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -24,7 +24,7 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
+#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:5
 msgid "Tweak Tool"
 msgstr "Papildomų nustatymų įrankis"
 
@@ -37,11 +37,28 @@ msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr "Nustatymai;Sudėtingesni;Plėtiniai;Šriftai;Tema;XKB;Klaviatūra;Rašymas;"
 
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "_Atstatyti numatytuosius"
+
 #: ../data/shell.ui.h:2
+msgid "_Help"
+msgstr "_Žinynas"
+
+#: ../data/shell.ui.h:3
+#| msgid "Tweak Tool"
+msgid "_About Tweak Tool"
+msgstr "_Apie papildomų nustatymų įrankį"
+
+#: ../data/shell.ui.h:4
+msgid "_Quit"
+msgstr "_Išeiti"
+
+#: ../data/shell.ui.h:6
 msgid "welcome"
 msgstr "sveiki"
 
-#: ../data/shell.ui.h:3
+#: ../data/shell.ui.h:7
 msgid "tweaks"
 msgstr "reguliavimai"
 
@@ -82,176 +99,179 @@ msgstr "Failai"
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:130
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:122
 msgid "<i>Default</i>"
 msgstr "<i>Numatytoji</i>"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
 msgid "Extension downloading"
 msgstr "Plėtinių atsiuntimas"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_shell_extensions.py:44
 msgid "Error loading extension"
 msgstr "Klaida įkeliant plėtinį"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:43
+#: ../gtweak/tweaks/tweak_shell_extensions.py:46
 msgid "Extension does not support shell version"
 msgstr "Plėtinys nepalaiko apvalkalo versijos"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:45
+#: ../gtweak/tweaks/tweak_shell_extensions.py:48
 msgid "Unknown extension error"
 msgstr "Nežinoma plėtinio klaida"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:81
+#: ../gtweak/tweaks/tweak_shell_extensions.py:84
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti apvalkalą"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:82
-#: ../gtweak/tweaks/tweak_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_shell_extensions.py:85
+#: ../gtweak/tweaks/tweak_shell_extensions.py:197
 msgid "Restart"
 msgstr "Įkelti iš naujo"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:88
-#| msgid "Install Shell Extension"
+#: ../gtweak/tweaks/tweak_shell_extensions.py:91
 msgid "Uninstall Extension"
 msgstr "Išdiegti plėtinį"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:89
+#: ../gtweak/tweaks/tweak_shell_extensions.py:92
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Ar tikrai norite išdiegti plėtinį „%s“?"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_shell_extensions.py:129
 msgid "Install Shell Extension"
 msgstr "Įdiegti apvalkalo plėtinį"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:110
+#: ../gtweak/tweaks/tweak_shell_extensions.py:134
 msgid "Select an extension"
 msgstr "Pasirinkite plėtinį"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:117
+#: ../gtweak/tweaks/tweak_shell_extensions.py:141
 msgid "Get more extensions"
 msgstr "Gauti daugiau plėtinių"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:165
+#: ../gtweak/tweaks/tweak_shell_extensions.py:191
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s plėtinys sėkmingai atnaujintas"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:167
+#: ../gtweak/tweaks/tweak_shell_extensions.py:193
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s plėtinys įdiegtas sėkmingai"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:175
+#: ../gtweak/tweaks/tweak_shell_extensions.py:201
 msgid "Error installing extension"
 msgstr "Klaida diegiant plėtinį"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:180
+#: ../gtweak/tweaks/tweak_shell_extensions.py:206
 msgid "Invalid extension"
 msgstr "Netinkamas plėtinys"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:188
+#: ../gtweak/tweaks/tweak_shell_extensions.py:214
 msgid "Shell Extensions"
 msgstr "Apvalkalo plėtiniai"
 
-#: ../gtweak/tweaks/tweak_shell.py:46
+#: ../gtweak/tweaks/tweak_shell.py:41
 msgid "Close Only"
 msgstr "Tik užverti"
 
-#: ../gtweak/tweaks/tweak_shell.py:47
+#: ../gtweak/tweaks/tweak_shell.py:42
 msgid "Minimize and Close"
 msgstr "Sumažinti ir užverti"
 
-#: ../gtweak/tweaks/tweak_shell.py:48
+#: ../gtweak/tweaks/tweak_shell.py:43
 msgid "Maximize and Close"
 msgstr "Išdidinti ir užverti"
 
-#: ../gtweak/tweaks/tweak_shell.py:49
+#: ../gtweak/tweaks/tweak_shell.py:44
 msgid "All"
 msgstr "Visi"
 
-#: ../gtweak/tweaks/tweak_shell.py:64
+#: ../gtweak/tweaks/tweak_shell.py:59
 msgid "Shell theme"
 msgstr "Apvalkalo tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:64
+#: ../gtweak/tweaks/tweak_shell.py:59
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Įdiegti pasirinktines arba naudotojo gnome-shell temas"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:67
+#: ../gtweak/tweaks/tweak_shell.py:62
 msgid "Unknown error"
 msgstr "Nežinoma klaida"
 
-#: ../gtweak/tweaks/tweak_shell.py:75
+#: ../gtweak/tweaks/tweak_shell.py:67
 msgid "Shell not running"
 msgstr "Apvalkalas nepaleistas"
 
-#: ../gtweak/tweaks/tweak_shell.py:97
+#: ../gtweak/tweaks/tweak_shell.py:89
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Apvalkalo naudotojo temos plėtinys įdiegtas netinkamai"
 
-#: ../gtweak/tweaks/tweak_shell.py:100
+#: ../gtweak/tweaks/tweak_shell.py:92
 msgid "Shell user-theme extension not enabled"
 msgstr "Apvalkalo naudotojo temos plėtinys neįjungtas"
 
-#: ../gtweak/tweaks/tweak_shell.py:103
+#: ../gtweak/tweaks/tweak_shell.py:95
 msgid "Could not list shell extensions"
 msgstr "Nepavyko parodyti apvalkalo plėtinių sąrašo"
 
-#: ../gtweak/tweaks/tweak_shell.py:136
+#: ../gtweak/tweaks/tweak_shell.py:128
 msgid "Select a theme"
 msgstr "Pasirinkite temą"
 
-#: ../gtweak/tweaks/tweak_shell.py:187
+#: ../gtweak/tweaks/tweak_shell.py:179
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s tema sėkmingai atnaujinta"
 
-#: ../gtweak/tweaks/tweak_shell.py:189
+#: ../gtweak/tweaks/tweak_shell.py:181
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s tema sėkmingai įdiegta"
 
-#: ../gtweak/tweaks/tweak_shell.py:197
+#: ../gtweak/tweaks/tweak_shell.py:189
 msgid "Error installing theme"
 msgstr "Klaida diegiant temą"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:202
+#: ../gtweak/tweaks/tweak_shell.py:194
 msgid "Invalid theme"
 msgstr "Netinkama tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:228
+#: ../gtweak/tweaks/tweak_shell.py:214
 msgid "Dynamic workspaces"
 msgstr "Dinaminiai darbalaukiai"
 
-#: ../gtweak/tweaks/tweak_shell.py:228
+#: ../gtweak/tweaks/tweak_shell.py:214
 msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 msgstr ""
 "Išjungti gnome-shell dinaminį darbalaukių valdymą, naudoti statinius "
 "darbalaukius"
 
-#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:51
+#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:50
 msgid "Disabled"
 msgstr "Išjungta"
 
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Wacom"
+
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:67
+#: ../gtweak/utils.py:66
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(numatytoji)</i>"
 
-#: ../gtweak/widgets.py:345
+#: ../gtweak/widgets.py:366
 msgid "Enable dark theme for all applications"
 msgstr "Įjungti tamsiąją temą visoms programoms"
 
-#: ../gtweak/widgets.py:346
+#: ../gtweak/widgets.py:367
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Įjungti tamsiosios temos parametrą visoms seanso programoms"
 
-#: ../gtweak/widgets.py:364
+#: ../gtweak/widgets.py:385
 msgid "Error writing setting"
 msgstr "Klaida rašant parametrą"
