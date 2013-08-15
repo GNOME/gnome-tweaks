@@ -3,11 +3,9 @@ import zipfile
 import tempfile
 import logging
 import json
-import threading
 
 from gi.repository import Gtk
 from gi.repository import GLib
-from gi.repository import GObject
 from gi.repository import Pango
 
 from operator import itemgetter
@@ -146,15 +144,17 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         btn.get_style_context().remove_class("suggested-action")
         btn.set_label("Updating")
         self.set_sensitive(False)
-        thread = threading.Thread(target=self.download_extension, args=(btn,uuid,))
-        thread.start()
+        self._shell.install_remote_extension(uuid,self.reply_handler, self.error_handler, btn)
+    
+    def reply_handler(self, proxy_object, result, user_data):
+        if result == 's':
+            self.deleteButton.show()
+            user_data.hide()
+            self.set_sensitive(True) 
 
-    def download_extension(self, btn,uuid):
-        status = self._shell.install_remote_extension(uuid)
-        if status == 's':
-            GObject.idle_add(self.deleteButton.show)
-            GObject.idle_add(btn.hide)
-            GObject.idle_add(self.set_sensitive, True) 
+    def error_handler(self, proxy_object, result, user_data):
+        user_data.set_label("Error")
+        print result
 
     def add_update_button(self, uuid):
         self.deleteButton.hide()
