@@ -22,7 +22,7 @@ import logging
 from gi.repository import Pango, Gtk, GnomeDesktop
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_WINDOWS, TWEAK_GROUP_TYPING, TWEAK_GROUP_MOUSE, TWEAK_GROUP_FILES, TWEAK_GROUP_DESKTOP, TWEAK_GROUP_FONTS, TWEAK_GROUP_POWER, TWEAK_GROUP_WORKSPACES, TWEAK_SORT_FIRST
-from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget, GSettingsFileChooserButtonTweak, GSettingsComboEnumTweak, GSettingsSpinButtonTweak, GSettingsComboTweak, build_horizontal_sizegroup
+from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget, GSettingsFileChooserButtonTweak, GSettingsComboEnumTweak, GSettingsSpinButtonTweak, GSettingsComboTweak, build_horizontal_sizegroup, ListBoxTweakGroup, Title
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 
 _shell = GnomeShellFactory().get_shell()
@@ -97,7 +97,7 @@ class _XkbOption(Gtk.Box, Tweak):
                 self._parent_settings.setting_remove_from_list(TypingTweakGroup.XKB_GSETTINGS_NAME, self._value)
             self._parent_settings.setting_add_to_list(TypingTweakGroup.XKB_GSETTINGS_NAME, new_value)
 
-class TypingTweakGroup(TweakGroup):
+class TypingTweakGroup(Gtk.Box, TweakGroup):
 
     XKB_GSETTINGS_SCHEMA = "org.gnome.desktop.input-sources"
     XKB_GSETTINGS_NAME = "xkb-options"
@@ -105,62 +105,69 @@ class TypingTweakGroup(TweakGroup):
     XKB_OPTIONS_BLACKLIST = {"lv3","Compose key"}
 
     def __init__(self):
-        TweakGroup.__init__(self, TWEAK_GROUP_TYPING)
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL)
         self._option_objects = []
-
         ok = False
+        self.widget_for_size_group = None
         try:
             self._kbdsettings = GSettingsSetting(self.XKB_GSETTINGS_SCHEMA)
             self._kbdsettings.connect("changed::"+self.XKB_GSETTINGS_NAME, self._on_changed)
             self._xkb_info = GnomeDesktop.XkbInfo()
             ok = True
+            self.loaded = True
         except GSettingsMissingError:
             logging.info("Typing missing schema %s" % self.XKB_GSETTINGS_SCHEMA)
+            self.loaded = False            
         except AttributeError:
             logging.warning("Typing missing GnomeDesktop.gir with Xkb support")
+            self.loaded = False
         finally:
             if ok:
                 for opt in set(self._xkb_info.get_all_option_groups()) - self.XKB_OPTIONS_BLACKLIST:
-                    self._option_objects.append(
-                            _XkbOption(opt, self._kbdsettings, self._xkb_info)
-                    )
-
-        self.set_tweaks(*self._option_objects)
+                    obj = _XkbOption(opt, self._kbdsettings, self._xkb_info)
+                    self._option_objects.append(obj)
+                    self.pack_start(obj, False, False, 0)
+        TweakGroup.__init__(self, TWEAK_GROUP_TYPING, *self._option_objects)
 
     def _on_changed(self, *args):
         for obj in self._option_objects:
             obj.reload()
 
-sg = build_horizontal_sizegroup()
+TWEAK_GROUPS = [
+    ListBoxTweakGroup(TWEAK_GROUP_TYPING,
+        GSettingsSwitchTweak("Show All Sources",
+                             "org.gnome.desktop.input-sources",
+                             "show-all-sources",
+                             logout_required=True,),
+        TypingTweakGroup(),
+    ),
+    
+    ListBoxTweakGroup("Legacy",
+        Title("Background", "", uid="title-theme"),
+        GSettingsComboEnumTweak("Background options","org.gnome.desktop.background", "picture-options"),    
+        GSettingsFileChooserButtonTweak("org.gnome.desktop.background", "picture-uri", local_only=True, mimetypes=["application/xml","image/png","image/jpeg"]),
+        Title("Files", "", uid="title-theme"),
+        GSettingsSwitchTweak("Use location entry", "org.gnome.nautilus.preferences", "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml"),
+        Title("Fonts", "", uid="title-theme"),
+        GSettingsSpinButtonTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, digits=1),
+        Title("Mouse", "", uid="title-theme"),
+        GSettingsSwitchTweak("Show location of pointer",
+                             "org.gnome.settings-daemon.peripherals.mouse", 
+                             "locate-pointer", 
+                              schema_filename="org.gnome.settings-daemon.peripherals.gschema.xml"),
+        Title("Power", "", uid="title-theme"),
+        GSettingsSwitchTweak("Laptop lid, when closed, will suspend even if there is an external monitor plugged in","org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
 
-TWEAK_GROUPS = (
-    TypingTweakGroup(),
-)
-
-TWEAKS = (
-    GSettingsSwitchTweak("Show All Sources",
-                         "org.gnome.desktop.input-sources",
-                         "show-all-sources",
-                         logout_required=True,
-                         group_name=TWEAK_GROUP_TYPING),
-    GSettingsSwitchTweak("Show location of pointer",
-                         "org.gnome.settings-daemon.peripherals.mouse", 
-                         "locate-pointer", 
-                         schema_filename="org.gnome.settings-daemon.peripherals.gschema.xml", 
-                         group_name=TWEAK_GROUP_MOUSE),
-    GSettingsSwitchTweak("Use location entry", "org.gnome.nautilus.preferences", "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml",group_name=TWEAK_GROUP_FILES),
-    GSettingsFileChooserButtonTweak("org.gnome.desktop.background", "picture-uri", local_only=True, mimetypes=["application/xml","image/png","image/jpeg"], group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsComboEnumTweak("Background options","org.gnome.desktop.background", "picture-options", group_name=TWEAK_GROUP_DESKTOP),
-    GSettingsSpinButtonTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, digits=1,sort=TWEAK_SORT_FIRST,group_name=TWEAK_GROUP_FONTS),
-    GSettingsComboTweak("Modifier to use for modified window click actions",
+        Title("Window", "", uid="title-theme"),
+        GSettingsSwitchTweak("Attach modal dialog to the parent window","org.gnome.mutter", "attach-modal-dialogs"),
+        GSettingsSwitchTweak("Whether rasing should be a side-effect of other user interactions","org.gnome.desktop.wm.preferences", "raise-on-click"),
+        GSettingsSwitchTweak("Whether to resize with the right button","org.gnome.desktop.wm.preferences", "resize-with-right-button"),
+        GSettingsComboTweak("Modifier to use for modified window click actions",
                         "org.gnome.desktop.wm.preferences",
                         "mouse-button-modifier",
-                        [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")],
-                        group_name=TWEAK_GROUP_WINDOWS),   
-    GSettingsSwitchTweak("Whether to resize with the right button","org.gnome.desktop.wm.preferences", "resize-with-right-button", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsSwitchTweak("Whether rasing should be a side-effect of other user interactions","org.gnome.desktop.wm.preferences", "raise-on-click", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsSwitchTweak("Attach modal dialog to the parent window","org.gnome.mutter", "attach-modal-dialogs", group_name=TWEAK_GROUP_WINDOWS),
-    GSettingsSwitchTweak("Laptop lid, when closed, will suspend even if there is an external monitor plugged in","org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor", group_name=TWEAK_GROUP_POWER),
-    GSettingsComboEnumTweak("Whether to turn off specific monitors after boot","org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup", size_group=sg, group_name=TWEAK_GROUP_WORKSPACES),
-    GSettingsSwitchTweak("Workspaces only on primary monitor","org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded, group_name=TWEAK_GROUP_WORKSPACES), 
-)
+                        [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
+        Title("Workspace", "", uid="title-theme"),
+        GSettingsComboEnumTweak("Whether to turn off specific monitors after boot","org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup"),
+        GSettingsSwitchTweak("Workspaces only on primary monitor","org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
+    ),
+]
