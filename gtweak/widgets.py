@@ -80,18 +80,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     #construct their own widgets will need to set this themselves
     lbl.set_mnemonic_widget(widget[-1])
     
-    if kwargs.get("desc"):
-        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        box.pack_start(hbox, False, False, 0)
-        desc = kwargs.get("desc")
-        lbl_des = Gtk.Label()
-        lbl_des.props.xalign = 0.0
-        lbl_des.set_markup("<span size='x-small'>"+desc+"</span>")
-        box.pack_start(lbl_des, False, False,0)
-        return box
-        
-    else:
-        return hbox
+    return hbox
 
 def build_combo_box_text(selected, *values):
     """
@@ -428,7 +417,7 @@ class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin
 
 class DarkThemeSwitcher(Gtk.Box, Tweak):
     def __init__(self, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL)
         Tweak.__init__(self, _("Enable dark theme for all applications"),
                        _("Enable the dark theme hint for all the applications in the session"),
                        **options)
@@ -441,8 +430,21 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
         title = _("Global Dark Theme")
         description = _("Applications need to be restarted for change to take effect")
         w.connect("notify::active", self._on_switch_changed)
-
-        build_label_beside_widget(title, w, desc=description, hbox=self)
+        
+        hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        hbox.props.spacing = UI_BOX_SPACING
+        lbl = Gtk.Label(title)
+        lbl.props.ellipsize = Pango.EllipsizeMode.END
+        lbl.props.xalign = 0.0
+        hbox.pack_start(lbl, True, True, 0)
+        hbox.pack_start(w, False, False, 0)
+        
+        lbl_des = Gtk.Label()
+        lbl_des.props.xalign = 0.0
+        lbl_des.set_markup("<span size='x-small'>"+description+"</span>")
+        
+        self.pack_start(hbox, False, False, 0)
+        self.pack_start(lbl_des, False, False,0)
         self.widget_for_size_group = None
 
     def _on_switch_changed(self, switch, param):

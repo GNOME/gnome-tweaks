@@ -289,9 +289,9 @@ class ShellThemeTweak(Gtk.Box, Tweak):
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_APPEARANCE,
+        DarkThemeSwitcher(),
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-        DarkThemeSwitcher(),
         Title("Theme", "", uid="title-theme"),
         WindowThemeSwitcher(),
         GtkThemeSwitcher(),
