@@ -101,7 +101,6 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
     
         self.add(self.hbox)
         self.widget_for_size_group = None
-        self.get_style_context().add_class('tweak-white')
 
     def _on_disable_extension(self, de, sw):
         sw.set_active(False)
@@ -292,8 +291,7 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
             
         ListBoxTweakGroup.__init__(self,
                                    _("Extensions"),
-                                   *extension_tweaks,
-                                   css_class='tweak-group-white')
+                                   *extension_tweaks)
         
         self.set_header_func(self._list_header_func, None)
 
