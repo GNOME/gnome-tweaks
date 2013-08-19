@@ -73,8 +73,8 @@ class GnomeTweakTool(Gtk.Application):
 
     def reset_cb(self, action, parameter):
         dialog = Gtk.MessageDialog(self.win,0, Gtk.MessageType.QUESTION,
-                    Gtk.ButtonsType.OK_CANCEL, "Reset to Defaults")
-        dialog.format_secondary_text("Reset all tweak settings to the original default state?")
+                    Gtk.ButtonsType.OK_CANCEL, _("Reset to Defaults"))
+        dialog.format_secondary_text(_("Reset all tweak settings to the original default state?"))
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
             s = SchemaList() 
@@ -90,19 +90,19 @@ class GnomeTweakTool(Gtk.Application):
 
     def about_cb(self, action, parameter):
         aboutdialog = Gtk.AboutDialog()
-        aboutdialog.set_title("About GNOME Tweak Tool")
-        aboutdialog.set_program_name("GNOME Tweak Tool")
+        aboutdialog.set_title(_("About GNOME Tweak Tool"))
+        aboutdialog.set_program_name(_("GNOME Tweak Tool"))
 
         _shell = GnomeShellFactory().get_shell()
         if _shell is not None:
-            aboutdialog.set_comments("GNOME Shell v%s (%s mode)" % (_shell.version, _shell.mode))
+            aboutdialog.set_comments(_("GNOME Shell v%s (%s mode)") % (_shell.version, _shell.mode))
         else:
-            aboutdialog.set_comments("GNOME Shell not running")
+            aboutdialog.set_comments(_("GNOME Shell not running"))
 
         aboutdialog.set_copyright("Copyright \xc2\xa9 2011 - 2013 John Stowers.")
         aboutdialog.set_logo_icon_name("gnome-tweak-tool")
         aboutdialog.set_website("http://live.gnome.org/GnomeTweakTool") 
-        aboutdialog.set_website_label("Homepage")
+        aboutdialog.set_website_label(_("Homepage"))
         aboutdialog.set_license_type(Gtk.License.GPL_3_0)
             
         AUTHORS = [

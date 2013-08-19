@@ -25,20 +25,20 @@ from gi.repository import Gtk
 
 def N_(x): return x
 
-TWEAK_GROUP_APPEARANCE = N_("Appearance")
-TWEAK_GROUP_DESKTOP = N_("Desktop")
-TWEAK_GROUP_EXTENSION = N_("Extensions")
-TWEAK_GROUP_FONTS = N_("Fonts")
-TWEAK_GROUP_KEYBOARD = N_("Keyboard Layout")
-TWEAK_GROUP_POWER = N_("Power")
-TWEAK_GROUP_APPLICATION = N_("Startup Applications")
-TWEAK_GROUP_TOPBAR = N_("Top Bar")
-TWEAK_GROUP_WINDOWS = N_("Windows")
-TWEAK_GROUP_WORKSPACES = N_("Workspaces")
+TWEAK_GROUP_APPEARANCE = _("Appearance")
+TWEAK_GROUP_DESKTOP = _("Desktop")
+TWEAK_GROUP_EXTENSION = _("Extensions")
+TWEAK_GROUP_FONTS = _("Fonts")
+TWEAK_GROUP_KEYBOARD = _("Keyboard Layout")
+TWEAK_GROUP_POWER = _("Power")
+TWEAK_GROUP_APPLICATION = _("Startup Applications")
+TWEAK_GROUP_TOPBAR = _("Top Bar")
+TWEAK_GROUP_WINDOWS = _("Windows")
+TWEAK_GROUP_WORKSPACES = _("Workspaces")
 
-TWEAK_GROUP_MOUSE = N_("Mouse")
-TWEAK_GROUP_TYPING = N_("Typing")
-TWEAK_GROUP_FILES = N_("Files")
+TWEAK_GROUP_MOUSE = _("Mouse")
+TWEAK_GROUP_TYPING = _("Typing")
+TWEAK_GROUP_FILES = _("Files")
 
 TWEAK_SORT_FIRST = -1e3
 TWEAK_SORT_LAST = 1e3

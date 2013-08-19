@@ -82,7 +82,7 @@ class Window(Gtk.ApplicationWindow):
         self.button.props.valign = Gtk.Align.CENTER
         self.button.get_style_context().add_class("search-button")
         
-        lbl = Gtk.Label("Tweaks")
+        lbl = Gtk.Label(_("Tweaks"))
         align = Gtk.Alignment(left_padding = 35, right_padding = 70)
         align.add(lbl)
         
@@ -99,7 +99,7 @@ class Window(Gtk.ApplicationWindow):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         
         self.revealer = Gtk.Revealer()
-        self.entry = Gtk.SearchEntry(placeholder_text="Search Tweaks...")
+        self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks..."))
         self.entry.props.margin_left = 5
         self.entry.props.margin_right = 5
         self.entry.props.margin_top = 5
