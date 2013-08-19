@@ -72,11 +72,11 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
 
         if info:
-            inf = make_image("dialog-information-symbolic", info)
+            inf = self.make_image("dialog-information-symbolic", info)
             self.hbox.pack_start(inf, False, False, 0)
 
         if warning:
-            wg = make_image("dialog-warning-symbolic", warning)
+            wg = self.make_image("dialog-warning-symbolic", warning)
             self.hbox.pack_start(wg, False, False, 0)
 
         if self._shell.SUPPORTS_EXTENSION_PREFS:
@@ -169,7 +169,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         updateButton.show()
         self.hbox.pack_end(updateButton, False, False, 0)
 
-    def make_image(icon, tip):
+    def make_image(self, icon, tip):
         image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU)
         image.set_tooltip_text(tip)
         return image    
