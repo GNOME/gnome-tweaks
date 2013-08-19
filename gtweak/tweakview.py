@@ -70,16 +70,17 @@ class Window(Gtk.ApplicationWindow):
         self.add(main_box)
     
     def titlebar(self):
-        hbar = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
 
         self.right_header = Gtk.HeaderBar()
         self.right_header.props.show_close_button = True
 
         icon = Gtk.Image()
-        icon.set_from_icon_name("edit-find-symbolic", Gtk.IconSize.BUTTON)
+        icon.set_from_icon_name("edit-find-symbolic",Gtk.IconSize.MENU)
         self.button = Gtk.ToggleButton()
         self.button.add(icon)
         self.button.connect("toggled", self._on_find_toggled)
+        self.button.props.valign = Gtk.Align.CENTER
+        self.button.get_style_context().add_class("search-button")
         
         lbl = Gtk.Label("Tweaks")
         align = Gtk.Alignment(left_padding = 35, right_padding = 70)
