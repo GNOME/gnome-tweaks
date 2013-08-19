@@ -30,7 +30,7 @@ class ApplicationMenuTweak(Gtk.Box, Tweak):
     def __init__(self, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
 
-        name = "Show Application Menu"
+        name = _("Show Application Menu")
         description = ""
         Tweak.__init__(self, name, description, **options)
 
@@ -96,17 +96,17 @@ sg = build_horizontal_sizegroup()
 TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_TOPBAR,
         ApplicationMenuTweak(),
-        Title("Clock",""),
-        GSettingsCheckTweak("Show date","org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-        GSettingsCheckTweak("Show seconds", "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-        Title("Calendar",""),
-        GSettingsCheckTweak("Show week numbers","org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
+        Title(_("Clock"),""),
+        GSettingsCheckTweak(_("Show date"),"org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
+        GSettingsCheckTweak(_("Show seconds"), "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
+        Title(_("Calendar"),""),
+        GSettingsCheckTweak(_("Show week numbers"),"org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
     ),
     ListBoxTweakGroup(TWEAK_GROUP_POWER,
-        GSettingsComboEnumTweak("Power Button Action", "org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg),
-        Title("When Laptop Lid is Closed", "", uid="title-theme"),
-        GSettingsComboEnumTweak("On Battery Power","org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
-        GSettingsComboEnumTweak("When plugged in","org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
+        GSettingsComboEnumTweak(_("Power Button Action"), "org.gnome.settings-daemon.plugins.power", "button-power", size_group=sg),
+        Title(_("When Laptop Lid is Closed"), "", uid="title-theme"),
+        GSettingsComboEnumTweak(_("On Battery Power"),"org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
+        GSettingsComboEnumTweak(_("When plugged in"),"org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
     ),
     ListBoxTweakGroup(TWEAK_GROUP_WORKSPACES,
         StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded),

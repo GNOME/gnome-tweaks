@@ -26,7 +26,7 @@ _shell_loaded = _shell is not None
 class ShowWindowButtons(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-			"Title Bar Buttons",
+			_("Title Bar Buttons"),
             "org.gnome.desktop.wm.preferences",
             "button-layout",
             ((':close', _("Close Only")),
@@ -38,11 +38,11 @@ class ShowWindowButtons(GSettingsComboTweak):
 
 TWEAK_GROUPS = [ 
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
-        GSettingsComboEnumTweak("Focus Mode", "org.gnome.desktop.wm.preferences", "focus-mode"),
-        Title("Titlebar Actions", "", uid="title-titlebar-actions"),
-        GSettingsComboEnumTweak("Double-click","org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
-        GSettingsComboEnumTweak("Middle-click","org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
-        GSettingsComboEnumTweak("Secondary-click","org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
+        GSettingsComboEnumTweak(_("Focus Mode"), "org.gnome.desktop.wm.preferences", "focus-mode"),
+        Title(_("Titlebar Actions"), "", uid="title-titlebar-actions"),
+        GSettingsComboEnumTweak(_("Double-click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
+        GSettingsComboEnumTweak(_("Middle-click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
+        GSettingsComboEnumTweak(_("Secondary-click"),"org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
         ShowWindowButtons(group_name=TWEAK_GROUP_WINDOWS),
     )
 ]

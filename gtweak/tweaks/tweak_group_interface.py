@@ -57,7 +57,7 @@ class GtkThemeSwitcher(GSettingsComboTweak):
 class IconThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-			"Icons",            
+			_("Icons"),            
 			"org.gnome.desktop.interface",
             "icon-theme",
             make_combo_list_with_default(self._get_valid_icon_themes(), "gnome"),
@@ -75,7 +75,7 @@ class IconThemeSwitcher(GSettingsComboTweak):
 class CursorThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-			"Cursor",
+			_("Cursor"),
             "org.gnome.desktop.interface",
             "cursor-theme",
             make_combo_list_with_default(self._get_valid_cursor_themes(), "Adwaita"),
@@ -93,7 +93,7 @@ class CursorThemeSwitcher(GSettingsComboTweak):
 class KeyThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-			"Key",
+			_("Key"),
             "org.gnome.desktop.interface",
             "gtk-key-theme",
             make_combo_list_with_default(
@@ -114,7 +114,7 @@ class KeyThemeSwitcher(GSettingsComboTweak):
 class WindowThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-			"Window",
+			_("Window"),
             "org.gnome.desktop.wm.preferences",
             "theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
@@ -292,7 +292,7 @@ TWEAK_GROUPS = [
         DarkThemeSwitcher(),
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-        Title("Theme", "", uid="title-theme"),
+        Title(_("Theme"), "", uid="title-theme"),
         WindowThemeSwitcher(),
         GtkThemeSwitcher(),
         IconThemeSwitcher(),

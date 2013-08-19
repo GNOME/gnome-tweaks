@@ -22,13 +22,13 @@ from gtweak.widgets import ListBoxTweakGroup, GSettingsSpinButtonTweak, GSetting
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_FONTS,
-        GSettingsFontButtonTweak("Window Titles","org.gnome.desktop.wm.preferences", "titlebar-font"),
-        GSettingsFontButtonTweak("Interface","org.gnome.desktop.interface", "font-name"),
-        GSettingsFontButtonTweak("Documents", "org.gnome.desktop.interface", "document-font-name"),
-        GSettingsFontButtonTweak("Monospace", "org.gnome.desktop.interface", "monospace-font-name"),
-        GSettingsComboTweak("Hinting","org.gnome.settings-daemon.plugins.xsettings", "hinting",
+        GSettingsFontButtonTweak(_("Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
+        GSettingsFontButtonTweak(_("Interface"),"org.gnome.desktop.interface", "font-name"),
+        GSettingsFontButtonTweak(_("Documents"), "org.gnome.desktop.interface", "document-font-name"),
+        GSettingsFontButtonTweak(_("Monospace"), "org.gnome.desktop.interface", "monospace-font-name"),
+        GSettingsComboTweak(_("Hinting"),"org.gnome.settings-daemon.plugins.xsettings", "hinting",
                             [(i, i.title()) for i in ("none", "slight", "medium", "full")]),
-        GSettingsComboTweak("Antialiasing","org.gnome.settings-daemon.plugins.xsettings", "antialiasing",
+        GSettingsComboTweak(_("Antialiasing"),"org.gnome.settings-daemon.plugins.xsettings", "antialiasing",
                             [(i, i.title()) for i in ("none", "grayscale", "rgba")]),
     )
 ]

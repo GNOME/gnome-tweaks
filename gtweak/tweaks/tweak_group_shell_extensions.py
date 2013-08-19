@@ -91,7 +91,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
                 btn.connect("clicked", self._on_configure_clicked, uuid)
                 self.hbox.pack_start(btn, False, False, 0)
 
-        btn = Gtk.Button("Remove")
+        btn = Gtk.Button(_("Remove"))
         btn.props.vexpand = False
         btn.props.valign = Gtk.Align.CENTER
         btn.set_sensitive(False)
@@ -147,7 +147,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
     def _on_extension_update(self, btn, uuid):
         self._shell.uninstall_extension(uuid)
         btn.get_style_context().remove_class("suggested-action")
-        btn.set_label("Updating")
+        btn.set_label(_("Updating"))
         self.set_sensitive(False)
         self._shell.install_remote_extension(uuid,self.reply_handler, self.error_handler, btn)
     
@@ -158,12 +158,12 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
             self.set_sensitive(True) 
 
     def error_handler(self, proxy_object, result, user_data):
-        user_data.set_label("Error")
+        user_data.set_label(_("Error"))
         print result
 
     def add_update_button(self, uuid):
         self.deleteButton.hide()
-        updateButton = Gtk.Button("Update")   
+        updateButton = Gtk.Button(_("Update"))   
         updateButton.get_style_context().add_class("suggested-action")
         updateButton.connect("clicked", self._on_extension_update, uuid)
         updateButton.show()

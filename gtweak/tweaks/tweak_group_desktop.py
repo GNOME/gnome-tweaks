@@ -24,7 +24,7 @@ from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsCom
 class DesktopIconTweak(GSettingsSwitchTweak):
     def __init__(self, **options):
         GSettingsSwitchTweak.__init__(self,
-			"Icons on Desktop",
+			_("Icons on Desktop"),
             "org.gnome.desktop.background",
             "show-desktop-icons",
             **options)
@@ -47,12 +47,12 @@ class DesktopIconTweak(GSettingsSwitchTweak):
 dicons = DesktopIconTweak()
 
 TWEAK_GROUPS = [
-    ListBoxTweakGroup("Desktop",
+    ListBoxTweakGroup(_("Desktop"),
         dicons,
-        GSettingsCheckTweak("Computer","org.gnome.nautilus.desktop", "computer-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
-        GSettingsCheckTweak("Home","org.gnome.nautilus.desktop", "home-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
-        GSettingsCheckTweak("Network Servers","org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
-        GSettingsCheckTweak("Trash","org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
-        GSettingsCheckTweak("Mounted Volumes","org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak(_("Computer"),"org.gnome.nautilus.desktop", "computer-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak(_("Home"),"org.gnome.nautilus.desktop", "home-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak(_("Network Servers"),"org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak(_("Trash"),"org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        GSettingsCheckTweak(_("Mounted Volumes"),"org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
     )
 ]

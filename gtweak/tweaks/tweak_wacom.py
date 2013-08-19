@@ -26,7 +26,7 @@ def N_(x): return x
 
 LIST_WACOM_DEVICES_CMD = 'libwacom-list-local-devices'
 DEVICE_MATCH_LINE = 'DeviceMatch'
-DEVICE_SECTION = 'Device'
+DEVICE_SECTION = _("Device")
 MACHINE_ID_PATH = '/etc/machine-id'
 SCHEMA_NAME = 'org.gnome.settings-daemon.peripherals.wacom'
 SCHEMA_PATH = '/org/gnome/settings-daemon/peripherals/wacom/%s-%s/'
