@@ -21,7 +21,7 @@ import logging
 
 from gi.repository import Pango, Gtk, GnomeDesktop
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_TYPING
+from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget, GSettingsComboEnumTweak, GSettingsComboTweak, build_horizontal_sizegroup, ListBoxTweakGroup, Title
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 
@@ -57,13 +57,13 @@ class _XkbOption(Gtk.Box, Tweak):
         self._combo = Gtk.ComboBox(model = store)
         renderer = Gtk.CellRendererText()
         renderer.props.ellipsize = Pango.EllipsizeMode.END
-        renderer.props.max_width_chars = 40
+        renderer.props.max_width_chars = 30
         self._combo.pack_start(renderer, True)
         self._combo.add_attribute(renderer, "text", 1)
         self._combo_changed_handler_id = self._combo.connect("changed", self._on_combo_changed)
 
         build_label_beside_widget(self.name, self._combo, hbox=self)
-        self.widget_for_size_group = self._combo
+        self.widget_for_size_group = None
 
         self.reload()
 
@@ -105,10 +105,10 @@ class TypingTweakGroup(Gtk.Box, TweakGroup):
     XKB_OPTIONS_BLACKLIST = {"lv3","Compose key"}
 
     def __init__(self):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL)
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=3)
         self._option_objects = []
+        self._sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
         ok = False
-        self.widget_for_size_group = None
         try:
             self._kbdsettings = GSettingsSetting(self.XKB_GSETTINGS_SCHEMA)
             self._kbdsettings.connect("changed::"+self.XKB_GSETTINGS_NAME, self._on_changed)
@@ -125,20 +125,15 @@ class TypingTweakGroup(Gtk.Box, TweakGroup):
             if ok:
                 for opt in set(self._xkb_info.get_all_option_groups()) - self.XKB_OPTIONS_BLACKLIST:
                     obj = _XkbOption(opt, self._kbdsettings, self._xkb_info)
+                    self._sg.add_widget(obj._combo)
                     self._option_objects.append(obj)
                     self.pack_start(obj, False, False, 0)
-        TweakGroup.__init__(self, TWEAK_GROUP_TYPING, *self._option_objects)
+        TweakGroup.__init__(self, _("Typing"), *self._option_objects)
 
     def _on_changed(self, *args):
         for obj in self._option_objects:
             obj.reload()
 
 TWEAK_GROUPS = [
-    ListBoxTweakGroup(TWEAK_GROUP_TYPING,
-        GSettingsSwitchTweak(_("Show All Sources"),
-                             "org.gnome.desktop.input-sources",
-                             "show-all-sources",
-                             logout_required=True,),
-        TypingTweakGroup(),
-    ),
+    TypingTweakGroup(),
 ]

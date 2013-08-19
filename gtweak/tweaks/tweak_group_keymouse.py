@@ -58,6 +58,10 @@ class KeyThemeSwitcher(GSettingsComboTweak):
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Keyboard and Mouse"),
         KeyThemeSwitcher(),
+        GSettingsSwitchTweak(_("Show All Input Sources"),
+                              "org.gnome.desktop.input-sources",
+                              "show-all-sources",
+                              logout_required=True,),
         Title(_("Mouse"), ""),
         GSettingsSwitchTweak(_("Show location of pointer"),
                              "org.gnome.settings-daemon.peripherals.mouse", 

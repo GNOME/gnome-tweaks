@@ -35,7 +35,6 @@ TWEAK_GROUP_WINDOWS = _("Windows")
 TWEAK_GROUP_WORKSPACES = _("Workspaces")
 
 TWEAK_GROUP_MOUSE = _("Mouse")
-TWEAK_GROUP_TYPING = _("Typing")
 TWEAK_GROUP_FILES = _("Files")
 
 LOG = logging.getLogger(__name__)
