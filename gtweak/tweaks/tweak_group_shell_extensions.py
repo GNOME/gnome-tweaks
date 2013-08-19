@@ -33,6 +33,8 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         uuid = ext["uuid"]
 
         sw = Gtk.Switch()
+        sw.props.vexpand = False
+        sw.props.valign = Gtk.Align.CENTER
         sw.set_active(self._shell.extension_is_active(state, uuid))
         sw.connect('notify::active', self._on_extension_toggled, uuid)
         self.hbox.pack_start(sw, False, False, 0)
@@ -82,19 +84,23 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
             if os.path.exists(prefs):
                 icon = Gtk.Image()  
                 icon.set_from_icon_name("emblem-system-symbolic", Gtk.IconSize.BUTTON)
-                cfg = Gtk.Button()
-                cfg.add(icon)
-                cfg.connect("clicked", self._on_configure_clicked, uuid)
-                self.hbox.pack_start(cfg, False, False, 0)
+                btn = Gtk.Button()
+                btn.props.vexpand = False
+                btn.props.valign = Gtk.Align.CENTER
+                btn.add(icon)
+                btn.connect("clicked", self._on_configure_clicked, uuid)
+                self.hbox.pack_start(btn, False, False, 0)
 
-        self.deleteButton = Gtk.Button("Remove")   
-        self.deleteButton.set_sensitive(False)
-        self.hbox.pack_start(self.deleteButton, False, False, 0)
-
+        btn = Gtk.Button("Remove")
+        btn.props.vexpand = False
+        btn.props.valign = Gtk.Align.CENTER
+        btn.set_sensitive(False)
+        self.hbox.pack_start(btn, False, False, 0)
         if ext.get("type") == GnomeShell.EXTENSION_TYPE["PER_USER"]:
-            self.deleteButton.get_style_context().add_class("suggested-action")
-            self.deleteButton.set_sensitive(True)
-            self.deleteButton.connect("clicked", self._on_extension_delete, uuid, ext["name"])
+            btn.get_style_context().add_class("suggested-action")
+            btn.set_sensitive(True)
+            btn.connect("clicked", self._on_extension_delete, uuid, ext["name"])
+        self.deleteButton = btn
 
         de = DisableExtension()
         de.connect('disable-extension', self._on_disable_extension, sw)
