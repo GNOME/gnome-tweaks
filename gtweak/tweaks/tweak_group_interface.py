@@ -27,7 +27,7 @@ from gi.repository import GLib
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default, extract_zip_file
-from gtweak.tweakmodel import Tweak, TWEAK_GROUP_APPEARANCE, TWEAK_SORT_LAST
+from gtweak.tweakmodel import Tweak, TWEAK_GROUP_APPEARANCE
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gsettings import GSettingsSetting
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher, Title, build_combo_box_text,build_label_beside_widget, FileChooserButton
@@ -196,8 +196,6 @@ class ShellThemeTweak(Gtk.Box, Tweak):
 
             build_label_beside_widget(self.name, chooser, cb, hbox=self)
             self.widget_for_size_group = cb
-
-            self.widget_sort_hint = TWEAK_SORT_LAST
     
     def _on_file_set(self, chooser):
         f = chooser.get_filename()

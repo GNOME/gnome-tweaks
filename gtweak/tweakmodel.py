@@ -26,7 +26,6 @@ from gi.repository import Gtk
 def N_(x): return x
 
 TWEAK_GROUP_APPEARANCE = _("Appearance")
-TWEAK_GROUP_DESKTOP = _("Desktop")
 TWEAK_GROUP_EXTENSION = _("Extensions")
 TWEAK_GROUP_FONTS = _("Fonts")
 TWEAK_GROUP_POWER = _("Power")
@@ -38,9 +37,6 @@ TWEAK_GROUP_WORKSPACES = _("Workspaces")
 TWEAK_GROUP_MOUSE = _("Mouse")
 TWEAK_GROUP_TYPING = _("Typing")
 TWEAK_GROUP_FILES = _("Files")
-
-TWEAK_SORT_FIRST = -1e3
-TWEAK_SORT_LAST = 1e3
 
 LOG = logging.getLogger(__name__)
 
@@ -58,8 +54,6 @@ class Tweak(object):
         self.widget_sort_hint = None
 
         self._search_cache = None
-        if options.get("sort"):
-            self.widget_sort_hint = options.get("sort")
 
     def search_matches(self, txt):
         if self._search_cache == None:

@@ -25,21 +25,6 @@ import gtweak.tweakmodel
 from gtweak.tweakmodel import TweakModel
 from gtweak.widgets import Title
 
-DEFAULT_TWEAKGROUP = gtweak.tweakmodel.TWEAK_GROUP_APPEARANCE
-WIDGET_SORT_ORDER = (Gtk.Switch, Gtk.SpinButton, Gtk.ComboBox, Gtk.Box, Gtk.VBox, Gtk.HBox)
-
-def _sort_tweak_widgets_by_widget_type(tweak):
-    #for appearance tries to make small widgets be packed first, followed by larger widgets,
-    #followed by widgets of the same type
-    if not tweak.widget_for_size_group:
-        return -1
-    if tweak.widget_sort_hint != None:
-        return tweak.widget_sort_hint
-    try:
-        return WIDGET_SORT_ORDER.index(type(tweak.widget_for_size_group))
-    except ValueError:
-        return len(WIDGET_SORT_ORDER) #last
-
 class Window(Gtk.ApplicationWindow):
 
     def __init__(self, app, model):

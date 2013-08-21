@@ -21,7 +21,7 @@ import logging
 
 from gi.repository import Pango, Gtk, GnomeDesktop
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_WINDOWS, TWEAK_GROUP_TYPING, TWEAK_GROUP_MOUSE, TWEAK_GROUP_FILES, TWEAK_GROUP_DESKTOP, TWEAK_GROUP_FONTS, TWEAK_GROUP_POWER, TWEAK_GROUP_WORKSPACES, TWEAK_SORT_FIRST
+from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_TYPING
 from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget, GSettingsComboEnumTweak, GSettingsComboTweak, build_horizontal_sizegroup, ListBoxTweakGroup, Title
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 
