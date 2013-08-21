@@ -74,6 +74,11 @@ class TweakGroup(object):
         self.tweaks = [t for t in tweaks if t.loaded]
         self.uid = options.get('uid', self.__class__.__name__)
 
+    def add_tweak(self, tweak):
+        if tweak.loaded:
+            self.tweaks.append(tweak)
+            return True
+
 class TweakModel(Gtk.ListStore):
     (COLUMN_NAME,
      COLUMN_TWEAK) = range(2)

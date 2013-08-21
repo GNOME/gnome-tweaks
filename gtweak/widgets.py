@@ -209,12 +209,19 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
         self.props.vexpand = False
         self.props.valign = Gtk.Align.START
 
-        TweakGroup.__init__(self, name, *tweaks, **options)
-
         self._sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
         self._sg.props.ignore_hidden = True
 
-        for t in self.tweaks:
+        TweakGroup.__init__(self, name, **options)
+
+        for t in tweaks:
+            self.add_tweak_row(t)
+
+    #FIXME: need to add remove_tweak_row and remove_tweak (which clears
+    #the search cache etc)
+
+    def add_tweak_row(self, t, position=None):
+        if self.add_tweak(t):
             if isinstance(t, Gtk.ListBoxRow):
                 row = t
             else:
@@ -223,9 +230,13 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
                 if isinstance(t, Title):
                     row.get_style_context().add_class("title")
                 row.add(t)
-            self.add(row)
+            if position is None:
+                self.add(row)
+            else:
+                self.insert(row, position)
             if t.widget_for_size_group:
                 self._sg.add_widget(t.widget_for_size_group)
+            return row
 
 class GSettingsCheckTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
