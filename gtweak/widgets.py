@@ -415,6 +415,26 @@ class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin
         if uri and self._values_are_different():
             self.settings.set_string(self.key_name, uri)
 
+class GetterSetterSwitchTweak(Gtk.Box, Tweak):
+    def __init__(self, name, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        Tweak.__init__(self, name, options.get("description",""), **options)
+
+        sw = Gtk.Switch()
+        sw.set_active(self.get_active())
+        sw.connect("notify::active", self._on_toggled)
+
+        build_label_beside_widget(name, sw, hbox=self)
+
+    def _on_toggled(self, sw, pspec):
+        self.set_active(sw.get_active())
+
+    def get_active(self):
+        raise NotImplementedError()
+
+    def set_active(self, v):
+        raise NotImplementedError()
+
 class DarkThemeSwitcher(Gtk.Box, Tweak):
     def __init__(self, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL)

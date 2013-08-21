@@ -17,35 +17,22 @@
 
 import os.path
 
-from gi.repository import GLib, Gtk
+from gi.repository import GLib
 
 import gtweak
-from gtweak.tweakmodel import Tweak
 from gtweak.utils import XSettingsOverrides, walk_directories, make_combo_list_with_default
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, Title, build_label_beside_widget
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GetterSetterSwitchTweak, Title
 
-class PrimaryPasteTweak(Gtk.Box, Tweak):
+class PrimaryPasteTweak(GetterSetterSwitchTweak):
     def __init__(self, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-
-        name = _("Middle-click Paste")
-        description = ""
-        Tweak.__init__(self, name, description, **options)
-
         self._xsettings = XSettingsOverrides()
+        GetterSetterSwitchTweak.__init__(self, _("Middle-click Paste"), **options)
 
-        sw = Gtk.Switch()
-        sw.set_active(self._xsettings.get_enable_primary_paste())
-        sw.connect("notify::active", self._on_toggled)
+    def get_active(self):
+        return self._xsettings.get_enable_primary_paste()
 
-        build_label_beside_widget(
-                name,
-                sw,
-                hbox=self)
-
-
-    def _on_toggled(self, sw, pspec):
-        self._xsettings.set_enable_primary_paste(sw.get_active())
+    def set_active(self, v):
+        self._xsettings.set_enable_primary_paste(v)
 
 class KeyThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
