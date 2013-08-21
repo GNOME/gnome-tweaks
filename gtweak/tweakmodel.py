@@ -66,6 +66,9 @@ class Tweak(object):
         self._notification = Notification(summary, desc)
 
 class TweakGroup(object):
+
+    main_window = None
+
     def __init__(self, name, *tweaks, **options):
         self.name = name
         self.tweaks = [t for t in tweaks if t.loaded]
@@ -94,7 +97,7 @@ class TweakModel(Gtk.ListStore):
     def tweak_groups(self):
         return (row[TweakModel.COLUMN_TWEAK] for row in self)
 
-    def load_tweaks(self):
+    def load_tweaks(self, main_window):
         tweak_files = [
                 os.path.splitext(os.path.split(f)[-1])[0]
                     for f in glob.glob(os.path.join(self._tweak_dir, "tweak_group_*.py"))]
@@ -115,9 +118,11 @@ class TweakModel(Gtk.ListStore):
         schemas = SchemaList() 
    
         for g in groups:
+            g.main_window = main_window
             if g.tweaks:
                 self.add_tweak_group(g)
                 for i in g.tweaks:
+                    i.main_window = main_window
                     try:
                         schemas.insert(i.key_name, i.schema_name)
                     except:

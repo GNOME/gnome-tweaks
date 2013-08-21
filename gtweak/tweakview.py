@@ -48,7 +48,7 @@ class Window(Gtk.ApplicationWindow):
         
         self.load_css()      
         self._model = model
-        self._model.load_tweaks()
+        self._model.load_tweaks(self)
         self.load_model_data()
 
         self.connect("key-press-event", self._on_key_press)
