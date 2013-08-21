@@ -152,8 +152,6 @@ TWEAK_GROUPS = [
                               schema_filename="org.gnome.settings-daemon.peripherals.gschema.xml"),
         Title(_("Power"), "", uid="title-theme"),
         GSettingsSwitchTweak(_("Laptop lid, when closed, will suspend even if there is an external monitor plugged in"),"org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
-        Title(_("Workspace"), "", uid="title-theme"),
         GSettingsComboEnumTweak(_("Whether to turn off specific monitors after boot"),"org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup"),
-        GSettingsSwitchTweak(_("Workspaces only on primary monitor"),"org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
     ),
 ]

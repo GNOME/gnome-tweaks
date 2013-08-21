@@ -110,5 +110,6 @@ TWEAK_GROUPS = [
     ),
     ListBoxTweakGroup(TWEAK_GROUP_WORKSPACES,
         StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded),
+        GSettingsSwitchTweak(_("Workspaces only on primary display"),"org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
     )              
 ]
