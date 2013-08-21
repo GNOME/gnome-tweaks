@@ -105,12 +105,6 @@ class TweakModel(Gtk.ListStore):
             except ValueError:
                 pass
         
-        if not gtweak.ALL_TWEAKS:
-            try:
-                tweak_files.remove("tweak_group_legacy")
-            except ValueError:
-                pass
-        
         groups = []
         tweaks = []
 
