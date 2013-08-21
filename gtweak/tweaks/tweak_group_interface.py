@@ -27,7 +27,7 @@ from gi.repository import GLib
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default, extract_zip_file
-from gtweak.tweakmodel import Tweak, TWEAK_GROUP_APPEARANCE, TWEAK_GROUP_KEYBOARD,TWEAK_SORT_LAST
+from gtweak.tweakmodel import Tweak, TWEAK_GROUP_APPEARANCE, TWEAK_SORT_LAST
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gsettings import GSettingsSetting
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher, Title, build_combo_box_text,build_label_beside_widget, FileChooserButton
@@ -88,27 +88,6 @@ class CursorThemeSwitcher(GSettingsComboTweak):
         valid = walk_directories(dirs, lambda d:
                     os.path.isdir(d) and \
                         os.path.exists(os.path.join(d, "cursors")))
-        return valid
-
-class KeyThemeSwitcher(GSettingsComboTweak):
-    def __init__(self, **options):
-        GSettingsComboTweak.__init__(self,
-			_("Key"),
-            "org.gnome.desktop.interface",
-            "gtk-key-theme",
-            make_combo_list_with_default(
-                self._get_valid_key_themes(),
-                "Default",
-                default_text=_("<i>Default</i>")),
-            **options)
-
-    def _get_valid_key_themes(self):
-        dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
-                 os.path.join(GLib.get_user_data_dir(), "themes"),
-                 os.path.join(os.path.expanduser("~"), ".themes"))
-        valid = walk_directories(dirs, lambda d:
-                    os.path.isfile(os.path.join(d, "gtk-3.0", "gtk-keys.css")) and \
-                    os.path.isfile(os.path.join(d, "gtk-2.0-key", "gtkrc")))
         return valid
 
 class WindowThemeSwitcher(GSettingsComboTweak):
@@ -298,8 +277,5 @@ TWEAK_GROUPS = [
         IconThemeSwitcher(),
         CursorThemeSwitcher(),
         ShellThemeTweak(loaded=_shell_loaded),
-    ),
-    ListBoxTweakGroup(TWEAK_GROUP_KEYBOARD,
-        KeyThemeSwitcher(),
     ),
 ]
