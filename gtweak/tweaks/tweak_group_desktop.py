@@ -19,7 +19,7 @@ from gi.repository import Gtk
 
 import gtweak
 from gtweak.utils import AutostartManager
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboEnumTweak, GSettingsFileChooserButtonTweak, GSettingsCheckTweak
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboEnumTweak, GSettingsFileChooserButtonTweak, GSettingsCheckTweak, Title
 
 class DesktopIconTweak(GSettingsSwitchTweak):
     def __init__(self, **options):
@@ -54,5 +54,8 @@ TWEAK_GROUPS = [
         GSettingsCheckTweak(_("Network Servers"),"org.gnome.nautilus.desktop", "network-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
         GSettingsCheckTweak(_("Trash"),"org.gnome.nautilus.desktop", "trash-icon-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
         GSettingsCheckTweak(_("Mounted Volumes"),"org.gnome.nautilus.desktop", "volumes-visible", depends_on=dicons, schema_filename="org.gnome.nautilus.gschema.xml"),
+        Title(_("Background"), "", uid="title-theme"),
+        GSettingsComboEnumTweak(_("Mode"),"org.gnome.desktop.background", "picture-options"),
+        GSettingsFileChooserButtonTweak(_("Background Location"),"org.gnome.desktop.background", "picture-uri", local_only=True, mimetypes=["application/xml","image/png","image/jpeg"]),
     )
 ]

@@ -391,17 +391,17 @@ class FileChooserButton(Gtk.FileChooserButton):
         self.set_action(Gtk.FileChooserAction.OPEN)
 
 class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
-    def __init__(self, schema_name, key_name, local_only, mimetypes, **options):
+    def __init__(self, name, schema_name, key_name, local_only, mimetypes, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         _GSettingsTweak.__init__(self, schema_name, key_name, **options)
 
         self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
 
-        self.filechooser = FileChooserButton(self.name,local_only,mimetypes)
+        self.filechooser = FileChooserButton(name,local_only,mimetypes)
         self.filechooser.set_uri(self.settings.get_string(self.key_name))
         self.filechooser.connect("file-set", self._on_file_set)
 
-        build_label_beside_widget(self.name, self.filechooser, hbox=self)
+        build_label_beside_widget(name, self.filechooser, hbox=self)
         self.widget_for_size_group = self.filechooser
 
     def _values_are_different(self):
