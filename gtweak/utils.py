@@ -20,7 +20,7 @@ import logging
 import tempfile
 import shutil
 import subprocess
-import dbus
+import glob
 
 import gtweak
 from gtweak.gsettings import GSettingsSetting
@@ -114,10 +114,30 @@ def execute_subprocess(cmd_then_args, block=True):
         stdout, stderr = p.communicate()
         return stdout, stderr, p.returncode
 
+@singleton
 class AutostartManager:
-    def __init__(self, desktop_filename, autostart_desktop_filename="", exec_cmd="", extra_exec_args=""):
-        self.desktop_filename = desktop_filename
-        self._autostart_desktop_filename = autostart_desktop_filename or desktop_filename
+
+    @staticmethod
+    def get_desktop_files():
+        return [a.get_filename() for a in Gio.app_info_get_all()]
+
+    @staticmethod
+    def get_user_autostart_files():
+        return glob.glob(
+                    os.path.join(
+                        GLib.get_user_config_dir(), "autostart", "*.desktop")) 
+
+    @staticmethod
+    def get_system_autostart_files():
+        f = []
+        for d in GLib.get_system_config_dirs():
+            f.extend( glob.glob(os.path.join(d, "autostart", "*.desktop")) )
+        return f
+
+class AutostartFile:
+    def __init__(self, appinfo, autostart_desktop_filename="", exec_cmd="", extra_exec_args=""):
+        self._desktop_file = appinfo.get_filename()
+        self._autostart_desktop_filename = autostart_desktop_filename or os.path.basename(self._desktop_file)
         self._exec_cmd = exec_cmd
         self._extra_exec_args = " %s\n" % extra_exec_args
 
@@ -128,45 +148,10 @@ class AutostartManager:
             except:
                 logging.critical("Could not create autostart dir: %s" % user_autostart_dir)
 
-        #find the desktop file
-        self._desktop_file = ""
-        for f in self._get_desktop_files():
-            if os.path.exists(f):
-                self._desktop_file = f
         self._user_autostart_file = os.path.join(user_autostart_dir, self._autostart_desktop_filename)
 
         logging.debug("Found desktop file: %s" % self._desktop_file)
         logging.debug("User autostart desktop file: %s" % self._user_autostart_file)
-
-    def _get_system_autostart_files(self):
-        return [
-            os.path.join(d, "autostart", self._autostart_desktop_filename)
-                for d in GLib.get_system_config_dirs()]
-
-    def _get_desktop_files(self):
-        dirs = [gtweak.DATA_DIR, GLib.get_user_data_dir()]
-        dirs.extend(GLib.get_system_data_dirs())
-        return [os.path.join(d, "applications", self.desktop_filename) for d in dirs]
-
-    def get_autostart_condition(self):
-        for f in self._get_system_autostart_files():
-            if os.path.exists(f):
-                with open(f, 'r') as f:
-                    for l in f.readlines():
-                        if l.startswith("AutostartCondition="):
-                            return l.split("=")[-1].strip()
-        return None
-
-    def uses_autostart_condition(self, autostart_type=None):
-        asc = self.get_autostart_condition()
-        try:
-            if asc and autostart_type:
-                return asc.split(" ", 1)[0] == autostart_type
-            else:
-                return asc != None
-        except:
-            logging.warning("Testing for expected AutostartCondition failed: Got (%s)" % asc, exc_info=True)
-            return False
 
     def is_start_at_login_enabled(self):
         if os.path.exists(self._user_autostart_file):
@@ -177,8 +162,8 @@ class AutostartManager:
             return open(self._user_autostart_file).read().find("X-GNOME-Autostart-enabled=false") == -1
         else:
             #check the system directories
-            for f in self._get_system_autostart_files():
-                if os.path.exists(f):
+            for f in AutostartManager().get_system_autostart_files():
+                if os.path.basename(f) == self._autostart_desktop_filename:
                     return True
         return False
 
@@ -187,24 +172,6 @@ class AutostartManager:
         if os.path.exists(self._user_autostart_file):
             logging.info("Removing user autostart file %s" % self._user_autostart_file)
             os.remove(self._user_autostart_file)
-
-        asc = self.get_autostart_condition()
-        if asc:
-            #AutostartCondition=GNOME /desktop/gnome/interface/accessibility
-            #AutostartCondition=GNOME3 if-session gnome-fallback
-            #AutostartCondition=GSettings org.gnome.desktop.background show-desktop-icons
-            method, value = asc.split(" ", 1)
-            try:
-                logging.info("Changing AutostartCondition %s -> %s" % (method, update))
-                if method == "GSettings":
-                    schema, key = value.split(" ")
-                    GSettingsSetting(schema).set_boolean(key, update)
-                else:
-                    raise Exception("Method not supported")
-            except:
-                logging.warning("Autostart desktop file unsupported AutostartCondition (%s)" % asc, exc_info=True)
-
-            return
 
         if update:
             if (not self._desktop_file) or (not os.path.exists(self._desktop_file)):
@@ -356,30 +323,3 @@ class LogoutNotification:
                        None)
         proxy.Logout('(u)', 0)
 
-if __name__ == "__main__":
-    gtweak.DATA_DIR = "/usr/share"
-    gtweak.GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas/"
-
-    logging.basicConfig(format="%(levelname)-8s: %(message)s", level=logging.DEBUG)
-
-    d = AutostartManager("matlab.desktop")
-    print d.desktop_filename, "uses autostartcondition", d.uses_autostart_condition()
-    print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
-    d.update_start_at_login(True)
-    print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
-    d.update_start_at_login(False)
-    print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
-
-    d = AutostartManager("orca.desktop", "orca-autostart.desktop")
-    print d.desktop_filename, "uses autostartcondition", d.uses_autostart_condition()
-    print d.desktop_filename, "autostartcondition is:", d.get_autostart_condition()
-    print d.desktop_filename, "uses GSettings autostartcondition", d.uses_autostart_condition("GSettings")
-    print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
-
-    d = AutostartManager("dropbox.desktop")
-    print d.desktop_filename, "uses autostartcondition", d.uses_autostart_condition()
-    print d.desktop_filename, "autostarts", d.is_start_at_login_enabled()
-
-    d = AutostartManager("nautilus.desktop", "nautilus-autostart.desktop")
-    print d.desktop_filename, "uses autostartcondition", d.uses_autostart_condition()
-    d.update_start_at_login(False)
