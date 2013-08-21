@@ -17,34 +17,9 @@
 
 from gi.repository import Gtk
 
-import gtweak
-from gtweak.utils import AutostartManager
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboEnumTweak, GSettingsFileChooserButtonTweak, GSettingsCheckTweak, Title
 
-class DesktopIconTweak(GSettingsSwitchTweak):
-    def __init__(self, **options):
-        GSettingsSwitchTweak.__init__(self,
-			_("Icons on Desktop"),
-            "org.gnome.desktop.background",
-            "show-desktop-icons",
-            **options)
-
-        #when the user enables nautilus to draw the desktop icons, set nautilus
-        #to autostart
-        self.nautilus = AutostartManager("nautilus.desktop",
-                            autostart_desktop_filename="nautilus-autostart.desktop",
-                            exec_cmd="nautilus -n")
-        #we only need to install the desktop file on old versions of nautilus/gnome-session.
-        #new ones use the new AutostartCondition and watch the gsettings key automatically
-        if not self.nautilus.uses_autostart_condition("GSettings"):
-            self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
-
-    def _on_setting_changed(self, setting, key):
-        self.nautilus.update_start_at_login(
-                self.settings.get_boolean(key))
-
-
-dicons = DesktopIconTweak()
+dicons = GSettingsSwitchTweak(_("Icons on Desktop"),"org.gnome.desktop.background","show-desktop-icons")
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Desktop"),
