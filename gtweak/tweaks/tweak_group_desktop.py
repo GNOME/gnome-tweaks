@@ -57,5 +57,8 @@ TWEAK_GROUPS = [
         Title(_("Background"), "", uid="title-theme"),
         GSettingsComboEnumTweak(_("Mode"),"org.gnome.desktop.background", "picture-options"),
         GSettingsFileChooserButtonTweak(_("Background Location"),"org.gnome.desktop.background", "picture-uri", local_only=True, mimetypes=["application/xml","image/png","image/jpeg"]),
+        #Title(_("Files"), ""),
+        #GSettingsSwitchTweak(_("Use location entry"), "org.gnome.nautilus.preferences", "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml"),
+
     )
 ]

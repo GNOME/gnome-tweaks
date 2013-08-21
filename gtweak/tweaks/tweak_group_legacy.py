@@ -143,8 +143,6 @@ TWEAK_GROUPS = [
     ),
     
     ListBoxTweakGroup(_("Legacy"),
-        Title(_("Files"), "", uid="title-theme"),
-        GSettingsSwitchTweak(_("Use location entry"), "org.gnome.nautilus.preferences", "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml"),
         Title(_("Power"), "", uid="title-theme"),
         GSettingsComboEnumTweak(_("Whether to turn off specific monitors after boot"),"org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup"),
     ),
