@@ -112,8 +112,12 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
         
         grid = Gtk.Grid(column_spacing=10)
 
-        img = Gtk.Image.new_from_gicon(df.get_icon(),Gtk.IconSize.DIALOG)
-        grid.attach(img, 0, 0, 1, 1)
+        icn = df.get_icon()
+        if icn:
+            img = Gtk.Image.new_from_gicon(icn,Gtk.IconSize.DIALOG)
+            grid.attach(img, 0, 0, 1, 1)
+        else:
+            img = None #attach_next_to treats this correctly
 
         lbl = Gtk.Label(df.get_name(), xalign=0.0)
         grid.attach_next_to(lbl,img,Gtk.PositionType.RIGHT,1,1)
