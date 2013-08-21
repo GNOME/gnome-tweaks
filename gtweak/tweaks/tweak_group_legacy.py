@@ -22,7 +22,7 @@ import logging
 from gi.repository import Pango, Gtk, GnomeDesktop
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup, TWEAK_GROUP_WINDOWS, TWEAK_GROUP_TYPING, TWEAK_GROUP_MOUSE, TWEAK_GROUP_FILES, TWEAK_GROUP_DESKTOP, TWEAK_GROUP_FONTS, TWEAK_GROUP_POWER, TWEAK_GROUP_WORKSPACES, TWEAK_SORT_FIRST
-from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget, GSettingsComboEnumTweak, GSettingsSpinButtonTweak, GSettingsComboTweak, build_horizontal_sizegroup, ListBoxTweakGroup, Title
+from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget, GSettingsComboEnumTweak, GSettingsComboTweak, build_horizontal_sizegroup, ListBoxTweakGroup, Title
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 
 _shell = GnomeShellFactory().get_shell()
@@ -145,8 +145,6 @@ TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Legacy"),
         Title(_("Files"), "", uid="title-theme"),
         GSettingsSwitchTweak(_("Use location entry"), "org.gnome.nautilus.preferences", "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml"),
-        Title(_("Fonts"), "", uid="title-theme"),
-        GSettingsSpinButtonTweak("org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, digits=1),
         Title(_("Mouse"), "", uid="title-theme"),
         GSettingsSwitchTweak(_("Show location of pointer"),
                              "org.gnome.settings-daemon.peripherals.mouse", 

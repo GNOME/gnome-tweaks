@@ -286,7 +286,7 @@ class GSettingsRangeTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         self.widget_for_size_group = w
 
 class GSettingsSpinButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
-    def __init__(self, schema_name, key_name, **options):
+    def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         _GSettingsTweak.__init__(self, schema_name, key_name, **options)
 
@@ -299,7 +299,7 @@ class GSettingsSpinButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         w.set_digits(options.get('digits', 0))
         self.settings.bind(key_name, adjustment, "value", Gio.SettingsBindFlags.DEFAULT)
 
-        build_label_beside_widget(self.name, w, hbox=self)
+        build_label_beside_widget(name, w, hbox=self)
         self.widget_for_size_group = w
 
 class GSettingsComboEnumTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):

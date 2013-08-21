@@ -30,5 +30,6 @@ TWEAK_GROUPS = [
                             [(i, i.title()) for i in ("none", "slight", "medium", "full")]),
         GSettingsComboTweak(_("Antialiasing"),"org.gnome.settings-daemon.plugins.xsettings", "antialiasing",
                             [(i, i.title()) for i in ("none", "grayscale", "rgba")]),
+        GSettingsSpinButtonTweak(_("Scaling Factor"), "org.gnome.desktop.interface", "text-scaling-factor", adjustment_step=0.1, digits=1),
     )
 ]
