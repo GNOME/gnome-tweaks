@@ -141,9 +141,4 @@ TWEAK_GROUPS = [
                              logout_required=True,),
         TypingTweakGroup(),
     ),
-    
-    ListBoxTweakGroup(_("Legacy"),
-        Title(_("Power"), "", uid="title-theme"),
-        GSettingsComboEnumTweak(_("Whether to turn off specific monitors after boot"),"org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup"),
-    ),
 ]
