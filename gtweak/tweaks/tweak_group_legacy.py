@@ -146,7 +146,6 @@ TWEAK_GROUPS = [
         Title(_("Files"), "", uid="title-theme"),
         GSettingsSwitchTweak(_("Use location entry"), "org.gnome.nautilus.preferences", "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml"),
         Title(_("Power"), "", uid="title-theme"),
-        GSettingsSwitchTweak(_("Laptop lid, when closed, will suspend even if there is an external monitor plugged in"),"org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor"),
         GSettingsComboEnumTweak(_("Whether to turn off specific monitors after boot"),"org.gnome.settings-daemon.plugins.xrandr", "default-monitors-setup"),
     ),
 ]

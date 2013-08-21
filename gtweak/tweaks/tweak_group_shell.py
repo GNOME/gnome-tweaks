@@ -95,6 +95,7 @@ TWEAK_GROUPS = [
         Title(_("When Laptop Lid is Closed"), "", uid="title-theme"),
         GSettingsComboEnumTweak(_("On Battery Power"),"org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
         GSettingsComboEnumTweak(_("When plugged in"),"org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
+        GSettingsSwitchTweak(_("Suspend even if an external monitor is plugged in"),"org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor", size_group=sg),
     ),
     ListBoxTweakGroup(TWEAK_GROUP_WORKSPACES,
         StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded),
