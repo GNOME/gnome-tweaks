@@ -18,7 +18,7 @@
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, Title
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -38,6 +38,13 @@ class ShowWindowButtons(GSettingsComboTweak):
 
 TWEAK_GROUPS = [ 
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
+        GSettingsSwitchTweak(_("Attached Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs"),
+        GSettingsSwitchTweak(_("Automatically Raise Windows"),"org.gnome.desktop.wm.preferences", "raise-on-click"),
+        GSettingsSwitchTweak(_("Resize with Secondary-click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
+        GSettingsComboTweak(_("Window Action Key"),
+                        "org.gnome.desktop.wm.preferences",
+                        "mouse-button-modifier",
+                        [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
         GSettingsComboEnumTweak(_("Focus Mode"), "org.gnome.desktop.wm.preferences", "focus-mode"),
         Title(_("Titlebar Actions"), "", uid="title-titlebar-actions"),
         GSettingsComboEnumTweak(_("Double-click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
