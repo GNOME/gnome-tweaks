@@ -18,6 +18,7 @@ from __future__ import print_function
 
 import os.path
 import subprocess
+import logging
 
 from gi.repository import Gtk, GLib, Gio
 
