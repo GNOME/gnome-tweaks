@@ -143,7 +143,12 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
         self.asm = AutostartManager()
         files = self.asm.get_user_autostart_files()
         for f in files:
-            df = Gio.DesktopAppInfo.new_from_filename(f)
+            try:
+                df = Gio.DesktopAppInfo.new_from_filename(f)
+            except TypeError:
+                logging.warning("Error loading desktopfile: %s" % f)
+                continue
+
             sdf = _StartupTweak(df)
             sdf.btn.connect("clicked", self._on_remove_clicked, sdf, df)
             tweaks.append( sdf )
