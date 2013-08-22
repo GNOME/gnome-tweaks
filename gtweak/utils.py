@@ -277,7 +277,7 @@ class XSettingsOverrides:
     def set_enable_primary_paste(self, v):
         self._set_override('Gtk/EnablePrimaryPaste', int(v))
     def get_enable_primary_paste(self):
-        return self._get_override('Gtk/EnablePrimaryPaste', True)
+        return self._get_override('Gtk/EnablePrimaryPaste', False)
 
 class Notification:
     def __init__(self, summary, body):
