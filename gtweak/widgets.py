@@ -496,3 +496,22 @@ class Title(Gtk.Box, Tweak):
         widget.props.xalign = 0.0
         self.add(widget)
 
+class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
+    
+    def __init__(self, name, schema_name, key_name, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+
+        sw = Gtk.Switch()
+        sw.set_active(self.get_active())
+        sw.connect("notify::active", self._on_toggled)
+        build_label_beside_widget(name, sw, hbox=self)
+
+    def _on_toggled(self, sw, pspec):
+        self.set_active(sw.get_active())
+    
+    def set_active(self, v):
+        raise NotImplementedError()
+    
+    def get_active(self):
+        raise NotImplementedError()

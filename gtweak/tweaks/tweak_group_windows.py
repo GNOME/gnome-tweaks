@@ -18,23 +18,38 @@
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
+            
+class ShowWindowButtons(GSettingsSwitchTweakValue):
 
-class ShowWindowButtons(GSettingsComboTweak):
-    def __init__(self, **options):
-        GSettingsComboTweak.__init__(self,
-			_("Title Bar Buttons"),
-            "org.gnome.desktop.wm.preferences",
-            "button-layout",
-            ((':close', _("Close Only")),
-            (':minimize,close', _("Minimize and Close")),
-            (':maximize,close', _("Maximize and Close")),
-            (':minimize,maximize,close', _("All"))),
-            loaded=_shell_loaded,
-            **options)
+    def __init__(self, name, value, **options):
+        self.value = value
+        GSettingsSwitchTweakValue.__init__(self,
+                                           name,
+                                           "org.gnome.desktop.wm.preferences",
+                                           "button-layout",
+                                           loaded=_shell_loaded,
+                                           **options)
+        self.values=[':close',':minimize,close', ':maximize,close', ':minimize,maximize,close']
+        
+    def get_active(self):
+        return self.value in self.settings.get_string(self.key_name)
+            
+    def set_active(self, v):
+        val = self.settings.get_string(self.key_name)
+        if v:
+            id = self.values.index(val)
+            if id == 0:
+                val = val.replace(":", ":"+self.value+",")
+            else:
+                val= self.values[len(self.values)-1]
+        else:
+            val = val.replace(self.value+",", "")
+
+        self.settings.set_string(self.key_name, val)
 
 TWEAK_GROUPS = [ 
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
@@ -50,7 +65,9 @@ TWEAK_GROUPS = [
         GSettingsComboEnumTweak(_("Double-click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
         GSettingsComboEnumTweak(_("Middle-click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
         GSettingsComboEnumTweak(_("Secondary-click"),"org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
-        ShowWindowButtons(group_name=TWEAK_GROUP_WINDOWS),
+        Title(_("Titlebar Buttons"), "", uid="title-theme"),
+        ShowWindowButtons(_("Maximize"), "maximize"),
+        ShowWindowButtons(_("Minimize"), "minimize"),
     )
 ]
 
