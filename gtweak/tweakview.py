@@ -31,7 +31,7 @@ class Window(Gtk.ApplicationWindow):
         Gtk.ApplicationWindow.__init__(self,
                                        application=app)
         
-        self.set_size_request(800, 600)
+        self.set_size_request(950, 650)
         self.set_position(Gtk.WindowPosition.CENTER)
         
         main_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
