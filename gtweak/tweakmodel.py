@@ -45,8 +45,8 @@ class Tweak(object):
     widget_for_size_group = None
 
     def __init__(self, name, description, **options):
-        self.name = name
-        self.description = description
+        self.name = name or ""
+        self.description = description or ""
         self.uid = options.get("uid", self.__class__.__name__)
         self.group_name = options.get("group_name",_("Miscellaneous"))
         self.loaded = options.get("loaded", True)
