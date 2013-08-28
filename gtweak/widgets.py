@@ -312,6 +312,11 @@ class GSettingsSpinButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 
         build_label_beside_widget(name, w, hbox=self)
         self.widget_for_size_group = w
+        
+        self.add_dependency_on_tweak(
+                options.get("depends_on"),
+                options.get("depends_how")
+        )
 
 class GSettingsComboEnumTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):

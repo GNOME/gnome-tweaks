@@ -19,8 +19,8 @@ from gi.repository import Gtk, Gio
 
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import Tweak, TWEAK_GROUP_TOPBAR, TWEAK_GROUP_WORKSPACES, TWEAK_GROUP_POWER
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsSwitchTweak, GSettingsCheckTweak, GetterSetterSwitchTweak, adjust_schema_for_overrides, build_label_beside_widget, build_horizontal_sizegroup, UI_BOX_SPACING, Title
+from gtweak.tweakmodel import TWEAK_GROUP_TOPBAR, TWEAK_GROUP_WORKSPACES, TWEAK_GROUP_POWER
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsSwitchTweak, GSettingsCheckTweak, GetterSetterSwitchTweak, adjust_schema_for_overrides, build_label_beside_widget, build_horizontal_sizegroup, UI_BOX_SPACING, Title, _GSettingsTweak, build_combo_box_text, GSettingsSpinButtonTweak
 from gtweak.utils import XSettingsOverrides
 
 _shell = GnomeShellFactory().get_shell()
@@ -37,49 +37,32 @@ class ApplicationMenuTweak(GetterSetterSwitchTweak):
     def set_active(self, v):
         self._xsettings.set_shell_shows_app_menu(v)
 
-class StaticWorkspaceTweak(Gtk.Box, Tweak):
-
-    NUM_WORKSPACES_SCHEMA = "org.gnome.desktop.wm.preferences"
-    NUM_WORKSPACES_KEY = "num-workspaces"
-
-    DYNAMIC_KEY = "dynamic-workspaces"
-    DYNAMIC_SCHEMA = "org.gnome.mutter"
+class StaticWorkspaceTweak(Gtk.Box, _GSettingsTweak):
+    
+    STATUS = {'dynamic':True, 'static': False} 
 
     def __init__(self, **options):
-        schema = adjust_schema_for_overrides(self.DYNAMIC_SCHEMA, self.DYNAMIC_KEY, options)
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        Tweak.__init__(self, _("Dynamic workspaces"), _("Disable gnome-shell dynamic workspace management, use static workspaces"), **options)
+        _GSettingsTweak.__init__(self, "org.gnome.mutter", "dynamic-workspaces", **options)
 
-        try:
-            nwsettings = GSettingsSetting(self.NUM_WORKSPACES_SCHEMA, **options)
-        except GSettingsMissingError:
-            self.loaded = False
-            nwsettings = GSettingsFakeSetting()
+        default = self.STATUS.keys()[self.STATUS.values().index(self.settings[self.key_name])]
+        key_options = [("dynamic", _("Dynamics")), ("static", _("Static"))]
 
-        try:
-            dsettings = GSettingsSetting(schema, **options)
-        except GSettingsMissingError:
-            self.loaded = False
-            dsettings = GSettingsFakeSetting()
+        self.combo = build_combo_box_text(default, *key_options)
+        self.combo.connect('changed', self._on_combo_changed)
+        build_label_beside_widget(_("Workspace Creation"), self.combo, hbox=self)
+        self.widget_for_size_group = self.combo
 
-        adj = Gtk.Adjustment(1, 1, 99, 1)
-        sb = Gtk.SpinButton(adjustment=adj, digits=0)
-        nwsettings.bind(self.NUM_WORKSPACES_KEY, adj, "value", Gio.SettingsBindFlags.DEFAULT)
-
-        sw = Gtk.Switch()
-        dsettings.bind(self.DYNAMIC_KEY, sw, "active", Gio.SettingsBindFlags.DEFAULT)
-        #sw.bind_property ("active", sb, "sensitive", GObject.BindingFlags.SYNC_CREATE)
-        sb.set_sensitive(not dsettings[self.DYNAMIC_KEY])
-        sw.connect('notify::active', lambda _sw,_param,_sb: _sb.set_sensitive(not _sw.get_active()), sb)
-
-        hb = Gtk.HBox(spacing=UI_BOX_SPACING)
-        hb.pack_start(sw, False, False, 0)
-        hb.pack_start(sb, True, True, 0)
-
-        build_label_beside_widget(self.name, hb, hbox=self)
-        self.widget_for_size_group = hb
-
+    def _on_combo_changed(self, combo):
+        _iter = combo.get_active_iter()
+        if _iter:
+            value = combo.get_model().get_value(_iter, 0)
+            val = self.STATUS[value]
+            self.settings[self.key_name] = val
+        
 sg = build_horizontal_sizegroup()
+sw = StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded)
+depends_how = lambda x,kn: not(x.get_boolean(kn))
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_TOPBAR,
@@ -98,7 +81,8 @@ TWEAK_GROUPS = [
         GSettingsSwitchTweak(_("Suspend even if an external monitor is plugged in"),"org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor", size_group=sg),
     ),
     ListBoxTweakGroup(TWEAK_GROUP_WORKSPACES,
-        StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded),
+        sw,
+        GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg),
         GSettingsSwitchTweak(_("Workspaces only on primary display"),"org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
     )              
 ]
