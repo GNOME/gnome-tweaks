@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-23 00:59+0200\n"
-"PO-Revision-Date: 2013-08-23 01:00+0200\n"
+"POT-Creation-Date: 2013-08-31 22:05+0200\n"
+"PO-Revision-Date: 2013-08-31 22:08+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -286,7 +286,7 @@ msgid "Theme"
 msgstr "Motyw"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:47
+#: ../gtweak/tweaks/tweak_group_windows.py:62
 msgid "Disabled"
 msgstr "Wyłączone"
 
@@ -380,57 +380,63 @@ msgstr "Nieprawidłowe rozszerzenie"
 msgid "Show Application Menu"
 msgstr "Wyświetlanie menu programu"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Dynamic workspaces"
-msgstr "Dynamiczne obszary robocze"
+#: ../gtweak/tweaks/tweak_group_shell.py:49
+msgid "Dynamics"
+msgstr "Dynamiczne"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-msgstr ""
-"Wyłącza dynamiczne zarządzanie obszarami roboczymi gnome-shell, używa "
-"statycznych obszarów"
+#: ../gtweak/tweaks/tweak_group_shell.py:49
+msgid "Static"
+msgstr "Statyczne"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:87
+#: ../gtweak/tweaks/tweak_group_shell.py:53
+msgid "Workspace Creation"
+msgstr "Tworzenie obszarów roboczych"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:70
 msgid "Clock"
 msgstr "Zegar"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:88
+#: ../gtweak/tweaks/tweak_group_shell.py:71
 msgid "Show date"
 msgstr "Wyświetlanie daty"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:89
+#: ../gtweak/tweaks/tweak_group_shell.py:72
 msgid "Show seconds"
 msgstr "Wyświetlanie sekund"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:90
+#: ../gtweak/tweaks/tweak_group_shell.py:73
 msgid "Calendar"
 msgstr "Kalendarz"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:91
+#: ../gtweak/tweaks/tweak_group_shell.py:74
 msgid "Show week numbers"
 msgstr "Wyświetlanie numerów tygodni"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:94
+#: ../gtweak/tweaks/tweak_group_shell.py:77
 msgid "Power Button Action"
 msgstr "Działanie przycisku zasilania"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:95
+#: ../gtweak/tweaks/tweak_group_shell.py:78
 msgid "When Laptop Lid is Closed"
 msgstr "Kiedy pokrywa laptopa jest zamknięta"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:96
+#: ../gtweak/tweaks/tweak_group_shell.py:79
 msgid "On Battery Power"
 msgstr "Na zasilaniu z akumulatora"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:97
+#: ../gtweak/tweaks/tweak_group_shell.py:80
 msgid "When plugged in"
 msgstr "Kiedy jest podłączony"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:98
+#: ../gtweak/tweaks/tweak_group_shell.py:81
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Usypianie nawet, jeśli zewnętrzny monitor jest podłączony"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:102
+#: ../gtweak/tweaks/tweak_group_shell.py:85
+msgid "Number of Workspaces"
+msgstr "Liczba obszarów roboczych"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
 msgid "Workspaces only on primary display"
 msgstr "Obszary robocze tylko na głównym ekranie"
 
@@ -446,61 +452,53 @@ msgstr "Dodaj program"
 msgid "Applications"
 msgstr "Programy"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:29
-msgid "Title Bar Buttons"
-msgstr "Przyciski na pasku tytułu"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:32
-msgid "Close Only"
-msgstr "Tylko Zamknij"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:33
-msgid "Minimize and Close"
-msgstr "Zminimalizuj i Zamknij"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:34
-msgid "Maximize and Close"
-msgstr "Zmaksymalizuj i Zamknij"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:35
-msgid "All"
-msgstr "Wszystkie"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:41
+#: ../gtweak/tweaks/tweak_group_windows.py:56
 msgid "Attached Modal Dialogs"
 msgstr "Dołączone modalne okna dialogowe"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:42
+#: ../gtweak/tweaks/tweak_group_windows.py:57
 msgid "Automatically Raise Windows"
 msgstr "Automatyczne podnoszenie okien"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:43
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Resize with Secondary-click"
 msgstr "Zmiana rozmiaru za pomocą kliknięcia pomocniczego"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:44
+#: ../gtweak/tweaks/tweak_group_windows.py:59
 msgid "Window Action Key"
 msgstr "Klawisz działania okna"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:48
+#: ../gtweak/tweaks/tweak_group_windows.py:63
 msgid "Focus Mode"
-msgstr "Tryb aktywności"
+msgstr "Tryb aktywowania"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:49
+#: ../gtweak/tweaks/tweak_group_windows.py:64
 msgid "Titlebar Actions"
 msgstr "Działania paska tytułu"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:50
+#: ../gtweak/tweaks/tweak_group_windows.py:65
 msgid "Double-click"
 msgstr "Podwójne kliknięcie"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:51
+#: ../gtweak/tweaks/tweak_group_windows.py:66
 msgid "Middle-click"
 msgstr "Kliknięcie środkowym przyciskiem myszy"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:52
+#: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Secondary-click"
 msgstr "Kliknięcie pomocnicze"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "Przyciski na pasku tytułu"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+msgid "Maximize"
+msgstr "Zmaksymalizuj"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+msgid "Minimize"
+msgstr "Zminimalizuj"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:29
 msgid "Middle-click Paste"
@@ -536,22 +534,22 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(domyślny)</i>"
 
-#: ../gtweak/widgets.py:452
+#: ../gtweak/widgets.py:457
 msgid "Enable dark theme for all applications"
 msgstr "Włączenie ciemnego motywu dla wszystkich programów"
 
-#: ../gtweak/widgets.py:453
+#: ../gtweak/widgets.py:458
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Włącza ciemny motyw dla wszystkich programów w sesji"
 
-#: ../gtweak/widgets.py:461
+#: ../gtweak/widgets.py:466
 msgid "Global Dark Theme"
 msgstr "Globalny ciemny motyw"
 
-#: ../gtweak/widgets.py:462
+#: ../gtweak/widgets.py:467
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Należy ponownie uruchomić programy, aby zmiany zostały uwzględnione"
 
-#: ../gtweak/widgets.py:488
+#: ../gtweak/widgets.py:493
 msgid "Error writing setting"
 msgstr "Błąd podczas zapisywania ustawień"
