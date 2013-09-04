@@ -147,16 +147,17 @@ def adjust_schema_for_overrides(originalSchema, key, options):
 
 
 class _GSettingsTweak(Tweak):
-    def __init__(self, schema_name, key_name, **options):
+    def __init__(self, name, schema_name, key_name, **options):
         schema_name = adjust_schema_for_overrides(schema_name, key_name, options)
         self.schema_name = schema_name
         self.key_name = key_name
+        self._extra_info = None
         if 'uid' not in options:
             options['uid'] = key_name
         try:
             self.settings = GSettingsSetting(schema_name, **options)
             Tweak.__init__(self,
-                options.get("summary",self.settings.schema_get_summary(key_name)),
+                name,
                 options.get("description",self.settings.schema_get_description(key_name)),
                 **options)
         except GSettingsMissingError, e:
@@ -175,6 +176,12 @@ class _GSettingsTweak(Tweak):
 
     def _on_changed_notify_logout(self, settings, key_name):
         self.notify_logout()
+
+    @property
+    def extra_info(self):
+        if self._extra_info is None:
+            self._extra_info = self.settings.schema_get_summary(self.key_name)
+        return self._extra_info
 
 class _DependableMixin(object):
 
@@ -241,7 +248,7 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
 class GSettingsCheckTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         widget = Gtk.CheckButton.new_with_label(name)
         self.settings.bind(
@@ -259,7 +266,7 @@ class GSettingsCheckTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 class GSettingsSwitchTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         w = Gtk.Switch()
         self.settings.bind(key_name, w, "active", Gio.SettingsBindFlags.DEFAULT)
@@ -275,7 +282,7 @@ class GSettingsSwitchTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 class GSettingsFontButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         w = Gtk.FontButton()
         self.settings.bind(key_name, w, "font-name", Gio.SettingsBindFlags.DEFAULT)
@@ -283,9 +290,9 @@ class GSettingsFontButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         self.widget_for_size_group = w
 
 class GSettingsRangeTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
-    def __init__(self, schema_name, key_name, **options):
+    def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         #returned variant is range:(min, max)
         _min, _max = self.settings.get_range(key_name)[1]
@@ -299,7 +306,7 @@ class GSettingsRangeTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 class GSettingsSpinButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         #returned variant is range:(min, max)
         _min, _max = self.settings.get_range(key_name)[1]
@@ -321,7 +328,7 @@ class GSettingsSpinButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 class GSettingsComboEnumTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         _type, values = self.settings.get_range(key_name)
         value = self.settings.get_string(key_name)
@@ -357,13 +364,14 @@ class GSettingsComboEnumTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 class GSettingsComboTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, key_options, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         #check key_options is iterable
         #and if supplied, check it is a list of 2-tuples
         assert len(key_options) >= 0
         if len(key_options):
             assert len(key_options[0]) == 2
+        self._key_options = key_options
 
         self.combo = build_combo_box_text(
                     self.settings.get_string(self.key_name),
@@ -373,7 +381,6 @@ class GSettingsComboTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 
         build_label_beside_widget(name, self.combo,hbox=self)
         self.widget_for_size_group = self.combo
-
 
     def _on_setting_changed(self, setting, key):
         assert key == self.key_name
@@ -392,6 +399,13 @@ class GSettingsComboTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
             value = combo.get_model().get_value(_iter, 0)
             self.settings.set_string(self.key_name, value)
 
+    @property
+    def extra_info(self):
+        if self._extra_info is None:
+           self._extra_info = self.settings.schema_get_summary(self.key_name)
+           self._extra_info += " " + " ".join(op[0] for op in self._key_options)
+        return self._extra_info
+
 class FileChooserButton(Gtk.FileChooserButton):
     def __init__(self, title, local_only, mimetypes):
         Gtk.FileChooserButton.__init__(self, title=title)
@@ -409,7 +423,7 @@ class FileChooserButton(Gtk.FileChooserButton):
 class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, local_only, mimetypes, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
 
@@ -505,7 +519,7 @@ class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
     
     def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, schema_name, key_name, **options)
+        _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         sw = Gtk.Switch()
         sw.set_active(self.get_active())

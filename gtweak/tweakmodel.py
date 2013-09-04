@@ -43,6 +43,7 @@ class Tweak(object):
 
     main_window = None
     widget_for_size_group = None
+    extra_info = ""
 
     def __init__(self, name, description, **options):
         self.name = name or ""
@@ -57,6 +58,10 @@ class Tweak(object):
     def search_matches(self, txt):
         if self._search_cache == None:
             self._search_cache = self.name.lower() + " " + self.description.lower()
+            try:
+                self._search_cache += " " + self.extra_info
+            except:
+                LOG.warning("Error adding search info", exc_info=True)
         return  txt in self._search_cache
 
     def notify_logout(self):
