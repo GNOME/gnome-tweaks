@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: lithuanian-gnome tweak tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-07-22 21:09+0000\n"
-"PO-Revision-Date: 2013-08-15 21:27+0300\n"
+"POT-Creation-Date: 2013-08-28 21:29+0000\n"
+"PO-Revision-Date: 2013-09-05 21:28+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -24,7 +24,7 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:5
+#: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Papildomų nustatymų įrankis"
 
@@ -42,236 +42,528 @@ msgid "_Reset to Defaults"
 msgstr "_Atstatyti numatytuosius"
 
 #: ../data/shell.ui.h:2
+#| msgid "Install Shell Extension"
+msgid "Disable All Shell Extensions"
+msgstr "Išjungti visus apvalkalo plėtinius"
+
+#: ../data/shell.ui.h:3
 msgid "_Help"
 msgstr "_Žinynas"
 
-#: ../data/shell.ui.h:3
-#| msgid "Tweak Tool"
+#: ../data/shell.ui.h:4
 msgid "_About Tweak Tool"
 msgstr "_Apie papildomų nustatymų įrankį"
 
-#: ../data/shell.ui.h:4
+#: ../data/shell.ui.h:5
 msgid "_Quit"
 msgstr "_Išeiti"
 
-#: ../data/shell.ui.h:6
-msgid "welcome"
-msgstr "sveiki"
+#: ../gtweak/app.py:76
+#| msgid "_Reset to Defaults"
+msgid "Reset to Defaults"
+msgstr "Atstatyti numatytuosius"
 
-#: ../data/shell.ui.h:7
-msgid "tweaks"
-msgstr "reguliavimai"
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Atstatyti visus tobulinimo nustatymus į jų pradines būsenas?"
+
+#: ../gtweak/app.py:93
+#| msgid "_About Tweak Tool"
+msgid "About GNOME Tweak Tool"
+msgstr "Apie GNOME papildomų nustatymų įrankį"
+
+#: ../gtweak/app.py:94
+#| msgid "Tweak Tool"
+msgid "GNOME Tweak Tool"
+msgstr "GNOME Papildomų nustatymų įrankis"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "GNOME apvalkalas v%s (%s veiksena)"
+
+#: ../gtweak/app.py:100
+#| msgid "Shell not running"
+msgid "GNOME Shell not running"
+msgstr "GNOME apvalkalas nepaleistas"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Namų tinklapis"
 
 #: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Išvaizda"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+#| msgid "Shell Extensions"
+msgid "Extensions"
+msgstr "Plėtiniai"
+
+#: ../gtweak/tweakmodel.py:30
 msgid "Fonts"
 msgstr "Šriftai"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Theme"
-msgstr "Tema"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Desktop"
-msgstr "Darbastalis"
-
 #: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Energija"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:158
+msgid "Startup Applications"
+msgstr "Paleidžiamos programos"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Viršutinė juosta"
+
+#: ../gtweak/tweakmodel.py:34
 msgid "Windows"
 msgstr "Langai"
 
-#: ../gtweak/tweakmodel.py:32
-msgid "Shell"
-msgstr "Apvalkalas"
+#: ../gtweak/tweakmodel.py:35
+#| msgid "Dynamic workspaces"
+msgid "Workspaces"
+msgstr "Darbalaukiai"
 
-#: ../gtweak/tweakmodel.py:33
-msgid "Typing"
-msgstr "Spausdinimas"
-
-#: ../gtweak/tweakmodel.py:34
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Mouse"
 msgstr "Pelė"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:37
+#: ../gtweak/tweakmodel.py:38
 msgid "Files"
 msgstr "Failai"
 
-#: ../gtweak/tweakmodel.py:49
+#: ../gtweak/tweakmodel.py:51
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:122
-msgid "<i>Default</i>"
-msgstr "<i>Numatytoji</i>"
+#: ../gtweak/tweakview.py:70
+#| msgid "tweaks"
+msgid "Tweaks"
+msgstr "Reguliavimai"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:42
-msgid "Extension downloading"
-msgstr "Plėtinių atsiuntimas"
+#: ../gtweak/tweakview.py:88
+msgid "Search Tweaks..."
+msgstr "Ieškoti reguliavimų..."
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:44
-msgid "Error loading extension"
-msgstr "Klaida įkeliant plėtinį"
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+#| msgid "Desktop"
+msgid "Icons on Desktop"
+msgstr "Darbastalio piktogramos"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:46
-msgid "Extension does not support shell version"
-msgstr "Plėtinys nepalaiko apvalkalo versijos"
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Darbastalis"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:48
-msgid "Unknown extension error"
-msgstr "Nežinoma plėtinio klaida"
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Kompiuteris"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:84
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti apvalkalą"
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Namai"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:85
-#: ../gtweak/tweaks/tweak_shell_extensions.py:197
-msgid "Restart"
-msgstr "Įkelti iš naujo"
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Tinklo serveriai"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:91
-msgid "Uninstall Extension"
-msgstr "Išdiegti plėtinį"
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Šiukšlinė"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:92
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Ar tikrai norite išdiegti plėtinį „%s“?"
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Prijungti tomai"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
-msgid "Install Shell Extension"
-msgstr "Įdiegti apvalkalo plėtinį"
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Fonas"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:134
-msgid "Select an extension"
-msgstr "Pasirinkite plėtinį"
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+msgid "Mode"
+msgstr "Veiksena"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:141
-msgid "Get more extensions"
-msgstr "Gauti daugiau plėtinių"
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Fono vieta"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:191
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "%s plėtinys sėkmingai atnaujintas"
+#: ../gtweak/tweaks/tweak_group_font.py:25
+#| msgid "Windows"
+msgid "Window Titles"
+msgstr "Langų pavadinimai"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:193
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "%s plėtinys įdiegtas sėkmingai"
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Sąsaja"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:201
-msgid "Error installing extension"
-msgstr "Klaida diegiant plėtinį"
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Dokumentai"
 
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:206
-msgid "Invalid extension"
-msgstr "Netinkamas plėtinys"
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Lygiaplotis"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:214
-msgid "Shell Extensions"
-msgstr "Apvalkalo plėtiniai"
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "Patarimai"
 
-#: ../gtweak/tweaks/tweak_shell.py:41
-msgid "Close Only"
-msgstr "Tik užverti"
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Glotninimas"
 
-#: ../gtweak/tweaks/tweak_shell.py:42
-msgid "Minimize and Close"
-msgstr "Sumažinti ir užverti"
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Didinimo laipsnis"
 
-#: ../gtweak/tweaks/tweak_shell.py:43
-msgid "Maximize and Close"
-msgstr "Išdidinti ir užverti"
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "Piktogramos"
 
-#: ../gtweak/tweaks/tweak_shell.py:44
-msgid "All"
-msgstr "Visi"
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "Žymiklis"
 
-#: ../gtweak/tweaks/tweak_shell.py:59
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+#| msgid "Windows"
+msgid "Window"
+msgstr "Langas"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Shell theme"
 msgstr "Apvalkalo tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:59
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Įdiegti pasirinktines arba naudotojo gnome-shell temas"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:62
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "Nežinoma klaida"
 
-#: ../gtweak/tweaks/tweak_shell.py:67
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "Apvalkalas nepaleistas"
 
-#: ../gtweak/tweaks/tweak_shell.py:89
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Apvalkalo naudotojo temos plėtinys įdiegtas netinkamai"
 
-#: ../gtweak/tweaks/tweak_shell.py:92
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "Apvalkalo naudotojo temos plėtinys neįjungtas"
 
-#: ../gtweak/tweaks/tweak_shell.py:95
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "Nepavyko parodyti apvalkalo plėtinių sąrašo"
 
-#: ../gtweak/tweaks/tweak_shell.py:128
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>Numatytoji</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "Pasirinkite temą"
 
-#: ../gtweak/tweaks/tweak_shell.py:179
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s tema sėkmingai atnaujinta"
 
-#: ../gtweak/tweaks/tweak_shell.py:181
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s tema sėkmingai įdiegta"
 
-#: ../gtweak/tweaks/tweak_shell.py:189
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "Klaida diegiant temą"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:194
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "Netinkama tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:214
-msgid "Dynamic workspaces"
-msgstr "Dinaminiai darbalaukiai"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "Tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:214
-msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-msgstr ""
-"Išjungti gnome-shell dinaminį darbalaukių valdymą, naudoti statinius "
-"darbalaukius"
-
-#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:50
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:62
 msgid "Disabled"
 msgstr "Išjungta"
+
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "Spausdinimas"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+msgid "Extension downloading"
+msgstr "Plėtinių atsiuntimas"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+msgid "Error loading extension"
+msgstr "Klaida įkeliant plėtinį"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+msgid "Extension does not support shell version"
+msgstr "Plėtinys nepalaiko apvalkalo versijos"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+msgid "Unknown extension error"
+msgstr "Nežinoma plėtinio klaida"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
+#: ../gtweak/tweaks/tweak_group_startup.py:128
+msgid "Remove"
+msgstr "Pašalinti"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti apvalkalą"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
+msgid "Restart"
+msgstr "Įkelti iš naujo"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+msgid "Uninstall Extension"
+msgstr "Išdiegti plėtinį"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Ar tikrai norite išdiegti plėtinį „%s“?"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+msgid "Updating"
+msgstr "Atnaujinama"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+msgid "Error"
+msgstr "Klaida"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Update"
+msgstr "Atnaujinti"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+msgid "Install Shell Extension"
+msgstr "Įdiegti apvalkalo plėtinį"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+msgid "Select an extension"
+msgstr "Pasirinkite plėtinį"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+msgid "Get more extensions"
+msgstr "Gauti daugiau plėtinių"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "%s plėtinys sėkmingai atnaujintas"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "%s plėtinys įdiegtas sėkmingai"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+msgid "Error installing extension"
+msgstr "Klaida diegiant plėtinį"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+msgid "Invalid extension"
+msgstr "Netinkamas plėtinys"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "Rodyti programos meniu"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:49
+#| msgid "Dynamic workspaces"
+msgid "Dynamics"
+msgstr "Dinaminiai"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:49
+msgid "Static"
+msgstr "Statiniai"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:53
+msgid "Workspace Creation"
+msgstr "Darbalaukių kūrimas"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:70
+msgid "Clock"
+msgstr "Laikrodis"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Show date"
+msgstr "Rodyti datą"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show seconds"
+msgstr "Rodyti sekundes"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Calendar"
+msgstr "Kalendorius"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Show week numbers"
+msgstr "Rodyti savaičių numerius"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:77
+msgid "Power Button Action"
+msgstr "Įjungimo mygtuko veiksmas"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "When Laptop Lid is Closed"
+msgstr "Kai nešiojamas kompiuteris užveriamas"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "On Battery Power"
+msgstr "Naudojant bateriją"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "When plugged in"
+msgstr "Kai įjungta į elektros tinklą"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "Užmigdyti, net jei prijungtas išorinis monitorius"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:85
+msgid "Number of Workspaces"
+msgstr "Darbalaukių skaičius"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Workspaces only on primary display"
+msgstr "Darbalaukiai tik pirminiame vaizduoklyje"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "veikia"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:60
+msgid "Add Application"
+msgstr "Pridėti programą"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:64
+msgid "Applications"
+msgstr "Programos"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:56
+msgid "Attached Modal Dialogs"
+msgstr "Prijungti modaliniai dialogai"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Automatically Raise Windows"
+msgstr "Automatiškai iškelti langus"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:58
+msgid "Resize with Secondary-click"
+msgstr "Keisti dydį antriniu paspaudimu"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window Action Key"
+msgstr "Lango veiksmo klavišas"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:63
+msgid "Focus Mode"
+msgstr "Fokusavimo veiksena"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:64
+msgid "Titlebar Actions"
+msgstr "Pavadinimo juostos veiksmai"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:65
+msgid "Double-click"
+msgstr "Dvigubas paspaudimas"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:66
+msgid "Middle-click"
+msgstr "Vidurinysis paspaudimas"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Secondary-click"
+msgstr "Antrinis paspaudimas"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "Pavadinimo juostos mygtukai"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+#| msgid "Maximize and Close"
+msgid "Maximize"
+msgstr "Išdidinti"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+#| msgid "Minimize and Close"
+msgid "Minimize"
+msgstr "Sumažinti"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Įdėjimas viduriniuoju paspaudimu"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+#| msgid "Shell theme"
+msgid "Key theme"
+msgstr "Klavišų tema"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "Klaviatūra ir pelė"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+msgid "Show All Input Sources"
+msgstr "Rodyti visus įvesties šaltinius"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+msgid "Show location of pointer"
+msgstr "Rodyti žymiklio vietą"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Įrenginys"
 
 #: ../gtweak/tweaks/tweak_wacom.py:38
 msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(numatytoji)</i>"
 
-#: ../gtweak/widgets.py:366
+#: ../gtweak/widgets.py:457
 msgid "Enable dark theme for all applications"
 msgstr "Įjungti tamsiąją temą visoms programoms"
 
-#: ../gtweak/widgets.py:367
+#: ../gtweak/widgets.py:458
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Įjungti tamsiosios temos parametrą visoms seanso programoms"
 
-#: ../gtweak/widgets.py:385
+#: ../gtweak/widgets.py:466
+msgid "Global Dark Theme"
+msgstr "Visuotinė tamsi tema"
+
+#: ../gtweak/widgets.py:467
+#| msgid "The shell must be restarted for changes to take effect"
+msgid "Applications need to be restarted for change to take effect"
+msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti programą"
+
+#: ../gtweak/widgets.py:493
 msgid "Error writing setting"
 msgstr "Klaida rašant parametrą"
+
