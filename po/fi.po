@@ -4,23 +4,24 @@
 #
 # artnay <jiri.gronroos@iki.fi>, 2012.
 # Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-2\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-01-27 11:57+0000\n"
-"PO-Revision-Date: 2013-03-20 23:49+0200\n"
+"POT-Creation-Date: 2013-08-28 21:29+0000\n"
+"PO-Revision-Date: 2013-09-04 22:59+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
-"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
+#: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Lisäasetukset"
 
@@ -32,229 +33,566 @@ msgstr "Gnome 3:n lisäasetukset"
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;asetu"
-"kset;ominaisuudet;laajennukset;kirjasimet;fontit;teema;näppäimistö;kirjoittami"
-"nen;"
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+"asetukset;ominaisuudet;laajennukset;kirjasimet;fontit;teema;näppäimistö;"
+"kirjoittaminen;"
+
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "_Palauta oletukset"
 
 #: ../data/shell.ui.h:2
-msgid "welcome"
-msgstr "tervetuloa"
+#| msgid "Install Shell Extension"
+msgid "Disable All Shell Extensions"
+msgstr "Poista käytöstä kaikki Shell-laajennukset"
 
 #: ../data/shell.ui.h:3
-msgid "tweaks"
-msgstr "lisäasetukset"
+msgid "_Help"
+msgstr "_Ohje"
+
+#: ../data/shell.ui.h:4
+#| msgid "Tweak Tool"
+msgid "_About Tweak Tool"
+msgstr "_Tietoja - Lisäasetukset"
+
+#: ../data/shell.ui.h:5
+msgid "_Quit"
+msgstr "_Lopeta"
+
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "Palauta oletukset"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Palautetaanko kaikki lisäasetukset alkuperäisiin arvoihin?"
+
+#: ../gtweak/app.py:93
+#| msgid "Tweak Tool"
+msgid "About GNOME Tweak Tool"
+msgstr "Tietoja - Lisäasetukset"
+
+#: ../gtweak/app.py:94
+#| msgid "Tweak Tool"
+msgid "GNOME Tweak Tool"
+msgstr "Gnomen lisäasetukset"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "GNOME Shell v %s (%s-tila)"
+
+#: ../gtweak/app.py:100
+#| msgid "Shell not running"
+msgid "GNOME Shell not running"
+msgstr "Gnome Shell ei ole käynnissä"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Verkkosivusto"
 
 #: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Ulkoasu"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+#| msgid "Shell Extensions"
+msgid "Extensions"
+msgstr "Laajennukset"
+
+#: ../gtweak/tweakmodel.py:30
 msgid "Fonts"
 msgstr "Kirjasimet"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Theme"
-msgstr "Teema"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Desktop"
-msgstr "Työpöytä"
-
 #: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Virta"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:158
+msgid "Startup Applications"
+msgstr "Käynnistettävät sovellukset"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Yläpalkki"
+
+#: ../gtweak/tweakmodel.py:34
 msgid "Windows"
 msgstr "Ikkunat"
 
-#: ../gtweak/tweakmodel.py:32
-msgid "Shell"
-msgstr "Shell"
+#: ../gtweak/tweakmodel.py:35
+#| msgid "Dynamic workspaces"
+msgid "Workspaces"
+msgstr "Työtilat"
 
-#: ../gtweak/tweakmodel.py:33
-msgid "Typing"
-msgstr "Kirjoittaminen"
-
-#: ../gtweak/tweakmodel.py:34
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Mouse"
 msgstr "Hiiri"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:37
+#: ../gtweak/tweakmodel.py:38
 msgid "Files"
 msgstr "Tiedostot"
 
-#: ../gtweak/tweakmodel.py:48
+#: ../gtweak/tweakmodel.py:51
 msgid "Miscellaneous"
 msgstr "Muut"
 
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:127
-msgid "<i>Default</i>"
-msgstr "<i>Oletus</i>"
+#: ../gtweak/tweakview.py:70
+#| msgid "tweaks"
+msgid "Tweaks"
+msgstr "Lisäasetukset"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:38
-msgid "Extension downloading"
-msgstr "Laajennusta ladataan"
+#: ../gtweak/tweakview.py:88
+msgid "Search Tweaks..."
+msgstr "Etsi lisäasetuksia..."
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:40
-msgid "Error loading extension"
-msgstr "Virhe ladatessa laajennusta"
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+#| msgid "Desktop"
+msgid "Icons on Desktop"
+msgstr "Kuvakkeet työpöydällä"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:42
-msgid "Extension does not support shell version"
-msgstr "Laajennus ei tue Shellin versiota"
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Työpöytä"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:44
-msgid "Unknown extension error"
-msgstr "Tuntematon laajennusvirhe"
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Tietokone"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:75
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Shell tulee käynnistää uudelleen, jotta muutokset tulevat voimaan"
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Koti"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:76
-#: ../gtweak/tweaks/tweak_shell_extensions.py:148
-msgid "Restart"
-msgstr "Käynnistä uudelleen"
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Verkkopalvelimet"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:82
-msgid "Install Shell Extension"
-msgstr "Asenna Shell-laajennus"
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Roskakori"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:87
-msgid "Select an extension"
-msgstr "Valitse laajennus"
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Erilliset tallennusvälineet"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:94
-msgid "Get more extensions"
-msgstr "Hae lisää laajennuksia"
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Taustakuva"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "Laajennus %s päivitetty onnistuneesti"
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+msgid "Mode"
+msgstr "Tila"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:144
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "Laajennus %s asennettu onnistuneesti"
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Taustakuvan sijainti"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:152
-msgid "Error installing extension"
-msgstr "Virhe laajennusta asennettaessa"
+#: ../gtweak/tweaks/tweak_group_font.py:25
+#| msgid "Window theme"
+msgid "Window Titles"
+msgstr "Ikkunapalkit"
 
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:157
-msgid "Invalid extension"
-msgstr "Virheellinen laajennus"
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Käyttöliittymä"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:165
-msgid "Shell Extensions"
-msgstr "Shell-laajennukset"
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Asiakirjat"
 
-#: ../gtweak/tweaks/tweak_shell.py:44
-msgid "Close Only"
-msgstr "Sulje"
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Tasalevyinen"
 
-#: ../gtweak/tweaks/tweak_shell.py:45
-msgid "Minimize and Close"
-msgstr "Pienennä ja sulje"
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "Vihjeistys"
 
-#: ../gtweak/tweaks/tweak_shell.py:46
-msgid "Maximize and Close"
-msgstr "Suurenna ja sulje"
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Antialiasointi"
 
-#: ../gtweak/tweaks/tweak_shell.py:47
-msgid "All"
-msgstr "Kaikki"
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Skaalauskerroin"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "Kuvakkeet"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "Kursori"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+#| msgid "Windows"
+msgid "Window"
+msgstr "Ikkuna"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Shell theme"
 msgstr "Shell-teema"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Asenna omavalintainen teema gnome-shelliin"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:64
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "Tuntematon virhe"
 
-#: ../gtweak/tweaks/tweak_shell.py:72
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "Shell ei ole käynnissä"
 
-#: ../gtweak/tweaks/tweak_shell.py:94
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Shellin user-theme-laajennus ei ole kunnolla asennettu"
 
-#: ../gtweak/tweaks/tweak_shell.py:97
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "Shellin user-theme-laajennus ei ole käytössä"
 
-#: ../gtweak/tweaks/tweak_shell.py:100
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "Shell-laajennusten listaus epäonnistui"
 
-#: ../gtweak/tweaks/tweak_shell.py:133
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>Oletus</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "Valitse teema"
 
-#: ../gtweak/tweaks/tweak_shell.py:184
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Teema %s päivitetty onnistuneesti"
 
-#: ../gtweak/tweaks/tweak_shell.py:186
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Teema %s asennettu onnistuneesti"
 
-#: ../gtweak/tweaks/tweak_shell.py:194
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "Virhe teemaa asennettaessa"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:199
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "Virheellinen teema"
 
-#: ../gtweak/tweaks/tweak_shell.py:223
-msgid "Dynamic workspaces"
-msgstr "Dynaamiset työtilat"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "Teema"
 
-#: ../gtweak/tweaks/tweak_shell.py:223
-msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-msgstr ""
-"Poista dynaamiset työtilat käytöstä, käytä pelkästään kiinteitä työtiloja"
-
-#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:62
 msgid "Disabled"
 msgstr "Pois käytöstä"
 
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "Kirjoittaminen"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+msgid "Extension downloading"
+msgstr "Laajennusta ladataan"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+msgid "Error loading extension"
+msgstr "Virhe ladatessa laajennusta"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+msgid "Extension does not support shell version"
+msgstr "Laajennus ei tue Shellin versiota"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+msgid "Unknown extension error"
+msgstr "Tuntematon laajennusvirhe"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
+#: ../gtweak/tweaks/tweak_group_startup.py:128
+msgid "Remove"
+msgstr "Poista"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Shell tulee käynnistää uudelleen, jotta muutokset tulevat voimaan"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
+msgid "Restart"
+msgstr "Käynnistä uudelleen"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+#| msgid "Install Shell Extension"
+msgid "Uninstall Extension"
+msgstr "Poista laajennus"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Haluatko poistaa laajennuksen \"%s\"?"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+msgid "Updating"
+msgstr "Päivitetään"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+msgid "Error"
+msgstr "Virhe"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Update"
+msgstr "Päivitä"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+msgid "Install Shell Extension"
+msgstr "Asenna Shell-laajennus"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+msgid "Select an extension"
+msgstr "Valitse laajennus"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+msgid "Get more extensions"
+msgstr "Hae lisää laajennuksia"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "Laajennus %s päivitetty onnistuneesti"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "Laajennus %s asennettu onnistuneesti"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+msgid "Error installing extension"
+msgstr "Virhe laajennusta asennettaessa"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+msgid "Invalid extension"
+msgstr "Virheellinen laajennus"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "Näytä sovellusvalikko"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:49
+#| msgid "Dynamic workspaces"
+msgid "Dynamics"
+msgstr "Dynaaminen"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:49
+msgid "Static"
+msgstr "Kiinteä"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:53
+msgid "Workspace Creation"
+msgstr "Työtilojen luominen"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:70
+msgid "Clock"
+msgstr "Kello"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Show date"
+msgstr "Näytä päivä"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show seconds"
+msgstr "Näytä sekunnit"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Calendar"
+msgstr "Kalenteri"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Show week numbers"
+msgstr "Näytä viikkonumerot"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:77
+msgid "Power Button Action"
+msgstr "Virtapainikkeen toiminto"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "When Laptop Lid is Closed"
+msgstr "Kun kannettavan kansi suljetaan"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "On Battery Power"
+msgstr "Akkuvirralla"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "When plugged in"
+msgstr "Kytkettynä"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "Suspend even if an external monitor is plugged in"
+msgstr ""
+
+#: ../gtweak/tweaks/tweak_group_shell.py:85
+msgid "Number of Workspaces"
+msgstr "Työtilojen lukumäärä"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Workspaces only on primary display"
+msgstr "Työtilat vain ensisijaisella näytöllä"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "käynnissä"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:60
+msgid "Add Application"
+msgstr "Lisää sovellus"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:64
+msgid "Applications"
+msgstr "Sovellukset"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:56
+msgid "Attached Modal Dialogs"
+msgstr "Kiinnitetyt modaalidialogit"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Automatically Raise Windows"
+msgstr "Korota ikkunat automaattisesti"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:58
+msgid "Resize with Secondary-click"
+msgstr "Muuta kokoa kakkospainikkeen napsautuksella"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+#, fuzzy
+#| msgid "Window theme"
+msgid "Window Action Key"
+msgstr "Ikkunateema"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:63
+msgid "Focus Mode"
+msgstr "Kohdistustila"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:64
+msgid "Titlebar Actions"
+msgstr "Ikkunapalkin toiminnot"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:65
+msgid "Double-click"
+msgstr "Kaksoisnapsautus"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:66
+msgid "Middle-click"
+msgstr "Keskimmäinen napsautus"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Secondary-click"
+msgstr "Kakkospainikkeen napsautus"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "Ikkunapalkin painikkeet"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+#| msgid "Maximize and Close"
+msgid "Maximize"
+msgstr "Suurenna"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+#| msgid "Minimize and Close"
+msgid "Minimize"
+msgstr "Pienennä"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Keskipainike liittää"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+#, fuzzy
+#| msgid "GTK+ theme"
+msgid "Key theme"
+msgstr "GTK+-teema"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "Näppäimistö ja hiiri"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+msgid "Show All Input Sources"
+msgstr "Näytä kaikki syötelähteet"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+msgid "Show location of pointer"
+msgstr "Näytä osoittimen sijainti"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Laite"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Wacom"
+
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:67
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(oletus)</i>"
 
-#: ../gtweak/widgets.py:345
+#: ../gtweak/widgets.py:457
 msgid "Enable dark theme for all applications"
 msgstr "Käytä tummaa teemaa kaikissa sovelluksissa"
 
-#: ../gtweak/widgets.py:346
+#: ../gtweak/widgets.py:458
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Käytä tummaa teemaa kaikissa istunnon sovelluksissa"
 
-#: ../gtweak/widgets.py:364
+#: ../gtweak/widgets.py:466
+msgid "Global Dark Theme"
+msgstr "Yleinen tumma teema"
+
+#: ../gtweak/widgets.py:467
+#| msgid "The shell must be restarted for changes to take effect"
+msgid "Applications need to be restarted for change to take effect"
+msgstr "Sovellukset tulee käynnistää uudelleen, jotta muutos tulee voimaan"
+
+#: ../gtweak/widgets.py:493
 msgid "Error writing setting"
 msgstr "Virhe asetuksia kirjoittaessa"
+
+#~ msgid "welcome"
+#~ msgstr "tervetuloa"
+
+#~ msgid "Shell"
+#~ msgstr "Shell"
+
+#~ msgid "Close Only"
+#~ msgstr "Sulje"
+
+#~ msgid "All"
+#~ msgstr "Kaikki"
+
+#~ msgid ""
+#~ "Disable gnome-shell dynamic workspace management, use static workspaces"
+#~ msgstr ""
+#~ "Poista dynaamiset työtilat käytöstä, käytä pelkästään kiinteitä työtiloja"
 
 #~ msgid "Advanced Settings"
 #~ msgstr "Lisäasetukset"
 
-#~ msgid "GTK+ theme"
-#~ msgstr "GTK+-teema"
-
 #~ msgid "Icon theme"
 #~ msgstr "Kuvaketeema"
-
-#~ msgid "Window theme"
-#~ msgstr "Ikkunateema"
 
 #~ msgid "The shell may need to be restarted to apply the theme"
 #~ msgstr ""
