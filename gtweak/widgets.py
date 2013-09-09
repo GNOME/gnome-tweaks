@@ -504,7 +504,7 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
             self._gtksettings.set_integer("gtk-application-prefer-dark-theme",
                                           active)
         except:
-            self.notify_error(_("Error writing setting"))
+            self.notify_information(_("Error writing setting"))
 
 class Title(Gtk.Box, Tweak):
     def __init__(self, name, desc, **options):
