@@ -67,16 +67,10 @@ class Window(Gtk.ApplicationWindow):
         self.button.props.valign = Gtk.Align.CENTER
         self.button.get_style_context().add_class("search-button")
         
-        lbl = Gtk.Label("<b>"+_("Tweaks")+"</b>")
-        lbl.props.use_markup = True
-        align = Gtk.Alignment(left_padding = 35, right_padding = 70)
-        align.add(lbl)
-        
-        separator = Gtk.VSeparator()
-        
-        self.right_header.pack_start(self.button)
+        align = Gtk.Alignment(left_padding = 5)
+        align.add(self.button)
+
         self.right_header.pack_start(align)
-        self.right_header.pack_start(separator)
         
         return self.right_header
         
