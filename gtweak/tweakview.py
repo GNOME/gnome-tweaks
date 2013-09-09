@@ -84,14 +84,12 @@ class Window(Gtk.ApplicationWindow):
     def sidebar(self):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         
-        self.revealer = Gtk.Revealer()
         self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks..."))
-        self.entry.props.margin_left = 5
-        self.entry.props.margin_right = 5
-        self.entry.props.margin_top = 5
-        self.entry.props.margin_bottom = 5
         self.entry.connect("search-changed", self._on_search)
-        self.revealer.add(self.entry)
+        
+        self.searchbar = Gtk.SearchBar()
+        self.searchbar.add(self.entry)
+        self.searchbar.props.hexpand = False
         
         self.listbox = Gtk.ListBox()
         self.listbox.get_style_context().add_class("tweak-categories")
@@ -105,7 +103,7 @@ class Window(Gtk.ApplicationWindow):
         
         separator = Gtk.HSeparator()
         left_box.pack_start(separator, False, False, 0)
-        left_box.pack_start(self.revealer, False, False, 0)
+        left_box.pack_start(self.searchbar, False, False, 0)
         left_box.pack_start(scroll, True, True, 0)
         
         return left_box
@@ -198,13 +196,13 @@ class Window(Gtk.ApplicationWindow):
             self.right_header.set_title(group)
 
     def _on_find_toggled(self, btn):
-        if self.revealer.get_reveal_child():
-            self.revealer.set_reveal_child(False)
-            self.revealer.get_child().set_text("")
-        else:
-            self.revealer.set_reveal_child(True)
+         if self.searchbar.get_search_mode():
+             self.searchbar.set_search_mode(False)
+             self.entry.set_text("")
+         else:
+            self.searchbar.set_search_mode(True)
             self.entry.grab_focus()
-            
+
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
             if t in tweaks:
