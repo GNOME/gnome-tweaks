@@ -133,6 +133,21 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
 
         self.btn = btn
 
+class AddStartupTweak(Gtk.ListBoxRow, Tweak):
+    def __init__(self, **options):
+        Gtk.ListBoxRow.__init__(self)
+        Tweak.__init__(self, _("New startup application"),
+                       _("Add a new application to be run at startup"),
+                       **options)
+
+        self.btn = Gtk.Button("")
+        self.btn.get_style_context().remove_class("button")
+        img = Gtk.Image()
+        img.set_from_icon_name("list-add-symbolic", Gtk.IconSize.BUTTON)
+        self.btn.set_image(img)
+        self.btn.props.always_show_image = True
+        self.add(self.btn)
+
 class AutostartListBoxTweakGroup(ListBoxTweakGroup):
     def __init__(self):
         tweaks = []
@@ -150,22 +165,15 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
             sdf.btn.connect("clicked", self._on_remove_clicked, sdf, df)
             tweaks.append( sdf )
 
+        add = AddStartupTweak()
+        add.btn.connect("clicked", self._on_add_clicked)
+        tweaks.append(add)
+
         ListBoxTweakGroup.__init__(self,
             _("Startup Applications"),
             *tweaks,
             css_class='tweak-group-white')
         self.set_header_func(_list_header_func, None)
-        
-        btn = Gtk.Button("")
-        btn.get_style_context().remove_class("button")
-        img = Gtk.Image()
-        img.set_from_icon_name("list-add-symbolic", Gtk.IconSize.BUTTON)
-        btn.set_image(img)
-        btn.props.always_show_image = True
-        btn.connect("clicked", self._on_add_clicked)
-        #b.props.hexpand = True
-        #b.props.vexpand = True
-        self.add(btn)
 
     def _on_remove_clicked(self, btn, widget, df):
         self.remove(widget)
