@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-08-21 22:22+0000\n"
+"POT-Creation-Date: 2013-09-13 14:35+0000\n"
 "PO-Revision-Date: 2013-08-19 13:46+0200\n"
 "Last-Translator: Tomáš Čapek <soulcharmer@gmail.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -33,7 +33,8 @@ msgstr "Vylaďte si pokročilá nastavení GNOME 3"
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"nastavení;pokročilé;předvolby;rozšíření;písma;písmo;fonty;motiv;XKB;klávesnice;psaní;"
+"nastavení;pokročilé;předvolby;rozšíření;písma;písmo;fonty;motiv;XKB;"
+"klávesnice;psaní;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -101,7 +102,7 @@ msgstr "Písma"
 msgid "Power"
 msgstr "Napájení"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:148
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
 msgid "Startup Applications"
 msgstr "Aplikace při spuštění"
 
@@ -125,15 +126,11 @@ msgstr "Myš"
 msgid "Files"
 msgstr "Soubory"
 
-#: ../gtweak/tweakmodel.py:51
+#: ../gtweak/tweakmodel.py:52
 msgid "Miscellaneous"
 msgstr "Různé"
 
-#: ../gtweak/tweakview.py:70
-msgid "Tweaks"
-msgstr "Vylepšení"
-
-#: ../gtweak/tweakview.py:88
+#: ../gtweak/tweakview.py:81
 msgid "Search Tweaks..."
 msgstr "Hledat vylepšení…"
 
@@ -281,7 +278,7 @@ msgid "Theme"
 msgstr "Motiv"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:47
+#: ../gtweak/tweaks/tweak_group_windows.py:62
 msgid "Disabled"
 msgstr "Vypnuto"
 
@@ -306,7 +303,7 @@ msgid "Unknown extension error"
 msgstr "Neznámá chyba rozšíření"
 
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:123
+#: ../gtweak/tweaks/tweak_group_startup.py:124
 msgid "Remove"
 msgstr "Odstranit"
 
@@ -375,127 +372,137 @@ msgstr "Neplatné rozšíření"
 msgid "Show Application Menu"
 msgstr "Zobrazovat nabídku aplikace"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Dynamic workspaces"
-msgstr "Dynamické pracovní plochy"
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "Vytváření pracovních ploch"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-msgstr ""
-"Vypnout dynamickou správu pracovních ploch v gnome-shell, použít statické "
-"pracovní plochy"
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Dynamics"
+msgstr "Dynamicky"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:87
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "Statické"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
 msgid "Clock"
 msgstr "Hodiny"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:88
+#: ../gtweak/tweaks/tweak_group_shell.py:72
 msgid "Show date"
 msgstr "Zobrazovat datum"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:89
+#: ../gtweak/tweaks/tweak_group_shell.py:73
 msgid "Show seconds"
 msgstr "Zobrazovat sekundy"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:90
+#: ../gtweak/tweaks/tweak_group_shell.py:74
 msgid "Calendar"
 msgstr "Kalendář"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:91
+#: ../gtweak/tweaks/tweak_group_shell.py:75
 msgid "Show week numbers"
 msgstr "Zobrazovat čísla týdnů"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:94
+#: ../gtweak/tweaks/tweak_group_shell.py:78
 msgid "Power Button Action"
 msgstr "Činnost vypínacího tlačítka"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:95
+#: ../gtweak/tweaks/tweak_group_shell.py:79
 msgid "When Laptop Lid is Closed"
 msgstr "Při zavření víka"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:96
+#: ../gtweak/tweaks/tweak_group_shell.py:80
 msgid "On Battery Power"
 msgstr "Při běhu z baterie"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:97
+#: ../gtweak/tweaks/tweak_group_shell.py:81
 msgid "When plugged in"
 msgstr "Při běhu z elektrické sítě"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:98
+#: ../gtweak/tweaks/tweak_group_shell.py:82
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Uspat i když je připojen externí monitor"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:102
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "Počet pracovních ploch"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
 msgid "Workspaces only on primary display"
 msgstr "Pracovní plochy jen na hlavní obrazovce"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:50
-msgid "running"
-msgstr "běží"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:59
-msgid "Add Application"
-msgstr "Přidat aplikaci"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:63
+#: ../gtweak/tweaks/tweak_group_startup.py:35
 msgid "Applications"
 msgstr "Aplikace"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:29
-msgid "Title Bar Buttons"
-msgstr "Tlačítka v záhlaví okna"
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "běží"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:32
-msgid "Close Only"
-msgstr "Jen zavřít"
+#: ../gtweak/tweaks/tweak_group_startup.py:60
+msgid "_Close"
+msgstr "_Zavřít"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:33
-msgid "Minimize and Close"
-msgstr "Minimalizovat a zavřít"
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "Add Application"
+msgstr "Přidat aplikaci"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:34
-msgid "Maximize and Close"
-msgstr "Maximalizovat a zavřít"
+#: ../gtweak/tweaks/tweak_group_startup.py:139
+msgid "New startup application"
+msgstr "Nová aplikace při spuštění"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:35
-msgid "All"
-msgstr "Všechna"
+#: ../gtweak/tweaks/tweak_group_startup.py:140
+msgid "Add a new application to be run at startup"
+msgstr "Přidat novou aplikaci, která se rozjet při spuštění"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:41
+#: ../gtweak/tweaks/tweak_group_windows.py:56
 msgid "Attached Modal Dialogs"
 msgstr "Návazné modální dialogy"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:42
+#: ../gtweak/tweaks/tweak_group_windows.py:57
 msgid "Automatically Raise Windows"
 msgstr "Automaticky přesnést okna do popředí"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:43
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Resize with Secondary-click"
 msgstr "Změnit velikost pravým tlačítkem myši"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:44
+#: ../gtweak/tweaks/tweak_group_windows.py:59
 msgid "Window Action Key"
 msgstr "Klávesa pro akci okna"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:48
+#: ../gtweak/tweaks/tweak_group_windows.py:63
 msgid "Focus Mode"
 msgstr "Režim zaměřování oken"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:49
+#: ../gtweak/tweaks/tweak_group_windows.py:64
 msgid "Titlebar Actions"
 msgstr "Činnosti záhlaví okna"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:50
+#: ../gtweak/tweaks/tweak_group_windows.py:65
 msgid "Double-click"
 msgstr "Dvojité kliknutí"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:51
+#: ../gtweak/tweaks/tweak_group_windows.py:66
 msgid "Middle-click"
 msgstr "Prostřední tlačítko"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:52
+#: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Secondary-click"
 msgstr "Pravé tlačítko"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "Tlačítka v záhlaví okna"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+msgid "Maximize"
+msgstr "Maximalizovat"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+msgid "Minimize"
+msgstr "Minimalizovat"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:29
 msgid "Middle-click Paste"
@@ -531,22 +538,22 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(výchozí)</i>"
 
-#: ../gtweak/widgets.py:452
+#: ../gtweak/widgets.py:471
 msgid "Enable dark theme for all applications"
 msgstr "Zapnout tmavý motiv pro všechny aplikace"
 
-#: ../gtweak/widgets.py:453
+#: ../gtweak/widgets.py:472
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Zapnout tmavý motiv pro všechny aplikace v sezení"
 
-#: ../gtweak/widgets.py:461
+#: ../gtweak/widgets.py:480
 msgid "Global Dark Theme"
 msgstr "Globální tmavý motiv"
 
-#: ../gtweak/widgets.py:462
+#: ../gtweak/widgets.py:481
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Aplikace musí být restartována, aby se změny projevily"
 
-#: ../gtweak/widgets.py:488
+#: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Chyba zápisu nastavení"
