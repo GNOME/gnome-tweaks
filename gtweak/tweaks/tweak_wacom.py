@@ -35,7 +35,7 @@ TABLET_PC_KEY = 'tablet-pc-button'
 class WacomGroup(TweakGroup):
 
     def __init__(self):
-        TweakGroup.__init__(self, N_('Wacom'))
+        TweakGroup.__init__(self, N_("Wacom"))
 
         try:
             configs = WacomConfigs()
