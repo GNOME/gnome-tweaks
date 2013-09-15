@@ -1,15 +1,15 @@
 # Danish translation for gnome-tweak-tool.
-# Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
+# Copyright (C) 2011-2013 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Kris Thomsen <lakristho@gmail.com>, 2011.
+# Kris Thomsen <mail@kristhomsen.dk>, 2011-2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-02 12:31+0100\n"
-"PO-Revision-Date: 2011-12-27 00:41+0000\n"
-"Last-Translator: Kris Thomsen <lakristho@gmail.com>\n"
+"POT-Creation-Date: 2013-09-15 22:06+0200\n"
+"PO-Revision-Date: 2013-09-15 22:00+0100\n"
+"Last-Translator: Kris Thomsen <mail@kristhomsen.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -17,174 +17,500 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Advanced Settings"
-msgstr "Avancerede indstillinger"
-
-#: ../data/shell.ui.h:2
-msgid "tweaks"
-msgstr "tilpasninger"
-
-#: ../data/shell.ui.h:3
-msgid "welcome"
-msgstr "velkommen"
+#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
+msgid "Tweak Tool"
+msgstr "Tilpasningsværktøj"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Tilpas avancerede indstillinger for GNOME 3"
 
-#: ../gtweak/tweaks/tweak_interface.py:33
-msgid "GTK+ theme"
-msgstr "GTK+-tema"
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+#, fuzzy
+msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;"
+msgstr ""
+"Indstillinger;Avanceret;Egenskaber;Udvidelser;Skrifttyper;Tema;XKB;Tastatur;"
+"Indtastning;"
 
-#: ../gtweak/tweaks/tweak_interface.py:51
-msgid "Icon theme"
-msgstr "Ikontema"
+#: ../data/shell.ui.h:2
+msgid "welcome"
+msgstr "velkommen"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:110
-msgid "<i>Default</i>"
-msgstr "<i>Standard</i>"
+#: ../data/shell.ui.h:3
+msgid "tweaks"
+msgstr "tilpasninger"
 
-#: ../gtweak/tweaks/tweak_interface.py:87
-msgid "Keybinding theme"
-msgstr "Tastebindingstema"
+#: ../gtweak/tweakmodel.py:28
+msgid "Fonts"
+msgstr "Skrifttyper"
 
-#. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:56
-msgid "Unknown error"
-msgstr "Ukendt fejl"
+#: ../gtweak/tweakmodel.py:29
+msgid "Theme"
+msgstr "Tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
-msgid "Shell not running"
-msgstr "Shell kører ikke"
+#: ../gtweak/tweakmodel.py:30
+msgid "Desktop"
+msgstr "Skrivebord"
 
-#: ../gtweak/tweaks/tweak_shell.py:78
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Shell-user-theme-udvidelse er ikke korrekt installeret"
+#: ../gtweak/tweakmodel.py:31
+msgid "Windows"
+msgstr "Vinduer"
 
-#: ../gtweak/tweaks/tweak_shell.py:81
-msgid "Shell user-theme extension not enabled"
-msgstr "Shell-user-theme-udvidelse er ikke aktiveret"
-
-#: ../gtweak/tweaks/tweak_shell.py:84
-msgid "Could not list shell extensions"
-msgstr "Kunne ikke vise shell-udvidelser"
-
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:115
-msgid "Select a theme"
-msgstr "Vælg et tema"
-
-#: ../gtweak/tweaks/tweak_shell.py:162
-#, python-format
-msgid "%s theme updated successfully"
-msgstr "%s-temaet blev opdateret"
-
-#: ../gtweak/tweaks/tweak_shell.py:164
-#, python-format
-msgid "%s theme installed successfully"
-msgstr "%s-temaet blev installeret"
-
-#: ../gtweak/tweaks/tweak_shell.py:172
-msgid "Error installing theme"
-msgstr "Fejl under installation af tema"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:177
-msgid "Invalid theme"
-msgstr "Ugyldigt tema"
-
-#: ../gtweak/tweaks/tweak_shell.py:195
+#: ../gtweak/tweakmodel.py:32
 msgid "Shell"
 msgstr "Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweakmodel.py:33
+msgid "Typing"
+msgstr "Indtastning"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Mouse"
+msgstr "Mus"
+
+#. translate this the same as the name of the file manager (nautilus)
+#: ../gtweak/tweakmodel.py:37
+msgid "Files"
+msgstr "Filer"
+
+#: ../gtweak/tweakmodel.py:48
+msgid "Miscellaneous"
+msgstr "Diverse"
+
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:117
+msgid "<i>Default</i>"
+msgstr "<i>Standard</i>"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:38
 msgid "Extension downloading"
 msgstr "Henter udvidelse"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_shell_extensions.py:40
 msgid "Error loading extension"
 msgstr "Fejl under indlæsning af udvidelse"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+#: ../gtweak/tweaks/tweak_shell_extensions.py:42
 msgid "Extension does not support shell version"
 msgstr "Udvidelse understøtter ikke shell-version"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_shell_extensions.py:44
 msgid "Unknown extension error"
 msgstr "Ukendt udvidelsesfejl"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:46
-#, python-format
-msgid "%s Extension"
-msgstr "%s-udvidelse"
-
-#: ../gtweak/tweaks/tweak_shell_extensions.py:59
+#: ../gtweak/tweaks/tweak_shell_extensions.py:75
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Shell'en skal genstartes for at ændringer træder i kraft"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:60
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_shell_extensions.py:76
+#: ../gtweak/tweaks/tweak_shell_extensions.py:148
 msgid "Restart"
 msgstr "Genstart"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_shell_extensions.py:82
 msgid "Install Shell Extension"
 msgstr "Installér Shell-udvidelse"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+#: ../gtweak/tweaks/tweak_shell_extensions.py:87
 msgid "Select an extension"
 msgstr "Vælg en udvidelse"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#: ../gtweak/tweaks/tweak_shell_extensions.py:94
+msgid "Get more extensions"
+msgstr "Hent flere udvidelser"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:142
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s-udvidelsen blev opdateret"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#: ../gtweak/tweaks/tweak_shell_extensions.py:144
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s-udvidelsen blev installeret"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_shell_extensions.py:152
 msgid "Error installing extension"
 msgstr "Fejl under installation af udvidelse"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+#: ../gtweak/tweaks/tweak_shell_extensions.py:157
 msgid "Invalid extension"
 msgstr "Ugyldig udvidelse"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
+#: ../gtweak/tweaks/tweak_shell_extensions.py:165
 msgid "Shell Extensions"
 msgstr "Shell-udvidelser"
 
-#: ../gtweak/tweaks/tweak_windows.py:31
-msgid "Window theme"
-msgstr "Vinduestema"
+#: ../gtweak/tweaks/tweak_shell.py:38
+#, fuzzy
+msgid "Close Only"
+msgstr "_Luk"
+
+#: ../gtweak/tweaks/tweak_shell.py:39
+#, fuzzy
+msgid "Minimize and Close"
+msgstr "Minimér"
+
+#: ../gtweak/tweaks/tweak_shell.py:40
+#, fuzzy
+msgid "Maximize and Close"
+msgstr "Maksimér"
+
+#: ../gtweak/tweaks/tweak_shell.py:41
+msgid "All"
+msgstr "Alle"
+
+#: ../gtweak/tweaks/tweak_shell.py:55
+msgid "Shell theme"
+msgstr "Shell-tema"
+
+#: ../gtweak/tweaks/tweak_shell.py:55
+msgid "Install custom or user themes for gnome-shell"
+msgstr "Installér tilpasset- eller brugertema til gnome-shell"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_shell.py:58
+msgid "Unknown error"
+msgstr "Ukendt fejl"
+
+#: ../gtweak/tweaks/tweak_shell.py:63
+msgid "Shell not running"
+msgstr "Shell kører ikke"
+
+#: ../gtweak/tweaks/tweak_shell.py:84
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Shell-user-theme-udvidelse er ikke korrekt installeret"
+
+#: ../gtweak/tweaks/tweak_shell.py:87
+msgid "Shell user-theme extension not enabled"
+msgstr "Shell-user-theme-udvidelse er ikke aktiveret"
+
+#: ../gtweak/tweaks/tweak_shell.py:90
+msgid "Could not list shell extensions"
+msgstr "Kunne ikke vise shell-udvidelser"
+
+#: ../gtweak/tweaks/tweak_shell.py:123
+msgid "Select a theme"
+msgstr "Vælg et tema"
+
+#: ../gtweak/tweaks/tweak_shell.py:174
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "%s-temaet blev opdateret"
+
+#: ../gtweak/tweaks/tweak_shell.py:176
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "%s-temaet blev installeret"
+
+#: ../gtweak/tweaks/tweak_shell.py:184
+msgid "Error installing theme"
+msgstr "Fejl under installation af tema"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_shell.py:189
+msgid "Invalid theme"
+msgstr "Ugyldigt tema"
+
+#: ../gtweak/tweaks/tweak_shell.py:208
+#, fuzzy
+msgid "Dynamic workspaces"
+msgstr "Arbejdsområder"
+
+#: ../gtweak/tweaks/tweak_shell.py:208
+msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
+msgstr ""
+"Deaktivér dynamisk arbejdsområde-håndtering af gnome-shell, brug statiske "
+"arbejdsområder"
+
+#: ../gtweak/tweaks/tweak_typing.py:38 ../gtweak/tweaks/tweak_windows.py:51
+msgid "Disabled"
+msgstr "Deaktiveret"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:67
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standard)</i>"
 
-#: ../gtweak/tweakmodel.py:26
-msgid "Fonts"
-msgstr "Skrifttyper"
+#: ../gtweak/widgets.py:345
+msgid "Enable dark theme for all applications"
+msgstr "Aktivér mørkt tema for alle programmer"
 
-#: ../gtweak/tweakmodel.py:27
-msgid "Theme"
-msgstr "Tema"
+#: ../gtweak/widgets.py:346
+msgid "Enable the dark theme hint for all the applications in the session"
+msgstr "Aktivér det mørke tema for alle programmerne i denne session"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Desktop"
-msgstr "Skrivebord"
+#: ../gtweak/widgets.py:364
+msgid "Error writing setting"
+msgstr "Fejl under skrivning af indstilling"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Windows"
-msgstr "Vinduer"
+#~ msgid "_Reset to Defaults"
+#~ msgstr "_Nulstil til standarder"
 
-#: ../gtweak/tweakmodel.py:37
-msgid "Miscellaneous"
-msgstr "Diverse"
+#~| msgid "Install Shell Extension"
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Deaktivér alle Shell-udvidelser"
+
+#~ msgid "_Help"
+#~ msgstr "_Hjælp"
+
+#~ msgid "_About Tweak Tool"
+#~ msgstr "_Om Tilpasningsværktøj"
+
+#~ msgid "_Quit"
+#~ msgstr "_Afslut"
+
+#~ msgid "Reset to Defaults"
+#~ msgstr "Nulstil til standarder"
+
+#~ msgid "Reset all tweak settings to the original default state?"
+#~ msgstr ""
+#~ "Nulstil alle tilpasningsindstillinger til original standardtilstand?"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "Om GNOME Tilpasningsværktøj"
+
+#~| msgid "Tweak Tool"
+#~ msgid "GNOME Tweak Tool"
+#~ msgstr "GNOME Tilpasningsværktøj"
+
+#~ msgid "GNOME Shell v%s (%s mode)"
+#~ msgstr "GNOME Shell v%s (%s-tilstand)"
+
+#~| msgid "Shell not running"
+#~ msgid "GNOME Shell not running"
+#~ msgstr "GNOME Shell kører ikke"
+
+#~ msgid "Homepage"
+#~ msgstr "Hjemmeside"
+
+#~ msgid "Appearance"
+#~ msgstr "Udseende"
+
+#~| msgid "%s Extension"
+#~ msgid "Extensions"
+#~ msgstr "Udvidelser"
+
+#~ msgid "Power"
+#~ msgstr "Strøm"
+
+#~ msgid "Startup Applications"
+#~ msgstr "Opstartsprogrammer"
+
+#~ msgid "Top Bar"
+#~ msgstr "Toppanel"
+
+#~ msgid "Search Tweaks..."
+#~ msgstr "Søg tilpasninger..."
+
+#~| msgid "Desktop"
+#~ msgid "Icons on Desktop"
+#~ msgstr "Ikoner på skrivebord"
+
+#~ msgid "Computer"
+#~ msgstr "Computer"
+
+#~ msgid "Home"
+#~ msgstr "Hjem"
+
+#~ msgid "Network Servers"
+#~ msgstr "Netværksservere"
+
+#~ msgid "Trash"
+#~ msgstr "Affald"
+
+#~ msgid "Mounted Volumes"
+#~ msgstr "Monterede diskenheder"
+
+#~ msgid "Background"
+#~ msgstr "Baggrund"
+
+#~ msgid "Mode"
+#~ msgstr "Tilstand"
+
+#~ msgid "Background Location"
+#~ msgstr "Baggrundsplacering"
+
+#~| msgid "Window theme"
+#~ msgid "Window Titles"
+#~ msgstr "Vinduestitler"
+
+#~ msgid "Interface"
+#~ msgstr "Grænseflade"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenter"
+
+#~ msgid "Monospace"
+#~ msgstr "Fastbredde"
+
+#~ msgid "Hinting"
+#~ msgstr "Hintning"
+
+#~ msgid "Antialiasing"
+#~ msgstr "Udjævning"
+
+#~ msgid "Scaling Factor"
+#~ msgstr "Skaleringsfaktor"
+
+#~ msgid "Icons"
+#~ msgstr "Ikoner"
+
+#~ msgid "Cursor"
+#~ msgstr "Markør"
+
+#~| msgid "Windows"
+#~ msgid "Window"
+#~ msgstr "Vindue"
+
+#~ msgid "Remove"
+#~ msgstr "Fjern"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "Afinstallér udvidelse"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "Vil du afinstallere udvidelsen \"%s\"?"
+
+#~ msgid "Updating"
+#~ msgstr "Opdaterer"
+
+#~ msgid "Error"
+#~ msgstr "Fejl"
+
+#~ msgid "Update"
+#~ msgstr "Opdatér"
+
+#~ msgid "Show Application Menu"
+#~ msgstr "Vis programmenu"
+
+#~ msgid "Workspace Creation"
+#~ msgstr "Oprettelse af arbejdsområde"
+
+#~| msgid "Dynamic workspaces"
+#~ msgid "Dynamics"
+#~ msgstr "Dynamisk"
+
+#~ msgid "Static"
+#~ msgstr "Statisk"
+
+#~ msgid "Clock"
+#~ msgstr "Ur"
+
+#~ msgid "Show date"
+#~ msgstr "Vis dato"
+
+#~ msgid "Show seconds"
+#~ msgstr "Vis sekunder"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalender"
+
+#~ msgid "Show week numbers"
+#~ msgstr "Vis ugenumre"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Handling for slukknap"
+
+#~ msgid "When Laptop Lid is Closed"
+#~ msgstr "Når låget på den bærbare lukkes"
+
+#~ msgid "On Battery Power"
+#~ msgstr "På batteristrøm"
+
+#~ msgid "When plugged in"
+#~ msgstr "Ved ekstern strøm"
+
+#~ msgid "Suspend even if an external monitor is plugged in"
+#~ msgstr "Gå i hviletilstand, selv når en ekstern skærm er sat til"
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Antal af arbejdsområder"
+
+#~ msgid "Workspaces only on primary display"
+#~ msgstr "Arbejdsområder kun på primær skærm"
+
+#~ msgid "Applications"
+#~ msgstr "Programmer"
+
+#~ msgid "running"
+#~ msgstr "kører"
+
+#~ msgid "Add Application"
+#~ msgstr "Tilføj program"
+
+#~ msgid "New startup application"
+#~ msgstr "Nyt opstartsprogram"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Tilføj et nyt program, der skal køres ved opstart"
+
+#~ msgid "Attached Modal Dialogs"
+#~ msgstr "Tilføjede modale dialoger"
+
+#~ msgid "Automatically Raise Windows"
+#~ msgstr "Fremhæv automatisk vinduer"
+
+#~ msgid "Resize with Secondary-click"
+#~ msgstr "Tilpas størrelse med sekundært klik"
+
+#~| msgid "Window theme"
+#~ msgid "Window Action Key"
+#~ msgstr "Handlingstast for vindue"
+
+#~ msgid "Focus Mode"
+#~ msgstr "Fokustilstand"
+
+#~ msgid "Titlebar Actions"
+#~ msgstr "Titelpanelets handlinger"
+
+#~ msgid "Double-click"
+#~ msgstr "Dobbeltklik"
+
+#~ msgid "Middle-click"
+#~ msgstr "Klik med midterste museknap"
+
+#~ msgid "Secondary-click"
+#~ msgstr "Sekundært klik"
+
+#~ msgid "Titlebar Buttons"
+#~ msgstr "Knapper på titelpanel"
+
+#~ msgid "Middle-click Paste"
+#~ msgstr "Indsæt ved klik på midterse museknap"
+
+#~| msgid "GTK+ theme"
+#~ msgid "Key theme"
+#~ msgstr "Markørtema"
+
+#~ msgid "Keyboard and Mouse"
+#~ msgstr "Tastatur og mus"
+
+#~ msgid "Show All Input Sources"
+#~ msgstr "Vis alle inputkilder"
+
+#~ msgid "Show location of pointer"
+#~ msgstr "Vis markørens placering"
+
+#~ msgid "Device"
+#~ msgstr "Enhed"
+
+#~ msgid "Wacom"
+#~ msgstr "Wacom"
+
+#~ msgid "Global Dark Theme"
+#~ msgstr "Globalt mørkt tema"
+
+#~| msgid "The shell must be restarted for changes to take effect"
+#~ msgid "Applications need to be restarted for change to take effect"
+#~ msgstr "Programmerne skal genstartes for at ændringer træder i kraft"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Avancerede indstillinger"
+
+#~ msgid "Icon theme"
+#~ msgstr "Ikontema"
+
+#~ msgid "Keybinding theme"
+#~ msgstr "Tastebindingstema"
