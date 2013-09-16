@@ -1,4 +1,5 @@
-# This file is part of gnome-tweak-tool.
+# This file is part of gnome-tweak-tool. 
+# -*- coding: utf-8 -*-
 #
 # Copyright (c) 2011 John Stowers
 #
@@ -89,6 +90,17 @@ TWEAK_GROUPS = [
         _TestInfoTweak("foo warning", "info widget", _tweak_warning="Warning"),
         Title("Test Notifications", "", uid="title-tweak-test"),
         _TestButtonTweak("Shows Information", "foo bar", _need_action=True),
-        _TestButtonTweak("Needs Logout", "foo bar log", _need_logout=True))
+        _TestButtonTweak("Needs Logout", "foo bar log", _need_logout=True)),
+
+    ListBoxTweakGroup(
+        "Unicode Test",
+        Title("Words", "", uid="title-tweak-test"),
+        *[_TestTweak( str(d), str(d)) for d in ["Muñoz",
+                                                "Español",
+                                                "größer",
+                                                "jünger",
+                                                "grün",
+                                                "счастье",
+                                                "سعادة"]]),
 ]
 
