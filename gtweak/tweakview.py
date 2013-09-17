@@ -34,6 +34,8 @@ class Window(Gtk.ApplicationWindow):
         self.set_size_request(950, 650)
         self.set_position(Gtk.WindowPosition.CENTER)
         
+        self.hsize_group = Gtk.SizeGroup(Gtk.SizeGroupMode.HORIZONTAL)
+
         main_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         left_box = self.sidebar()
         right_box = self.main_content()
@@ -56,8 +58,15 @@ class Window(Gtk.ApplicationWindow):
     
     def titlebar(self):
 
-        self.right_header = Gtk.HeaderBar()
-        self.right_header.props.show_close_button = True
+        header = Gtk.Box()
+
+        left_header = Gtk.HeaderBar()
+        right_header = Gtk.HeaderBar()
+        right_header.props.show_close_button = True
+
+        self.title = Gtk.Label("")
+        self.title.get_style_context().add_class("title")
+        right_header.set_custom_title(self.title)
 
         icon = Gtk.Image()
         icon.set_from_icon_name("edit-find-symbolic",Gtk.IconSize.MENU)
@@ -65,14 +74,20 @@ class Window(Gtk.ApplicationWindow):
         self.button.add(icon)
         self.button.connect("toggled", self._on_find_toggled)
         self.button.props.valign = Gtk.Align.CENTER
-        self.button.get_style_context().add_class("search-button")
-        
-        align = Gtk.Alignment(left_padding = 5)
-        align.add(self.button)
+        self.button.get_style_context().add_class("image-button")
+        left_header.pack_start(self.button)
 
-        self.right_header.pack_start(align)
+        lbl = Gtk.Label(_("Tweaks"))
+        lbl.get_style_context().add_class("title")
+        left_header.set_custom_title(lbl)
+
+        header.pack_start(left_header, False, False, 0)
+        header.pack_start(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL), False, False, 0)
+        header.pack_start(right_header, True, True, 0)
         
-        return self.right_header
+        self.hsize_group.add_widget(left_header)
+
+        return header
         
         
     def sidebar(self):
@@ -95,11 +110,11 @@ class Window(Gtk.ApplicationWindow):
                           Gtk.PolicyType.AUTOMATIC)
         scroll.add(self.listbox)
         
-        separator = Gtk.HSeparator()
-        left_box.pack_start(separator, False, False, 0)
         left_box.pack_start(self.searchbar, False, False, 0)
         left_box.pack_start(scroll, True, True, 0)
         
+        self.hsize_group.add_widget(left_box)
+
         return left_box
         
     def main_content(self):        
@@ -109,10 +124,7 @@ class Window(Gtk.ApplicationWindow):
         self.stack = Gtk.Stack()
         self.stack.get_style_context().add_class("main-container")
         self.stack.props.margin = 20
-        
-        separator = Gtk.HSeparator()
-        right_box.pack_start(separator, False, False, 0)
-        
+    
         right_box.pack_start(self.stack, True, True, 0)
         
         return right_box
@@ -187,7 +199,7 @@ class Window(Gtk.ApplicationWindow):
         if row:
             group = row.get_child().get_text()
             self.stack.set_visible_child_name(group)
-            self.right_header.set_title(group)
+            self.title.set_text(group)
 
     def _on_find_toggled(self, btn):
          if self.searchbar.get_search_mode():
