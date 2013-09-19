@@ -64,6 +64,11 @@ class Window(Gtk.ApplicationWindow):
         right_header = Gtk.HeaderBar()
         right_header.props.show_close_button = True
 
+        left_header.get_style_context().add_class("titlebar")
+        left_header.get_style_context().add_class("tweak-titlebar-left")
+        right_header.get_style_context().add_class("titlebar")
+        right_header.get_style_context().add_class("tweak-titlebar-right")
+
         self.title = Gtk.Label("")
         self.title.get_style_context().add_class("title")
         right_header.set_custom_title(self.title)
