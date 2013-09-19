@@ -1,28 +1,27 @@
 # Hungarian translation of gnome-tweak-tool
-# Copyright (C) 2011. Free Software Foundation, Inc.
+# Copyright (C) 2011, 2012, 2013. Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # n0m4dm4n <n0m4dm4n at gmail dot com>, 2011.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012, 2013.
 # Attila Hammer <hammera at pickup dot hu>, 2012.
 # Balázs Úr <urbalazs at gmail dot com>, 2012, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-26 22:32+0000\n"
-"PO-Revision-Date: 2013-03-28 09:44+0100\n"
-"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-19 11:15+0200\n"
+"PO-Revision-Date: 2013-09-19 11:14+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
+#: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Finomhangoló eszköz"
 
@@ -37,246 +36,559 @@ msgstr ""
 "Beállítások;Speciális;Tulajdonságok;Kiterjesztések;Betűkészletek;Téma;XKB;"
 "Billentyűzet;Gépelés;"
 
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "_Alapértelmezések visszaállítása"
+
 #: ../data/shell.ui.h:2
-msgid "welcome"
-msgstr "üdvözöljük"
+msgid "Disable All Shell Extensions"
+msgstr "Minden Shell-bővítmény letiltása"
 
 #: ../data/shell.ui.h:3
-msgid "tweaks"
-msgstr "finomhangolások"
+msgid "_Help"
+msgstr "_Súgó"
+
+#: ../data/shell.ui.h:4
+msgid "_About Tweak Tool"
+msgstr "_Finomhangoló eszköz névjegye"
+
+#: ../data/shell.ui.h:5
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "Alapértelmezések visszaállítása"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Visszaállít minden beállítást az alapértékre?"
+
+#: ../gtweak/app.py:93
+msgid "About GNOME Tweak Tool"
+msgstr "A GNOME Finomhangoló eszköz névjegye"
+
+#: ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME Finomhangoló eszköz"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "GNOME Shell v%s (%s mód)"
+
+#: ../gtweak/app.py:100
+msgid "GNOME Shell not running"
+msgstr "A GNOME Shell nem fut"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Honlap"
 
 #: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+msgid "Extensions"
+msgstr "Kiterjesztések"
+
+#: ../gtweak/tweakmodel.py:30
 msgid "Fonts"
 msgstr "Betűkészletek"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Theme"
-msgstr "Téma"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Desktop"
-msgstr "Asztal"
-
 #: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Energia"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+msgid "Startup Applications"
+msgstr "Indítópult"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Felső sáv"
+
+#: ../gtweak/tweakmodel.py:34
 msgid "Windows"
 msgstr "Ablakok"
 
-#: ../gtweak/tweakmodel.py:32
-msgid "Shell"
-msgstr "Shell"
+#: ../gtweak/tweakmodel.py:35
+msgid "Workspaces"
+msgstr "Munkaterületek"
 
-#: ../gtweak/tweakmodel.py:33
-msgid "Typing"
-msgstr "Gépelés"
-
-#: ../gtweak/tweakmodel.py:34
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Mouse"
 msgstr "Egér"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:37
+#: ../gtweak/tweakmodel.py:38
 msgid "Files"
 msgstr "Fájlok"
 
-#: ../gtweak/tweakmodel.py:49
+#: ../gtweak/tweakmodel.py:52
 msgid "Miscellaneous"
 msgstr "Egyebek"
 
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:130
-msgid "<i>Default</i>"
-msgstr "<i>Alapértelmezett</i>"
+#: ../gtweak/tweakview.py:80
+msgid "Tweaks"
+msgstr "Hangolások"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
-msgid "Extension downloading"
-msgstr "Kiterjesztések letöltése"
+#: ../gtweak/tweakview.py:96
+msgid "Search Tweaks..."
+msgstr "Hangolások keresése…"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
-msgid "Error loading extension"
-msgstr "Hiba a bővítmény betöltésekor"
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+msgid "Icons on Desktop"
+msgstr "Ikonok az Asztalon"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:43
-msgid "Extension does not support shell version"
-msgstr "A bővítmény nem támogatja a Gnome Shell ezen verzióját"
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Asztal"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:45
-msgid "Unknown extension error"
-msgstr "Ismeretlen bővítményhiba"
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Sajátgép"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:81
-msgid "The shell must be restarted for changes to take effect"
-msgstr "A változtatások életbe lépéséhez újra kell indítani a Gnome Shellt"
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Saját mappa"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:82
-#: ../gtweak/tweaks/tweak_shell_extensions.py:171
-msgid "Restart"
-msgstr "Újraindítás"
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Hálózati kiszolgálók"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:88
-#| msgid "Install Shell Extension"
-msgid "Uninstall Extension"
-msgstr "Kiterjesztés eltávolítása"
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Kuka"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:89
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "El kívánja távolítani a(z) „%s” kiterjesztést?"
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Csatolt kötetek"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:105
-msgid "Install Shell Extension"
-msgstr "Shell-bővítmények telepítése"
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Háttér"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:110
-msgid "Select an extension"
-msgstr "Válasszon egy bővítményt"
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+msgid "Mode"
+msgstr "Mód"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:117
-msgid "Get more extensions"
-msgstr "További bővítmények beszerzése"
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Háttér helye"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:165
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "%s bővítmény sikeresen frissítve"
+#: ../gtweak/tweaks/tweak_group_font.py:25
+msgid "Window Titles"
+msgstr "Ablakcímek"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:167
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "%s bővítmény sikeresen telepítve"
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Felület"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:175
-msgid "Error installing extension"
-msgstr "Hiba a bővítmény telepítésekor"
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Dokumentumok"
 
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:180
-msgid "Invalid extension"
-msgstr "Érvénytelen bővítmény"
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Rögzített szélességű"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:188
-msgid "Shell Extensions"
-msgstr "A Shell bővítményei"
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "Hinting"
 
-#: ../gtweak/tweaks/tweak_shell.py:46
-msgid "Close Only"
-msgstr "Csak bezárás"
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Élsimítás"
 
-#: ../gtweak/tweaks/tweak_shell.py:47
-msgid "Minimize and Close"
-msgstr "Minimalizálás és bezárás"
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Méretezési faktor"
 
-#: ../gtweak/tweaks/tweak_shell.py:48
-msgid "Maximize and Close"
-msgstr "Maximalizálás és bezárás"
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "Ikonok"
 
-#: ../gtweak/tweaks/tweak_shell.py:49
-msgid "All"
-msgstr "Összes"
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "Kurzor"
 
-#: ../gtweak/tweaks/tweak_shell.py:64
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+msgid "Window"
+msgstr "Ablak"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Shell theme"
 msgstr "Shell téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:64
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Egyéni vagy felhasználói témák telepítése a Gnome Shellhez"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:67
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "Ismeretlen hiba"
 
-#: ../gtweak/tweaks/tweak_shell.py:75
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "A Gnome Shell nem fut"
 
-#: ../gtweak/tweaks/tweak_shell.py:97
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr ""
 "A Gnome Shell felhasználóitéma-bővítménye nem megfelelően lett telepítve"
 
-#: ../gtweak/tweaks/tweak_shell.py:100
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "A Gnome Shell felhasználóitéma-bővítménye nincs engedélyezve"
 
-#: ../gtweak/tweaks/tweak_shell.py:103
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "A bővítmények nem sorolhatók fel"
 
-#: ../gtweak/tweaks/tweak_shell.py:136
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>Alapértelmezett</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "Válasszon témát"
 
-#: ../gtweak/tweaks/tweak_shell.py:187
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s téma sikeresen frissítve"
 
-#: ../gtweak/tweaks/tweak_shell.py:189
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s téma telepítése sikerült"
 
-#: ../gtweak/tweaks/tweak_shell.py:197
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "Hiba a téma telepítése közben"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:202
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "Nem megfelelő téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:228
-msgid "Dynamic workspaces"
-msgstr "Dinamikus munkaterületek"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "Téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:228
-msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-msgstr ""
-"A Gnome Shell dinamikus munkaterület-kezelésének letiltása, statikus "
-"munkaterületek használata"
-
-#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:62
 msgid "Disabled"
 msgstr "Letiltva"
 
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "Gépelés"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+msgid "Extension downloading"
+msgstr "Kiterjesztések letöltése"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+msgid "Error loading extension"
+msgstr "Hiba a bővítmény betöltésekor"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+msgid "Extension does not support shell version"
+msgstr "A bővítmény nem támogatja a Gnome Shell ezen verzióját"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+msgid "Unknown extension error"
+msgstr "Ismeretlen bővítményhiba"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
+#: ../gtweak/tweaks/tweak_group_startup.py:124
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
+msgid "The shell must be restarted for changes to take effect"
+msgstr "A változtatások életbe lépéséhez újra kell indítani a Gnome Shellt"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
+msgid "Restart"
+msgstr "Újraindítás"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+msgid "Uninstall Extension"
+msgstr "Kiterjesztés eltávolítása"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "El kívánja távolítani a(z) „%s” kiterjesztést?"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+msgid "Updating"
+msgstr "Frissítés"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+msgid "Error"
+msgstr "Hiba"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Update"
+msgstr "Frissítés"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+msgid "Install Shell Extension"
+msgstr "Shell-bővítmények telepítése"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+msgid "Select an extension"
+msgstr "Válasszon egy bővítményt"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+msgid "Get more extensions"
+msgstr "További bővítmények beszerzése"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "%s bővítmény sikeresen frissítve"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "%s bővítmény sikeresen telepítve"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+msgid "Error installing extension"
+msgstr "Hiba a bővítmény telepítésekor"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+msgid "Invalid extension"
+msgstr "Érvénytelen bővítmény"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "Alkalmazás menü megjelenítése"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "Munkaterület-létrehozás"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Dynamics"
+msgstr "Dinamikus"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "Statikus"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Clock"
+msgstr "Óra"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show date"
+msgstr "Dátum megjelenítése"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Show seconds"
+msgstr "Másodpercek megjelenítése"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Calendar"
+msgstr "Naptár"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Show week numbers"
+msgstr "Hetek számának megjelenítése"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "Power Button Action"
+msgstr "Bekapcsoló gomb művelete"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "When Laptop Lid is Closed"
+msgstr "A noteszgép fedelének lehajtásakor"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "On Battery Power"
+msgstr "Akkumulátoron"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "When plugged in"
+msgstr "Ha csatlakoztatva van"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:82
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "Felfüggesztés külső monitor csatlakoztatásakor"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "Munkaterületek száma"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
+msgid "Workspaces only on primary display"
+msgstr "Munkaterületek csak az elsődleges kijelzőn"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:35
+msgid "Applications"
+msgstr "Alkalmazások"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "fut"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:60
+msgid "_Close"
+msgstr "_Bezárás"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "Add Application"
+msgstr "Alkalmazás hozzáadása"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:139
+msgid "New startup application"
+msgstr "Új bejelentkezési alkalmazás"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:140
+msgid "Add a new application to be run at startup"
+msgstr "Új, bejelentkezéskor futtatandó alkalmazás hozzáadása"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:56
+msgid "Attached Modal Dialogs"
+msgstr "Csatolt kizárólagos párbeszédablakok"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Automatically Raise Windows"
+msgstr "Ablakok előtérbe hozása automatikusan"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:58
+msgid "Resize with Secondary-click"
+msgstr "Átméretezés másodlagos kattintással"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window Action Key"
+msgstr "Ablak műveletgombja"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:63
+msgid "Focus Mode"
+msgstr "Fókuszmód"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:64
+msgid "Titlebar Actions"
+msgstr "Címsor műveletei"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:65
+msgid "Double-click"
+msgstr "Dupla kattintás"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:66
+msgid "Middle-click"
+msgstr "Középső kattintás"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Secondary-click"
+msgstr "Másodlagos kattintás"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "Címsor gombok"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+msgid "Maximize"
+msgstr "Maximalizálás"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+msgid "Minimize"
+msgstr "Minimalizálás"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Középső gombos beillesztés"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+msgid "Key theme"
+msgstr "Billentyűtéma"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "Billentyűzet és egér"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+msgid "Show All Input Sources"
+msgstr "Minden beviteli forrás megjelenítése"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+msgid "Show location of pointer"
+msgstr "Mutató helyének kiemelése"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Eszköz"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Wacom"
+
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:67
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(alapértelmezett)</i>"
 
-#: ../gtweak/widgets.py:345
+#: ../gtweak/widgets.py:471
 msgid "Enable dark theme for all applications"
 msgstr "A sötét téma engedélyezése minden alkalmazáshoz"
 
-#: ../gtweak/widgets.py:346
+#: ../gtweak/widgets.py:472
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "A munkamenetben a sötét téma engedélyezése minden futó alkalmazáshoz"
 
-#: ../gtweak/widgets.py:364
+#: ../gtweak/widgets.py:480
+msgid "Global Dark Theme"
+msgstr "Globális sötét téma"
+
+#: ../gtweak/widgets.py:481
+msgid "Applications need to be restarted for change to take effect"
+msgstr "A változtatások életbe lépéséhez újra kell indítani az alkalmazásokat"
+
+#: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Hiba a beállítás írásakor"
 
+#~ msgid "welcome"
+#~ msgstr "üdvözöljük"
+
+#~ msgid "Shell"
+#~ msgstr "Shell"
+
+#~ msgid "Shell Extensions"
+#~ msgstr "A Shell bővítményei"
+
+#~ msgid "All"
+#~ msgstr "Összes"
+
+#~ msgid ""
+#~ "Disable gnome-shell dynamic workspace management, use static workspaces"
+#~ msgstr ""
+#~ "A Gnome Shell dinamikus munkaterület-kezelésének letiltása, statikus "
+#~ "munkaterületek használata"
+
 #~ msgid "Advanced Settings"
 #~ msgstr "Speciális beállítások"
-
-#~ msgid "GTK+ theme"
-#~ msgstr "GTK+ téma"
 
 #~ msgid "Icon theme"
 #~ msgstr "Ikontéma"
 
 #~ msgid "Keybinding theme"
 #~ msgstr "Billentyűtársítás-téma"
-
-#~ msgid "%s Extension"
-#~ msgstr "%s bővítmény"
-
-#~ msgid "Window theme"
-#~ msgstr "Ablaktéma"
-
-#~ msgid "Interface"
-#~ msgstr "Felület"
 
 #~ msgid "File Manager"
 #~ msgstr "Fájlkezelő"
