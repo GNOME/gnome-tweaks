@@ -1,195 +1,579 @@
 # Korean translation for gnome-tweak-tool.
 # Copyright (C) 2012 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Seong-ho Cho <darkcircle.0426@gmail.com>, 2012.
+# Seong-ho Cho <darkcircle.0426@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-03-25 20:04+0000\n"
-"PO-Revision-Date: 2012-03-29 22:26+0900\n"
+"POT-Creation-Date: 2013-09-19 19:54+0000\n"
+"PO-Revision-Date: 2013-09-22 04:39+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.5\n"
 
-#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Advanced Settings"
-msgstr "고급 설정"
-
-#: ../data/shell.ui.h:2
-msgid "welcome"
-msgstr "환영합니다"
-
-#: ../data/shell.ui.h:3
-msgid "tweaks"
-msgstr "기능 향상"
+#: ../data/gnome-tweak-tool.desktop.in.h:1
+msgid "Tweak Tool"
+msgstr "기능 개선 도구"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
-msgstr "기능 향상 고급 GNOME 3 설정"
+msgstr "기능 개선 고급 GNOME 3 설정"
 
-#: ../gtweak/tweaks/tweak_interface.py:33
-msgid "GTK+ theme"
-msgstr "GTK+ 테마"
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Settings;설정;Advanced;고급;Preferences;기본 설정;Extensions;확장;Fonts;글꼴;"
+"Theme;테마;XKB;XKB;Keyboard;키보드;Typing;입력;"
 
-#: ../gtweak/tweaks/tweak_interface.py:51
-msgid "Icon theme"
-msgstr "아이콘 테마"
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "기본값으로 재설정(_R)"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:110
-msgid "<i>Default</i>"
-msgstr "<i>기본</i>"
+#: ../data/shell.ui.h:2
+msgid "Disable All Shell Extensions"
+msgstr "모든 쉘 확장 비활성화"
 
-#: ../gtweak/tweaks/tweak_interface.py:87
-msgid "Keybinding theme"
-msgstr "키 바인딩 테마"
+#: ../data/shell.ui.h:3
+msgid "_Help"
+msgstr "도움말(_H)"
+
+#: ../data/shell.ui.h:4
+msgid "_About Tweak Tool"
+msgstr "기능 개선 도구 정보(_A)"
+
+#: ../data/shell.ui.h:5
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "기본값으로 재설정"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "모든 기능 개선 설정을 초기 기본 상태로 재설정합니까?"
+
+#: ../gtweak/app.py:93
+msgid "About GNOME Tweak Tool"
+msgstr "그놈 기능 개선 도구 정보"
+
+#: ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "그놈 기능 개선 도구"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "그놈 쉘 v%s (%s 모드)"
+
+#: ../gtweak/app.py:100
+msgid "GNOME Shell not running"
+msgstr "그놈 쉘 실행 중이 아닙니다"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "홈페이지"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "모양새"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+msgid "Extensions"
+msgstr "확장"
+
+#: ../gtweak/tweakmodel.py:30
+msgid "Fonts"
+msgstr "글꼴"
+
+#: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "전원"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+msgid "Startup Applications"
+msgstr "시작 프로그램"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "최상위 표시줄"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Windows"
+msgstr "윈도우"
+
+#: ../gtweak/tweakmodel.py:35
+msgid "Workspaces"
+msgstr "작업 공간"
+
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Mouse"
+msgstr "마우스"
+
+#: ../gtweak/tweakmodel.py:38
+msgid "Files"
+msgstr "파일"
+
+#: ../gtweak/tweakmodel.py:52
+msgid "Miscellaneous"
+msgstr "기타"
+
+#: ../gtweak/tweakview.py:85
+msgid "Tweaks"
+msgstr "기능 향상"
+
+#: ../gtweak/tweakview.py:101
+msgid "Search Tweaks..."
+msgstr "기능 개선 사항 검색..."
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+msgid "Icons on Desktop"
+msgstr "데스크톱 아이콘"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "데스크톱"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "컴퓨터"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "내 폴더"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "네트워크 서버"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "휴지통"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "마운트한 볼륨"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "배경"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+msgid "Mode"
+msgstr "모드"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "배경 위치"
+
+#: ../gtweak/tweaks/tweak_group_font.py:25
+msgid "Window Titles"
+msgstr "창 제목"
+
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "인터페이스"
+
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "문서"
+
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "고정폭"
+
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "힌팅"
+
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "앤티 에일리어싱"
+
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "스케일 상수"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "아이콘"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "커서"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+msgid "Window"
+msgstr "창"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+msgid "Shell theme"
+msgstr "쉘 테마"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+msgid "Install custom or user themes for gnome-shell"
+msgstr "그놈 쉘용 사용자 정의 테마 또는 사용자 테마를 설치합니다"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:56
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "알 수 없는 오류"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "쉘 실행 중이 아닙니다"
 
-#: ../gtweak/tweaks/tweak_shell.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
-msgstr "쉘 사용자 테마 확장이 잘 못 설치되었습니다"
+msgstr "쉘 사용자 테마 확장을 잘못 설치했습니다"
 
-#: ../gtweak/tweaks/tweak_shell.py:81
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "쉘 사용자 테마 확장을 활성화 할 수 없습니다"
 
-#: ../gtweak/tweaks/tweak_shell.py:84
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "쉘 확장을 나열할 수 없습니다"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:115
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>기본</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "테마를 선택하십시오"
 
-#: ../gtweak/tweaks/tweak_shell.py:162
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s 테마를 성공적으로 업데이트했습니다"
 
-#: ../gtweak/tweaks/tweak_shell.py:164
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s 테마를 성공적으로 설치했습니다"
 
-#: ../gtweak/tweaks/tweak_shell.py:172
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "테마를 설치하는 중 오류 발생"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:177
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "잘못된 테마"
 
-#: ../gtweak/tweaks/tweak_shell.py:195
-msgid "Shell"
-msgstr "쉘"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "테마"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:62
+msgid "Disabled"
+msgstr "사용 안함"
+
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "입력"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
 msgid "Extension downloading"
 msgstr "확장 다운로드 중"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
 msgid "Error loading extension"
 msgstr "확장을 불러오는 중 오류"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
 msgid "Extension does not support shell version"
 msgstr "확장은 쉘 버전을 지원하지 않습니다"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
 msgid "Unknown extension error"
 msgstr "알 수 없는 확장 오류"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:46
-#, python-format
-msgid "%s Extension"
-msgstr "%s 확장"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
+#: ../gtweak/tweaks/tweak_group_startup.py:124
+msgid "Remove"
+msgstr "제거"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:59
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "The shell must be restarted for changes to take effect"
 msgstr "바뀐 사항을 적용하려면 쉘을 다시 시작해야 합니다"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:60
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
 msgid "Restart"
 msgstr "다시 시작"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+msgid "Uninstall Extension"
+msgstr "확장 설치 제거"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "'%s' 확장을 제거하시겠습니까?"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+msgid "Updating"
+msgstr "업데이트 중"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+msgid "Error"
+msgstr "오류"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Update"
+msgstr "업데이트"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
 msgid "Install Shell Extension"
 msgstr "쉘 확장 설치"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Select an extension"
 msgstr "확장을 선택하십시오"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+msgid "Get more extensions"
+msgstr "더 많은 확장 가져오기"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s 확장을 성공적으로 업데이트했습니다"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s 확장을 성공적으로 설치했습니다"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
 msgid "Error installing extension"
 msgstr "확장 설치 중 오류"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Invalid extension"
 msgstr "잘못된 확장입니다"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
-msgid "Shell Extensions"
-msgstr "쉘 확장"
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "프로그램 메뉴 표시"
 
-#: ../gtweak/tweaks/tweak_windows.py:31
-msgid "Window theme"
-msgstr "창 테마"
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "작업 공간 만들기"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Dynamics"
+msgstr "동적"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "정적"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Clock"
+msgstr "시계 "
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show date"
+msgstr "날짜 표시"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Show seconds"
+msgstr "초 표시"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Calendar"
+msgstr "달력"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Show week numbers"
+msgstr "주 차 번호 표시"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "Power Button Action"
+msgstr "전원 단추 동작"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "When Laptop Lid is Closed"
+msgstr "랩톱 덮개를 닫았을 때"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "On Battery Power"
+msgstr "배터리 전원 사용시"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "When plugged in"
+msgstr "장착했을 때"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:82
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "외부 모니터를 장착할 때도 대기 상태"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "작업 공간 수"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
+msgid "Workspaces only on primary display"
+msgstr "첫번째 디스플레이에만 작업 공간 배치"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:35
+msgid "Applications"
+msgstr "프로그램"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "실행 중"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:60
+msgid "_Close"
+msgstr "닫기(_C)"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "Add Application"
+msgstr "프로그램 추가"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:139
+msgid "New startup application"
+msgstr "새로운 시작 프로그램"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:140
+msgid "Add a new application to be run at startup"
+msgstr "시동시 실행할 새 프로그램을 추가하십시오"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:56
+msgid "Attached Modal Dialogs"
+msgstr "붙어있는 모달 대화 상자"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Automatically Raise Windows"
+msgstr "자동으로 창 활성화"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:58
+msgid "Resize with Secondary-click"
+msgstr "두번째 누름 동작에 크기 조절"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window Action Key"
+msgstr "창 동작 키"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:63
+msgid "Focus Mode"
+msgstr "포커스 모드"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:64
+msgid "Titlebar Actions"
+msgstr "제목 표시줄 동작"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:65
+msgid "Double-click"
+msgstr "두번 누름"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:66
+msgid "Middle-click"
+msgstr "가운데 단추 누름"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Secondary-click"
+msgstr "두번째 누름"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "제목 표시줄 단추"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+msgid "Maximize"
+msgstr "최대화"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+msgid "Minimize"
+msgstr "최소화"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "가운데 단추 누름 붙여넣기"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+msgid "Key theme"
+msgstr "키 테마"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "키보드와 마우스"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+msgid "Show All Input Sources"
+msgstr "모든 입력기 표시"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+msgid "Show location of pointer"
+msgstr "포인터 위치 표시"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "장치"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "왓콤"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(기본)</i>"
 
-#: ../gtweak/tweakmodel.py:26
-msgid "Fonts"
-msgstr "글꼴"
+#: ../gtweak/widgets.py:471
+msgid "Enable dark theme for all applications"
+msgstr "모든 프로그램에 어두운 테마 활성화"
 
-#: ../gtweak/tweakmodel.py:27
-msgid "Theme"
-msgstr "테마"
+#: ../gtweak/widgets.py:472
+msgid "Enable the dark theme hint for all the applications in the session"
+msgstr "세션의 모든 프로그램에 어두운 테마 힌트 활성화"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Desktop"
-msgstr "데스크톱"
+#: ../gtweak/widgets.py:480
+msgid "Global Dark Theme"
+msgstr "전체적인 어두운 테마"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Windows"
-msgstr "윈도우즈"
+#: ../gtweak/widgets.py:481
+msgid "Applications need to be restarted for change to take effect"
+msgstr "바뀐 사항을 적용하려면 프로그램을 다시 시작해야 합니다"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:32
-msgid "Files"
-msgstr "파일"
+#: ../gtweak/widgets.py:507
+msgid "Error writing setting"
+msgstr "설정 기록중 오류가 있습니다"
 
-#: ../gtweak/tweakmodel.py:40
-msgid "Miscellaneous"
-msgstr "기타"
+#~ msgid "Advanced Settings"
+#~ msgstr "고급 설정"
+
+#~ msgid "welcome"
+#~ msgstr "환영합니다"
+
+#~ msgid "Icon theme"
+#~ msgstr "아이콘 테마"
+
+#~ msgid "Keybinding theme"
+#~ msgstr "키 바인딩 테마"
+
+#~ msgid "Shell"
+#~ msgstr "쉘"
+
+#~ msgid "Shell Extensions"
+#~ msgstr "쉘 확장"
