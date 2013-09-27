@@ -1,15 +1,15 @@
 # Indonesian translation for gnome-tweak-tool.
 # Copyright (C) 2012 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Andika Triwidada <andika@gmail.com>, 2012.
+# Andika Triwidada <andika@gmail.com>, 2012, 2013.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool master\n"
+"Project-Id-Version: gnome-tweak-tool gnome-3-8\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-10-11 20:07+0000\n"
-"PO-Revision-Date: 2012-10-15 21:50+0700\n"
+"POT-Creation-Date: 2013-09-05 19:10+0000\n"
+"PO-Revision-Date: 2013-09-27 11:23+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -18,15 +18,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
 msgid "Tweak Tool"
-msgstr "Alat Ubah"
+msgstr "Alat Oprek"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Ubah pengaturan tingkat lanjut GNOME 3"
+
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Pengaturan;Tingkat Lanjut;Preferensi;Ekstensi;Fonta;Tema;XKB;Papan Tik;"
+"Mengetik;"
 
 #: ../data/shell.ui.h:2
 msgid "welcome"
@@ -69,154 +76,162 @@ msgstr "Tetikus"
 msgid "Files"
 msgstr "Berkas"
 
-#: ../gtweak/tweakmodel.py:48
+#: ../gtweak/tweakmodel.py:49
 msgid "Miscellaneous"
 msgstr "Rupa-rupa"
 
-#: ../gtweak/tweaks/tweak_interface.py:84 ../gtweak/tweaks/tweak_shell.py:117
+#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:122
 msgid "<i>Default</i>"
 msgstr "<i>Bawaan</i>"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:38
+#: ../gtweak/tweaks/tweak_shell_extensions.py:39
 msgid "Extension downloading"
 msgstr "Pengunduhan ekstensi"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:40
+#: ../gtweak/tweaks/tweak_shell_extensions.py:41
 msgid "Error loading extension"
 msgstr "Galat saat memuat ekstensi"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+#: ../gtweak/tweaks/tweak_shell_extensions.py:43
 msgid "Extension does not support shell version"
 msgstr "Ekstensi tak mendukung versi shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:44
+#: ../gtweak/tweaks/tweak_shell_extensions.py:45
 msgid "Unknown extension error"
 msgstr "Galat ekstensi yang tak dikenal"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:75
+#: ../gtweak/tweaks/tweak_shell_extensions.py:81
 msgid "The shell must be restarted for changes to take effect"
 msgstr "Shell mesti dimulai ulang agar perubahan berdampak"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:76
-#: ../gtweak/tweaks/tweak_shell_extensions.py:145
+#: ../gtweak/tweaks/tweak_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_shell_extensions.py:173
 msgid "Restart"
 msgstr "Start ulang"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_shell_extensions.py:88
+msgid "Uninstall Extension"
+msgstr "Bongkar Ekstensi"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:89
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Apakah Anda ingin membongkar ekstensi '%s'?"
+
+#: ../gtweak/tweaks/tweak_shell_extensions.py:105
 msgid "Install Shell Extension"
 msgstr "Pasang Ekstensi Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:86
+#: ../gtweak/tweaks/tweak_shell_extensions.py:110
 msgid "Select an extension"
 msgstr "Pilih ekstensi"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:91
+#: ../gtweak/tweaks/tweak_shell_extensions.py:117
 msgid "Get more extensions"
 msgstr "Dapatkan lebih banyak ekstensi"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:139
+#: ../gtweak/tweaks/tweak_shell_extensions.py:167
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Ekstensi %s sukses dimutakhirkan"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_shell_extensions.py:169
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Ekstensi %s sukses dipasang"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:149
+#: ../gtweak/tweaks/tweak_shell_extensions.py:177
 msgid "Error installing extension"
 msgstr "Galat saat memasang ekstensi"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:154
+#: ../gtweak/tweaks/tweak_shell_extensions.py:182
 msgid "Invalid extension"
 msgstr "Ekstensi tak valid"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:162
+#: ../gtweak/tweaks/tweak_shell_extensions.py:190
 msgid "Shell Extensions"
 msgstr "Ekstensi Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:38
+#: ../gtweak/tweaks/tweak_shell.py:41
 msgid "Close Only"
 msgstr "Hanya Tutup"
 
-#: ../gtweak/tweaks/tweak_shell.py:39
+#: ../gtweak/tweaks/tweak_shell.py:42
 msgid "Minimize and Close"
 msgstr "Minimalkan dan Tutup"
 
-#: ../gtweak/tweaks/tweak_shell.py:40
+#: ../gtweak/tweaks/tweak_shell.py:43
 msgid "Maximize and Close"
 msgstr "Maksimalkan dan Tutup"
 
-#: ../gtweak/tweaks/tweak_shell.py:41
+#: ../gtweak/tweaks/tweak_shell.py:44
 msgid "All"
 msgstr "Semua"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:59
 msgid "Shell theme"
 msgstr "Tema shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_shell.py:59
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Pasang tema pengguna atau ubahan bagi gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:58
+#: ../gtweak/tweaks/tweak_shell.py:62
 msgid "Unknown error"
 msgstr "Galat tak dikenal"
 
-#: ../gtweak/tweaks/tweak_shell.py:63
+#: ../gtweak/tweaks/tweak_shell.py:67
 msgid "Shell not running"
 msgstr "Shell tidak sedang berjalan"
 
-#: ../gtweak/tweaks/tweak_shell.py:84
+#: ../gtweak/tweaks/tweak_shell.py:89
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Ekstensi user-theme shell tak dipasang secara benar"
 
-#: ../gtweak/tweaks/tweak_shell.py:87
+#: ../gtweak/tweaks/tweak_shell.py:92
 msgid "Shell user-theme extension not enabled"
 msgstr "Ekstensi user-theme shell tak diaktifkan"
 
-#: ../gtweak/tweaks/tweak_shell.py:90
+#: ../gtweak/tweaks/tweak_shell.py:95
 msgid "Could not list shell extensions"
 msgstr "Tak bisa membuat daftar ekstensi shell"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:122
+#: ../gtweak/tweaks/tweak_shell.py:128
 msgid "Select a theme"
 msgstr "Pilih tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:171
+#: ../gtweak/tweaks/tweak_shell.py:179
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Tema %s sukses dimutakhirkan"
 
-#: ../gtweak/tweaks/tweak_shell.py:173
+#: ../gtweak/tweaks/tweak_shell.py:181
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Tema %s sukses dipasang"
 
-#: ../gtweak/tweaks/tweak_shell.py:181
+#: ../gtweak/tweaks/tweak_shell.py:189
 msgid "Error installing theme"
 msgstr "Galat saat memasang tema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:186
+#: ../gtweak/tweaks/tweak_shell.py:194
 msgid "Invalid theme"
 msgstr "Tema tak valid"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
+#: ../gtweak/tweaks/tweak_shell.py:214
 msgid "Dynamic workspaces"
 msgstr "Area kerja dinamis"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
+#: ../gtweak/tweaks/tweak_shell.py:214
 msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 msgstr ""
 "Nonaktifkan manajemen area kerja dinamis gnome-shell, gunakan area kerja "
 "statik"
 
-#: ../gtweak/tweaks/tweak_typing.py:38 ../gtweak/tweaks/tweak_windows.py:48
+#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:50
 msgid "Disabled"
 msgstr "Dimatikan"
 
@@ -226,14 +241,14 @@ msgstr "Dimatikan"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(bawaan)</i>"
 
-#: ../gtweak/widgets.py:318
+#: ../gtweak/widgets.py:365
 msgid "Enable dark theme for all applications"
 msgstr "Fungsikan tema gelap bagi semua aplikasi"
 
-#: ../gtweak/widgets.py:319
+#: ../gtweak/widgets.py:366
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Fungsikan petunjuk tema gelap bagi semua aplikasi dalam sesi"
 
-#: ../gtweak/widgets.py:337
+#: ../gtweak/widgets.py:384
 msgid "Error writing setting"
 msgstr "Galat saat menulis pengaturan"
