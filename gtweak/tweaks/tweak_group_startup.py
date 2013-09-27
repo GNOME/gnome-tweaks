@@ -49,9 +49,10 @@ class _AppChooser(Gtk.Dialog):
                 w = self._build_widget(
                         a,
                         _("running") if running else "")
-                lb.add(w)
-                self._all[w] = a
-                self._running[w] = running
+                if w:
+                    lb.add(w)
+                    self._all[w] = a
+                    self._running[w] = running
 
         sw = Gtk.ScrolledWindow()
         sw.props.hscrollbar_policy = Gtk.PolicyType.NEVER
@@ -75,9 +76,15 @@ class _AppChooser(Gtk.Dialog):
     def _build_widget(self, a, extra):
         row = Gtk.ListBoxRow()
         g = Gtk.Grid()
-        img = Gtk.Image.new_from_gicon(a.get_icon(),Gtk.IconSize.DIALOG)
-        g.attach(img, 0, 0, 1, 1)
-        img.props.hexpand = False
+        if not a.get_name():
+            return None
+        icn = a.get_icon()
+        if icn:
+            img = Gtk.Image.new_from_gicon(a.get_icon(),Gtk.IconSize.DIALOG)
+            g.attach(img, 0, 0, 1, 1)
+            img.props.hexpand = False
+        else:
+             img = None #attach_next_to treats this correctly
         lbl = Gtk.Label(a.get_name(), xalign=0)
         g.attach_next_to(lbl,img,Gtk.PositionType.RIGHT,1,1)
         lbl.props.hexpand = True
