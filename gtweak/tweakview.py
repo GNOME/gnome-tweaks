@@ -195,7 +195,7 @@ class Window(Gtk.ApplicationWindow):
             self.listbox.select_row(row)
 
     def _on_search(self, entry):
-        txt = entry.get_text().decode("utf-8").lower()
+        txt = entry.get_text().decode("utf-8","ignore").lower()
         tweaks, group = self._model.search_matches(txt)
         self.show_only_tweaks(tweaks)        
         self._on_list_changed(group)

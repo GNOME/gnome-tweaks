@@ -57,9 +57,10 @@ class Tweak(object):
 
     def search_matches(self, txt):
         if self._search_cache == None:
-            self._search_cache = self.name.decode("utf-8").lower() + " " + self.description.decode("utf-8").lower()
+            self._search_cache = self.name.decode("utf-8","ignore").lower() + " " + \
+				 self.description.decode("utf-8","ignore").lower()
             try:
-                self._search_cache += " " + self.extra_info.decode("utf-8").lower()
+                self._search_cache += " " + self.extra_info.decode("utf-8","ignore").lower()
             except:
                 LOG.warning("Error adding search info", exc_info=True)
         return  txt in self._search_cache
