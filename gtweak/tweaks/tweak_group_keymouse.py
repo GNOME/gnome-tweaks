@@ -57,11 +57,16 @@ class KeyThemeSwitcher(GSettingsComboTweak):
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Keyboard and Mouse"),
-        KeyThemeSwitcher(),
         GSettingsSwitchTweak(_("Show All Input Sources"),
                               "org.gnome.desktop.input-sources",
                               "show-all-sources",
                               logout_required=True,),
+        KeyThemeSwitcher(),
+        GSettingsComboTweak(_("Switch between overview and desktop"),
+                              "org.gnome.mutter",
+                              "overlay-key",
+                              [("Super_L", _("Super left")), ("Super_R", _("Super right"))]),
+              
         Title(_("Mouse"), ""),
         GSettingsSwitchTweak(_("Show location of pointer"),
                              "org.gnome.settings-daemon.peripherals.mouse", 
