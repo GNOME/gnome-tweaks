@@ -18,6 +18,17 @@ from gtweak.utils import DisableExtension
 
 def N_(x): return x
 
+def _fix_shell_version_for_ego(version):
+    #extensions.gnome.org uses a weird versioning system,
+    #3.10.0 is 3.10, 3.10.0.x (x is ignored)
+    #drop the pico? release
+    version = '.'.join(version.split('.')[0:3])
+    if version[-1] == '0':
+        #if it is .0, drop that too
+        return '.'.join(version.split('.')[0:2])
+    else:
+        return version
+
 class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
     def __init__(self, shell, ext, **options):
@@ -305,14 +316,15 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
         if uuid == extension["uuid"]:
             resp = resp['shell_version_map']
             shell = GnomeShellFactory().get_shell()
-            version = shell.version[0:3]
+            version = _fix_shell_version_for_ego(shell.version)
             try:
                 resp = resp[version]
                 if int(resp["version"]) > extension["version"]:
                     widget.add_update_button(uuid)
 
             except KeyError:
-                print "Older/Unknown Version"
+                logging.info("e.g.o no updates for %s (shell version %s extension version %s)" % (
+                             uuid,version,extension["version"]))
 
     def _list_header_func(self, row, before, user_data):
         if before and not row.get_header():
