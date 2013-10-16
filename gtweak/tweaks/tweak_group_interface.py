@@ -69,7 +69,7 @@ class IconThemeSwitcher(GSettingsComboTweak):
                  os.path.join(os.path.expanduser("~"), ".icons"))
         valid = walk_directories(dirs, lambda d:
                     os.path.isdir(d) and \
-                        not os.path.exists(os.path.join(d, "cursors")))
+			os.path.exists(os.path.join(d, "index.theme")))
         return valid
 
 class CursorThemeSwitcher(GSettingsComboTweak):
