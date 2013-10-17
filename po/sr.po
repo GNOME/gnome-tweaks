@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-28 16:55+0000\n"
-"PO-Revision-Date: 2013-04-02 09:59+0200\n"
+"POT-Creation-Date: 2013-09-27 10:16+0000\n"
+"PO-Revision-Date: 2013-10-17 06:12+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -20,7 +20,7 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
+#: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Алат за лицкање"
 
@@ -35,221 +35,545 @@ msgstr ""
 "подешавања;напредно;поставке;проширења;словни ликови;тема;икскб;тастатура;"
 "куцање;"
 
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "_Врати на задато"
+
 #: ../data/shell.ui.h:2
-msgid "welcome"
-msgstr "Добродошли"
+#| msgid "Install Shell Extension"
+msgid "Disable All Shell Extensions"
+msgstr "Искључи сва проширења шкољке"
 
 #: ../data/shell.ui.h:3
-msgid "tweaks"
-msgstr "Лицкања"
+msgid "_Help"
+msgstr "По_моћ"
+
+#: ../data/shell.ui.h:4
+#| msgid "Tweak Tool"
+msgid "_About Tweak Tool"
+msgstr "_О алату за лицкање"
+
+#: ../data/shell.ui.h:5
+msgid "_Quit"
+msgstr "_Изађи"
+
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "Врати на задато"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Да вратим сва подешавања лицкања на изворно задато стање?"
+
+#: ../gtweak/app.py:93
+#| msgid "Tweak Tool"
+msgid "About GNOME Tweak Tool"
+msgstr "О Гномовом алату за лицкање"
+
+#: ../gtweak/app.py:94
+#| msgid "Tweak Tool"
+msgid "GNOME Tweak Tool"
+msgstr "Гномов алат за лицкање"
+
+#: ../gtweak/app.py:98
+#, python-format, 
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "Гномова шкољка и%s (%s режим)"
+
+#: ../gtweak/app.py:100
+#| msgid "Shell not running"
+msgid "GNOME Shell not running"
+msgstr "Гномова шкољка није покренута"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Веб страница"
 
 #: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Изглед"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+#| msgid "Shell Extensions"
+msgid "Extensions"
+msgstr "Проширења"
+
+#: ../gtweak/tweakmodel.py:30
 msgid "Fonts"
 msgstr "Словни ликови"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Theme"
-msgstr "Тема"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Desktop"
-msgstr "Радна површ"
-
 #: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Напајање"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+msgid "Startup Applications"
+msgstr "Почетни програми"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Горња трака"
+
+#: ../gtweak/tweakmodel.py:34
 msgid "Windows"
 msgstr "Прозори"
 
-#: ../gtweak/tweakmodel.py:32
-msgid "Shell"
-msgstr "Шкољка"
+#: ../gtweak/tweakmodel.py:35
+#| msgid "Dynamic workspaces"
+msgid "Workspaces"
+msgstr "Радни простори"
 
-#: ../gtweak/tweakmodel.py:33
-msgid "Typing"
-msgstr "Куцање"
-
-#: ../gtweak/tweakmodel.py:34
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Mouse"
 msgstr "Миш"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:37
+#: ../gtweak/tweakmodel.py:38
 msgid "Files"
 msgstr "Датотеке"
 
-#: ../gtweak/tweakmodel.py:49
+#: ../gtweak/tweakmodel.py:52
 msgid "Miscellaneous"
 msgstr "Остало"
 
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:130
-msgid "<i>Default</i>"
-msgstr "<i>Подразумевано</i>"
+#: ../gtweak/tweakview.py:85
+#| msgid "tweaks"
+msgid "Tweaks"
+msgstr "Лицкања"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
-msgid "Extension downloading"
-msgstr "Преузимање проширења"
+#: ../gtweak/tweakview.py:101
+msgid "Search Tweaks..."
+msgstr "Тражи лицкања..."
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
-msgid "Error loading extension"
-msgstr "Не могу да учитам проширење"
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+#| msgid "Desktop"
+msgid "Icons on Desktop"
+msgstr "Иконице на радној површи"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:43
-msgid "Extension does not support shell version"
-msgstr "Проширење не подржава ово издање шкољке"
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Радна површ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:45
-msgid "Unknown extension error"
-msgstr "Непозната грешка проширења"
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Рачунар"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:81
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Морате поново да покренете шкољку како би применили измене"
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Личнo"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:82
-#: ../gtweak/tweaks/tweak_shell_extensions.py:171
-msgid "Restart"
-msgstr "Поново покрени"
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Мрежни сервери"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:88
-#| msgid "Install Shell Extension"
-msgid "Uninstall Extension"
-msgstr "Уклони проширење"
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Смеће"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:89
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Да ли желите да уклоните проширење „%s“?"
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Прикачени уређаји"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:105
-msgid "Install Shell Extension"
-msgstr "Инсталирај проширење шкољке"
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Позадина"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:110
-msgid "Select an extension"
-msgstr "Изаберите проширење"
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+msgid "Mode"
+msgstr "Режим"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:117
-msgid "Get more extensions"
-msgstr "Добавите још проширења"
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Место позадине"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:165
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "%s проширење је успешно ажурирано"
+#: ../gtweak/tweaks/tweak_group_font.py:25
+#| msgid "Windows"
+msgid "Window Titles"
+msgstr "Наслови прозора"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:167
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "%s проширење је успешно инсталирано"
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Сучеље"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:175
-msgid "Error installing extension"
-msgstr "Не могу да инсталирам проширење"
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Документа"
 
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:180
-msgid "Invalid extension"
-msgstr "Неисправно проширење"
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Утврђена ширина"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:188
-msgid "Shell Extensions"
-msgstr "Проширења шкољке"
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "Дотеривање"
 
-#: ../gtweak/tweaks/tweak_shell.py:46
-msgid "Close Only"
-msgstr "Затвори само"
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Умекшавање"
 
-#: ../gtweak/tweaks/tweak_shell.py:47
-msgid "Minimize and Close"
-msgstr "Умањи и затвори"
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Чинилац промене величине"
 
-#: ../gtweak/tweaks/tweak_shell.py:48
-msgid "Maximize and Close"
-msgstr "Увећај и затвори"
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "Иконице"
 
-#: ../gtweak/tweaks/tweak_shell.py:49
-msgid "All"
-msgstr "Све"
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "Курсор"
 
-#: ../gtweak/tweaks/tweak_shell.py:64
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+#| msgid "Windows"
+msgid "Window"
+msgstr "Прозор"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Shell theme"
 msgstr "Тема шкољке"
 
-#: ../gtweak/tweaks/tweak_shell.py:64
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Инсталирај произвољну или корисничке теме за гномову шкољку "
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:67
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "Непозната грешка"
 
-#: ../gtweak/tweaks/tweak_shell.py:75
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "Шкољка није покренута"
 
-#: ../gtweak/tweaks/tweak_shell.py:97
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Проширење корисничке теме шкољке није исправно инсталирано"
 
-#: ../gtweak/tweaks/tweak_shell.py:100
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "Проширење корисничке теме шкољке није омогућено"
 
-#: ../gtweak/tweaks/tweak_shell.py:103
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "Не могу да испишем проширења шкољке"
 
-#: ../gtweak/tweaks/tweak_shell.py:136
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>Подразумевано</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "Изаберите тему"
 
-#: ../gtweak/tweaks/tweak_shell.py:187
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s тема је успешно ажурирана"
 
-#: ../gtweak/tweaks/tweak_shell.py:189
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s тема је успешно инсталирана"
 
-#: ../gtweak/tweaks/tweak_shell.py:197
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "Не могу да инсталирам тему"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:202
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "Неисправна тема"
 
-#: ../gtweak/tweaks/tweak_shell.py:228
-msgid "Dynamic workspaces"
-msgstr "Променљиви радни простори"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "Тема"
 
-#: ../gtweak/tweaks/tweak_shell.py:228
-msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-msgstr ""
-"Искључи управљање променљивим радним просторима гномове шкољке, користи "
-"непроменљиве радне просторе"
-
-#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:62
 msgid "Disabled"
 msgstr "Искључено"
 
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "Куцање"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+msgid "Extension downloading"
+msgstr "Преузимање проширења"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+msgid "Error loading extension"
+msgstr "Не могу да учитам проширење"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+msgid "Extension does not support shell version"
+msgstr "Проширење не подржава ово издање шкољке"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+msgid "Unknown extension error"
+msgstr "Непозната грешка проширења"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
+#: ../gtweak/tweaks/tweak_group_startup.py:124
+msgid "Remove"
+msgstr "Уклони"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
+msgid "The shell must be restarted for changes to take effect"
+msgstr "Морате поново да покренете шкољку како би применили измене"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
+msgid "Restart"
+msgstr "Поново покрени"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+msgid "Uninstall Extension"
+msgstr "Уклони проширење"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Да ли желите да уклоните проширење „%s“?"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+msgid "Updating"
+msgstr "Дограђујем"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+msgid "Error"
+msgstr "Грeшкa"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Update"
+msgstr "Догради"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+msgid "Install Shell Extension"
+msgstr "Инсталирај проширење шкољке"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+msgid "Select an extension"
+msgstr "Изаберите проширење"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+msgid "Get more extensions"
+msgstr "Добавите још проширења"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "%s проширење је успешно ажурирано"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "%s проширење је успешно инсталирано"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+msgid "Error installing extension"
+msgstr "Не могу да инсталирам проширење"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+msgid "Invalid extension"
+msgstr "Неисправно проширење"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "Прикажи изборник програма"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "Стварање радног простора"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+#| msgid "Dynamic workspaces"
+msgid "Dynamics"
+msgstr "Променљиви"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "Непроменљиви"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Clock"
+msgstr "Сат"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show date"
+msgstr "Прикажи датум"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Show seconds"
+msgstr "Прикажи секунде"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Calendar"
+msgstr "Календар"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Show week numbers"
+msgstr "Прикажи бројеве недеља"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "Power Button Action"
+msgstr "Радња дугмета за напајање"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "When Laptop Lid is Closed"
+msgstr "Кад је поклопац преносног рачунара затворен"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "On Battery Power"
+msgstr "Када се напаја са батерије"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "When plugged in"
+msgstr "Када је прикључен"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:82
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "Обустави чак и ако је спољни монитор прикључен"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "Број радних простора"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
+msgid "Workspaces only on primary display"
+msgstr "Радни простори само на главном монитору"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:35
+msgid "Applications"
+msgstr "Програми"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "покренут"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:60
+#| msgid "Close Only"
+msgid "_Close"
+msgstr "_Затвори"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "Add Application"
+msgstr "Додај програм"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:139
+msgid "New startup application"
+msgstr "Нови почетни програм"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:140
+msgid "Add a new application to be run at startup"
+msgstr "Додајте нови програм који ће бити покренут на почетку"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:56
+msgid "Attached Modal Dialogs"
+msgstr "Приложено важно прозорче"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Automatically Raise Windows"
+msgstr "Сам издигни прозоре"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:58
+msgid "Resize with Secondary-click"
+msgstr "Промени величину на секундарни клик"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window Action Key"
+msgstr "Тастер радње прозора"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:63
+msgid "Focus Mode"
+msgstr "Режим првог плана"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:64
+msgid "Titlebar Actions"
+msgstr "Радње траке наслова"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:65
+msgid "Double-click"
+msgstr "Двоструки клик"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:66
+msgid "Middle-click"
+msgstr "Средњи клик"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Secondary-click"
+msgstr "Секундарни клик"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "Дугмад траке наслова"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+#| msgid "Maximize and Close"
+msgid "Maximize"
+msgstr "Увећај"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+#| msgid "Minimize and Close"
+msgid "Minimize"
+msgstr "Умањи"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Средњи клик убацује"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+#| msgid "Shell theme"
+msgid "Key theme"
+msgstr "Тема тастера"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "Тастатура и миш"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+msgid "Show All Input Sources"
+msgstr "Прикажи све изворе улаза"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+msgid "Show location of pointer"
+msgstr "Прикажи место показивача"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Уређај"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Ваком"
+
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:67
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(основно)</i>"
 
-#: ../gtweak/widgets.py:345
+#: ../gtweak/widgets.py:471
 msgid "Enable dark theme for all applications"
 msgstr "Укључите тамну тему за све програме"
 
-#: ../gtweak/widgets.py:346
+#: ../gtweak/widgets.py:472
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Укључите савет тамне теме за све програме у сесији"
 
-#: ../gtweak/widgets.py:364
+#: ../gtweak/widgets.py:480
+msgid "Global Dark Theme"
+msgstr "Општа тамна тема"
+
+#: ../gtweak/widgets.py:481
+#| msgid "The shell must be restarted for changes to take effect"
+msgid "Applications need to be restarted for change to take effect"
+msgstr "Морате поново да покренете програме да би измене ступиле на снагу"
+
+#: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Грешка записивања подешавања"
