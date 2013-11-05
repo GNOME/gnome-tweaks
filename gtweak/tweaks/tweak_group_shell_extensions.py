@@ -261,12 +261,12 @@ class _ShellExtensionInstallerTweak(Gtk.Box, Tweak):
                         self._shell.restart)
 
                 else:
-                    self.notify_error(_("Error installing extension"))
+                    self.notify_information(_("Error installing extension"))
 
 
             except:
                 #does not look like a valid theme
-                self.notify_error(_("Invalid extension"))
+                self.notify_information(_("Invalid extension"))
                 logging.warning("Error parsing theme zip", exc_info=True)
 
         #set button back to default state
