@@ -20,6 +20,12 @@ import locale
 import gettext
 import sys
 
+# Hack to force GIL creation
+# See: https://bugzilla.gnome.org/show_bug.cgi?id=709223
+# See: https://bugzilla.gnome.org/show_bug.cgi?id=710530
+import threading
+threading.Thread(target=lambda: None).start()
+
 import gi
 gi.require_version("Gtk", "3.0")
 
