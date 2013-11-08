@@ -127,7 +127,6 @@ class GnomeShell:
 class GnomeShell32(GnomeShell):
 
     EXTENSION_ENABLED_KEY = "enabled-extensions"
-    EXTENSION_NEED_RESTART = False
     SUPPORTS_EXTENSION_PREFS = False
 
     def list_extensions(self):

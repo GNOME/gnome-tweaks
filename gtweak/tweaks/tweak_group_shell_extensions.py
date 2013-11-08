@@ -131,12 +131,6 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         else:
             self._shell.enable_extension(uuid)
 
-        if self._shell.EXTENSION_NEED_RESTART:
-            self.notify_action_required(
-                _("The shell must be restarted for changes to take effect"),
-                _("Restart"),
-                self._shell.restart)
-
     def _on_extension_delete(self, btn, uuid, name):
         path = os.path.join(self._shell.EXTENSION_DIR, uuid)
         if os.path.exists(path):
