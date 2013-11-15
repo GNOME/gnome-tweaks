@@ -7,6 +7,8 @@ nobase_dist_app_PYTHON = \
 	$(wildcard $(srcdir)/gtweak/*.py) \
 	$(wildcard $(srcdir)/gtweak/tweaks/*.py)
 
+nobase_app_PYTHON = gtweak/defs.py
+
 EXTRA_DIST = \
 	$(bin_SCRIPTS)
 
