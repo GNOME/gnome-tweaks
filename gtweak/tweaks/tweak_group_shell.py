@@ -47,7 +47,7 @@ class StaticWorkspaceTweak(Gtk.Box, _GSettingsTweak):
         _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "dynamic-workspaces", **options)
 
         default = self.STATUS.keys()[self.STATUS.values().index(self.settings[self.key_name])]
-        key_options = [("dynamic", _("Dynamics")), ("static", _("Static"))]
+        key_options = [("dynamic", _("Dynamic")), ("static", _("Static"))]
 
         self.combo = build_combo_box_text(default, *key_options)
         self.combo.connect('changed', self._on_combo_changed)
