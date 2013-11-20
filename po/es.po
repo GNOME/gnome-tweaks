@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-13 06:57+0000\n"
-"PO-Revision-Date: 2013-09-13 12:47+0200\n"
+"POT-Creation-Date: 2013-11-17 14:03+0000\n"
+"PO-Revision-Date: 2013-11-20 14:22+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -91,7 +91,7 @@ msgid "Appearance"
 msgstr "Apariencia"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "Extensiones"
 
@@ -103,7 +103,7 @@ msgstr "Tipografías"
 msgid "Power"
 msgstr "Energía"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
 msgid "Startup Applications"
 msgstr "Aplicaciones al inicio"
 
@@ -131,7 +131,11 @@ msgstr "Nautilus"
 msgid "Miscellaneous"
 msgstr "Miscelánea"
 
-#: ../gtweak/tweakview.py:81
+#: ../gtweak/tweakview.py:85
+msgid "Tweaks"
+msgstr "Retoques"
+
+#: ../gtweak/tweakview.py:101
 msgid "Search Tweaks..."
 msgstr "Buscar retoques…"
 
@@ -288,85 +292,80 @@ msgstr "Desactivada"
 msgid "Typing"
 msgstr "Escritura"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
 msgid "Extension downloading"
 msgstr "Descarga de extensiones"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
 msgid "Error loading extension"
 msgstr "Error al cargar la extensión"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension does not support shell version"
 msgstr "La extensión no soporta la versión de GNOME Shell"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Unknown extension error"
 msgstr "Error de la extensión desconocido"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:124
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
 msgid "Remove"
 msgstr "Quitar"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Se debe reiniciar GNOME Shell para que los cambios tengan efecto"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
-msgid "Restart"
-msgstr "Reiniciar"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "Desinstalar extensión"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "¿Quiere desinstalar la extensión «%s»?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "Actualizando"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "Error"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "Actualizar"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Instalar extensión de GNOME Shell"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Seleccionar una extensión"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "Obtener más extensiones"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Extensión %s actualizada correctamente"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Extensión %s instalada correctamente"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Reiniciar"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "Error la instalar la extensión"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "Extensión no válida"
 
@@ -379,8 +378,9 @@ msgid "Workspace Creation"
 msgstr "Creación de áreas de trabajo"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-msgid "Dynamics"
-msgstr "Dinámicas"
+#| msgid "Dynamics"
+msgid "Dynamic"
+msgstr "Dinámica"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
 msgid "Static"
@@ -442,20 +442,19 @@ msgstr "Aplicaciones"
 msgid "running"
 msgstr "en ejecución"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:60
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "_Close"
 msgstr "_Cerrar"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:62
 msgid "Add Application"
 msgstr "Añadir aplicación"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:139
-#| msgid "Startup Applications"
+#: ../gtweak/tweaks/tweak_group_startup.py:146
 msgid "New startup application"
 msgstr "Nueva aplicación al inicio"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:140
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "Add a new application to be run at startup"
 msgstr "Añadir una aplicación nueva que ejecutar al inicio"
 
@@ -561,8 +560,8 @@ msgstr "Se deben reiniciar las aplicaciones para que los cambios tengan efecto"
 msgid "Error writing setting"
 msgstr "Error la escribir la configuración"
 
-#~ msgid "Tweaks"
-#~ msgstr "Retoques"
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "Se debe reiniciar GNOME Shell para que los cambios tengan efecto"
 
 #~ msgid ""
 #~ "Disable gnome-shell dynamic workspace management, use static workspaces"
