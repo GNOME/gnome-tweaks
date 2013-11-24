@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-06-13 19:50+0000\n"
-"PO-Revision-Date: 2013-07-01 17:38+0100\n"
-"Last-Translator: Ján Kyselica <kyselica.jan@gmail.com>\n"
+"POT-Creation-Date: 2013-11-20 13:40+0000\n"
+"PO-Revision-Date: 2013-11-24 21:16+0100\n"
+"Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
+#: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Nástroj na vyladenie nastavení"
 
@@ -36,228 +36,559 @@ msgid ""
 msgstr ""
 "Nastavenia;Pokročilé;Predvoľby;Rozšírenia;Písma;Téma;XKB;Klávesnica;Písanie;"
 
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "O_bnoviť pôvodné"
+
 #: ../data/shell.ui.h:2
-msgid "welcome"
-msgstr "vitajte"
+msgid "Disable All Shell Extensions"
+msgstr "Zakázať všetky rozšírenia shellu"
 
 #: ../data/shell.ui.h:3
-msgid "tweaks"
-msgstr "vyladenia"
+msgid "_Help"
+msgstr "_Pomocník"
+
+# PK: bolo by to zbytocne dlhe
+#: ../data/shell.ui.h:4
+msgid "_About Tweak Tool"
+msgstr "_O programe"
+
+#: ../data/shell.ui.h:5
+msgid "_Quit"
+msgstr "_Ukončiť"
+
+# dialog title
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "Znovunastavenie predvolených hodnôt"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr ""
+"Znovunastaviť všetky vylaďovacie nastavenia na pôvodný predvolený stav?"
+
+#: ../gtweak/app.py:93
+msgid "About GNOME Tweak Tool"
+msgstr "O programe Nástroj na vyladenie nastavení prostredia GNOME"
+
+#: ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "Nástroj na vyladenie nastavení prostredia GNOME"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "Shell prostredia GNOME v. %s (režim %s)"
+
+#: ../gtweak/app.py:100
+msgid "GNOME Shell not running"
+msgstr "Shell prostredia GNOME nie je spustený"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Domovská stránka"
 
 #: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Vzhľad"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+msgid "Extensions"
+msgstr "Rozšírenia"
+
+#: ../gtweak/tweakmodel.py:30
 msgid "Fonts"
 msgstr "Písma"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Theme"
-msgstr "Téma"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Desktop"
-msgstr "Pracovná plocha"
-
 #: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Napájanie"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
+msgid "Startup Applications"
+msgstr "Aplikácie po spustení"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Horná lišta"
+
+#: ../gtweak/tweakmodel.py:34
 msgid "Windows"
 msgstr "Okná"
 
-#: ../gtweak/tweakmodel.py:32
-msgid "Shell"
-msgstr "Shell"
+#: ../gtweak/tweakmodel.py:35
+msgid "Workspaces"
+msgstr "Pracovné priestory"
 
-#: ../gtweak/tweakmodel.py:33
-msgid "Typing"
-msgstr "Písanie"
-
-#: ../gtweak/tweakmodel.py:34
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Mouse"
 msgstr "Myš"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:37
+#: ../gtweak/tweakmodel.py:38
 msgid "Files"
 msgstr "Súbory"
 
-#: ../gtweak/tweakmodel.py:49
+#: ../gtweak/tweakmodel.py:52
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
-# tema klavesovych skratiek, druhy vyskyt som nenasiel v programe
-# tyka sa to aj temy gnome-shell (Adwaita == default)
-#: ../gtweak/tweaks/tweak_interface.py:88 ../gtweak/tweaks/tweak_shell.py:122
-msgid "<i>Default</i>"
-msgstr "<i>Predvolená</i>"
+#: ../gtweak/tweakview.py:85
+msgid "Tweaks"
+msgstr "Vyladenia"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:43
-msgid "Extension downloading"
-msgstr "Rozšírenie sa sťahuje"
+# Gtk.SearchEntry
+#: ../gtweak/tweakview.py:101
+msgid "Search Tweaks..."
+msgstr "Vyhľadajte vyladenia…"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:45
-msgid "Error loading extension"
-msgstr "Chyba počas načítavania rozšírenia"
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+msgid "Icons on Desktop"
+msgstr "Ikony na pracovnej ploche"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:47
-msgid "Extension does not support shell version"
-msgstr "Rozšírenie nepodporuje verziu shellu"
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Pracovná plocha"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:49
-msgid "Unknown extension error"
-msgstr "Neznáma chyba rozšírenia"
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Počítač"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:85
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Aby sa prejavili zmeny, musíte reštartovať shell"
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Domovský priečinok"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:86
-#: ../gtweak/tweaks/tweak_shell_extensions.py:198
-msgid "Restart"
-msgstr "Reštartovať"
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Sieťové servery"
 
-# Predpokladám, že si to len zabudol odmazať. Upravil som. Ak nie ozvi sa.
-#: ../gtweak/tweaks/tweak_shell_extensions.py:92
-msgid "Uninstall Extension"
-msgstr "Odinštalovať rozšírenie"
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Kôš"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:93
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Chcete odinštalovať rozšírenie „%s“?"
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Pripojené zväzky"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:130
-msgid "Install Shell Extension"
-msgstr "Nainštalovať rozšírenie shellu"
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Pozadie"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:135
-msgid "Select an extension"
-msgstr "Výber rozšírenia"
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+msgid "Mode"
+msgstr "Režim"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
-msgid "Get more extensions"
-msgstr "Získať viac rozšírení"
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Umiestnenie pozadia"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:192
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "Rozšírenie %s bolo úspešne aktualizované"
+#: ../gtweak/tweaks/tweak_group_font.py:25
+msgid "Window Titles"
+msgstr "Titulky okien"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:194
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "Rozšírenie %s bolo úspešne nainštalované"
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Rozhranie"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:202
-msgid "Error installing extension"
-msgstr "Chyba pri inštalácii rozšírenia"
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Dokumenty"
 
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:207
-msgid "Invalid extension"
-msgstr "Neplatné rozšírenie"
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Písmo s pevnou šírkou"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:215
-msgid "Shell Extensions"
-msgstr "Rozšírenia pre Shell"
+# PM: Podľa odporúčania JULS toto prekladáme ako Dolaďovanie
+#: ../gtweak/tweaks/tweak_group_font.py:29
+#, fuzzy
+msgid "Hinting"
+msgstr "Rozostup písma"
 
-#: ../gtweak/tweaks/tweak_shell.py:41
-msgid "Close Only"
-msgstr "Iba zavrieť"
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Vyhladzovanie"
 
-#: ../gtweak/tweaks/tweak_shell.py:42
-msgid "Minimize and Close"
-msgstr "Minimalizovať a zavrieť"
+# PM: nestačilo by tu jednoducho mierka?
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Faktor nastavenia mierky"
 
-#: ../gtweak/tweaks/tweak_shell.py:43
-msgid "Maximize and Close"
-msgstr "Maximalizovať a zavrieť"
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "Ikony"
 
-#: ../gtweak/tweaks/tweak_shell.py:44
-msgid "All"
-msgstr "Všetky"
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "Kurzor"
 
-#: ../gtweak/tweaks/tweak_shell.py:59
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+msgid "Window"
+msgstr "Okno"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Shell theme"
 msgstr "Téma pre Shell"
 
-#: ../gtweak/tweaks/tweak_shell.py:59
+# PM: kde sa nachádza tento text?
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+#, fuzzy
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Nainštalovať vlastné alebo používateľské témy pre gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:62
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: ../gtweak/tweaks/tweak_shell.py:67
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "Shell nie je spustený"
 
-#: ../gtweak/tweaks/tweak_shell.py:89
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Rozšírenie s používateľskou témou shellu je nesprávne nainštalované"
 
-#: ../gtweak/tweaks/tweak_shell.py:92
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "Rozšírenie s používateľskou témou shellu nie je povolené"
 
-#: ../gtweak/tweaks/tweak_shell.py:95
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "Nepodarilo sa zobraziť rozšírenia shellu"
 
-#: ../gtweak/tweaks/tweak_shell.py:128
+# tema klavesovych skratiek, druhy vyskyt som nenasiel v programe
+# tyka sa to aj temy gnome-shell (Adwaita == default)
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>Predvolená</i>"
+
+# window title
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "Výber témy"
 
-#: ../gtweak/tweaks/tweak_shell.py:179
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Téma %s bola úspešne aktualizovaná"
 
-#: ../gtweak/tweaks/tweak_shell.py:181
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Téma %s bola úspešne nainštalovaná"
 
-#: ../gtweak/tweaks/tweak_shell.py:189
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "Chyba pri inštalácii témy"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:194
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "Neplatná téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:214
-msgid "Dynamic workspaces"
-msgstr "Dynamické pracovné priestory"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "Téma"
 
-#: ../gtweak/tweaks/tweak_shell.py:214
-msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-msgstr ""
-"Zakázať správu dynamických pracovných priestorov prostredia gnome-shell, "
-"použiť pevne určené pracovné plochy"
-
-#: ../gtweak/tweaks/tweak_typing.py:42 ../gtweak/tweaks/tweak_windows.py:50
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:62
 msgid "Disabled"
 msgstr "Zakázané"
+
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "Písanie"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
+msgid "Extension downloading"
+msgstr "Rozšírenie sa preberá"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
+msgid "Error loading extension"
+msgstr "Chyba počas načítavania rozšírenia"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+msgid "Extension does not support shell version"
+msgstr "Rozšírenie nepodporuje verziu shellu"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+msgid "Unknown extension error"
+msgstr "Neznáma chyba rozšírenia"
+
+# gtk button
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
+msgid "Remove"
+msgstr "Odstrániť"
+
+# Predpokladám, že si to len zabudol odmazať. Upravil som. Ak nie ozvi sa.
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+msgid "Uninstall Extension"
+msgstr "Odinštalovať rozšírenie"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Chcete odinštalovať rozšírenie „%s“?"
+
+# gtk label
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+msgid "Updating"
+msgstr "Aktualizuje sa"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Error"
+msgstr "Chyba"
+
+# gtk button
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+msgid "Update"
+msgstr "Aktualizovať"
+
+# PM: Kde je toto? máý to byť v neurčitku?
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#, fuzzy
+msgid "Install Shell Extension"
+msgstr "Nainštalovať rozšírenie shellu"
+
+#  window title
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
+msgid "Select an extension"
+msgstr "Výber rozšírenia"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+msgid "Get more extensions"
+msgstr "Získať viac rozšírení"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "Rozšírenie %s bolo úspešne aktualizované"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "Rozšírenie %s bolo úspešne nainštalované"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Reštartovať"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+msgid "Error installing extension"
+msgstr "Chyba pri inštalácii rozšírenia"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
+msgid "Invalid extension"
+msgstr "Neplatné rozšírenie"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "Zobraziť ponuku aplikácií"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "Tvorba pracovného priestoru"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Dynamic"
+msgstr "Dynamická"
+
+# DK: Tvorba prac. priestoru
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "Pevná"
+
+# PM: nemajú to byť hodiny?
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+#, fuzzy
+msgid "Clock"
+msgstr "Čas"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show date"
+msgstr "Zobraziť dátum"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Show seconds"
+msgstr "Zobraziť sekundy"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Calendar"
+msgstr "Kalendár"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Show week numbers"
+msgstr "Zobraziť čísla týždňov"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "Power Button Action"
+msgstr "Akcia po stlačení tlačidla napájania"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "When Laptop Lid is Closed"
+msgstr "Keď je veko notebooku zavreté"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "On Battery Power"
+msgstr "Pri napájaní z batérie"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "When plugged in"
+msgstr "Pri napájaní zo siete"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:82
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "Uspať aj keď je pripojený externý monitor"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "Počet pracovných priestorov"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
+msgid "Workspaces only on primary display"
+msgstr "Pracovné priestory iba na hlavnom displeji"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:35
+msgid "Applications"
+msgstr "Aplikácie"
+
+# DK: aplikácia
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "spustená"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "_Close"
+msgstr "_Zavrieť"
+
+# button
+#: ../gtweak/tweaks/tweak_group_startup.py:62
+msgid "Add Application"
+msgstr "Pridať aplikáciu"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:146
+msgid "New startup application"
+msgstr "Nová aplikácia po spustení"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:147
+msgid "Add a new application to be run at startup"
+msgstr "Pridajte novú aplikáciu, ktorá sa spustí po spustení"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:56
+msgid "Attached Modal Dialogs"
+msgstr "Pripojené modálne dialógové okná"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Automatically Raise Windows"
+msgstr "Automaticky presunúť okná do popredia"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:58
+msgid "Resize with Secondary-click"
+msgstr "Zmeniť veľkosť kliknutím vedľajšieho tlačidla"
+
+# PM: čo je to za kláves? Nemyslí sa tým akčný kláves Windows? (ten s logom windows)
+# Alebo sú to akčné klávesy pracujúce s oknom?
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+#, fuzzy
+msgid "Window Action Key"
+msgstr "Kláves akcie okna"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:63
+msgid "Focus Mode"
+msgstr "Režim zamerania"
+
+# PM: pozri ako je titlebar preložený v iných moduloch nevidí sa mi to
+#: ../gtweak/tweaks/tweak_group_windows.py:64
+#, fuzzy
+msgid "Titlebar Actions"
+msgstr "Akcie v záhlaví okna"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:65
+msgid "Double-click"
+msgstr "Dvojité kliknutie"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:66
+msgid "Middle-click"
+msgstr "Kliknutie stredným tlačidlom"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Secondary-click"
+msgstr "Kliknutie vedľajším tlačidlom"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "Tlačidlá v záhlaví okna"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+msgid "Maximize"
+msgstr "Maximalizovať"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+msgid "Minimize"
+msgstr "Minimalizovať"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Prilepenie kliknutím stredného tlačidla"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+msgid "Key theme"
+msgstr "Téma kláves"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "Klávesnica a myš"
+
+# PM: typujem že sa tým myslia zdroje vstupu
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#, fuzzy
+msgid "Show All Input Sources"
+msgstr "Zobraziť všetky vstupy zdrojov"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+msgid "Show location of pointer"
+msgstr "Zobraziť umiestnenie ukazovateľa"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Zariadenie"
 
 #: ../gtweak/tweaks/tweak_wacom.py:38
 msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:67
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predvolená)</i>"
 
-#: ../gtweak/widgets.py:365
+#: ../gtweak/widgets.py:471
 msgid "Enable dark theme for all applications"
 msgstr "Povoliť tmavú tému pre všetky aplikácie"
 
 # description
-#: ../gtweak/widgets.py:366
+# PM: nehodí sa tu skôr "odporúčanie"
+#: ../gtweak/widgets.py:472
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Povolí radu o tmavej téme pre všetky aplikácie v relácii"
 
-#: ../gtweak/widgets.py:384
+#: ../gtweak/widgets.py:480
+msgid "Global Dark Theme"
+msgstr "Globálna tmavá téma"
+
+#: ../gtweak/widgets.py:481
+msgid "Applications need to be restarted for change to take effect"
+msgstr "Aby sa prejavili zmeny, musíte reštartovať aplikácie"
+
+#: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Chyba pri zapisovaní nastavení"
+
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "Aby sa prejavili zmeny, musíte reštartovať shell"
