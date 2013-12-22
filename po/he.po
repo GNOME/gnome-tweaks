@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-15 14:01+0300\n"
-"PO-Revision-Date: 2013-09-15 14:09+0300\n"
+"POT-Creation-Date: 2013-12-22 12:43+0200\n"
+"PO-Revision-Date: 2013-12-22 12:43+0200\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
-"Language: \n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,8 +48,8 @@ msgid "_Help"
 msgstr "_עזרה"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "על _אודות כלי ההתאמות"
+msgid "_About"
+msgstr "על _אודות"
 
 #: ../data/shell.ui.h:5
 msgid "_Quit"
@@ -89,7 +89,7 @@ msgid "Appearance"
 msgstr "מראה"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "הרחבות"
 
@@ -101,7 +101,7 @@ msgstr "גופנים"
 msgid "Power"
 msgstr "חשמל"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
 msgid "Startup Applications"
 msgstr "יישומי הפעלה"
 
@@ -129,7 +129,11 @@ msgstr "קבצים"
 msgid "Miscellaneous"
 msgstr "שונות"
 
-#: ../gtweak/tweakview.py:81
+#: ../gtweak/tweakview.py:85
+msgid "Tweaks"
+msgstr "התאמות"
+
+#: ../gtweak/tweakview.py:101
 msgid "Search Tweaks..."
 msgstr "חיפוש התאמות"
 
@@ -285,85 +289,80 @@ msgstr "השבתה"
 msgid "Typing"
 msgstr "הקלדה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
 msgid "Extension downloading"
 msgstr "ההרחבה מתקבלת"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
 msgid "Error loading extension"
 msgstr "טעינת ההרחבה נכשלה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension does not support shell version"
 msgstr "ההרחבה אינה תומכת בגרסת המעטפת"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Unknown extension error"
 msgstr "שגיאת מעטפת בלתי ידועה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:124
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
 msgid "Remove"
 msgstr "הסרה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "The shell must be restarted for changes to take effect"
-msgstr "יש להפעיל את המעטפת מחדש כדי שהשינויים ייכנסו לתוקף"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
-msgid "Restart"
-msgstr "הפעלה מחדש"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "הסרת הרחבה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "האם אתה רוצה להסיר את ההרחבה '%s' ?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "עדכון"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "שגיאה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "מעדכן"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "התקנת הרחבת מעטפת"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "נא לבחור בהרחבה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "לקבלת הרחבות נוספות"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "ההרחבה %s עודכנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "ההרחבה %s הותקנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "הפעלה מחדש"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "התקנת ההרחבה נכשלה"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "הרחבה שגויה"
 
@@ -376,7 +375,7 @@ msgid "Workspace Creation"
 msgstr "יצירת שולחן עבודה"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-msgid "Dynamics"
+msgid "Dynamic"
 msgstr "דינמי"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
@@ -439,19 +438,19 @@ msgstr "יישומים"
 msgid "running"
 msgstr "פועל"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:60
-msgid "_Close"
-msgstr "סגירה"
-
 #: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "_Close"
+msgstr "_סגירה"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:62
 msgid "Add Application"
 msgstr "הוספת יישום"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:139
+#: ../gtweak/tweaks/tweak_group_startup.py:146
 msgid "New startup application"
 msgstr "יישום הפעלה חדש"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:140
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "Add a new application to be run at startup"
 msgstr "הוספת יישום חדש להפעלה עם הפעלה"
 
@@ -557,8 +556,11 @@ msgstr "יש להפעיל מחדש יישומים כדי שהשינויים יי
 msgid "Error writing setting"
 msgstr "כתיבת ההגדרה נכשלה"
 
-#~ msgid "Tweaks"
-#~ msgstr "התאמות"
+#~ msgid "_About Tweak Tool"
+#~ msgstr "על _אודות כלי ההתאמות"
+
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "יש להפעיל את המעטפת מחדש כדי שהשינויים ייכנסו לתוקף"
 
 #~ msgid ""
 #~ "Disable gnome-shell dynamic workspace management, use static workspaces"
