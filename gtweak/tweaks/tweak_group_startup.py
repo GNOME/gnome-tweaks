@@ -135,8 +135,9 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
 
         self.add(grid)
 
-        self.props.margin = 5
-        self.get_style_context().add_class('tweak-white')
+        self.props.margin_left = 1
+        self.props.margin_right = 1
+        self.get_style_context().add_class('tweak-startup')
 
         self.btn = btn
 
@@ -154,6 +155,7 @@ class AddStartupTweak(Gtk.ListBoxRow, Tweak):
         self.btn.set_image(img)
         self.btn.props.always_show_image = True
         self.add(self.btn)
+        self.get_style_context().add_class('tweak-startup')
 
 class AutostartListBoxTweakGroup(ListBoxTweakGroup):
     def __init__(self):
@@ -179,7 +181,7 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
         ListBoxTweakGroup.__init__(self,
             _("Startup Applications"),
             *tweaks,
-            css_class='tweak-group-white')
+            css_class='tweak-group-startup')
         self.set_header_func(_list_header_func, None)
 
     def _on_remove_clicked(self, btn, widget, df):
