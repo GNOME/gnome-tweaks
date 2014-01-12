@@ -61,6 +61,7 @@ class Window(Gtk.ApplicationWindow):
         header = Gtk.Box()
 
         left_header = Gtk.HeaderBar()
+        left_header.props.show_close_button = True
         right_header = Gtk.HeaderBar()
         right_header.props.show_close_button = True
 
@@ -68,6 +69,12 @@ class Window(Gtk.ApplicationWindow):
         left_header.get_style_context().add_class("tweak-titlebar-left")
         right_header.get_style_context().add_class("titlebar")
         right_header.get_style_context().add_class("tweak-titlebar-right")
+
+        layout_desc = Gtk.Settings.get_default().props.gtk_decoration_layout;
+        tokens = layout_desc.split(":", 2)
+        if tokens != None:
+                right_header.props.decoration_layout = ":" + tokens[1]
+                left_header.props.decoration_layout = tokens[0]
 
         self.title = Gtk.Label("")
         self.title.get_style_context().add_class("title")
