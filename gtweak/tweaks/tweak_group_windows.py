@@ -19,6 +19,7 @@ import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS
 from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue
+from gtweak.utils import XSettingsOverrides
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -27,29 +28,28 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
 
     def __init__(self, name, value, **options):
         self.value = value
+        self._xsettings = XSettingsOverrides()
         GSettingsSwitchTweakValue.__init__(self,
                                            name,
                                            "org.gnome.desktop.wm.preferences",
                                            "button-layout",
                                            loaded=_shell_loaded,
                                            **options)
-        self.values=[':close',':minimize,close', ':maximize,close', ':minimize,maximize,close']
-        
     def get_active(self):
         return self.value in self.settings.get_string(self.key_name)
             
     def set_active(self, v):
         val = self.settings.get_string(self.key_name)
         if v:
-            id = self.values.index(val)
-            if id == 0:
+            if val == ":close":
                 val = val.replace(":", ":"+self.value+",")
             else:
-                val= self.values[len(self.values)-1]
+                val = ":minimize,maximize,close"
         else:
             val = val.replace(self.value+",", "")
 
         self.settings.set_string(self.key_name, val)
+        self._xsettings.set_window_buttons(val.replace(":", "menu:"))
 
 TWEAK_GROUPS = [ 
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
