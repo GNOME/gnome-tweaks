@@ -6,15 +6,16 @@
 # Aron Xu <aronxu@gnome.org>, 2011.
 # Cheng Lu <chenglu1990@gmail.com>, 2012.
 # tuhaihe <1132321739qq@gmail.com>, 2012, 2013.
+# YunQiang Su <wzssyqa@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-10-14 08:41+0000\n"
-"PO-Revision-Date: 2013-11-01 21:48+0800\n"
-"Last-Translator: tuhaihe <1132321739qq@gmail.com>\n"
+"POT-Creation-Date: 2014-01-13 13:14+0000\n"
+"PO-Revision-Date: 2014-01-25 11:17+0800\n"
+"Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -22,6 +23,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 1.5.4\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "GNOME 优化工具可以调整 GNOME 高级选项。"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"可以安装和管理主题和扩展，更改电源选项，管理自启动程序，以及启用桌面图标和其"
+"它设置。"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -51,8 +64,8 @@ msgid "_Help"
 msgstr "帮助(_H)"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "关于优化工具(_A)"
+msgid "_About"
+msgstr "关于(_A)"
 
 #: ../data/shell.ui.h:5
 msgid "_Quit"
@@ -92,7 +105,7 @@ msgid "Appearance"
 msgstr "外观"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:310
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "扩展"
 
@@ -104,7 +117,7 @@ msgstr "字体"
 msgid "Power"
 msgstr "电源"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "开机启动程序"
 
@@ -120,7 +133,7 @@ msgstr "窗口"
 msgid "Workspaces"
 msgstr "工作区"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "鼠标"
 
@@ -132,11 +145,11 @@ msgstr "文件"
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: ../gtweak/tweakview.py:85
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "优化"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "搜索优化设置..."
 
@@ -173,12 +186,21 @@ msgid "Background"
 msgstr "背景"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "模式"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "背景目录"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "锁屏"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "锁屏位置"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -313,64 +335,59 @@ msgstr "未知扩展错误"
 msgid "Remove"
 msgstr "移除"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Shell 重启后更改才能生效"
-
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Restart"
-msgstr "重启"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:143
 msgid "Uninstall Extension"
 msgstr "卸载扩展"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:144
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "您想卸载“%s”这个扩展吗？"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "正在更新"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "错误"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:177
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "更新"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "安装 Shell 扩展"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "选择扩展"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:204
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "获取更多扩展"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "扩展 %s 已成功更新"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:256
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "扩展 %s 已成功安装"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:264
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "重启"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "安装扩展出错"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:269
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "无效扩展"
 
@@ -383,7 +400,7 @@ msgid "Workspace Creation"
 msgstr "创建工作区"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-msgid "Dynamics"
+msgid "Dynamic"
 msgstr "动态"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
@@ -454,11 +471,11 @@ msgstr "关闭(_C)"
 msgid "Add Application"
 msgstr "添加应用程序"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:146
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "新建开机启动程序"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "添加新程序到开机启动"
 
@@ -522,11 +539,23 @@ msgstr "按键主题"
 msgid "Keyboard and Mouse"
 msgstr "键盘和鼠标"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "显示所有输入源"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "在概览和桌面间切换"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "左徽标键"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "右徽标键"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "显示指针位置"
 
@@ -563,6 +592,12 @@ msgstr "需要重启应用程序以使更改生效"
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "写入设置时出错"
+
+#~ msgid "_About Tweak Tool"
+#~ msgstr "关于优化工具(_A)"
+
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "Shell 重启后更改才能生效"
 
 #~ msgid "welcome"
 #~ msgstr "欢迎"
