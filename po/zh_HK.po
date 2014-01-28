@@ -7,9 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool 3.1.90\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-30 14:24+0800\n"
-"PO-Revision-Date: 2013-11-30 14:24+0800\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-01-25 03:18+0000\n"
+"PO-Revision-Date: 2014-01-28 20:27+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
 "Language: zh_TW\n"
@@ -17,6 +18,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "GNOME 調校工具讓你可以調整進階的 GNOME 選項。"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr "它可以安裝、管理主題與擴充套件、改變電源設定、管理初始啟動應用程式、啟用桌面圖示及其他設定等。"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -44,8 +55,8 @@ msgid "_Help"
 msgstr "求助(_H)"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "關於調校工具(_A)"
+msgid "_About"
+msgstr "關於(_A)"
 
 #: ../data/shell.ui.h:5
 msgid "_Quit"
@@ -97,7 +108,7 @@ msgstr "字型"
 msgid "Power"
 msgstr "電源"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "初始啟動應用程式"
 
@@ -113,7 +124,7 @@ msgstr "視窗"
 msgid "Workspaces"
 msgstr "工作區"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "滑鼠"
 
@@ -125,11 +136,11 @@ msgstr "檔案"
 msgid "Miscellaneous"
 msgstr "雜項"
 
-#: ../gtweak/tweakview.py:85
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "調校"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "搜尋調校..."
 
@@ -166,12 +177,21 @@ msgid "Background"
 msgstr "背景"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "模式"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "背景位置"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "鎖定畫面"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "鎖定畫面位置"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -442,11 +462,11 @@ msgstr "關閉(_C)"
 msgid "Add Application"
 msgstr "加入應用程式"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:146
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "新增初始啟動期應用程式"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "新增初始啟動期間要執行的應用程式"
 
@@ -510,11 +530,23 @@ msgstr "按鍵主題"
 msgid "Keyboard and Mouse"
 msgstr "鍵盤與滑鼠"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "顯示所有的輸入來源"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "在活動概覽與桌面之間切換"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Super 左鍵"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Super 右鍵"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "顯示指標的位置"
 
@@ -551,6 +583,9 @@ msgstr "應用程式需要重新啟動才能套用效果"
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "寫入設定值時發生錯誤"
+
+#~ msgid "_About Tweak Tool"
+#~ msgstr "關於調校工具(_A)"
 
 #~ msgid "The shell must be restarted for changes to take effect"
 #~ msgstr "Shell 的變更必須重新啟動才能套用效果"
