@@ -2,14 +2,14 @@
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2011.
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Maintainer: Miloš Popović <gpopac@gmail.com>.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012, 2013.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012—2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-27 10:16+0000\n"
-"PO-Revision-Date: 2013-10-17 06:12+0200\n"
+"POT-Creation-Date: 2014-01-12 14:11+0000\n"
+"PO-Revision-Date: 2014-01-29 10:37+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -19,6 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "Gnomov alat za lickanje omogućava doterivanje naprednih Gnomovih opcija."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"On može da instalira i da upravlja temama i proširenjima, da izmeni podešavanja "
+"napajanja, da upravlja početnim programima, i da uključi ikonice radne površi "
+"pored drguih podešavanja."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -40,7 +53,6 @@ msgid "_Reset to Defaults"
 msgstr "_Vrati na zadato"
 
 #: ../data/shell.ui.h:2
-#| msgid "Install Shell Extension"
 msgid "Disable All Shell Extensions"
 msgstr "Isključi sva proširenja školjke"
 
@@ -49,9 +61,8 @@ msgid "_Help"
 msgstr "Po_moć"
 
 #: ../data/shell.ui.h:4
-#| msgid "Tweak Tool"
-msgid "_About Tweak Tool"
-msgstr "_O alatu za lickanje"
+msgid "_About"
+msgstr "_O programu"
 
 #: ../data/shell.ui.h:5
 msgid "_Quit"
@@ -66,22 +77,19 @@ msgid "Reset all tweak settings to the original default state?"
 msgstr "Da vratim sva podešavanja lickanja na izvorno zadato stanje?"
 
 #: ../gtweak/app.py:93
-#| msgid "Tweak Tool"
 msgid "About GNOME Tweak Tool"
 msgstr "O Gnomovom alatu za lickanje"
 
 #: ../gtweak/app.py:94
-#| msgid "Tweak Tool"
 msgid "GNOME Tweak Tool"
 msgstr "Gnomov alat za lickanje"
 
 #: ../gtweak/app.py:98
-#, python-format, 
+#, python-format
 msgid "GNOME Shell v%s (%s mode)"
 msgstr "Gnomova školjka i%s (%s režim)"
 
 #: ../gtweak/app.py:100
-#| msgid "Shell not running"
 msgid "GNOME Shell not running"
 msgstr "Gnomova školjka nije pokrenuta"
 
@@ -94,8 +102,7 @@ msgid "Appearance"
 msgstr "Izgled"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
-#| msgid "Shell Extensions"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "Proširenja"
 
@@ -107,7 +114,7 @@ msgstr "Slovni likovi"
 msgid "Power"
 msgstr "Napajanje"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "Početni programi"
 
@@ -120,11 +127,10 @@ msgid "Windows"
 msgstr "Prozori"
 
 #: ../gtweak/tweakmodel.py:35
-#| msgid "Dynamic workspaces"
 msgid "Workspaces"
 msgstr "Radni prostori"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Miš"
 
@@ -136,17 +142,15 @@ msgstr "Datoteke"
 msgid "Miscellaneous"
 msgstr "Ostalo"
 
-#: ../gtweak/tweakview.py:85
-#| msgid "tweaks"
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "Lickanja"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "Traži lickanja..."
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:22
-#| msgid "Desktop"
 msgid "Icons on Desktop"
 msgstr "Ikonice na radnoj površi"
 
@@ -179,6 +183,7 @@ msgid "Background"
 msgstr "Pozadina"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Režim"
 
@@ -186,8 +191,16 @@ msgstr "Režim"
 msgid "Background Location"
 msgstr "Mesto pozadine"
 
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Zaključavanje ekrana"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+#| msgid "Background Location"
+msgid "Lock Screen Location"
+msgstr "Mesto zaključavanja ekrana"
+
 #: ../gtweak/tweaks/tweak_group_font.py:25
-#| msgid "Windows"
 msgid "Window Titles"
 msgstr "Naslovi prozora"
 
@@ -224,7 +237,6 @@ msgid "Cursor"
 msgstr "Kursor"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:96
-#| msgid "Windows"
 msgid "Window"
 msgstr "Prozor"
 
@@ -300,85 +312,80 @@ msgstr "Isključeno"
 msgid "Typing"
 msgstr "Kucanje"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
 msgid "Extension downloading"
 msgstr "Preuzimanje proširenja"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
 msgid "Error loading extension"
 msgstr "Ne mogu da učitam proširenje"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension does not support shell version"
 msgstr "Proširenje ne podržava ovo izdanje školjke"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Unknown extension error"
 msgstr "Nepoznata greška proširenja"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:124
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
 msgid "Remove"
 msgstr "Ukloni"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Morate ponovo da pokrenete školjku kako bi primenili izmene"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
-msgid "Restart"
-msgstr "Ponovo pokreni"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "Ukloni proširenje"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Da li želite da uklonite proširenje „%s“?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "Dograđujem"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "Greška"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "Dogradi"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Instaliraj proširenje školjke"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Izaberite proširenje"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "Dobavite još proširenja"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s proširenje je uspešno ažurirano"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s proširenje je uspešno instalirano"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Ponovo pokreni"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "Ne mogu da instaliram proširenje"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "Neispravno proširenje"
 
@@ -391,13 +398,13 @@ msgid "Workspace Creation"
 msgstr "Stvaranje radnog prostora"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-#| msgid "Dynamic workspaces"
-msgid "Dynamics"
-msgstr "Promenljivi"
+#| msgid "Dynamics"
+msgid "Dynamic"
+msgstr "Promenljiv"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
 msgid "Static"
-msgstr "Nepromenljivi"
+msgstr "Nepromenljiv"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:71
 msgid "Clock"
@@ -455,20 +462,19 @@ msgstr "Programi"
 msgid "running"
 msgstr "pokrenut"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:60
-#| msgid "Close Only"
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "_Close"
 msgstr "_Zatvori"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:62
 msgid "Add Application"
 msgstr "Dodaj program"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:139
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "Novi početni program"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:140
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "Dodajte novi program koji će biti pokrenut na početku"
 
@@ -513,12 +519,10 @@ msgid "Titlebar Buttons"
 msgstr "Dugmad trake naslova"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:69
-#| msgid "Maximize and Close"
 msgid "Maximize"
 msgstr "Uvećaj"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:70
-#| msgid "Minimize and Close"
 msgid "Minimize"
 msgstr "Umanji"
 
@@ -527,7 +531,6 @@ msgid "Middle-click Paste"
 msgstr "Srednji klik ubacuje"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:40
-#| msgid "Shell theme"
 msgid "Key theme"
 msgstr "Tema tastera"
 
@@ -535,11 +538,23 @@ msgstr "Tema tastera"
 msgid "Keyboard and Mouse"
 msgstr "Tastatura i miš"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "Prikaži sve izvore ulaza"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Prebacujte se između pregleda i radnih površi"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Levi super"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Desni super"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "Prikaži mesto pokazivača"
 
@@ -570,7 +585,6 @@ msgid "Global Dark Theme"
 msgstr "Opšta tamna tema"
 
 #: ../gtweak/widgets.py:481
-#| msgid "The shell must be restarted for changes to take effect"
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Morate ponovo da pokrenete programe da bi izmene stupile na snagu"
 
