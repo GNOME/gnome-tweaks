@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-03 16:44+0100\n"
-"PO-Revision-Date: 2014-01-03 16:45+0100\n"
+"POT-Creation-Date: 2014-02-11 14:44+0100\n"
+"PO-Revision-Date: 2014-02-11 14:45+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -22,6 +22,21 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr ""
+"Narzędzie dostrajania GNOME umożliwia dostosowywanie zaawansowanych opcji "
+"środowiska GNOME."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"To narzędzie może między innymi instalować i zarządzać motywami i "
+"rozszerzeniami, zmieniać ustawienia zasilania, zarządzać programami "
+"startowymi i włączyć ikony pulpitu."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -106,7 +121,7 @@ msgstr "Czcionki"
 msgid "Power"
 msgstr "Zasilanie"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "Programy startowe"
 
@@ -122,7 +137,7 @@ msgstr "Okna"
 msgid "Workspaces"
 msgstr "Obszary robocze"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Mysz"
 
@@ -134,11 +149,11 @@ msgstr "Pliki"
 msgid "Miscellaneous"
 msgstr "Różne"
 
-#: ../gtweak/tweakview.py:85
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "Ustawienia"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "Przeszukiwanie ustawień..."
 
@@ -175,12 +190,21 @@ msgid "Background"
 msgstr "Tło"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Tryb"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "Położenie tła"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Ekran blokady"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "Położenie ekranu blokady"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -451,11 +475,11 @@ msgstr "Za_mknij"
 msgid "Add Application"
 msgstr "Dodaj program"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:146
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "Nowy program startowy"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "Dodanie nowego programu do uruchamiania podczas startu systemu"
 
@@ -519,13 +543,25 @@ msgstr "Motyw klawiszy"
 msgid "Keyboard and Mouse"
 msgstr "Klawiatura i mysz"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
-msgstr "Wyświetlanie wszystkich źródeł wprowadzania"
+msgstr "Wyświetlenie wszystkich źródeł wprowadzania"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Przełączenie między podglądem a pulpitem"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Lewy klawisz Super"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Prawy klawisz Super"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
-msgstr "Wyświetlanie położenia kursora"
+msgstr "Wyświetlenie położenia kursora"
 
 #: ../gtweak/tweaks/tweak_wacom.py:29
 msgid "Device"
