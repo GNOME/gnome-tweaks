@@ -260,6 +260,7 @@ class XSettingsOverrides:
         items[name] = self.VARIANT_TYPES[name](v)
         n = GLib.Variant('a{sv}', items)
         self._settings.set_value('overrides', n)
+        self._variant = self._settings.get_value("overrides")
 
     def _get_override(self, name, default):
         try:
