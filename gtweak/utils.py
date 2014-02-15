@@ -136,8 +136,17 @@ class AutostartManager:
 
 class AutostartFile:
     def __init__(self, appinfo, autostart_desktop_filename="", exec_cmd="", extra_exec_args=""):
-        self._desktop_file = appinfo.get_filename()
-        self._autostart_desktop_filename = autostart_desktop_filename or os.path.basename(self._desktop_file)
+        if appinfo:
+            self._desktop_file = appinfo.get_filename()
+            self._autostart_desktop_filename = autostart_desktop_filename or os.path.basename(self._desktop_file)
+            self._create_file = False
+        elif autostart_desktop_filename:
+            self._desktop_file = None
+            self._autostart_desktop_filename = autostart_desktop_filename
+            self._create_file = True
+        else:
+            raise Exception("Need either an appinfo or a file name")
+
         self._exec_cmd = exec_cmd
         self._extra_exec_args = " %s\n" % extra_exec_args
 
@@ -150,8 +159,15 @@ class AutostartFile:
 
         self._user_autostart_file = os.path.join(user_autostart_dir, self._autostart_desktop_filename)
 
-        logging.debug("Found desktop file: %s" % self._desktop_file)
+        if self._desktop_file:
+            logging.debug("Found desktop file: %s" % self._desktop_file)
         logging.debug("User autostart desktop file: %s" % self._user_autostart_file)
+
+    def _create_user_autostart_file(self):
+        f = open(self._user_autostart_file, "w")
+        f.write("[Desktop Entry]\nType=Application\nName=%s\nExec=%s\n" %
+                (self._autostart_desktop_filename[0:-len('.desktop')], self._exec_cmd + self._extra_exec_args))
+        f.close()
 
     def is_start_at_login_enabled(self):
         if os.path.exists(self._user_autostart_file):
@@ -175,7 +191,10 @@ class AutostartFile:
 
         if update:
             if (not self._desktop_file) or (not os.path.exists(self._desktop_file)):
-                logging.critical("Could not find desktop file: %s" % self._desktop_file)
+                if self._create_file:
+                    self._create_user_autostart_file()
+                else:
+                    logging.critical("Could not find desktop file: %s" % self._desktop_file)
                 return
 
             logging.info("Adding autostart %s" % self._user_autostart_file)
