@@ -4,15 +4,15 @@
 # FIRST AUTHOR <gymka@mail.ru>, 2011.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
 # Žygimantas Beručka <zygis@gnome.org>, 2012.
-# Aurimas Černius <aurisc4@gmail.com>, 2013.
+# Aurimas Černius <aurisc4@gmail.com>, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lithuanian-gnome tweak tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-18 19:54+0000\n"
-"PO-Revision-Date: 2013-09-22 17:51+0300\n"
+"POT-Creation-Date: 2014-02-20 08:48+0000\n"
+"PO-Revision-Date: 2014-02-20 22:27+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -23,6 +23,21 @@ msgstr ""
 "%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Gtranslator 2.91.6\n"
 "X-Project-Style: gnome\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr ""
+"GNOME papildomų nustatymų įrankis leidžia keisti sudėtingesnius GNOME "
+"nustatymus."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Jis leidžia įdiegti ir tvarkyti temas bei plėtinius, keisti energijos valymo "
+"nustatymus, tvarkyti paleidžiamas programa, įjungti darbastalio piktogramas "
+"ir kt."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -50,8 +65,8 @@ msgid "_Help"
 msgstr "_Žinynas"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "_Apie papildomų nustatymų įrankį"
+msgid "_About"
+msgstr "_Apie"
 
 #: ../data/shell.ui.h:5
 msgid "_Quit"
@@ -91,7 +106,7 @@ msgid "Appearance"
 msgstr "Išvaizda"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "Plėtiniai"
 
@@ -103,7 +118,7 @@ msgstr "Šriftai"
 msgid "Power"
 msgstr "Energija"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "Paleidžiamos programos"
 
@@ -119,7 +134,7 @@ msgstr "Langai"
 msgid "Workspaces"
 msgstr "Darbalaukiai"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Pelė"
 
@@ -131,12 +146,11 @@ msgstr "Failai"
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
-#: ../gtweak/tweakview.py:80
-#| msgid "Tweak Tool"
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "Reguliavimai"
 
-#: ../gtweak/tweakview.py:96
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "Ieškoti reguliavimų..."
 
@@ -173,12 +187,22 @@ msgid "Background"
 msgstr "Fonas"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Veiksena"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "Fono vieta"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Užrakinimo ekranas"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+#| msgid "Background Location"
+msgid "Lock Screen Location"
+msgstr "Užrakinimo ekranas vieta"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -292,85 +316,80 @@ msgstr "Išjungta"
 msgid "Typing"
 msgstr "Spausdinimas"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
 msgid "Extension downloading"
 msgstr "Plėtinių atsiuntimas"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
 msgid "Error loading extension"
 msgstr "Klaida įkeliant plėtinį"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension does not support shell version"
 msgstr "Plėtinys nepalaiko apvalkalo versijos"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Unknown extension error"
 msgstr "Nežinoma plėtinio klaida"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:124
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
 msgid "Remove"
 msgstr "Pašalinti"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti apvalkalą"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
-msgid "Restart"
-msgstr "Įkelti iš naujo"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "Išdiegti plėtinį"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Ar tikrai norite išdiegti plėtinį „%s“?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "Atnaujinama"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "Klaida"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "Atnaujinti"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Įdiegti apvalkalo plėtinį"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Pasirinkite plėtinį"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "Gauti daugiau plėtinių"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s plėtinys sėkmingai atnaujintas"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s plėtinys įdiegtas sėkmingai"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Įkelti iš naujo"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "Klaida diegiant plėtinį"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "Netinkamas plėtinys"
 
@@ -383,8 +402,9 @@ msgid "Workspace Creation"
 msgstr "Darbalaukių kūrimas"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-msgid "Dynamics"
-msgstr "Dinaminiai"
+#| msgid "Dynamics"
+msgid "Dynamic"
+msgstr "Dinaminis"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
 msgid "Static"
@@ -446,20 +466,19 @@ msgstr "Programos"
 msgid "running"
 msgstr "veikia"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:60
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "_Close"
 msgstr "_Užverti"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:62
 msgid "Add Application"
 msgstr "Pridėti programą"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:139
-#| msgid "Startup Applications"
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "Nauja paleidžiama programa"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:140
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "Pridėti naują programą paleidimui kartu su aplinka"
 
@@ -523,11 +542,23 @@ msgstr "Klavišų tema"
 msgid "Keyboard and Mouse"
 msgstr "Klaviatūra ir pelė"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "Rodyti visus įvesties šaltinius"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Persijungimas tarp apžvalgos ir darbastalio"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Super kairėn"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Super dešinėn"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "Rodyti žymiklio vietą"
 
@@ -564,3 +595,4 @@ msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti programą"
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Klaida rašant parametrą"
+
