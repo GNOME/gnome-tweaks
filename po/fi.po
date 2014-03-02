@@ -2,16 +2,15 @@
 # Copyright (C) 2012 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
-# artnay <jiri.gronroos@iki.fi>, 2012.
-# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2013.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012-2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-2\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-11-17 14:03+0000\n"
-"PO-Revision-Date: 2013-11-24 19:41+0200\n"
+"POT-Creation-Date: 2014-01-12 14:11+0000\n"
+"PO-Revision-Date: 2014-01-23 22:55+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -20,6 +19,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Gtranslator 2.91.6\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr ""
+"Gnomen lisäasetukset mahdollistaa lukuisten Gnomen asetusten muuttamisen."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Sen avulla voit asentaa ja hallita teemoja sekä laajennuksia, muuttaa "
+"virranhallinan asetuksia, muokata käynnistettäviä sovelluksia ja paljon "
+"muuta."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -50,8 +63,8 @@ msgid "_Help"
 msgstr "_Ohje"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "_Tietoja - Lisäasetukset"
+msgid "_About"
+msgstr "_Tietoja"
 
 #: ../data/shell.ui.h:5
 msgid "_Quit"
@@ -103,7 +116,7 @@ msgstr "Kirjasimet"
 msgid "Power"
 msgstr "Virta"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "Käynnistettävät sovellukset"
 
@@ -119,7 +132,7 @@ msgstr "Ikkunat"
 msgid "Workspaces"
 msgstr "Työtilat"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Hiiri"
 
@@ -131,11 +144,11 @@ msgstr "Tiedostot"
 msgid "Miscellaneous"
 msgstr "Muut"
 
-#: ../gtweak/tweakview.py:85
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "Lisäasetukset"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "Etsi lisäasetuksia..."
 
@@ -172,12 +185,22 @@ msgid "Background"
 msgstr "Taustakuva"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Tila"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "Taustakuvan sijainti"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Lukitusnäyttö"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+#| msgid "Background Location"
+msgid "Lock Screen Location"
+msgstr "Lukitusnäytön sijainti"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -377,7 +400,6 @@ msgid "Workspace Creation"
 msgstr "Työtilojen luominen"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-#| msgid "Dynamics"
 msgid "Dynamic"
 msgstr "Dynaaminen"
 
@@ -442,7 +464,6 @@ msgid "running"
 msgstr "käynnissä"
 
 #: ../gtweak/tweaks/tweak_group_startup.py:61
-#| msgid "Close Only"
 msgid "_Close"
 msgstr "_Sulje"
 
@@ -450,12 +471,11 @@ msgstr "_Sulje"
 msgid "Add Application"
 msgstr "Lisää sovellus"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:146
-#| msgid "Startup Applications"
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "Uusi käynnistettävä sovellus"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "Lisää uusi käynnistyksen yhteydessä suoritettava sovellus"
 
@@ -472,10 +492,9 @@ msgid "Resize with Secondary-click"
 msgstr "Muuta kokoa kakkospainikkeen napsautuksella"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:59
-#, fuzzy
 #| msgid "Window theme"
 msgid "Window Action Key"
-msgstr "Ikkunateema"
+msgstr "Ikkunan toimintonäppäin"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:63
 msgid "Focus Mode"
@@ -514,7 +533,6 @@ msgid "Middle-click Paste"
 msgstr "Keskipainike liittää"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:40
-#| msgid "GTK+ theme"
 msgid "Key theme"
 msgstr "Näppäinteema"
 
@@ -522,11 +540,23 @@ msgstr "Näppäinteema"
 msgid "Keyboard and Mouse"
 msgstr "Näppäimistö ja hiiri"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "Näytä kaikki syötelähteet"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Vaihda yleisnäkymän ja työpöydän välillä"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr ""
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr ""
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "Näytä osoittimen sijainti"
 
@@ -563,6 +593,9 @@ msgstr "Sovellukset tulee käynnistää uudelleen, jotta muutos tulee voimaan"
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Virhe asetuksia kirjoittaessa"
+
+#~ msgid "_About Tweak Tool"
+#~ msgstr "_Tietoja - Lisäasetukset"
 
 #~ msgid "The shell must be restarted for changes to take effect"
 #~ msgstr "Shell tulee käynnistää uudelleen, jotta muutokset tulevat voimaan"
