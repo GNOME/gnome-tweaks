@@ -240,7 +240,7 @@ class XSettingsOverrides:
     }
 
     def __init__(self):
-        self._settings = Gio.Settings('org.gnome.settings-daemon.plugins.xsettings')
+        self._settings = Gio.Settings(schema='org.gnome.settings-daemon.plugins.xsettings')
         self._variant = self._settings.get_value("overrides")
 
     def _dup_variant_as_dict(self):

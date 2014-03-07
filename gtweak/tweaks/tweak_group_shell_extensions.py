@@ -105,7 +105,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
                 btn.connect("clicked", self._on_configure_clicked, uuid)
                 self.hbox.pack_start(btn, False, False, 0)
 
-        btn = Gtk.Button(_("Remove"))
+        btn = Gtk.Button(label=_("Remove"))
         btn.props.vexpand = False
         btn.props.valign = Gtk.Align.CENTER
         btn.set_sensitive(False)

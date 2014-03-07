@@ -123,12 +123,12 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
         else:
             img = None #attach_next_to treats this correctly
 
-        lbl = Gtk.Label(df.get_name(), xalign=0.0)
+        lbl = Gtk.Label(label=df.get_name(), xalign=0.0)
         grid.attach_next_to(lbl,img,Gtk.PositionType.RIGHT,1,1)
         lbl.props.hexpand = True
         lbl.props.halign = Gtk.Align.START
 
-        btn = Gtk.Button(_("Remove"))
+        btn = Gtk.Button(label=_("Remove"))
         grid.attach_next_to(btn,lbl,Gtk.PositionType.RIGHT,1,1)
         btn.props.vexpand = False
         btn.props.valign = Gtk.Align.CENTER
@@ -148,7 +148,7 @@ class AddStartupTweak(Gtk.ListBoxRow, Tweak):
                        _("Add a new application to be run at startup"),
                        **options)
 
-        self.btn = Gtk.Button("")
+        self.btn = Gtk.Button(label="")
         self.btn.get_style_context().remove_class("button")
         img = Gtk.Image()
         img.set_from_icon_name("list-add-symbolic", Gtk.IconSize.BUTTON)

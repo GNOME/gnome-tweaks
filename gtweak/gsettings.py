@@ -122,9 +122,9 @@ class GSettingsSetting(Gio.Settings):
                 raise GSettingsMissingError(schema_name)
 
             if schema_path is None:
-                Gio.Settings.__init__(self, schema_name)
+                Gio.Settings.__init__(self, schema=schema_name)
             else:
-                Gio.Settings.__init__(self, schema_name, path=schema_path)
+                Gio.Settings.__init__(self, schema=schema_name, path=schema_path)
         else:
             GioSSS = Gio.SettingsSchemaSource
             schema_source = GioSSS.new_from_directory(schema_dir,

@@ -56,7 +56,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
         hbox = Gtk.HBox()
 
     hbox.props.spacing = UI_BOX_SPACING
-    lbl = Gtk.Label(txt)
+    lbl = Gtk.Label(label=txt)
     lbl.props.ellipsize = Pango.EllipsizeMode.END
     lbl.props.xalign = 0.0
     lbl.set_has_tooltip(True)
@@ -140,7 +140,7 @@ def adjust_schema_for_overrides(originalSchema, key, options):
         overridesSchema = "org.gnome.shell.overrides"
         overridesFile = "org.gnome.shell.gschema.xml"
 
-    if (key in Gio.Settings(overridesSchema).list_keys()):
+    if (key in Gio.Settings(schema=overridesSchema).list_keys()):
         options['schema_filename'] = overridesFile
         return overridesSchema
     return originalSchema
@@ -311,7 +311,7 @@ class GSettingsSpinButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         #returned variant is range:(min, max)
         _min, _max = self.settings.get_range(key_name)[1]
 
-        adjustment = Gtk.Adjustment(0, _min, _max, options.get('adjustment_step', 1))
+        adjustment = Gtk.Adjustment(value=0, lower=_min, upper=_max, step_increment=options.get('adjustment_step', 1))
         w = Gtk.SpinButton()
         w.set_adjustment(adjustment)
         w.set_digits(options.get('digits', 0))
@@ -483,7 +483,7 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
         
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         hbox.props.spacing = UI_BOX_SPACING
-        lbl = Gtk.Label(title)
+        lbl = Gtk.Label(label=title)
         lbl.props.ellipsize = Pango.EllipsizeMode.END
         lbl.props.xalign = 0.0
         hbox.pack_start(lbl, True, True, 0)

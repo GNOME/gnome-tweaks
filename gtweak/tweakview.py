@@ -36,7 +36,7 @@ class Window(Gtk.ApplicationWindow):
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_icon_name("gnome-tweak-tool")
         
-        self.hsize_group = Gtk.SizeGroup(Gtk.SizeGroupMode.HORIZONTAL)
+        self.hsize_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
 
         main_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         left_box = self.sidebar()
@@ -78,7 +78,7 @@ class Window(Gtk.ApplicationWindow):
                 right_header.props.decoration_layout = ":" + tokens[1]
                 left_header.props.decoration_layout = tokens[0]
 
-        self.title = Gtk.Label("")
+        self.title = Gtk.Label(label="")
         self.title.get_style_context().add_class("title")
         right_header.set_custom_title(self.title)
 
@@ -91,7 +91,7 @@ class Window(Gtk.ApplicationWindow):
         self.button.get_style_context().add_class("image-button")
         left_header.pack_start(self.button)
 
-        lbl = Gtk.Label(_("Tweaks"))
+        lbl = Gtk.Label(label=_("Tweaks"))
         lbl.get_style_context().add_class("title")
         left_header.set_custom_title(lbl)
 
@@ -155,7 +155,7 @@ class Window(Gtk.ApplicationWindow):
     def load_model_data(self):
 
         def _make_items_listbox(text):
-            lbl = Gtk.Label(text, xalign=0.0)
+            lbl = Gtk.Label(label=text, xalign=0.0)
             lbl.set_name('row')
             row = Gtk.ListBoxRow()
             row.get_style_context().add_class("tweak-category")
