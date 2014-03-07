@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-27 10:16+0000\n"
-"PO-Revision-Date: 2013-10-05 15:53+0300\n"
+"POT-Creation-Date: 2014-03-07 08:46+0000\n"
+"PO-Revision-Date: 2014-03-07 22:10+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -18,6 +18,19 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "GNOME piedares rīks ļauj pielāgot paplašinātas GNOME opcijas."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Tas var instalēt un pārvaldīt motīvus un paplašinājumus, mainīt barošanas "
+"iestatījumus, pārvaldīt palaišanas lietotnes un aktivēt darbvirsmas ikonas, "
+"kā arī pārvaldīt citus iestatījumus."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -38,20 +51,14 @@ msgid "_Reset to Defaults"
 msgstr "Atstatīt uz _noklusējuma parametriem"
 
 #: ../data/shell.ui.h:2
-#| msgid "Install Shell Extension"
 msgid "Disable All Shell Extensions"
 msgstr "Instalēt visus čaulas paplašinājumus"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_Palīdzība"
+msgid "_About"
+msgstr "P_ar"
 
 #: ../data/shell.ui.h:4
-#| msgid "Tweak Tool"
-msgid "_About Tweak Tool"
-msgstr "P_ar piedares rīku"
-
-#: ../data/shell.ui.h:5
 msgid "_Quit"
 msgstr "I_ziet"
 
@@ -65,12 +72,10 @@ msgstr ""
 "Atjaunot visus piedares iestatījumus uz to sākotnējām noklusētajām vērtībām?"
 
 #: ../gtweak/app.py:93
-#| msgid "Tweak Tool"
 msgid "About GNOME Tweak Tool"
 msgstr "Par GNOME piedares rīku"
 
 #: ../gtweak/app.py:94
-#| msgid "Tweak Tool"
 msgid "GNOME Tweak Tool"
 msgstr "GNOME piedares rīks"
 
@@ -80,7 +85,6 @@ msgid "GNOME Shell v%s (%s mode)"
 msgstr "GNOME čaula v%s (%s režīms)"
 
 #: ../gtweak/app.py:100
-#| msgid "Shell not running"
 msgid "GNOME Shell not running"
 msgstr "GNOME čaula nedarbojas"
 
@@ -93,8 +97,7 @@ msgid "Appearance"
 msgstr "Izskats"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
-#| msgid "%s Extension"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "Paplašinājumi"
 
@@ -106,7 +109,7 @@ msgstr "Fonti"
 msgid "Power"
 msgstr "Barošana"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "Starta lietotnes"
 
@@ -119,11 +122,10 @@ msgid "Windows"
 msgstr "Logi"
 
 #: ../gtweak/tweakmodel.py:35
-#| msgid "Dynamic workspaces"
 msgid "Workspaces"
 msgstr "Darbvietas"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Pele"
 
@@ -135,17 +137,15 @@ msgstr "Datnes"
 msgid "Miscellaneous"
 msgstr "Dažādi"
 
-#: ../gtweak/tweakview.py:85
-#| msgid "tweaks"
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "Piedares"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "Meklēt piedares..."
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:22
-#| msgid "Desktop"
 msgid "Icons on Desktop"
 msgstr "Ikonas uz darbvirsmas"
 
@@ -178,6 +178,7 @@ msgid "Background"
 msgstr "Fons"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Režīms"
 
@@ -185,8 +186,16 @@ msgstr "Režīms"
 msgid "Background Location"
 msgstr "Fona atrašanās vieta"
 
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Ekrāna vairogs"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+#| msgid "Background Location"
+msgid "Lock Screen Location"
+msgstr "Ekrāna vairoga vieta"
+
 #: ../gtweak/tweaks/tweak_group_font.py:25
-#| msgid "Window theme"
 msgid "Window Titles"
 msgstr "Logu flīzes"
 
@@ -223,7 +232,6 @@ msgid "Cursor"
 msgstr "Kursors"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:96
-#| msgid "Windows"
 msgid "Window"
 msgstr "Logs"
 
@@ -300,86 +308,80 @@ msgstr "Deaktivēts"
 msgid "Typing"
 msgstr "Rakstīšana"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
 msgid "Extension downloading"
 msgstr "Paplašinājumu lejupielāde"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
 msgid "Error loading extension"
 msgstr "Kļūda, ielādējot paplašinājumu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension does not support shell version"
 msgstr "Paplašinājums neatbalsta šo čaulas versiju"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Unknown extension error"
 msgstr "Nezināma paplašinājuma kļūda"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:124
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
 msgid "Remove"
 msgstr "Izņemt"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Čaula jāpārstartē, lai izmaiņas stātos spēkā"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
-msgid "Restart"
-msgstr "Pārstartēt"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
-#| msgid "Install Shell Extension"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "Atinstalēt paplašinājumu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Vai vēlaties atinstalēt paplašinājumu “%s”?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "Atjaunina"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "Kļūda"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "Atjaunināt"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Instalēt čaulas paplašinājumu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Izvēlieties paplašinājumu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "Saņemt vairāk paplašinājumu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s paplašinājums ir veiksmīgi atjaunināts"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s paplašinājums ir veiksmīgi uzinstalēts"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Pārstartēt"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "Kļūda, instalējot paplašinājumu"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "Nederīgs paplašinājums"
 
@@ -392,8 +394,8 @@ msgid "Workspace Creation"
 msgstr "Darbvietu veidošana"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-#| msgid "Dynamic workspaces"
-msgid "Dynamics"
+#| msgid "Dynamics"
+msgid "Dynamic"
 msgstr "Dinamisks"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
@@ -456,20 +458,19 @@ msgstr "Lietotnes"
 msgid "running"
 msgstr "izpildās"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:60
-#| msgid "Close Only"
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "_Close"
 msgstr "_Aizvērt"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:62
 msgid "Add Application"
 msgstr "Pievienotu lietotni"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:139
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "Jauna starta lietotne"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:140
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "Pievienot jaunu lietotni, ko palaist ierakstīšanās sākumā"
 
@@ -486,7 +487,6 @@ msgid "Resize with Secondary-click"
 msgstr "Mainīt izmēru ar sekundāro klikšķi"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:59
-#| msgid "Window theme"
 msgid "Window Action Key"
 msgstr "Loga darbības taustiņš"
 
@@ -515,12 +515,10 @@ msgid "Titlebar Buttons"
 msgstr "Virsraksta joslas pogas"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:69
-#| msgid "Maximize and Close"
 msgid "Maximize"
 msgstr "Maksimizēt"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:70
-#| msgid "Minimize and Close"
 msgid "Minimize"
 msgstr "Minimizēt"
 
@@ -529,7 +527,6 @@ msgid "Middle-click Paste"
 msgstr "Vidējā klikšķa ievietošana"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:40
-#| msgid "GTK+ theme"
 msgid "Key theme"
 msgstr "Taustiņu motīvs"
 
@@ -537,11 +534,23 @@ msgstr "Taustiņu motīvs"
 msgid "Keyboard and Mouse"
 msgstr "Tastatūra un pele"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "Rādīt visus ievades avotus"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Pārslēgties starp pārskatu un darbvirsmu"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Super pa kreisi"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Super pa labi"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "Rādīt rādītāja atrašanās vietu"
 
@@ -572,13 +581,22 @@ msgid "Global Dark Theme"
 msgstr "Globālais tumšais motīvs"
 
 #: ../gtweak/widgets.py:481
-#| msgid "The shell must be restarted for changes to take effect"
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Lietotnes jāpārstartē, lai izmaiņas stātos spēkā"
 
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Kļūda rakstot iestatījumu"
+
+#~ msgid "_Help"
+#~ msgstr "_Palīdzība"
+
+#~| msgid "Tweak Tool"
+#~ msgid "_About Tweak Tool"
+#~ msgstr "P_ar piedares rīku"
+
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "Čaula jāpārstartē, lai izmaiņas stātos spēkā"
 
 #~ msgid "welcome"
 #~ msgstr "laipni lūdzam"
