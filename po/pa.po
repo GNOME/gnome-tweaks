@@ -2,14 +2,14 @@
 # Copyright (C) 2012 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
-# A S Alam <aalam@users.sf.net>, 2012.
+# A S Alam <aalam@users.sf.net>, 2012, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-10-11 20:07+0000\n"
-"PO-Revision-Date: 2012-10-25 08:56+0530\n"
+"POT-Creation-Date: 2014-03-17 08:48+0000\n"
+"PO-Revision-Date: 2014-03-17 18:37-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -19,7 +19,20 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1 ../data/shell.ui.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "ਗਨੋਮ ਟਵਿਕ ਟੂਲ ਤਕਨੀਕੀ ਗਨੋਮ ਚੋਣਾਂ ਨੂੰ ਬਦਲਣ ਲਈ ਹੈ।"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"ਇਹ ਥੀਮ ਤੇ ਇਕਸਟੈਂਸ਼ਨ ਇੰਸਟਾਲ ਕਰ ਸਕਦਾ ਹੈ ਤੇ ਪ੍ਰਬੰਧ ਕਰ ਸਕਦਾ ਹੈ, ਊਰਜਾ ਸੈਟਿੰਗ ਬਦਲ, "
+"ਸ਼ੁਰੂਆਤੀ "
+"ਐਪਲੀਕੇਸ਼ਨ ਦਾ ਪ੍ਰਬੰਧ, ਅਤੇ ਡੈਸਕਟਾਪ ਆਈਕਾਨ ਹੋਰ ਸੈਟਿੰਗ ਨਾਲ ਵੇਖਾ ਸਕਦਾ ਹੈ।"
+
+#: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "ਟਵਿਕ ਟੂਲ"
 
@@ -27,232 +40,589 @@ msgstr "ਟਵਿਕ ਟੂਲ"
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "ਤਕਨੀਕੀ ਗਨੋਮ 3 ਸੈਟਿੰਗ ਬਦਲਾਅ"
 
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"ਸੈਟਿੰਗ;ਤਕਨੀਕੀ;ਕਾਰਗੁਜ਼ਾਰੀ;ਫੋਂਟ;ਥੀਮ;ਕੀਬੋਰਡ;ਲਿਖਣਾ;ਇਕਸਟੈਂਸ਼ਨ;Settings;Advanced;Prefe"
+"rences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "ਡਿਫਾਲਟ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰੋ(_R)"
+
 #: ../data/shell.ui.h:2
-msgid "welcome"
-msgstr "ਜੀ ਆਇਆ ਨੂੰ"
+#| msgid "Install Shell Extension"
+msgid "Disable All Shell Extensions"
+msgstr "ਸ਼ੈੱਲ ਇਕਸਟੈਂਸ਼ਨ ਬੰਦ ਕਰੋ"
 
 #: ../data/shell.ui.h:3
-msgid "tweaks"
-msgstr "ਟਵਿਕ"
+msgid "_About"
+msgstr "ਇਸ ਬਾਰੇ(_A)"
+
+#: ../data/shell.ui.h:4
+msgid "_Quit"
+msgstr "ਬੰਦ ਕਰੋ(_Q)"
+
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "ਡਿਫਾਲਟ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "ਕੀ ਸਭ ਟਵਿਕ ਸੈਟਿੰਗ ਨੂੰ ਅਸਲੀ ਡਿਫਾਲਟ ਸਥਿਤੀ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰਨਾ ਹੈ?"
+
+#: ../gtweak/app.py:93
+#| msgid "Tweak Tool"
+msgid "About GNOME Tweak Tool"
+msgstr "ਗਨੋਮ ਟਵਿਕ ਟੂਲ ਬਾਰੇ"
+
+#: ../gtweak/app.py:94
+#| msgid "Tweak Tool"
+msgid "GNOME Tweak Tool"
+msgstr "ਗਨੋਮ ਟਵਿਕ ਟੂਲ"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "ਗਨੋਮ ਸ਼ੈੱਲ v%s (%s ਮੋਡ)"
+
+#: ../gtweak/app.py:100
+#| msgid "Shell not running"
+msgid "GNOME Shell not running"
+msgstr "ਗਨੋਮ ਸ਼ੈੱਲ ਚੱਲ ਨਹੀਂ ਰਹੀ"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "ਮੁੱਖ ਸਫ਼ਾ"
 
 #: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "ਦਿੱਖ"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+#| msgid "%s Extension"
+msgid "Extensions"
+msgstr "ਇਕਸਟੈਨਸ਼ਨ"
+
+#: ../gtweak/tweakmodel.py:30
 msgid "Fonts"
 msgstr "ਫੋਂਟ"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Theme"
-msgstr "ਥੀਮ"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Desktop"
-msgstr "ਡੈਸਕਟਾਪ"
-
 #: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "ਊਰਜਾ"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
+msgid "Startup Applications"
+msgstr "ਸ਼ੁਰੂਆਤੀ ਐਪਲੀਕੇਸ਼ਨ"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "ਉੱਤਲੀ ਪੱਟੀ"
+
+#: ../gtweak/tweakmodel.py:34
 msgid "Windows"
 msgstr "ਵਿੰਡੋ"
 
-#: ../gtweak/tweakmodel.py:32
-msgid "Shell"
-msgstr "ਸ਼ੈੱਲ"
+#: ../gtweak/tweakmodel.py:35
+#| msgid "Dynamic workspaces"
+msgid "Workspaces"
+msgstr "ਵਰਕਸਪੇਸ"
 
-#: ../gtweak/tweakmodel.py:33
-msgid "Typing"
-msgstr "ਲਿਖਣਾ"
-
-#: ../gtweak/tweakmodel.py:34
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "ਮਾਊਸ"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:37
+#: ../gtweak/tweakmodel.py:38
 msgid "Files"
 msgstr "ਫਾਇਲਾਂ"
 
-#: ../gtweak/tweakmodel.py:48
+#: ../gtweak/tweakmodel.py:52
 msgid "Miscellaneous"
 msgstr "ਫੁਟਕਲ"
 
-#: ../gtweak/tweaks/tweak_interface.py:84 ../gtweak/tweaks/tweak_shell.py:117
-msgid "<i>Default</i>"
-msgstr "<i>ਡਿਫਾਲਟ</i>"
+#: ../gtweak/tweakview.py:93
+#| msgid "tweaks"
+msgid "Tweaks"
+msgstr "ਟਵਿਕ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:38
-msgid "Extension downloading"
-msgstr "ਇਕਸਟੈਂਸ਼ਨ ਡਾਊਨਲੋਡ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ"
+#: ../gtweak/tweakview.py:109
+msgid "Search Tweaks..."
+msgstr "...ਟਵਿਕ ਖੋਜ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:40
-msgid "Error loading extension"
-msgstr "ਇਕਸਟੈਂਸ਼ਨ ਲੋਡ ਕਰਨ ਲਈ ਗਲਤੀ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+#| msgid "Desktop"
+msgid "Icons on Desktop"
+msgstr "ਡੈਸਕਟਾਪ ਉੱਤੇ ਆਈਕਾਨ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:42
-msgid "Extension does not support shell version"
-msgstr "ਇਕਸਟੈਂਸ਼ਨ ਸ਼ੈੱਲ ਵਰਜਨ ਲਈ ਸਹਾਇਕ ਨਹੀਂ ਹੈ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "ਡੈਸਕਟਾਪ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:44
-msgid "Unknown extension error"
-msgstr "ਅਣਜਾਣ ਇਕਸਟੈਂਸ਼ਨ ਗਲਤੀ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "ਕੰਪਿਊਟਰ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:75
-msgid "The shell must be restarted for changes to take effect"
-msgstr "ਬਦਲਾਅ ਲਾਗੂ ਕਰਨ ਲਈ ਸ਼ੈੱਲ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "ਘਰ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:76
-#: ../gtweak/tweaks/tweak_shell_extensions.py:145
-msgid "Restart"
-msgstr "ਮੁੜ-ਚਾਲੂ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "ਨੈੱਟਵਰਕ ਸਰਵਰ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:82
-msgid "Install Shell Extension"
-msgstr "ਸ਼ੈੱਲ ਇਕਸਟੈਂਸ਼ਨ ਇੰਸਟਾਲ ਕਰੋ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "ਰੱਦੀ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:86
-msgid "Select an extension"
-msgstr "ਇੱਕ ਇਕਸਟੈਂਸ਼ਨ ਚੁਣੋ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "ਮਾਊਂਟ ਕੀਤੇ ਵਾਲੀਅਮ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:91
-#| msgid "Select an extension"
-msgid "Get more extensions"
-msgstr "ਹੋਰ ਇਕਸਟੈਂਸ਼ਨ ਲਵੋ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "ਬੈਕਗਰਾਊਂਡ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:139
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "%s ਇਕਸਟੈਂਸ਼ਨ ਠੀਕ ਤਰ੍ਹਾਂ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
+msgid "Mode"
+msgstr "ਮੋਡ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:141
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "%s ਇਕਸਟੈਂਸ਼ਨ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤੀ ਗਈ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "ਬੈਕਗਰਾਊਂਡ ਟਿਕਾਣਾ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:149
-msgid "Error installing extension"
-msgstr "ਇਕਸਟੈਂਸ਼ਨ ਇੰਸਟਾਲ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "ਸਕਰੀਨ ਲਾਕ"
 
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:154
-msgid "Invalid extension"
-msgstr "ਗਲਤ ਇਕਸਟੈਂਸ਼ਨ"
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "ਲਾਕ ਸਕਰੀਨ ਟਿਕਾਣਾ"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:162
-msgid "Shell Extensions"
-msgstr "ਸ਼ੈੱਲ ਇਕਸਟੈਂਸ਼ਨ"
+#: ../gtweak/tweaks/tweak_group_font.py:25
+#| msgid "Window theme"
+msgid "Window Titles"
+msgstr "ਵਿੰਡੋ ਟਾਈਟਲ"
 
-#: ../gtweak/tweaks/tweak_shell.py:38
-msgid "Close Only"
-msgstr "ਕੇਵਲ ਬੰਦ ਕਰੋ"
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "ਇੰਟਰਫੇਸ"
 
-#: ../gtweak/tweaks/tweak_shell.py:39
-msgid "Minimize and Close"
-msgstr "ਘੱਟੋ-ਘੱਟ ਅਤੇ ਬੰਦ"
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "ਦਸਤਾਵੇਜ਼"
 
-#: ../gtweak/tweaks/tweak_shell.py:40
-msgid "Maximize and Close"
-msgstr "ਵੱਧ ਤੋਂ ਵੱਧ ਅਤੇ ਬੰਦ"
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "ਮੋਨੋ-ਸਪੇਸ"
 
-#: ../gtweak/tweaks/tweak_shell.py:41
-msgid "All"
-msgstr "ਸਭ"
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "ਹਿੰਟਿੰਗ"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
-#| msgid "Select a theme"
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "ਐਂਟੀ-ਅਲਾਈਸਿੰਗ"
+
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "ਸਕੇਲਿੰਗ ਫੈਕਟਰ"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "ਆਈਕਾਨ"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "ਕਰਸਰ"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+#| msgid "Windows"
+msgid "Window"
+msgstr "ਵਿੰਡੋ"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Shell theme"
 msgstr "ਸ਼ੈੱਲ ਥੀਮ"
 
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Install custom or user themes for gnome-shell"
 msgstr "ਗਨੋਮ-ਸ਼ੈੱਲ ਲਈ ਕਸਟਮ ਜਾਂ ਯੂਜ਼ਰ ਥੀਮ ਇੰਸਟਾਲ ਕਰੋ"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:58
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "ਅਣਜਾਣ ਗਲਤੀ"
 
-#: ../gtweak/tweaks/tweak_shell.py:63
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "ਸ਼ੈੱਲ ਚੱਲ ਨਹੀਂ ਰਹੀ"
 
-#: ../gtweak/tweaks/tweak_shell.py:84
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "ਸ਼ੈੱਲ ਯੂਜ਼ਰ-ਥੀਮ ਇਕਸਟੈਂਸ਼ਨ ਗਲਤ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਹੈ"
 
-#: ../gtweak/tweaks/tweak_shell.py:87
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "ਸ਼ੈੱਲ ਯੂਜ਼ਰ-ਥੀਮ ਇਕਸਟੈਂਸ਼ਨ ਚਾਲੂ ਨਹੀਂ ਹੈ"
 
-#: ../gtweak/tweaks/tweak_shell.py:90
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "ਸੈੱਲ ਇਕਸਟੈਂਸ਼ਨ ਦੀ ਸੂਚੀ ਨਹੀਂ ਤਿਆਰ ਕੀਤੀ ਜਾ ਸਕੀ"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:122
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>ਡਿਫਾਲਟ</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "ਥੀਮ ਚੁਣੋ"
 
-#: ../gtweak/tweaks/tweak_shell.py:171
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s ਥੀਮ ਠੀਕ ਤਰ੍ਹਾਂ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ"
 
-#: ../gtweak/tweaks/tweak_shell.py:173
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s ਥੀਮ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ"
 
-#: ../gtweak/tweaks/tweak_shell.py:181
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "ਥੀਮ ਇੰਸਟਾਲ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:186
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "ਗਲਤ ਥੀਮ"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
-msgid "Dynamic workspaces"
-msgstr "ਡਾਇਨੇਮਿਕ ਵਰਕਸਪੇਸ"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "ਥੀਮ"
 
-#: ../gtweak/tweaks/tweak_shell.py:205
-msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-msgstr ""
-"ਗਨੋਮ ਸ਼ੈਲ ਡਾਇਨੇਮਿਕ ਵਰਕਸਪੇਸ ਪਰਬੰਧ ਨੂੰ ਬੰਦ ਕਰੋ ਅਤੇ ਇਸ ਦੀ ਬਜਾਏ ਸਥਿਰ ਵਰਕਸਪੇਸ ਵਰਤੋ।"
-
-#: ../gtweak/tweaks/tweak_typing.py:38 ../gtweak/tweaks/tweak_windows.py:48
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:62
 msgid "Disabled"
 msgstr "ਬੰਦ ਹੈ"
 
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "ਲਿਖਣਾ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
+msgid "Extension downloading"
+msgstr "ਇਕਸਟੈਂਸ਼ਨ ਡਾਊਨਲੋਡ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
+msgid "Error loading extension"
+msgstr "ਇਕਸਟੈਂਸ਼ਨ ਲੋਡ ਕਰਨ ਲਈ ਗਲਤੀ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+msgid "Extension does not support shell version"
+msgstr "ਇਕਸਟੈਂਸ਼ਨ ਸ਼ੈੱਲ ਵਰਜਨ ਲਈ ਸਹਾਇਕ ਨਹੀਂ ਹੈ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+msgid "Unknown extension error"
+msgstr "ਅਣਜਾਣ ਇਕਸਟੈਂਸ਼ਨ ਗਲਤੀ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
+msgid "Remove"
+msgstr "ਹਟਾਓ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#| msgid "Install Shell Extension"
+msgid "Uninstall Extension"
+msgstr "ਇਕਸਟੈਂਸ਼ਨ ਅਣ-ਇੰਸਟਾਲ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "ਕੀ ਤੁਸੀਂ '%s' ਇਕਸਟੈਂਸ਼ਨ ਨੂੰ ਅਣ-ਇੰਸਟਾਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+msgid "Updating"
+msgstr "ਅੱਪਡੇਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Error"
+msgstr "ਗਲਤੀ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+msgid "Update"
+msgstr "ਅੱਪਡੇਟ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+msgid "Install Shell Extension"
+msgstr "ਸ਼ੈੱਲ ਇਕਸਟੈਂਸ਼ਨ ਇੰਸਟਾਲ ਕਰੋ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
+msgid "Select an extension"
+msgstr "ਇੱਕ ਇਕਸਟੈਂਸ਼ਨ ਚੁਣੋ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+msgid "Get more extensions"
+msgstr "ਹੋਰ ਇਕਸਟੈਂਸ਼ਨ ਲਵੋ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "%s ਇਕਸਟੈਂਸ਼ਨ ਠੀਕ ਤਰ੍ਹਾਂ ਅੱਪਡੇਟ ਕੀਤੀ ਗਈ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "%s ਇਕਸਟੈਂਸ਼ਨ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤੀ ਗਈ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "ਮੁੜ-ਚਾਲੂ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+msgid "Error installing extension"
+msgstr "ਇਕਸਟੈਂਸ਼ਨ ਇੰਸਟਾਲ ਕਰਨ ਦੌਰਾਨ ਗਲਤੀ"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
+msgid "Invalid extension"
+msgstr "ਗਲਤ ਇਕਸਟੈਂਸ਼ਨ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਮੇਨੂ ਵੇਖਾਓ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "ਵਰਕਸਪੇਸ ਬਣਾਉਣਾ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Dynamic"
+msgstr "ਡਾਇਨੇਮਕ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "ਸਟੈਟਿਕ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Clock"
+msgstr "ਘੜੀ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show date"
+msgstr "ਮਿਤੀ ਵੇਖੋ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Show seconds"
+msgstr "ਸਕਿੰਟ ਵੇਖਾਓ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Calendar"
+msgstr "ਕੈਲੰਡਰ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Show week numbers"
+msgstr "ਹਫ਼ਤਾ ਗਿਣਤੀ ਵੇਖਾਓ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "Power Button Action"
+msgstr "ਪਾਵਰ ਬਟਨ ਕਾਰਵਾਈ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "When Laptop Lid is Closed"
+msgstr "ਜਦੋਂ ਲੈਪਟਾਪ Lid ਬੰਦ ਹੋਵੇ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "On Battery Power"
+msgstr "ਬੈਟਰੀ ਪਾਵਰ ਉੱਤੇ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "When plugged in"
+msgstr "ਜਦੋਂ ਪਲੱਗ ਲੱਗਾ ਹੋਵੇ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:82
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "ਜੇ ਬਾਹਰੀ ਮਾਨੀਟਰ ਲੱਗਾ ਵੀ ਹੋਵੇ ਤਾਂ ਵੀ ਸਸਪੈਂਡ ਕਰੋ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "ਵਰਕਸਪੇਸ ਦੀ ਗਿਣਤੀ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
+msgid "Workspaces only on primary display"
+msgstr "ਵਰਕਸਪੇਸ ਕੇਵਲ ਮੁੱਖ (ਪ੍ਰਾਇਮਰੀ) ਡਿਸਪਲੇਅ ਉੱਤੇ"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:35
+msgid "Applications"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "ਚਾਲੂ"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+#| msgid "Close Only"
+msgid "_Close"
+msgstr "ਬੰਦ ਕਰੋ(_C)"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:62
+msgid "Add Application"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸ਼ਾਮਿਲ"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:147
+msgid "New startup application"
+msgstr "ਨਵੀਂ ਸ਼ੁਰੂਆਤ ਐਪਲੀਕੇਸ਼ਨ"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:148
+msgid "Add a new application to be run at startup"
+msgstr "ਸ਼ੁਰੂ ਸਮੇਂ ਚਲਾਉਣ ਲਈ ਨਵੀਂ ਐਪਲੀਕੇਸ਼ਨ ਜੋੜੋ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:56
+msgid "Attached Modal Dialogs"
+msgstr "ਅਟੈਚ ਕੀਤੇ ਮਾਡਲ ਡਾਈਲਾਗ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Automatically Raise Windows"
+msgstr "ਵਿੰਡੋਜ਼ ਆਟੋਮੈਟਿਕ ਹੀ ਉਭਾਰੋ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:58
+msgid "Resize with Secondary-click"
+msgstr "ਸੈਕੰਡਰੀ-ਕਲਿੱਕ ਨਾਲ ਮੁੜ-ਆਕਾਰ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+#| msgid "Window theme"
+msgid "Window Action Key"
+msgstr "ਵਿੰਡੋ ਕਾਰਵਾਈ ਸਵਿੱਚ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:63
+msgid "Focus Mode"
+msgstr "ਫੋਕਸ ਮੋਡ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:64
+msgid "Titlebar Actions"
+msgstr "ਟਾਈਟਲ-ਪੱਟੀ ਕਾਰਵਾਈ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:65
+msgid "Double-click"
+msgstr "ਡਬਲ ਕਲਿੱਕ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:66
+msgid "Middle-click"
+msgstr "ਮੱਧ ਕਲਿੱਕ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Secondary-click"
+msgstr "ਸੈਕੰਡਰੀ-ਕਲਿੱਕ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "ਟਾਈਟਪੱਟੀ ਬਟਨ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+#| msgid "Maximize and Close"
+msgid "Maximize"
+msgstr "ਵੱਧ ਤੋਂ ਵੱਧ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+#| msgid "Minimize and Close"
+msgid "Minimize"
+msgstr "ਘੱਟੋ-ਘੱਟ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "ਮਿਡਲ-ਕਲਿੱਕ ਚੇਪੋ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+#| msgid "GTK+ theme"
+msgid "Key theme"
+msgstr "ਮੁੱਖ ਥੀਮ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "ਕੀਬੋਰਡ ਅਤੇ ਮਾਊਸ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+msgid "Show All Input Sources"
+msgstr "ਸਭ ਇੰਪੁੱਟ ਢੰਗ ਵੇਖਾਓ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "ਸਾਰ ਅਤੇ ਡੈਸਕਟਾਪ ਵਿੱਚ ਬਦਲੋ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Super left"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Super right"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
+msgid "Show location of pointer"
+msgstr "ਪੁਆਇੰਟਰ ਦਾ ਟਿਕਾਣਾ ਵੇਖਾਓ"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "ਜੰਤਰ"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "ਵਾਕੋਮ"
+
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:67
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "\"%s <i>(ਡਿਫਾਲਟ)</i>"
 
-#: ../gtweak/widgets.py:318
+#: ../gtweak/widgets.py:471
 msgid "Enable dark theme for all applications"
 msgstr "ਸਭ ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਗੂੜ੍ਹਾ ਥੀਮ ਚਾਲੂ"
 
-#: ../gtweak/widgets.py:319
+#: ../gtweak/widgets.py:472
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "ਸ਼ੈਸ਼ਨ ਵਿੱਚ ਸਭ ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਗੂੜ੍ਹਾ ਥੀਮ ਹਿੰਟ ਚਾਲੂ ਕਰੋ"
 
-#: ../gtweak/widgets.py:337
-#| msgid "Error installing extension"
+#: ../gtweak/widgets.py:480
+msgid "Global Dark Theme"
+msgstr "ਗਲੋਬਲ ਗੂੜ੍ਹਾ ਥੀਮ"
+
+#: ../gtweak/widgets.py:481
+#| msgid "The shell must be restarted for changes to take effect"
+msgid "Applications need to be restarted for change to take effect"
+msgstr "ਬਦਲਾਅ ਲਾਗੂ ਕਰਨ ਲਈ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ"
+
+#: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "ਸੈਟਿੰਗ ਲਿਖਣ ਦੌਰਾਨ ਗਲਤੀ"
 
+#~ msgid "welcome"
+#~ msgstr "ਜੀ ਆਇਆ ਨੂੰ"
+
+#~ msgid "Shell"
+#~ msgstr "ਸ਼ੈੱਲ"
+
+#~ msgid "Shell Extensions"
+#~ msgstr "ਸ਼ੈੱਲ ਇਕਸਟੈਂਸ਼ਨ"
+
+#~ msgid "All"
+#~ msgstr "ਸਭ"
+
+#~ msgid ""
+#~ "Disable gnome-shell dynamic workspace management, use static workspaces"
+#~ msgstr "ਗਨੋਮ ਸ਼ੈਲ ਡਾਇਨੇਮਿਕ ਵਰਕਸਪੇਸ ਪਰਬੰਧ ਨੂੰ ਬੰਦ ਕਰੋ ਅਤੇ ਇਸ ਦੀ ਬਜਾਏ ਸਥਿਰ ਵਰਕਸਪੇਸ ਵਰਤੋ।"
+
 #~ msgid "Advanced Settings"
 #~ msgstr "ਤਕਨੀਕੀ ਸੈਟਿੰਗ"
-
-#~ msgid "GTK+ theme"
-#~ msgstr "GTK+ ਥੀਮ"
 
 #~ msgid "Icon theme"
 #~ msgstr "ਆਈਕਾਨ ਥੀਮ"
 
 #~ msgid "Keybinding theme"
 #~ msgstr "ਕੀਬਾਈਡਿੰਗ ਥੀਮ"
-
-#~ msgid "%s Extension"
-#~ msgstr "%s ਇਕਸਟੈਂਸ਼ਨ"
-
-#~ msgid "Window theme"
-#~ msgstr "ਵਿੰਡੋ ਥੀਮ"
