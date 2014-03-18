@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Rodrigo Padula <contato@rodrigopadula.com>, 2011.
 # Guilherme Barbosa Ferreira <eu@guilhermeferreira.info>, 2011.
-# Rafael Ferreira <rafael.f.f1@gmail.com>, 2012, 2013.
+# Rafael Ferreira <rafael.f.f1@gmail.com>, 2012, 2013, 2014.
 # Juan Diego Martins da Costa Cruz <juan.martins@ifrn.edu.br>, 2013.
 # Enrico Nicoletto <liverig@gmail.com>, 2013, 2014.
 #
@@ -12,15 +12,15 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-07 12:29+0000\n"
-"PO-Revision-Date: 2014-01-10 15:29-0300\n"
-"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"POT-Creation-Date: 2014-03-18 08:47+0000\n"
+"PO-Revision-Date: 2014-03-18 17:36-0300\n"
+"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n>1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 1.5.4\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1
@@ -62,14 +62,10 @@ msgid "Disable All Shell Extensions"
 msgstr "Desabilitar todas as extensões do Shell"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_Ajuda"
-
-#: ../data/shell.ui.h:4
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../data/shell.ui.h:5
+#: ../data/shell.ui.h:4
 msgid "_Quit"
 msgstr "_Sair"
 
@@ -136,7 +132,7 @@ msgstr "Janelas"
 msgid "Workspaces"
 msgstr "Espaços de trabalho"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Mouse"
 
@@ -148,11 +144,11 @@ msgstr "Arquivos"
 msgid "Miscellaneous"
 msgstr "Miscelânea"
 
-#: ../gtweak/tweakview.py:85
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "Ajustes"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "Pesquisar ajustes..."
 
@@ -189,12 +185,21 @@ msgid "Background"
 msgstr "Plano de fundo"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Modo"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "Localização do plano de fundo"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Tela de bloqueio"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "Localização da tela de bloqueio"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -210,7 +215,7 @@ msgstr "Documentos"
 
 #: ../gtweak/tweaks/tweak_group_font.py:28
 msgid "Monospace"
-msgstr "Monoespaçada"
+msgstr "Mono-espaçada"
 
 #: ../gtweak/tweaks/tweak_group_font.py:29
 msgid "Hinting"
@@ -533,11 +538,23 @@ msgstr "Tema chave"
 msgid "Keyboard and Mouse"
 msgstr "Teclado e mouse"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "Mostrar todas as fontes de entrada"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Alternar entre o panorama e a área do trabalho"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Super da esquerda"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Super da direita"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "Mostrar localização do ponteiro"
 
@@ -576,6 +593,9 @@ msgstr ""
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Erro ao gravar configuração"
+
+#~ msgid "_Help"
+#~ msgstr "_Ajuda"
 
 #~ msgid "_About Tweak Tool"
 #~ msgstr "_Sobre a ferramenta de ajustes"
