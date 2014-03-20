@@ -1,14 +1,16 @@
 # Danish translation for gnome-tweak-tool.
-# Copyright (C) 2011-2013 gnome-tweak-tool's COPYRIGHT HOLDER
+# Copyright (C) 2011-2014 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
+#
 # Kris Thomsen <mail@kristhomsen.dk>, 2011-2013.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-15 22:03+0200\n"
-"PO-Revision-Date: 2013-09-15 22:00+0100\n"
+"POT-Creation-Date: 2014-03-20 21:08+0100\n"
+"PO-Revision-Date: 2014-03-20 14:04+0100\n"
 "Last-Translator: Kris Thomsen <mail@kristhomsen.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -16,6 +18,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "GNOME Tweak Tool tillader ændring af avancerede GNOME-indstillinger."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Det kan installere og håndtere temaer og udvidelser, ændre "
+"strømindstillinger, håndtere opstartsprogrammer samt aktivere "
+"skrivebordsikoner med mere."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -41,14 +56,10 @@ msgid "Disable All Shell Extensions"
 msgstr "Deaktivér alle Shell-udvidelser"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_Hjælp"
+msgid "_About"
+msgstr "_Om"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "_Om Tilpasningsværktøj"
-
-#: ../data/shell.ui.h:5
 msgid "_Quit"
 msgstr "_Afslut"
 
@@ -86,7 +97,7 @@ msgid "Appearance"
 msgstr "Udseende"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "Udvidelser"
 
@@ -98,7 +109,7 @@ msgstr "Skrifttyper"
 msgid "Power"
 msgstr "Strøm"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "Opstartsprogrammer"
 
@@ -114,7 +125,7 @@ msgstr "Vinduer"
 msgid "Workspaces"
 msgstr "Arbejdsområder"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Mus"
 
@@ -126,7 +137,11 @@ msgstr "Filer"
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: ../gtweak/tweakview.py:81
+#: ../gtweak/tweakview.py:93
+msgid "Tweaks"
+msgstr "Tilpasninger"
+
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "Søg tilpasninger..."
 
@@ -163,12 +178,28 @@ msgid "Background"
 msgstr "Baggrund"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Tilstand"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "Baggrundsplacering"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Lås skærm"
+
+# Så vidt jeg kan se/gætte er der tale om placeringen af ikonet eller lign.
+#
+# https://mail.gnome.org/archives/commits-list/2014-January/msg02769.html
+#
+# som linker til:
+#
+# https://bugzilla.gnome.org/show_bug.cgi?id=709877
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "Placering af lås skærm"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -282,85 +313,80 @@ msgstr "Deaktiveret"
 msgid "Typing"
 msgstr "Indtastning"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
 msgid "Extension downloading"
 msgstr "Henter udvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
 msgid "Error loading extension"
 msgstr "Fejl under indlæsning af udvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension does not support shell version"
 msgstr "Udvidelse understøtter ikke shell-version"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Unknown extension error"
 msgstr "Ukendt udvidelsesfejl"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:124
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
 msgid "Remove"
 msgstr "Fjern"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Shell'en skal genstartes for at ændringer træder i kraft"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
-msgid "Restart"
-msgstr "Genstart"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "Afinstallér udvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Vil du afinstallere udvidelsen \"%s\"?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "Opdaterer"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "Fejl"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "Opdatér"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Installér Shell-udvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Vælg en udvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "Hent flere udvidelser"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s-udvidelsen blev opdateret"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s-udvidelsen blev installeret"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Genstart"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "Fejl under installation af udvidelse"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "Ugyldig udvidelse"
 
@@ -373,7 +399,7 @@ msgid "Workspace Creation"
 msgstr "Oprettelse af arbejdsområde"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-msgid "Dynamics"
+msgid "Dynamic"
 msgstr "Dynamisk"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
@@ -436,19 +462,19 @@ msgstr "Programmer"
 msgid "running"
 msgstr "kører"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:60
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "_Close"
 msgstr "_Luk"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:62
 msgid "Add Application"
 msgstr "Tilføj program"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:139
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "Nyt opstartsprogram"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:140
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "Tilføj et nyt program, der skal køres ved opstart"
 
@@ -512,11 +538,23 @@ msgstr "Markørtema"
 msgid "Keyboard and Mouse"
 msgstr "Tastatur og mus"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "Vis alle inputkilder"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Skift mellem oversigt og skrivebord"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Venstre super"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Højre super"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "Vis markørens placering"
 
@@ -554,11 +592,17 @@ msgstr "Programmerne skal genstartes for at ændringer træder i kraft"
 msgid "Error writing setting"
 msgstr "Fejl under skrivning af indstilling"
 
+#~ msgid "_Help"
+#~ msgstr "_Hjælp"
+
+#~ msgid "_About Tweak Tool"
+#~ msgstr "_Om Tilpasningsværktøj"
+
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "Shell'en skal genstartes for at ændringer træder i kraft"
+
 #~ msgid "welcome"
 #~ msgstr "velkommen"
-
-#~ msgid "tweaks"
-#~ msgstr "tilpasninger"
 
 #~ msgid "Shell"
 #~ msgstr "Shell"
