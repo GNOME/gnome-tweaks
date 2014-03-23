@@ -1,20 +1,30 @@
 # Norwegian bokmål translation of gnome-tweak-tool.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2011-2013.
+# Kjartan Maraas <kmaraas@gnome.org>, 2011-2014.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool 3.10.1\n"
+"Project-Id-Version: gnome-tweak-tool 3.11.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-12 17:09+0100\n"
-"PO-Revision-Date: 2013-11-12 17:21+0100\n"
+"POT-Creation-Date: 2014-03-23 18:46+0100\n"
+"PO-Revision-Date: 2014-03-23 18:47+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr ""
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -27,7 +37,9 @@ msgstr "Endre avanserte GNOME 3 innstillinger"
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "Innstillinger;Avansert;Brukervalg;Utvidelser;Skrifter;Tema;XKB;Tastatur;Skriving;"
+msgstr ""
+"Innstillinger;Avansert;Brukervalg;Utvidelser;Skrifter;Tema;XKB;Tastatur;"
+"Skriving;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -38,14 +50,10 @@ msgid "Disable All Shell Extensions"
 msgstr "Slå av alle utvidelser for skallet"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_Hjelp"
+msgid "_About"
+msgstr "_Om"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "_Om konfigurasjonsverktøy"
-
-#: ../data/shell.ui.h:5
 msgid "_Quit"
 msgstr "A_vslutt"
 
@@ -83,7 +91,7 @@ msgid "Appearance"
 msgstr "Utseende"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:310
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "Utvidelser"
 
@@ -95,7 +103,7 @@ msgstr "Skrifter"
 msgid "Power"
 msgstr "Strøm"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "Oppstartsprogrammer"
 
@@ -111,7 +119,7 @@ msgstr "Vinduer"
 msgid "Workspaces"
 msgstr "Arbeidsområder"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Mus"
 
@@ -123,11 +131,11 @@ msgstr "Filer"
 msgid "Miscellaneous"
 msgstr "Forskjellig"
 
-#: ../gtweak/tweakview.py:85
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "Konfigurasjonsendringer"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "Søk etter konfigurasjonsendringer …"
 
@@ -164,11 +172,21 @@ msgid "Background"
 msgstr "Bakgrunn"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Modus"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
+msgstr "Bakgrunnslokasjon"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Lås skjerm"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+#, fuzzy
+msgid "Lock Screen Location"
 msgstr "Bakgrunnslokasjon"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
@@ -304,64 +322,59 @@ msgstr "Ukjent feil med utvidelse"
 msgid "Remove"
 msgstr "Fjern"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Skallet må startes på nytt for at endringene skal tre i kraft"
-
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Restart"
-msgstr "Start på nytt"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:143
 msgid "Uninstall Extension"
 msgstr "Avinstaller utvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:144
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Vil du avinstallere «%s»-utvidelsen?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "Oppdaterer"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "Feil"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:177
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "Oppdater"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Installer utvidelse for skallet"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Velg en utvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:204
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "Hent flere utvidelser"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Oppdatering av %s utvidelse fullført"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:256
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Installering av %s utvidelse fullført"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:264
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Start på nytt"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "Feil under installering av utvidelse"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:269
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "Ugyldig utvidelse"
 
@@ -371,11 +384,11 @@ msgstr "Vis programmeny"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:45
 msgid "Workspace Creation"
-msgstr ""
+msgstr "Opprettelse av arbeidsområder"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-msgid "Dynamics"
-msgstr "Dynamikk"
+msgid "Dynamic"
+msgstr "Dynamisk"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
 msgid "Static"
@@ -445,11 +458,11 @@ msgstr "_Lukk"
 msgid "Add Application"
 msgstr "Legg til program"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:146
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "Nytt oppstartsprogram"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr ""
 
@@ -479,7 +492,7 @@ msgstr ""
 
 #: ../gtweak/tweaks/tweak_group_windows.py:65
 msgid "Double-click"
-msgstr ""
+msgstr "Dobbeltklikk"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:66
 msgid "Middle-click"
@@ -513,11 +526,23 @@ msgstr "Tastaturtema"
 msgid "Keyboard and Mouse"
 msgstr "Tastatur og mus"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr ""
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr ""
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr ""
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr ""
 
@@ -527,7 +552,7 @@ msgstr "Enhet"
 
 #: ../gtweak/tweaks/tweak_wacom.py:38
 msgid "Wacom"
-msgstr ""
+msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: ../gtweak/utils.py:70
@@ -548,9 +573,8 @@ msgid "Global Dark Theme"
 msgstr ""
 
 #: ../gtweak/widgets.py:481
-#, fuzzy
 msgid "Applications need to be restarted for change to take effect"
-msgstr "Skallet må startes på nytt for at endringene skal tre i kraft"
+msgstr "Programmer må startes på nytt for at endringene skal tre i kraft"
 
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
