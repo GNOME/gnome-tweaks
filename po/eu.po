@@ -1,194 +1,613 @@
 # Basque translation for gnome-tweak-tool.
 # Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
+#
 # asiersar <asiersar@yahoo.com>, 2011.
 # assar <asiersar@yahoo.com>, 2011.
-# Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2011.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-10 22:07+0200\n"
-"PO-Revision-Date: 2011-10-10 22:06+0200\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
+"Project-Id-Version: gnome-tweak-tool\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-03-23 14:55+0100\n"
+"PO-Revision-Date: 2014-03-23 16:25+0100\n"
+"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.4\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Advanced Settings"
-msgstr "Ezarpen aurreratuak"
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr ""
+"GNOMEren doikuntzarako tresnak  GNOMEren aukera aurreratuak doitzea "
+"baimentzen du."
 
-#: ../data/shell.ui.h:2
-msgid "tweaks"
-msgstr "doikuntzak"
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Beste ezarpen batzuen artean gaiak eta hedapenak instala eta kudea ditzake, "
+"energiaren ezarpenak aldatu, abioko aplikazioak kudeatu eta mahaigaineko "
+"ikonoak "
+"gaitu ditzake."
 
-#: ../data/shell.ui.h:3
-msgid "welcome"
-msgstr "ongi etorri"
+#: ../data/gnome-tweak-tool.desktop.in.h:1
+msgid "Tweak Tool"
+msgstr "Doiketa tresna"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Doitu GNOME 3ren ezarpen aurreratuak"
 
-#: ../gtweak/tweaks/tweak_interface.py:33
-msgid "GTK+ theme"
-msgstr "GTK+ gaia"
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Ezarpenak;Aurreratua;Hobespenak;Hedapenak;Letra-tipoak;Gaia;XKB;Teklatua;Idazk"
+"eta;"
 
-#: ../gtweak/tweaks/tweak_interface.py:51
-msgid "Icon theme"
-msgstr "Ikonoen gaia"
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "_Berrezarri lehenespenera"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:108
-msgid "<i>Default</i>"
-msgstr "<i>Lehenetsia</i>"
+#: ../data/shell.ui.h:2
+msgid "Disable All Shell Extensions"
+msgstr "Desgaitu shell-aren hedapen guztiak"
 
-#: ../gtweak/tweaks/tweak_interface.py:87
-msgid "Keybinding theme"
-msgstr "Laster-teklen gaia"
+#: ../data/shell.ui.h:3
+msgid "_About"
+msgstr "Honi _buruz"
+
+#: ../data/shell.ui.h:4
+msgid "_Quit"
+msgstr "I_rten"
+
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "Berrezarri lehenespenera"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Berrezarri doikuntzaren ezarpen guztiak jatorrizko egoera lehenetsira?"
+
+#: ../gtweak/app.py:93
+msgid "About GNOME Tweak Tool"
+msgstr "GNOMEren doikuntzaren tresnari buruz"
+
+#: ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOMEren doikuntzaren tresna"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "GNOME Shell %s bertsioa (%s modua)"
+
+#: ../gtweak/app.py:100
+msgid "GNOME Shell not running"
+msgstr "GNOME Shell-a ez da exekutatzen ari"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Webgune nagusia"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Itxura"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+msgid "Extensions"
+msgstr "Hedapenak"
+
+#: ../gtweak/tweakmodel.py:30
+msgid "Fonts"
+msgstr "Letra-tipoak"
+
+#: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Energia"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
+msgid "Startup Applications"
+msgstr "Abioko aplikazioak"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Goiko barra"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Windows"
+msgstr "Leihoak"
+
+#: ../gtweak/tweakmodel.py:35
+msgid "Workspaces"
+msgstr "Laneko areak"
+
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
+msgid "Mouse"
+msgstr "Sagua"
+
+#: ../gtweak/tweakmodel.py:38
+msgid "Files"
+msgstr "Fitxategiak"
+
+#: ../gtweak/tweakmodel.py:52
+msgid "Miscellaneous"
+msgstr "Bestelakoak"
+
+#: ../gtweak/tweakview.py:93
+msgid "Tweaks"
+msgstr "Doikuntzak"
+
+#: ../gtweak/tweakview.py:109
+msgid "Search Tweaks..."
+msgstr "Bilatu doikuntzak..."
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+msgid "Icons on Desktop"
+msgstr "Ikonoak mahaigainean"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Mahaigaina"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Ordenagailua"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Karpeta nagusia"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Sareko zerbitzariak"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Zakarrontzia"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Muntatutako bolumenak"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Atzeko planoa"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
+msgid "Mode"
+msgstr "Modua"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Atzeko planoaren kokalekua"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Blokeatu pantaila"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "Blokeatu pantailaren kokalekua"
+
+#: ../gtweak/tweaks/tweak_group_font.py:25
+msgid "Window Titles"
+msgstr "Leihoen tituluak"
+
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Interfazea"
+
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Dokumentuak"
+
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Tarte bakarrekoa"
+
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "Atxikitzea"
+
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Antialiasing-a"
+
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Eskala-faktorea"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "Ikonoak"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "Kurtsorea"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+msgid "Window"
+msgstr "Leihoa"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+msgid "Shell theme"
+msgstr "Shell-aren gaia"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+msgid "Install custom or user themes for gnome-shell"
+msgstr "Instalatu 'gnome-shell'en gai pertsonalizatuak "
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:55
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "Errore ezezaguna"
 
-#: ../gtweak/tweaks/tweak_shell.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "Shell-a ez da exekutatzen ari"
 
-#: ../gtweak/tweaks/tweak_shell.py:76
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Shell-en erabiltzaile-gaiaren hedapena gaizki instalatuta dago"
 
-#: ../gtweak/tweaks/tweak_shell.py:79
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell-en erabiltzaile-gaiaren hedapena ez dago gaituta"
 
-#: ../gtweak/tweaks/tweak_shell.py:82
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "Ezin izan dira shell-aren hedapenak zerrendatu"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>Lehenetsia</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "Hautatu gai bat"
 
-#: ../gtweak/tweaks/tweak_shell.py:160
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s gaia ongi eguneratu da"
 
-#: ../gtweak/tweaks/tweak_shell.py:162
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s gaia ongi instalatu da"
 
-#: ../gtweak/tweaks/tweak_shell.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "Errorea gaia instalatzean"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:175
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "Gai baliogabea"
 
-#: ../gtweak/tweaks/tweak_shell.py:196
-msgid "The shell may need to be restarted to apply the theme"
-msgstr "Beharrezkoa izan daiteke shell-a berrabiaraztea gaia aplikatzeko"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "Gaia"
 
-#: ../gtweak/tweaks/tweak_shell.py:197
-#: ../gtweak/tweaks/tweak_shell_extensions.py:56
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
-msgid "Restart"
-msgstr "Berrabiarazi"
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:62
+msgid "Disabled"
+msgstr "Desgaituta"
 
-#: ../gtweak/tweaks/tweak_shell.py:208
-msgid "Shell"
-msgstr "Shell-a"
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "Idazketa"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:33
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
+msgid "Extension downloading"
+msgstr "Hedapenak deskargatzea"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
 msgid "Error loading extension"
 msgstr "Errorea hedapena kargatzean"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension does not support shell version"
 msgstr "Hedapenak ez du shell-aren bertsio hau onartzen"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Unknown extension error"
 msgstr "Hedapeneko errore ezezaguna"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:42
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
+msgid "Remove"
+msgstr "Kendu"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+msgid "Uninstall Extension"
+msgstr "Desinstalatu hedapena"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
-msgid "%s Extension"
-msgstr "%s hedapena"
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "'%s' hedapena desintalatzea nahi duzu?"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:55
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Shell-a berrabiarazi behar da aldaketak eragina egiteko"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+msgid "Updating"
+msgstr "Eguneratzea"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:64
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Error"
+msgstr "Errorea"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+msgid "Update"
+msgstr "Eguneratu"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Instalatu shell-aren hedapena"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Hautatu hedapena"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:115
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+msgid "Get more extensions"
+msgstr "Eskuratu hedapen gehiago"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s hedapena ongi eguneratu da"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:117
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s hedapena ongi instalatu da"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Berrabiarazi"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "Errorea hedapena instalatzean"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:130
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "Hedapen baliogabea"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:138
-msgid "Shell Extensions"
-msgstr "Shell-aren hedapenak"
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "Erakutsi aplikazioaren menua"
 
-#: ../gtweak/tweaks/tweak_windows.py:53
-msgid "Window theme"
-msgstr "Leihoen gaia"
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "Laneko areen sorrera"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Dynamic"
+msgstr "Dinamikoa"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "Estatikoa"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Clock"
+msgstr "Ordularia"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show date"
+msgstr "Erakutsi data"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Show seconds"
+msgstr "Erakutsi segundoak"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Calendar"
+msgstr "Egutegia"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Show week numbers"
+msgstr "Erakutsi asteen zenbakiak"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "Power Button Action"
+msgstr "Pizteko botoiaren ekintza"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "When Laptop Lid is Closed"
+msgstr "Eramangarriaren tapa ixtean"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "On Battery Power"
+msgstr "Bateriaren energiarekin"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "When plugged in"
+msgstr "Entxufatuta"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:82
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "Eseki nahiz eta kanpoko monitorea konektatuta egon"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "Laneko areen kopurua"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
+msgid "Workspaces only on primary display"
+msgstr "Laneko areak pantaila nagusian soilik"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:35
+msgid "Applications"
+msgstr "Aplikazioak"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "exekutatzen"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "_Close"
+msgstr "_Itxi"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:62
+msgid "Add Application"
+msgstr "Gehitu aplikazioa"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:147
+msgid "New startup application"
+msgstr "Abioko aplikazio berria"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:148
+msgid "Add a new application to be run at startup"
+msgstr "Gehitu aplikazio berria abioan exekutatzeko"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:56
+msgid "Attached Modal Dialogs"
+msgstr "Erantsitako elkarrizketa-koadro modala"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Automatically Raise Windows"
+msgstr "Goratu leihoak automatikoki"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:58
+msgid "Resize with Secondary-click"
+msgstr "Aldatu tamaina bigarren mailako klik eginez"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window Action Key"
+msgstr "Leihoen ekintzaren gakoa"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:63
+msgid "Focus Mode"
+msgstr "Fokuaren modua"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:64
+msgid "Titlebar Actions"
+msgstr "Titulu-barraren ekintzak"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:65
+msgid "Double-click"
+msgstr "Klik bikoitza"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:66
+msgid "Middle-click"
+msgstr "Erdiko klik"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Secondary-click"
+msgstr "Bigarren mailako klik"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:68
+msgid "Titlebar Buttons"
+msgstr "Titulu-barraren botoiak"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:69
+msgid "Maximize"
+msgstr "Maximizatu"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:70
+msgid "Minimize"
+msgstr "Minimizatu"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Erdiko klik itsasteko"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+msgid "Key theme"
+msgstr "Gakoaren gaia"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "Teklatua eta sagua"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+msgid "Show All Input Sources"
+msgstr "Erakutsi sarrerako iturburu guztiak"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Aldatu ikuspegi orokorraren eta mahaigainaren artean"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Ezkerreko Super"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Eskuineko Super"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
+msgid "Show location of pointer"
+msgstr "Erakutsi erakuslearen posizioa"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Gailua"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(lehenetsia)</i>"
 
-#: ../gtweak/tweakmodel.py:26
-msgid "Fonts"
-msgstr "Letra-tipoak"
+#: ../gtweak/widgets.py:471
+msgid "Enable dark theme for all applications"
+msgstr "Gaitu gai iluna aplikazio guztientzako"
 
-#: ../gtweak/tweakmodel.py:27
-msgid "Theme"
-msgstr "Gaia"
+#: ../gtweak/widgets.py:472
+msgid "Enable the dark theme hint for all the applications in the session"
+msgstr "Gaitu gai ilunaren argibideak saioko aplikazio guztientzako"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Desktop"
-msgstr "Mahaigaina"
+#: ../gtweak/widgets.py:480
+msgid "Global Dark Theme"
+msgstr "Gai ilun globala"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Windows"
-msgstr "Leihoak"
+#: ../gtweak/widgets.py:481
+msgid "Applications need to be restarted for change to take effect"
+msgstr "Aplikazioak berrabiarazi behar dira aldaketak eragina egiteko."
 
-#: ../gtweak/tweakmodel.py:37
-msgid "Miscellaneous"
-msgstr "Bestelakoak"
+#: ../gtweak/widgets.py:507
+msgid "Error writing setting"
+msgstr "Errorea ezarpenak idaztean"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Ezarpen aurreratuak"
+
+#~ msgid "welcome"
+#~ msgstr "ongi etorri"
+
+#~ msgid "Icon theme"
+#~ msgstr "Ikonoen gaia"
+
+#~ msgid "Keybinding theme"
+#~ msgstr "Laster-teklen gaia"
+
+#~ msgid "The shell may need to be restarted to apply the theme"
+#~ msgstr "Beharrezkoa izan daiteke shell-a berrabiaraztea gaia aplikatzeko"
+
+#~ msgid "Shell"
+#~ msgstr "Shell-a"
+
+#~ msgid "Shell Extensions"
+#~ msgstr "Shell-aren hedapenak"
