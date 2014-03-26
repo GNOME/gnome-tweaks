@@ -17,9 +17,11 @@
 
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue
+from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, Tweak
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue, build_label_beside_widget
 from gtweak.utils import XSettingsOverrides
+
+from gi.repository import Gtk
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -51,6 +53,26 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
         self.settings.set_string(self.key_name, val)
         self._xsettings.set_window_buttons(val.replace(":", "menu:"))
 
+class WindowScalingFactorTweak(Gtk.Box, Tweak):
+    def __init__(self, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        Tweak.__init__(self, _("Window scaling"), _("Adjust GDK window scaling factor for HiDPI"), **options)
+
+        self._xsettings = XSettingsOverrides()
+
+        adjustment = Gtk.Adjustment(lower=1, upper=2, step_increment=1, page_increment=1)
+        w = Gtk.SpinButton()
+        w.set_adjustment(adjustment)
+        w.set_digits(0)
+        adjustment.set_value(self._xsettings.get_window_scaling_factor())
+        w.connect("value-changed", self._on_value_changed)
+
+        build_label_beside_widget(self.name, w, hbox=self)
+        self.widget_for_size_group = w
+
+    def _on_value_changed(self, adj):
+        self._xsettings.set_window_scaling_factor(adj.get_value())
+
 TWEAK_GROUPS = [ 
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
         GSettingsSwitchTweak(_("Attached Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs"),
@@ -68,6 +90,8 @@ TWEAK_GROUPS = [
         Title(_("Titlebar Buttons"), "", uid="title-theme"),
         ShowWindowButtons(_("Maximize"), "maximize"),
         ShowWindowButtons(_("Minimize"), "minimize"),
+        Title(_("HiDPI"), "", uid="title-hidpi"),
+        WindowScalingFactorTweak(),
     )
 ]
 

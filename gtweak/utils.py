@@ -236,6 +236,7 @@ class XSettingsOverrides:
         'Gtk/ShellShowsAppMenu': GLib.Variant.new_int32,
         'Gtk/EnablePrimaryPaste': GLib.Variant.new_int32,
         'Gtk/DecorationLayout': GLib.Variant.new_string,
+        'Gdk/WindowScalingFactor': GLib.Variant.new_int32,
     }
 
     def __init__(self):
@@ -282,6 +283,10 @@ class XSettingsOverrides:
         return self._get_override('Gtk/EnablePrimaryPaste', True)
     def set_window_buttons(self, v):
         self._set_override('Gtk/DecorationLayout', v)
+    def set_window_scaling_factor(self, v):
+        self._set_override('Gdk/WindowScalingFactor', int(v))
+    def get_window_scaling_factor(self):
+        return self._get_override('Gdk/WindowScalingFactor', 1)
 
 class Notification:
     def __init__(self, summary, body):
