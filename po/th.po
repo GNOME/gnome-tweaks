@@ -1,15 +1,15 @@
 # Thai translation for gnome-tweak-tool.
-# Copyright (C) 2013 gnome-tweak-tool's COPYRIGHT HOLDER
+# Copyright (C) 2013-2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Akom Chotiphantawanon <knight2000@gmail.com>, 2013.
 #
+# Akom Chotiphantawanon <knight2000@gmail.com>, 2013-2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-10\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-10-14 08:41+0000\n"
-"PO-Revision-Date: 2013-11-02 15:06+0700\n"
+"POT-Creation-Date: 2014-03-07 08:46+0000\n"
+"PO-Revision-Date: 2014-03-26 20:56+0700\n"
 "Last-Translator: Akom Chotiphantawanon <knight2000@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -17,6 +17,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.7\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "เครื่องมือดัดแปลง GNOME ช่วยในการปรับตัวเลือกขั้นสูงของ GNOME"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"สามารถติดตั้งและจัดการชุดตกแต่งและส่วนขยาย ตั้งค่าการใช้พลังงาน จัดการโปรแกรมเริ่มวาระ "
+"เปิดใช้ไอคอนเดสก์ท็อป และตั้งค่าอื่นๆ"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -40,14 +52,10 @@ msgid "Disable All Shell Extensions"
 msgstr "ปิดใช้ส่วนขยายของเชลล์ทั้งหมด"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_วิธีใช้"
+msgid "_About"
+msgstr "เ_กี่ยวกับ"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "เ_กี่ยวกับเครื่องมือดัดแปลง"
-
-#: ../data/shell.ui.h:5
 msgid "_Quit"
 msgstr "_ออก"
 
@@ -85,7 +93,7 @@ msgid "Appearance"
 msgstr "รูปโฉม"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:310
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "ส่วนขยาย"
 
@@ -97,7 +105,7 @@ msgstr "แบบอักษร"
 msgid "Power"
 msgstr "พลังงาน"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:180
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
 msgid "Startup Applications"
 msgstr "โปรแกรมขณะเริ่มวาระ"
 
@@ -113,7 +121,7 @@ msgstr "หน้าต่าง"
 msgid "Workspaces"
 msgstr "พื้นที่ทำงาน"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "เมาส์"
 
@@ -125,11 +133,11 @@ msgstr "แฟ้ม"
 msgid "Miscellaneous"
 msgstr "เบ็ดเตล็ด"
 
-#: ../gtweak/tweakview.py:85
+#: ../gtweak/tweakview.py:93
 msgid "Tweaks"
 msgstr "รายการดัดแปลง"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:109
 msgid "Search Tweaks..."
 msgstr "ค้นหารายการดัดแปลง..."
 
@@ -166,12 +174,21 @@ msgid "Background"
 msgstr "พื้นหลัง"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "โหมด"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "ตำแหน่งเก็บของภาพพื้นหลัง"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "หน้าจอล็อค"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "ตำแหน่งเก็บของภาพหน้าจอล็อค"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -306,64 +323,59 @@ msgstr "เกิดข้อผิดพลาดไม่ทราบสาเ
 msgid "Remove"
 msgstr "ลบออก"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
-msgid "The shell must be restarted for changes to take effect"
-msgstr "เชลล์ต้องเริ่มต้นใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
-
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Restart"
-msgstr "เริ่มใหม่"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:143
 msgid "Uninstall Extension"
 msgstr "ถอดถอนส่วนขยาย"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:144
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "คุณต้องการถอดถอนส่วนขยาย '%s' หรือไม่?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "กำลังปรับรุ่น"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "ข้อผิดพลาด"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:177
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "ปรับรุ่น"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "ติดตั้งส่วนขยายของเชลล์"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "เลือกส่วนขยาย"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:204
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "รับส่วนขยายเพิ่มเติม"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "ปรับรุ่นส่วนขยาย %s เรียบร้อยแล้ว"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:256
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "ติดตั้งส่วนขยาย %s เรียบร้อยแล้ว"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:264
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "เริ่มใหม่"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "เกิดข้อผิดพลาดขณะติดตั้งส่วนขยาย"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:269
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "ส่วนขยายไม่ถูกต้อง"
 
@@ -376,7 +388,7 @@ msgid "Workspace Creation"
 msgstr "การสร้างพื้นที่ทำงาน"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-msgid "Dynamics"
+msgid "Dynamic"
 msgstr "ไม่ตายตัว"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
@@ -447,11 +459,11 @@ msgstr "ปิ_ด"
 msgid "Add Application"
 msgstr "เพิ่มโปรแกรม"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:146
+#: ../gtweak/tweaks/tweak_group_startup.py:147
 msgid "New startup application"
 msgstr "โปรแกรมขณะเริ่มวาระรายการใหม่"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:148
 msgid "Add a new application to be run at startup"
 msgstr "เพิ่มโปรแกรมใหม่ที่จะให้ทำงานขณะเริ่มวาระ"
 
@@ -515,11 +527,23 @@ msgstr "ชุดปุ่ม"
 msgid "Keyboard and Mouse"
 msgstr "แป้นพิมพ์และเมาส์"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "แสดงช่องทางป้อนข้อความเข้าทั้งหมด"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "สลับระหว่างภาพรวมและพื้นโต๊ะ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Super ซ้าย"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Super ขวา"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "แสดงตำแหน่งตัวชี้"
 
@@ -556,3 +580,12 @@ msgstr "ต้องเริ่มต้นโปรแกรมต่างๆ
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "เกิดข้อผิดพลาดขณะเขียนค่าตั้ง"
+
+#~ msgid "_Help"
+#~ msgstr "_วิธีใช้"
+
+#~ msgid "_About Tweak Tool"
+#~ msgstr "เ_กี่ยวกับเครื่องมือดัดแปลง"
+
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "เชลล์ต้องเริ่มต้นใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
