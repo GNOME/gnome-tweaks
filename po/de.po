@@ -9,18 +9,17 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-11 08:47+0000\n"
-"PO-Revision-Date: 2014-02-12 21:19+0100\n"
-"Last-Translator: Benjamin Steinwender <b@stbe.at>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-29 21:38+0100\n"
+"PO-Revision-Date: 2014-03-29 21:39+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.3\n"
+"X-Generator: Poedit 1.5.4\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
@@ -61,14 +60,10 @@ msgid "Disable All Shell Extensions"
 msgstr "Alle Shell-Erweiterung deaktivieren"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_Hilfe"
-
-#: ../data/shell.ui.h:4
 msgid "_About"
 msgstr "_Info"
 
-#: ../data/shell.ui.h:5
+#: ../data/shell.ui.h:4
 msgid "_Quit"
 msgstr "_Beenden"
 
@@ -309,7 +304,7 @@ msgid "Theme"
 msgstr "Thema"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:62
+#: ../gtweak/tweaks/tweak_group_windows.py:84
 msgid "Disabled"
 msgstr "Deaktiviert"
 
@@ -484,53 +479,65 @@ msgstr "Neue Anwendung starten"
 msgid "Add a new application to be run at startup"
 msgstr "Eine neue Anwendung hinzufügen, die bei Start ausgeführt werden soll"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:56
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window scaling"
+msgstr "Fensterskalierung"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "GDK-Fensterskalierungsfaktor für hohe DPI anpassen"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:78
 msgid "Attached Modal Dialogs"
 msgstr "Angehängte modale Dialoge"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:57
+#: ../gtweak/tweaks/tweak_group_windows.py:79
 msgid "Automatically Raise Windows"
 msgstr "Fenster automatisch in Vordergrund holen"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:80
 msgid "Resize with Secondary-click"
 msgstr "Größenänderung mittels Kontextklick"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:81
 msgid "Window Action Key"
 msgstr "Fenster-Aktionstaste"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:63
+#: ../gtweak/tweaks/tweak_group_windows.py:85
 msgid "Focus Mode"
 msgstr "Fokusmodus"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:64
+#: ../gtweak/tweaks/tweak_group_windows.py:86
 msgid "Titlebar Actions"
 msgstr "Aktionen der Titelleiste"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:65
+#: ../gtweak/tweaks/tweak_group_windows.py:87
 msgid "Double-click"
 msgstr "Doppelklick"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:66
+#: ../gtweak/tweaks/tweak_group_windows.py:88
 msgid "Middle-click"
 msgstr "Mittelklick"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: ../gtweak/tweaks/tweak_group_windows.py:89
 msgid "Secondary-click"
 msgstr "Kontextklick"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:68
+#: ../gtweak/tweaks/tweak_group_windows.py:90
 msgid "Titlebar Buttons"
 msgstr "Knöpfe der Titelleiste"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:69
+#: ../gtweak/tweaks/tweak_group_windows.py:91
 msgid "Maximize"
 msgstr "Maximieren"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:70
+#: ../gtweak/tweaks/tweak_group_windows.py:92
 msgid "Minimize"
 msgstr "Minimieren"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:93
+msgid "HiDPI"
+msgstr "Hohe DPI"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:29
 msgid "Middle-click Paste"
@@ -598,6 +605,9 @@ msgstr ""
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Fehler beim Festlegen"
+
+#~ msgid "_Help"
+#~ msgstr "_Hilfe"
 
 #~ msgid "_About Tweak Tool"
 #~ msgstr "_Info zu GNOME-Optimierungswerkzeug"
