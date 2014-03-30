@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-03 09:16+0000\n"
-"PO-Revision-Date: 2014-02-04 00:37+0100\n"
+"POT-Creation-Date: 2014-03-28 21:14+0000\n"
+"PO-Revision-Date: 2014-03-29 03:33+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -61,14 +61,10 @@ msgid "Disable All Shell Extensions"
 msgstr "Minden Shell-bővítmény letiltása"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_Súgó"
-
-#: ../data/shell.ui.h:4
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../data/shell.ui.h:5
+#: ../data/shell.ui.h:4
 msgid "_Quit"
 msgstr "_Kilépés"
 
@@ -200,7 +196,6 @@ msgid "Lock Screen"
 msgstr "Képernyő zárolása"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:37
-#| msgid "Background Location"
 msgid "Lock Screen Location"
 msgstr "Képernyő zárolásának helye"
 
@@ -309,7 +304,7 @@ msgid "Theme"
 msgstr "Téma"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:62
+#: ../gtweak/tweaks/tweak_group_windows.py:84
 msgid "Disabled"
 msgstr "Letiltva"
 
@@ -403,7 +398,6 @@ msgid "Workspace Creation"
 msgstr "Munkaterület-létrehozás"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-#| msgid "Dynamics"
 msgid "Dynamic"
 msgstr "Dinamikus"
 
@@ -483,53 +477,66 @@ msgstr "Új bejelentkezési alkalmazás"
 msgid "Add a new application to be run at startup"
 msgstr "Új, bejelentkezéskor futtatandó alkalmazás hozzáadása"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:56
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+#| msgid "Windows"
+msgid "Window scaling"
+msgstr "Ablakok méretezése"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "A GDK ablakméretezési tényező módosítása HiDPI-hez"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:78
 msgid "Attached Modal Dialogs"
 msgstr "Csatolt kizárólagos párbeszédablakok"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:57
+#: ../gtweak/tweaks/tweak_group_windows.py:79
 msgid "Automatically Raise Windows"
 msgstr "Ablakok előtérbe hozása automatikusan"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:80
 msgid "Resize with Secondary-click"
 msgstr "Átméretezés másodlagos kattintással"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:81
 msgid "Window Action Key"
 msgstr "Ablak műveletgombja"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:63
+#: ../gtweak/tweaks/tweak_group_windows.py:85
 msgid "Focus Mode"
 msgstr "Fókuszmód"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:64
+#: ../gtweak/tweaks/tweak_group_windows.py:86
 msgid "Titlebar Actions"
 msgstr "Címsor műveletei"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:65
+#: ../gtweak/tweaks/tweak_group_windows.py:87
 msgid "Double-click"
 msgstr "Dupla kattintás"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:66
+#: ../gtweak/tweaks/tweak_group_windows.py:88
 msgid "Middle-click"
 msgstr "Középső kattintás"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: ../gtweak/tweaks/tweak_group_windows.py:89
 msgid "Secondary-click"
 msgstr "Másodlagos kattintás"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:68
+#: ../gtweak/tweaks/tweak_group_windows.py:90
 msgid "Titlebar Buttons"
 msgstr "Címsor gombok"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:69
+#: ../gtweak/tweaks/tweak_group_windows.py:91
 msgid "Maximize"
 msgstr "Maximalizálás"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:70
+#: ../gtweak/tweaks/tweak_group_windows.py:92
 msgid "Minimize"
 msgstr "Minimalizálás"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:93
+msgid "HiDPI"
+msgstr "HiDPI"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:29
 msgid "Middle-click Paste"
@@ -596,6 +603,9 @@ msgstr "A változtatások életbe lépéséhez újra kell indítani az alkalmaz�
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Hiba a beállítás írásakor"
+
+#~ msgid "_Help"
+#~ msgstr "_Súgó"
 
 #~ msgid "_About Tweak Tool"
 #~ msgstr "_Finomhangoló eszköz névjegye"
