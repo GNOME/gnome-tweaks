@@ -135,7 +135,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         path = os.path.join(self._shell.EXTENSION_DIR, uuid)
         if os.path.exists(path):
             first_message = _("Uninstall Extension")
-            second_message = _("Do you want to uninstall the '%s' extension?" % name)
+            second_message = _("Do you want to uninstall the '%s' extension?") % name
             dialog = Gtk.MessageDialog(
                                    self.main_window,0,
                                    type=Gtk.MessageType.QUESTION,
