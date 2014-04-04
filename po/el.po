@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-12 14:56+0000\n"
-"PO-Revision-Date: 2014-01-12 19:10+0300\n"
+"POT-Creation-Date: 2014-04-03 20:11+0000\n"
+"PO-Revision-Date: 2014-04-04 08:51+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
@@ -60,14 +60,10 @@ msgid "Disable All Shell Extensions"
 msgstr "Εγκατάσταση επεκτάσεων όλων των κελύφων"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_Βοήθεια"
-
-#: ../data/shell.ui.h:4
 msgid "_About"
 msgstr "_Περί"
 
-#: ../data/shell.ui.h:5
+#: ../data/shell.ui.h:4
 msgid "_Quit"
 msgstr "Έ_ξοδος"
 
@@ -248,7 +244,7 @@ msgstr "Θέμα κέλυφους"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:121
 msgid "Install custom or user themes for gnome-shell"
-msgstr "Εγκατάσταση θεμάτων χρήστη για το gnome shell"
+msgstr "Εγκατάσταση θεμάτων χρήστη για το κέλυφος gnome"
 
 #. check the shell is running and the usertheme extension is present
 #: ../gtweak/tweaks/tweak_group_interface.py:124
@@ -306,7 +302,7 @@ msgid "Theme"
 msgstr "Θέμα"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:62
+#: ../gtweak/tweaks/tweak_group_windows.py:84
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
 
@@ -479,53 +475,65 @@ msgstr "Νέα εφαρμογή στην έναρξη"
 msgid "Add a new application to be run at startup"
 msgstr "Προσθήκη μιας νέας εφαρμογής που θα εκτελείται στην έναρξη"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:56
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window scaling"
+msgstr "Κλιμάκωση παραθύρου"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "Ρύθμιση του συντελεστή κλιμάκωσης παραθύρου GDK για HiDPI"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:78
 msgid "Attached Modal Dialogs"
 msgstr "Προσαρτημένοι αναγκαστικοί διάλογοι"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:57
+#: ../gtweak/tweaks/tweak_group_windows.py:79
 msgid "Automatically Raise Windows"
 msgstr "Αυτόματη ανύψωση παραθύρων"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:80
 msgid "Resize with Secondary-click"
 msgstr "Αυξομείωση με δευτερεύον πάτημα"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:81
 msgid "Window Action Key"
 msgstr "Κλειδί ενέργειας παραθύρου"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:63
+#: ../gtweak/tweaks/tweak_group_windows.py:85
 msgid "Focus Mode"
 msgstr "Κατάσταση εστίασης"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:64
+#: ../gtweak/tweaks/tweak_group_windows.py:86
 msgid "Titlebar Actions"
 msgstr "Ενέργειες γραμμής τίτλου"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:65
+#: ../gtweak/tweaks/tweak_group_windows.py:87
 msgid "Double-click"
 msgstr "Διπλό πάτημα"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:66
+#: ../gtweak/tweaks/tweak_group_windows.py:88
 msgid "Middle-click"
 msgstr "Μεσαίο πάτημα"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: ../gtweak/tweaks/tweak_group_windows.py:89
 msgid "Secondary-click"
 msgstr "Δευτερεύον πάτημα"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:68
+#: ../gtweak/tweaks/tweak_group_windows.py:90
 msgid "Titlebar Buttons"
 msgstr "Πλήκτρα γραμμής τίτλου"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:69
+#: ../gtweak/tweaks/tweak_group_windows.py:91
 msgid "Maximize"
 msgstr "Μεγιστοποίηση"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:70
+#: ../gtweak/tweaks/tweak_group_windows.py:92
 msgid "Minimize"
 msgstr "Ελαχιστοποίηση"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:93
+msgid "HiDPI"
+msgstr "HiDPI"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:29
 msgid "Middle-click Paste"
@@ -592,6 +600,9 @@ msgstr "Οι εφαρμογές πρέπει να επανεκκινηθεί γ�
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Σφάλμα στην εγγραφή της ρύθμισης"
+
+#~ msgid "_Help"
+#~ msgstr "_Βοήθεια"
 
 #~ msgid "welcome"
 #~ msgstr "καλωσήλθατε"
