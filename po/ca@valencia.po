@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-25 22:04+0200\n"
-"PO-Revision-Date: 2012-03-25 21:24+0200\n"
+"POT-Creation-Date: 2014-05-09 00:35+0200\n"
+"PO-Revision-Date: 2014-03-10 07:12+0100\n"
 "Last-Translator: Pau Iranzo <paugnu@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca-XV\n"
@@ -23,191 +23,582 @@ msgstr ""
 "Content-Transfer-Encoding: 8bits\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: ../data/shell.ui.h:1 ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Advanced Settings"
-msgstr "Configuració avançada"
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "El GNOME Tweak Tool vos permet ajustar opcions avançades del GNOME."
 
-#: ../data/shell.ui.h:2
-msgid "welcome"
-msgstr "vos donem la benvinguda"
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Pot instal·lar i gestionar temes i extensions, canviar paràmetres d'energia, "
+"gestionar les aplicacions d'inici i habilitar les icones d'escriptori entre "
+"d'altres."
 
-#: ../data/shell.ui.h:3
-msgid "tweaks"
-msgstr "paràmetres"
+#: ../data/gnome-tweak-tool.desktop.in.h:1
+msgid "Tweak Tool"
+msgstr "Eina d'ajustaments"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Configureu paràmetres avançats del GNOME 3"
 
-#: ../gtweak/tweaks/tweak_interface.py:33
-msgid "GTK+ theme"
-msgstr "Tema GTK+"
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Paràmetres;Avançat;Preferències;Extensions;Tipus de lletra;Temes;XKB;Teclat;"
+"Escriptura;"
 
-#: ../gtweak/tweaks/tweak_interface.py:51
-msgid "Icon theme"
-msgstr "Tema d'icones"
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "_Reinicialitza als valors per defecte"
 
-#: ../gtweak/tweaks/tweak_interface.py:86 ../gtweak/tweaks/tweak_shell.py:110
-msgid "<i>Default</i>"
-msgstr "<i>Per defecte</i>"
+#: ../data/shell.ui.h:2
+msgid "Disable All Shell Extensions"
+msgstr "Inhabilita totes les extensions del Shell"
 
-#: ../gtweak/tweaks/tweak_interface.py:87
-msgid "Keybinding theme"
-msgstr "Tema de vinculació de tecles"
+#: ../data/shell.ui.h:3
+msgid "_About"
+msgstr "_Quant a"
+
+#: ../data/shell.ui.h:4
+msgid "_Quit"
+msgstr "I_x"
+
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "Reinicialitza als valors per defecte"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Voleu reiniciar tots els paràmetres d'ajustament a l'estat original?"
+
+#: ../gtweak/app.py:93
+msgid "About GNOME Tweak Tool"
+msgstr "Quant al GNOME Tweak Tool"
+
+#: ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME Tweak Tool"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "GNOME Shell v%s (mode %s)"
+
+#: ../gtweak/app.py:100
+msgid "GNOME Shell not running"
+msgstr "El GNOME Shell no s'està executant"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Pàgina d'inici"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Aparença"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+msgid "Extensions"
+msgstr "Extensions"
+
+#: ../gtweak/tweakmodel.py:30
+msgid "Fonts"
+msgstr "Tipus de lletra"
+
+#: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Energia"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
+msgid "Startup Applications"
+msgstr "Aplicacions d'inici"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Barra superior"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Windows"
+msgstr "Finestres"
+
+#: ../gtweak/tweakmodel.py:35
+msgid "Workspaces"
+msgstr "Espais de treball"
+
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
+msgid "Mouse"
+msgstr "Ratolí"
+
+#: ../gtweak/tweakmodel.py:38
+msgid "Files"
+msgstr "Fitxers"
+
+#: ../gtweak/tweakmodel.py:52
+msgid "Miscellaneous"
+msgstr "Miscel·lània"
+
+#: ../gtweak/tweakview.py:93
+msgid "Tweaks"
+msgstr "Ajustaments"
+
+#: ../gtweak/tweakview.py:109
+msgid "Search Tweaks..."
+msgstr "Cerca ajustaments..."
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+msgid "Icons on Desktop"
+msgstr "Icones a l'escriptori"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Escriptori"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Ordinador"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Inici"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Servidors de xarxa"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Paperera"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Volums muntats"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Fons"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
+msgid "Mode"
+msgstr "Mode"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Ubicació del fons de pantalla"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Bloqueig de pantalla"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "Ubicació del bloqueig de pantalla"
+
+#: ../gtweak/tweaks/tweak_group_font.py:25
+msgid "Window Titles"
+msgstr "Títols de les finestres"
+
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Interfície"
+
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Documents"
+
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Monoespai"
+
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "Contorn"
+
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Suavitzat"
+
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Factor d'escala"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "Icones"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "Cursor"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+msgid "Window"
+msgstr "Finestra"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+msgid "Shell theme"
+msgstr "Tema del Shell"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+msgid "Install custom or user themes for gnome-shell"
+msgstr "Instal·la temes d'usuari o personalitzats per al gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:56
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "Error desconegut"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
 msgstr "El Shell no s'està executant"
 
-#: ../gtweak/tweaks/tweak_shell.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "L'extensió «user-theme» del Shell no està instal·lada correctament"
 
-#: ../gtweak/tweaks/tweak_shell.py:81
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "L'extensió «user-theme» del Shell no està habilitada"
 
-#: ../gtweak/tweaks/tweak_shell.py:84
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "No s'han pogut llistar les extensions del Shell"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:115
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>Per defecte</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "Seleccioneu un tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:162
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "S'ha actualitzat correctament el tema %s"
 
-#: ../gtweak/tweaks/tweak_shell.py:164
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "S'ha instal·lat correctament el tema %s"
 
-#: ../gtweak/tweaks/tweak_shell.py:172
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "S'ha produït un error en instal·lar el tema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:177
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "El tema no és vàlid"
 
-#: ../gtweak/tweaks/tweak_shell.py:195
-msgid "Shell"
-msgstr "Shell"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "Tema"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:84
+msgid "Disabled"
+msgstr "Inhabilitat"
+
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "Escriptura"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
 msgid "Extension downloading"
 msgstr "S'està baixant l'extensió"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
 msgid "Error loading extension"
 msgstr "S'ha produït un error en carregar l'extensió"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension does not support shell version"
 msgstr "L'extensió no és compatible amb la versió del Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Unknown extension error"
 msgstr "S'ha produït un error desconegut de l'extensió"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:46
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:131
+msgid "Remove"
+msgstr "Suprimeix"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+msgid "Uninstall Extension"
+msgstr "Desinstal·la l'extensió"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
-msgid "%s Extension"
-msgstr "Extensió %s"
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Voleu desinstal·lar l'extensió «%s»?"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:59
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Cal reiniciar el Shell perquè s'apliquin els canvis"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+msgid "Updating"
+msgstr "S'està actualitzant"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:60
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
-msgid "Restart"
-msgstr "Reinicia"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Error"
+msgstr "Error"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+msgid "Update"
+msgstr "Actualització"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Instal·la extensions del Shell"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Seleccioneu una extensió"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+msgid "Get more extensions"
+msgstr "Obtén més extensions"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "S'ha actualitzat correctament l'extensió %s"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "S'ha instal·lat correctament l'extensió %s"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+msgid "Restart"
+msgstr "Reinicia"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "S'ha produït un error en instal·lar l'extensió"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "L'extensió no és vàlida"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
-msgid "Shell Extensions"
-msgstr "Extensions del Shell"
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "Mostra el menú d'aplicacions"
 
-#: ../gtweak/tweaks/tweak_windows.py:31
-msgid "Window theme"
-msgstr "Tema de les finestres"
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "Creació d'espais de treball"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Dynamic"
+msgstr "Dinàmic"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "Estàtic"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Clock"
+msgstr "Rellotge"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show date"
+msgstr "Mostra la data"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Show seconds"
+msgstr "Mostra els segons"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Calendar"
+msgstr "Calendari"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Show week numbers"
+msgstr "Mostra el número de la setmana"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "Power Button Action"
+msgstr "Acció del botó d'engegada"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "When Laptop Lid is Closed"
+msgstr "Quan es tanca la tapa del portàtil"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "On Battery Power"
+msgstr "Quan s'utilitza la bateria"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "When plugged in"
+msgstr "Quan estiga connectat"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:82
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "Suspèn encara que estiga connectat un monitor extern"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "Nombre d'espais de treball"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
+msgid "Workspaces only on primary display"
+msgstr "Els espais de treball només en la pantalla principal"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:35
+msgid "Applications"
+msgstr "Aplicacions"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "s'està executant"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "_Close"
+msgstr "_Tanca"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:62
+msgid "Add Application"
+msgstr "Afig una aplicació"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:147
+msgid "New startup application"
+msgstr "Afig una aplicació d'inici"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:148
+msgid "Add a new application to be run at startup"
+msgstr "Afig una aplicació nova per executar-se a l'inici"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window scaling"
+msgstr "Escalat de les finestres"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr ""
+"Ajusteu el factor d'escalat de les finestres GDK per les pantalles HiDPI"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:78
+msgid "Attached Modal Dialogs"
+msgstr "Caixes de diàleg adjuntes"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:79
+msgid "Automatically Raise Windows"
+msgstr "Aixeca automàticament les finestres"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:80
+msgid "Resize with Secondary-click"
+msgstr "Redimensiona amb el clic secundari"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:81
+msgid "Window Action Key"
+msgstr "Tecla d'acció de finestra"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:85
+msgid "Focus Mode"
+msgstr "Mode d'enfocament"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:86
+msgid "Titlebar Actions"
+msgstr "Accions de la barra de títol"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:87
+msgid "Double-click"
+msgstr "Doble clic"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:88
+msgid "Middle-click"
+msgstr "Botó del mig"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:89
+msgid "Secondary-click"
+msgstr "Clic secundari"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:90
+msgid "Titlebar Buttons"
+msgstr "Botons de la barra de títol"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:91
+msgid "Maximize"
+msgstr "Maximitza"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:92
+msgid "Minimize"
+msgstr "Minimitza"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:93
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Enganxament amb el botó del mig"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+msgid "Key theme"
+msgstr "Clau del tema"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "Teclat i ratolí"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+msgid "Show All Input Sources"
+msgstr "Mostra totes les fonts d'entrada"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Canvia entre la vista general i l'escriptori"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Superior esquerra"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Superior dreta"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
+msgid "Show location of pointer"
+msgstr "Mostra la ubicació del punter"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Dispositiu"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(per defecte)</i>"
 
-#: ../gtweak/tweakmodel.py:26
-msgid "Fonts"
-msgstr "Tipus de lletra"
+#: ../gtweak/widgets.py:471
+msgid "Enable dark theme for all applications"
+msgstr "Activa el tema fosc per a totes les aplicacions"
 
-#: ../gtweak/tweakmodel.py:27
-msgid "Theme"
-msgstr "Tema"
+#: ../gtweak/widgets.py:472
+msgid "Enable the dark theme hint for all the applications in the session"
+msgstr ""
+"Activa el consell de tema fosc per a totes les aplicacions de la sessió"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Desktop"
-msgstr "Escriptori"
+#: ../gtweak/widgets.py:480
+msgid "Global Dark Theme"
+msgstr "Tema fosc global"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Windows"
-msgstr "Finestres"
+#: ../gtweak/widgets.py:481
+msgid "Applications need to be restarted for change to take effect"
+msgstr "S'han de reiniciar les aplicacions perquè els canvis siguen efectius"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:32
-msgid "Files"
-msgstr "Fitxers"
-
-#: ../gtweak/tweakmodel.py:40
-msgid "Miscellaneous"
-msgstr "Miscel·lània"
-
-#~ msgid "The shell may need to be restarted to apply the theme"
-#~ msgstr "És possible que calgui reiniciar el Shell per a aplicar el tema"
-
-#~ msgid "Tweak Tool"
-#~ msgstr "Eina d'ajustaments"
-
-#~ msgid "Interface"
-#~ msgstr "Interfície"
-
-#~ msgid "File Manager"
-#~ msgstr "Gestor de fitxers"
+#: ../gtweak/widgets.py:507
+msgid "Error writing setting"
+msgstr "S'ha produït un error en guardar els paràmetres"
