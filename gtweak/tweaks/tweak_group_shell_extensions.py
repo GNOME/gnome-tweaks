@@ -25,9 +25,12 @@ def _fix_shell_version_for_ego(version):
     version = '.'.join(version.split('.')[0:3])
     if version[-1] == '0':
         #if it is .0, drop that too
-        return '.'.join(version.split('.')[0:2])
+        return _get_shell_major_minor_version(version)
     else:
         return version
+
+def _get_shell_major_minor_version(version):
+    return '.'.join(version.split('.')[0:2])
 
 class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
@@ -311,14 +314,16 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
             resp = resp['shell_version_map']
             shell = GnomeShellFactory().get_shell()
             version = _fix_shell_version_for_ego(shell.version)
-            try:
-                resp = resp[version]
-                if int(resp["version"]) > extension["version"]:
-                    widget.add_update_button(uuid)
 
-            except KeyError:
+            if version in resp:
+                resp = resp[version]
+                ext_version = extension["version"] if "version" in extension else 0
+                if int(resp["version"]) > ext_version:
+                    widget.add_update_button(uuid)
+            else:
+                ext_version = extension["version"] if "version" in extension else "unknown"
                 logging.info("e.g.o no updates for %s (shell version %s extension version %s)" % (
-                             uuid,version,extension["version"]))
+                             uuid, version, ext_version))
 
     def _list_header_func(self, row, before, user_data):
         if before and not row.get_header():
