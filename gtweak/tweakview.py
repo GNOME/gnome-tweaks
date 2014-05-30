@@ -29,7 +29,8 @@ class Window(Gtk.ApplicationWindow):
 
     def __init__(self, app, model):
         Gtk.ApplicationWindow.__init__(self,
-                                       application=app)
+                                       application=app,
+                                       show_menubar=False)
         
         self.set_size_request(950, 680)
         self.set_position(Gtk.WindowPosition.CENTER)
