@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool 3.11.x\n"
+"Project-Id-Version: gnome-tweak-tool 3.13.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-23 18:46+0100\n"
-"PO-Revision-Date: 2014-03-23 18:47+0100\n"
+"POT-Creation-Date: 2014-07-24 10:56+0200\n"
+"PO-Revision-Date: 2014-07-24 10:58+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -131,11 +131,11 @@ msgstr "Filer"
 msgid "Miscellaneous"
 msgstr "Forskjellig"
 
-#: ../gtweak/tweakview.py:93
+#: ../gtweak/tweakview.py:94
 msgid "Tweaks"
 msgstr "Konfigurasjonsendringer"
 
-#: ../gtweak/tweakview.py:109
+#: ../gtweak/tweakview.py:110
 msgid "Search Tweaks..."
 msgstr "Søk etter konfigurasjonsendringer …"
 
@@ -185,9 +185,8 @@ msgid "Lock Screen"
 msgstr "Lås skjerm"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:37
-#, fuzzy
 msgid "Lock Screen Location"
-msgstr "Bakgrunnslokasjon"
+msgstr "Plassering av lås skjerm"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -293,7 +292,7 @@ msgid "Theme"
 msgstr "Tema"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:62
+#: ../gtweak/tweaks/tweak_group_windows.py:84
 msgid "Disabled"
 msgstr "Slått av"
 
@@ -466,53 +465,65 @@ msgstr "Nytt oppstartsprogram"
 msgid "Add a new application to be run at startup"
 msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_windows.py:56
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window scaling"
+msgstr "Skalering av vindu"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "Juster faktor for skalering av vindu fra GDK for HiDPI"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:78
 msgid "Attached Modal Dialogs"
 msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_windows.py:57
+#: ../gtweak/tweaks/tweak_group_windows.py:79
 msgid "Automatically Raise Windows"
 msgstr "Hev vinduer automatisk"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:80
 msgid "Resize with Secondary-click"
 msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:81
 msgid "Window Action Key"
 msgstr "Handlingstast for vindu"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:63
+#: ../gtweak/tweaks/tweak_group_windows.py:85
 msgid "Focus Mode"
 msgstr "Fokusmodus"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:64
+#: ../gtweak/tweaks/tweak_group_windows.py:86
 msgid "Titlebar Actions"
 msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_windows.py:65
+#: ../gtweak/tweaks/tweak_group_windows.py:87
 msgid "Double-click"
 msgstr "Dobbeltklikk"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:66
+#: ../gtweak/tweaks/tweak_group_windows.py:88
 msgid "Middle-click"
 msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: ../gtweak/tweaks/tweak_group_windows.py:89
 msgid "Secondary-click"
 msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_windows.py:68
+#: ../gtweak/tweaks/tweak_group_windows.py:90
 msgid "Titlebar Buttons"
 msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_windows.py:69
+#: ../gtweak/tweaks/tweak_group_windows.py:91
 msgid "Maximize"
 msgstr "Maksimer"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:70
+#: ../gtweak/tweaks/tweak_group_windows.py:92
 msgid "Minimize"
 msgstr "Minimer"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:93
+msgid "HiDPI"
+msgstr "HiDPI"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:29
 msgid "Middle-click Paste"
@@ -562,7 +573,7 @@ msgstr "%s <i>(forvalg)</i>"
 
 #: ../gtweak/widgets.py:471
 msgid "Enable dark theme for all applications"
-msgstr ""
+msgstr "Slå på mørkt tema for alle programmer"
 
 #: ../gtweak/widgets.py:472
 msgid "Enable the dark theme hint for all the applications in the session"
@@ -570,7 +581,7 @@ msgstr ""
 
 #: ../gtweak/widgets.py:480
 msgid "Global Dark Theme"
-msgstr ""
+msgstr "Globalt mørkt tema"
 
 #: ../gtweak/widgets.py:481
 msgid "Applications need to be restarted for change to take effect"
