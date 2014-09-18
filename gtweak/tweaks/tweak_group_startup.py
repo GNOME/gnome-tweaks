@@ -85,7 +85,7 @@ class _AppChooser(Gtk.Dialog):
             img.props.hexpand = False
         else:
              img = None #attach_next_to treats this correctly
-        lbl = Gtk.Label(a.get_name(), xalign=0)
+        lbl = Gtk.Label(label=a.get_name(), xalign=0)
         g.attach_next_to(lbl,img,Gtk.PositionType.RIGHT,1,1)
         lbl.props.hexpand = True
         lbl.props.halign = Gtk.Align.START
@@ -93,7 +93,7 @@ class _AppChooser(Gtk.Dialog):
         lbl.props.valign = Gtk.Align.CENTER
         if extra:
             g.attach_next_to(
-                Gtk.Label(extra),
+                Gtk.Label(label=extra),
                 lbl,Gtk.PositionType.RIGHT,1,1)
         row.add(g)
         #row.get_style_context().add_class('tweak-white')
