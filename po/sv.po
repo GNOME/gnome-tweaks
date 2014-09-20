@@ -1,200 +1,617 @@
 # Swedish translation for gnome-tweak-tool.
-# Copyright (C) 2011, 2012 Free Software Foundation, Inc.
+# Copyright © 2011-2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Daniel Nylander <po@danielnylander.se>, 2011, 2012.
+# Sebastian Rasmussen <sebras@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-10 19:46+0200\n"
-"PO-Revision-Date: 2012-04-10 20:20+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-09-17 17:09+0000\n"
+"PO-Revision-Date: 2014-09-19 23:50+0100\n"
+"Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
-"Language: \n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: ../data/shell.ui.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr ""
+"GNOMEs Justeringsverktyg erbjuder justering av avancerade GNOME-alternativ."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Det kan installera och hantera teman och tillägg, ändra "
+"strömsparinställningar, hantera autostartande program, och aktivera "
+"skrivbordsikoner bland annat."
+
 #: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Advanced Settings"
-msgstr "Avancerade inställningar"
-
-#: ../data/shell.ui.h:2
-msgid "welcome"
-msgstr "välkommen"
-
-#: ../data/shell.ui.h:3
-msgid "tweaks"
-msgstr "justeringar"
+msgid "Tweak Tool"
+msgstr "Justeringsverktyg"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Justera avancerade GNOME 3-inställningar"
 
-#: ../gtweak/tweaks/tweak_interface.py:33
-msgid "GTK+ theme"
-msgstr "GTK+-tema"
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Inställningar;Avancerad;Tillägg;Typsnitt;Tema;XKB;Tangentbord;Inmatning;"
 
-#: ../gtweak/tweaks/tweak_interface.py:51
-msgid "Icon theme"
-msgstr "Ikontema"
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "_Återställ till standard"
 
-#: ../gtweak/tweaks/tweak_interface.py:86
-#: ../gtweak/tweaks/tweak_shell.py:110
-msgid "<i>Default</i>"
-msgstr "<i>Standard</i>"
+#: ../data/shell.ui.h:2
+msgid "Disable All Shell Extensions"
+msgstr "Inaktivera alla skaltillägg"
 
-#: ../gtweak/tweaks/tweak_interface.py:87
-msgid "Keybinding theme"
-msgstr "Tangentbindningstema"
+#: ../data/shell.ui.h:3
+msgid "_About"
+msgstr "_Om"
+
+#: ../data/shell.ui.h:4
+msgid "_Quit"
+msgstr "_Avsluta"
+
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "Återställ till standard"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Återställ alla justeringsinställningar till deras standardläge?"
+
+#: ../gtweak/app.py:93
+msgid "About GNOME Tweak Tool"
+msgstr "Om GNOMEs Justeringsverktyg"
+
+#: ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOMEs Justeringsverktyg"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "GNOME-skal v%s (%s-läge)"
+
+#: ../gtweak/app.py:100
+msgid "GNOME Shell not running"
+msgstr "GNOME-skalet kör inte"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Hemsida"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Utseende"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:307
+msgid "Extensions"
+msgstr "Tillägg"
+
+#: ../gtweak/tweakmodel.py:30
+msgid "Fonts"
+msgstr "Typsnitt"
+
+#: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Ström"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
+msgid "Startup Applications"
+msgstr "Autostartande program"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Systemraden"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Windows"
+msgstr "Fönster"
+
+#: ../gtweak/tweakmodel.py:35
+msgid "Workspaces"
+msgstr "Arbetsytor"
+
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
+msgid "Mouse"
+msgstr "Mus"
+
+#: ../gtweak/tweakmodel.py:38
+msgid "Files"
+msgstr "Filer"
+
+#: ../gtweak/tweakmodel.py:52
+msgid "Miscellaneous"
+msgstr "Diverse"
+
+#: ../gtweak/tweakview.py:94
+msgid "Tweaks"
+msgstr "Justeringar"
+
+#: ../gtweak/tweakview.py:110
+msgid "Search Tweaks..."
+msgstr "Sök justeringar…"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+msgid "Icons on Desktop"
+msgstr "Ikoner på skrivbordet"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Skrivbord"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Dator"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Hem"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Nätverksservrar"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Papperskorg"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Monterade volymer"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Bakgrund"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
+msgid "Mode"
+msgstr "Läge"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Bakgrundsplats"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Låsskärm"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "Låsskärmsplats"
+
+#: ../gtweak/tweaks/tweak_group_font.py:25
+msgid "Window Titles"
+msgstr "Fönstertitlar"
+
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Gränssnitt"
+
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Dokument"
+
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Monospace"
+
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "Hintning"
+
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Kantutjämning"
+
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Skalningsfaktor"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:60
+msgid "Icons"
+msgstr "Ikoner"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:78
+msgid "Cursor"
+msgstr "Markör"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:96
+msgid "Window"
+msgstr "Fönster"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+msgid "Shell theme"
+msgstr "Skaltema"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:121
+msgid "Install custom or user themes for gnome-shell"
+msgstr "Installera anpassade eller användarteman för gnome-skalet"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_shell.py:56
+#: ../gtweak/tweaks/tweak_group_interface.py:124
 msgid "Unknown error"
 msgstr "Okänt fel"
 
-#: ../gtweak/tweaks/tweak_shell.py:61
+#: ../gtweak/tweaks/tweak_group_interface.py:129
 msgid "Shell not running"
-msgstr "Skal är inte igång"
+msgstr "Skalet är inte igång"
 
-#: ../gtweak/tweaks/tweak_shell.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:151
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Tillägg för skalets användartema är inte korrekt installerat"
 
-#: ../gtweak/tweaks/tweak_shell.py:81
+#: ../gtweak/tweaks/tweak_group_interface.py:154
 msgid "Shell user-theme extension not enabled"
 msgstr "Tillägg för skalets användartema är inte aktiverat"
 
-#: ../gtweak/tweaks/tweak_shell.py:84
+#: ../gtweak/tweaks/tweak_group_interface.py:157
 msgid "Could not list shell extensions"
 msgstr "Kunde inte lista skaltillägg"
 
-#. a filechooser to install new themes
-#: ../gtweak/tweaks/tweak_shell.py:115
+#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+msgid "<i>Default</i>"
+msgstr "<i>Standard</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:192
 msgid "Select a theme"
 msgstr "Välj ett tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:162
+#: ../gtweak/tweaks/tweak_group_interface.py:241
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s tema uppdaterades"
 
-#: ../gtweak/tweaks/tweak_shell.py:164
+#: ../gtweak/tweaks/tweak_group_interface.py:243
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s tema installerades"
 
-#: ../gtweak/tweaks/tweak_shell.py:172
+#: ../gtweak/tweaks/tweak_group_interface.py:251
 msgid "Error installing theme"
 msgstr "Fel vid installation av tema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell.py:177
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Invalid theme"
 msgstr "Ogiltigt tema"
 
-#: ../gtweak/tweaks/tweak_shell.py:195
-msgid "Shell"
-msgstr "Skal"
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:272
+msgid "Theme"
+msgstr "Tema"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:35
+#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_windows.py:84
+msgid "Disabled"
+msgstr "Inaktiverad"
+
+#: ../gtweak/tweaks/tweak_group_xkb.py:131
+msgid "Typing"
+msgstr "Inmatning"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
 msgid "Extension downloading"
 msgstr "Tillägget hämtas"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:37
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
 msgid "Error loading extension"
 msgstr "Fel vid inläsning av tillägget"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:39
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
 msgid "Extension does not support shell version"
 msgstr "Tillägget saknar stöd för skalversionen"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:41
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
 msgid "Unknown extension error"
 msgstr "Okänt tilläggsfel"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:46
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
+#: ../gtweak/tweaks/tweak_group_startup.py:131
+msgid "Remove"
+msgstr "Ta bort"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
+msgid "Uninstall Extension"
+msgstr "Avinstallera tillägg"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
 #, python-format
-msgid "%s Extension"
-msgstr "%s tillägg"
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Vill du avinstallera tillägget “%s“?"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:59
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Skalet måste startas om för att ändringarna ska aktiveras"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
+msgid "Updating"
+msgstr "Uppdaterar"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:60
-#: ../gtweak/tweaks/tweak_shell_extensions.py:125
-msgid "Restart"
-msgstr "Starta om"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
+msgid "Error"
+msgstr "Fel"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:68
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
+msgid "Update"
+msgstr "Uppdatera"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
 msgid "Install Shell Extension"
 msgstr "Installera skaltillägg"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:72
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
 msgid "Select an extension"
 msgstr "Välj ett tillägg"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:119
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
+msgid "Get more extensions"
+msgstr "Hämta fler tillägg"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s tillägg uppdaterades"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:121
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s tillägg installerades"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:129
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:257
+msgid "Restart"
+msgstr "Starta om"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:261
 msgid "Error installing extension"
 msgstr "Fel vid installation av tillägget"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_shell_extensions.py:134
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:266
 msgid "Invalid extension"
 msgstr "Ogiltigt tillägg"
 
-#: ../gtweak/tweaks/tweak_shell_extensions.py:142
-msgid "Shell Extensions"
-msgstr "Skaltillägg"
+#: ../gtweak/tweaks/tweak_group_shell.py:32
+msgid "Show Application Menu"
+msgstr "Visa programmeny"
 
-#: ../gtweak/tweaks/tweak_windows.py:31
-msgid "Window theme"
-msgstr "Fönstertema"
+#: ../gtweak/tweaks/tweak_group_shell.py:45
+msgid "Workspace Creation"
+msgstr "Skapa arbetsyta"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Dynamic"
+msgstr "Dynamisk"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:50
+msgid "Static"
+msgstr "Statisk"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:71
+msgid "Clock"
+msgstr "Klocka"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:72
+msgid "Show date"
+msgstr "Visa datum"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:73
+msgid "Show seconds"
+msgstr "Visa sekunder"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Calendar"
+msgstr "Kalender"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Show week numbers"
+msgstr "Visa veckonummer"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:78
+msgid "Power Button Action"
+msgstr "Strömknappsåtgärd"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:79
+msgid "When Laptop Lid is Closed"
+msgstr "När locket på den bärbara datorn stängs"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:80
+msgid "On Battery Power"
+msgstr "Vid batteridrift"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:81
+msgid "When plugged in"
+msgstr "När strömsladd är ansluten"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:82
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "Försätt i vänteläge även om en extern skärm är ansluten"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:86
+msgid "Number of Workspaces"
+msgstr "Antal arbetsytor"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:87
+msgid "Workspaces only on primary display"
+msgstr "Arbetsytor bara på den primära skärmen"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:35
+msgid "Applications"
+msgstr "Program"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "kör"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
+msgid "_Close"
+msgstr "_Stäng"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:62
+msgid "Add Application"
+msgstr "Lägg till program"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:147
+msgid "New startup application"
+msgstr "Nytt autostartande program"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:148
+msgid "Add a new application to be run at startup"
+msgstr "Lägg till ett nytt program som körs vid uppstart"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Window scaling"
+msgstr "Fönsterskalning"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:59
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "Justera GDK-fönsters skalningsfaktor för HiDPI"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:78
+msgid "Attached Modal Dialogs"
+msgstr "Fästa modala dialogrutor"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:79
+msgid "Automatically Raise Windows"
+msgstr "Höj automatiskt fönster"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:80
+msgid "Resize with Secondary-click"
+msgstr "Ändra storlek med sekundärklick"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:81
+msgid "Window Action Key"
+msgstr "Fönsteråtgärdstangent"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:85
+msgid "Focus Mode"
+msgstr "Fokusläge"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:86
+msgid "Titlebar Actions"
+msgstr "Åtgärder via namnlisten"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:87
+msgid "Double-click"
+msgstr "Dubbelklick"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:88
+msgid "Middle-click"
+msgstr "Mittenklick"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:89
+msgid "Secondary-click"
+msgstr "Sekundärklick"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:90
+msgid "Titlebar Buttons"
+msgstr "Knappar i namnlisten"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:91
+msgid "Maximize"
+msgstr "Maximera"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:92
+msgid "Minimize"
+msgstr "Minimera"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:93
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Mittenklick klistra in"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+msgid "Key theme"
+msgstr "Tangenttema"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+msgid "Keyboard and Mouse"
+msgstr "Tangentbord och mus"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+msgid "Show All Input Sources"
+msgstr "Visa alla inmatningskällor"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Växla mellan översiktsvy och skrivbord"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Super till vänster"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Super till höger"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
+msgid "Show location of pointer"
+msgstr "Visa positionen för markören"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Enhet"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:66
+#: ../gtweak/utils.py:70
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standard)</i>"
 
-#: ../gtweak/tweakmodel.py:26
-msgid "Fonts"
-msgstr "Typsnitt"
+#: ../gtweak/widgets.py:471
+msgid "Enable dark theme for all applications"
+msgstr "Aktivera mörkt tema för alla program"
 
-#: ../gtweak/tweakmodel.py:27
-msgid "Theme"
-msgstr "Tema"
+#: ../gtweak/widgets.py:472
+msgid "Enable the dark theme hint for all the applications in the session"
+msgstr "Aktivera tipset om mörkt tema för alla program i sessionen"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Desktop"
-msgstr "Skrivbord"
+#: ../gtweak/widgets.py:480
+msgid "Global Dark Theme"
+msgstr "Globalt mörkt tema"
 
-#: ../gtweak/tweakmodel.py:29
-msgid "Windows"
-msgstr "Fönster"
+#: ../gtweak/widgets.py:481
+msgid "Applications need to be restarted for change to take effect"
+msgstr "Program måste startas om för att ändringen ska få effekt"
 
-#. translate this the same as the name of the file manager (nautilus)
-#: ../gtweak/tweakmodel.py:32
-msgid "Files"
-msgstr "Filer"
+#: ../gtweak/widgets.py:507
+msgid "Error writing setting"
+msgstr "Fel vid skrivning av inställning"
 
-#: ../gtweak/tweakmodel.py:40
-msgid "Miscellaneous"
-msgstr "Diverse"
+#~ msgid "Advanced Settings"
+#~ msgstr "Avancerade inställningar"
 
-#~ msgid "Tweak Tool"
-#~ msgstr "Justeringsverktyg"
+#~ msgid "welcome"
+#~ msgstr "välkommen"
+
+#~ msgid "Icon theme"
+#~ msgstr "Ikontema"
+
+#~ msgid "Keybinding theme"
+#~ msgstr "Tangentbindningstema"
+
+#~ msgid "Shell"
+#~ msgstr "Skal"
+
+#~ msgid "Shell Extensions"
+#~ msgstr "Skaltillägg"
