@@ -140,10 +140,10 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
             first_message = _("Uninstall Extension")
             second_message = _("Do you want to uninstall the '%s' extension?") % name
             dialog = Gtk.MessageDialog(
-                                   self.main_window,0,
-                                   type=Gtk.MessageType.QUESTION,
+                                   transient_for=self.main_window, flags=0,
+                                   message_type=Gtk.MessageType.QUESTION,
                                    buttons=Gtk.ButtonsType.YES_NO,
-                                   message_format=first_message)
+                                   text=first_message)
             dialog.format_secondary_text(second_message)
             response = dialog.run()
             if response == Gtk.ResponseType.YES:
