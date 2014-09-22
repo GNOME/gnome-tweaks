@@ -252,10 +252,7 @@ class _ShellExtensionInstallerTweak(Gtk.Box, Tweak):
                     else:
                         verb = _("%s extension installed successfully") % extension_uuid
 
-                    self.notify_action_required(
-                        verb,
-                        _("Restart"),
-                        self._shell.restart)
+                    self.notify_logout()
 
                 else:
                     self.notify_information(_("Error installing extension"))

@@ -322,7 +322,7 @@ class LogoutNotification:
         else:
             raise Exception("Not Supported")
 
-    def _logout(self, btn, action, unknown):
+    def _logout(self, btn, action, user_data, unknown):
         d = Gio.bus_get_sync(Gio.BusType.SESSION, None)
         proxy = Gio.DBusProxy.new_sync(
                        d,Gio.DBusProxyFlags.NONE, None,
