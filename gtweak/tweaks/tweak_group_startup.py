@@ -207,7 +207,7 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
         exes = []
         cmd = subprocess.Popen([
                     'ps','-e','-w','-w','-U',
-                    os.getlogin(),'-o','cmd'],
+                    str(os.getuid()),'-o','cmd'],
                     stdout=subprocess.PIPE)
         out = cmd.communicate()[0]
         for l in out.split('\n'):
