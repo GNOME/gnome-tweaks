@@ -30,7 +30,6 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
 
     def __init__(self, name, value, **options):
         self.value = value
-        self._xsettings = XSettingsOverrides()
         GSettingsSwitchTweakValue.__init__(self,
                                            name,
                                            "org.gnome.desktop.wm.preferences",
@@ -51,7 +50,6 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
             val = val.replace(self.value+",", "")
 
         self.settings.set_string(self.key_name, val)
-        self._xsettings.set_window_buttons(val.replace(":", "menu:"))
 
 class WindowScalingFactorTweak(Gtk.Box, Tweak):
     def __init__(self, **options):
