@@ -55,6 +55,9 @@ class Window(Gtk.ApplicationWindow):
         self._model.load_tweaks(self)
         self.load_model_data()
 
+        Gtk.Settings.get_default().connect("notify::gtk-decoration-layout",
+                                          self._update_decorations);
+
         self.connect("key-press-event", self._on_key_press)
         self.add(main_box)
     
@@ -67,16 +70,15 @@ class Window(Gtk.ApplicationWindow):
         right_header = Gtk.HeaderBar()
         right_header.props.show_close_button = True
 
+        self._left_header = left_header;
+        self._right_header = right_header;
+
         left_header.get_style_context().add_class("titlebar")
         left_header.get_style_context().add_class("tweak-titlebar-left")
         right_header.get_style_context().add_class("titlebar")
         right_header.get_style_context().add_class("tweak-titlebar-right")
 
-        layout_desc = Gtk.Settings.get_default().props.gtk_decoration_layout;
-        tokens = layout_desc.split(":", 2)
-        if tokens != None:
-                right_header.props.decoration_layout = ":" + tokens[1]
-                left_header.props.decoration_layout = tokens[0]
+        self._update_decorations (Gtk.Settings.get_default(), None)
 
         self.title = Gtk.Label(label="")
         self.title.get_style_context().add_class("title")
@@ -186,6 +188,13 @@ class Window(Gtk.ApplicationWindow):
     def _list_header_func(self, row, before, user_data):
         if before and not row.get_header():
             row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
+
+    def _update_decorations(self, settings, pspec):
+        layout_desc = settings.props.gtk_decoration_layout;
+        tokens = layout_desc.split(":", 2)
+        if tokens != None:
+                self._right_header.props.decoration_layout = ":" + tokens[1]
+                self._left_header.props.decoration_layout = tokens[0]
 
     def _on_key_press(self, widget, event):
         keyname = Gdk.keyval_name(event.keyval)
