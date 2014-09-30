@@ -21,7 +21,7 @@ from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, Tweak
 from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue, build_label_beside_widget
 from gtweak.utils import XSettingsOverrides
 
-from gi.repository import Gtk
+from gi.repository import Gtk, GLib
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -57,6 +57,7 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
         Tweak.__init__(self, _("Window scaling"), _("Adjust GDK window scaling factor for HiDPI"), **options)
 
         self._xsettings = XSettingsOverrides()
+        self._original_factor = self._xsettings.get_window_scaling_factor()
 
         adjustment = Gtk.Adjustment(lower=1, upper=2, step_increment=1, page_increment=1)
         w = Gtk.SpinButton()
@@ -68,8 +69,52 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
         build_label_beside_widget(self.name, w, hbox=self)
         self.widget_for_size_group = w
 
+    def _timeout_func (self):
+        self._countdown -= 1
+
+        if self._countdown == 0:
+            self._source = 0
+            self._dialog.response(Gtk.ResponseType.NO)
+            return False
+
+        self._dialog.format_secondary_text(self._second_message % self._countdown)
+        return True
+
+    def _close(self):
+        if self._source > 0:
+            GLib.Source.remove(self._source)
+            self._source = 0
+
     def _on_value_changed(self, adj):
+        if adj.get_value() == self._original_factor:
+            return
+
         self._xsettings.set_window_scaling_factor(adj.get_value())
+        self._countdown = 20
+
+        first_message = _("Do you want to keep these HiDPI settings?")
+        self._second_message = _("Settings will be reverted in %d seconds")
+
+        self._dialog = Gtk.MessageDialog(
+                               transient_for=self.main_window,
+                               message_type=Gtk.MessageType.QUESTION,
+                               text=first_message)
+        self._dialog.add_buttons(_("Revert Settings"), Gtk.ResponseType.NO,
+                                _("Keep Changes"), Gtk.ResponseType.YES)
+        self._dialog.format_secondary_text(self._second_message % self._countdown)
+
+        self._source = GLib.timeout_add_seconds(interval=1, function=self._timeout_func)
+
+        response = self._dialog.run()
+
+        if response == Gtk.ResponseType.YES:
+            self._original_factor = self._xsettings.get_window_scaling_factor()
+        else:
+            self._xsettings.set_window_scaling_factor(self._original_factor)
+            adj.set_value(self._original_factor)
+
+        self._close()
+        self._dialog.destroy()
 
 TWEAK_GROUPS = [ 
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
