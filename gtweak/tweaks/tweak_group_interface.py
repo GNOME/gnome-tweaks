@@ -90,22 +90,6 @@ class CursorThemeSwitcher(GSettingsComboTweak):
                         os.path.exists(os.path.join(d, "cursors")))
         return valid
 
-class WindowThemeSwitcher(GSettingsComboTweak):
-    def __init__(self, **options):
-        GSettingsComboTweak.__init__(self,
-			_("Window"),
-            "org.gnome.desktop.wm.preferences",
-            "theme",
-            make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
-            **options)
-
-    def _get_valid_themes(self):
-        dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
-                 os.path.join(GLib.get_user_data_dir(), "themes"))
-        valid = walk_directories(dirs, lambda d:
-                    os.path.exists(os.path.join(d, "metacity-1")))
-        return valid
-
 class ShellThemeTweak(Gtk.Box, Tweak):
 
     THEME_EXT_NAME = "user-theme@gnome-shell-extensions.gcampax.github.com"
@@ -270,7 +254,6 @@ TWEAK_GROUPS = [
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
         Title(_("Theme"), "", uid="title-theme"),
-        WindowThemeSwitcher(),
         GtkThemeSwitcher(),
         IconThemeSwitcher(),
         CursorThemeSwitcher(),
