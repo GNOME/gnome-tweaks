@@ -135,8 +135,8 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
 
         self.add(grid)
 
-        self.props.margin_left = 1
-        self.props.margin_right = 1
+        self.props.margin_start = 1
+        self.props.margin_end = 1
         self.get_style_context().add_class('tweak-startup')
 
         self.btn = btn
@@ -148,12 +148,10 @@ class AddStartupTweak(Gtk.ListBoxRow, Tweak):
                        _("Add a new application to be run at startup"),
                        **options)
 
-        self.btn = Gtk.Button(label="")
-        self.btn.get_style_context().remove_class("button")
         img = Gtk.Image()
         img.set_from_icon_name("list-add-symbolic", Gtk.IconSize.BUTTON)
-        self.btn.set_image(img)
-        self.btn.props.always_show_image = True
+        self.btn = Gtk.Button(label="", image=img, always_show_image=True)
+        self.btn.get_style_context().remove_class("button")
         self.add(self.btn)
         self.get_style_context().add_class('tweak-startup')
 
