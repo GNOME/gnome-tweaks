@@ -50,9 +50,9 @@ class _AppChooser(Gtk.Dialog):
                         a,
                         _("running") if running else "")
                 if w:
-                    lb.add(w)
                     self._all[w] = a
                     self._running[w] = running
+                    lb.add(w)
 
         sw = Gtk.ScrolledWindow()
         sw.props.hscrollbar_policy = Gtk.PolicyType.NEVER
@@ -69,9 +69,23 @@ class _AppChooser(Gtk.Dialog):
         self.listbox = lb
 
     def _sort_apps(self, a, b, user_data):
-        if self._running.get(a) and not self._running.get(b):
+        arun = self._running.get(a)
+        brun = self._running.get(b)
+
+        if arun and not brun:
             return -1
-        return 1
+        elif not arun and brun:
+            return 1
+        else:
+            aname = self._all.get(a).get_name()
+            bname = self._all.get(b).get_name()
+
+            if aname < bname:
+                return -1
+            elif aname > bname:
+                return 1
+            else:
+                return 0
 
     def _build_widget(self, a, extra):
         row = Gtk.ListBoxRow()
