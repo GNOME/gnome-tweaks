@@ -60,7 +60,7 @@ class IconThemeSwitcher(GSettingsComboTweak):
 			_("Icons"),            
 			"org.gnome.desktop.interface",
             "icon-theme",
-            make_combo_list_with_default(self._get_valid_icon_themes(), "gnome"),
+            make_combo_list_with_default(self._get_valid_icon_themes(), "Adwaita"),
             **options)
 
     def _get_valid_icon_themes(self):
