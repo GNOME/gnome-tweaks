@@ -9,22 +9,38 @@
 # 80s <onder.y@msn.com>, 2013
 # --------------------------------------- #
 # Muhammet Kara <muhammetk@gmail.com>, 2013.
+# Necdet Yücel <necdetyucel@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-09-27 11:46+0000\n"
-"PO-Revision-Date: 2013-10-01 12:02+0300\n"
-"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
+"POT-Creation-Date: 2014-12-19 08:56+0000\n"
+"PO-Revision-Date: 2014-12-19 21:04+0000\n"
+"Last-Translator: Necdet Yücel <necdetyucel@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Pootle 2.5.1.1\n"
+"X-POOTLE-MTIME: 1419023071.000000\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr ""
+"GNOME İnce Ayar Aracı gelişmiş GNOME seçeneklerini ayarlamaya izin verir."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Temaların ve eklentilerin kurulup yönetilmesine, güç ayarlarının "
+"değiştirilmesine, başlangıç uygulamalarının düzenlenmesine ve diğer "
+"ayarların yanı sıra masaüstü simgelerinin etkinleştirilmesine imkan sunar."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -45,20 +61,14 @@ msgid "_Reset to Defaults"
 msgstr "Öntanımlı Değerlere Sıfı_rla"
 
 #: ../data/shell.ui.h:2
-#| msgid "Install Shell Extension"
 msgid "Disable All Shell Extensions"
 msgstr "Tüm Kabuk Eklentilerini Devre Dışı Bırak"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "_Yardım"
+msgid "_About"
+msgstr "_Hakkında"
 
 #: ../data/shell.ui.h:4
-#| msgid "Tweak Tool"
-msgid "_About Tweak Tool"
-msgstr "İnce Ayar Aracı H_akkında"
-
-#: ../data/shell.ui.h:5
 msgid "_Quit"
 msgstr "_Çıkış"
 
@@ -71,12 +81,10 @@ msgid "Reset all tweak settings to the original default state?"
 msgstr "Tüm ince ayarlar öntanımlı hallerine getirilsin mi?"
 
 #: ../gtweak/app.py:93
-#| msgid "Tweak Tool"
 msgid "About GNOME Tweak Tool"
 msgstr "GNOME İnce Ayar Aracı Hakkında"
 
 #: ../gtweak/app.py:94
-#| msgid "Tweak Tool"
 msgid "GNOME Tweak Tool"
 msgstr "GNOME İnce Ayar Aracı"
 
@@ -86,7 +94,6 @@ msgid "GNOME Shell v%s (%s mode)"
 msgstr "GNOME Shell v%s (%s kipi)"
 
 #: ../gtweak/app.py:100
-#| msgid "Shell not running"
 msgid "GNOME Shell not running"
 msgstr "GNOME Shell çalışmıyor"
 
@@ -99,8 +106,7 @@ msgid "Appearance"
 msgstr "Görünüm"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
-#| msgid "Shell Extensions"
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
 msgid "Extensions"
 msgstr "Eklentiler"
 
@@ -112,7 +118,7 @@ msgstr "Yazı Tipleri"
 msgid "Power"
 msgstr "Güç"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:194
 msgid "Startup Applications"
 msgstr "Başlangıç Uygulamaları"
 
@@ -125,11 +131,10 @@ msgid "Windows"
 msgstr "Pencereler"
 
 #: ../gtweak/tweakmodel.py:35
-#| msgid "Dynamic workspaces"
 msgid "Workspaces"
 msgstr "Çalışma Alanları"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "Fare"
 
@@ -141,17 +146,15 @@ msgstr "Dosyalar"
 msgid "Miscellaneous"
 msgstr "Çeşitli"
 
-#: ../gtweak/tweakview.py:85
-#| msgid "tweaks"
+#: ../gtweak/tweakview.py:96
 msgid "Tweaks"
 msgstr "İnce Ayarlar"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:112
 msgid "Search Tweaks..."
 msgstr "İnce Ayar Ara..."
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:22
-#| msgid "Desktop"
 msgid "Icons on Desktop"
 msgstr "Masaüstü Simgeleri"
 
@@ -184,6 +187,7 @@ msgid "Background"
 msgstr "Arkaplan"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "Kip"
 
@@ -191,8 +195,16 @@ msgstr "Kip"
 msgid "Background Location"
 msgstr "Arkaplan Konumu"
 
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Ekranı Kilitle"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+#| msgid "Background Location"
+msgid "Lock Screen Location"
+msgstr "Ekran Konumu Kilitle"
+
 #: ../gtweak/tweaks/tweak_group_font.py:25
-#| msgid "Windows"
 msgid "Window Titles"
 msgstr "Pencere Başlıkları"
 
@@ -229,7 +241,6 @@ msgid "Cursor"
 msgstr "İmleç"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:96
-#| msgid "Windows"
 msgid "Window"
 msgstr "Pencere"
 
@@ -297,7 +308,7 @@ msgid "Theme"
 msgstr "Tema"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:62
+#: ../gtweak/tweaks/tweak_group_windows.py:82
 msgid "Disabled"
 msgstr "Devre dışı"
 
@@ -305,85 +316,76 @@ msgstr "Devre dışı"
 msgid "Typing"
 msgstr "Klavye"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
 msgid "Extension downloading"
 msgstr "Eklenti indiriliyor"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
 msgid "Error loading extension"
 msgstr "Eklenti çalıştırılırken hata"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
 msgid "Extension does not support shell version"
 msgstr "Eklenti kabuk sürümünü desteklemiyor"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
 msgid "Unknown extension error"
 msgstr "Bilinmeyen eklenti hatası"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:124
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
+#: ../gtweak/tweaks/tweak_group_startup.py:145
 msgid "Remove"
 msgstr "Kaldır"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "The shell must be restarted for changes to take effect"
-msgstr "Değişikliklerin geçerli olması için kabuk yeniden başlatılmalıdır"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
-msgid "Restart"
-msgstr "Yeniden Başlat"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
 msgid "Uninstall Extension"
 msgstr "Eklentiyi Kaldır"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "'%s' eklentisini kaldırmak ister misiniz?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
 msgid "Updating"
 msgstr "Güncelleniyor"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
 msgid "Error"
 msgstr "Hata"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
 msgid "Update"
 msgstr "Güncelle"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
 msgid "Install Shell Extension"
 msgstr "Kabuk Eklentisi Kur"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
 msgid "Select an extension"
 msgstr "Eklenti seç"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
 msgid "Get more extensions"
 msgstr "Daha fazla eklenti edin"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s eklentisi başarıyla güncellendi"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s eklentisi başarıyla kuruldu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "Eklenti kurulumunda hata"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
 msgid "Invalid extension"
 msgstr "Geçersiz eklenti"
 
@@ -396,8 +398,8 @@ msgid "Workspace Creation"
 msgstr "Çalışma Alanı Oluşturma"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-#| msgid "Dynamic workspaces"
-msgid "Dynamics"
+#| msgid "Dynamics"
+msgid "Dynamic"
 msgstr "Dinamik"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
@@ -460,79 +462,88 @@ msgstr "Uygulamalar"
 msgid "running"
 msgstr "çalışıyor"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:60
-#| msgid "Close Only"
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "_Close"
 msgstr "_Kapat"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:62
 msgid "Add Application"
 msgstr "Uygulama Ekle"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:139
+#: ../gtweak/tweaks/tweak_group_startup.py:161
 msgid "New startup application"
 msgstr "Yeni başlangıç uygulaması"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:140
+#: ../gtweak/tweaks/tweak_group_startup.py:162
 msgid "Add a new application to be run at startup"
 msgstr "Başlangıçta çalışacak yeni bir uygulama ekle"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:56
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+#| msgid "Windows"
+msgid "Window scaling"
+msgstr "Pencere ölçekleme"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:57
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "GDK pencere ölçekleme çarpanını HiDPI için ayarla"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:76
 msgid "Attached Modal Dialogs"
 msgstr "İlişik Yardımcı İletişim Pencereleri"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:57
+#: ../gtweak/tweaks/tweak_group_windows.py:77
 msgid "Automatically Raise Windows"
 msgstr "Pencereleri Otomatik Olarak Yükselt"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:78
 msgid "Resize with Secondary-click"
 msgstr "İkincil Tıklama ile Yeniden Boyutlandır"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:79
 msgid "Window Action Key"
 msgstr "Pencere Eylem Tuşu"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:63
+#: ../gtweak/tweaks/tweak_group_windows.py:83
 msgid "Focus Mode"
 msgstr "Odaklanma Kipi"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:64
+#: ../gtweak/tweaks/tweak_group_windows.py:84
 msgid "Titlebar Actions"
 msgstr "Başlık Çubuğu Eylemleri"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:65
+#: ../gtweak/tweaks/tweak_group_windows.py:85
 msgid "Double-click"
 msgstr "Çift Tıklama"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:66
+#: ../gtweak/tweaks/tweak_group_windows.py:86
 msgid "Middle-click"
 msgstr "Ort tuşla tıklama"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: ../gtweak/tweaks/tweak_group_windows.py:87
 msgid "Secondary-click"
 msgstr "İkincil tıklama"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:68
+#: ../gtweak/tweaks/tweak_group_windows.py:88
 msgid "Titlebar Buttons"
 msgstr "Başlık Çubuğu Düğmeleri"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:69
-#| msgid "Maximize and Close"
+#: ../gtweak/tweaks/tweak_group_windows.py:89
 msgid "Maximize"
 msgstr "Ekranı Kapla"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:70
-#| msgid "Minimize and Close"
+#: ../gtweak/tweaks/tweak_group_windows.py:90
 msgid "Minimize"
 msgstr "Küçült"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:91
+msgid "HiDPI"
+msgstr "HiDPI"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:29
 msgid "Middle-click Paste"
 msgstr "Orta Tuş Tıklamasıyla Yapıştır"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:40
-#| msgid "Shell theme"
 msgid "Key theme"
 msgstr "Tuş teması"
 
@@ -540,11 +551,23 @@ msgstr "Tuş teması"
 msgid "Keyboard and Mouse"
 msgstr "Klavye ve Fare"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "Tüm Giriş Kaynaklarını Göster"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "Genel bakış ve masaüstü arasında geçiş yap"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super left"
+msgstr "Süper sol"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Super right"
+msgstr "Süper sağ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "İşaretçi konumunu göster"
 
@@ -575,7 +598,6 @@ msgid "Global Dark Theme"
 msgstr "Genel Karanlık Teması"
 
 #: ../gtweak/widgets.py:481
-#| msgid "The shell must be restarted for changes to take effect"
 msgid "Applications need to be restarted for change to take effect"
 msgstr ""
 "Değişikliklerin etkili olması için uygulamaların yeniden başlatılması "
@@ -584,6 +606,19 @@ msgstr ""
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Ayar kaydedilirken hata"
+
+#~ msgid "_Help"
+#~ msgstr "_Yardım"
+
+#~| msgid "Tweak Tool"
+#~ msgid "_About Tweak Tool"
+#~ msgstr "İnce Ayar Aracı H_akkında"
+
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "Değişikliklerin geçerli olması için kabuk yeniden başlatılmalıdır"
+
+#~ msgid "Restart"
+#~ msgstr "Yeniden Başlat"
 
 #~ msgid "welcome"
 #~ msgstr "hoş geldiniz"
