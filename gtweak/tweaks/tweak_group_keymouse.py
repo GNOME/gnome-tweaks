@@ -65,7 +65,7 @@ TWEAK_GROUPS = [
         GSettingsComboTweak(_("Switch between overview and desktop"),
                               "org.gnome.mutter",
                               "overlay-key",
-                              [("Super_L", _("Super left")), ("Super_R", _("Super right"))]),
+                              [("Super_L", _("Left super")), ("Super_R", _("Right super"))]),
               
         Title(_("Mouse"), ""),
         GSettingsSwitchTweak(_("Show location of pointer"),
