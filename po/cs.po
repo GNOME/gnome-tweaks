@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-06 20:50+0000\n"
-"PO-Revision-Date: 2015-01-06 23:44+0100\n"
+"POT-Creation-Date: 2015-01-07 19:24+0000\n"
+"PO-Revision-Date: 2015-01-07 20:26+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -297,7 +297,7 @@ msgid "Theme"
 msgstr "Motiv"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:127
+#: ../gtweak/tweaks/tweak_group_windows.py:134
 msgid "Disabled"
 msgstr "Vypnuto"
 
@@ -466,81 +466,83 @@ msgstr "Nová aplikace při spuštění"
 msgid "Add a new application to be run at startup"
 msgstr "Přidat novou aplikaci, která se má rozjet při spuštění"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:57
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Window scaling"
 msgstr "Škálovat okna"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:57
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Přizpůsobit škálování oken GDK vysoké hustotě bodů displeje"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:95
-#| msgid "Do you want to uninstall the '%s' extension?"
+#: ../gtweak/tweaks/tweak_group_windows.py:86
+#, python-format
+msgid "Settings will be reverted in %d second"
+msgid_plural "Settings will be reverted in %d seconds"
+msgstr[0] "Nastavení bude vráceno zpět za %d sekundu"
+msgstr[1] "Nastavení bude vráceno zpět za %d sekundy"
+msgstr[2] "Nastavení bude vráceno zpět za %d sekund"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:102
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "Chcete zachovat toto nastavení vysoké hustoty bodů displeje?"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:96
-#, python-format
-msgid "Settings will be reverted in %d seconds"
-msgstr "Nastavení bude vráceno zpět za %d sekund"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:102
+#: ../gtweak/tweaks/tweak_group_windows.py:109
 msgid "Revert Settings"
 msgstr "Vrátit nastavení"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:103
+#: ../gtweak/tweaks/tweak_group_windows.py:110
 msgid "Keep Changes"
 msgstr "Zachovat změny"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:121
+#: ../gtweak/tweaks/tweak_group_windows.py:128
 msgid "Attached Modal Dialogs"
 msgstr "Svázaná modální dialogová okna"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:122
+#: ../gtweak/tweaks/tweak_group_windows.py:129
 msgid "Automatically Raise Windows"
 msgstr "Automaticky přesnést okna do popředí"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:123
+#: ../gtweak/tweaks/tweak_group_windows.py:130
 msgid "Resize with Secondary-click"
 msgstr "Změnit velikost pravým tlačítkem myši"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:124
+#: ../gtweak/tweaks/tweak_group_windows.py:131
 msgid "Window Action Key"
 msgstr "Klávesa pro akci okna"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:128
+#: ../gtweak/tweaks/tweak_group_windows.py:135
 msgid "Focus Mode"
 msgstr "Režim zaměřování oken"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:129
+#: ../gtweak/tweaks/tweak_group_windows.py:136
 msgid "Titlebar Actions"
 msgstr "Činnosti záhlaví okna"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:130
+#: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Double-click"
 msgstr "Dvojité kliknutí"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:131
+#: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Middle-click"
 msgstr "Prostřední tlačítko"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:132
+#: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Secondary-click"
 msgstr "Pravé tlačítko"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:133
+#: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "Tlačítka v záhlaví okna"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:134
+#: ../gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "Maximalizovat"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:135
+#: ../gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "Minimalizovat"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:136
+#: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "HiDPI"
 msgstr "Vysoké DPI"
 
@@ -609,15 +611,3 @@ msgstr "Aplikace musí být restartována, aby se změny projevily"
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "Chyba zápisu nastavení"
-
-#~ msgid "Window"
-#~ msgstr "Okno"
-
-#~ msgid "Restart"
-#~ msgstr "Restartovat"
-
-#~ msgid "Super left"
-#~ msgstr "Levý Super"
-
-#~ msgid "Super right"
-#~ msgstr "Pravý Super"
