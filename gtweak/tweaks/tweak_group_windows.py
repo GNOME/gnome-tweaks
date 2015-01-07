@@ -85,7 +85,7 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
     def _update_countdown_message(self):
         self._second_message = gettext.ngettext(_("Settings will be reverted in %d second"),
                                                 _("Settings will be reverted in %d seconds"),
-                                                self._countdown);
+                                                self._countdown)
 
     def _close(self):
         if self._source > 0:
