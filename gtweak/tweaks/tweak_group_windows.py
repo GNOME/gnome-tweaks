@@ -20,6 +20,7 @@ from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, Tweak
 from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue, build_label_beside_widget
 from gtweak.utils import XSettingsOverrides
+import gettext
 
 from gi.repository import Gtk, GLib
 
@@ -77,8 +78,14 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
             self._dialog.response(Gtk.ResponseType.NO)
             return False
 
+        self._update_countdown_message()
         self._dialog.format_secondary_text(self._second_message % self._countdown)
         return True
+
+    def _update_countdown_message(self):
+        self._second_message = gettext.ngettext(_("Settings will be reverted in %d second"),
+                                                _("Settings will be reverted in %d seconds"),
+                                                self._countdown);
 
     def _close(self):
         if self._source > 0:
@@ -93,7 +100,7 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
         self._countdown = 20
 
         first_message = _("Do you want to keep these HiDPI settings?")
-        self._second_message = _("Settings will be reverted in %d seconds")
+        self._update_countdown_message()
 
         self._dialog = Gtk.MessageDialog(
                                transient_for=self.main_window,
