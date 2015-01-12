@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # fran <frandieguez@gnome.org>, 2011.
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-31 23:36+0200\n"
-"PO-Revision-Date: 2014-03-31 23:36+0200\n"
+"POT-Creation-Date: 2015-01-13 00:20+0100\n"
+"PO-Revision-Date: 2015-01-13 00:21+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -114,7 +114,7 @@ msgstr "Tipos de letra"
 msgid "Power"
 msgstr "Enerxía"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:194
 msgid "Startup Applications"
 msgstr "Aplicativos de inicio"
 
@@ -142,11 +142,11 @@ msgstr "Ficheiros"
 msgid "Miscellaneous"
 msgstr "Miscelánea"
 
-#: ../gtweak/tweakview.py:93
+#: ../gtweak/tweakview.py:96
 msgid "Tweaks"
 msgstr "Axustes"
 
-#: ../gtweak/tweakview.py:109
+#: ../gtweak/tweakview.py:112
 msgid "Search Tweaks..."
 msgstr "Buscar axustes…"
 
@@ -235,77 +235,73 @@ msgstr "Iconas"
 msgid "Cursor"
 msgstr "Cursor"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:96
-msgid "Window"
-msgstr "Xanela"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:121
+#: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Shell theme"
 msgstr "Tema do Shell"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:121
+#: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Instalar temas de usuario ou personalizados para gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:124
+#: ../gtweak/tweaks/tweak_group_interface.py:108
 msgid "Unknown error"
 msgstr "Erro descoñecido"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:129
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Shell not running"
 msgstr "Non se está executando o Shell"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:151
+#: ../gtweak/tweaks/tweak_group_interface.py:135
 msgid "Shell user-theme extension incorrectly installed"
 msgstr ""
 "Non foi posíbel instalar correctamente a extensión do tema de usuario do "
 "Shell"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:154
+#: ../gtweak/tweaks/tweak_group_interface.py:138
 msgid "Shell user-theme extension not enabled"
 msgstr "Extensión do tema de usuario do Shell non activado"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:157
+#: ../gtweak/tweaks/tweak_group_interface.py:141
 msgid "Could not list shell extensions"
 msgstr "Non foi posíbel listar as extensión do Shell"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_interface.py:170
 #: ../gtweak/tweaks/tweak_group_keymouse.py:46
 msgid "<i>Default</i>"
 msgstr "<i>Predeterminada</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:192
+#: ../gtweak/tweaks/tweak_group_interface.py:176
 msgid "Select a theme"
 msgstr "Seleccionar un tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:241
+#: ../gtweak/tweaks/tweak_group_interface.py:225
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Tema %s actualizado correctamente"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:243
+#: ../gtweak/tweaks/tweak_group_interface.py:227
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Tema %s instalado correctamente"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:251
+#: ../gtweak/tweaks/tweak_group_interface.py:235
 msgid "Error installing theme"
 msgstr "Produciuse un erro ao instalar o tema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Invalid theme"
 msgstr "Tema non válido"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:272
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Theme"
 msgstr "Tema"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:84
+#: ../gtweak/tweaks/tweak_group_windows.py:134
 msgid "Disabled"
 msgstr "Desactivado"
 
@@ -313,73 +309,69 @@ msgstr "Desactivado"
 msgid "Typing"
 msgstr "Escritura"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
 msgid "Extension downloading"
 msgstr "Descarga de extensións"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
 msgid "Error loading extension"
 msgstr "Produciuse un erro ao cargar a extensión"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
 msgid "Extension does not support shell version"
 msgstr "A extensión non é compatíbel con esta versión do Shell"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
 msgid "Unknown extension error"
 msgstr "Produciuse un erro descoñecido na extensión "
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:131
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
+#: ../gtweak/tweaks/tweak_group_startup.py:145
 msgid "Remove"
 msgstr "Eliminar"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
 msgid "Uninstall Extension"
 msgstr "Desinstalar extensión"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Desexa desinstalar a extensión «%s»?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
 msgid "Updating"
 msgstr "Actualizando"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
 msgid "Error"
 msgstr "Erro"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
 msgid "Update"
 msgstr "Actualizar"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
 msgid "Install Shell Extension"
 msgstr "Instalar extensión do Shell"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
 msgid "Select an extension"
 msgstr "Seleccionar unha extensión"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
 msgid "Get more extensions"
 msgstr "Obter máis extensións"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Extensión %s anovada correctamente"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Extensión %s instalada correctamente"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
-msgid "Restart"
-msgstr "Reiniciar"
 
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
@@ -470,71 +462,90 @@ msgstr "_Pechar"
 msgid "Add Application"
 msgstr "Engadir aplicativo"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:161
 msgid "New startup application"
 msgstr "Non aplicativo de inicio"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:148
+#: ../gtweak/tweaks/tweak_group_startup.py:162
 msgid "Add a new application to be run at startup"
 msgstr "Engadir un novo aplicativo para executarse ao inicio"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Window scaling"
 msgstr "Escalado de xanelas"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Axustar o factor de escalado de xanelas XDK para HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:78
+#: ../gtweak/tweaks/tweak_group_windows.py:86
+#, python-format
+msgid "Settings will be reverted in %d second"
+msgid_plural "Settings will be reverted in %d seconds"
+msgstr[0] "Volverase ás anteriores preferencias en %d segundo"
+msgstr[1] "Volverase ás anteriores preferencias en %d segundos"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:102
+msgid "Do you want to keep these HiDPI settings?"
+msgstr "Desexa manter estas preferencias de HiDPI?"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:109
+msgid "Revert Settings"
+msgstr "Volver ás anteriores"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:110
+msgid "Keep Changes"
+msgstr "Manter cambios"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:128
 msgid "Attached Modal Dialogs"
 msgstr "Diálogos modais adxuntos"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:79
+#: ../gtweak/tweaks/tweak_group_windows.py:129
 msgid "Automatically Raise Windows"
 msgstr "Elevar xanelas automaticamente"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:80
+#: ../gtweak/tweaks/tweak_group_windows.py:130
 msgid "Resize with Secondary-click"
 msgstr "Redimensionar co clic secundario"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:81
+#: ../gtweak/tweaks/tweak_group_windows.py:131
 msgid "Window Action Key"
 msgstr "Tecla de acción da xanela"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:85
+#: ../gtweak/tweaks/tweak_group_windows.py:135
 msgid "Focus Mode"
 msgstr "Modo de enfoque"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:86
+#: ../gtweak/tweaks/tweak_group_windows.py:136
 msgid "Titlebar Actions"
 msgstr "Accións da barra de título"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:87
+#: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Double-click"
 msgstr "Duplo clic"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:88
+#: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Middle-click"
 msgstr "Clic central"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:89
+#: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Secondary-click"
 msgstr "Clic secundario"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:90
+#: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "Botóns da barra de título"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:91
+#: ../gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "Maximizar"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:92
+#: ../gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "Minimizar"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:93
+#: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "HiDPI"
 msgstr "HiDPI"
 
@@ -559,12 +570,12 @@ msgid "Switch between overview and desktop"
 msgstr "Troca entre vista xeral e escritorio"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:68
-msgid "Super left"
-msgstr "Super esquerdo"
+msgid "Left super"
+msgstr "Súper esquerdo"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:68
-msgid "Super right"
-msgstr "Super dereito"
+msgid "Right super"
+msgstr "Súper dereito"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
@@ -604,6 +615,18 @@ msgstr "Os aplicativos deben reiniciarse para que se aplique o cambio"
 msgid "Error writing setting"
 msgstr "Produciuse un erro ao gravar a configuración"
 
+#~ msgid "Window"
+#~ msgstr "Xanela"
+
+#~ msgid "Restart"
+#~ msgstr "Reiniciar"
+
+#~ msgid "Super left"
+#~ msgstr "Super esquerdo"
+
+#~ msgid "Super right"
+#~ msgstr "Super dereito"
+
 #~ msgid "_Help"
 #~ msgstr "_Axuda"
 
@@ -636,9 +659,6 @@ msgstr "Produciuse un erro ao gravar a configuración"
 
 #~ msgid "Keybinding theme"
 #~ msgstr "Tema de asociación de teclas"
-
-#~ msgid "Advanced Settings"
-#~ msgstr "Preferencias avanzadas"
 
 #~ msgid "The shell may need to be restarted to apply the theme"
 #~ msgstr "Pode que sexa necesario reiniciar GNOME-Shell para aplicar o tema"
