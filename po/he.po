@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# Yosef Or Boczko <yoseforb@gnome.org>, 2013, 2014.
+# Yosef Or Boczko <yoseforb@gnome.org>, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-26 22:58+0200\n"
-"PO-Revision-Date: 2014-03-26 23:21+0200\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
+"POT-Creation-Date: 2015-01-26 22:03+0200\n"
+"PO-Revision-Date: 2015-01-26 22:07+0200\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -109,7 +109,7 @@ msgstr "גופנים"
 msgid "Power"
 msgstr "חשמל"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:194
 msgid "Startup Applications"
 msgstr "יישומי הפעלה"
 
@@ -137,11 +137,11 @@ msgstr "קבצים"
 msgid "Miscellaneous"
 msgstr "שונות"
 
-#: ../gtweak/tweakview.py:93
+#: ../gtweak/tweakview.py:96
 msgid "Tweaks"
 msgstr "התאמות"
 
-#: ../gtweak/tweakview.py:109
+#: ../gtweak/tweakview.py:112
 msgid "Search Tweaks..."
 msgstr "חיפוש התאמות"
 
@@ -230,75 +230,71 @@ msgstr "סמלילים"
 msgid "Cursor"
 msgstr "סמן"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:96
-msgid "Window"
-msgstr "חלון"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:121
+#: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Shell theme"
 msgstr "ערכת מעטפת"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:121
+#: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Install custom or user themes for gnome-shell"
 msgstr "התקנה מותאמת אישית של ערכות נושא עבור gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:124
+#: ../gtweak/tweaks/tweak_group_interface.py:108
 msgid "Unknown error"
 msgstr "שגיאה בלתי ידועה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:129
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Shell not running"
 msgstr "המעטפת אינה רצה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:151
+#: ../gtweak/tweaks/tweak_group_interface.py:135
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "הרחבת ערכת נושא המשתמש של המעטפת לא הותקנה כראוי"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:154
+#: ../gtweak/tweaks/tweak_group_interface.py:138
 msgid "Shell user-theme extension not enabled"
 msgstr "הרחבת ערכת נושא המשתמש של המעטפת לא הופעלה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:157
+#: ../gtweak/tweaks/tweak_group_interface.py:141
 msgid "Could not list shell extensions"
 msgstr "לא ניתן להציג את הרחבות המעטפת"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_interface.py:170
 #: ../gtweak/tweaks/tweak_group_keymouse.py:46
 msgid "<i>Default</i>"
 msgstr "בררת מחדל"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:192
+#: ../gtweak/tweaks/tweak_group_interface.py:176
 msgid "Select a theme"
 msgstr "נא לבחור בערכת נושא"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:241
+#: ../gtweak/tweaks/tweak_group_interface.py:225
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "ערכת הנושא %s עודכנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:243
+#: ../gtweak/tweaks/tweak_group_interface.py:227
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "ערכת הנושא %s הותקנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:251
+#: ../gtweak/tweaks/tweak_group_interface.py:235
 msgid "Error installing theme"
 msgstr "התקנת ערכת הנושא נכשלה"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Invalid theme"
 msgstr "ערכת נושא שגויה"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:272
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Theme"
 msgstr "ערכת עיצוב"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:84
+#: ../gtweak/tweaks/tweak_group_windows.py:134
 msgid "Disabled"
 msgstr "השבתה"
 
@@ -306,73 +302,69 @@ msgstr "השבתה"
 msgid "Typing"
 msgstr "הקלדה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
 msgid "Extension downloading"
 msgstr "ההרחבה מתקבלת"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
 msgid "Error loading extension"
 msgstr "טעינת ההרחבה נכשלה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
 msgid "Extension does not support shell version"
 msgstr "ההרחבה אינה תומכת בגרסת המעטפת"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
 msgid "Unknown extension error"
 msgstr "שגיאת מעטפת בלתי ידועה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:131
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
+#: ../gtweak/tweaks/tweak_group_startup.py:145
 msgid "Remove"
 msgstr "הסרה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
 msgid "Uninstall Extension"
 msgstr "הסרת הרחבה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "האם אתה רוצה להסיר את ההרחבה '%s' ?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
 msgid "Updating"
 msgstr "עדכון"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
 msgid "Error"
 msgstr "שגיאה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
 msgid "Update"
 msgstr "מעדכן"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
 msgid "Install Shell Extension"
 msgstr "התקנת הרחבת מעטפת"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
 msgid "Select an extension"
 msgstr "נא לבחור בהרחבה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
 msgid "Get more extensions"
 msgstr "לקבלת הרחבות נוספות"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "ההרחבה %s עודכנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "ההרחבה %s הותקנה בהצלחה"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
-msgid "Restart"
-msgstr "הפעלה מחדש"
 
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
@@ -463,71 +455,91 @@ msgstr "_סגירה"
 msgid "Add Application"
 msgstr "הוספת יישום"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:161
 msgid "New startup application"
 msgstr "יישום הפעלה חדש"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:148
+#: ../gtweak/tweaks/tweak_group_startup.py:162
 msgid "Add a new application to be run at startup"
 msgstr "הוספת יישום חדש להפעלה עם הפעלה"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Window scaling"
 msgstr "קנה מידה של חלונות"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "התאמת קנה מידה של חלונות GDK עבור הבחנה גבוהה"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:78
+#: ../gtweak/tweaks/tweak_group_windows.py:86
+#, c-format
+msgid "Settings will be reverted in %d second"
+msgid_plural "Settings will be reverted in %d seconds"
+msgstr[0] "ההגדרות תשוחזרנה בעוד שנייה אחת"
+msgstr[1] "ההגדרות תשוחזרנה בעוד %d שניות"
+msgstr[2] "ההגדרות תשוחזרנה בעוד %d שניות"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:102
+msgid "Do you want to keep these HiDPI settings?"
+msgstr "האם ברצונך לשמור הגדרות הבחנה גבוהה אלה?"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:109
+msgid "Revert Settings"
+msgstr "שחזור הגדרות"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:110
+msgid "Keep Changes"
+msgstr "שמירת שינויים"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:128
 msgid "Attached Modal Dialogs"
 msgstr "צירוף דו־שיח מודאלי"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:79
+#: ../gtweak/tweaks/tweak_group_windows.py:129
 msgid "Automatically Raise Windows"
 msgstr "העלאת חלונות באופן אוטומטי"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:80
+#: ../gtweak/tweaks/tweak_group_windows.py:130
 msgid "Resize with Secondary-click"
 msgstr "שינוי גודל עם לחיצה משנית"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:81
+#: ../gtweak/tweaks/tweak_group_windows.py:131
 msgid "Window Action Key"
 msgstr "מקש פעולת חלון"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:85
+#: ../gtweak/tweaks/tweak_group_windows.py:135
 msgid "Focus Mode"
 msgstr "מצב מיקוד"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:86
+#: ../gtweak/tweaks/tweak_group_windows.py:136
 msgid "Titlebar Actions"
 msgstr "פעולות שורת כותרת"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:87
+#: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Double-click"
 msgstr "לחיצה כפולה"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:88
+#: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Middle-click"
 msgstr "לחיצה אמצעית"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:89
+#: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Secondary-click"
 msgstr "לחיצה משנית"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:90
+#: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "לחצני שורת כותרת"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:91
+#: ../gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "הגדלה"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:92
+#: ../gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "מזעור"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:93
+#: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "HiDPI"
 msgstr "הבחנה גבוהה"
 
@@ -552,11 +564,11 @@ msgid "Switch between overview and desktop"
 msgstr "מעבר בין סקירה ושולחן עבודה"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:68
-msgid "Super left"
-msgstr "‏Suprt שמאלי"
+msgid "Left super"
+msgstr "‏Super שמאלי"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:68
-msgid "Super right"
+msgid "Right super"
 msgstr "‏Super ימני"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:71
@@ -597,6 +609,18 @@ msgstr "יש להפעיל מחדש יישומים כדי שהשינויים יי
 msgid "Error writing setting"
 msgstr "כתיבת ההגדרה נכשלה"
 
+#~ msgid "Window"
+#~ msgstr "חלון"
+
+#~ msgid "Restart"
+#~ msgstr "הפעלה מחדש"
+
+#~ msgid "Super left"
+#~ msgstr "‏Suprt שמאלי"
+
+#~ msgid "Super right"
+#~ msgstr "‏Super ימני"
+
 #~ msgid "_Help"
 #~ msgstr "_עזרה"
 
@@ -625,9 +649,6 @@ msgstr "כתיבת ההגדרה נכשלה"
 
 #~ msgid "Whether to resize with the right button"
 #~ msgstr "האם לשנות את הגודל עם לחצן ימני"
-
-#~ msgid "Advanced Settings"
-#~ msgstr "הגדרות מתקדמות"
 
 #~ msgid "welcome"
 #~ msgstr "ברוך בורך"
