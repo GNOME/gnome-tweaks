@@ -20,7 +20,7 @@ import os.path
 import subprocess
 import logging
 
-from gi.repository import Gtk, GLib, Gio
+from gi.repository import Gtk, Gdk, GLib, Gio
 
 from gtweak.tweakmodel import Tweak
 from gtweak.widgets import ListBoxTweakGroup, UI_BOX_SPACING
@@ -37,10 +37,20 @@ class _AppChooser(Gtk.Dialog):
         self._running = {}
         self._all = {}
 
+        self.entry = Gtk.SearchEntry(
+                placeholder_text=_("Search Applications..."))
+        self.entry.set_width_chars(30)
+
+        self.searchbar = Gtk.SearchBar()
+        self.searchbar.add(self.entry)
+        self.searchbar.props.hexpand = True
+
         lb = Gtk.ListBox()
         lb.props.margin = 5
         lb.set_sort_func(self._sort_apps, None)
         lb.set_header_func(_list_header_func, None)
+        lb.set_filter_func(self._list_filter_func, None)
+        self.entry.connect("search-changed", lambda e: lb.invalidate_filter())
 
         apps = Gio.app_info_get_all()
         for a in apps:
@@ -61,12 +71,15 @@ class _AppChooser(Gtk.Dialog):
         self.add_button(_("_Close"), Gtk.ResponseType.CLOSE)
         self.add_button(_("Add Application"), Gtk.ResponseType.OK)
 
+        self.get_content_area().pack_start(self.searchbar, False, False, 0)
         self.get_content_area().pack_start(sw, True, True, 0)
         self.set_modal(True)
         self.set_transient_for(main_window)
         self.set_size_request(400,300)
 
         self.listbox = lb
+
+        self.connect("key-press-event", self._on_key_press)
 
     def _sort_apps(self, a, b, user_data):
         arun = self._running.get(a)
@@ -112,6 +125,37 @@ class _AppChooser(Gtk.Dialog):
         row.add(g)
         #row.get_style_context().add_class('tweak-white')
         return row
+
+    def _list_filter_func(self, row, unused):
+      txt = self.entry.get_text().lower()
+      grid = row.get_child()
+      for sib in grid.get_children():
+          if type(sib) == Gtk.Label:
+              if txt in sib.get_text().lower():
+                  return True
+              return False
+      return False
+
+    def _on_key_press(self, widget, event):
+      keyname = Gdk.keyval_name(event.keyval)
+      if keyname == 'Escape':
+          if self.entry.is_focus():
+              self.searchbar.set_search_mode(False)
+              return True
+          elif self.searchbar.get_search_mode():
+              self.entry.grab_focus()
+              return True
+      elif keyname not in ['Escape', 'Up', 'Down']:
+          if not self.entry.is_focus() and self.searchbar.get_search_mode():
+              if self.entry.im_context_filter_keypress(event):
+                  self.entry.grab_focus()
+                  l = self.entry.get_text_length()
+                  self.entry.select_region(l, l)
+                  return True
+
+          return self.searchbar.handle_event(event)
+
+      return False
 
     def get_selected_app(self):
         row = self.listbox.get_selected_row()
