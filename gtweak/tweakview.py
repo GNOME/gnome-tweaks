@@ -59,6 +59,7 @@ class Window(Gtk.ApplicationWindow):
                                           self._update_decorations);
 
         self.connect("key-press-event", self._on_key_press)
+        self.connect_after("key-press-event", self._after_key_press)
         self.add(main_box)
     
     def titlebar(self):
@@ -196,13 +197,36 @@ class Window(Gtk.ApplicationWindow):
                 self._right_header.props.decoration_layout = ":" + tokens[1]
                 self._left_header.props.decoration_layout = tokens[0]
 
+    def _after_key_press(self, widget, event):
+        if not self.button.get_active() or not self.entry.is_focus():
+            if self.entry.im_context_filter_keypress(event):
+                self.button.set_active(True)
+                self.entry.grab_focus ()
+
+                # Text in entry is selected, deselect it
+                l = self.entry.get_text_length()
+                self.entry.select_region(l, l)
+
+                return True
+
+        return False
+
     def _on_key_press(self, widget, event):
         keyname = Gdk.keyval_name(event.keyval)
-        if keyname == 'Escape':
-            self.button.set_active(False)
-        if event.state and Gdk.ModifierType.CONTROL_MASK:
+
+        if keyname == 'Escape' and self.button.get_active():
+            if self.entry.is_focus():
+                self.button.set_active(False)
+            else:
+                self.entry.grab_focus()
+            return True
+
+        if event.state & Gdk.ModifierType.CONTROL_MASK:
             if keyname == 'f':
                 self.button.set_active(True)
+                return True
+
+        return False
 
     def _on_list_changed(self, group):
         self.listbox.set_filter_func(self._list_filter_func, group)
