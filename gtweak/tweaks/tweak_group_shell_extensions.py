@@ -96,12 +96,8 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         if self._shell.SUPPORTS_EXTENSION_PREFS:
             prefs = os.path.join(ext['path'], "prefs.js")
             if os.path.exists(prefs):
-                icon = Gtk.Image()  
-                icon.set_from_icon_name("emblem-system-symbolic", Gtk.IconSize.BUTTON)
-                btn = Gtk.Button()
-                btn.props.vexpand = False
+                btn = Gtk.Button.new_from_icon_name("emblem-system-symbolic", Gtk.IconSize.BUTTON)
                 btn.props.valign = Gtk.Align.CENTER
-                btn.add(icon)
                 btn.connect("clicked", self._on_configure_clicked, uuid)
                 self.hbox.pack_start(btn, False, False, 0)
 
