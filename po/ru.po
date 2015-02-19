@@ -6,15 +6,16 @@
 # Yuri Myasoedov <omerta13@yandex.ru>, 2012.
 # Andrey Inishev <inish777@gmail.com>, 2013.
 # Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013, 2014, 2015.
+# Ivan Komaritsyn <vantu5z@mail.ru>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-13 20:52+0000\n"
-"PO-Revision-Date: 2015-01-14 01:12+0300\n"
-"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"POT-Creation-Date: 2015-02-19 09:46+0000\n"
+"PO-Revision-Date: 2015-02-19 14:49+0300\n"
+"Last-Translator: Ivan Komaritsyn <vantu5z@mail.ru>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +107,7 @@ msgid "Appearance"
 msgstr "Внешний вид"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
 msgid "Extensions"
 msgstr "Расширения"
 
@@ -118,7 +119,7 @@ msgstr "Шрифты"
 msgid "Power"
 msgstr "Электропитание"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:194
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
 msgid "Startup Applications"
 msgstr "Автозапуск"
 
@@ -146,11 +147,11 @@ msgstr "Файлы"
 msgid "Miscellaneous"
 msgstr "Разное"
 
-#: ../gtweak/tweakview.py:96
+#: ../gtweak/tweakview.py:97
 msgid "Tweaks"
 msgstr "Настройки"
 
-#: ../gtweak/tweakview.py:112
+#: ../gtweak/tweakview.py:113
 msgid "Search Tweaks..."
 msgstr "Найти настройки…"
 
@@ -327,60 +328,60 @@ msgstr "Расширение не поддерживает данную верс
 msgid "Unknown extension error"
 msgstr "Неизвестная ошибка расширения"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
-#: ../gtweak/tweaks/tweak_group_startup.py:145
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
+#: ../gtweak/tweaks/tweak_group_startup.py:189
 msgid "Remove"
 msgstr "Удалить"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
 msgid "Uninstall Extension"
 msgstr "Удалить расширение"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Удалить расширение «%s»?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
 msgid "Updating"
 msgstr "Обновление"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
 msgid "Error"
 msgstr "Ошибка"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Update"
 msgstr "Обновить"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
 msgid "Install Shell Extension"
 msgstr "Установить расширение Shell"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Select an extension"
 msgstr "Выберите расширение"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Get more extensions"
 msgstr "Загрузить дополнительные расширения"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Расширение %s успешно обновлено"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Расширение %s успешно установлено"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
 msgid "Error installing extension"
 msgstr "Ошибка установки расширения"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
 msgid "Invalid extension"
 msgstr "Недопустимое расширение"
 
@@ -452,23 +453,27 @@ msgstr "Рабочие места только на основном монит�
 msgid "Applications"
 msgstr "Приложения"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:51
+#: ../gtweak/tweaks/tweak_group_startup.py:41
+msgid "Search Applications..."
+msgstr "Найти приложения…"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "running"
 msgstr "запущено"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:71
 msgid "_Close"
 msgstr "_Закрыть"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:62
+#: ../gtweak/tweaks/tweak_group_startup.py:72
 msgid "Add Application"
 msgstr "Добавить приложение"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:161
+#: ../gtweak/tweaks/tweak_group_startup.py:205
 msgid "New startup application"
 msgstr "Добавить приложение в автозапуск"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:162
+#: ../gtweak/tweaks/tweak_group_startup.py:206
 msgid "Add a new application to be run at startup"
 msgstr "Добавить новое приложение для запуска при загрузке"
 
@@ -481,6 +486,7 @@ msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Отрегулируйте коэффициент масштабирования окон GDK для HiDPI"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:86
+#, python-format
 msgid "Settings will be reverted in %d second"
 msgid_plural "Settings will be reverted in %d seconds"
 msgstr[0] "Настройки будут восстановлены через %d секунду"
