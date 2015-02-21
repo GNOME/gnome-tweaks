@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool 3.1.90\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-06-21 19:47+0000\n"
-"PO-Revision-Date: 2014-06-22 13:40+0800\n"
+"POT-Creation-Date: 2015-02-20 21:08+0000\n"
+"PO-Revision-Date: 2015-02-22 01:05+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@lists.linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
@@ -25,11 +26,11 @@ msgstr "GNOME 調校工具讓您可以調整進階的 GNOME 選項。"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:2
 msgid ""
-"It can install and manage themes and extensions, change power settings, "
-"manage startup applications, and enable desktop icons among other settings."
+"It can install and manage themes and extensions, change power settings, manage "
+"startup applications, and enable desktop icons among other settings."
 msgstr ""
-"它可以安裝、管理主題與擴充套件、改變電源設定、管理初始啟動應用程式、啟用桌面"
-"圖示及其他設定等。"
+"它可以安裝、管理主題與擴充套件、改變電源設定、管理初始啟動應用程式、啟用桌面圖示"
+"及其他設定等。"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -40,11 +41,10 @@ msgid "Tweak advanced GNOME 3 settings"
 msgstr "調校進階 GNOME 3 設定值"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;設定"
-"值;設定;進階;偏好設定;擴充;擴展;擴充套件;字型;主題;鍵盤;打字;輸入;"
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;設定值;"
+"設定;進階;偏好設定;擴充;擴展;擴充套件;字型;主題;鍵盤;打字;輸入;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -96,7 +96,7 @@ msgid "Appearance"
 msgstr "外觀"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
 msgid "Extensions"
 msgstr "擴充套件"
 
@@ -108,7 +108,7 @@ msgstr "字型"
 msgid "Power"
 msgstr "電源"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:182
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
 msgid "Startup Applications"
 msgstr "初始啟動應用程式"
 
@@ -136,11 +136,11 @@ msgstr "檔案"
 msgid "Miscellaneous"
 msgstr "雜項"
 
-#: ../gtweak/tweakview.py:94
+#: ../gtweak/tweakview.py:97
 msgid "Tweaks"
 msgstr "調校"
 
-#: ../gtweak/tweakview.py:110
+#: ../gtweak/tweakview.py:113
 msgid "Search Tweaks..."
 msgstr "搜尋調校..."
 
@@ -229,75 +229,71 @@ msgstr "圖示"
 msgid "Cursor"
 msgstr "游標"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:96
-msgid "Window"
-msgstr "視窗"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:121
+#: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Shell theme"
 msgstr "Shell 主題"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:121
+#: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Install custom or user themes for gnome-shell"
 msgstr "為 gnome-shell 安裝自訂主題或使用者主題"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:124
+#: ../gtweak/tweaks/tweak_group_interface.py:108
 msgid "Unknown error"
 msgstr "未知錯誤"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:129
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Shell not running"
 msgstr "Shell 不在執行中"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:151
+#: ../gtweak/tweaks/tweak_group_interface.py:135
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Shell 使用者主題擴充套件安裝不正確"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:154
+#: ../gtweak/tweaks/tweak_group_interface.py:138
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell 使用者主題擴充套件未啟用"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:157
+#: ../gtweak/tweaks/tweak_group_interface.py:141
 msgid "Could not list shell extensions"
 msgstr "無法列出 Shell 擴充套件"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_interface.py:170
 #: ../gtweak/tweaks/tweak_group_keymouse.py:46
 msgid "<i>Default</i>"
 msgstr "<i>預設</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:192
+#: ../gtweak/tweaks/tweak_group_interface.py:176
 msgid "Select a theme"
 msgstr "選取主題"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:241
+#: ../gtweak/tweaks/tweak_group_interface.py:225
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s 主題成功更新"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:243
+#: ../gtweak/tweaks/tweak_group_interface.py:227
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s 主題成功安裝"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:251
+#: ../gtweak/tweaks/tweak_group_interface.py:235
 msgid "Error installing theme"
 msgstr "安裝主題時發生錯誤"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Invalid theme"
 msgstr "無效的主題"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:272
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Theme"
 msgstr "佈景主題"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:84
+#: ../gtweak/tweaks/tweak_group_windows.py:134
 msgid "Disabled"
 msgstr "已停用"
 
@@ -305,80 +301,76 @@ msgstr "已停用"
 msgid "Typing"
 msgstr "輸入"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:74
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
 msgid "Extension downloading"
 msgstr "擴充套件下載中"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:76
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
 msgid "Error loading extension"
 msgstr "載入擴充套件時發生錯誤"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
 msgid "Extension does not support shell version"
 msgstr "擴充套件不支援 Shell 版本"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
 msgid "Unknown extension error"
 msgstr "未知的擴充套件錯誤"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:131
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
+#: ../gtweak/tweaks/tweak_group_startup.py:189
 msgid "Remove"
 msgstr "移除"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
 msgid "Uninstall Extension"
 msgstr "解除安裝擴充套件"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "您是否想要解除「%s」擴充套件的安裝？"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
 msgid "Updating"
 msgstr "更新中"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
 msgid "Error"
 msgstr "錯誤"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Update"
 msgstr "更新"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
 msgid "Install Shell Extension"
 msgstr "安裝 Shell 擴充套件"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Select an extension"
 msgstr "選取擴充套件"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Get more extensions"
 msgstr "取得更多擴充套件"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s 擴充套件已成功更新"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s 擴充套件已成功安裝"
 
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
-msgid "Restart"
-msgstr "重新啟動"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
 msgid "Error installing extension"
 msgstr "安裝擴充套件時發生錯誤"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
 msgid "Invalid extension"
 msgstr "無效的擴充套件"
 
@@ -450,84 +442,105 @@ msgstr "工作區僅在主顯示器上"
 msgid "Applications"
 msgstr "應用程式"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:51
+#: ../gtweak/tweaks/tweak_group_startup.py:41
+msgid "Search Applications..."
+msgstr "搜尋應用程式…"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "running"
 msgstr "執行中"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:71
 msgid "_Close"
 msgstr "關閉(_C)"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:62
+#: ../gtweak/tweaks/tweak_group_startup.py:72
 msgid "Add Application"
 msgstr "加入應用程式"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:147
+#: ../gtweak/tweaks/tweak_group_startup.py:205
 msgid "New startup application"
 msgstr "新增初始啟動期應用程式"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:148
+#: ../gtweak/tweaks/tweak_group_startup.py:206
 msgid "Add a new application to be run at startup"
 msgstr "新增初始啟動期間要執行的應用程式"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
-#| msgid "Windows"
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Window scaling"
 msgstr "視窗縮放"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:58
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "調整 HiDPI 下的 GDK 視窗縮放係數"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:78
+#: ../gtweak/tweaks/tweak_group_windows.py:86
+#, python-format
+msgid "Settings will be reverted in %d second"
+msgid_plural "Settings will be reverted in %d seconds"
+msgstr[0] "設定值會在 %d 秒後還原"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:102
+msgid "Do you want to keep these HiDPI settings?"
+msgstr "您想要保留這些 HiDPI 設定值嗎？"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:109
+msgid "Revert Settings"
+msgstr "還原設定值"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:110
+msgid "Keep Changes"
+msgstr "保留變更"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:128
 msgid "Attached Modal Dialogs"
 msgstr "附連的典範對話盒"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:79
+#: ../gtweak/tweaks/tweak_group_windows.py:129
 msgid "Automatically Raise Windows"
 msgstr "自動抬升視窗"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:80
+#: ../gtweak/tweaks/tweak_group_windows.py:130
 msgid "Resize with Secondary-click"
 msgstr "以次鍵點擊調整視窗大小"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:81
+#: ../gtweak/tweaks/tweak_group_windows.py:131
 msgid "Window Action Key"
 msgstr "視窗動作按鍵"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:85
+#: ../gtweak/tweaks/tweak_group_windows.py:135
 msgid "Focus Mode"
 msgstr "焦點模式"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:86
+#: ../gtweak/tweaks/tweak_group_windows.py:136
 msgid "Titlebar Actions"
 msgstr "標題列動作"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:87
+#: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Double-click"
 msgstr "雙擊"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:88
+#: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Middle-click"
 msgstr "中鍵點擊"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:89
+#: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Secondary-click"
 msgstr "次鍵點擊"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:90
+#: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "標題列按鈕"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:91
+#: ../gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:92
+#: ../gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:93
+#: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "HiDPI"
 msgstr "HiDPI"
 
@@ -552,12 +565,12 @@ msgid "Switch between overview and desktop"
 msgstr "在活動概覽與桌面之間切換"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:68
-msgid "Super left"
-msgstr "Super 左鍵"
+msgid "Left super"
+msgstr "左 Super 鍵"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:68
-msgid "Super right"
-msgstr "Super 右鍵"
+msgid "Right super"
+msgstr "右 Super 鍵"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
@@ -597,6 +610,18 @@ msgstr "應用程式需要重新啟動才能套用效果"
 msgid "Error writing setting"
 msgstr "寫入設定值時發生錯誤"
 
+#~ msgid "Window"
+#~ msgstr "視窗"
+
+#~ msgid "Restart"
+#~ msgstr "重新啟動"
+
+#~ msgid "Super left"
+#~ msgstr "Super 左鍵"
+
+#~ msgid "Super right"
+#~ msgstr "Super 右鍵"
+
 #~ msgid "_Help"
 #~ msgstr "求助(_H)"
 
@@ -618,12 +643,8 @@ msgstr "寫入設定值時發生錯誤"
 #~ msgid "All"
 #~ msgstr "全部"
 
-#~ msgid ""
-#~ "Disable gnome-shell dynamic workspace management, use static workspaces"
+#~ msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
 #~ msgstr "停用 gnome-shell 動態工作區管理，改使用靜態工作區"
-
-#~ msgid "Advanced Settings"
-#~ msgstr "進階設定值"
 
 #~ msgid "Icon theme"
 #~ msgstr "圖示主題"
