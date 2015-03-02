@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-07 19:24+0000\n"
+"POT-Creation-Date: 2015-03-02 09:04+0000\n"
 "PO-Revision-Date: 2015-01-07 20:26+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -100,7 +100,7 @@ msgid "Appearance"
 msgstr "Vzhled"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
 msgid "Extensions"
 msgstr "Rozšíření"
 
@@ -112,7 +112,7 @@ msgstr "Písma"
 msgid "Power"
 msgstr "Napájení"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:194
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
 msgid "Startup Applications"
 msgstr "Aplikace při spuštění"
 
@@ -140,11 +140,11 @@ msgstr "Soubory"
 msgid "Miscellaneous"
 msgstr "Různé"
 
-#: ../gtweak/tweakview.py:96
+#: ../gtweak/tweakview.py:97
 msgid "Tweaks"
 msgstr "Vylepšení"
 
-#: ../gtweak/tweakview.py:112
+#: ../gtweak/tweakview.py:113
 msgid "Search Tweaks..."
 msgstr "Hledat vylepšení…"
 
@@ -321,60 +321,60 @@ msgstr "Rozšíření nepodporuje tuto verzi shellu"
 msgid "Unknown extension error"
 msgstr "Neznámá chyba rozšíření"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
-#: ../gtweak/tweaks/tweak_group_startup.py:145
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
+#: ../gtweak/tweaks/tweak_group_startup.py:189
 msgid "Remove"
 msgstr "Odstranit"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
 msgid "Uninstall Extension"
 msgstr "Odinstalovat rozšíření"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Opravdu chcete odinstalovat rozšíření „%s“?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
 msgid "Updating"
 msgstr "Aktualizuje se"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
 msgid "Error"
 msgstr "Chyba"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Update"
 msgstr "Aktualizovat"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
 msgid "Install Shell Extension"
 msgstr "Instalovat rozšíření shellu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Select an extension"
 msgstr "Vybrat rozšíření"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Get more extensions"
 msgstr "Získat další rozšíření"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Rozšíření %s úspěšně aktualizováno"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Rozšíření %s úspěšně nainstalováno"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
 msgid "Error installing extension"
 msgstr "Chyba instalace rozšíření"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
 msgid "Invalid extension"
 msgstr "Neplatné rozšíření"
 
@@ -446,23 +446,27 @@ msgstr "Pracovní plochy jen na hlavní obrazovce"
 msgid "Applications"
 msgstr "Aplikace"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:51
+#: ../gtweak/tweaks/tweak_group_startup.py:41
+msgid "Search Applications..."
+msgstr "Vyhledat aplikace…"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "running"
 msgstr "běží"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:71
 msgid "_Close"
 msgstr "_Zavřít"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:62
+#: ../gtweak/tweaks/tweak_group_startup.py:72
 msgid "Add Application"
 msgstr "Přidat aplikaci"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:161
+#: ../gtweak/tweaks/tweak_group_startup.py:205
 msgid "New startup application"
 msgstr "Nová aplikace při spuštění"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:162
+#: ../gtweak/tweaks/tweak_group_startup.py:206
 msgid "Add a new application to be run at startup"
 msgstr "Přidat novou aplikaci, která se má rozjet při spuštění"
 
