@@ -126,7 +126,7 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
 TWEAK_GROUPS = [ 
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
         GSettingsSwitchTweak(_("Attached Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs"),
-        GSettingsSwitchTweak(_("Automatically Raise Windows"),"org.gnome.desktop.wm.preferences", "raise-on-click"),
+        GSettingsSwitchTweak(_("Automatically Raise Windows"),"org.gnome.desktop.wm.preferences", "auto-raise"),
         GSettingsSwitchTweak(_("Resize with Secondary-click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
         GSettingsComboTweak(_("Window Action Key"),
                         "org.gnome.desktop.wm.preferences",
