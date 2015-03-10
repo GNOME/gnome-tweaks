@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-26 22:03+0200\n"
-"PO-Revision-Date: 2015-01-26 22:07+0200\n"
+"POT-Creation-Date: 2015-03-11 01:26+0200\n"
+"PO-Revision-Date: 2015-03-11 01:27+0200\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
@@ -97,7 +97,7 @@ msgid "Appearance"
 msgstr "מראה"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
 msgid "Extensions"
 msgstr "הרחבות"
 
@@ -109,7 +109,7 @@ msgstr "גופנים"
 msgid "Power"
 msgstr "חשמל"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:194
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
 msgid "Startup Applications"
 msgstr "יישומי הפעלה"
 
@@ -137,11 +137,11 @@ msgstr "קבצים"
 msgid "Miscellaneous"
 msgstr "שונות"
 
-#: ../gtweak/tweakview.py:96
+#: ../gtweak/tweakview.py:97
 msgid "Tweaks"
 msgstr "התאמות"
 
-#: ../gtweak/tweakview.py:112
+#: ../gtweak/tweakview.py:113
 msgid "Search Tweaks..."
 msgstr "חיפוש התאמות"
 
@@ -318,60 +318,60 @@ msgstr "ההרחבה אינה תומכת בגרסת המעטפת"
 msgid "Unknown extension error"
 msgstr "שגיאת מעטפת בלתי ידועה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
-#: ../gtweak/tweaks/tweak_group_startup.py:145
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
+#: ../gtweak/tweaks/tweak_group_startup.py:189
 msgid "Remove"
 msgstr "הסרה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
 msgid "Uninstall Extension"
 msgstr "הסרת הרחבה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "האם אתה רוצה להסיר את ההרחבה '%s' ?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
 msgid "Updating"
 msgstr "עדכון"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
 msgid "Error"
 msgstr "שגיאה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Update"
 msgstr "מעדכן"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
 msgid "Install Shell Extension"
 msgstr "התקנת הרחבת מעטפת"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Select an extension"
 msgstr "נא לבחור בהרחבה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Get more extensions"
 msgstr "לקבלת הרחבות נוספות"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "ההרחבה %s עודכנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "ההרחבה %s הותקנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
 msgid "Error installing extension"
 msgstr "התקנת ההרחבה נכשלה"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
 msgid "Invalid extension"
 msgstr "הרחבה שגויה"
 
@@ -443,23 +443,27 @@ msgstr "שולחן עבודה בלבד בצג ראשי"
 msgid "Applications"
 msgstr "יישומים"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:51
+#: ../gtweak/tweaks/tweak_group_startup.py:41
+msgid "Search Applications..."
+msgstr "חיפוש יישומים…"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "running"
 msgstr "פועל"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:71
 msgid "_Close"
 msgstr "_סגירה"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:62
+#: ../gtweak/tweaks/tweak_group_startup.py:72
 msgid "Add Application"
 msgstr "הוספת יישום"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:161
+#: ../gtweak/tweaks/tweak_group_startup.py:205
 msgid "New startup application"
 msgstr "יישום הפעלה חדש"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:162
+#: ../gtweak/tweaks/tweak_group_startup.py:206
 msgid "Add a new application to be run at startup"
 msgstr "הוספת יישום חדש להפעלה עם הפעלה"
 
