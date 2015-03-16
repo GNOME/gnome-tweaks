@@ -258,5 +258,6 @@ TWEAK_GROUPS = [
         IconThemeSwitcher(),
         CursorThemeSwitcher(),
         ShellThemeTweak(loaded=_shell_loaded),
+        GSettingsSwitchTweak(_("Enable animations"), "org.gnome.desktop.interface", "enable-animations"),
     ),
 ]
