@@ -25,7 +25,7 @@ from gi.repository import Gtk
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
-            
+
 class ShowWindowButtons(GSettingsSwitchTweakValue):
 
     def __init__(self, name, value, **options):
@@ -38,18 +38,27 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
                                            **options)
     def get_active(self):
         return self.value in self.settings.get_string(self.key_name)
-            
+
     def set_active(self, v):
         val = self.settings.get_string(self.key_name)
-        if v:
-            if val == ":close":
-                val = val.replace(":", ":"+self.value+",")
-            else:
-                val = ":minimize,maximize,close"
-        else:
-            val = val.replace(self.value+",", "")
 
-        self.settings.set_string(self.key_name, val)
+        (left, colon, right) = val.partition(":")
+        rsplit = right.split(",")
+
+        if v:
+            rsplit.append(self.value)
+        else:
+            rsplit.remove(self.value)
+
+        def sort_buttons(x, y):
+            order = ["minimize", "maximize", "close"];
+            if x in order and y in order:
+                return order.index(x) - order.index(y)
+            else:
+                return 0
+        rsplit.sort(cmp=sort_buttons)
+
+        self.settings.set_string(self.key_name, left + colon + ",".join(rsplit))
 
 class WindowScalingFactorTweak(Gtk.Box, Tweak):
     def __init__(self, **options):
@@ -71,7 +80,7 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
     def _on_value_changed(self, adj):
         self._xsettings.set_window_scaling_factor(adj.get_value())
 
-TWEAK_GROUPS = [ 
+TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
         GSettingsSwitchTweak(_("Attached Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs"),
         GSettingsSwitchTweak(_("Automatically Raise Windows"),"org.gnome.desktop.wm.preferences", "auto-raise"),
