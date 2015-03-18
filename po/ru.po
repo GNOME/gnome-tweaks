@@ -5,17 +5,17 @@
 # Yuri Kozlov <yuray@komyakino.ru>, 2011.
 # Yuri Myasoedov <omerta13@yandex.ru>, 2012.
 # Andrey Inishev <inish777@gmail.com>, 2013.
-# Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013, 2014, 2015.
 # Ivan Komaritsyn <vantu5z@mail.ru>, 2015.
+# Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-02-19 09:46+0000\n"
-"PO-Revision-Date: 2015-02-19 14:49+0300\n"
-"Last-Translator: Ivan Komaritsyn <vantu5z@mail.ru>\n"
+"POT-Creation-Date: 2015-03-18 09:00+0000\n"
+"PO-Revision-Date: 2015-03-18 21:43+0300\n"
+"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 # тут дословный перевод не годится, получится масло масленое
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1
@@ -67,7 +67,7 @@ msgstr "Отключить все расширения"
 
 #: ../data/shell.ui.h:3
 msgid "_About"
-msgstr "_О программе"
+msgstr "_О приложении"
 
 #: ../data/shell.ui.h:4
 msgid "_Quit"
@@ -83,7 +83,7 @@ msgstr "Сбросить все параметры на настройки по 
 
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
-msgstr "О программе"
+msgstr "О приложении GNOME Tweak Tool"
 
 #: ../gtweak/app.py:94
 msgid "GNOME Tweak Tool"
@@ -147,11 +147,11 @@ msgstr "Файлы"
 msgid "Miscellaneous"
 msgstr "Разное"
 
-#: ../gtweak/tweakview.py:97
+#: ../gtweak/tweakview.py:100
 msgid "Tweaks"
 msgstr "Настройки"
 
-#: ../gtweak/tweakview.py:113
+#: ../gtweak/tweakview.py:116
 msgid "Search Tweaks..."
 msgstr "Найти настройки…"
 
@@ -303,8 +303,12 @@ msgstr "Недопустимая тема"
 msgid "Theme"
 msgstr "Тема"
 
+#: ../gtweak/tweaks/tweak_group_interface.py:261
+msgid "Enable animations"
+msgstr "Включить анимацию"
+
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:134
+#: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Выключено"
 
@@ -477,15 +481,15 @@ msgstr "Добавить приложение в автозапуск"
 msgid "Add a new application to be run at startup"
 msgstr "Добавить новое приложение для запуска при загрузке"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Window scaling"
 msgstr "Масштабирование окон"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Отрегулируйте коэффициент масштабирования окон GDK для HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:86
+#: ../gtweak/tweaks/tweak_group_windows.py:95
 #, python-format
 msgid "Settings will be reverted in %d second"
 msgid_plural "Settings will be reverted in %d seconds"
@@ -493,67 +497,67 @@ msgstr[0] "Настройки будут восстановлены через %
 msgstr[1] "Настройки будут восстановлены через %d секунды"
 msgstr[2] "Настройки будут восстановлены через %d секунд"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:102
+#: ../gtweak/tweaks/tweak_group_windows.py:111
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "Сохранить данные настройки HiDPI?"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:109
+#: ../gtweak/tweaks/tweak_group_windows.py:118
 msgid "Revert Settings"
 msgstr "Восстановить настройки"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:110
+#: ../gtweak/tweaks/tweak_group_windows.py:119
 msgid "Keep Changes"
 msgstr "Сохранить изменения"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:128
+#: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Attached Modal Dialogs"
 msgstr "Модальные диалоговые окна прикреплены к основному окну"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:129
+#: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Automatically Raise Windows"
 msgstr "Окна всплывают автоматически"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:130
+#: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Resize with Secondary-click"
 msgstr "Изменение размера с помощью правой кнопки мыши"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:131
+#: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Window Action Key"
 msgstr "Клавиша-модификатор действий над окном"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:135
+#: ../gtweak/tweaks/tweak_group_windows.py:144
 msgid "Focus Mode"
 msgstr "Режим фокусировки"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:136
+#: ../gtweak/tweaks/tweak_group_windows.py:145
 msgid "Titlebar Actions"
 msgstr "Поведение заголовка окна"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:137
+#: ../gtweak/tweaks/tweak_group_windows.py:146
 msgid "Double-click"
 msgstr "Двойной щелчок"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:138
+#: ../gtweak/tweaks/tweak_group_windows.py:147
 msgid "Middle-click"
 msgstr "Щелчок средней кнопкой мыши"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:139
+#: ../gtweak/tweaks/tweak_group_windows.py:148
 msgid "Secondary-click"
 msgstr "Щелчок правой кнопкой мыши"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:140
+#: ../gtweak/tweaks/tweak_group_windows.py:149
 msgid "Titlebar Buttons"
 msgstr "Кнопки заголовка окна"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:141
+#: ../gtweak/tweaks/tweak_group_windows.py:150
 msgid "Maximize"
 msgstr "Развернуть"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:142
+#: ../gtweak/tweaks/tweak_group_windows.py:151
 msgid "Minimize"
 msgstr "Свернуть"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:143
+#: ../gtweak/tweaks/tweak_group_windows.py:152
 msgid "HiDPI"
 msgstr "HiDPI"
 
