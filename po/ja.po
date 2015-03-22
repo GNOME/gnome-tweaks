@@ -8,9 +8,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-07 19:24+0000\n"
-"PO-Revision-Date: 2015-01-01 15:25+0900\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2015-03-20 20:59+0000\n"
+"PO-Revision-Date: 2015-03-21 12:50+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -21,11 +22,17 @@ msgstr ""
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
-msgstr "GNOME Tweak Tool は GNOME の詳細なオプションを調整するためのツールです。"
+msgstr ""
+"GNOME Tweak Tool は GNOME の詳細なオプションを調整するためのツールです。"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:2
-msgid "It can install and manage themes and extensions, change power settings, manage startup applications, and enable desktop icons among other settings."
-msgstr "このツールを使うと、テーマや拡張機能のインストールと管理、また電源設定の変更や、スタートアップアプリケーションの管理、デスクトップアイコンの設定、その他さまざまな設定を行うことができます。"
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"このツールを使うと、テーマや拡張機能のインストールと管理、また電源設定の変更"
+"や、スタートアップアプリケーションの管理、デスクトップアイコンの設定、その他"
+"さまざまな設定を行うことができます。"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -36,8 +43,12 @@ msgid "Tweak advanced GNOME 3 settings"
 msgstr "GNOME 3 の高度な設定"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;設定;高度;拡張機能;フォント;テーマ;キーボード;タイピング;customize;カスタマイズ;addon;addin;アドオン;アドイン;gnomeshell;TweakTool;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;設"
+"定;高度;拡張機能;フォント;テーマ;キーボード;タイピング;customize;カスタマイ"
+"ズ;addon;addin;アドオン;アドイン;gnomeshell;TweakTool;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -61,7 +72,8 @@ msgstr "デフォルト設定に戻す"
 
 #: ../gtweak/app.py:77
 msgid "Reset all tweak settings to the original default state?"
-msgstr "Tweak Tool で変更したすべての設定を、オリジナルのデフォルト値に戻しますか。"
+msgstr ""
+"Tweak Tool で変更したすべての設定を、オリジナルのデフォルト値に戻しますか。"
 
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
@@ -89,7 +101,7 @@ msgid "Appearance"
 msgstr "外観"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
 msgid "Extensions"
 msgstr "拡張機能"
 
@@ -101,7 +113,7 @@ msgstr "フォント"
 msgid "Power"
 msgstr "電源"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:194
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
 msgid "Startup Applications"
 msgstr "スタートアップアプリケーション"
 
@@ -129,11 +141,11 @@ msgstr "ファイル"
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: ../gtweak/tweakview.py:96
+#: ../gtweak/tweakview.py:100
 msgid "Tweaks"
 msgstr "設定項目"
 
-#: ../gtweak/tweakview.py:112
+#: ../gtweak/tweakview.py:116
 msgid "Search Tweaks..."
 msgstr "設定項目を検索..."
 
@@ -285,8 +297,12 @@ msgstr "無効なテーマ"
 msgid "Theme"
 msgstr "テーマ"
 
+#: ../gtweak/tweaks/tweak_group_interface.py:261
+msgid "Enable animations"
+msgstr "アニメーションを有効にする"
+
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:134
+#: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "無効"
 
@@ -310,60 +326,60 @@ msgstr "拡張機能が GNOME Shell のバージョンに対応していませ�
 msgid "Unknown extension error"
 msgstr "原因不明の拡張機能エラー"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
-#: ../gtweak/tweaks/tweak_group_startup.py:145
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
+#: ../gtweak/tweaks/tweak_group_startup.py:189
 msgid "Remove"
 msgstr "削除"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
 msgid "Uninstall Extension"
 msgstr "拡張機能のアンインストール"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "拡張機能 '%s' をアンインストールしますか。"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
 msgid "Updating"
 msgstr "更新中"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
 msgid "Error"
 msgstr "エラー"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Update"
 msgstr "更新"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
 msgid "Install Shell Extension"
 msgstr "GNOME Shell 拡張機能をインストール"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Select an extension"
 msgstr "拡張機能の選択"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Get more extensions"
 msgstr "他の拡張機能をインストールする"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s の拡張機能の更新に成功"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s の拡張機能のインストールに成功"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
 msgid "Error installing extension"
 msgstr "拡張機能のインストールに失敗"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
 msgid "Invalid extension"
 msgstr "無効な拡張機能"
 
@@ -435,101 +451,105 @@ msgstr "プライマリディスプレイだけワークスペース機能を使
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:51
+#: ../gtweak/tweaks/tweak_group_startup.py:41
+msgid "Search Applications..."
+msgstr "アプリケーションを検索..."
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "running"
 msgstr "起動中"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:71
 msgid "_Close"
 msgstr "閉じる(_C)"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:62
+#: ../gtweak/tweaks/tweak_group_startup.py:72
 msgid "Add Application"
 msgstr "アプリケーションを追加"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:161
+#: ../gtweak/tweaks/tweak_group_startup.py:205
 msgid "New startup application"
 msgstr "新しいスタートアップアプリケーション"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:162
+#: ../gtweak/tweaks/tweak_group_startup.py:206
 msgid "Add a new application to be run at startup"
 msgstr "スタートアップ時に自動で起動するアプリケーションを追加します"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Window scaling"
 msgstr "ウィンドウスケーリング"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "HiDPI のための GDK ウィンドウの倍率を調整します"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:86
+#: ../gtweak/tweaks/tweak_group_windows.py:95
 #, python-format
 msgid "Settings will be reverted in %d second"
 msgid_plural "Settings will be reverted in %d seconds"
 msgstr[0] "%d 秒後に元の設定に戻ります"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:102
+#: ../gtweak/tweaks/tweak_group_windows.py:111
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "この HiDPI 設定を保存しますか?"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:109
+#: ../gtweak/tweaks/tweak_group_windows.py:118
 msgid "Revert Settings"
 msgstr "設定を元に戻す"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:110
+#: ../gtweak/tweaks/tweak_group_windows.py:119
 msgid "Keep Changes"
 msgstr "変更を保存"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:128
+#: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Attached Modal Dialogs"
 msgstr "モーダルダイアログを親ウィンドウに結び付ける"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:129
+#: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Automatically Raise Windows"
 msgstr "ウィンドウを操作すると自動的にウィンドウを最前面に配置する"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:130
+#: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Resize with Secondary-click"
 msgstr "マウスの右ボタンでサイズを変更する"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:131
+#: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Window Action Key"
 msgstr "ウィンドウ操作キー"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:135
+#: ../gtweak/tweaks/tweak_group_windows.py:144
 msgid "Focus Mode"
 msgstr "フォーカスモード"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:136
+#: ../gtweak/tweaks/tweak_group_windows.py:145
 msgid "Titlebar Actions"
 msgstr "タイトルバーの挙動"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:137
+#: ../gtweak/tweaks/tweak_group_windows.py:146
 msgid "Double-click"
 msgstr "ダブルクリック"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:138
+#: ../gtweak/tweaks/tweak_group_windows.py:147
 msgid "Middle-click"
 msgstr "中クリック"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:139
+#: ../gtweak/tweaks/tweak_group_windows.py:148
 msgid "Secondary-click"
 msgstr "右クリック"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:140
+#: ../gtweak/tweaks/tweak_group_windows.py:149
 msgid "Titlebar Buttons"
 msgstr "タイトルバーボタン"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:141
+#: ../gtweak/tweaks/tweak_group_windows.py:150
 msgid "Maximize"
 msgstr "最大化"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:142
+#: ../gtweak/tweaks/tweak_group_windows.py:151
 msgid "Minimize"
 msgstr "最小化"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:143
+#: ../gtweak/tweaks/tweak_group_windows.py:152
 msgid "HiDPI"
 msgstr "HiDPI"
 
@@ -593,7 +613,9 @@ msgstr "グローバルダークテーマ"
 
 #: ../gtweak/widgets.py:481
 msgid "Applications need to be restarted for change to take effect"
-msgstr "アプリケーション上に変更を反映させるには、そのアプリケーションを再起動する必要があります"
+msgstr ""
+"アプリケーション上に変更を反映させるには、そのアプリケーションを再起動する必"
+"要があります"
 
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
