@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-01-07 21:34+0100\n"
-"PO-Revision-Date: 2015-01-07 21:36+0100\n"
+"POT-Creation-Date: 2015-03-23 21:45+0100\n"
+"PO-Revision-Date: 2015-03-23 21:45+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1
@@ -102,7 +102,7 @@ msgid "Appearance"
 msgstr "Itxura"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:304
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
 msgid "Extensions"
 msgstr "Hedapenak"
 
@@ -114,7 +114,7 @@ msgstr "Letra-tipoak"
 msgid "Power"
 msgstr "Energia"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:194
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
 msgid "Startup Applications"
 msgstr "Abioko aplikazioak"
 
@@ -142,11 +142,11 @@ msgstr "Fitxategiak"
 msgid "Miscellaneous"
 msgstr "Bestelakoak"
 
-#: ../gtweak/tweakview.py:96
+#: ../gtweak/tweakview.py:100
 msgid "Tweaks"
 msgstr "Doikuntzak"
 
-#: ../gtweak/tweakview.py:112
+#: ../gtweak/tweakview.py:116
 msgid "Search Tweaks..."
 msgstr "Bilatu doikuntzak..."
 
@@ -298,8 +298,12 @@ msgstr "Gai baliogabea"
 msgid "Theme"
 msgstr "Gaia"
 
+#: ../gtweak/tweaks/tweak_group_interface.py:261
+msgid "Enable animations"
+msgstr "Gaitu animazioak"
+
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:134
+#: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Desgaituta"
 
@@ -323,60 +327,60 @@ msgstr "Hedapenak ez du shell-aren bertsio hau onartzen"
 msgid "Unknown extension error"
 msgstr "Hedapeneko errore ezezaguna"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:108
-#: ../gtweak/tweaks/tweak_group_startup.py:145
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
+#: ../gtweak/tweaks/tweak_group_startup.py:189
 msgid "Remove"
 msgstr "Kendu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:140
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
 msgid "Uninstall Extension"
 msgstr "Desinstalatu hedapena"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "'%s' hedapena desintalatzea nahi duzu?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:158
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
 msgid "Updating"
 msgstr "Eguneratzea"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:169
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
 msgid "Error"
 msgstr "Errorea"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:174
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Update"
 msgstr "Eguneratu"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:189
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
 msgid "Install Shell Extension"
 msgstr "Instalatu shell-aren hedapena"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:194
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Select an extension"
 msgstr "Hautatu hedapena"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:201
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Get more extensions"
 msgstr "Eskuratu hedapen gehiago"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:251
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s hedapena ongi eguneratu da"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s hedapena ongi instalatu da"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
 msgid "Error installing extension"
 msgstr "Errorea hedapena instalatzean"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:263
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
 msgid "Invalid extension"
 msgstr "Hedapen baliogabea"
 
@@ -448,102 +452,106 @@ msgstr "Laneko areak pantaila nagusian soilik"
 msgid "Applications"
 msgstr "Aplikazioak"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:51
+#: ../gtweak/tweaks/tweak_group_startup.py:41
+msgid "Search Applications..."
+msgstr "Bilatu aplikazioak..."
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "running"
 msgstr "exekutatzen"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:71
 msgid "_Close"
 msgstr "_Itxi"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:62
+#: ../gtweak/tweaks/tweak_group_startup.py:72
 msgid "Add Application"
 msgstr "Gehitu aplikazioa"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:161
+#: ../gtweak/tweaks/tweak_group_startup.py:205
 msgid "New startup application"
 msgstr "Abioko aplikazio berria"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:162
+#: ../gtweak/tweaks/tweak_group_startup.py:206
 msgid "Add a new application to be run at startup"
 msgstr "Gehitu aplikazio berria abioan exekutatzeko"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Window scaling"
 msgstr "Leihoa eskalatzea"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Doitu GDK leihoa eskalatzearen faktorea HiDPI-rentzako"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:86
+#: ../gtweak/tweaks/tweak_group_windows.py:95
 #, python-format
 msgid "Settings will be reverted in %d second"
 msgid_plural "Settings will be reverted in %d seconds"
 msgstr[0] "Ezarpenak segundo %d-ean alderantzikatuko da."
 msgstr[1] "Ezarpenak %d segundotan alderantzikatuko dira"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:102
+#: ../gtweak/tweaks/tweak_group_windows.py:111
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "HiDPI ezarpen hauek mantentzea nahi dituzu?"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:109
+#: ../gtweak/tweaks/tweak_group_windows.py:118
 msgid "Revert Settings"
 msgstr "Alderantzikatu ezarpenak"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:110
+#: ../gtweak/tweaks/tweak_group_windows.py:119
 msgid "Keep Changes"
 msgstr "Mantendu aldaketak"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:128
+#: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Attached Modal Dialogs"
 msgstr "Erantsitako elkarrizketa-koadro modala"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:129
+#: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Automatically Raise Windows"
 msgstr "Goratu leihoak automatikoki"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:130
+#: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Resize with Secondary-click"
 msgstr "Aldatu tamaina bigarren mailako klik eginez"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:131
+#: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Window Action Key"
 msgstr "Leihoen ekintzaren gakoa"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:135
+#: ../gtweak/tweaks/tweak_group_windows.py:144
 msgid "Focus Mode"
 msgstr "Fokuaren modua"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:136
+#: ../gtweak/tweaks/tweak_group_windows.py:145
 msgid "Titlebar Actions"
 msgstr "Titulu-barraren ekintzak"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:137
+#: ../gtweak/tweaks/tweak_group_windows.py:146
 msgid "Double-click"
 msgstr "Klik bikoitza"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:138
+#: ../gtweak/tweaks/tweak_group_windows.py:147
 msgid "Middle-click"
 msgstr "Erdiko klik"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:139
+#: ../gtweak/tweaks/tweak_group_windows.py:148
 msgid "Secondary-click"
 msgstr "Bigarren mailako klik"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:140
+#: ../gtweak/tweaks/tweak_group_windows.py:149
 msgid "Titlebar Buttons"
 msgstr "Titulu-barraren botoiak"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:141
+#: ../gtweak/tweaks/tweak_group_windows.py:150
 msgid "Maximize"
 msgstr "Maximizatu"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:142
+#: ../gtweak/tweaks/tweak_group_windows.py:151
 msgid "Minimize"
 msgstr "Minimizatu"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:143
+#: ../gtweak/tweaks/tweak_group_windows.py:152
 msgid "HiDPI"
 msgstr "HiDPI"
 
