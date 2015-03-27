@@ -274,6 +274,7 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
             *tweaks,
             css_class='tweak-group-startup')
         self.set_header_func(_list_header_func, None)
+        self.connect("row-activated", lambda b, row: add.btn.activate() if row == add else None)
 
     def _on_remove_clicked(self, btn, widget, df):
         self.remove(widget)
