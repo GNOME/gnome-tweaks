@@ -32,7 +32,8 @@ def _list_header_func(row, before, user_data):
 
 class _AppChooser(Gtk.Dialog):
     def __init__(self, main_window, running_exes, startup_apps):
-        Gtk.Dialog.__init__(self, title=_("Applications"))
+        uhb = Gtk.Settings.get_default().props.gtk_dialogs_use_header
+        Gtk.Dialog.__init__(self, title=_("Applications"), use_header_bar=uhb)
 
         self._running = {}
         self._all = {}
@@ -73,8 +74,8 @@ class _AppChooser(Gtk.Dialog):
         sw.props.hscrollbar_policy = Gtk.PolicyType.NEVER
         sw.add(lb)
 
-        self.add_button(_("_Close"), Gtk.ResponseType.CLOSE)
-        self.add_button(_("Add Application"), Gtk.ResponseType.OK)
+        self.add_button(_("_Close"), Gtk.ResponseType.CANCEL)
+        self.add_button(_("_Add"), Gtk.ResponseType.OK)
         self.set_default_response(Gtk.ResponseType.OK)
 
         self.get_content_area().pack_start(self.searchbar, False, False, 0)
