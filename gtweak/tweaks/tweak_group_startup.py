@@ -40,6 +40,7 @@ class _AppChooser(Gtk.Dialog):
         self.entry = Gtk.SearchEntry(
                 placeholder_text=_("Search Applications..."))
         self.entry.set_width_chars(30)
+        self.entry.props.activates_default=True
 
         self.searchbar = Gtk.SearchBar()
         self.searchbar.add(self.entry)
@@ -72,6 +73,7 @@ class _AppChooser(Gtk.Dialog):
 
         self.add_button(_("_Close"), Gtk.ResponseType.CLOSE)
         self.add_button(_("Add Application"), Gtk.ResponseType.OK)
+        self.set_default_response(Gtk.ResponseType.OK)
 
         self.get_content_area().pack_start(self.searchbar, False, False, 0)
         self.get_content_area().pack_start(sw, True, True, 0)
