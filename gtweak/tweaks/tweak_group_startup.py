@@ -133,7 +133,6 @@ class _AppChooser(Gtk.Dialog):
           if type(sib) == Gtk.Label:
               if txt in sib.get_text().lower():
                   return True
-              return False
       return False
 
     def _on_key_press(self, widget, event):
