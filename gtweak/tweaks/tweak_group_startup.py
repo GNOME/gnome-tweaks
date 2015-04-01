@@ -48,10 +48,12 @@ class _AppChooser(Gtk.Dialog):
 
         lb = Gtk.ListBox()
         lb.props.margin = 5
+        lb.props.activate_on_single_click = False
         lb.set_sort_func(self._sort_apps, None)
         lb.set_header_func(_list_header_func, None)
         lb.set_filter_func(self._list_filter_func, None)
         self.entry.connect("search-changed", self._on_search_entry_changed)
+        lb.connect("row-activated", lambda b, r: self.response(Gtk.ResponseType.OK) if r.get_mapped() else None)
         lb.connect("row-selected", self._on_row_selected)
 
         apps = Gio.app_info_get_all()
