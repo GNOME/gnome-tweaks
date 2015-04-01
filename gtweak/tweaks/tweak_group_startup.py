@@ -50,7 +50,8 @@ class _AppChooser(Gtk.Dialog):
         lb.set_sort_func(self._sort_apps, None)
         lb.set_header_func(_list_header_func, None)
         lb.set_filter_func(self._list_filter_func, None)
-        self.entry.connect("search-changed", lambda e: lb.invalidate_filter())
+        self.entry.connect("search-changed", self._on_search_entry_changed)
+        lb.connect("row-selected", self._on_row_selected)
 
         apps = Gio.app_info_get_all()
         for a in apps:
@@ -135,6 +136,20 @@ class _AppChooser(Gtk.Dialog):
               if txt in sib.get_text().lower():
                   return True
       return False
+
+    def _on_search_entry_changed(self, editable):
+        self.listbox.invalidate_filter()
+        selected = self.listbox.get_selected_row()
+        if selected and selected.get_mapped():
+            self.set_response_sensitive(Gtk.ResponseType.OK, True)
+        else:
+            self.set_response_sensitive(Gtk.ResponseType.OK, False)
+
+    def _on_row_selected(self, box, row):
+        if row and row.get_mapped():
+            self.set_response_sensitive(Gtk.ResponseType.OK, True)
+        else:
+            self.set_response_sensitive(Gtk.ResponseType.OK, False)
 
     def _on_key_press(self, widget, event):
       keyname = Gdk.keyval_name(event.keyval)
