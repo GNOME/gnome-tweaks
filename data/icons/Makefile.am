@@ -16,6 +16,9 @@ icon48_DATA = 48x48/apps/gnome-tweak-tool.png
 icon256dir = $(datadir)/icons/hicolor/256x256/apps
 icon256_DATA = 256x256/apps/gnome-tweak-tool.png
 
+iconscalabledir = $(datadir)/icons/hicolor/scalable/apps
+iconscalable_DATA = scalable/apps/gnome-tweak-tool-symbolic.svg
+
 gtk_update_icon_cache = gtk-update-icon-cache -f -t $(datadir)/icons/hicolor
 
 install-data-hook: update-icon-cache
@@ -36,4 +39,5 @@ EXTRA_DIST = \
 	$(icon32_DATA)  	\
 	$(icon48_DATA)  	\
 	$(icon256_DATA)  	\
+	$(iconscalable_DATA)  	\
 	gnome-tweak-tool.svg
