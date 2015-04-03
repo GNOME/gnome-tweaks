@@ -28,14 +28,19 @@ from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsF
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
-class _XkbOption(Gtk.Box, Tweak):
+class _XkbOption(Gtk.Expander, Tweak):
     def __init__(self, group_id, parent_settings, xkb_info, **options):
         try:
             desc = xkb_info.description_for_group(group_id)
         except AttributeError:
             desc = group_id
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.Expander.__init__(self)
         Tweak.__init__(self, desc, desc, **options)
+
+        self.set_label(self.name)
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=3)
+        vbox.set_margin_start(15)
+        self.add(vbox)
 
         self._group_id = group_id
         self._parent_settings = parent_settings
@@ -49,53 +54,53 @@ class _XkbOption(Gtk.Box, Tweak):
             model_values.append((option_id, desc))
             self._possible_values.append(option_id)
 
-        store = Gtk.ListStore(str, str)
-        store.set_sort_column_id(0, Gtk.SortType.ASCENDING)
+        self._radios = dict()
         for (val, name) in model_values:
-            store.append((val, name))
+            self._radios[val] = r = Gtk.RadioButton.new_from_widget(self._radios.get(None))
+            vbox.add(r)
+            l = Gtk.Label(name)
+            l.set_line_wrap(True)
+            r.add(l)
+            r._changed_id = r.connect('toggled', self._on_radio_changed)
+            r._val = val
 
-        self._combo = Gtk.ComboBox(model = store)
-        renderer = Gtk.CellRendererText()
-        renderer.props.ellipsize = Pango.EllipsizeMode.END
-        renderer.props.max_width_chars = 30
-        self._combo.pack_start(renderer, True)
-        self._combo.add_attribute(renderer, "text", 1)
-        self._combo_changed_handler_id = self._combo.connect("changed", self._on_combo_changed)
-
-        build_label_beside_widget(self.name, self._combo, hbox=self)
         self.widget_for_size_group = None
-
         self.reload()
 
     def reload(self):
         for v in self._parent_settings.get_strv(TypingTweakGroup.XKB_GSETTINGS_NAME):
             if (v in self._possible_values):
                 self._value = v
-                self._update_combo()
+                self._update_radios()
                 return
 
         self._value = None
-        self._update_combo()
+        self._update_radios()
 
-    def _update_combo(self):
-        model = self._combo.get_model()
-        for row in model:
-            if self._value == row[0]:
-                self._combo.disconnect(self._combo_changed_handler_id)
-                self._combo.set_active_iter(row.iter)
-                self._combo_changed_handler_id = self._combo.connect("changed", self._on_combo_changed)
-                break
+    def _update_radios(self):
+        if self._value:
+            self.set_label('<b>'+self.name+'</b>')
+            self.set_use_markup(True)
+        else:
+            self.set_label(self.name)
 
-    def _on_combo_changed(self, combo):
-        new_value = combo.get_model().get_value(combo.get_active_iter(), 0)
+        r = self._radios.get(self._value)
+        if r:
+            r.disconnect(r._changed_id)
+            r.set_active(True)
+            r._changed_id = r.connect('toggled', self._on_radio_changed)
 
-        if not new_value:
+    def _on_radio_changed(self, r):
+        if not r.get_active():
+            return
+
+        if not r._val:
             if self._value:
                 self._parent_settings.setting_remove_from_list(TypingTweakGroup.XKB_GSETTINGS_NAME, self._value)
         else:
             if self._value:
                 self._parent_settings.setting_remove_from_list(TypingTweakGroup.XKB_GSETTINGS_NAME, self._value)
-            self._parent_settings.setting_add_to_list(TypingTweakGroup.XKB_GSETTINGS_NAME, new_value)
+            self._parent_settings.setting_add_to_list(TypingTweakGroup.XKB_GSETTINGS_NAME, r._val)
 
 class TypingTweakGroup(Gtk.Box, TweakGroup):
 
@@ -107,7 +112,6 @@ class TypingTweakGroup(Gtk.Box, TweakGroup):
     def __init__(self):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=3)
         self._option_objects = []
-        self._sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
         ok = False
         try:
             self._kbdsettings = GSettingsSetting(self.XKB_GSETTINGS_SCHEMA)
@@ -125,7 +129,6 @@ class TypingTweakGroup(Gtk.Box, TweakGroup):
             if ok:
                 for opt in set(self._xkb_info.get_all_option_groups()) - self.XKB_OPTIONS_BLACKLIST:
                     obj = _XkbOption(opt, self._kbdsettings, self._xkb_info)
-                    self._sg.add_widget(obj._combo)
                     self._option_objects.append(obj)
                     self.pack_start(obj, False, False, 0)
         TweakGroup.__init__(self, _("Typing"), *self._option_objects)
