@@ -31,7 +31,7 @@ def _list_header_func(row, before, user_data):
         row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
 
 class _AppChooser(Gtk.Dialog):
-    def __init__(self, main_window, running_exes):
+    def __init__(self, main_window, running_exes, startup_apps):
         Gtk.Dialog.__init__(self, title=_("Applications"))
 
         self._running = {}
@@ -54,15 +54,16 @@ class _AppChooser(Gtk.Dialog):
 
         apps = Gio.app_info_get_all()
         for a in apps:
-            if a.should_show():
-                running = a.get_executable() in running_exes
-                w = self._build_widget(
+            if a.get_id() not in startup_apps:
+                if a.should_show():
+                    running = a.get_executable() in running_exes
+                    w = self._build_widget(
                         a,
                         _("running") if running else "")
-                if w:
-                    self._all[w] = a
-                    self._running[w] = running
-                    lb.add(w)
+                    if w:
+                        self._all[w] = a
+                        self._running[w] = running
+                        lb.add(w)
 
         sw = Gtk.ScrolledWindow()
         sw.props.hscrollbar_policy = Gtk.PolicyType.NEVER
@@ -197,6 +198,7 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
         self.get_style_context().add_class('tweak-startup')
 
         self.btn = btn
+        self.app_id = df.get_id()
 
 class AddStartupTweak(Gtk.ListBoxRow, Tweak):
     def __init__(self, **options):
@@ -245,9 +247,12 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
 
     def _on_add_clicked(self, btn):
         Gio.Application.get_default().mark_busy()
+        startup_apps = set()
+        self.foreach(lambda row: startup_apps.add(row.app_id) if type(row) is _StartupTweak else None)
         a = _AppChooser(
                 self.main_window,
-                set(self._get_running_executables()))
+                set(self._get_running_executables()),
+                startup_apps)
         a.show_all()
         Gio.Application.get_default().unmark_busy()
         resp = a.run()
