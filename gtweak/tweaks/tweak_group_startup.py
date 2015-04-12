@@ -245,10 +245,12 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
         AutostartFile(df).update_start_at_login(False)
 
     def _on_add_clicked(self, btn):
+        Gio.Application.get_default().mark_busy()
         a = _AppChooser(
                 self.main_window,
                 set(self._get_running_executables()))
         a.show_all()
+        Gio.Application.get_default().unmark_busy()
         resp = a.run()
         if resp == Gtk.ResponseType.OK:
             df = a.get_selected_app()
