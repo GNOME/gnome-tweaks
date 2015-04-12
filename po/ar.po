@@ -2,13 +2,13 @@
 # Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Abdalrahim G. Fakhouri <abdilra7eem@yahoo.com>, 2011.
-# Khaled Hosny <khaledhosny@eglug.org>, 2012, 2013.
+# Khaled Hosny <khaledhosny@eglug.org>, 2012, 2013, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-22 10:18+0200\n"
-"PO-Revision-Date: 2013-09-22 10:18+0200\n"
+"POT-Creation-Date: 2015-04-12 12:50+0200\n"
+"PO-Revision-Date: 2015-04-12 12:50+0200\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "Language: ar\n"
@@ -17,8 +17,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Virtaal 0.7.1-rc1\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "أداة تطويع جنوم تتيح ضبط خيارات جنوم المتقدمة."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"يمكنها تثبيت و إدارة السمات و الامتدادات، و تغيير إعدادات الطاقة، و إدارة "
+"تطبيقات بدأ التشغيل، و تفعيل أيقونات سطح المكتب، و إعدادات أخرى غيرها."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -42,14 +54,10 @@ msgid "Disable All Shell Extensions"
 msgstr "عطّل كل امتدادات الصدفة"
 
 #: ../data/shell.ui.h:3
-msgid "_Help"
-msgstr "م_ساعدة"
+msgid "_About"
+msgstr "_عن"
 
 #: ../data/shell.ui.h:4
-msgid "_About Tweak Tool"
-msgstr "_عن أداة التطويع"
-
-#: ../data/shell.ui.h:5
 msgid "_Quit"
 msgstr "أ_نهِ"
 
@@ -87,7 +95,7 @@ msgid "Appearance"
 msgstr "المظهر"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:299
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
 msgid "Extensions"
 msgstr "الامتدادات"
 
@@ -99,7 +107,7 @@ msgstr "الخطوط"
 msgid "Power"
 msgstr "الطاقة"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:173
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
 msgid "Startup Applications"
 msgstr "تطبيقات بدء التشغيل"
 
@@ -115,7 +123,7 @@ msgstr "النوافذ"
 msgid "Workspaces"
 msgstr "مساحات العمل"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
 msgid "Mouse"
 msgstr "الفأرة"
 
@@ -127,11 +135,11 @@ msgstr "الملفات"
 msgid "Miscellaneous"
 msgstr "متفرقات"
 
-#: ../gtweak/tweakview.py:85
+#: ../gtweak/tweakview.py:100
 msgid "Tweaks"
 msgstr "التطويعات"
 
-#: ../gtweak/tweakview.py:101
+#: ../gtweak/tweakview.py:116
 msgid "Search Tweaks..."
 msgstr "ابحث في التطويعات..."
 
@@ -168,12 +176,21 @@ msgid "Background"
 msgstr "الخلفية"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
 msgid "Mode"
 msgstr "الوضع"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
 msgid "Background Location"
 msgstr "مكان الخلفية"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "شاشة القفل"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "مكان شاشة القفل"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -211,75 +228,75 @@ msgstr "الأيقونات"
 msgid "Cursor"
 msgstr "المؤشر"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:96
-msgid "Window"
-msgstr "النافذة"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:121
+#: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Shell theme"
 msgstr "سمة الصدفة"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:121
+#: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Install custom or user themes for gnome-shell"
 msgstr "ثبت سمة مخصصة لصدفة جنوم"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:124
+#: ../gtweak/tweaks/tweak_group_interface.py:108
 msgid "Unknown error"
 msgstr "خطأ مجهول"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:129
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Shell not running"
 msgstr "الصدفة ليست مشتغلة"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:151
+#: ../gtweak/tweaks/tweak_group_interface.py:135
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "ثبتت سمة الصدفة بشكل غير صحيح"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:154
+#: ../gtweak/tweaks/tweak_group_interface.py:138
 msgid "Shell user-theme extension not enabled"
 msgstr "لم تفعل صمة الصدفة"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:157
+#: ../gtweak/tweaks/tweak_group_interface.py:141
 msgid "Could not list shell extensions"
 msgstr "تعذّر عرض قائمة امتدادات الصدفة"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:186
+#: ../gtweak/tweaks/tweak_group_interface.py:170
 #: ../gtweak/tweaks/tweak_group_keymouse.py:46
 msgid "<i>Default</i>"
 msgstr "<i>مبدئيّ</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:192
+#: ../gtweak/tweaks/tweak_group_interface.py:176
 msgid "Select a theme"
 msgstr "اختر سِمة"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:241
+#: ../gtweak/tweaks/tweak_group_interface.py:225
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "تم تحديث السِمة %s بنجاح"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:243
+#: ../gtweak/tweaks/tweak_group_interface.py:227
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "تم تثبيت السِمة %s بنجاح"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:251
+#: ../gtweak/tweaks/tweak_group_interface.py:235
 msgid "Error installing theme"
 msgstr "خطأ في تثبيت السِمة"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Invalid theme"
 msgstr "سِمة غير صالحة"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:272
+#: ../gtweak/tweaks/tweak_group_interface.py:256
 msgid "Theme"
 msgstr "السِمة"
 
+#: ../gtweak/tweaks/tweak_group_interface.py:261
+msgid "Enable animations"
+msgstr "فعّل التحريكات"
+
 #: ../gtweak/tweaks/tweak_group_xkb.py:46
-#: ../gtweak/tweaks/tweak_group_windows.py:62
+#: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "معطّل"
 
@@ -287,85 +304,76 @@ msgstr "معطّل"
 msgid "Typing"
 msgstr "الكتابة"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:63
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
 msgid "Extension downloading"
 msgstr "تنزيل الامتدادات"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:65
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
 msgid "Error loading extension"
 msgstr "خطأ في تحميل الامتداد"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:67
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
 msgid "Extension does not support shell version"
 msgstr "لا يدعم الامتداد إصدارة الصدفة"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:69
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
 msgid "Unknown extension error"
 msgstr "خطأ امتداد غير معروف"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:94
-#: ../gtweak/tweaks/tweak_group_startup.py:124
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
+#: ../gtweak/tweaks/tweak_group_startup.py:189
 msgid "Remove"
 msgstr "أزِل"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "The shell must be restarted for changes to take effect"
-msgstr "يجب إعادة تشغيل الصدفة لتطبيق التغييرات"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:126
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
-msgid "Restart"
-msgstr "أعِد التشغيل"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:132
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
 msgid "Uninstall Extension"
 msgstr "أزِل الامتداد"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:133
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "أتريد إزالة الامتداد '%s'؟"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:150
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
 msgid "Updating"
 msgstr "يُحدّث"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:161
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
 msgid "Error"
 msgstr "عُطل"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Update"
 msgstr "حدِّث"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:181
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
 msgid "Install Shell Extension"
 msgstr "ثبت امتداد الصدفة"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Select an extension"
 msgstr "اختر امتدادًا"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Get more extensions"
 msgstr "احصل على المزيد من الامتدادات"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:243
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "تم تحديث الامتداد %s بنجاح"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:245
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "تم تثبيت الامتداد %s بنجاح"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:253
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
 msgid "Error installing extension"
 msgstr "خطأ في تثبيت الامتداد"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:258
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
 msgid "Invalid extension"
 msgstr "امتداد غير سليم"
 
@@ -378,7 +386,7 @@ msgid "Workspace Creation"
 msgstr "إنشاء مساحات االعمل"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
-msgid "Dynamics"
+msgid "Dynamic"
 msgstr "حركي"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:50
@@ -437,73 +445,112 @@ msgstr "مساحات عمل على الشاشة الرئيسية فقط"
 msgid "Applications"
 msgstr "التطبيقات"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:51
+#: ../gtweak/tweaks/tweak_group_startup.py:41
+msgid "Search Applications..."
+msgstr "ابحث في التطبيقات..."
+
+#: ../gtweak/tweaks/tweak_group_startup.py:61
 msgid "running"
 msgstr "يعمل"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:60
+#: ../gtweak/tweaks/tweak_group_startup.py:71
 msgid "_Close"
 msgstr "أ_غلق"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#: ../gtweak/tweaks/tweak_group_startup.py:72
 msgid "Add Application"
 msgstr "أضف تطبيقًا"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:139
+#: ../gtweak/tweaks/tweak_group_startup.py:205
 msgid "New startup application"
 msgstr "تطبيق بدء تشغيل جديد"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:140
+#: ../gtweak/tweaks/tweak_group_startup.py:206
 msgid "Add a new application to be run at startup"
 msgstr "أضف تطبيقًا جديدًا لبدء التشغيل"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:56
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Window scaling"
+msgstr "مقياس النوافذ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "اضبط مقياس GDK للشاشات عالية الميز"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:95
+#, python-format
+msgid "Settings will be reverted in %d second"
+msgid_plural "Settings will be reverted in %d seconds"
+msgstr[0] "ستُستعاد الإعدادات القديمة حالًا"
+msgstr[1] "ستُستعاد الإعدادات القديمة خلال ثانية"
+msgstr[2] "ستُستعاد الإعدادات القديمة خلال ثانيتين"
+msgstr[3] "ستُستعاد الإعدادات القديمة خلال %d ثوان"
+msgstr[4] "ستُستعاد الإعدادات القديمة خلال %d ثانية"
+msgstr[5] "ستُستعاد الإعدادات القديمة خلال %d ثانية"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:111
+msgid "Do you want to keep these HiDPI settings?"
+msgstr "أتريد الإبقاء على إعدادات الشاشات عالية الميز هذه؟"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:118
+msgid "Revert Settings"
+msgstr "تراجع عن الإعدادات"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:119
+msgid "Keep Changes"
+msgstr "أبق على التغييرات"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Attached Modal Dialogs"
 msgstr "صناديق الحوار السائدة الملحقة"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:57
+#: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Automatically Raise Windows"
 msgstr "ارفع النافذة تلقائيًا"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:58
+#: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Resize with Secondary-click"
 msgstr "غيّر الحجم مع النقر الثانوي"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:59
+#: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Window Action Key"
 msgstr "زر إجراء النوافذ"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:63
+#: ../gtweak/tweaks/tweak_group_windows.py:144
 msgid "Focus Mode"
 msgstr "وضع التركيز"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:64
+#: ../gtweak/tweaks/tweak_group_windows.py:145
 msgid "Titlebar Actions"
 msgstr "إجراءات شريط العنوان"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:65
+#: ../gtweak/tweaks/tweak_group_windows.py:146
 msgid "Double-click"
 msgstr "النقر المزدوج"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:66
+#: ../gtweak/tweaks/tweak_group_windows.py:147
 msgid "Middle-click"
 msgstr "النقر الأوسط"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: ../gtweak/tweaks/tweak_group_windows.py:148
 msgid "Secondary-click"
 msgstr "النقر الثانوي"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:68
+#: ../gtweak/tweaks/tweak_group_windows.py:149
 msgid "Titlebar Buttons"
 msgstr "أزرار شريط العنوان"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:69
+#: ../gtweak/tweaks/tweak_group_windows.py:150
 msgid "Maximize"
 msgstr "التكبير"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:70
+#: ../gtweak/tweaks/tweak_group_windows.py:151
 msgid "Minimize"
 msgstr "التصغير"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:152
+msgid "HiDPI"
+msgstr "الشاشات عالية الميز"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:29
 msgid "Middle-click Paste"
@@ -517,11 +564,23 @@ msgstr "سِمة المفاتيح"
 msgid "Keyboard and Mouse"
 msgstr "الفارة و لوحة المفاتيح"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Show All Input Sources"
 msgstr "أظهر كل مصادر الإدخال"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Switch between overview and desktop"
+msgstr "بدّل بين منظور المعاينة و سطح المكتب"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Left super"
+msgstr "وندوز الأيسر"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+msgid "Right super"
+msgstr "وندوز الأيمن"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Show location of pointer"
 msgstr "أظهر موضع المؤشر"
 
@@ -559,6 +618,21 @@ msgstr "يجب إعادة تشغيل البرامج لتطبيق التغيير�
 msgid "Error writing setting"
 msgstr "خطأ في كتابة الإعداد"
 
+#~ msgid "_Help"
+#~ msgstr "م_ساعدة"
+
+#~ msgid "_About Tweak Tool"
+#~ msgstr "_عن أداة التطويع"
+
+#~ msgid "Window"
+#~ msgstr "النافذة"
+
+#~ msgid "The shell must be restarted for changes to take effect"
+#~ msgstr "يجب إعادة تشغيل الصدفة لتطبيق التغييرات"
+
+#~ msgid "Restart"
+#~ msgstr "أعِد التشغيل"
+
 #~ msgid "welcome"
 #~ msgstr "مرحبًا"
 
@@ -575,9 +649,6 @@ msgstr "خطأ في كتابة الإعداد"
 #~ "Disable gnome-shell dynamic workspace management, use static workspaces"
 #~ msgstr ""
 #~ "عطّل إدارة صدفة جنوم لمناطق العمل الديناميكية، استخدم مناطق عمل ثابتة"
-
-#~ msgid "Advanced Settings"
-#~ msgstr "إعدادات متقدّمة"
 
 #~ msgid "Icon theme"
 #~ msgstr "سِمة الأيقونات"
