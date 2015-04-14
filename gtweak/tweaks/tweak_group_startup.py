@@ -236,6 +236,20 @@ class AddStartupTweak(Gtk.ListBoxRow, Tweak):
         self.btn.get_style_context().remove_class("button")
         self.add(self.btn)
         self.get_style_context().add_class('tweak-startup')
+        self.connect("map", self._on_map)
+        self.connect("unmap", self._on_unmap)
+
+    def _on_map(self, row):
+        toplevel=self.get_toplevel()
+        if toplevel.is_toplevel:
+            for k in [Gdk.KEY_equal, Gdk.KEY_plus, Gdk.KEY_KP_Add]:
+                toplevel.add_mnemonic(k, self.btn)
+
+    def _on_unmap(self, row):
+        toplevel=self.get_toplevel()
+        if toplevel.is_toplevel:
+            for k in [Gdk.KEY_equal, Gdk.KEY_plus, Gdk.KEY_KP_Add]:
+                toplevel.remove_mnemonic(k, self.btn)
 
 class AutostartListBoxTweakGroup(ListBoxTweakGroup):
     def __init__(self):
