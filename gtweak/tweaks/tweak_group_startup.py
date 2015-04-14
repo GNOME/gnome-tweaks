@@ -233,6 +233,13 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
 
         self.btn = btn
         self.app_id = df.get_id()
+        self.connect("key-press-event", self._on_key_press_event)
+
+    def _on_key_press_event(self, row, event):
+        if event.keyval in [Gdk.KEY_Delete, Gdk.KEY_KP_Delete, Gdk.KEY_BackSpace]:
+            self.btn.activate()
+            return True
+        return False
 
 class AddStartupTweak(Gtk.ListBoxRow, Tweak):
     def __init__(self, **options):
