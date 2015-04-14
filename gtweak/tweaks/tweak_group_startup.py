@@ -158,13 +158,10 @@ class _AppChooser(Gtk.Dialog):
     def _on_key_press(self, widget, event):
       keyname = Gdk.keyval_name(event.keyval)
       if keyname == 'Escape':
-          if self.entry.is_focus():
+          if self.searchbar.get_search_mode():
               self.searchbar.set_search_mode(False)
               return True
-          elif self.searchbar.get_search_mode():
-              self.entry.grab_focus()
-              return True
-      elif keyname not in ['Escape', 'Up', 'Down']:
+      elif keyname not in ['Up', 'Down']:
           if not self.entry.is_focus() and self.searchbar.get_search_mode():
               if self.entry.im_context_filter_keypress(event):
                   self.entry.grab_focus()
