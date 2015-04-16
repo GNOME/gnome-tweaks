@@ -40,10 +40,10 @@ if __name__ == '__main__':
     options, args = parser.parse_args()
 
     try:
-        from gtweak.defs import GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR, PKG_DATA_DIR, LOCALE_DIR, LIBEXEC_DIR
+        from gtweak.defs import GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR, PKG_DATA_DIR, LOCALE_DIR
         _defs_present = True
     except ImportError:
-        GSETTINGS_SCHEMA_DIR = TWEAK_DIR = DATA_DIR = PKG_DATA_DIR = LOCALE_DIR = LIBEXEC_DIR = ""
+        GSETTINGS_SCHEMA_DIR = TWEAK_DIR = DATA_DIR = PKG_DATA_DIR = LOCALE_DIR = ""
         _defs_present = False
 
     #the supplied prefix always beats the contents of defs
@@ -61,7 +61,6 @@ if __name__ == '__main__':
     gtweak.DATA_DIR = DATA_DIR
     gtweak.PKG_DATA_DIR = PKG_DATA_DIR
     gtweak.LOCALE_DIR = LOCALE_DIR
-    gtweak.LIBEXEC_DIR = LIBEXEC_DIR
     gtweak.ENABLE_TEST = options.test
     gtweak.ALL_TWEAKS = options.load
     gtweak.APP_NAME = "gnome-tweak-tool"
