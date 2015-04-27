@@ -20,7 +20,7 @@ import os.path
 import subprocess
 import logging
 
-from gi.repository import Gtk, Gdk, GLib, Gio
+from gi.repository import Gtk, Gdk, GLib, Gio, GObject
 
 from gtweak.tweakmodel import Tweak
 from gtweak.widgets import ListBoxTweakGroup, UI_BOX_SPACING
@@ -77,6 +77,17 @@ class _AppChooser(Gtk.Dialog):
         self.add_button(_("_Close"), Gtk.ResponseType.CANCEL)
         self.add_button(_("_Add"), Gtk.ResponseType.OK)
         self.set_default_response(Gtk.ResponseType.OK)
+
+        if self.props.use_header_bar:
+            searchbtn = Gtk.ToggleButton()
+            searchbtn.props.valign = Gtk.Align.CENTER
+            image = Gtk.Image(icon_name = "edit-find-symbolic", icon_size = Gtk.IconSize.MENU)
+            searchbtn.add(image)
+            context = searchbtn.get_style_context()
+            context.add_class("image-button")
+            context.remove_class("text-button")
+            self.get_header_bar().pack_end(searchbtn)
+            self._binding = searchbtn.bind_property("active", self.searchbar, "search-mode-enabled", GObject.BindingFlags.BIDIRECTIONAL)
 
         self.get_content_area().pack_start(self.searchbar, False, False, 0)
         self.get_content_area().pack_start(sw, True, True, 0)
