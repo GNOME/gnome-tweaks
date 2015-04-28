@@ -46,6 +46,8 @@ class _AppChooser(Gtk.Dialog):
         self.searchbar = Gtk.SearchBar()
         self.searchbar.add(self.entry)
         self.searchbar.props.hexpand = True
+        # Translators: This is the accelerator for opening the AppChooser search-bar
+        self._search_key, self._search_mods = Gtk.accelerator_parse(_("<primary>f"))
 
         lb = Gtk.ListBox()
         lb.props.margin = 5
@@ -168,6 +170,10 @@ class _AppChooser(Gtk.Dialog):
             self.set_response_sensitive(Gtk.ResponseType.OK, False)
 
     def _on_key_press(self, widget, event):
+      mods = event.state & Gtk.accelerator_get_default_mod_mask()
+      if event.keyval == self._search_key and mods == self._search_mods:
+          self.searchbar.set_search_mode(not self.searchbar.get_search_mode())
+          return True
       keyname = Gdk.keyval_name(event.keyval)
       if keyname == 'Escape':
           if self.searchbar.get_search_mode():
