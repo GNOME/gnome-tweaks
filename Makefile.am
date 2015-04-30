@@ -25,7 +25,8 @@ CLEANFILES = \
 	$(wildcard $(srcdir)/gtweak/tweaks/*.pyc)
 
 DISTCLEANFILES = \
-	gtweak/defs.py
+	gtweak/defs.py \
+	gnome-tweak-tool-lid-inhibitor
 
 SUBDIRS = data po
 
