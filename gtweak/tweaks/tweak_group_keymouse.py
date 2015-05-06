@@ -21,7 +21,7 @@ from gi.repository import GLib
 
 import gtweak
 from gtweak.utils import XSettingsOverrides, walk_directories, make_combo_list_with_default
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GetterSetterSwitchTweak, Title
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GetterSetterSwitchTweak, Title, GSettingsComboEnumTweak
 
 class PrimaryPasteTweak(GetterSetterSwitchTweak):
     def __init__(self, **options):
@@ -73,5 +73,11 @@ TWEAK_GROUPS = [
                              "locate-pointer", 
                               schema_filename="org.gnome.settings-daemon.peripherals.gschema.xml"),
         PrimaryPasteTweak(),
+
+        Title(_("Touchpad"), ""),
+        GSettingsComboEnumTweak(_("Click method"),
+                                "org.gnome.desktop.peripherals.touchpad",
+                                "click-method",
+                                schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
         ),
 ]
