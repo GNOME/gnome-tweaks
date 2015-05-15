@@ -491,7 +491,7 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
         
         lbl_des = Gtk.Label()
         lbl_des.props.xalign = 0.0
-        lbl_des.set_markup("<span size='x-small'>"+description+"</span>")
+        lbl_des.set_markup("<span size='x-small'>"+GLib.markup_escape_text(description)+"</span>")
         
         self.pack_start(hbox, False, False, 0)
         self.pack_start(lbl_des, False, False,0)
@@ -511,7 +511,7 @@ class Title(Gtk.Box, Tweak):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         Tweak.__init__(self, name, desc, **options)
         widget = Gtk.Label()
-        widget.set_markup("<b>"+name+"</b>")
+        widget.set_markup("<b>"+GLib.markup_escape_text(name)+"</b>")
         widget.props.xalign = 0.0
         self.add(widget)
 
