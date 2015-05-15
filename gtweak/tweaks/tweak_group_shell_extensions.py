@@ -55,9 +55,10 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
                         
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         lbl_name = Gtk.Label(xalign=0.0)
-        lbl_name.set_markup("<span size='medium'><b>"+ext["name"].lower().capitalize()+"</b></span>")
+        name_markup = GLib.markup_escape_text(ext["name"].lower().capitalize())
+        lbl_name.set_markup("<span size='medium'><b>"+name_markup+"</b></span>")
         lbl_desc = Gtk.Label(xalign=0.0)
-        desc = ext["description"].lower().capitalize().split('\n')[0]
+        desc = GLib.markup_escape_text(ext["description"].lower().capitalize().split('\n')[0])
         lbl_desc.set_markup("<span foreground='#A19C9C' size='small'>"+desc+"</span>")
         lbl_desc.props.ellipsize = Pango.EllipsizeMode.END 
         
