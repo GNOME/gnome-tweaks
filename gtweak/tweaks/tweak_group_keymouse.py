@@ -37,6 +37,7 @@ class PrimaryPasteTweak(GetterSetterSwitchTweak):
 class KeyThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
+			# Translators: This setting refers to a set of pre-defined key bindings
 			_("Key theme"),
             "org.gnome.desktop.interface",
             "gtk-key-theme",
