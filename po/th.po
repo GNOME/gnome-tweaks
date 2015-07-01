@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-10\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-03-17 18:22+0000\n"
-"PO-Revision-Date: 2015-03-19 22:40+0700\n"
+"POT-Creation-Date: 2015-06-29 08:23+0000\n"
+"PO-Revision-Date: 2015-07-01 14:54+0700\n"
 "Last-Translator: Akom Chotiphantawanon <knight2000@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -94,7 +94,7 @@ msgid "Appearance"
 msgstr "รูปโฉม"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
 msgid "Extensions"
 msgstr "ส่วนขยาย"
 
@@ -106,7 +106,7 @@ msgstr "แบบอักษร"
 msgid "Power"
 msgstr "พลังงาน"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:294
 msgid "Startup Applications"
 msgstr "โปรแกรมขณะเริ่มวาระ"
 
@@ -122,7 +122,7 @@ msgstr "หน้าต่าง"
 msgid "Workspaces"
 msgstr "พื้นที่ทำงาน"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Mouse"
 msgstr "เมาส์"
 
@@ -257,7 +257,7 @@ msgid "Could not list shell extensions"
 msgstr "ไม่สามารถแสดงรายชื่อส่วนขยายของเชลล์"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:170
-#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+#: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>ปริยาย</i>"
 
@@ -294,177 +294,186 @@ msgstr "ชุดตกแต่ง"
 msgid "Enable animations"
 msgstr "เปิดใช้ภาพเคลื่อนไหว"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_xkb.py:51
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "ปิดใช้"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:131
+#: ../gtweak/tweaks/tweak_group_xkb.py:134
 msgid "Typing"
 msgstr "การพิมพ์"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension downloading"
 msgstr "ส่วนขยายกำลังดาวน์โหลด"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Error loading extension"
 msgstr "เกิดข้อผิดพลาดขณะโหลดส่วนขยาย"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
 msgid "Extension does not support shell version"
 msgstr "ส่วนขยายไม่รองรับเชลล์รุ่นนี้"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
 msgid "Unknown extension error"
 msgstr "เกิดข้อผิดพลาดไม่ทราบสาเหตุของส่วนขยาย"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
-#: ../gtweak/tweaks/tweak_group_startup.py:189
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:223
 msgid "Remove"
 msgstr "ลบออก"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "ถอดถอนส่วนขยาย"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "คุณต้องการถอดถอนส่วนขยาย '%s' หรือไม่?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "กำลังปรับรุ่น"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "ข้อผิดพลาด"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "ปรับรุ่น"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "ติดตั้งส่วนขยายของเชลล์"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "เลือกส่วนขยาย"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "รับส่วนขยายเพิ่มเติม"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "ปรับรุ่นส่วนขยาย %s เรียบร้อยแล้ว"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "ติดตั้งส่วนขยาย %s เรียบร้อยแล้ว"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
 msgid "Error installing extension"
 msgstr "เกิดข้อผิดพลาดขณะติดตั้งส่วนขยาย"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
 msgid "Invalid extension"
 msgstr "ส่วนขยายไม่ถูกต้อง"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:32
+#: ../gtweak/tweaks/tweak_group_shell.py:33
 msgid "Show Application Menu"
 msgstr "แสดงเมนูโปรแกรม"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:45
+#: ../gtweak/tweaks/tweak_group_shell.py:46
 msgid "Workspace Creation"
 msgstr "การสร้างพื้นที่ทำงาน"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:50
+#: ../gtweak/tweaks/tweak_group_shell.py:51
 msgid "Dynamic"
 msgstr "ไม่ตายตัว"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:50
+#: ../gtweak/tweaks/tweak_group_shell.py:51
 msgid "Static"
 msgstr "ตายตัว"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:71
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Don't suspend on lid close"
+msgstr "ไม่พักเครื่องเมื่อปิดฝาเครื่อง"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:104
 msgid "Clock"
 msgstr "นาฬิกา"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:72
+#: ../gtweak/tweaks/tweak_group_shell.py:105
 msgid "Show date"
 msgstr "แสดงวันที่"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:73
+#: ../gtweak/tweaks/tweak_group_shell.py:106
 msgid "Show seconds"
 msgstr "แสดงวินาที"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:74
+#: ../gtweak/tweaks/tweak_group_shell.py:107
 msgid "Calendar"
 msgstr "ปฎิทิน"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:75
+#: ../gtweak/tweaks/tweak_group_shell.py:108
 msgid "Show week numbers"
 msgstr "แสดงเลขสัปดาห์"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:78
+#: ../gtweak/tweaks/tweak_group_shell.py:111
 msgid "Power Button Action"
 msgstr "การกระทำของปุ่มเปิด-ปิดเครื่อง"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:79
+#: ../gtweak/tweaks/tweak_group_shell.py:112
 msgid "When Laptop Lid is Closed"
 msgstr "เมื่อฝาแล็ปท็อปปิด"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:80
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "On Battery Power"
 msgstr "ขณะใช้พลังงานจากแบตเตอรี่"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:81
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "When plugged in"
 msgstr "เมื่อเสียบปลั๊กไฟ"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:82
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "พักเครื่องแม้ว่าจอภาพภายนอกยังเสียบอยู่"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:86
+#: ../gtweak/tweaks/tweak_group_shell.py:120
 msgid "Number of Workspaces"
 msgstr "จำนวนพื้นที่ทำงาน"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:87
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Workspaces only on primary display"
 msgstr "พื้นที่ทำงานอยู่บนจอภาพหลักเท่านั้น"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:35
+#: ../gtweak/tweaks/tweak_group_startup.py:36
 msgid "Applications"
 msgstr "โปรแกรม"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:41
+#: ../gtweak/tweaks/tweak_group_startup.py:42
 msgid "Search Applications..."
 msgstr "ค้นหาโปรแกรม..."
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#. Translators: This is the accelerator for opening the AppChooser search-bar
+#: ../gtweak/tweaks/tweak_group_startup.py:50
+msgid "<primary>f"
+msgstr "<primary>f"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:69
 msgid "running"
 msgstr "ทำงานอยู่"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:71
+#: ../gtweak/tweaks/tweak_group_startup.py:79
 msgid "_Close"
 msgstr "ปิ_ด"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:72
-msgid "Add Application"
-msgstr "เพิ่มโปรแกรม"
+#: ../gtweak/tweaks/tweak_group_startup.py:80
+msgid "_Add"
+msgstr "เ_พิ่ม"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:205
+#: ../gtweak/tweaks/tweak_group_startup.py:247
 msgid "New startup application"
 msgstr "โปรแกรมขณะเริ่มวาระรายการใหม่"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:206
+#: ../gtweak/tweaks/tweak_group_startup.py:248
 msgid "Add a new application to be run at startup"
 msgstr "เพิ่มโปรแกรมใหม่ที่จะให้ทำงานขณะเริ่มวาระ"
 
@@ -550,33 +559,42 @@ msgstr "HiDPI"
 msgid "Middle-click Paste"
 msgstr "แปะด้วยการคลิกปุ่มกลาง"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+#. Translators: This setting refers to a set of pre-defined key bindings
+#: ../gtweak/tweaks/tweak_group_keymouse.py:41
 msgid "Key theme"
 msgstr "ชุดปุ่ม"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Keyboard and Mouse"
 msgstr "แป้นพิมพ์และเมาส์"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
 msgid "Show All Input Sources"
 msgstr "แสดงช่องทางป้อนข้อความเข้าทั้งหมด"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
 msgid "Switch between overview and desktop"
 msgstr "สลับระหว่างภาพรวมและพื้นโต๊ะ"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Left super"
 msgstr "Super ซ้าย"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Right super"
 msgstr "Super ขวา"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweaks/tweak_group_keymouse.py:72
 msgid "Show location of pointer"
 msgstr "แสดงตำแหน่งตัวชี้"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+msgid "Touchpad"
+msgstr "ทัชแพด"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+msgid "Click method"
+msgstr "วิธีการคลิก"
 
 #: ../gtweak/tweaks/tweak_wacom.py:29
 msgid "Device"
@@ -611,6 +629,9 @@ msgstr "ต้องเริ่มต้นโปรแกรมต่างๆ
 #: ../gtweak/widgets.py:507
 msgid "Error writing setting"
 msgstr "เกิดข้อผิดพลาดขณะเขียนค่าตั้ง"
+
+#~ msgid "Add Application"
+#~ msgstr "เพิ่มโปรแกรม"
 
 #~ msgid "Window"
 #~ msgstr "หน้าต่าง"
