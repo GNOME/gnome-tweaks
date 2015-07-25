@@ -324,7 +324,7 @@ class LogoutNotification:
     def __init__(self):
         if Notify.is_initted() or Notify.init("GNOME Tweak Tool"):
             self.notification = Notify.Notification.new(
-                                "Configuration changes requiere restart",
+                                "Configuration changes require restart",
                                 "Your session needs to be restarted for settings to take effect",
                                 'gnome-tweak-tool')
             self.notification.add_action(
