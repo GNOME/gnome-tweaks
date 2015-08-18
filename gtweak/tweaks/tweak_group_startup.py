@@ -26,6 +26,12 @@ from gtweak.tweakmodel import Tweak
 from gtweak.widgets import ListBoxTweakGroup, UI_BOX_SPACING
 from gtweak.utils import AutostartManager, AutostartFile
 
+def _image_from_gicon(gicon):
+    image = Gtk.Image.new_from_gicon(gicon, Gtk.IconSize.DIALOG)
+    (_, _, h) = Gtk.IconSize.lookup(Gtk.IconSize.DIALOG)
+    image.set_pixel_size(h)
+    return image
+
 def _list_header_func(row, before, user_data):
     if before and not row.get_header():
         row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
@@ -127,7 +133,7 @@ class _AppChooser(Gtk.Dialog):
             return None
         icn = a.get_icon()
         if icn:
-            img = Gtk.Image.new_from_gicon(a.get_icon(),Gtk.IconSize.DIALOG)
+            img = _image_from_gicon(icn)
             g.attach(img, 0, 0, 1, 1)
             img.props.hexpand = False
         else:
@@ -210,7 +216,7 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
 
         icn = df.get_icon()
         if icn:
-            img = Gtk.Image.new_from_gicon(icn,Gtk.IconSize.DIALOG)
+            img = _image_from_gicon(icn)
             grid.attach(img, 0, 0, 1, 1)
         else:
             img = None #attach_next_to treats this correctly
