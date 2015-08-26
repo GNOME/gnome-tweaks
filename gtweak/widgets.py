@@ -140,9 +140,13 @@ def adjust_schema_for_overrides(originalSchema, key, options):
         overridesSchema = "org.gnome.shell.overrides"
         overridesFile = "org.gnome.shell.gschema.xml"
 
-    if (key in Gio.Settings(schema=overridesSchema).list_keys()):
-        options['schema_filename'] = overridesFile
-        return overridesSchema
+    try:
+        if (key in GSettingsSetting(overridesSchema, schema_filename=overridesFile).list_keys()):
+            options['schema_filename'] = overridesFile
+            return overridesSchema
+    except GSettingsMissingError, e:
+        logging.info("GSetting missing %s" % (e.message))
+
     return originalSchema
 
 
