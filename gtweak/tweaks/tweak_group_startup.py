@@ -288,6 +288,9 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
                 logging.warning("Error loading desktopfile: %s" % f)
                 continue
 
+            if not AutostartFile(df).is_start_at_login_enabled():
+                continue
+
             sdf = _StartupTweak(df)
             sdf.btn.connect("clicked", self._on_remove_clicked, sdf, df)
             tweaks.append( sdf )
