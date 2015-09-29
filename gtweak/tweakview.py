@@ -195,10 +195,12 @@ class Window(Gtk.ApplicationWindow):
 
     def _update_decorations(self, settings, pspec):
         layout_desc = settings.props.gtk_decoration_layout;
-        tokens = layout_desc.split(":", 2)
-        if tokens != None:
-                self._right_header.props.decoration_layout = ":" + tokens[1]
-                self._left_header.props.decoration_layout = tokens[0]
+        tokens = layout_desc.split(":", 1)
+        if len(tokens) > 1:
+            self._right_header.props.decoration_layout = ":" + tokens[1]
+        else:
+            self._right_header.props.decoration_layout = ""
+        self._left_header.props.decoration_layout = tokens[0]
 
     def _after_key_press(self, widget, event):
         if not self.button.get_active() or not self.entry.is_focus():
