@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-07-15 20:25+0000\n"
-"PO-Revision-Date: 2015-07-16 13:40+0000\n"
+"POT-Creation-Date: 2015-10-19 09:09+0000\n"
+"PO-Revision-Date: 2015-10-20 12:37+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "Language: is\n"
@@ -29,6 +29,8 @@ msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
 msgstr ""
+"Tólið nýtist til að setja upp þemu og viðbætur, breyta orkustillingum, sýsla "
+"með ræsiforrit og táknmyndir á skjáborði, auk annarra stillinga."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -42,8 +44,8 @@ msgstr "Sýsla með ítarlegri GNOME 3 stillingar"
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Stillingar;Ítarlegt;Kjörstillingar;Skráarendingar;Letur;Þemu;XKB;Lyklaborð;Rit"
-"un;"
+"Stillingar;Ítarlegt;Kjörstillingar;Skráarendingar;Letur;Þemu;XKB;Lyklaborð;"
+"Ritun;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -107,7 +109,7 @@ msgstr "Letur"
 msgid "Power"
 msgstr "Orkusparnaður"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:294
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Ræsiforrit"
 
@@ -234,7 +236,7 @@ msgstr "Skeljar þema"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:105
 msgid "Install custom or user themes for gnome-shell"
-msgstr ""
+msgstr "Setja inn sérsniðin eða notendaþemu fyrir gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
 #: ../gtweak/tweaks/tweak_group_interface.py:108
@@ -247,11 +249,11 @@ msgstr "Skel er ekki í gangi"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:135
 msgid "Shell user-theme extension incorrectly installed"
-msgstr ""
+msgstr "Viðbótin user-theme fyrir gnome-shell er ekki rétt uppsett"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:138
 msgid "Shell user-theme extension not enabled"
-msgstr ""
+msgstr "Viðbótin user-theme fyrir gnome-shell er ekki virkjuð"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:141
 msgid "Could not list shell extensions"
@@ -269,12 +271,12 @@ msgstr "Veldu þema"
 #: ../gtweak/tweaks/tweak_group_interface.py:225
 #, python-format
 msgid "%s theme updated successfully"
-msgstr ""
+msgstr "Uppfærslu %s þema lokið"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:227
 #, python-format
 msgid "%s theme installed successfully"
-msgstr ""
+msgstr "Uppsetningu %s þema lokið"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:235
 msgid "Error installing theme"
@@ -321,7 +323,7 @@ msgid "Unknown extension error"
 msgstr "Óþekkt villa í viðbót"
 
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:223
+#: ../gtweak/tweaks/tweak_group_startup.py:229
 msgid "Remove"
 msgstr "Fjarlægja"
 
@@ -445,38 +447,38 @@ msgstr "Fjöldi vinnusvæða"
 msgid "Workspaces only on primary display"
 msgstr "Vinnusvæði eingöngu á aðalskjá"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:36
+#: ../gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Forrit"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:42
+#: ../gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications..."
 msgstr "Leita að forritum..."
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:50
+#: ../gtweak/tweaks/tweak_group_startup.py:56
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:69
+#: ../gtweak/tweaks/tweak_group_startup.py:75
 msgid "running"
 msgstr "í gangi"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:79
+#: ../gtweak/tweaks/tweak_group_startup.py:85
 msgid "_Close"
 msgstr "_Loka"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:80
+#: ../gtweak/tweaks/tweak_group_startup.py:86
 msgid "_Add"
 msgstr "Bæt_a við"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:247
+#: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "Nýtt ræsiforrit"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:248
+#: ../gtweak/tweaks/tweak_group_startup.py:254
 msgid "Add a new application to be run at startup"
-msgstr ""
+msgstr "Bæta við nýju forriti til að keyra í ræsingu"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Window scaling"
@@ -484,7 +486,7 @@ msgstr "Gluggakvörðun"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:67
 msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr ""
+msgstr "Aðlaga GDK gluggakvörðun fyrir HiDPI"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:95
 #, python-format
@@ -507,7 +509,7 @@ msgstr "Halda breytingum"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:137
 msgid "Attached Modal Dialogs"
-msgstr ""
+msgstr "Tengdur kvaðningargluggi"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Automatically Raise Windows"
@@ -519,11 +521,11 @@ msgstr "Breyta stærð með aukasmelli"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:140
 msgid "Window Action Key"
-msgstr ""
+msgstr "Lykill fyrir gluggaaðgerð"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:144
 msgid "Focus Mode"
-msgstr ""
+msgstr "Virknihamur"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:145
 msgid "Titlebar Actions"
@@ -564,7 +566,7 @@ msgstr "Líma með miðjusmelli"
 #. Translators: This setting refers to a set of pre-defined key bindings
 #: ../gtweak/tweaks/tweak_group_keymouse.py:41
 msgid "Key theme"
-msgstr ""
+msgstr "Lyklaþema"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Keyboard and Mouse"
@@ -576,15 +578,15 @@ msgstr "Birta alla inntaksgjafa"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:66
 msgid "Switch between overview and desktop"
-msgstr ""
+msgstr "Skipta milli yfirlits og skjáborðs"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Left super"
-msgstr ""
+msgstr "Vinstri breytilykill"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Right super"
-msgstr ""
+msgstr "Hægri breytilykill"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
 msgid "Show location of pointer"
@@ -596,7 +598,7 @@ msgstr "Snertiplatti"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:79
 msgid "Click method"
-msgstr ""
+msgstr "Aðferð við smell"
 
 #: ../gtweak/tweaks/tweak_wacom.py:29
 msgid "Device"
@@ -612,23 +614,23 @@ msgstr "Wacom teiknitafla"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(sjálfgefið)</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:475
 msgid "Enable dark theme for all applications"
-msgstr ""
+msgstr "Virkja dökkt þema fyrir öll forrit"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:476
 msgid "Enable the dark theme hint for all the applications in the session"
-msgstr ""
+msgstr "Virkja vísbendingar með dökkt þema fyrir öll forrit í setunni"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:484
 msgid "Global Dark Theme"
-msgstr ""
+msgstr "Víðvært dökkt þema"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:485
 msgid "Applications need to be restarted for change to take effect"
-msgstr ""
+msgstr "Endurræsa þarf forrit svo að breytingar taki gildi"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:511
 msgid "Error writing setting"
-msgstr ""
+msgstr "Villa við að skrifa stillingar"
 
