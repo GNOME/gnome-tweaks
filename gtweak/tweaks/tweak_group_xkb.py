@@ -19,6 +19,8 @@
 
 import logging
 
+import gi
+gi.require_version("GnomeDesktop", "3.0")
 from gi.repository import Pango, Gtk, GnomeDesktop
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak, TweakGroup

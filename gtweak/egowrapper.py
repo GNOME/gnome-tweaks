@@ -18,6 +18,9 @@
 import json
 import logging
 
+import gi
+gi.require_version("Soup", "2.4")
+gi.require_version("SoupGNOME", "2.4")
 from gi.repository import GObject
 from gi.repository import Soup, SoupGNOME
 
