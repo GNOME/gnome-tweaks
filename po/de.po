@@ -4,7 +4,7 @@
 #
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2011, 2012.
 # Christian Kirbach <christian.kirbach@gmail.com>, 2011-2013.
-# Wolfgang Stöggl <c72578@yahoo.de>, 2013.
+# Wolfgang Stöggl <c72578@yahoo.de>, 2013, 2016.
 # Benjamin Steinwender <b@stbe.at>, 2014.
 # Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>, 2015.
 # Bernd Homuth <dev@hmt.im>, 2015.
@@ -12,33 +12,33 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-"
-"tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-11-17 10:39+0000\n"
-"PO-Revision-Date: 2015-11-17 14:21+0100\n"
-"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-01-13 10:58+0000\n"
+"PO-Revision-Date: 2016-01-13 13:15+0100\n"
+"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.5\n"
+"X-Generator: Poedit 1.8.6\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
-"Das GNOME-Optimierungswerkzeug ermöglicht das Anpassen fortgeschrittener GNOME-"
-"Einstellungen."
+"Das GNOME-Optimierungswerkzeug ermöglicht das Anpassen fortgeschrittener "
+"GNOME-Einstellungen."
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:2
 msgid ""
-"It can install and manage themes and extensions, change power settings, manage "
-"startup applications, and enable desktop icons among other settings."
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
 msgstr ""
-"Es kann Themen und Erweiterungen installieren und verwalten, Energieeinstellungen "
-"verändern, Startanwendungen verwalten und neben weiteren Einstellungen auch "
-"Schreibtischsymbole aktivieren."
+"Es kann Themen und Erweiterungen installieren und verwalten, "
+"Energieeinstellungen verändern, Startanwendungen verwalten und neben "
+"weiteren Einstellungen auch Schreibtischsymbole aktivieren."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -49,10 +49,11 @@ msgid "Tweak advanced GNOME 3 settings"
 msgstr "Erweiterte Einstellungen für GNOME 3 optimieren"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Einstellungen;Erweiterte;Erweiterungen;Schriften;Thema;XKB;Tastatur;Eingabe;Tweak;"
-"Optimierung;"
+"Einstellungen;Erweiterte;Erweiterungen;Schriften;Thema;XKB;Tastatur;Eingabe;"
+"Tweak;Optimierung;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -77,8 +78,8 @@ msgstr "Auf Voreinstellungen zurücksetzen"
 #: ../gtweak/app.py:77
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
-"Sollen alle Optimierungs-Einstellungen in den ursprünglichen voreingestellten "
-"Zustand zurückgesetzt werden?"
+"Sollen alle Optimierungs-Einstellungen in den ursprünglichen "
+"voreingestellten Zustand zurückgesetzt werden?"
 
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
@@ -105,7 +106,8 @@ msgstr "Homepage"
 msgid "Appearance"
 msgstr "Erscheinungsbild"
 
-#: ../gtweak/tweakmodel.py:29 ../gtweak/tweaks/tweak_group_shell_extensions.py:301
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
 msgid "Extensions"
 msgstr "Erweiterungen"
 
@@ -430,31 +432,36 @@ msgid "Show week numbers"
 msgstr "Kalenderwoche anzeigen"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Wirkweise des Einschaltknopfs"
+msgid "When Power Button is Pressed"
+msgstr "Beim Drücken des Einschaltknopfs"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Aktion"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Wenn der Laptop-Deckel geschlossen ist"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Im Akkubetrieb"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Wenn angeschlossen"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr ""
-"In Bereitschaft versetzen, selbst wenn ein externer Bildschirm angeschlossen ist"
+"In Bereitschaft versetzen, selbst wenn ein externer Bildschirm angeschlossen "
+"ist"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Anzahl der Arbeitsflächen"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Arbeitsflächen nur auf dem primären Bildschirm"
 
@@ -508,7 +515,7 @@ msgstr[1] "Die Einstellungen werden in %d Sekunden zurückgenommen"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:111
 msgid "Do you want to keep these HiDPI settings?"
-msgstr "Wollen Sie diese hohe DPI-Einstellungen beibehalten?"
+msgstr "Wollen Sie diese hohen DPI-Einstellungen beibehalten?"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:118
 msgid "Revert Settings"
@@ -646,6 +653,9 @@ msgstr ""
 msgid "Error writing setting"
 msgstr "Fehler beim Festlegen"
 
+#~ msgid "Power Button Action"
+#~ msgstr "Wirkweise des Einschaltknopfs"
+
 #~ msgid "Add Application"
 #~ msgstr "Anwendung hinzufügen"
 
@@ -669,7 +679,8 @@ msgstr "Fehler beim Festlegen"
 
 #~ msgid "The shell must be restarted for changes to take effect"
 #~ msgstr ""
-#~ "Die Shell muss neu gestartet werden, um die Änderungen wirksam werden zu lassen"
+#~ "Die Shell muss neu gestartet werden, um die Änderungen wirksam werden zu "
+#~ "lassen"
 
 #~ msgid "welcome"
 #~ msgstr "Willkommen"
@@ -683,7 +694,8 @@ msgstr "Fehler beim Festlegen"
 #~ msgid "All"
 #~ msgstr "Alle"
 
-#~ msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
+#~ msgid ""
+#~ "Disable gnome-shell dynamic workspace management, use static workspaces"
 #~ msgstr ""
 #~ "Dynamische Arbeitsflächen-Verwaltung der Shell deaktivieren und statische "
 #~ "Arbeitsflächen verwenden"
@@ -695,7 +707,8 @@ msgstr "Fehler beim Festlegen"
 #~ msgstr "Tastenkombinationsthema"
 
 #~ msgid "The shell may need to be restarted to apply the theme"
-#~ msgstr "Die Shell muss eventuell neu gestartet werden, um das Thema anzuwenden"
+#~ msgstr ""
+#~ "Die Shell muss eventuell neu gestartet werden, um das Thema anzuwenden"
 
 #~ msgid "File Manager"
 #~ msgstr "Dateiverwaltung"
