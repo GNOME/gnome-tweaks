@@ -20,9 +20,8 @@ import logging
 
 import gi
 gi.require_version("Soup", "2.4")
-gi.require_version("SoupGNOME", "2.4")
 from gi.repository import GObject
-from gi.repository import Soup, SoupGNOME
+from gi.repository import Soup
 
 class ExtensionsDotGnomeDotOrg(GObject.GObject):
 
@@ -35,8 +34,7 @@ class ExtensionsDotGnomeDotOrg(GObject.GObject):
 
     def __init__(self, shell_version_tuple):
         GObject.GObject.__init__(self)
-        self._session = Soup.SessionAsync.new()
-        self._session.add_feature_by_type(SoupGNOME.ProxyResolverGNOME)
+        self._session = Soup.Session.new()
 
         self._shell_version_tuple = shell_version_tuple
         self._extensions = {}
