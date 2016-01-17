@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014.
-# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012-2014, 2014, 2015.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2012-2014, 2014, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-2\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-06 08:34+0000\n"
-"PO-Revision-Date: 2015-09-06 22:13+0300\n"
+"POT-Creation-Date: 2016-01-17 10:45+0000\n"
+"PO-Revision-Date: 2016-01-17 22:04+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
@@ -113,7 +113,7 @@ msgstr "Fontit"
 msgid "Power"
 msgstr "Virta"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Käynnistettävät sovellukset"
 
@@ -301,12 +301,12 @@ msgstr "Teema"
 msgid "Enable animations"
 msgstr "Käytä animaatioita"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Pois käytöstä"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Kirjoittaminen"
 
@@ -424,30 +424,35 @@ msgid "Show week numbers"
 msgstr "Näytä viikkonumerot"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Virtapainikkeen toiminto"
+msgid "When Power Button is Pressed"
+msgstr "Kun virtapainiketta painetaan"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+#| msgid "Applications"
+msgid "Action"
+msgstr "Toiminto"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Kun kannettavan kansi suljetaan"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Akkuvirralla"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Kytkettynä"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Siirry valmiustilaan vaikka erillinen näyttö on liitetty"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Työtilojen lukumäärä"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Työtilat vain ensisijaisella näytöllä"
 
@@ -613,7 +618,7 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(oletus)</i>"
@@ -637,6 +642,9 @@ msgstr "Sovellukset tulee käynnistää uudelleen, jotta muutos tulee voimaan"
 #: ../gtweak/widgets.py:511
 msgid "Error writing setting"
 msgstr "Virhe asetuksia kirjoittaessa"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Virtapainikkeen toiminto"
 
 #~ msgid "Add Application"
 #~ msgstr "Lisää sovellus"
