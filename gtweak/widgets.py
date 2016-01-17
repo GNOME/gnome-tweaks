@@ -289,6 +289,7 @@ class GSettingsFontButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
         w = Gtk.FontButton()
+        w.set_use_font(True)
         self.settings.bind(key_name, w, "font-name", Gio.SettingsBindFlags.DEFAULT)
         build_label_beside_widget(name, w, hbox=self)
         self.widget_for_size_group = w
