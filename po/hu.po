@@ -11,24 +11,33 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-23 08:29+0000\n"
-"PO-Revision-Date: 2015-06-24 19:36+0200\n"
+"POT-Creation-Date: 2016-01-24 10:46+0000\n"
+"PO-Revision-Date: 2016-01-24 17:44+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME Finomhangoló eszköz"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "A GNOME 3 speciális beállításainak módosítása"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "A GNOME Finomhangoló eszköz lehetővé teszi speciális GNOME beállítások "
 "módosítását."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -40,10 +49,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Finomhangoló eszköz"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "A GNOME 3 speciális beállításainak módosítása"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -80,10 +85,6 @@ msgstr "Visszaállít minden beállítást az alapértékre?"
 msgid "About GNOME Tweak Tool"
 msgstr "A GNOME Finomhangoló eszköz névjegye"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME Finomhangoló eszköz"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -114,7 +115,7 @@ msgstr "Betűkészletek"
 msgid "Power"
 msgstr "Energia"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:294
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Indítópult"
 
@@ -303,12 +304,12 @@ msgstr "Téma"
 msgid "Enable animations"
 msgstr "Animáció engedélyezése"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Letiltva"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Gépelés"
 
@@ -329,7 +330,7 @@ msgid "Unknown extension error"
 msgstr "Ismeretlen bővítményhiba"
 
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:223
+#: ../gtweak/tweaks/tweak_group_startup.py:229
 msgid "Remove"
 msgstr "Eltávolítás"
 
@@ -426,63 +427,67 @@ msgid "Show week numbers"
 msgstr "Hetek számának megjelenítése"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Bekapcsoló gomb művelete"
+msgid "When Power Button is Pressed"
+msgstr "A bekapcsológomb megnyomásakor"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Művelet"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "A noteszgép fedelének lehajtásakor"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Akkumulátoron"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Ha csatlakoztatva van"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Felfüggesztés külső monitor csatlakoztatásakor"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Munkaterületek száma"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Munkaterületek csak az elsődleges kijelzőn"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:36
+#: ../gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Alkalmazások"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:42
+#: ../gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications..."
 msgstr "Alkalmazások keresése…"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:50
+#: ../gtweak/tweaks/tweak_group_startup.py:56
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:69
+#: ../gtweak/tweaks/tweak_group_startup.py:75
 msgid "running"
 msgstr "fut"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:79
+#: ../gtweak/tweaks/tweak_group_startup.py:85
 msgid "_Close"
 msgstr "_Bezárás"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:80
+#: ../gtweak/tweaks/tweak_group_startup.py:86
 msgid "_Add"
 msgstr "_Hozzáadás"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:247
+#: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "Új bejelentkezési alkalmazás"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:248
+#: ../gtweak/tweaks/tweak_group_startup.py:254
 msgid "Add a new application to be run at startup"
 msgstr "Új, bejelentkezéskor futtatandó alkalmazás hozzáadása"
 
@@ -615,30 +620,33 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(alapértelmezett)</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "A sötét téma engedélyezése minden alkalmazáshoz"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "A munkamenetben a sötét téma engedélyezése minden futó alkalmazáshoz"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Globális sötét téma"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "A változtatások életbe lépéséhez újra kell indítani az alkalmazásokat"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Hiba a beállítás írásakor"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Bekapcsoló gomb művelete"
 
 #~ msgid "Add Application"
 #~ msgstr "Alkalmazás hozzáadása"
