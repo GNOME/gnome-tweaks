@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Martin Srebotnjak  <miles@filmsi.net>, 2011.
-# Matej Urbančič <mateju@svn.gnome.org>, 2011-2015.
+# Matej Urbančič <mateju@svn.gnome.org>, 2011-2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-08 08:35+0000\n"
-"PO-Revision-Date: 2015-09-08 22:16+0100\n"
+"POT-Creation-Date: 2016-02-01 22:27+0100\n"
+"PO-Revision-Date: 2016-02-01 22:28+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -21,14 +21,23 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.8.4\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "Orodje za prilagajanje nastavitev GNOME"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Prilagodi napredne nastavitve GNOME 3"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "Program GNOME Tweak Tool omogoča prilagajanje naprednih možnosti okolja GNOME."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, manage "
 "startup applications, and enable desktop icons among other settings."
@@ -39,10 +48,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Urejevalnik naprednih nastavitev"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Prilagodi napredne nastavitve GNOME 3"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
@@ -78,10 +83,6 @@ msgstr "Ali naj se vse nastavitve ponastavijo na osnovno privzeto stanje?"
 msgid "About GNOME Tweak Tool"
 msgstr "O programu"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "Orodje za prilagajanje nastavitev GNOME"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -112,7 +113,7 @@ msgstr "Pisave"
 msgid "Power"
 msgstr "Moč"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Začetni programi"
 
@@ -300,12 +301,12 @@ msgstr "Tema"
 msgid "Enable animations"
 msgstr "Omogoči animacije"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Tipkanje"
 
@@ -423,30 +424,34 @@ msgid "Show week numbers"
 msgstr "Pokaži številke tednov"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Dejanje ob pritisku gumba za priklop"
+msgid "When Power Button is Pressed"
+msgstr "Ko je pritisnjen gumb za vklop računalnika"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Dejanje"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Kadar je pokrov prenosnika zaprt"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Med napajanjem iz baterije"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Med napajanjem iz omrežja"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Ob priklopu zunanjega zaslona pošlji v pripravljenost"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Število delovnih površin"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Delovne površine naj bodo le na osnovnem zaslonu"
 
@@ -614,30 +619,33 @@ msgid "Wacom"
 msgstr "Tablica Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(privzeto)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Omogoči temno temo za vse programe"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Omogoči namig temne teme za vse programe te seje"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Splošni potemnjen slog"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Programe je treba po posodobitvi za uveljavitev sprememb ponovno zagnati."
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Napaka med zapisovanjem nastavitev"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Dejanje ob pritisku gumba za priklop"
 
 #~ msgid "Add Application"
 #~ msgstr "Dodaj program"
