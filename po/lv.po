@@ -3,29 +3,38 @@
 #
 #
 # Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014.
-# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2014, 2015.
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2014, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-16 08:44+0000\n"
-"PO-Revision-Date: 2015-09-16 17:48+0300\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tw"
+"eak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-02-04 10:44+0000\n"
+"PO-Revision-Date: 2016-02-06 22:16+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME piedares rīks"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Pieregulēt paplašinātos GNOME 3 iestatījumus"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr "GNOME piedares rīks ļauj pielāgot paplašinātas GNOME opcijas."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -37,10 +46,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Piedares rīks"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Pieregulēt paplašinātos GNOME 3 iestatījumus"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -77,10 +82,6 @@ msgstr ""
 msgid "About GNOME Tweak Tool"
 msgstr "Par GNOME piedares rīku"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME piedares rīks"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -111,7 +112,7 @@ msgstr "Fonti"
 msgid "Power"
 msgstr "Barošana"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Starta lietotnes"
 
@@ -300,12 +301,12 @@ msgstr "Motīvs"
 msgid "Enable animations"
 msgstr "Aktivēt animācijas"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Deaktivēts"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Rakstīšana"
 
@@ -423,30 +424,35 @@ msgid "Show week numbers"
 msgstr "Rādīt nedēļu numurus"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Strāvas pogas darbība"
+msgid "When Power Button is Pressed"
+msgstr "Kad ir nospiesta ieslēgšanas poga"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+#| msgid "Applications"
+msgid "Action"
+msgstr "Darbība"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Kad ir aizvērts klēpjdatora vāks"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Izmanto baterijas strāvu"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Kad pieslēgts strāvai"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Iesnaudināt, pat ja ir pievienots ārējs monitors"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Darbvietu skaits"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Darbvietas tikai uz galvenā displeja"
 
@@ -613,27 +619,27 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(noklusējuma)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Aktivēt tumšu motīvu visām lietotnēm"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Aktivēt tumšo motīvu padomus visām lietotnēm sesijā"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Globālais tumšais motīvs"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Lietotnes jāpārstartē, lai izmaiņas stātos spēkā"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Kļūda rakstot iestatījumu"
