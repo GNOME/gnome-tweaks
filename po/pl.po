@@ -4,14 +4,14 @@
 # pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-# Piotr Drąg <piotrdrag@gmail.com>, 2011-2015.
-# Aviary.pl <gnomepl@aviary.pl>, 2011-2015.
+# Piotr Drąg <piotrdrag@gmail.com>, 2011-2016.
+# Aviary.pl <gnomepl@aviary.pl>, 2011-2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-24 21:14+0200\n"
-"PO-Revision-Date: 2015-08-24 21:15+0200\n"
+"POT-Creation-Date: 2016-02-06 15:55+0100\n"
+"PO-Revision-Date: 2016-02-06 15:57+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -23,13 +23,22 @@ msgstr ""
 "X-Poedit-Language: Polish\n"
 "X-Poedit-Country: Poland\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "Narzędzie dostrajania środowiska GNOME"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Dostrajanie zaawansowanych ustawień środowiska GNOME 3"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "Narzędzie dostrajania GNOME umożliwia dostosowywanie zaawansowanych opcji "
 "środowiska GNOME."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -41,10 +50,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Dostrajanie"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Dostrajanie zaawansowanych ustawień środowiska GNOME 3"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -83,10 +88,6 @@ msgstr ""
 msgid "About GNOME Tweak Tool"
 msgstr "O narzędziu dostrajania środowiska GNOME"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "Narzędzie dostrajania środowiska GNOME"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -117,7 +118,7 @@ msgstr "Czcionki"
 msgid "Power"
 msgstr "Zasilanie"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Programy startowe"
 
@@ -305,12 +306,12 @@ msgstr "Motyw"
 msgid "Enable animations"
 msgstr "Animacje"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Wyłączone"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Pisanie"
 
@@ -428,30 +429,34 @@ msgid "Show week numbers"
 msgstr "Numery tygodni"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Działanie przycisku zasilania"
+msgid "When Power Button is Pressed"
+msgstr "Po wciśnięciu przycisku zasilania"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
-msgid "When Laptop Lid is Closed"
-msgstr "Kiedy pokrywa laptopa jest zamknięta"
+msgid "Action"
+msgstr "Działanie"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:113
+msgid "When Laptop Lid is Closed"
+msgstr "Po zamknięciu pokrywy laptopa"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Na zasilaniu z akumulatora"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
-msgid "When plugged in"
-msgstr "Kiedy jest podłączony"
-
 #: ../gtweak/tweaks/tweak_group_shell.py:115
+msgid "When plugged in"
+msgstr "Po podłączeniu zasilania"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Usypianie nawet, jeśli zewnętrzny monitor jest podłączony"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Liczba obszarów roboczych"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Obszary robocze tylko na głównym ekranie"
 
@@ -618,27 +623,27 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(domyślny)</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Ciemny motyw dla wszystkich programów"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Ciemny motyw dla wszystkich programów w sesji"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Globalny ciemny motyw"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Należy ponownie uruchomić programy, aby zmiany zostały uwzględnione"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Błąd podczas zapisywania ustawień"
