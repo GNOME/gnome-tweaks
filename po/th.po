@@ -1,15 +1,15 @@
 # Thai translation for gnome-tweak-tool.
-# Copyright (C) 2013-2015 Free Software Foundation, Inc.
+# Copyright (C) 2013-2016 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
+# Akom Chotiphantawanon <knight2000@gmail.com>, 2013-2016.
 #
-# Akom Chotiphantawanon <knight2000@gmail.com>, 2013-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-10\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-29 08:23+0000\n"
-"PO-Revision-Date: 2015-07-01 14:54+0700\n"
+"POT-Creation-Date: 2016-02-13 06:06+0000\n"
+"PO-Revision-Date: 2016-02-19 15:36+0700\n"
 "Last-Translator: Akom Chotiphantawanon <knight2000@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -19,11 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "เครื่องมือดัดแปลงของ GNOME"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "ดัดแปลงค่าตั้งขั้นสูงของ GNOME 3"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr "เครื่องมือดัดแปลง GNOME ช่วยในการปรับตัวเลือกขั้นสูงของ GNOME"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -34,10 +43,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "เครื่องมือดัดแปลง"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "ดัดแปลงค่าตั้งขั้นสูงของ GNOME 3"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -72,10 +77,6 @@ msgstr "กลับการตั้งค่าดัดแปลงทั้
 msgid "About GNOME Tweak Tool"
 msgstr "เกี่ยวกับเครื่องมือดัดแปลงของ GNOME"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "เครื่องมือดัดแปลงของ GNOME"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -106,7 +107,7 @@ msgstr "แบบอักษร"
 msgid "Power"
 msgstr "พลังงาน"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:294
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "โปรแกรมขณะเริ่มวาระ"
 
@@ -294,12 +295,12 @@ msgstr "ชุดตกแต่ง"
 msgid "Enable animations"
 msgstr "เปิดใช้ภาพเคลื่อนไหว"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "ปิดใช้"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "การพิมพ์"
 
@@ -320,7 +321,7 @@ msgid "Unknown extension error"
 msgstr "เกิดข้อผิดพลาดไม่ทราบสาเหตุของส่วนขยาย"
 
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:223
+#: ../gtweak/tweaks/tweak_group_startup.py:229
 msgid "Remove"
 msgstr "ลบออก"
 
@@ -417,63 +418,67 @@ msgid "Show week numbers"
 msgstr "แสดงเลขสัปดาห์"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "การกระทำของปุ่มเปิด-ปิดเครื่อง"
+msgid "When Power Button is Pressed"
+msgstr "เมื่อกดปุ่มเปิด-ปิดเครื่อง"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "การกระทำ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "เมื่อฝาแล็ปท็อปปิด"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "ขณะใช้พลังงานจากแบตเตอรี่"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "เมื่อเสียบปลั๊กไฟ"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "พักเครื่องแม้ว่าจอภาพภายนอกยังเสียบอยู่"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "จำนวนพื้นที่ทำงาน"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "พื้นที่ทำงานอยู่บนจอภาพหลักเท่านั้น"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:36
+#: ../gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "โปรแกรม"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:42
+#: ../gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications..."
 msgstr "ค้นหาโปรแกรม..."
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:50
+#: ../gtweak/tweaks/tweak_group_startup.py:56
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:69
+#: ../gtweak/tweaks/tweak_group_startup.py:75
 msgid "running"
 msgstr "ทำงานอยู่"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:79
+#: ../gtweak/tweaks/tweak_group_startup.py:85
 msgid "_Close"
 msgstr "ปิ_ด"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:80
+#: ../gtweak/tweaks/tweak_group_startup.py:86
 msgid "_Add"
 msgstr "เ_พิ่ม"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:247
+#: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "โปรแกรมขณะเริ่มวาระรายการใหม่"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:248
+#: ../gtweak/tweaks/tweak_group_startup.py:254
 msgid "Add a new application to be run at startup"
 msgstr "เพิ่มโปรแกรมใหม่ที่จะให้ทำงานขณะเริ่มวาระ"
 
@@ -605,30 +610,33 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(ปริยาย)</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "เปิดใช้ชุดตกแต่งแบบสีเข้มกับทุกโปรแกรม"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "เปิดใช้ hint ของชุดตกแต่งแบบสีเข้มกับทุกโปรแกรมในวาระนี้"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "ชุดตกแต่งแบบสีเข้มโดยรวม"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "ต้องเริ่มต้นโปรแกรมต่างๆ ใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "เกิดข้อผิดพลาดขณะเขียนค่าตั้ง"
+
+#~ msgid "Power Button Action"
+#~ msgstr "การกระทำของปุ่มเปิด-ปิดเครื่อง"
 
 #~ msgid "Add Application"
 #~ msgstr "เพิ่มโปรแกรม"
