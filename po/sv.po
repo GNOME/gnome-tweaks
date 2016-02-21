@@ -1,17 +1,17 @@
 # Swedish translation for gnome-tweak-tool.
-# Copyright © 2011-2015 Free Software Foundation, Inc.
+# Copyright © 2011-2016 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Daniel Nylander <po@danielnylander.se>, 2011, 2012.
 # Sebastian Rasmussen <sebras@gmail.com>, 2014.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-08-18 14:54+0000\n"
-"PO-Revision-Date: 2015-08-27 10:30+0200\n"
+"POT-Creation-Date: 2016-02-16 22:43+0000\n"
+"PO-Revision-Date: 2016-02-17 10:20+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -19,32 +19,40 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.3\n"
+"X-Generator: Poedit 1.8.7\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOMEs Justeringsverktyg"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Justera avancerade GNOME 3-inställningar"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "GNOMEs Justeringsverktyg erbjuder justering av avancerade GNOME-alternativ."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
-"It can install and manage themes and extensions, change power settings, manage "
-"startup applications, and enable desktop icons among other settings."
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
 msgstr ""
-"Det kan installera och hantera teman och tillägg, ändra strömsparinställningar, "
-"hantera autostartande program, och aktivera skrivbordsikoner bland annat."
+"Det kan installera och hantera teman och tillägg, ändra "
+"strömsparinställningar, hantera autostartande program, och aktivera "
+"skrivbordsikoner bland annat."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Justeringsverktyg"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Justera avancerade GNOME 3-inställningar"
-
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "Inställningar;Avancerad;Tillägg;Typsnitt;Tema;XKB;Tangentbord;Inmatning;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Inställningar;Avancerad;Tillägg;Typsnitt;Tema;XKB;Tangentbord;Inmatning;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -73,10 +81,6 @@ msgstr "Återställ alla justeringsinställningar till deras standardläge?"
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
 msgstr "Om GNOMEs Justeringsverktyg"
-
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOMEs Justeringsverktyg"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -108,7 +112,7 @@ msgstr "Typsnitt"
 msgid "Power"
 msgstr "Ström"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Autostartande program"
 
@@ -296,12 +300,12 @@ msgstr "Tema"
 msgid "Enable animations"
 msgstr "Aktivera animeringar"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Inaktiverad"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Inmatning"
 
@@ -419,30 +423,34 @@ msgid "Show week numbers"
 msgstr "Visa veckonummer"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Strömknappsåtgärd"
+msgid "When Power Button is Pressed"
+msgstr "När strömknappen trycks ned"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Åtgärd"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "När locket på den bärbara datorn stängs"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Vid batteridrift"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "När strömsladd är ansluten"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Försätt i vänteläge även om en extern skärm är ansluten"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Antal arbetsytor"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Arbetsytor bara på den primära skärmen"
 
@@ -608,30 +616,33 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standard)</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Aktivera mörkt tema för alla program"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Aktivera tipset om mörkt tema för alla program i sessionen"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Globalt mörkt tema"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Program måste startas om för att ändringen ska få effekt"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Fel vid skrivning av inställning"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Strömknappsåtgärd"
 
 #~ msgid "Add Application"
 #~ msgstr "Lägg till program"
