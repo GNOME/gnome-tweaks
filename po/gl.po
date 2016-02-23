@@ -3,31 +3,39 @@
 # This file is distributed under the same license as the PACKAGE package.
 # fran <frandieguez@gnome.org>, 2011.
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015.
-#
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-08-19 01:08+0200\n"
-"PO-Revision-Date: 2015-08-19 01:09+0200\n"
+"POT-Creation-Date: 2016-02-23 19:56+0100\n"
+"PO-Revision-Date: 2016-02-23 19:57+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
+"Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "Ferramenta de axustes de GNOME"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Axustes avanzados en GNOME 3"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "Ferramentas de axustes de GNOME permítelle realizar axustes avanzados nas "
 "opcións de GNOME."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -39,10 +47,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Ferramenta de axustes"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Axustes avanzados en GNOME 3"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -81,10 +85,6 @@ msgstr ""
 msgid "About GNOME Tweak Tool"
 msgstr "Sobre Ferramenta de axustes de GNOME"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "Ferramenta de axustes de GNOME"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -115,7 +115,7 @@ msgstr "Tipos de letra"
 msgid "Power"
 msgstr "Enerxía"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Aplicativos de inicio"
 
@@ -305,12 +305,12 @@ msgstr "Tema"
 msgid "Enable animations"
 msgstr "Activar animacións"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Escritura"
 
@@ -428,30 +428,34 @@ msgid "Show week numbers"
 msgstr "Mostrar número da semana"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Acción do botón de acendido"
+msgid "When Power Button is Pressed"
+msgstr "Ao premer o botón de acendido"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Acción"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Cando se peche a tapa do portátil"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Usando a batería"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Ao estar enchufado"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Suspender incluso se está conectado un monitor externo"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Número de espazos de traballo"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Espazos de traballo só no monitor principal"
 
@@ -617,30 +621,33 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predeterminado)</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Activar o tema escuro para todos os aplicativos"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Activar a suxestión de tema escuro para todos os aplicativos na sesión"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Tema escuro global"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Os aplicativos deben reiniciarse para que se aplique o cambio"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Produciuse un erro ao gravar a configuración"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Acción do botón de acendido"
 
 #~ msgid "Add Application"
 #~ msgstr "Engadir aplicativo"
