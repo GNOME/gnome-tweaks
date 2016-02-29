@@ -2,14 +2,14 @@
 # Copyright (C) 2015 John Stowers <john.stowers@gmail.com>
 #
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2011-2015.
+# Kjartan Maraas <kmaraas@gnome.org>, 2011-2016.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool 3.17.x\n"
+"Project-Id-Version: gnome-tweak-tool 3.19.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-14 16:05+0200\n"
-"PO-Revision-Date: 2015-05-14 16:05+0200\n"
+"POT-Creation-Date: 2016-02-29 21:49+0100\n"
+"PO-Revision-Date: 2016-02-29 21:49+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -18,11 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME konfigurasjonsverktøy"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Endre avanserte GNOME 3 innstillinger"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr "GNOME Tweak Tool lar deg justere avanserte innstillinger for GNOME."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -34,10 +43,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Konfigurasjonsverktøy"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Endre avanserte GNOME 3 innstillinger"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -74,10 +79,6 @@ msgstr "Tilbakestill alle innstillinger til utgangsverdiene?"
 msgid "About GNOME Tweak Tool"
 msgstr "Om GNOME konfigurasjonsverktøy"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME konfigurasjonsverktøy"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -96,7 +97,7 @@ msgid "Appearance"
 msgstr "Utseende"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
 msgid "Extensions"
 msgstr "Utvidelser"
 
@@ -108,7 +109,7 @@ msgstr "Skrifter"
 msgid "Power"
 msgstr "Strøm"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:294
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Oppstartsprogrammer"
 
@@ -124,7 +125,7 @@ msgstr "Vinduer"
 msgid "Workspaces"
 msgstr "Arbeidsområder"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Mouse"
 msgstr "Mus"
 
@@ -259,7 +260,7 @@ msgid "Could not list shell extensions"
 msgstr "Kunne ikke vise liste med skallutvidelser"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:170
-#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+#: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>Forvalgt</i>"
 
@@ -296,85 +297,85 @@ msgstr "Tema"
 msgid "Enable animations"
 msgstr "Slå på animasjoner"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Slått av"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Skriving"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension downloading"
 msgstr "Laster ned utvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Error loading extension"
 msgstr "Feil under lasting av utvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
 msgid "Extension does not support shell version"
 msgstr "Utvidelsen støtter ikke denne versjonen av skallet"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
 msgid "Unknown extension error"
 msgstr "Ukjent feil med utvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
-#: ../gtweak/tweaks/tweak_group_startup.py:223
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:229
 msgid "Remove"
 msgstr "Fjern"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "Avinstaller utvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Vil du avinstallere «%s»-utvidelsen?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "Oppdaterer"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "Feil"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "Oppdater"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Installer utvidelse for skallet"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Velg en utvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "Hent flere utvidelser"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Oppdatering av %s utvidelse fullført"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Installering av %s utvidelse fullført"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
 msgid "Error installing extension"
 msgstr "Feil under installering av utvidelse"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
 msgid "Invalid extension"
 msgstr "Ugyldig utvidelse"
 
@@ -419,63 +420,67 @@ msgid "Show week numbers"
 msgstr "Vis ukenummer"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Handling for strømknapp"
+msgid "When Power Button is Pressed"
+msgstr "Når strømknappen trykkes inn"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Handling"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Når lokket lukkes"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "På batteristrøm"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Koblet til strøm"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Gå i hvilemodus selv om en ekstern skjerm er koblet til"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Antall arbeidsområder"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Arbeidsområder kun på primær skjerm"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:36
+#: ../gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Programmer"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:42
+#: ../gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications..."
 msgstr "Søk i programmer …"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:50
+#: ../gtweak/tweaks/tweak_group_startup.py:56
 msgid "<primary>f"
 msgstr "<primær>f"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:69
+#: ../gtweak/tweaks/tweak_group_startup.py:75
 msgid "running"
 msgstr "kjører"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:79
+#: ../gtweak/tweaks/tweak_group_startup.py:85
 msgid "_Close"
 msgstr "_Lukk"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:80
+#: ../gtweak/tweaks/tweak_group_startup.py:86
 msgid "_Add"
 msgstr "_Legg til"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:247
+#: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "Nytt oppstartsprogram"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:248
+#: ../gtweak/tweaks/tweak_group_startup.py:254
 msgid "Add a new application to be run at startup"
 msgstr "Legg til et nytt program som skal kjøres ved oppstart"
 
@@ -562,39 +567,40 @@ msgstr "HiDPI"
 msgid "Middle-click Paste"
 msgstr "Lim inn med midt-klikk"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+#. Translators: This setting refers to a set of pre-defined key bindings
+#: ../gtweak/tweaks/tweak_group_keymouse.py:41
 msgid "Key theme"
 msgstr "Tastaturtema"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Keyboard and Mouse"
 msgstr "Tastatur og mus"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
 msgid "Show All Input Sources"
 msgstr "Vis alle inndatakilder"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
 msgid "Switch between overview and desktop"
 msgstr "Bytt mellom overblikk og skrivebord"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Left super"
 msgstr "Venstre super"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Right super"
 msgstr "Høyre super"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweaks/tweak_group_keymouse.py:72
 msgid "Show location of pointer"
 msgstr "Vis lokasjon for peker"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:77
+#: ../gtweak/tweaks/tweak_group_keymouse.py:78
 msgid "Touchpad"
 msgstr "Pekeplate"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:79
 msgid "Click method"
 msgstr "Klikkmetode"
 
@@ -607,27 +613,27 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(forvalg)</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Slå på mørkt tema for alle programmer"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Slå på hint for mørkt tema for alle programmer i økten"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Globalt mørkt tema"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Programmer må startes på nytt for at endringene skal tre i kraft"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Feil under skriving av innstilling"
