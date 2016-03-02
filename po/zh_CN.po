@@ -8,28 +8,38 @@
 # tuhaihe <1132321739qq@gmail.com>, 2012, 2013.
 # Dingzhong Chen <wsxy162@gmail.com>, 2015.
 # YunQiang Su <wzssyqa@gmail.com>, 2014, 2015.
+# Jeff Bai <jeffbai@aosc.xyz>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-11-13 22:38+0000\n"
-"PO-Revision-Date: 2015-11-14 15:01+0800\n"
-"Last-Translator: YunQiang Su <wzssyqa@gmail.com>\n"
+"POT-Creation-Date: 2016-01-22 17:19+0000\n"
+"PO-Revision-Date: 2016-01-19 18:42-0700\n"
+"Last-Translator: Jeff Bai <jeffbai@aosc.xyz>\n"
 "Language-Team: 汉语 <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 1.8.6\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME 优化工具"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "优化 GNOME 3 高级设置"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr "GNOME 优化工具可以调整 GNOME 高级选项。"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -40,10 +50,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "优化工具"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "优化 GNOME 3 高级设置"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -79,10 +85,6 @@ msgstr "重置所有设置到默认状态？"
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
 msgstr "关于 GNOME 优化工具"
-
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME 优化工具"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -425,30 +427,34 @@ msgid "Show week numbers"
 msgstr "显示周数"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "电源按钮动作"
+msgid "When Power Button is Pressed"
+msgstr "按下电源按钮时"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "动作"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "笔记本电脑盖子关闭时"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "电池供电时"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "插入电源时"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "挂起，即使已接入外接显示器"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "工作区数量"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "只在主显示屏上显示工作区"
 
@@ -618,25 +624,28 @@ msgstr "Wacom 手写板"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(默认)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "对所有应用程序启用黑色主题"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "为此会话中的所有应用程序启用黑色主题渲染"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "全局黑色主题"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "需要重启应用程序以使更改生效"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "写入设置时出错"
+
+#~ msgid "Power Button Action"
+#~ msgstr "电源按钮动作"
 
 #~ msgid "Add Application"
 #~ msgstr "添加应用程序"
