@@ -1,43 +1,48 @@
 # Korean translation for gnome-tweak-tool.
 # Copyright (C) 2012 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Seong-ho Cho <shcho@gnome.org>, 2012-2015.
+# Seong-ho Cho <shcho@gnome.org>, 2012-2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-09 20:39+0000\n"
-"PO-Revision-Date: 2015-09-10 17:34+0900\n"
+"POT-Creation-Date: 2016-03-01 10:47+0000\n"
+"PO-Revision-Date: 2016-03-02 02:44+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
-"Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"Language-Team: 한국어 <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "그놈 기능 개선 도구"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "고급 기능 개선 GNOME 3 설정"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr "그놈 기능 개선 도구에서는 고급 그놈 옵션을 조절할 수 있습니다."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
 msgstr ""
-"여러가지 설정 항목 중 테마와 확장자를 설치하고 관리하며, 전원 설정을 바꾸고, "
-"시작 프로그램을 관리하며, 데스크톱 아이콘을 활성화 할 수 있습니다."
+"여러가지 설정 항목 중 테마와 확장자 설치 및 관리, 전원 설정 관리, 시작 프로그"
+"램 관리, 데스크톱 아이콘 활성화 관리를 다룰 수 있습니다."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "기능 개선 도구"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "고급 기능 개선 GNOME 3 설정"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -74,10 +79,6 @@ msgstr "모든 기능 개선 설정을 초기 기본 상태로 되돌리시겠�
 msgid "About GNOME Tweak Tool"
 msgstr "그놈 기능 개선 도구 정보"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "그놈 기능 개선 도구"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -108,7 +109,7 @@ msgstr "글꼴"
 msgid "Power"
 msgstr "전원"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "시작 프로그램"
 
@@ -296,12 +297,12 @@ msgstr "테마"
 msgid "Enable animations"
 msgstr "애니메이션 활성화"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "사용 안함"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "입력"
 
@@ -419,30 +420,34 @@ msgid "Show week numbers"
 msgstr "주 차 번호 표시"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "전원 단추 동작"
+msgid "When Power Button is Pressed"
+msgstr "전원 단추를 눌렀을 때"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "동작"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "노트북 덮개를 닫을 때"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "배터리 전원 사용시"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "연결했을 때"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
-msgstr "외부 모니터를 연결할 때도 대기 상태"
+msgstr "외부 모니터를 연결할 때도 대기 상태 진입"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "작업 공간 수"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "첫번째 디스플레이에만 작업 공간 배치"
 
@@ -604,30 +609,31 @@ msgstr "장치"
 
 #: ../gtweak/tweaks/tweak_wacom.py:38
 msgid "Wacom"
-msgstr "왓콤"
+msgstr "와콤"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(기본)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "모든 프로그램에 어두운 테마 활성화"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "세션의 모든 프로그램에 어두운 테마 힌트 활성화"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "전체적인 어두운 테마"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "바뀐 설정을 적용하려면 프로그램을 다시 시작해야 합니다"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "설정 기록 중 오류가 있습니다"
+
