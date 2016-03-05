@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: lithuanian-gnome tweak tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-01-05 10:45+0000\n"
-"PO-Revision-Date: 2016-01-10 17:27+0200\n"
+"POT-Creation-Date: 2016-02-12 22:42+0000\n"
+"PO-Revision-Date: 2016-02-13 01:21+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -21,16 +21,25 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME Papildomų nustatymų įrankis"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Reguliuokite papildomus GNOME3 nustatymus"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "GNOME papildomų nustatymų įrankis leidžia keisti sudėtingesnius GNOME "
 "parametrus."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -42,10 +51,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Papildomų nustatymų įrankis"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Reguliuokite papildomus GNOME3 nustatymus"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -81,10 +86,6 @@ msgstr "Atstatyti visus tobulinimo nustatymus į jų pradines būsenas?"
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
 msgstr "Apie GNOME papildomų nustatymų įrankį"
-
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME Papildomų nustatymų įrankis"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -427,30 +428,34 @@ msgid "Show week numbers"
 msgstr "Rodyti savaičių numerius"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Įjungimo mygtuko veiksmas"
+msgid "When Power Button is Pressed"
+msgstr "Kai nuspaudžiamas maitinimo mygtukas"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Veiksmas"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Kai nešiojamas kompiuteris užveriamas"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Naudojant bateriją"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Kai įjungta į elektros tinklą"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Pristabdyti, net jei prijungtas išorinis monitorius"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Darbo sričių skaičius"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Darbo sritys tik pirminiame vaizduoklyje"
 
@@ -622,25 +627,28 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(numatytoji)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Įjungti tamsiąją temą visoms programoms"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Įjungti tamsiosios temos parametrą visoms seanso programoms"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Visuotinė tamsi tema"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti programą"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Klaida rašant nustatymą"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Įjungimo mygtuko veiksmas"
 
 #~ msgid "Add Application"
 #~ msgstr "Pridėti programą"
