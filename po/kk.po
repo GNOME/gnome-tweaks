@@ -8,26 +8,35 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-04 08:36+0000\n"
-"PO-Revision-Date: 2015-09-04 23:12+0500\n"
+"POT-Creation-Date: 2016-03-04 22:46+0000\n"
+"PO-Revision-Date: 2016-03-05 15:30+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.6\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME қосымша баптаулары"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "GNOME 3 қосымша баптауларын өзгерту"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "Қосымша баптаулар көмегімен GNOME жұмыс үстел ортасын дәлдеп баптауға болады."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
-"It can install and manage themes and extensions, change power settings, manage "
-"startup applications, and enable desktop icons among other settings."
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
 msgstr ""
 "Ол темалар және кеңейтулерді орнату және басқару, эл. қорек баптауларын "
 "өзгерту, жүйеге кірген кезде автожөнелтілетін қолданбаларды басқару, жұмыс "
@@ -37,12 +46,9 @@ msgstr ""
 msgid "Tweak Tool"
 msgstr "Қосымша баптаулар"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "GNOME 3 қосымша баптауларын өзгерту"
-
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
 "Баптаулар;Кеңейтілген;Қалаулар;Кеңейтулер;Қаріптер;Тема;XKB;Пернетақта;Теру;"
 
@@ -74,10 +80,6 @@ msgstr "Барлық қосымша баптауларды бастапқы мә
 msgid "About GNOME Tweak Tool"
 msgstr "GNOME қосымша баптаулары жөнінде"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME қосымша баптаулары"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -108,7 +110,7 @@ msgstr "Қаріптер"
 msgid "Power"
 msgstr "Эл. қорегі"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Автожөнелтілетін қолданбалар"
 
@@ -296,12 +298,12 @@ msgstr "Тема"
 msgid "Enable animations"
 msgstr "Анимацияларды іске қосу"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Сөндірулі"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Теру"
 
@@ -419,30 +421,34 @@ msgid "Show week numbers"
 msgstr "Апта нөмірлерін көрсету"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Эл. қорек батырма әрекеті"
+msgid "When Power Button is Pressed"
+msgstr "Қорек батырмасы басылған кезде"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Әрекет"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Ноутбук қақпағы жабылса"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Батареядан жұмыс істеген кезде"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Эл. желісінде болған кезде"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Сыртқы монитор жалғанып тұрса да, ұйықтату"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Жұмыс орындар саны"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Жұмыс орындар тек біріншілік мониторда"
 
@@ -607,30 +613,33 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(бастапқы)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Барлық қолданбалар үшін қараңғы теманы қолдану"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Бұл сессияның барлық қолданбалары үшін қараңғы теманы іске қосу"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Глобалды қараңғы тема"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Өзгеріс іске асуы үшін қолданбаларды қайта іске қосу керек"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Баптауды жазу қатесі"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Эл. қорек батырма әрекеті"
 
 #~ msgid "Add Application"
 #~ msgstr "Қолданбаны қосуы"
