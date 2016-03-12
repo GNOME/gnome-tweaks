@@ -2,16 +2,15 @@
 # Copyright (C) 2011-2013 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
-# Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011, 2012, 2013, 2014, 2015.
+# Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011-2016.
 # Hajime Taira <htaira@redhat.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-03-20 20:59+0000\n"
-"PO-Revision-Date: 2015-03-21 12:50+0900\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-01-22 17:19+0000\n"
+"PO-Revision-Date: 2016-03-12 11:53+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -20,35 +19,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
-msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
-msgstr ""
-"GNOME Tweak Tool は GNOME の詳細なオプションを調整するためのツールです。"
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME Tweak Tool"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:2
-msgid ""
-"It can install and manage themes and extensions, change power settings, "
-"manage startup applications, and enable desktop icons among other settings."
-msgstr ""
-"このツールを使うと、テーマや拡張機能のインストールと管理、また電源設定の変更"
-"や、スタートアップアプリケーションの管理、デスクトップアイコンの設定、その他"
-"さまざまな設定を行うことができます。"
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "GNOME 3 の高度な設定"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr "GNOME Tweak Tool は GNOME の詳細なオプションを調整するためのツールです。"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
+msgid "It can install and manage themes and extensions, change power settings, manage startup applications, and enable desktop icons among other settings."
+msgstr "このツールを使うと、テーマや拡張機能のインストールと管理、また電源設定の変更や、スタートアップアプリケーションの管理、デスクトップアイコンの設定、その他さまざまな設定を行うことができます。"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Tweak Tool"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "GNOME 3 の高度な設定"
-
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;設"
-"定;高度;拡張機能;フォント;テーマ;キーボード;タイピング;customize;カスタマイ"
-"ズ;addon;addin;アドオン;アドイン;gnomeshell;TweakTool;"
+msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;設定;高度;拡張機能;フォント;テーマ;キーボード;タイピング;customize;カスタマイズ;addon;addin;アドオン;アドイン;gnomeshell;TweakTool;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -72,16 +66,11 @@ msgstr "デフォルト設定に戻す"
 
 #: ../gtweak/app.py:77
 msgid "Reset all tweak settings to the original default state?"
-msgstr ""
-"Tweak Tool で変更したすべての設定を、オリジナルのデフォルト値に戻しますか。"
+msgstr "Tweak Tool で変更したすべての設定を、オリジナルのデフォルト値に戻しますか。"
 
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
 msgstr "このアプリケーションについて"
-
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME Tweak Tool"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -101,7 +90,7 @@ msgid "Appearance"
 msgstr "外観"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
 msgid "Extensions"
 msgstr "拡張機能"
 
@@ -113,7 +102,7 @@ msgstr "フォント"
 msgid "Power"
 msgstr "電源"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "スタートアップアプリケーション"
 
@@ -129,7 +118,7 @@ msgstr "ウィンドウ"
 msgid "Workspaces"
 msgstr "ワークスペース"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Mouse"
 msgstr "マウス"
 
@@ -264,7 +253,7 @@ msgid "Could not list shell extensions"
 msgstr "Shell 拡張機能を一覧表示できません"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:170
-#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+#: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>デフォルト</i>"
 
@@ -301,177 +290,190 @@ msgstr "テーマ"
 msgid "Enable animations"
 msgstr "アニメーションを有効にする"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "無効"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:131
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "タイピング"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension downloading"
 msgstr "拡張機能をダウンロードしています"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Error loading extension"
 msgstr "拡張機能のロードに失敗しました"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
 msgid "Extension does not support shell version"
 msgstr "拡張機能が GNOME Shell のバージョンに対応していません"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
 msgid "Unknown extension error"
 msgstr "原因不明の拡張機能エラー"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
-#: ../gtweak/tweaks/tweak_group_startup.py:189
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:229
 msgid "Remove"
 msgstr "削除"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "拡張機能のアンインストール"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "拡張機能 '%s' をアンインストールしますか。"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "更新中"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "エラー"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "更新"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "GNOME Shell 拡張機能をインストール"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "拡張機能の選択"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "他の拡張機能をインストールする"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "%s の拡張機能の更新に成功"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "%s の拡張機能のインストールに成功"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
 msgid "Error installing extension"
 msgstr "拡張機能のインストールに失敗"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
 msgid "Invalid extension"
 msgstr "無効な拡張機能"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:32
+#: ../gtweak/tweaks/tweak_group_shell.py:33
 msgid "Show Application Menu"
 msgstr "アプリケーションメニューを表示する"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:45
+#: ../gtweak/tweaks/tweak_group_shell.py:46
 msgid "Workspace Creation"
 msgstr "ワークスペースの作成"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:50
+#: ../gtweak/tweaks/tweak_group_shell.py:51
 msgid "Dynamic"
 msgstr "自動"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:50
+#: ../gtweak/tweaks/tweak_group_shell.py:51
 msgid "Static"
 msgstr "固定"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:71
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Don't suspend on lid close"
+msgstr "蓋を閉じたときにサスペンドしない"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:104
 msgid "Clock"
 msgstr "時計"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:72
+#: ../gtweak/tweaks/tweak_group_shell.py:105
 msgid "Show date"
 msgstr "日付を表示する"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:73
+#: ../gtweak/tweaks/tweak_group_shell.py:106
 msgid "Show seconds"
 msgstr "秒を表示する"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:74
+#: ../gtweak/tweaks/tweak_group_shell.py:107
 msgid "Calendar"
 msgstr "カレンダー"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:75
+#: ../gtweak/tweaks/tweak_group_shell.py:108
 msgid "Show week numbers"
 msgstr "週番号を表示する"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:78
-msgid "Power Button Action"
-msgstr "電源ボタンの挙動"
+#: ../gtweak/tweaks/tweak_group_shell.py:111
+msgid "When Power Button is Pressed"
+msgstr "電源ボタンを押したときの動作"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:79
+#: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "動作"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
-msgstr "ラップトップの蓋を閉じたときの挙動"
+msgstr "ラップトップの蓋を閉じたときの動作"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:80
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "バッテリー動作時"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:81
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "AC 電源接続時"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:82
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "外部モニター接続時でもサスペンドする"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:86
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "ワークスペース数"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:87
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "プライマリディスプレイだけワークスペース機能を使用する"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:35
+#: ../gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:41
+#: ../gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications..."
 msgstr "アプリケーションを検索..."
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#. Translators: This is the accelerator for opening the AppChooser search-bar
+#: ../gtweak/tweaks/tweak_group_startup.py:56
+msgid "<primary>f"
+msgstr "<primary>f"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:75
 msgid "running"
 msgstr "起動中"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:71
+#: ../gtweak/tweaks/tweak_group_startup.py:85
 msgid "_Close"
 msgstr "閉じる(_C)"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:72
-msgid "Add Application"
-msgstr "アプリケーションを追加"
+#: ../gtweak/tweaks/tweak_group_startup.py:86
+msgid "_Add"
+msgstr "追加(_A)"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:205
+#: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "新しいスタートアップアプリケーション"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:206
+#: ../gtweak/tweaks/tweak_group_startup.py:254
 msgid "Add a new application to be run at startup"
 msgstr "スタートアップ時に自動で起動するアプリケーションを追加します"
 
@@ -557,33 +559,42 @@ msgstr "HiDPI"
 msgid "Middle-click Paste"
 msgstr "中クリックによる貼り付け機能"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+#. Translators: This setting refers to a set of pre-defined key bindings
+#: ../gtweak/tweaks/tweak_group_keymouse.py:41
 msgid "Key theme"
 msgstr "キーテーマ"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Keyboard and Mouse"
 msgstr "キーボードとマウス"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
 msgid "Show All Input Sources"
 msgstr "すべての入力ソースを表示する"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
 msgid "Switch between overview and desktop"
 msgstr "アクティビティ画面とデスクトップ画面を切り替える"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Left super"
 msgstr "左 Super"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Right super"
 msgstr "右 Super"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweaks/tweak_group_keymouse.py:72
 msgid "Show location of pointer"
 msgstr "ポインターの位置をハイライト表示する"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+msgid "Touchpad"
+msgstr "タッチパッド"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+msgid "Click method"
+msgstr "クリックメソッド"
 
 #: ../gtweak/tweaks/tweak_wacom.py:29
 msgid "Device"
@@ -594,32 +605,36 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(デフォルト)</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "すべてのアプリケーションでダークテーマを使用する"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "セッション中のすべてのアプリケーションでダークテーマを使用します"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "グローバルダークテーマ"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
-msgstr ""
-"アプリケーション上に変更を反映させるには、そのアプリケーションを再起動する必"
-"要があります"
+msgstr "アプリケーション上に変更を反映させるには、そのアプリケーションを再起動する必要があります"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "設定変更時にエラー"
+
+#~ msgid "Power Button Action"
+#~ msgstr "電源ボタンの挙動"
+
+#~ msgid "Add Application"
+#~ msgstr "アプリケーションを追加"
 
 #~ msgid "Super left"
 #~ msgstr "左 Super"
