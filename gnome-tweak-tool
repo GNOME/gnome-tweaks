@@ -70,7 +70,7 @@ if __name__ == '__main__':
     if options.debug:
         level=logging.DEBUG
     else:
-        level=logging.INFO
+        level=logging.WARNING
     logging.basicConfig(format="%(levelname)-8s: %(message)s", level=level)
 
     locale.setlocale(locale.LC_ALL, None)
