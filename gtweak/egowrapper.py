@@ -26,9 +26,9 @@ from gi.repository import Soup
 class ExtensionsDotGnomeDotOrg(GObject.GObject):
 
     __gsignals__ = {
-      "got-extensions": (GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE,
+      "got-extensions": (GObject.SignalFlags.RUN_FIRST, GObject.TYPE_NONE,
             (GObject.TYPE_PYOBJECT,)),
-      "got-extension-info": (GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE,
+      "got-extension-info": (GObject.SignalFlags.RUN_FIRST, GObject.TYPE_NONE,
             (GObject.TYPE_PYOBJECT,GObject.TYPE_STRING)),
     }
 

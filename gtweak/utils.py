@@ -241,7 +241,7 @@ class SchemaList:
 class DisableExtension(GObject.GObject):
     
     __gsignals__ = {
-        "disable-extension": (GObject.SIGNAL_RUN_FIRST, GObject.TYPE_NONE,()),
+        "disable-extension": (GObject.SignalFlags.RUN_FIRST, GObject.TYPE_NONE,()),
     }    
     
     def __init__(self):

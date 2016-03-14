@@ -60,7 +60,7 @@ class _XkbOption(Gtk.Expander, Tweak):
         for (val, name) in model_values:
             self._radios[val] = r = Gtk.RadioButton.new_from_widget(self._radios.get(None))
             vbox.add(r)
-            l = Gtk.Label(name)
+            l = Gtk.Label(label=name)
             l.set_line_wrap(True)
             r.add(l)
             r._changed_id = r.connect('toggled', self._on_radio_changed)
