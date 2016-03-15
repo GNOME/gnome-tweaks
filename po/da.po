@@ -1,30 +1,40 @@
 # Danish translation for gnome-tweak-tool.
 # Copyright (C) 2011-2015 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-#
 # Kris Thomsen <mail@kristhomsen.dk>, 2011-2015.
 # Ask Hjorth Larsen <asklarsen@gmail.com>, 2014-2015.
-#
+# scootergrisen, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-04 08:36+0000\n"
-"PO-Revision-Date: 2015-09-07 21:41+0100\n"
-"Last-Translator: Kris Thomsen <mail@kristhomsen.dk>\n"
+"POT-Creation-Date: 2016-03-02 10:46+0000\n"
+"PO-Revision-Date: 2016-03-03 00:07+0200\n"
+"Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME Tilpasningsværktøj"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Tilpas avancerede indstillinger for GNOME 3"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr "GNOME Tweak Tool tillader ændring af avancerede GNOME-indstillinger."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -36,10 +46,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Tilpasningsværktøj"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Tilpas avancerede indstillinger for GNOME 3"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -76,10 +82,6 @@ msgstr "Nulstil alle tilpasningsindstillinger til original standardtilstand?"
 msgid "About GNOME Tweak Tool"
 msgstr "Om GNOME Tilpasningsværktøj"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME Tilpasningsværktøj"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -110,7 +112,7 @@ msgstr "Skrifttyper"
 msgid "Power"
 msgstr "Strøm"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Opstartsprogrammer"
 
@@ -305,12 +307,12 @@ msgstr "Tema"
 msgid "Enable animations"
 msgstr "Slå animationer til"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Deaktiveret"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Indtastning"
 
@@ -428,30 +430,35 @@ msgid "Show week numbers"
 msgstr "Vis ugenumre"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Handling for slukknap"
+msgid "When Power Button is Pressed"
+msgstr "Når der trykkes på tænd-/sluk-knappen"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+#| msgid "Applications"
+msgid "Action"
+msgstr "Handling"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Når låget på den bærbare lukkes"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "På batteristrøm"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Ved ekstern strøm"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Gå i hviletilstand, selv når en ekstern skærm er sat til"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Antal af arbejdsområder"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Arbejdsområder kun på primær skærm"
 
@@ -617,75 +624,27 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standard)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Aktivér mørkt tema for alle programmer"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Aktivér det mørke tema for alle programmerne i denne session"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Globalt mørkt tema"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Programmerne skal genstartes for at ændringer træder i kraft"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Fejl under skrivning af indstilling"
-
-#~ msgid "Add Application"
-#~ msgstr "Tilføj program"
-
-#~ msgid "Window"
-#~ msgstr "Vindue"
-
-#~ msgid "Restart"
-#~ msgstr "Genstart"
-
-#~ msgid "Super left"
-#~ msgstr "Venstre super"
-
-#~ msgid "Super right"
-#~ msgstr "Højre super"
-
-#~ msgid "_Help"
-#~ msgstr "_Hjælp"
-
-#~ msgid "_About Tweak Tool"
-#~ msgstr "_Om Tilpasningsværktøj"
-
-#~ msgid "The shell must be restarted for changes to take effect"
-#~ msgstr "Shell'en skal genstartes for at ændringer træder i kraft"
-
-#~ msgid "welcome"
-#~ msgstr "velkommen"
-
-#~ msgid "Shell"
-#~ msgstr "Shell"
-
-#~ msgid "Shell Extensions"
-#~ msgstr "Shell-udvidelser"
-
-#~ msgid "All"
-#~ msgstr "Alle"
-
-#~ msgid ""
-#~ "Disable gnome-shell dynamic workspace management, use static workspaces"
-#~ msgstr ""
-#~ "Deaktivér dynamisk arbejdsområde-håndtering af gnome-shell, brug statiske "
-#~ "arbejdsområder"
-
-#~ msgid "Icon theme"
-#~ msgstr "Ikontema"
-
-#~ msgid "Keybinding theme"
-#~ msgstr "Tastebindingstema"
