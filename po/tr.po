@@ -11,31 +11,40 @@
 # Yaşar Şentürk <yasarix@gmail.com>, 2014.
 # Necdet Yücel <necdetyucel@gmail.com>, 2015.
 # İşbaran Akçayır <isbaran@gmail.com>, 2015.
-# Muhammet Kara <muhammetk@gmail.com>, 2013, 2014, 2015.
+# Muhammet Kara <muhammetk@gmail.com>, 2013, 2014, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-05 20:33+0000\n"
-"PO-Revision-Date: 2015-09-06 07:16+0300\n"
+"POT-Creation-Date: 2016-03-19 10:48+0000\n"
+"PO-Revision-Date: 2016-03-19 23:32+0200\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
-"Language-Team: Türkçe <gnome-turk@gnome.org>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 2.91.6\n"
 "X-POOTLE-MTIME: 1420705374.000000\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOME İnce Ayar Aracı"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Gelişmiş GNOME 3 ayarlarını yapılandırın"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "GNOME İnce Ayar Aracı gelişmiş GNOME seçeneklerini ayarlamanızı sağlar."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -47,10 +56,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "İnce Ayar Aracı"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Gelişmiş GNOME 3 ayarlarını yapılandırın"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -86,10 +91,6 @@ msgstr "Tüm ince ayarlar öntanımlı hallerine getirilsin mi?"
 msgid "About GNOME Tweak Tool"
 msgstr "GNOME İnce Ayar Aracı Hakkında"
 
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME İnce Ayar Aracı"
-
 #: ../gtweak/app.py:98
 #, python-format
 msgid "GNOME Shell v%s (%s mode)"
@@ -120,7 +121,7 @@ msgstr "Yazı Tipleri"
 msgid "Power"
 msgstr "Güç"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:300
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Başlangıç Uygulamaları"
 
@@ -308,12 +309,12 @@ msgstr "Tema"
 msgid "Enable animations"
 msgstr "Animasyonları etkinleştir"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Klavye"
 
@@ -431,30 +432,35 @@ msgid "Show week numbers"
 msgstr "Hafta numaralarını göster"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Güç Düğmesi Eylemi"
+msgid "When Power Button is Pressed"
+msgstr "Güç Düğmesine Basıldığında"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+#| msgid "Applications"
+msgid "Action"
+msgstr "Eylem"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Dizüstü Kapağı Kapatıldığında"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Pil İle Çalışırken"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Fişe takıldığında"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Harici bir monitör bağlanmış olsa da askıya al"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Çalışma Alanı Sayısı"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Çalışma alanları sadece birincil ekranda"
 
@@ -619,32 +625,35 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(öntanımlı)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Koyu temayı tüm uygulamalar için etkinleştir"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Koyu tema ipuçlarını oturumdaki tüm uygulamalar için etkinleştir"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Genel Karanlık Teması"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr ""
 "Değişikliklerin etkili olması için uygulamaların yeniden başlatılması "
 "gerekiyor"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Ayar kaydedilirken hata"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Güç Düğmesi Eylemi"
 
 #~ msgid "Add Application"
 #~ msgstr "Uygulama Ekle"
