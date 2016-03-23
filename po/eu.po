@@ -3,30 +3,39 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # asiersar <asiersar@yahoo.com>, 2011.
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2014, 2015.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2014, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-14 12:33+0200\n"
-"PO-Revision-Date: 2015-10-09 22:50+0200\n"
-"Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
-"Language-Team: Basque <Basque <librezale@librezale.org>>\n"
+"POT-Creation-Date: 2016-03-23 13:56+0100\n"
+"PO-Revision-Date: 2016-03-23 13:57+0100\n"
+"Last-Translator: dooteo <dooteo@zundan.com>\n"
+"Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 2.0\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "GNOMEren doikuntzaren tresna"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Doitu GNOME 3ren ezarpen aurreratuak"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "GNOMEren doikuntzarako tresnak  GNOMEren aukera aurreratuak doitzea "
 "baimentzen du."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -38,10 +47,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Doiketa tresna"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Doitu GNOME 3ren ezarpen aurreratuak"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -77,10 +82,6 @@ msgstr "Berrezarri doikuntzaren ezarpen guztiak jatorrizko egoera lehenetsira?"
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
 msgstr "GNOMEren doikuntzaren tresnari buruz"
-
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOMEren doikuntzaren tresna"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -300,12 +301,12 @@ msgstr "Gaia"
 msgid "Enable animations"
 msgstr "Gaitu animazioak"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Desgaituta"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Idazketa"
 
@@ -423,30 +424,34 @@ msgid "Show week numbers"
 msgstr "Erakutsi asteen zenbakiak"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Pizteko botoiaren ekintza"
+msgid "When Power Button is Pressed"
+msgstr "Pizgailu botoia sakatu denean"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Ekintza"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Eramangarriaren tapa ixtean"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Bateriaren energiarekin"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Entxufatuta"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Eseki nahiz eta kanpoko monitorea konektatuta egon"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Laneko areen kopurua"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Laneko areak pantaila nagusian soilik"
 
@@ -612,30 +617,33 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(lehenetsia)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Gaitu gai iluna aplikazio guztientzako"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Gaitu gai ilunaren argibideak saioko aplikazio guztientzako"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Gai ilun globala"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Aplikazioak berrabiarazi behar dira aldaketak eragina egiteko."
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Errorea ezarpenak idaztean"
+
+#~ msgid "Power Button Action"
+#~ msgstr "Pizteko botoiaren ekintza"
 
 #~ msgid "Add Application"
 #~ msgstr "Gehitu aplikazioa"
