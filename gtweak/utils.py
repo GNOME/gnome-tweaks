@@ -324,14 +324,14 @@ class Notification:
 @singleton
 class LogoutNotification:
     def __init__(self):
-        if Notify.is_initted() or Notify.init("GNOME Tweak Tool"):
+        if Notify.is_initted() or Notify.init(_("GNOME Tweak Tool")):
             self.notification = Notify.Notification.new(
-                                "Configuration changes require restart",
-                                "Your session needs to be restarted for settings to take effect",
+                                _("Configuration changes require restart"),
+                                _("Your session needs to be restarted for settings to take effect"),
                                 'gnome-tweak-tool')
             self.notification.add_action(
                                 "restart",
-                                "Restart Session",
+                                _("Restart Session"),
                                 self._logout, None, None)
             self.notification.set_hint(
                                 "desktop-entry",
