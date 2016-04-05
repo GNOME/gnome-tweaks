@@ -1,15 +1,16 @@
 # Bulgarian translation of gnome-tweak-tool po-file.
-# Copyright (C) 2009, 2011, 2012, 2013, 2014, 2015 Free Software Foundation, Inc.
+# Copyright (C) 2009, 2011, 2012, 2013, 2014, 2015, 2016 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2011, 2012, 2013, 2014, 2015.
+# Alexander Shopov <ash@kambanaria.org>, 2007, 2008, 2009, 2011, 2012, 2013, 2014.
+# Alexander Shopov <ash@kambanaria.org>, 2015, 2016.
 # Ivaylo Valkov <ivaylo@e-valkov.org>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-18 18:23+0200\n"
-"PO-Revision-Date: 2015-03-18 18:23+0200\n"
+"POT-Creation-Date: 2016-04-05 07:07+0300\n"
+"PO-Revision-Date: 2016-04-05 07:07+0300\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -18,13 +19,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+msgid "GNOME Tweak Tool"
+msgstr "Натаманяване на GNOME"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Конфигуриране на настройките на GNOME 3 за напреднали"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "Натаманяването на GNOME позволява да променяте скритите настройки на "
 "работната среда GNOME."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -37,17 +47,13 @@ msgstr ""
 msgid "Tweak Tool"
 msgstr "Натаманяване на GNOME"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Конфигуриране на настройките на GNOME 3 за напреднали"
-
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
 "настройки;допълнителни;напреднали;конфигурации;разширения;добавки;приставки;"
-"шрифтове;теми;клавиатура;подредба;въвеждане;вход;Settings;Advanced;"
-"Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+"шрифтове;теми;клавиатура;подредба;въвеждане;вход;settings;advanced;"
+"preferences;extensions;fonts;theme;xkb;keyboard;typing;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -76,11 +82,7 @@ msgstr ""
 
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
-msgstr "Относно Натаманяване на GNOME"
-
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "Натаманяване на GNOME"
+msgstr "Относно „Натаманяване на GNOME“"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -100,7 +102,7 @@ msgid "Appearance"
 msgstr "Външен вид"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:300
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
 msgid "Extensions"
 msgstr "Разширения на обвивката"
 
@@ -112,7 +114,7 @@ msgstr "Шрифтове"
 msgid "Power"
 msgstr "Захранване"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:238
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
 msgid "Startup Applications"
 msgstr "Начални програми"
 
@@ -128,7 +130,7 @@ msgstr "Прозорци"
 msgid "Workspaces"
 msgstr "Работни плотове"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:70
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
 msgid "Mouse"
 msgstr "Мишка"
 
@@ -225,252 +227,265 @@ msgstr "Заглаждане на шрифтовете"
 msgid "Scaling Factor"
 msgstr "Коефициент на мащабиране"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "Икони"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "Показалец на мишката"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "Тема на обвивката"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Инсталиране на друга тема за обвивката на GNOME"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "Непозната грешка"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "Обвивката не е стартирана"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Разширението за теми на обвивката на GNOME е инсталирано неправилно"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Разширението за теми на обвивката на GNOME не е включено"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "Разширенията на обвивката на GNOME не могат да бъдат изброени"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
-#: ../gtweak/tweaks/tweak_group_keymouse.py:46
+#: ../gtweak/tweaks/tweak_group_interface.py:175
+#: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>Стандартно</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "Избор на тема"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Темата „%s“ е обновена успешно"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Темата „%s“ е успешно инсталирана"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "Грешка при инсталиране на тема"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "Неправилна тема"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "Тема"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "Анимации"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:46
+#: ../gtweak/tweaks/tweak_group_xkb.py:53
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Изключени"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:131
+#: ../gtweak/tweaks/tweak_group_xkb.py:136
 msgid "Typing"
 msgstr "Клавиатура"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:77
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
 msgid "Extension downloading"
 msgstr "Изтегляне на разширение"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:79
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
 msgid "Error loading extension"
 msgstr "Грешка при изтеглянето на разширение"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:81
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
 msgid "Extension does not support shell version"
 msgstr "Разширението не поддържа тази версия на обвивката"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:83
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
 msgid "Unknown extension error"
 msgstr "Непозната грешка от разширението"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:104
-#: ../gtweak/tweaks/tweak_group_startup.py:189
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:229
 msgid "Remove"
 msgstr "Премахване"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:136
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
 msgid "Uninstall Extension"
 msgstr "Премахване на разширение на обвивката"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Искате ли да премахнете разширението „%s“?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:154
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
 msgstr "Обновяване"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:165
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Error"
 msgstr "Грешка"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Update"
 msgstr "Обновяване"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:185
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Install Shell Extension"
 msgstr "Инсталиране на разширение на обвивката"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Select an extension"
 msgstr "Избор на разширение"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:197
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
 msgid "Get more extensions"
 msgstr "Изтегляне на още разширения"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:247
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Успешно обновяване на разширението „%s“"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:249
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Успешна инсталация на разширението „%s“"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
 msgid "Error installing extension"
 msgstr "Грешка при инсталирането на разширение"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
 msgid "Invalid extension"
 msgstr "Неправилно разширение"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:32
+#: ../gtweak/tweaks/tweak_group_shell.py:33
 msgid "Show Application Menu"
 msgstr "Показване на меню с програмите"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:45
+#: ../gtweak/tweaks/tweak_group_shell.py:46
 msgid "Workspace Creation"
 msgstr "Създаване на работен плот"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:50
+#: ../gtweak/tweaks/tweak_group_shell.py:51
 msgid "Dynamic"
 msgstr "динамично"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:50
+#: ../gtweak/tweaks/tweak_group_shell.py:51
 msgid "Static"
 msgstr "статично"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:71
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Don't suspend on lid close"
+msgstr "Без приспиване при затваряне на екрана"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:104
 msgid "Clock"
 msgstr "Часовник"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:72
+#: ../gtweak/tweaks/tweak_group_shell.py:105
 msgid "Show date"
 msgstr "Показване на датата"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:73
+#: ../gtweak/tweaks/tweak_group_shell.py:106
 msgid "Show seconds"
 msgstr "Показване на секундите"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:74
+#: ../gtweak/tweaks/tweak_group_shell.py:107
 msgid "Calendar"
 msgstr "Календар"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:75
+#: ../gtweak/tweaks/tweak_group_shell.py:108
 msgid "Show week numbers"
 msgstr "Показване на номерата на седмиците"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:78
-msgid "Power Button Action"
-msgstr "Действие на бутона за включване на компютъра"
+#: ../gtweak/tweaks/tweak_group_shell.py:111
+msgid "When Power Button is Pressed"
+msgstr "При натискане на бутона за включване на компютъра"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:79
+#: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Действие"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "При затварянето на екрана на лаптопа"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:80
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "При захранване от батерии"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:81
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "При захранване от електрическата мрежа"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:82
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Приспиване, дори и да е включен външен монитор"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:86
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Брой на работните плотове"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:87
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Работни плотове само за основния екран"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:35
+#: ../gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Програми"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:41
+#: ../gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications..."
 msgstr "Търсене на програма…"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:61
+#. Translators: This is the accelerator for opening the AppChooser search-bar
+#: ../gtweak/tweaks/tweak_group_startup.py:56
+msgid "<primary>f"
+msgstr "<модификатор>f"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:75
 msgid "running"
 msgstr "стартирани"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:71
+#: ../gtweak/tweaks/tweak_group_startup.py:85
 msgid "_Close"
 msgstr "_Затваряне"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:72
-msgid "Add Application"
-msgstr "Добавяне на програма"
+#: ../gtweak/tweaks/tweak_group_startup.py:86
+msgid "_Add"
+msgstr "_Добавяне"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:205
+#: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "Нова програма при стартиране"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:206
+#: ../gtweak/tweaks/tweak_group_startup.py:254
 msgid "Add a new application to be run at startup"
 msgstr ""
 "Добавяне на нова програма, която да се стартира при влизане в графичната "
@@ -484,7 +499,7 @@ msgstr "Мащабиране на прозорците"
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr ""
 "Промяна на коефициента за мащабиране на прозорците на GTK при висока "
-"разделителна способност"
+"разделителна способност (HiDPI)"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:95
 #, python-format
@@ -496,7 +511,7 @@ msgstr[1] "След %d секунди настройките ще бъдат о�
 #: ../gtweak/tweaks/tweak_group_windows.py:111
 msgid "Do you want to keep these HiDPI settings?"
 msgstr ""
-"Искате ли да запазите настройките за висока разделителна способност HiDPI?"
+"Искате ли да запазите настройките за висока разделителна способност (HiDPI)?"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:118
 msgid "Revert Settings"
@@ -512,7 +527,7 @@ msgstr "Прикрепени модални прозорци"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:138
 msgid "Automatically Raise Windows"
-msgstr "Автоматично издигани на прозорците"
+msgstr "Автоматично издигане на прозорците"
 
 #: ../gtweak/tweaks/tweak_group_windows.py:139
 msgid "Resize with Secondary-click"
@@ -562,33 +577,42 @@ msgstr "Висока разделителна способност"
 msgid "Middle-click Paste"
 msgstr "Поставяне на текста със средния бутон"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:40
+#. Translators: This setting refers to a set of pre-defined key bindings
+#: ../gtweak/tweaks/tweak_group_keymouse.py:41
 msgid "Key theme"
 msgstr "Тема за клавишни комбинации"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:59
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Keyboard and Mouse"
 msgstr "Клавиатура и мишка"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
 msgid "Show All Input Sources"
 msgstr "Показване на всички входни устройства"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:65
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
 msgid "Switch between overview and desktop"
 msgstr "Превключване между общия преглед и работния плот"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Left super"
 msgstr "Ляв Super"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:68
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
 msgid "Right super"
 msgstr "Десен Super"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweaks/tweak_group_keymouse.py:72
 msgid "Show location of pointer"
 msgstr "Показване на местоположението на показалеца"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+msgid "Touchpad"
+msgstr "Сензорен панел"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+msgid "Click method"
+msgstr "Начин на натискане"
 
 #: ../gtweak/tweaks/tweak_wacom.py:29
 msgid "Device"
@@ -596,30 +620,30 @@ msgstr "Устройство"
 
 #: ../gtweak/tweaks/tweak_wacom.py:38
 msgid "Wacom"
-msgstr "Уаком (Wacom)"
+msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "„%s“ <i>стандартно</i>"
 
-#: ../gtweak/widgets.py:471
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Включване на тъмна тема за всички приложения"
 
-#: ../gtweak/widgets.py:472
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Включване на подсказка за тъмна тема за всички програми в сесията"
 
-#: ../gtweak/widgets.py:480
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Тъмна тема"
 
-#: ../gtweak/widgets.py:481
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Промените ще влязат в сила след рестартирането на програмите"
 
-#: ../gtweak/widgets.py:507
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Грешка при запазването на настройките"
