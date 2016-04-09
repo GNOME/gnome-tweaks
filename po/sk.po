@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-01-16 10:43+0000\n"
-"PO-Revision-Date: 2016-01-16 16:43+0100\n"
+"POT-Creation-Date: 2016-04-09 14:32+0000\n"
+"PO-Revision-Date: 2016-04-09 21:00+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -17,15 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../gtweak/utils.py:327
+msgid "GNOME Tweak Tool"
+msgstr "Nástroj na vyladenie nastavení prostredia GNOME"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Vyladenie pokročilých nastavení prostredia GNOME 3"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "Nástroj na vyladenie nastavení pre prostredie GNOME umožňuje upravovať "
 "pokročilé voľby prostredia GNOME."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -37,10 +47,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Nástroj na vyladenie nastavení"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Vyladenie pokročilých nastavení prostredia GNOME 3"
 
 # JK: Preferences prekladame ako nastavenia
 # DK: viem.dal som tam predvolby kvoli tomu ze to su keywords, takze to neuskodi, skor pomoze.vela ludi ma zauzivane slovo predvolby.
@@ -79,10 +85,6 @@ msgstr ""
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
 msgstr "O programe Nástroj na vyladenie nastavení prostredia GNOME"
-
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "Nástroj na vyladenie nastavení prostredia GNOME"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -230,83 +232,83 @@ msgstr "Vyhladzovanie"
 msgid "Scaling Factor"
 msgstr "Faktor nastavenia mierky"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "Ikony"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "Kurzor"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "Téma pre Shell"
 
 # PM: kde sa nachádza tento text?
 # DK: nikde som to tam nenasiel..tipujem ze skor to bude label
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Nainštalujte vlastné alebo používateľské témy pre gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "Shell nie je spustený"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Rozšírenie s používateľskou témou shellu je nesprávne nainštalované"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Rozšírenie s používateľskou témou shellu nie je povolené"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "Nepodarilo sa zobraziť rozšírenia shellu"
 
 # tema klavesovych skratiek, druhy vyskyt som nenasiel v programe
 # tyka sa to aj temy gnome-shell (Adwaita == default)
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>Predvolená</i>"
 
 # window title
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "Výber témy"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Téma %s bola úspešne aktualizovaná"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Téma %s bola úspešne nainštalovaná"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "Chyba pri inštalácii témy"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "Neplatná téma"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "Téma"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "Povoliť animácie"
 
@@ -644,25 +646,37 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predvolená)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "Zmeny konfigurácie vyžadujú reštart"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Aby sa prejavili zmeny, musíte reštartovať vašu reláciu"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "Reštartovať reláciu"
+
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Povoliť tmavú tému pre všetky aplikácie"
 
 # description
 # PM: nehodí sa tu skôr "odporúčanie"
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Povolí radu o tmavej téme pre všetky aplikácie v relácii"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Globálna tmavá téma"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Aby sa prejavili zmeny, musíte reštartovať aplikácie"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Chyba pri zapisovaní nastavení"
 
@@ -675,9 +689,6 @@ msgstr "Chyba pri zapisovaní nastavení"
 
 #~ msgid "Window"
 #~ msgstr "Okno"
-
-#~ msgid "Restart"
-#~ msgstr "Reštartovať"
 
 #~ msgid "Super left"
 #~ msgstr "Ľavé tlačidlo Super"
