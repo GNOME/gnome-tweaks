@@ -1,5 +1,5 @@
 # Danish translation for gnome-tweak-tool.
-# Copyright (C) 2011-2015 gnome-tweak-tool's COPYRIGHT HOLDER
+# Copyright (C) 2011-2016 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Kris Thomsen <mail@kristhomsen.dk>, 2011-2015.
 # Ask Hjorth Larsen <asklarsen@gmail.com>, 2014-2015.
@@ -7,10 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-02 10:46+0000\n"
-"PO-Revision-Date: 2016-03-03 00:07+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-10 23:08+0200\n"
+"PO-Revision-Date: 2016-04-10 21:48+0200\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -22,6 +21,7 @@ msgstr ""
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME Tilpasningsværktøj"
 
@@ -232,78 +232,78 @@ msgstr "Udjævning"
 msgid "Scaling Factor"
 msgstr "Skaleringsfaktor"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "Ikoner"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "Markør"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "Shell-tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Installér tilpasset- eller brugertema til gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "Ukendt fejl"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "Shell kører ikke"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Shell-user-theme-udvidelse er ikke korrekt installeret"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell-user-theme-udvidelse er ikke aktiveret"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "Kunne ikke vise shell-udvidelser"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>Standard</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "Vælg et tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s-temaet blev opdateret"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s-temaet blev installeret"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "Fejl under installation af tema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "Ugyldigt tema"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "Tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "Slå animationer til"
 
@@ -434,7 +434,6 @@ msgid "When Power Button is Pressed"
 msgstr "Når der trykkes på tænd-/sluk-knappen"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
-#| msgid "Applications"
 msgid "Action"
 msgstr "Handling"
 
@@ -628,6 +627,18 @@ msgstr "Wacom"
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standard)</i>"
+
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "Konfigurationsændringer kræver genstart"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Din session skal genstartes for at ændringerne træder i kraft"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "Genstart session"
 
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
