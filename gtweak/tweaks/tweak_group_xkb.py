@@ -59,6 +59,15 @@ class _XkbOption(Gtk.Expander, Tweak):
             model_values.append((option_id, desc))
             self._possible_values.append(option_id)
 
+        def values_cmp((av, ad), (bv, bd)):
+            if not av:
+                return -1
+            elif not bv:
+                return 1
+            else:
+                return cmp(ad, bd)
+        model_values.sort(cmp=values_cmp)
+
         self._widgets = dict()
         for (val, name) in model_values:
             w = None
