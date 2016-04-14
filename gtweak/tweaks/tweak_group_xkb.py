@@ -51,20 +51,28 @@ class _XkbOption(Gtk.Expander, Tweak):
         self._possible_values = []
 
         model_values = []
+        if not self._multiple_selection:
+            model_values.append((None, _("Disabled")))
+
         for option_id in self._xkb_info.get_options_for_group(group_id):
             desc = self._xkb_info.description_for_option(group_id, option_id)
             model_values.append((option_id, desc))
             self._possible_values.append(option_id)
 
-        self._checks = dict()
+        self._widgets = dict()
         for (val, name) in model_values:
-            self._checks[val] = r = Gtk.CheckButton.new()
-            vbox.add(r)
+            w = None
+            if self._multiple_selection:
+                w = Gtk.CheckButton.new()
+            else:
+                w = Gtk.RadioButton.new_from_widget(self._widgets.get(None))
+            self._widgets[val] = w;
+            vbox.add(w)
             l = Gtk.Label(label=name)
             l.set_line_wrap(True)
-            r.add(l)
-            r._changed_id = r.connect('toggled', self._on_check_changed)
-            r._val = val
+            w.add(l)
+            w._changed_id = w.connect('toggled', self._on_toggled)
+            w._val = val
 
         self.widget_for_size_group = None
         self.reload()
@@ -84,24 +92,33 @@ class _XkbOption(Gtk.Expander, Tweak):
         else:
             self.set_label(self.name)
 
-        for r in self._checks.values():
-            r.disconnect(r._changed_id)
-            if r._val in self._values:
-                r.set_active(True)
-            else:
-                r.set_active(False)
-            r._changed_id = r.connect('toggled', self._on_check_changed)
+        def _set_active(w, active):
+            w.disconnect(w._changed_id)
+            w.set_active(active)
+            w._changed_id = w.connect('toggled', self._on_toggled)
 
-    def _on_check_changed(self, r):
-        active = r.get_active()
+        if not self._multiple_selection:
+            if len(self._values) > 0:
+                w = self._widgets.get(self._values[0])
+                if w:
+                    _set_active(w, True)
+        else:
+            for w in self._widgets.values():
+                if w._val in self._values:
+                    _set_active(w, True)
+                else:
+                    _set_active(w, False)
+
+    def _on_toggled(self, w):
+        active = w.get_active()
         if not self._multiple_selection and active:
             for v in self._values:
                 self._parent_settings.setting_remove_from_list(TypingTweakGroup.XKB_GSETTINGS_NAME, v)
 
-        if r._val in self._values and not active:
-            self._parent_settings.setting_remove_from_list(TypingTweakGroup.XKB_GSETTINGS_NAME, r._val)
-        elif active and not r._val in self._values:
-            self._parent_settings.setting_add_to_list(TypingTweakGroup.XKB_GSETTINGS_NAME, r._val)
+        if w._val in self._values and not active:
+            self._parent_settings.setting_remove_from_list(TypingTweakGroup.XKB_GSETTINGS_NAME, w._val)
+        elif active and not w._val in self._values and w._val:
+            self._parent_settings.setting_add_to_list(TypingTweakGroup.XKB_GSETTINGS_NAME, w._val)
 
 class TypingTweakGroup(Gtk.Box, TweakGroup):
 
