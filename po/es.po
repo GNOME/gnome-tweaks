@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-01-25 10:43+0000\n"
-"PO-Revision-Date: 2016-01-25 16:15+0100\n"
+"POT-Creation-Date: 2016-04-20 22:08+0000\n"
+"PO-Revision-Date: 2016-04-21 11:40+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -22,6 +22,7 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Herramienta de retoques de GNOME"
 
@@ -229,88 +230,88 @@ msgstr "Alisado"
 msgid "Scaling Factor"
 msgstr "Factor de escalado"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "Iconos"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "Cursor"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "Tema de la shell"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Instalar un tema personalizado o temas de usuario para GNOME Shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "Error desconocido"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "GNOME Shell no está en ejecución"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr ""
 "Extensión del tema de usuario de GNOME Shell no instalado correctamente"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Extensión del tema de usuario de GNOME Shell no activada"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "No se pudieron listar las extensiones de GNOME Shell"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>Predeterminada</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "Seleccionar un tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Tema %s actualizado correctamente"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Tema %s instalado correctamente"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "Error al instalar el tema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "Tema no válido"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "Tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "Activar animaciones"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Desactivada"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "Escritura"
 
@@ -432,7 +433,6 @@ msgid "When Power Button is Pressed"
 msgstr "Cuando se pulsa el botón de encendido"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
-#| msgid "Applications"
 msgid "Action"
 msgstr "Acción"
 
@@ -627,6 +627,20 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predeterminado)</i>"
 
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "Los cambios en la configuración requieren reiniciar"
+
+#: ../gtweak/utils.py:330
+#| msgid "Applications need to be restarted for change to take effect"
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Se debe reiniciar la sesión para que los cambios tengan efecto"
+
+#: ../gtweak/utils.py:334
+#| msgid "Restart"
+msgid "Restart Session"
+msgstr "Reiniciar la sesión"
+
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Activar el tema oscuro para todas las aplicaciones"
@@ -655,9 +669,6 @@ msgstr "Error la escribir la configuración"
 
 #~ msgid "Window"
 #~ msgstr "Ventana"
-
-#~ msgid "Restart"
-#~ msgstr "Reiniciar"
 
 #~ msgid "Super left"
 #~ msgstr "Súper Izquierda"
