@@ -1,4 +1,4 @@
-AC_INIT([gnome-tweak-tool], [3.20.0], [john.stowers@gmail.com])
+AC_INIT([gnome-tweak-tool], [3.20.1], [john.stowers@gmail.com])
 
 AM_INIT_AUTOMAKE([foreign tar-ustar dist-xz no-dist-gzip])
 
