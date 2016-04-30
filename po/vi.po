@@ -1,34 +1,659 @@
 # Vietnamese translation for gnome-tweak-tool.
-# Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
+# Bản dịch tiếng Việt dành cho gnome-tweak-tool.
+# Copyright (C) 2016 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Lê Trường An <xinemdungkhoc1@gmail.com>, 2011.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2011-04-10 08:05+0000\n"
-"PO-Revision-Date: 2011-04-12 08:53+0700\n"
-"Last-Translator: Lê Trường An <xinemdungkhoc1@gmail.com>\n"
-"Language-Team: Vietnamese <gnomevi-list@lists.sourceforge.net>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-04-29 22:14+0000\n"
+"PO-Revision-Date: 2016-04-30 08:19+0700\n"
+"Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
+"Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
-#: ../data/shell.ui.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../gtweak/utils.py:327
+msgid "GNOME Tweak Tool"
+msgstr "Công cụ tinh chỉnh GNOME"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Tinh chỉnh nâng cao GNOME 3"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
+msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgstr ""
+"Công cụ tinh chỉnh GNOME cho phép bạn chỉnh các tùy chọn GNOME ở mức cao cấp."
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Nó có thể cài và quản lý chủ đề và phần mở rộng, thay đổi các cài đặt nguồn "
+"điện, quản lý các ứng dụng tự chạy, và bật các biểu tượng màn hình nền cùng "
+"các cài đặt khác."
+
+#: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Công cụ tinh chỉnh"
 
+#: ../data/gnome-tweak-tool.desktop.in.h:3
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Settings;Cài đặt;Cai dat;Advanced;Nâng cao; Nang cao;Preferences;Extensions;"
+"Mở rộng;Mo rong;Fonts;Phông chữ; Phong chu;Theme;Chủ đề;Chu de;XKB;Keyboard;"
+"Bàn phím; Ban phim;Typing;Nhập liệu;Nhap lieu;"
+
+#: ../data/shell.ui.h:1
+msgid "_Reset to Defaults"
+msgstr "Đặt thành _mặc định"
+
 #: ../data/shell.ui.h:2
-msgid "tweaks"
-msgstr "tinh chỉnh"
+msgid "Disable All Shell Extensions"
+msgstr "Tắt mọi thành phần mở rộng hệ vỏ"
 
 #: ../data/shell.ui.h:3
-msgid "welcome"
-msgstr "chào mừng"
+msgid "_About"
+msgstr "G_iới thiệu"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Advanced Settings"
-msgstr "Tinh chỉnh các thiết lập nâng cao"
+#: ../data/shell.ui.h:4
+msgid "_Quit"
+msgstr "T_hoát"
 
+#: ../gtweak/app.py:76
+msgid "Reset to Defaults"
+msgstr "Đặt thành mặc định"
+
+#: ../gtweak/app.py:77
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Đặt lại mọi cài đặt tinh chỉnh thành trạng thái mặc định gốc?"
+
+#: ../gtweak/app.py:93
+msgid "About GNOME Tweak Tool"
+msgstr "Giới thiệu về công cụ tinh chỉnh GNOME"
+
+#: ../gtweak/app.py:98
+#, python-format
+msgid "GNOME Shell v%s (%s mode)"
+msgstr "Hệ vỏ GNOME v%s (chế độ %s)"
+
+#: ../gtweak/app.py:100
+msgid "GNOME Shell not running"
+msgstr "Hệ vỏ GNOME không hoạt động"
+
+#: ../gtweak/app.py:105
+msgid "Homepage"
+msgstr "Trang chủ"
+
+#: ../gtweak/tweakmodel.py:28
+msgid "Appearance"
+msgstr "Diện mạo"
+
+#: ../gtweak/tweakmodel.py:29
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
+msgid "Extensions"
+msgstr "Phần mở rộng"
+
+#: ../gtweak/tweakmodel.py:30
+msgid "Fonts"
+msgstr "Phông chữ"
+
+#: ../gtweak/tweakmodel.py:31
+msgid "Power"
+msgstr "Nguồn điện"
+
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
+msgid "Startup Applications"
+msgstr "Ứng dụng khởi động tự động"
+
+#: ../gtweak/tweakmodel.py:33
+msgid "Top Bar"
+msgstr "Thanh đỉnh"
+
+#: ../gtweak/tweakmodel.py:34
+msgid "Windows"
+msgstr "Cửa sổ"
+
+#: ../gtweak/tweakmodel.py:35
+msgid "Workspaces"
+msgstr "Vùng làm việc"
+
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
+msgid "Mouse"
+msgstr "Chuột"
+
+#: ../gtweak/tweakmodel.py:38
+msgid "Files"
+msgstr "Tập tin"
+
+#: ../gtweak/tweakmodel.py:52
+msgid "Miscellaneous"
+msgstr "Linh tinh"
+
+#: ../gtweak/tweakview.py:100
+msgid "Tweaks"
+msgstr "Điều chỉnh"
+
+#: ../gtweak/tweakview.py:116
+msgid "Search Tweaks..."
+msgstr "Tìm các tinh chỉnh…"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:22
+msgid "Icons on Desktop"
+msgstr "Biểu tượng trên màn hình nền"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Desktop"
+msgstr "Màn hình nền"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Computer"
+msgstr "Máy tính"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Home"
+msgstr "Thư mục riêng"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Network Servers"
+msgstr "Máy phục vụ mạng"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Trash"
+msgstr "Thùng rác"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
+msgid "Mounted Volumes"
+msgstr "Các phân vùng đã gắn"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
+msgid "Background"
+msgstr "Nền"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
+#: ../gtweak/tweaks/tweak_group_desktop.py:36
+msgid "Mode"
+msgstr "Chế độ"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Background Location"
+msgstr "Vị trí ảnh nền"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Lock Screen"
+msgstr "Màn hình khóa"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:37
+msgid "Lock Screen Location"
+msgstr "Vị trí màn hình khóa"
+
+#: ../gtweak/tweaks/tweak_group_font.py:25
+msgid "Window Titles"
+msgstr "Tiều đề cửa sổ"
+
+#: ../gtweak/tweaks/tweak_group_font.py:26
+msgid "Interface"
+msgstr "Giao diện"
+
+#: ../gtweak/tweaks/tweak_group_font.py:27
+msgid "Documents"
+msgstr "Tài liệu"
+
+#: ../gtweak/tweaks/tweak_group_font.py:28
+msgid "Monospace"
+msgstr "Monospace"
+
+#: ../gtweak/tweaks/tweak_group_font.py:29
+msgid "Hinting"
+msgstr "Gợi ý"
+
+#: ../gtweak/tweaks/tweak_group_font.py:31
+msgid "Antialiasing"
+msgstr "Khử răng cưa"
+
+#: ../gtweak/tweaks/tweak_group_font.py:33
+msgid "Scaling Factor"
+msgstr "Hệ số co giãn"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:65
+msgid "Icons"
+msgstr "Biểu tượng"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:83
+msgid "Cursor"
+msgstr "Con trỏ"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:110
+msgid "Shell theme"
+msgstr "Chủ đề hệ vỏ"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:110
+msgid "Install custom or user themes for gnome-shell"
+msgstr "Cài các chủ đề tự chọn hay người dùng cho hệ-vỏ-gnome"
+
+#. check the shell is running and the usertheme extension is present
+#: ../gtweak/tweaks/tweak_group_interface.py:113
+msgid "Unknown error"
+msgstr "Lỗi chưa biết"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:118
+msgid "Shell not running"
+msgstr "hệ vỏ không chạy"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:140
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Phần mở rộng chủ đề người dùng hệ vỏ được cài không đúng"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:143
+msgid "Shell user-theme extension not enabled"
+msgstr "Phần mở rộng chủ đề người dùng hệ vỏ không được bật"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:146
+msgid "Could not list shell extensions"
+msgstr "Không thể liệt kê các phần mở rộng hệ vỏ"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:175
+#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+msgid "<i>Default</i>"
+msgstr "<i>Mặc định</i>"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:181
+msgid "Select a theme"
+msgstr "Chọn một sắc thái"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:230
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "Chủ đề %s đã được cập nhật thành công"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:232
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "Chủ đề %s đã được cài thành công"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:240
+msgid "Error installing theme"
+msgstr "Gặp lỗi khi cài đặt chủ đề"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_group_interface.py:245
+msgid "Invalid theme"
+msgstr "Chủ đề không hợp lệ"
+
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: ../gtweak/tweaks/tweak_group_interface.py:261
+msgid "Theme"
+msgstr "Chủ đề"
+
+#: ../gtweak/tweaks/tweak_group_interface.py:266
+msgid "Enable animations"
+msgstr "Bật hoạt hình"
+
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
+#: ../gtweak/tweaks/tweak_group_windows.py:143
+msgid "Disabled"
+msgstr "Tắt"
+
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
+msgid "Typing"
+msgstr "Nhập liệu"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+msgid "Extension downloading"
+msgstr "Tải về phần mở rộng"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+msgid "Error loading extension"
+msgstr "Gặp lỗi khi tải về phần mở rộng"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+msgid "Extension does not support shell version"
+msgstr "Phần mở rộng không hỗ trợ phiên bản của hệ vỏ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+msgid "Unknown extension error"
+msgstr "Lỗi phần mở rộng chưa biết"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_startup.py:229
+msgid "Remove"
+msgstr "Xóa bỏ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+msgid "Uninstall Extension"
+msgstr "Gỡ bỏ phần mở rộng"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
+#, python-format
+msgid "Do you want to uninstall the '%s' extension?"
+msgstr "Bạn có thật sự muốn xóa bỏ phần mở rộng “%s” không?"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+msgid "Updating"
+msgstr "Đang cập nhật"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+msgid "Error"
+msgstr "Lỗi"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+msgid "Update"
+msgstr "Cập nhật"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+msgid "Install Shell Extension"
+msgstr "Cài đặt phần mở rộng hệ vỏ"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
+msgid "Select an extension"
+msgstr "Chọn một phần mở rộng"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+msgid "Get more extensions"
+msgstr "Tìm thêm phần mở rộng"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
+#, python-format
+msgid "%s extension updated successfully"
+msgstr "Phần mở rộng %s đã được cập nhật thành công"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
+#, python-format
+msgid "%s extension installed successfully"
+msgstr "Phần mở rộng %s đã được cài đặt thành công"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
+msgid "Error installing extension"
+msgstr "Cài đặt phần mở rộng gặp lỗi"
+
+#. does not look like a valid theme
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
+msgid "Invalid extension"
+msgstr "Phần mở rộng không hợp lệ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:33
+msgid "Show Application Menu"
+msgstr "Hiển thị trình đơn ứng dụng"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:46
+msgid "Workspace Creation"
+msgstr "Tạo vùng làm việc"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:51
+msgid "Dynamic"
+msgstr "Động"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:51
+msgid "Static"
+msgstr "Tĩnh"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:74
+msgid "Don't suspend on lid close"
+msgstr "Đừng tạm dừng khi lid đóng"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:104
+msgid "Clock"
+msgstr "Đồng hồ"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:105
+msgid "Show date"
+msgstr "Hiện ngày"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:106
+msgid "Show seconds"
+msgstr "Hiển thị giây"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:107
+msgid "Calendar"
+msgstr "Lịch"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:108
+msgid "Show week numbers"
+msgstr "Hiển thị số tuần"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:111
+msgid "When Power Button is Pressed"
+msgstr "Khi nút bật tắt nguồn được ấn"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:112
+msgid "Action"
+msgstr "Hành động"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
+msgid "When Laptop Lid is Closed"
+msgstr "Khi lid máy tính xách tay bị đóng"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:114
+msgid "On Battery Power"
+msgstr "Khi dùng pin"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:115
+msgid "When plugged in"
+msgstr "Ghi cắm nguồn"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:116
+msgid "Suspend even if an external monitor is plugged in"
+msgstr "Ngưng máy ngay cả khi màn hình bên ngoài được cắm vào"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:121
+msgid "Number of Workspaces"
+msgstr "Số vùng làm việc"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:122
+msgid "Workspaces only on primary display"
+msgstr "Vùng làm việc chỉ ở trên màn hình chính"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Ứng dụng"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:48
+msgid "Search Applications..."
+msgstr "Tìm kiếm ứng dụng…"
+
+#. Translators: This is the accelerator for opening the AppChooser search-bar
+#: ../gtweak/tweaks/tweak_group_startup.py:56
+msgid "<primary>f"
+msgstr "<chính>f"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:75
+msgid "running"
+msgstr "đang chạy"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:85
+msgid "_Close"
+msgstr "Đó_ng"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:86
+msgid "_Add"
+msgstr "Thê_m"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:253
+msgid "New startup application"
+msgstr "Thêm ứng dụng tự khởi động"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:254
+msgid "Add a new application to be run at startup"
+msgstr "Thêm ứng dụng sẽ khởi động cùng hệ điều hành"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Window scaling"
+msgstr "Tỷ lệ cửa sổ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:67
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "Điều chỉnh hệ số tỷ lệ cửa sổ GDK cho HiDPI"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:95
+#, python-format
+msgid "Settings will be reverted in %d second"
+msgid_plural "Settings will be reverted in %d seconds"
+msgstr[0] "Cài đặt sẽ được hoàn nguyên trong %d giây"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:111
+msgid "Do you want to keep these HiDPI settings?"
+msgstr "Bạn có muốn giữ những các cài đặt HiDPI này không?"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:118
+msgid "Revert Settings"
+msgstr "Phục hồi lại các cài đặt"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:119
+msgid "Keep Changes"
+msgstr "Giữ các thay đổi"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:137
+msgid "Attached Modal Dialogs"
+msgstr "Hộp thoại modal tách rời"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:138
+msgid "Automatically Raise Windows"
+msgstr "Tự động nâng cửa sổ lên"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:139
+msgid "Resize with Secondary-click"
+msgstr "Đổi cỡ với cú bấm chuột phải"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:140
+msgid "Window Action Key"
+msgstr "Phím thao tác cửa sổ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:144
+msgid "Focus Mode"
+msgstr "Chế độ đưa vào tầm ngắm"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:145
+msgid "Titlebar Actions"
+msgstr "Thao tác thanh tiêu đề"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:146
+msgid "Double-click"
+msgstr "Bấm đúp chuột"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:147
+msgid "Middle-click"
+msgstr "Bấm chuột giữa"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:148
+msgid "Secondary-click"
+msgstr "Bấm chuột phải"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:149
+msgid "Titlebar Buttons"
+msgstr "Các nút trên thanh tiêu đề"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:150
+msgid "Maximize"
+msgstr "Phóng to cửa sổ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:151
+msgid "Minimize"
+msgstr "Thu nhỏ cửa sổ"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:152
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:29
+msgid "Middle-click Paste"
+msgstr "Dán bằng nút giữa"
+
+#. Translators: This setting refers to a set of pre-defined key bindings
+#: ../gtweak/tweaks/tweak_group_keymouse.py:41
+msgid "Key theme"
+msgstr "Chủ đề phím"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+msgid "Keyboard and Mouse"
+msgstr "Bàn phím và Chuột"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+msgid "Show All Input Sources"
+msgstr "Hiển thị mọi đầu vào"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+msgid "Switch between overview and desktop"
+msgstr "Chuyển giữa tổng quan và màn hình nền"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+msgid "Left super"
+msgstr "Phím Win trái"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+msgid "Right super"
+msgstr "Phím Win phải"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Show location of pointer"
+msgstr "Hiển thị vị trí của con trỏ"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+msgid "Touchpad"
+msgstr "Touchpad"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+msgid "Click method"
+msgstr "Phương thức bấm"
+
+#: ../gtweak/tweaks/tweak_wacom.py:29
+msgid "Device"
+msgstr "Thiết bị"
+
+#: ../gtweak/tweaks/tweak_wacom.py:38
+msgid "Wacom"
+msgstr "Bảng vẽ Wacom"
+
+#. indicates the default theme, e.g Adwaita (default)
+#: ../gtweak/utils.py:72
+#, python-format
+msgid "%s <i>(default)</i>"
+msgstr "%s <i>(mặc định)</i>"
+
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "Các thay đổi cấu hình cần khởi động lại"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Phiên làm việc của bạn cần khởi động lại để các cài đặt có hiệu lực"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "Khởi động lại phiên làm việc"
+
+#: ../gtweak/widgets.py:476
+msgid "Enable dark theme for all applications"
+msgstr "Bật chủ đề tối cho mọi ứng dụng"
+
+#: ../gtweak/widgets.py:477
+msgid "Enable the dark theme hint for all the applications in the session"
+msgstr "Bật gợi ý chủ đề tối cho mọi ứng dụng trong phiên"
+
+#: ../gtweak/widgets.py:485
+msgid "Global Dark Theme"
+msgstr "Chủ đề tối toàn cục"
+
+#: ../gtweak/widgets.py:486
+msgid "Applications need to be restarted for change to take effect"
+msgstr "Ứng dùng cần phải khởi động lại thì các thay đổi mới có hiệu lực"
+
+#: ../gtweak/widgets.py:512
+msgid "Error writing setting"
+msgstr "Gặp lỗi khi ghi cài đặt"
+
+#~ msgid "welcome"
+#~ msgstr "chào mừng"
