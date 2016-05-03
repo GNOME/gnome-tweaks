@@ -8,10 +8,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-01-22 17:19+0000\n"
-"PO-Revision-Date: 2016-03-12 11:53+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-04-18 22:11+0000\n"
+"PO-Revision-Date: 2016-04-20 04:21+0900\n"
+"Last-Translator: sujiniku <sujinikusityuu@gmail.com>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME Tweak Tool"
 
@@ -30,19 +32,29 @@ msgstr "GNOME 3 の高度な設定"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
-msgstr "GNOME Tweak Tool は GNOME の詳細なオプションを調整するためのツールです。"
+msgstr ""
+"GNOME Tweak Tool は GNOME の詳細なオプションを調整するためのツールです。"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:4
-msgid "It can install and manage themes and extensions, change power settings, manage startup applications, and enable desktop icons among other settings."
-msgstr "このツールを使うと、テーマや拡張機能のインストールと管理、また電源設定の変更や、スタートアップアプリケーションの管理、デスクトップアイコンの設定、その他さまざまな設定を行うことができます。"
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"このツールを使うと、テーマや拡張機能のインストールと管理、また電源設定の変更"
+"や、スタートアップアプリケーションの管理、デスクトップアイコンの設定、その他"
+"さまざまな設定を行うことができます。"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Tweak Tool"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;設定;高度;拡張機能;フォント;テーマ;キーボード;タイピング;customize;カスタマイズ;addon;addin;アドオン;アドイン;gnomeshell;TweakTool;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;設"
+"定;高度;拡張機能;フォント;テーマ;キーボード;タイピング;customize;カスタマイ"
+"ズ;addon;addin;アドオン;アドイン;gnomeshell;TweakTool;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -66,7 +78,8 @@ msgstr "デフォルト設定に戻す"
 
 #: ../gtweak/app.py:77
 msgid "Reset all tweak settings to the original default state?"
-msgstr "Tweak Tool で変更したすべての設定を、オリジナルのデフォルト値に戻しますか。"
+msgstr ""
+"Tweak Tool で変更したすべての設定を、オリジナルのデフォルト値に戻しますか。"
 
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
@@ -215,87 +228,87 @@ msgstr "アンチエイリアス"
 msgid "Scaling Factor"
 msgstr "倍率"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "アイコン"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "カーソル"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "GNOME Shell テーマ"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "GNOME Shellのカスタムテーマやユーザーテーマをインストールします"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "原因不明のエラー"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "GNOME Shell が起動していません"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "GNOME Shell ユーザーテーマ拡張機能が正しくインストールされていません"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "GNOME Shell ユーザーテーマ拡張機能が有効ではありません"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "Shell 拡張機能を一覧表示できません"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>デフォルト</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "テーマを選択"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s のテーマの更新に成功"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s のテーマのインストールに成功"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "テーマのインストールに失敗"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "無効なテーマ"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "テーマ"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "アニメーションを有効にする"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "無効"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "タイピング"
 
@@ -610,6 +623,18 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(デフォルト)</i>"
 
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "設定を変更するには再起動が必要です"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "設定内容を反映させるにはセッションを再起動する必要があります"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "セッションを再起動"
+
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "すべてのアプリケーションでダークテーマを使用する"
@@ -624,7 +649,9 @@ msgstr "グローバルダークテーマ"
 
 #: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
-msgstr "アプリケーション上に変更を反映させるには、そのアプリケーションを再起動する必要があります"
+msgstr ""
+"アプリケーション上に変更を反映させるには、そのアプリケーションを再起動する必"
+"要があります"
 
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
@@ -644,9 +671,6 @@ msgstr "設定変更時にエラー"
 
 #~ msgid "Window"
 #~ msgstr "ウィンドウ"
-
-#~ msgid "Restart"
-#~ msgstr "再起動"
 
 #~ msgid "_Help"
 #~ msgstr "ヘルプ(_H)"
