@@ -105,7 +105,7 @@ TWEAK_GROUPS = [
         GSettingsCheckTweak(_("Show date"),"org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
         GSettingsCheckTweak(_("Show seconds"), "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
         Title(_("Calendar"),""),
-        GSettingsCheckTweak(_("Show week numbers"),"org.gnome.shell.calendar", "show-weekdate", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
+        GSettingsCheckTweak(_("Show week numbers"),"org.gnome.desktop.calendar", "show-weekdate", schema_filename="org.gnome.desktop.calendar.gschema.xml"),
     ),
     ListBoxTweakGroup(TWEAK_GROUP_POWER,
         Title(_("When Power Button is Pressed"), "", uid="title-theme"),
