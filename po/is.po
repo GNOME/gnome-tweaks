@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sv1@fellsnet.is>, 2015.
+# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-19 09:09+0000\n"
-"PO-Revision-Date: 2015-10-20 12:37+0000\n"
+"POT-Creation-Date: 2016-05-05 10:25+0000\n"
+"PO-Revision-Date: 2016-05-15 10:56+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "Language: is\n"
@@ -18,13 +18,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../gtweak/utils.py:327
+msgid "GNOME Tweak Tool"
+msgstr "GNOME sérbreytingatólið"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.desktop.in.h:2
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Sýsla með ítarlegri GNOME 3 stillingar"
+
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgstr ""
 "GNOME sérbreytingatólið (Tweak Tool) auðveldar ítarlegar breytingar á GNOME "
 "stillingum."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -35,10 +45,6 @@ msgstr ""
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
 msgstr "Sérbreytingatól"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Sýsla með ítarlegri GNOME 3 stillingar"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
 msgid ""
@@ -74,10 +80,6 @@ msgstr "Viltu breyta öllum stillingum í sín upprunalegu gildi?"
 #: ../gtweak/app.py:93
 msgid "About GNOME Tweak Tool"
 msgstr "Um GNOME Tweak Tool"
-
-#: ../gtweak/app.py:94
-msgid "GNOME Tweak Tool"
-msgstr "GNOME sérbreytingatólið"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -222,87 +224,87 @@ msgstr "Afstöllun"
 msgid "Scaling Factor"
 msgstr "Kvörðunargildi"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "Táknmyndir"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "Bendill"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "Skeljar þema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Setja inn sérsniðin eða notendaþemu fyrir gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "Óþekkt villa"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "Skel er ekki í gangi"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Viðbótin user-theme fyrir gnome-shell er ekki rétt uppsett"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Viðbótin user-theme fyrir gnome-shell er ekki virkjuð"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "Gat ekki útbúið lista yfir skeljarviðbætur"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>Sjálfgefið</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "Veldu þema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Uppfærslu %s þema lokið"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Uppsetningu %s þema lokið"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "Villa við að setja upp þema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "Ógilt þema"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "Þema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "Virkja hreyfimyndir"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:51
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Óvirkt"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:134
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "Innsláttur"
 
@@ -420,30 +422,35 @@ msgid "Show week numbers"
 msgstr "Sýna vikunúmer"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "Power Button Action"
-msgstr "Virkni aflhnapps"
+msgid "When Power Button is Pressed"
+msgstr "Þegar ýtt er á aflhnapp"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
+#| msgid "Applications"
+msgid "Action"
+msgstr "Aðgerð"
+
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "When Laptop Lid is Closed"
 msgstr "Þegar fartölvu er lokað"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "On Battery Power"
 msgstr "Þegar tölvan gengur á rafhlöðu"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "When plugged in"
 msgstr "Þegar tölvan er í sambandi"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Svæfa tölvu þótt annar skjár sé tengdur"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:120
+#: ../gtweak/tweaks/tweak_group_shell.py:121
 msgid "Number of Workspaces"
 msgstr "Fjöldi vinnusvæða"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Workspaces only on primary display"
 msgstr "Vinnusvæði eingöngu á aðalskjá"
 
@@ -609,28 +616,44 @@ msgid "Wacom"
 msgstr "Wacom teiknitafla"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:70
+#: ../gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(sjálfgefið)</i>"
 
-#: ../gtweak/widgets.py:475
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "Breytingar á stillingum krefjast endurræsingar"
+
+#: ../gtweak/utils.py:330
+#| msgid "Applications need to be restarted for change to take effect"
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Endurræsa þarf setuna svo breytingarnar taki gildi"
+
+#: ../gtweak/utils.py:334
+#| msgid "Revert Settings"
+msgid "Restart Session"
+msgstr "Endurræsa setu"
+
+#: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "Virkja dökkt þema fyrir öll forrit"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Virkja vísbendingar með dökkt þema fyrir öll forrit í setunni"
 
-#: ../gtweak/widgets.py:484
+#: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
 msgstr "Víðvært dökkt þema"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
 msgstr "Endurræsa þarf forrit svo að breytingar taki gildi"
 
-#: ../gtweak/widgets.py:511
+#: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Villa við að skrifa stillingar"
 
+#~ msgid "Power Button Action"
+#~ msgstr "Virkni aflhnapps"
