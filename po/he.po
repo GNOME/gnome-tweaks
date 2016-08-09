@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-02 13:41+0200\n"
-"PO-Revision-Date: 2016-03-02 13:42+0200\n"
+"POT-Creation-Date: 2016-08-09 18:54+0300\n"
+"PO-Revision-Date: 2016-08-09 18:56+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
@@ -23,6 +23,7 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.6\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "כלי התאמת GNOME"
 
@@ -223,87 +224,87 @@ msgstr "החלקה"
 msgid "Scaling Factor"
 msgstr "גורם קנה מידה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "סמלילים"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "סמן"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "ערכת מעטפת"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "התקנה מותאמת אישית של ערכות נושא עבור gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "שגיאה בלתי ידועה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "המעטפת אינה רצה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "הרחבת ערכת נושא המשתמש של המעטפת לא הותקנה כראוי"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "הרחבת ערכת נושא המשתמש של המעטפת לא הופעלה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "לא ניתן להציג את הרחבות המעטפת"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "בררת מחדל"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "נא לבחור בערכת נושא"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "ערכת הנושא %s עודכנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "ערכת הנושא %s הותקנה בהצלחה"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "התקנת ערכת הנושא נכשלה"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "ערכת נושא שגויה"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "ערכת עיצוב"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "לאפשר הנפשות"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "השבתה"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "הקלדה"
 
@@ -620,6 +621,18 @@ msgstr "מגע"
 msgid "%s <i>(default)</i>"
 msgstr "%s (בררת מחדל)"
 
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "ההגדרות ששונו דורשות הפעלה מחדש"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "יש להפעיל מחדש את ההפעלה על מנת שההגדרות תכנסנה לתוקף"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "הפעלה מחדש"
+
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "אפשור ערכת נושא כהה עבור כל היישומים"
@@ -648,9 +661,6 @@ msgstr "כתיבת ההגדרה נכשלה"
 
 #~ msgid "Window"
 #~ msgstr "חלון"
-
-#~ msgid "Restart"
-#~ msgstr "הפעלה מחדש"
 
 #~ msgid "Super left"
 #~ msgstr "‏Suprt שמאלי"
