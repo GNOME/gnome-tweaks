@@ -69,6 +69,10 @@ TWEAK_GROUPS = [
                               [("Super_L", _("Left super")), ("Super_R", _("Right super"))]),
               
         Title(_("Mouse"), ""),
+        GSettingsComboEnumTweak(_("Acceleration profile"),
+                                "org.gnome.desktop.peripherals.mouse",
+                                "accel-profile",
+                                schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
         GSettingsSwitchTweak(_("Show location of pointer"),
                              "org.gnome.settings-daemon.peripherals.mouse", 
                              "locate-pointer", 
