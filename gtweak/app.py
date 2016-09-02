@@ -19,6 +19,7 @@ import os.path
 
 from gi.repository import Gtk
 from gi.repository import Gio
+from gi.repository import GLib
 
 import gtweak 
 from gtweak.tweakmodel import TweakModel
@@ -30,6 +31,7 @@ from gtweak.utils import DisableExtension
 class GnomeTweakTool(Gtk.Application):
 
     def __init__(self):
+        GLib.set_application_name(_("GNOME Tweak Tool"))
         Gtk.Application.__init__(self,application_id="org.gnome.TweakTool")
         self.win = None
 
@@ -90,8 +92,6 @@ class GnomeTweakTool(Gtk.Application):
 
     def about_cb(self, action, parameter):
         aboutdialog = Gtk.AboutDialog()
-        aboutdialog.set_title(_("About GNOME Tweak Tool"))
-        aboutdialog.set_program_name(_("GNOME Tweak Tool"))
 
         _shell = GnomeShellFactory().get_shell()
         if _shell is not None:
