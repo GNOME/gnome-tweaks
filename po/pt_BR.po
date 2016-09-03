@@ -13,19 +13,19 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-04-10 10:07+0000\n"
-"PO-Revision-Date: 2016-04-10 10:29-0200\n"
-"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
+"POT-Creation-Date: 2016-09-02 13:46+0000\n"
+"PO-Revision-Date: 2016-09-02 21:13-0300\n"
+"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 1.8.7\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Ferramenta de ajustes do GNOME"
@@ -58,8 +58,8 @@ msgstr "Ferramenta de ajustes"
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Configurações;Avançado;Preferências;Extensões;Fontes;Tema;XKB;Teclado;Digita"
-"ção;"
+"Configurações;Avançado;Preferências;Extensões;Fontes;Tema;XKB;Teclado;"
+"Digitação;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -77,18 +77,14 @@ msgstr "_Sobre"
 msgid "_Quit"
 msgstr "_Sair"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Restaurar padrões"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Restaurar todos os ajustes de configurações para o estado original padrão?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "Sobre a ferramenta de ajustes do GNOME"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -308,12 +304,12 @@ msgstr "Tema"
 msgid "Enable animations"
 msgstr "Habilitar animações"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Desabilitado"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "Digitação"
 
@@ -604,14 +600,18 @@ msgid "Right super"
 msgstr "Super direito"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "Perfil de aceleração"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "Mostrar localização do ponteiro"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Método de clique"
 
@@ -634,13 +634,11 @@ msgid "Configuration changes require restart"
 msgstr "Alterações de configuração requerem reinício"
 
 #: ../gtweak/utils.py:330
-#| msgid "Applications need to be restarted for change to take effect"
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Sua sessão precisa ser reiniciada para que as configurações tenham efeito"
 
 #: ../gtweak/utils.py:334
-#| msgid "Restart"
 msgid "Restart Session"
 msgstr "Reiniciar sessão"
 
@@ -665,6 +663,9 @@ msgstr ""
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Erro ao gravar configuração"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "Sobre a ferramenta de ajustes do GNOME"
 
 #~ msgid "Power Button Action"
 #~ msgstr "Ação do botão de energia"
