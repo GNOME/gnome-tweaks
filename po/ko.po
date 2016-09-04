@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-03-01 10:47+0000\n"
-"PO-Revision-Date: 2016-03-02 02:44+0900\n"
+"POT-Creation-Date: 2016-09-04 01:48+0900\n"
+"PO-Revision-Date: 2016-09-04 01:49+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: 한국어 <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -17,16 +17,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 1.8.7\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "그놈 기능 개선 도구"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:2
 #: ../data/gnome-tweak-tool.desktop.in.h:2
 msgid "Tweak advanced GNOME 3 settings"
-msgstr "고급 기능 개선 GNOME 3 설정"
+msgstr "고급 기능 개선 그놈 3 설정"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
@@ -37,8 +38,8 @@ msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
 msgstr ""
-"여러가지 설정 항목 중 테마와 확장자 설치 및 관리, 전원 설정 관리, 시작 프로그"
-"램 관리, 데스크톱 아이콘 활성화 관리를 다룰 수 있습니다."
+"여러가지 설정 항목 중 테마와 확장자 설치 및 관리, 전원 설정 관리, 시작 프로"
+"그램 관리, 데스크톱 아이콘 활성화 관리를 다룰 수 있습니다."
 
 #: ../data/gnome-tweak-tool.desktop.in.h:1
 msgid "Tweak Tool"
@@ -48,8 +49,8 @@ msgstr "기능 개선 도구"
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Settings;설정;Advanced;고급;Preferences;기본 설정;Extensions;확장;Fonts;글꼴;"
-"Theme;테마;XKB;Keyboard;키보드;Typing;입력;"
+"Settings;설정;Advanced;고급;Preferences;기본 설정;Extensions;확장;Fonts;글"
+"꼴;Theme;테마;XKB;Keyboard;키보드;Typing;입력;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -67,17 +68,13 @@ msgstr "정보(_A)"
 msgid "_Quit"
 msgstr "끝내기(_Q)"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "기본값으로 재설정"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "모든 기능 개선 설정을 초기 기본 상태로 되돌리시겠습니까?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "그놈 기능 개선 도구 정보"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -222,87 +219,87 @@ msgstr "안티알리아싱"
 msgid "Scaling Factor"
 msgstr "스케일 상수"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "아이콘"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "커서"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "쉘 테마"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "그놈 쉘용 사용자 정의 테마 또는 사용자 테마를 설치합니다"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "알 수 없는 오류"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "쉘 실행 중이 아닙니다"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "쉘 사용자 테마 확장을 설치하지 못했습니다"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "쉘 사용자 테마 확장을 활성화할 수 없습니다"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "쉘 확장 항목을 표시할 수 없습니다"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>기본</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "테마를 선택하십시오"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s 테마를 성공적으로 업데이트했습니다"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s 테마를 성공적으로 설치했습니다"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "테마를 설치하는 중 오류 발생"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "잘못된 테마"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "테마"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "애니메이션 활성화"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "사용 안함"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "입력"
 
@@ -592,14 +589,18 @@ msgid "Right super"
 msgstr "오른쪽 super 키"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "가속 프로파일"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "포인터 위치 표시"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "터치패드"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "누르기 방식"
 
@@ -616,6 +617,18 @@ msgstr "와콤"
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(기본)</i>"
+
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "설정을 바꾸면 다시 시작해야 함"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "바뀐 설정대로 프로그램이 동작하려면 세션을 다시 시작해야합니다"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "세션 다시 시작"
 
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
@@ -637,3 +650,5 @@ msgstr "바뀐 설정을 적용하려면 프로그램을 다시 시작해야 합
 msgid "Error writing setting"
 msgstr "설정 기록 중 오류가 있습니다"
 
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "그놈 기능 개선 도구 정보"
