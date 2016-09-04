@@ -18,8 +18,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-05-05 10:25+0000\n"
-"PO-Revision-Date: 2016-05-20 22:05+0300\n"
+"POT-Creation-Date: 2016-09-02 13:46+0000\n"
+"PO-Revision-Date: 2016-09-04 23:33+0300\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -30,7 +30,7 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.7\n"
 "X-POOTLE-MTIME: 1420705374.000000\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME İnce Ayar Aracı"
@@ -80,17 +80,13 @@ msgstr "_Hakkında"
 msgid "_Quit"
 msgstr "_Çıkış"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Öntanımlı Değerlere Sıfırla"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Tüm ince ayarlar öntanımlı hallerine getirilsin mi?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "GNOME İnce Ayar Aracı Hakkında"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -605,14 +601,18 @@ msgid "Right super"
 msgstr "Sağ süper"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "Hızlandırma profili"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "İşaretçi konumunu göster"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Tıklama yöntemi"
 
@@ -635,13 +635,11 @@ msgid "Configuration changes require restart"
 msgstr "Yapılandırma değişiklikleri yeniden başlatmayı gerektirir"
 
 #: ../gtweak/utils.py:330
-#| msgid "Applications need to be restarted for change to take effect"
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Ayarların etkili olması için oturumunuzun yeniden başlatılması gerekiyor"
 
 #: ../gtweak/utils.py:334
-#| msgid "Restart"
 msgid "Restart Session"
 msgstr "Oturumu Yeniden Başlat"
 
@@ -666,6 +664,9 @@ msgstr ""
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Ayar kaydedilirken hata"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "GNOME İnce Ayar Aracı Hakkında"
 
 #~ msgid "Power Button Action"
 #~ msgstr "Güç Düğmesi Eylemi"
