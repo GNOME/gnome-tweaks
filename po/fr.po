@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-05-05 10:25+0000\n"
-"PO-Revision-Date: 2016-08-22 11:07+0200\n"
+"POT-Creation-Date: 2016-09-02 13:46+0000\n"
+"PO-Revision-Date: 2016-09-03 23:44+0200\n"
 "Last-Translator: Laurent de Burlet <thevedeburlet@gmail.com>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -19,9 +19,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.8\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Outil de personnalisation de GNOME"
@@ -70,17 +70,13 @@ msgstr "À _propos"
 msgid "_Quit"
 msgstr "_Quitter"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Réinitialiser"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Réinitialiser tous les réglages à leur valeur d'origine ?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "À propos de l'outil de personnalisation de GNOME"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -601,14 +597,18 @@ msgid "Right super"
 msgstr "Logo droite"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "Profil d'accélération"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "Montrer l'emplacement du pointeur"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Pavé tactile"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Méthode de clic"
 
@@ -633,7 +633,8 @@ msgstr "Les changements de configuration nécessitent un redémarrage"
 #: ../gtweak/utils.py:330
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
-"Votre session doit être relancée pour que les modifications soient prises en compte"
+"Votre session doit être relancée pour que les modifications soient prises en "
+"compte"
 
 #: ../gtweak/utils.py:334
 msgid "Restart Session"
@@ -659,6 +660,9 @@ msgstr ""
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Erreur à l'écriture du réglage"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "À propos de l'outil de personnalisation de GNOME"
 
 #~ msgid "Power Button Action"
 #~ msgstr "Action du bouton d'alimentation"
