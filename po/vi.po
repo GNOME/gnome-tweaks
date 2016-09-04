@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-04-29 22:14+0000\n"
-"PO-Revision-Date: 2016-04-30 08:19+0700\n"
+"POT-Creation-Date: 2016-09-04 05:55+0000\n"
+"PO-Revision-Date: 2016-09-04 15:06+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Gtranslator 2.91.7\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Công cụ tinh chỉnh GNOME"
@@ -53,9 +53,9 @@ msgstr "Công cụ tinh chỉnh"
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Settings;Cài đặt;Cai dat;Advanced;Nâng cao; Nang cao;Preferences;Extensions;"
-"Mở rộng;Mo rong;Fonts;Phông chữ; Phong chu;Theme;Chủ đề;Chu de;XKB;Keyboard;"
-"Bàn phím; Ban phim;Typing;Nhập liệu;Nhap lieu;"
+"Settings;Cài đặt;Cai dat;Advanced;Nâng cao;Nang cao;Preferences;Extensions;"
+"Mở rộng;Mo rong;Fonts;Phông chữ;Phong chu;Theme;Chủ đề;Chu de;XKB;Keyboard;"
+"Bàn phím;Ban phim;Typing;Nhập liệu;Nhap lieu;"
 
 #: ../data/shell.ui.h:1
 msgid "_Reset to Defaults"
@@ -73,17 +73,13 @@ msgstr "G_iới thiệu"
 msgid "_Quit"
 msgstr "T_hoát"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Đặt thành mặc định"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Đặt lại mọi cài đặt tinh chỉnh thành trạng thái mặc định gốc?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "Giới thiệu về công cụ tinh chỉnh GNOME"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -598,14 +594,18 @@ msgid "Right super"
 msgstr "Phím Win phải"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "Hồ sơ phím tăng tốc"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "Hiển thị vị trí của con trỏ"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Phương thức bấm"
 
@@ -653,7 +653,10 @@ msgstr "Ứng dùng cần phải khởi động lại thì các thay đổi mớ
 
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
-msgstr "Gặp lỗi khi ghi cài đặt"
+msgstr "Gặp lỗi khi lưu cài đặt"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "Giới thiệu về công cụ tinh chỉnh GNOME"
 
 #~ msgid "welcome"
 #~ msgstr "chào mừng"
