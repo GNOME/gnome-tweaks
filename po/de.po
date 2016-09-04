@@ -14,8 +14,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-04-09 14:32+0000\n"
-"PO-Revision-Date: 2016-04-09 20:39+0200\n"
+"POT-Creation-Date: 2016-09-02 13:46+0000\n"
+"PO-Revision-Date: 2016-09-02 21:54+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -23,9 +23,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.8\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME-Optimierungswerkzeug"
@@ -77,19 +77,15 @@ msgstr "_Info"
 msgid "_Quit"
 msgstr "_Beenden"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Auf Voreinstellungen zurücksetzen"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Sollen alle Optimierungs-Einstellungen in den ursprünglichen "
 "voreingestellten Zustand zurückgesetzt werden?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "Info zu GNOME-Optimierungswerkzeug"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -311,12 +307,12 @@ msgstr "Thema"
 msgid "Enable animations"
 msgstr "Animationen aktivieren"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Deaktiviert"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "Eingabe"
 
@@ -609,14 +605,18 @@ msgid "Right super"
 msgstr "Super rechts"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "Beschleunigungsprofil"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "Ort des Zeigers anzeigen"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Tastfeld"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Klickmethode"
 
@@ -668,6 +668,9 @@ msgstr ""
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Fehler beim Festlegen"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "Info zu GNOME-Optimierungswerkzeug"
 
 #~ msgid "Power Button Action"
 #~ msgstr "Wirkweise des Einschaltknopfs"
