@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-05 07:07+0300\n"
-"PO-Revision-Date: 2016-04-05 07:07+0300\n"
+"POT-Creation-Date: 2016-09-08 06:31+0300\n"
+"PO-Revision-Date: 2016-09-05 14:02+0300\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -19,7 +19,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Натаманяване на GNOME"
 
@@ -71,18 +72,14 @@ msgstr "_Относно"
 msgid "_Quit"
 msgstr "_Спиране на програмата"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Връщане на стандартните настройки"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Да се върнат ли всички „натаманени“ настройки на стандартните си стойности?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "Относно „Натаманяване на GNOME“"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -302,12 +299,12 @@ msgstr "Тема"
 msgid "Enable animations"
 msgstr "Анимации"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Изключени"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "Клавиатура"
 
@@ -603,14 +600,18 @@ msgid "Right super"
 msgstr "Десен Super"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "Профил на ускорението"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "Показване на местоположението на показалеца"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Сензорен панел"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Начин на натискане"
 
@@ -627,6 +628,18 @@ msgstr "Wacom"
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "„%s“ <i>стандартно</i>"
+
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "Промяната на настройките изисква рестартиране"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Промените ще влязат в сила след рестартирането на сесията"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "Рестартиране на сесията"
 
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
