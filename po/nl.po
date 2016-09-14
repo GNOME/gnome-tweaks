@@ -6,23 +6,25 @@
 # Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2014, 2015, 2016.
 # Wouter Bolsterlee <wbolster@gnome.org>, 2014.
 # Justin van Steijn <justin50@live.nl>, 2016.
+# Nathan Follens <nthn@unseen.is>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-02-22 22:47+0000\n"
-"PO-Revision-Date: 2016-03-04 09:37+0100\n"
-"Last-Translator: Hannie Dumoleyn <hannie@ubuntu-nl.org>\n"
+"POT-Creation-Date: 2016-09-02 13:46+0000\n"
+"PO-Revision-Date: 2016-06-22 15:04+0200\n"
+"Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Poedit 1.8.5\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Gnome Afstelhulp"
 
@@ -71,17 +73,13 @@ msgstr "_Info"
 msgid "_Quit"
 msgstr "_Afsluiten"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Terug naar standaardinstellingen"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Alle afstellingen terugzetten naar de standaardinstellingen?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "Info over Gnome Afstelhulp"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -227,88 +225,88 @@ msgstr "Anti-aliasing"
 msgid "Scaling Factor"
 msgstr "Schaalfactor"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "Pictogrammen"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "Cursor"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "Shell-thema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Zelfgemaakte of gebruikersthema's voor Gnome-shell installeren"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "Onbekende fout"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "Shell draait niet"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr ""
 "Shell-uitbreiding ‘user-theme’ (gebruikersthema) is onjuist geïnstalleerd"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell-uitbreiding ‘user-theme’ (gebruikersthema) is uitgeschakeld"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "Tonen van shell-uitbreidingen is mislukt"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>Standaard</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "Een thema selecteren"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s-thema is met succes bijgewerkt"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s-thema is geïnstalleerd"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "Installeren thema is mislukt"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "Ongeldig thema"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "Thema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "Animaties gebruiken"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Uitgeschakeld"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "Typen"
 
@@ -599,14 +597,18 @@ msgid "Right super"
 msgstr "Rechter super"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr ""
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "Locatie muiscursor"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Klikmethode"
 
@@ -623,6 +625,18 @@ msgstr "Wacom"
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standaard)</i>"
+
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "Wijzigingen in de configuratie vereisen een herstart"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Uw sessie moet opnieuw gestart worden om de wijzigingen te activeren"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "Sessie herstarten"
 
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
@@ -645,4 +659,5 @@ msgstr ""
 msgid "Error writing setting"
 msgstr "Opslaan instelling is mislukt"
 
-
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "Info over Gnome Afstelhulp"
