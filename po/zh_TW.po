@@ -9,18 +9,19 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool 3.1.90\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-02-09 10:45+0000\n"
-"PO-Revision-Date: 2016-02-13 12:37+0800\n"
-"Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
+"POT-Creation-Date: 2016-09-02 13:46+0000\n"
+"PO-Revision-Date: 2016-10-09 20:58+0800\n"
+"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@lists.linux.org.tw>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.8\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME 調校工具"
 
@@ -68,17 +69,13 @@ msgstr "關於(_A)"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "重設回預設值"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "是否要將所有的調校設定值重設回原始預設狀態？"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "關於 GNOME 調校工具"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -223,87 +220,87 @@ msgstr "防鋸齒"
 msgid "Scaling Factor"
 msgstr "縮放係數"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "圖示"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "游標"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "Shell 主題"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "為 gnome-shell 安裝自訂主題或使用者主題"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "未知錯誤"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "Shell 不在執行中"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Shell 使用者主題擴充功能安裝不正確"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell 使用者主題擴充功能未啟用"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "無法列出 Shell 擴充功能"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>預設</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "選取主題"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s 主題成功更新"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s 主題成功安裝"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "安裝主題時發生錯誤"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "無效的主題"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "佈景主題"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "啟用動畫"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "已停用"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "輸入"
 
@@ -593,14 +590,18 @@ msgid "Right super"
 msgstr "右 Super 鍵"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "加速度個人設定"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "顯示指標的位置"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "觸控板"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "點擊方法"
 
@@ -618,13 +619,25 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(預設)</i>"
 
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "組態設定已變更，需要重新啟動"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "您的作業階段需要重新啟動才能套用效果"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "重新啟動作業階段"
+
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
 msgstr "為所有應用程式啟用深黑主題"
 
 #: ../gtweak/widgets.py:477
 msgid "Enable the dark theme hint for all the applications in the session"
-msgstr "為工作階段中的所有應用程式啟用深黑主題指示"
+msgstr "為作業階段中的所有應用程式啟用深黑主題指示"
 
 #: ../gtweak/widgets.py:485
 msgid "Global Dark Theme"
@@ -638,6 +651,9 @@ msgstr "應用程式需要重新啟動才能套用效果"
 msgid "Error writing setting"
 msgstr "寫入設定值時發生錯誤"
 
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "關於 GNOME 調校工具"
+
 #~ msgid "Power Button Action"
 #~ msgstr "電源按鈕動作"
 
@@ -646,9 +662,6 @@ msgstr "寫入設定值時發生錯誤"
 
 #~ msgid "Window"
 #~ msgstr "視窗"
-
-#~ msgid "Restart"
-#~ msgstr "重新啟動"
 
 #~ msgid "Super left"
 #~ msgstr "Super 左鍵"
