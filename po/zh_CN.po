@@ -6,27 +6,28 @@
 # Aron Xu <aronxu@gnome.org>, 2011.
 # Cheng Lu <chenglu1990@gmail.com>, 2012.
 # tuhaihe <1132321739qq@gmail.com>, 2012, 2013.
-# Dingzhong Chen <wsxy162@gmail.com>, 2015.
 # YunQiang Su <wzssyqa@gmail.com>, 2014, 2015.
-# Jeff Bai <jeffbai@aosc.xyz>, 2015.
+# Jeff Bai <jeffbai@aosc.xyz>, 2015, 2016.
+# Dingzhong Chen <wsxy162@gmail.com>, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-01-22 17:19+0000\n"
-"PO-Revision-Date: 2016-01-19 18:42-0700\n"
-"Last-Translator: Jeff Bai <jeffbai@aosc.xyz>\n"
-"Language-Team: 汉语 <i18n-zh@googlegroups.com>\n"
+"POT-Creation-Date: 2016-09-24 23:47+0000\n"
+"PO-Revision-Date: 2016-10-18 18:36+0800\n"
+"Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.9\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME 优化工具"
 
@@ -74,17 +75,13 @@ msgstr "关于(_A)"
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "重置为默认值"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "重置所有设置到默认状态？"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "关于 GNOME 优化工具"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -150,7 +147,7 @@ msgstr "优化"
 
 #: ../gtweak/tweakview.py:116
 msgid "Search Tweaks..."
-msgstr "搜索优化设置..."
+msgstr "搜索优化设置…"
 
 #: ../gtweak/tweaks/tweak_group_desktop.py:22
 msgid "Icons on Desktop"
@@ -229,87 +226,87 @@ msgstr "抗锯齿"
 msgid "Scaling Factor"
 msgstr "缩放比例"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:60
+#: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "图标"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:78
+#: ../gtweak/tweaks/tweak_group_interface.py:83
 msgid "Cursor"
 msgstr "光标"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Shell theme"
 msgstr "Shell 主题"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:105
+#: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "为 gnome-shell 安装自定义或用户主题"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:108
+#: ../gtweak/tweaks/tweak_group_interface.py:113
 msgid "Unknown error"
 msgstr "未知错误"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: ../gtweak/tweaks/tweak_group_interface.py:118
 msgid "Shell not running"
 msgstr "Shell 未运行"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:135
+#: ../gtweak/tweaks/tweak_group_interface.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Shell 用户主题扩展安装错误"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:138
+#: ../gtweak/tweaks/tweak_group_interface.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell 用户主题扩展未启用"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:141
+#: ../gtweak/tweaks/tweak_group_interface.py:146
 msgid "Could not list shell extensions"
 msgstr "无法显示 Shell 扩展"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:170
+#: ../gtweak/tweaks/tweak_group_interface.py:175
 #: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>默认</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:176
+#: ../gtweak/tweaks/tweak_group_interface.py:181
 msgid "Select a theme"
 msgstr "选择主题"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:225
+#: ../gtweak/tweaks/tweak_group_interface.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s 主题更新成功"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:227
+#: ../gtweak/tweaks/tweak_group_interface.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s 主题安装成功"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:235
+#: ../gtweak/tweaks/tweak_group_interface.py:240
 msgid "Error installing theme"
 msgstr "安装主题出错"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: ../gtweak/tweaks/tweak_group_interface.py:245
 msgid "Invalid theme"
 msgstr "无效主题"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:256
+#: ../gtweak/tweaks/tweak_group_interface.py:261
 msgid "Theme"
 msgstr "主题"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:261
+#: ../gtweak/tweaks/tweak_group_interface.py:266
 msgid "Enable animations"
 msgstr "启用动画"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "已禁用"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "输入"
 
@@ -464,7 +461,7 @@ msgstr "应用程序"
 
 #: ../gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications..."
-msgstr "搜索应用程序..."
+msgstr "搜索应用程序…"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
 #: ../gtweak/tweaks/tweak_group_startup.py:56
@@ -599,14 +596,18 @@ msgid "Right super"
 msgstr "右 Super 键"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "加速配置"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "显示指针位置"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "触摸板"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "点击方法"
 
@@ -623,6 +624,18 @@ msgstr "Wacom 手写板"
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(默认)</i>"
+
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "配置更改需要重新启动"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "需要重启会话以使设置生效"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "重启会话"
 
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
@@ -644,6 +657,9 @@ msgstr "需要重启应用程序以使更改生效"
 msgid "Error writing setting"
 msgstr "写入设置时出错"
 
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "关于 GNOME 优化工具"
+
 #~ msgid "Power Button Action"
 #~ msgstr "电源按钮动作"
 
@@ -652,9 +668,6 @@ msgstr "写入设置时出错"
 
 #~ msgid "Window"
 #~ msgstr "窗口"
-
-#~ msgid "Restart"
-#~ msgstr "重启"
 
 #~ msgid "Super left"
 #~ msgstr "左徽标键"
