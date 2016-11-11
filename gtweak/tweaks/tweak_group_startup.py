@@ -45,7 +45,7 @@ class _AppChooser(Gtk.Dialog):
         self._all = {}
 
         self.entry = Gtk.SearchEntry(
-                placeholder_text=_("Search Applications..."))
+                placeholder_text=_("Search Applications…"))
         self.entry.set_width_chars(30)
         self.entry.props.activates_default=True
 

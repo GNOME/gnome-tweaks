@@ -71,7 +71,7 @@ class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
                                     autostart_desktop_filename = "ignore-lid-switch-tweak.desktop",
                                     exec_cmd = self._inhibitor_path)
 
-        GetterSetterSwitchTweak.__init__(self, _("Don't suspend on lid close"), **options)
+        GetterSetterSwitchTweak.__init__(self, _("Don’t suspend on lid close"), **options)
 
     def get_active(self):
         return self._sync_inhibitor()

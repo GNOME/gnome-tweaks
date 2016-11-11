@@ -115,7 +115,7 @@ class Window(Gtk.ApplicationWindow):
     def sidebar(self):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         
-        self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks..."))
+        self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks…"))
         self.entry.connect("search-changed", self._on_search)
         
         self.searchbar = Gtk.SearchBar()
