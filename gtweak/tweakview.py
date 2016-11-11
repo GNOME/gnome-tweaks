@@ -1,3 +1,4 @@
+# This Python file uses the following encoding: utf-8
 # This file is part of gnome-tweak-tool.
 #
 # Copyright (c) 2011 John Stowers
@@ -115,7 +116,7 @@ class Window(Gtk.ApplicationWindow):
     def sidebar(self):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         
-        self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks..."))
+        self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks…"))
         self.entry.connect("search-changed", self._on_search)
         
         self.searchbar = Gtk.SearchBar()
