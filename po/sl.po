@@ -3,27 +3,26 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Martin Srebotnjak  <miles@filmsi.net>, 2011.
-# Matej Urbančič <mateju@svn.gnome.org>, 2011-2016.
+# Matej Urbančič <mateju@svn.gnome.org>, 2011–2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-05-02 20:43+0200\n"
-"PO-Revision-Date: 2016-05-02 20:44+0200\n"
+"POT-Creation-Date: 2016-11-15 20:01+0100\n"
+"PO-Revision-Date: 2016-11-15 20:03+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
-"Language: sl\n"
+"Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.9\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Orodje za prilagajanje nastavitev GNOME"
@@ -35,13 +34,12 @@ msgstr "Prilagodi napredne nastavitve GNOME 3"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
-msgstr ""
-"Program GNOME Tweak Tool omogoča prilagajanje naprednih možnosti okolja GNOME."
+msgstr "Program GNOME Tweak Tool omogoča prilagajanje naprednih možnosti okolja GNOME."
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
-"It can install and manage themes and extensions, change power settings, manage "
-"startup applications, and enable desktop icons among other settings."
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
 msgstr ""
 "Omogoča nameščanje in urejanje tem in razširitev, spreminjanje nastavitev "
 "porabe energije, urejanje zagonskih programov in drugo."
@@ -51,7 +49,8 @@ msgid "Tweak Tool"
 msgstr "Urejevalnik naprednih nastavitev"
 
 #: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
 "nastavitve;napredno;lastnosti;razširitve;pisave;teme;tipkovnica;prilagajanje;"
 "tipkanje;"
@@ -72,17 +71,13 @@ msgstr "_O programu"
 msgid "_Quit"
 msgstr "_Končaj"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Ponastavi na privzeto"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Ali naj se vse nastavitve ponastavijo na osnovno privzeto stanje?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "O programu"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -339,7 +334,7 @@ msgstr "Odstrani razširitev"
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Ali želite odstraniti razširitev '%s'?"
+msgstr "Ali želite odstraniti razširitev »%s«?"
 
 #: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
 msgid "Updating"
@@ -600,14 +595,18 @@ msgid "Right super"
 msgstr "Desna menijska tipka"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "Profil pospeševanja"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "Pokaži mesto kazalnika"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Sledilna ploščica"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Način klika"
 
@@ -651,11 +650,15 @@ msgstr "Splošni potemnjen slog"
 
 #: ../gtweak/widgets.py:486
 msgid "Applications need to be restarted for change to take effect"
-msgstr "Programe je treba po posodobitvi za uveljavitev sprememb ponovno zagnati."
+msgstr ""
+"Programe je treba po posodobitvi za uveljavitev sprememb ponovno zagnati."
 
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Napaka med zapisovanjem nastavitev"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "O programu"
 
 #~ msgid "Power Button Action"
 #~ msgstr "Dejanje ob pritisku gumba za priklop"
@@ -694,5 +697,7 @@ msgstr "Napaka med zapisovanjem nastavitev"
 #~ msgid "All"
 #~ msgstr "Vse"
 
-#~ msgid "Disable gnome-shell dynamic workspace management, use static workspaces"
-#~ msgstr "Onemogoči upravljanje odzivnih delovnih površin in uporabi običajne."
+#~ msgid ""
+#~ "Disable gnome-shell dynamic workspace management, use static workspaces"
+#~ msgstr ""
+#~ "Onemogoči upravljanje odzivnih delovnih površin in uporabi običajne."
