@@ -23,17 +23,6 @@ import gtweak
 from gtweak.utils import XSettingsOverrides, walk_directories, make_combo_list_with_default
 from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GetterSetterSwitchTweak, Title, GSettingsComboEnumTweak
 
-class PrimaryPasteTweak(GetterSetterSwitchTweak):
-    def __init__(self, **options):
-        self._xsettings = XSettingsOverrides()
-        GetterSetterSwitchTweak.__init__(self, _("Middle-click Paste"), **options)
-
-    def get_active(self):
-        return self._xsettings.get_enable_primary_paste()
-
-    def set_active(self, v):
-        self._xsettings.set_enable_primary_paste(v)
-
 class KeyThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
@@ -77,7 +66,9 @@ TWEAK_GROUPS = [
                              "org.gnome.settings-daemon.peripherals.mouse", 
                              "locate-pointer", 
                               schema_filename="org.gnome.settings-daemon.peripherals.gschema.xml"),
-        PrimaryPasteTweak(),
+        GSettingsSwitchTweak(_("Middle-click Paste"),
+                             "org.gnome.desktop.interface",
+                             "gtk-enable-primary-paste"),
 
         Title(_("Touchpad"), ""),
         GSettingsComboEnumTweak(_("Click method"),
