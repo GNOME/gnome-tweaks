@@ -13,7 +13,7 @@ from operator import itemgetter
 from gtweak.utils import extract_zip_file, execute_subprocess
 from gtweak.gshellwrapper import GnomeShell, GnomeShellFactory
 from gtweak.tweakmodel import Tweak
-from gtweak.widgets import FileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, UI_BOX_SPACING, ListBoxTweakGroup
+from gtweak.widgets import FileChooserButton, build_label_beside_widget, build_horizontal_sizegroup, build_tight_button, ListBoxTweakGroup
 from gtweak.egowrapper import ExtensionsDotGnomeDotOrg
 from gtweak.utils import DisableExtension
 
@@ -59,6 +59,13 @@ class _ExtensionsBlankState(Gtk.Box):
     def _on_browse_clicked(self, btn):
         self._swInfo.launch([], None)
 
+class _ExtensionDescriptionLabel(Gtk.Label):
+
+    def do_get_preferred_height_for_width(self, width):
+        # Hack: Request the maximum height allowed by the line limit
+        if self.get_lines() > 0:
+            return Gtk.Label.do_get_preferred_height_for_width(self, 0)
+        return Gtk.Label.do_get_preferred_height_for_width(self, width)
 
 class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
@@ -68,7 +75,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
         self.hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         self.hbox.props.border_width = 10
-        self.hbox.props.spacing = UI_BOX_SPACING
+        self.hbox.props.spacing = 12
     
         self._shell = shell
         state = ext.get("state")
@@ -79,18 +86,12 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         shell._settings.bind("disable-user-extensions", self,
                              "sensitive", Gio.SettingsBindFlags.INVERT_BOOLEAN)
 
-        sw = Gtk.Switch()
-        sw.props.vexpand = False
-        sw.props.valign = Gtk.Align.CENTER
-        sw.set_active(self._shell.extension_is_active(state, uuid))
-        sw.connect('notify::active', self._on_extension_toggled, uuid)
-        self.hbox.pack_start(sw, False, False, 0)
                         
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         lbl_name = Gtk.Label(xalign=0.0)
         name_markup = GLib.markup_escape_text(ext["name"].lower().capitalize())
         lbl_name.set_markup("<span size='medium'><b>"+name_markup+"</b></span>")
-        lbl_desc = Gtk.Label(xalign=0.0)
+        lbl_desc = _ExtensionDescriptionLabel(xalign=0.0, yalign=0.0, wrap=True, lines=2)
         desc = GLib.markup_escape_text(ext["description"].lower().capitalize().split('\n')[0])
         lbl_desc.set_markup("<span foreground='#A19C9C' size='small'>"+desc+"</span>")
         lbl_desc.props.ellipsize = Pango.EllipsizeMode.END 
@@ -116,7 +117,6 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         else:
             warning = _("Unknown extension error")
             logging.critical(warning)
-        sw.set_sensitive(sensitive)
 
 
         if info:
@@ -134,6 +134,13 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
                 btn.props.valign = Gtk.Align.CENTER
                 btn.connect("clicked", self._on_configure_clicked, uuid)
                 self.hbox.pack_start(btn, False, False, 0)
+
+        sw = Gtk.Switch(sensitive=sensitive)
+        sw.props.vexpand = False
+        sw.props.valign = Gtk.Align.CENTER
+        sw.set_active(self._shell.extension_is_active(state, uuid))
+        sw.connect('notify::active', self._on_extension_toggled, uuid)
+        self.hbox.pack_start(sw, False, False, 0)
 
         de = DisableExtension()
         de.connect('disable-extension', self._on_disable_extension, sw)
