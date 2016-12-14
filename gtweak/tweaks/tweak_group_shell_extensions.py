@@ -47,6 +47,8 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         state = ext.get("state")
         uuid = ext["uuid"]
 
+        self._app_id = uuid + ".shell-extension"
+
         shell._settings.bind("disable-user-extensions", self,
                              "sensitive", Gio.SettingsBindFlags.INVERT_BOOLEAN)
 
@@ -159,6 +161,16 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         btn.set_label(_("Updating"))
         self.set_sensitive(False)
         self._shell.install_remote_extension(uuid,self.reply_handler, self.error_handler, btn)
+
+    def do_activate(self):
+        bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
+        bus.call('org.gnome.Software',
+                 '/org/gnome/Software',
+                 'org.freedesktop.Application',
+                 'ActivateAction',
+                 GLib.Variant('(sava{sv})',
+                              ('details', [GLib.Variant('(ss)', (self._app_id, ''))], {})),
+                 None, 0, -1, None)
     
     def reply_handler(self, proxy_object, result, user_data):
         if result == 's':
@@ -310,6 +322,7 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
                              "active", Gio.SettingsBindFlags.INVERT_BOOLEAN)
 
         self.set_header_func(self._list_header_func, None)
+        self.connect("row-activated", self._on_row_activated, None);
 
     def _got_info(self, ego, resp, uuid, extension, widget):
         if uuid == extension["uuid"]:
@@ -330,6 +343,9 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
     def _list_header_func(self, row, before, user_data):
         if before and not row.get_header():
             row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
+
+    def _on_row_activated(self, list, row, user_data):
+        row.activate()
 
 TWEAK_GROUPS = [
         ShellExtensionTweakGroup(),
