@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2016.
+# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-05-05 10:25+0000\n"
-"PO-Revision-Date: 2016-05-15 10:56+0000\n"
+"POT-Creation-Date: 2016-12-09 16:59+0000\n"
+"PO-Revision-Date: 2017-01-09 16:49+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "Language: is\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME sérbreytingatólið"
@@ -69,17 +69,13 @@ msgstr "_Um"
 msgid "_Quit"
 msgstr "_Hætta"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Upprunalegar stillingar"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Viltu breyta öllum stillingum í sín upprunalegu gildi?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "Um GNOME Tweak Tool"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -426,7 +422,6 @@ msgid "When Power Button is Pressed"
 msgstr "Þegar ýtt er á aflhnapp"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:112
-#| msgid "Applications"
 msgid "Action"
 msgstr "Aðgerð"
 
@@ -596,14 +591,18 @@ msgid "Right super"
 msgstr "Hægri breytilykill"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
+msgid "Acceleration profile"
+msgstr "Hröðunarsnið"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:76
 msgid "Show location of pointer"
 msgstr "Sýna staðsetningu bendils"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Touchpad"
 msgstr "Snertiplatti"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:83
 msgid "Click method"
 msgstr "Aðferð við smell"
 
@@ -626,12 +625,10 @@ msgid "Configuration changes require restart"
 msgstr "Breytingar á stillingum krefjast endurræsingar"
 
 #: ../gtweak/utils.py:330
-#| msgid "Applications need to be restarted for change to take effect"
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Endurræsa þarf setuna svo breytingarnar taki gildi"
 
 #: ../gtweak/utils.py:334
-#| msgid "Revert Settings"
 msgid "Restart Session"
 msgstr "Endurræsa setu"
 
@@ -654,6 +651,9 @@ msgstr "Endurræsa þarf forrit svo að breytingar taki gildi"
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Villa við að skrifa stillingar"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "Um GNOME Tweak Tool"
 
 #~ msgid "Power Button Action"
 #~ msgstr "Virkni aflhnapps"
