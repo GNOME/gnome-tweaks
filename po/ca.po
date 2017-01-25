@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-02 07:29+0200\n"
+"POT-Creation-Date: 2017-01-25 10:56+0100\n"
 "PO-Revision-Date: 2016-03-16 17:49+0100\n"
 "Last-Translator: David Medina <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -24,7 +24,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.6.11\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
+#: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Eina d'ajustaments del GNOME"
 
@@ -35,7 +36,8 @@ msgstr "Configureu paràmetres avançats del GNOME 3"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
-msgstr "L'eina d'ajustaments del GNOME us permet ajustar opcions avançades del GNOME."
+msgstr ""
+"L'eina d'ajustaments del GNOME us permet ajustar opcions avançades del GNOME."
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
@@ -73,17 +75,13 @@ msgstr "_Quant a"
 msgid "_Quit"
 msgstr "_Surt"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Reinicialitza als valors per defecte"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Voleu reiniciar tots els paràmetres d'ajustament a l'estat original?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "Quant a l'Eina d'ajustaments del GNOME"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -131,7 +129,7 @@ msgstr "Finestres"
 msgid "Workspaces"
 msgstr "Espais de treball"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Mouse"
 msgstr "Ratolí"
 
@@ -266,7 +264,7 @@ msgid "Could not list shell extensions"
 msgstr "No s'han pogut llistar les extensions del Shell"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+#: ../gtweak/tweaks/tweak_group_keymouse.py:36
 msgid "<i>Default</i>"
 msgstr "<i>Per defecte</i>"
 
@@ -303,12 +301,12 @@ msgstr "Tema"
 msgid "Enable animations"
 msgstr "Habilita les animacions"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:53
+#: ../gtweak/tweaks/tweak_group_xkb.py:55
 #: ../gtweak/tweaks/tweak_group_windows.py:143
 msgid "Disabled"
 msgstr "Inhabilitat"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:136
+#: ../gtweak/tweaks/tweak_group_xkb.py:161
 msgid "Typing"
 msgstr "Escriptura"
 
@@ -570,44 +568,48 @@ msgstr "Minimitza"
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "Enganxament amb el botó del mig"
-
 #. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
+#: ../gtweak/tweaks/tweak_group_keymouse.py:30
 msgid "Key theme"
 msgstr "Clau del tema"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:49
 msgid "Keyboard and Mouse"
 msgstr "Teclat i ratolí"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:50
 msgid "Show All Input Sources"
 msgstr "Mostra totes les fonts d'entrada"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:55
 msgid "Switch between overview and desktop"
 msgstr "Canvia entre la vista general i l'escriptori"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Left super"
 msgstr "Esquerra Súper"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Right super"
 msgstr "Dreta Súper"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:72
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+msgid "Acceleration profile"
+msgstr "Perfil d'acceleració"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Show location of pointer"
 msgstr "Mostra la ubicació del punter"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+msgid "Middle-click Paste"
+msgstr "Enganxament amb el botó del mig"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:73
 msgid "Touchpad"
 msgstr "Ratolí tàctil"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:74
 msgid "Click method"
 msgstr "Mètode de clic"
 
@@ -624,6 +626,18 @@ msgstr "Wacom"
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(per defecte)</i>"
+
+#: ../gtweak/utils.py:329
+msgid "Configuration changes require restart"
+msgstr "La configuració requereix reiniciar"
+
+#: ../gtweak/utils.py:330
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "S'ha de reiniciar la sessió perquè els canvis tinguin efecte"
+
+#: ../gtweak/utils.py:334
+msgid "Restart Session"
+msgstr "Reinicia la sessió"
 
 #: ../gtweak/widgets.py:476
 msgid "Enable dark theme for all applications"
@@ -646,6 +660,9 @@ msgstr "S'han de reiniciar les aplicacions perquè els canvis tinguin efecte"
 msgid "Error writing setting"
 msgstr "S'ha produït un error en desar els paràmetres"
 
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "Quant a l'Eina d'ajustaments del GNOME"
+
 #~ msgid "Power Button Action"
 #~ msgstr "Acció del botó d'engegada"
 
@@ -654,9 +671,6 @@ msgstr "S'ha produït un error en desar els paràmetres"
 
 #~ msgid "Window"
 #~ msgstr "Finestra"
-
-#~ msgid "Restart"
-#~ msgstr "Reinicia"
 
 #~ msgid "Super left"
 #~ msgstr "Superior esquerra"
