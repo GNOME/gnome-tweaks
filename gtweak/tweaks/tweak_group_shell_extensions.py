@@ -6,6 +6,7 @@ import json
 
 from gi.repository import Gtk
 from gi.repository import GLib
+from gi.repository import Gio
 from gi.repository import Pango
 
 from operator import itemgetter
@@ -45,6 +46,9 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         self._shell = shell
         state = ext.get("state")
         uuid = ext["uuid"]
+
+        shell._settings.bind("disable-user-extensions", self,
+                             "sensitive", Gio.SettingsBindFlags.INVERT_BOOLEAN)
 
         sw = Gtk.Switch()
         sw.props.vexpand = False
@@ -301,6 +305,10 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
                                    _("Extensions"),
                                    *extension_tweaks)
         
+        self.titlebar_widget = Gtk.Switch(visible=True)
+        shell._settings.bind("disable-user-extensions", self.titlebar_widget,
+                             "active", Gio.SettingsBindFlags.INVERT_BOOLEAN)
+
         self.set_header_func(self._list_header_func, None)
 
     def _got_info(self, ego, resp, uuid, extension, widget):
