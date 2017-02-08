@@ -84,6 +84,8 @@ class Window(Gtk.ApplicationWindow):
 
         self._update_decorations (Gtk.Settings.get_default(), None)
 
+        self._group_titlebar_widget = None
+
         self.title = Gtk.Label(label="")
         self.title.get_style_context().add_class("title")
         right_header.set_custom_title(self.title)
@@ -252,6 +254,14 @@ class Window(Gtk.ApplicationWindow):
             group = row.get_child().get_text()
             self.stack.set_visible_child_name(group)
             self.title.set_text(group)
+            tweakgroup = self._model.get_value(
+                                self._model.get_tweakgroup_iter(group),
+                                self._model.COLUMN_TWEAK)
+            if self._group_titlebar_widget:
+                self._right_header.remove(self._group_titlebar_widget)
+            self._group_titlebar_widget = tweakgroup.titlebar_widget
+            if self._group_titlebar_widget:
+                self._right_header.pack_end(self._group_titlebar_widget)
 
     def _on_find_toggled(self, btn):
          if self.searchbar.get_search_mode():

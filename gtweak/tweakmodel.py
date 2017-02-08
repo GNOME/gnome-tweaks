@@ -77,6 +77,7 @@ class TweakGroup(object):
 
     def __init__(self, name, *tweaks, **options):
         self.name = name
+        self.titlebar_widget = None
         self.tweaks = [t for t in tweaks if t.loaded]
         self.uid = options.get('uid', self.__class__.__name__)
 
