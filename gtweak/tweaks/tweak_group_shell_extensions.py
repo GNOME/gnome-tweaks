@@ -33,6 +33,33 @@ def _fix_shell_version_for_ego(version):
 def _get_shell_major_minor_version(version):
     return '.'.join(version.split('.')[0:2])
 
+class _ExtensionsBlankState(Gtk.Box):
+
+    def __init__(self):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=18,
+                               valign=Gtk.Align.CENTER)
+
+        self.add(Gtk.Image(icon_name="gnome-tweak-tool-symbolic",
+                 pixel_size=128, opacity=0.3))
+
+        self.add(Gtk.Label(label="<b>" + _("No Extensions Installed") + "</b>",
+                 use_markup=True, opacity=0.3))
+
+        self._swInfo = Gio.DesktopAppInfo.new("org.gnome.Software.desktop")
+
+        if self._swInfo:
+            btn = Gtk.Button(label=_("Browse in Software"),
+                             always_show_image=True, halign=Gtk.Align.CENTER,
+                             image=Gtk.Image(icon_name="org.gnome.Software-symbolic"))
+            btn.connect("clicked", self._on_browse_clicked)
+            self.add(btn)
+
+        self.show_all()
+
+    def _on_browse_clicked(self, btn):
+        self._swInfo.launch([], None)
+
+
 class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
     def __init__(self, shell, ext, **options):
@@ -198,12 +225,17 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
                                    _("Extensions"),
                                    *extension_tweaks)
         
+        self.props.valign = Gtk.Align.FILL
+
         self.titlebar_widget = Gtk.Switch(visible=True)
         shell._settings.bind("disable-user-extensions", self.titlebar_widget,
                              "active", Gio.SettingsBindFlags.INVERT_BOOLEAN)
 
         self.set_header_func(self._list_header_func, None)
         self.connect("row-activated", self._on_row_activated, None);
+
+        if not len(extension_tweaks):
+            self.set_placeholder(_ExtensionsBlankState())
 
     def _got_info(self, ego, resp, uuid, extension, widget):
         if uuid == extension["uuid"]:
