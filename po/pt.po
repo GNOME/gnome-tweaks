@@ -8,10 +8,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-04-28 22:20+0000\n"
-"PO-Revision-Date: 2016-04-29 00:12+0100\n"
+"POT-Creation-Date: 2017-03-16 03:32+0000\n"
+"PO-Revision-Date: 2016-09-04 10:54+0100\n"
 "Last-Translator: Tiago Santos <tiagofsantos81@sapo.pt>\n"
 "Language-Team: Português <>\n"
 "Language: pt\n"
@@ -19,10 +19,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:94
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "Ferramenta de ajuste do GNOME"
@@ -74,17 +74,13 @@ msgstr "_Sobre"
 msgid "_Quit"
 msgstr "_Sair"
 
-#: ../gtweak/app.py:76
+#: ../gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Repor predefinições"
 
-#: ../gtweak/app.py:77
+#: ../gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Repor todas as definições para o seu estado original predefinido?"
-
-#: ../gtweak/app.py:93
-msgid "About GNOME Tweak Tool"
-msgstr "Sobre a Ferramenta de ajuste do GNOME"
 
 #: ../gtweak/app.py:98
 #, python-format
@@ -104,7 +100,7 @@ msgid "Appearance"
 msgstr "Aparência"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:305
 msgid "Extensions"
 msgstr "Extensões"
 
@@ -132,7 +128,7 @@ msgstr "Janelas"
 msgid "Workspaces"
 msgstr "Espaços de trabalho"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Mouse"
 msgstr "Rato"
 
@@ -144,11 +140,11 @@ msgstr "Ficheiros"
 msgid "Miscellaneous"
 msgstr "Vários"
 
-#: ../gtweak/tweakview.py:100
+#: ../gtweak/tweakview.py:102
 msgid "Tweaks"
 msgstr "Ajustes"
 
-#: ../gtweak/tweakview.py:116
+#: ../gtweak/tweakview.py:118
 msgid "Search Tweaks..."
 msgstr "Ajustes de procura..."
 
@@ -267,7 +263,7 @@ msgid "Could not list shell extensions"
 msgstr "Impossível listar as extensões da shell"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+#: ../gtweak/tweaks/tweak_group_keymouse.py:36
 msgid "<i>Default</i>"
 msgstr "<i>Predefinição</i>"
 
@@ -313,76 +309,76 @@ msgstr "Desativado"
 msgid "Typing"
 msgstr "Digitação"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
 msgid "Extension downloading"
 msgstr "Transferência de extensões"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
 msgid "Error loading extension"
 msgstr "Erro ao carregar a extensão"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:86
 msgid "Extension does not support shell version"
 msgstr "A extensão não suporta a versão da shell"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:88
 msgid "Unknown extension error"
 msgstr "Erro de extensão desconhecido"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:109
 #: ../gtweak/tweaks/tweak_group_startup.py:229
 msgid "Remove"
 msgstr "Remover"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
 msgid "Uninstall Extension"
 msgstr "Desinstalar extensão"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:142
 #, python-format
 msgid "Do you want to uninstall the '%s' extension?"
 msgstr "Quer desinstalar a extensão \"%s\"?"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:159
 msgid "Updating"
 msgstr "A atualizar"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Error"
 msgstr "Erro"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:175
 msgid "Update"
 msgstr "Atualização"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Install Shell Extension"
 msgstr "Instalar extensão de shell"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:195
 msgid "Select an extension"
 msgstr "Selecionar uma extensão"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:202
 msgid "Get more extensions"
 msgstr "Obter mais extensões"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:252
 #, python-format
 msgid "%s extension updated successfully"
 msgstr "Extensão %s atualizada com sucesso"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
 #, python-format
 msgid "%s extension installed successfully"
 msgstr "Extensão %s instalada com sucesso"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
 msgid "Error installing extension"
 msgstr "Erro ao instalar extensão"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:264
 msgid "Invalid extension"
 msgstr "Extensão inválida"
 
@@ -572,44 +568,48 @@ msgstr "Minimizar"
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "Colar com o botão do meio"
-
 #. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
+#: ../gtweak/tweaks/tweak_group_keymouse.py:30
 msgid "Key theme"
 msgstr "Tema chave"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:49
 msgid "Keyboard and Mouse"
 msgstr "Teclado e rato"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:50
 msgid "Show All Input Sources"
 msgstr "Mostrar todas as fontes de entrada"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:55
 msgid "Switch between overview and desktop"
 msgstr "Trocar entre visão geral e área de trabalho"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Left super"
 msgstr "Tecla super esquerda"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Right super"
 msgstr "Tecla super direita"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:72
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+msgid "Acceleration profile"
+msgstr "Perfil de aceleração"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Show location of pointer"
 msgstr "Mostrar localização do ponteiro"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:78
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+msgid "Middle-click Paste"
+msgstr "Colar com o botão do meio"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:73
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:79
+#: ../gtweak/tweaks/tweak_group_keymouse.py:74
 msgid "Click method"
 msgstr "Método de clique"
 
@@ -658,6 +658,9 @@ msgstr "As aplicações têm de ser reiniciadas para as alterações terem efeit
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Erro ao escrever a definição"
+
+#~ msgid "About GNOME Tweak Tool"
+#~ msgstr "Sobre a Ferramenta de ajuste do GNOME"
 
 #~ msgid "Power Button Action"
 #~ msgstr "Ação do botão de energia"
