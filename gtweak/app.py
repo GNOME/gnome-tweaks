@@ -85,7 +85,7 @@ class GnomeTweakTool(Gtk.Application):
         dialog.destroy()
             
     def help_cb(self, action, parameter):
-        print "This does nothing. It is only a demonstration."
+        print("This does nothing. It is only a demonstration.")
 
     def disable_cb(self, action, parameter):
         ds = DisableExtension()

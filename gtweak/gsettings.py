@@ -146,7 +146,7 @@ class GSettingsSetting(Gio.Settings):
             self.connect("changed", self._on_changed)
 
     def _on_changed(self, settings, key_name):
-        print "Change: %s %s -> %s" % (self.props.schema, key_name, self[key_name])
+        print("Change: %s %s -> %s" % (self.props.schema, key_name, self[key_name]))
 
     def _setting_check_is_list(self, key):
         variant = Gio.Settings.get_value(self, key)
@@ -193,7 +193,7 @@ if __name__ == "__main__":
 
     key = "draw-background"
     s = GSettingsSetting("org.gnome.desktop.background")
-    print s.schema_get_summary(key), s.schema_get_description(key)
+    print(s.schema_get_summary(key), s.schema_get_description(key))
 
     key = "disabled-extensions"
     s = GSettingsSetting("org.gnome.shell")

@@ -172,7 +172,7 @@ class GnomeShellFactory:
         try:
             proxy = _ShellProxy()
             settings = GSettingsSetting("org.gnome.shell")
-            v = map(int,proxy.version.split("."))
+            v = list(map(int,proxy.version.split(".")))
 
             if v >= [3,5,0]:
                 self.shell = GnomeShell36(proxy, settings)
@@ -198,7 +198,7 @@ if __name__ == "__main__":
     logging.basicConfig(format="%(levelname)-8s: %(message)s", level=logging.DEBUG)
 
     s = GnomeShellFactory().get_shell()
-    print "Shell Version: %s" % s.version
-    print s.list_extensions()
+    print("Shell Version: %s" % s.version)
+    print(s.list_extensions())
 
-    print s == GnomeShellFactory().get_shell()
+    print(s == GnomeShellFactory().get_shell())

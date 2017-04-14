@@ -171,7 +171,7 @@ class Window(Gtk.ApplicationWindow):
             row.add(lbl)
             return row
 
-        groups = self._model._tweak_group_names.keys()
+        groups = list(self._model._tweak_group_names.keys())
         groups = sorted(groups)
 
         for g in groups:

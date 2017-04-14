@@ -184,7 +184,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
     def error_handler(self, proxy_object, result, user_data):
         user_data.set_label(_("Error"))
-        print result
+        print(result)
 
     def add_update_button(self, uuid):
         updateButton = Gtk.Button(_("Update"))   
@@ -213,7 +213,7 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
             ego = ExtensionsDotGnomeDotOrg(version)
             try:
                 #add a tweak for each installed extension
-                extensions = sorted(shell.list_extensions().values(), key=itemgetter("name"))
+                extensions = sorted(list(shell.list_extensions().values()), key=itemgetter("name"))
                 for extension in extensions:
                     try:
                         extension_widget = _ShellExtensionTweak(shell, extension, size_group=sg)
@@ -235,8 +235,9 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
         self.props.valign = Gtk.Align.FILL
 
         self.titlebar_widget = Gtk.Switch(visible=True)
-        shell._settings.bind("disable-user-extensions", self.titlebar_widget,
-                             "active", Gio.SettingsBindFlags.INVERT_BOOLEAN)
+        if shell is not None:
+            shell._settings.bind("disable-user-extensions", self.titlebar_widget,
+                                 "active", Gio.SettingsBindFlags.INVERT_BOOLEAN)
 
         self.set_header_func(self._list_header_func, None)
         self.connect("row-activated", self._on_row_activated, None);

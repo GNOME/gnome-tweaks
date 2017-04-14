@@ -19,7 +19,7 @@
 from gtweak.tweakmodel import TweakGroup
 from gtweak.widgets import GSettingsSwitchTweak
 import subprocess
-import ConfigParser
+import configparser
 import io
 
 def N_(x): return x
@@ -101,10 +101,10 @@ class WacomConfigs(object):
                 match_id = config.get(DEVICE_SECTION, DEVICE_MATCH_LINE)
                 # Use a dict to discard possible repeated devices
                 configs_dict[match_id] = config
-        return configs_dict.values()
+        return list(configs_dict.values())
 
     def _text_to_config(self, text):
-        config = ConfigParser.RawConfigParser(allow_no_value=True)
+        config = configparser.RawConfigParser(allow_no_value=True)
         config.readfp(io.BytesIO(text))
         return config
 

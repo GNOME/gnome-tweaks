@@ -144,7 +144,7 @@ def adjust_schema_for_overrides(originalSchema, key, options):
         if (key in GSettingsSetting(overridesSchema, schema_filename=overridesFile).list_keys()):
             options['schema_filename'] = overridesFile
             return overridesSchema
-    except GSettingsMissingError, e:
+    except GSettingsMissingError as e:
         logging.info("GSetting missing %s" % (e.message))
 
     return originalSchema
@@ -164,7 +164,7 @@ class _GSettingsTweak(Tweak):
                 name,
                 options.get("description",self.settings.schema_get_description(key_name)),
                 **options)
-        except GSettingsMissingError, e:
+        except GSettingsMissingError as e:
             self.settings = GSettingsFakeSetting()
             Tweak.__init__(self,"","")
             self.loaded = False

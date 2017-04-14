@@ -91,7 +91,7 @@ class TweakGroup(object):
 
 class TweakModel(Gtk.ListStore):
     (COLUMN_NAME,
-     COLUMN_TWEAK) = range(2)
+     COLUMN_TWEAK) = list(range(2))
 
     def __init__(self):
         super(TweakModel, self).__init__(str, object)

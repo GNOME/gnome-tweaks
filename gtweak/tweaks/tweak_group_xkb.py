@@ -59,14 +59,35 @@ class _XkbOption(Gtk.Expander, Tweak):
             model_values.append((option_id, desc))
             self._possible_values.append(option_id)
 
-        def values_cmp((av, ad), (bv, bd)):
+        def values_cmp_py3_wrap(f):
+            ''' https://docs.python.org/3/howto/sorting.html#the-old-way-using-the-cmp-parameter '''
+            class C:
+                def __init__(self, obj, *args):
+                    self.obj = obj
+                def __lt__(self, other):
+                    return f(self.obj, other.obj) < 0
+                def __gt__(self, other):
+                    return f(self.obj, other.obj) > 0
+                def __eq__(self, other):
+                    return f(self.obj, other.obj) == 0
+                def __le__(self, other):
+                    return f(self.obj, other.obj) <= 0
+                def __ge__(self, other):
+                    return f(self.obj, other.obj) >= 0
+                def __ne__(self, other):
+                    return f(self.obj, other.obj) != 0
+            return C
+
+        def values_cmp(xxx_todo_changeme, xxx_todo_changeme1):
+            (av, ad) = xxx_todo_changeme
+            (bv, bd) = xxx_todo_changeme1
             if not av:
                 return -1
             elif not bv:
                 return 1
             else:
-                return cmp(ad, bd)
-        model_values.sort(cmp=values_cmp)
+                return (ad > bd) - (ad < bd)
+        model_values.sort(key=values_cmp_py3_wrap(values_cmp))
 
         self._widgets = dict()
         for (val, name) in model_values:
@@ -112,7 +133,7 @@ class _XkbOption(Gtk.Expander, Tweak):
                 if w:
                     _set_active(w, True)
         else:
-            for w in self._widgets.values():
+            for w in list(self._widgets.values()):
                 if w._val in self._values:
                     _set_active(w, True)
                 else:

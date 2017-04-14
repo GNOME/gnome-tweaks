@@ -111,7 +111,8 @@ def extract_zip_file(z, members_path, dest):
 def execute_subprocess(cmd_then_args, block=True):
     p = subprocess.Popen(
             cmd_then_args,
-            stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True)
+            stdin=subprocess.PIPE, stdout=subprocess.PIPE, close_fds=True,
+            universal_newlines=True)
     if block:
         stdout, stderr = p.communicate()
         return stdout, stderr, p.returncode
@@ -265,7 +266,7 @@ class XSettingsOverrides:
 
     def _dup_variant_as_dict(self):
         items = {}
-        for k in self._variant.keys():
+        for k in list(self._variant.keys()):
             try:
                 #variant override doesnt support .items()
                 v = self._variant[k]

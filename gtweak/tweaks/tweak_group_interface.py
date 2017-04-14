@@ -135,13 +135,13 @@ class ShellThemeTweak(Gtk.Box, Tweak):
                         error = None
                     except:
                         logging.warning(
-                            "Could not find user-theme extension in %s" % ','.join(extensions.keys()),
+                            "Could not find user-theme extension in %s" % ','.join(list(extensions.keys())),
                             exc_info=True)
                         error = _("Shell user-theme extension incorrectly installed")
 
                 else:
                     error = _("Shell user-theme extension not enabled")
-            except Exception, e:
+            except Exception as e:
                 logging.warning("Could not list shell extensions", exc_info=True)
                 error = _("Could not list shell extensions")
 

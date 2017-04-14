@@ -15,7 +15,7 @@
 #
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
-from __future__ import print_function
+
 
 import os.path
 import subprocess
@@ -338,7 +338,7 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
                     str(os.getuid()),'-o','cmd'],
                     stdout=subprocess.PIPE)
         out = cmd.communicate()[0]
-        for l in out.split('\n'):
+        for l in out.decode('utf8').split('\n'):
             exe = l.split(' ')[0]
             if exe and exe[0] != '[': #kernel process
                 exes.append( os.path.basename(exe) )

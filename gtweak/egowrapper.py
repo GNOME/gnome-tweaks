@@ -43,7 +43,7 @@ class ExtensionsDotGnomeDotOrg(GObject.GObject):
         if msg.status_code == 200:
             #server returns a list of extensions which may contain duplicates, dont know
             resp = json.loads(msg.response_body.data)
-            print resp
+            print(resp)
             for e in resp["extensions"]:
                 self._extensions[e["uuid"]] = e
             self.emit("got-extensions", self._extensions)
@@ -75,7 +75,7 @@ class ExtensionsDotGnomeDotOrg(GObject.GObject):
 
     def query_extension_info(self, extension_uuid):
         if extension_uuid in self._extensions:
-            print "CACHED"
+            print("CACHED")
             self.emit("got-extension-info", self._extensions[extension_uuid])
             return
 
@@ -96,8 +96,8 @@ if __name__ == "__main__":
     from gi.repository import Gtk, GLib
 
     def _got_ext(ego, extensions):
-        print "="*80
-        pprint.pprint(extensions.values())
+        print("="*80)
+        pprint.pprint(list(extensions.values()))
 
     def _got_ext_info(ego, extension):
         pprint.pprint(extension)
