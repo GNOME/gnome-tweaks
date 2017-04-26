@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-09-02 13:46+0000\n"
-"PO-Revision-Date: 2017-01-16 14:38+0700\n"
+"POT-Creation-Date: 2017-04-11 12:48+0000\n"
+"PO-Revision-Date: 2017-04-26 12:47+0700\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -96,7 +96,7 @@ msgid "Appearance"
 msgstr "Penampilan"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:232
 msgid "Extensions"
 msgstr "Ekstensi"
 
@@ -124,7 +124,7 @@ msgstr "Jendela"
 msgid "Workspaces"
 msgstr "Area kerja"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Mouse"
 msgstr "Tetikus"
 
@@ -136,11 +136,11 @@ msgstr "Berkas"
 msgid "Miscellaneous"
 msgstr "Rupa-rupa"
 
-#: ../gtweak/tweakview.py:100
+#: ../gtweak/tweakview.py:102
 msgid "Tweaks"
 msgstr "Oprekan"
 
-#: ../gtweak/tweakview.py:116
+#: ../gtweak/tweakview.py:118
 msgid "Search Tweaks..."
 msgstr "Oprekan Pencarian..."
 
@@ -259,7 +259,7 @@ msgid "Could not list shell extensions"
 msgstr "Tak bisa membuat daftar ekstensi shell"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+#: ../gtweak/tweaks/tweak_group_keymouse.py:36
 msgid "<i>Default</i>"
 msgstr "<i>Bawaan</i>"
 
@@ -305,78 +305,41 @@ msgstr "Dimatikan"
 msgid "Typing"
 msgstr "Mengetik"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:45
+msgid "No Extensions Installed"
+msgstr "Tak Ada Ekstensi Terpasang"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:51
+msgid "Browse in Software"
+msgstr "Ramban di Perangkat Lunak"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:112
 msgid "Extension downloading"
 msgstr "Pengunduhan ekstensi"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:114
 msgid "Error loading extension"
 msgstr "Galat saat memuat ekstensi"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:116
 msgid "Extension does not support shell version"
 msgstr "Ekstensi tak mendukung versi shell"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Unknown extension error"
 msgstr "Galat ekstensi yang tak dikenal"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:229
-msgid "Remove"
-msgstr "Hapus"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-msgid "Uninstall Extension"
-msgstr "Bongkar Ekstensi"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Apakah Anda ingin membongkar ekstensi '%s'?"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Updating"
 msgstr "Memutakhirkan"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Error"
 msgstr "Galat"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Update"
 msgstr "Mutakhirkan"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
-msgid "Install Shell Extension"
-msgstr "Pasang Ekstensi Shell"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
-msgid "Select an extension"
-msgstr "Pilih ekstensi"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
-msgid "Get more extensions"
-msgstr "Dapatkan lebih banyak ekstensi"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "Ekstensi %s sukses dimutakhirkan"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "Ekstensi %s sukses dipasang"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
-msgid "Error installing extension"
-msgstr "Galat saat memasang ekstensi"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Invalid extension"
-msgstr "Ekstensi tak valid"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:33
 msgid "Show Application Menu"
@@ -475,6 +438,10 @@ msgstr "_Tutup"
 msgid "_Add"
 msgstr "T_ambah"
 
+#: ../gtweak/tweaks/tweak_group_startup.py:229
+msgid "Remove"
+msgstr "Hapus"
+
 #: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "Aplikasi awal mula baru"
@@ -561,48 +528,48 @@ msgstr "Minimalkan"
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "Tempel Klik Tengah"
-
 #. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
+#: ../gtweak/tweaks/tweak_group_keymouse.py:30
 msgid "Key theme"
 msgstr "Tema kunci"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:49
 msgid "Keyboard and Mouse"
 msgstr "Papan Tik dan Tetikus"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:50
 msgid "Show All Input Sources"
 msgstr "Tampilkan Semua Sumber Masukan"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:55
 msgid "Switch between overview and desktop"
 msgstr "Bertukar antara ringkasan dan desktop"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Left super"
 msgstr "Super kiri"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Right super"
 msgstr "Super kanan"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:72
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
 msgid "Acceleration profile"
 msgstr "Profil akselerasi"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:76
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Show location of pointer"
 msgstr "Tampilkan lokasi pointer"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:82
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+msgid "Middle-click Paste"
+msgstr "Tempel Klik Tengah"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:73
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:83
+#: ../gtweak/tweaks/tweak_group_keymouse.py:74
 msgid "Click method"
 msgstr "Metoda klik"
 
@@ -651,6 +618,30 @@ msgstr "Aplikasi mesti dimulai ulang agar perubahan berdampak"
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Galat saat menulis pengaturan"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "Bongkar Ekstensi"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "Apakah Anda ingin membongkar ekstensi '%s'?"
+
+#~ msgid "Install Shell Extension"
+#~ msgstr "Pasang Ekstensi Shell"
+
+#~ msgid "Select an extension"
+#~ msgstr "Pilih ekstensi"
+
+#~ msgid "Get more extensions"
+#~ msgstr "Dapatkan lebih banyak ekstensi"
+
+#~ msgid "%s extension updated successfully"
+#~ msgstr "Ekstensi %s sukses dimutakhirkan"
+
+#~ msgid "Error installing extension"
+#~ msgstr "Galat saat memasang ekstensi"
+
+#~ msgid "Invalid extension"
+#~ msgstr "Ekstensi tak valid"
 
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "Tengan Alat Oprek GNOME"
