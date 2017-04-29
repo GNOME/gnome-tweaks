@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-24\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-04-11 01:57+0000\n"
-"PO-Revision-Date: 2017-04-11 14:56+0200\n"
+"POT-Creation-Date: 2017-04-11 12:57+0000\n"
+"PO-Revision-Date: 2017-04-30 00:48+0200\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "X-Generator: Poedit 1.8.7.1\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
@@ -95,7 +95,7 @@ msgid "Appearance"
 msgstr "Izgled"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:305
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:232
 msgid "Extensions"
 msgstr "Proširenja"
 
@@ -304,78 +304,41 @@ msgstr "Onemogućeno"
 msgid "Typing"
 msgstr "Tipkanje"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:45
+msgid "No Extensions Installed"
+msgstr "Nema instaliranih proširenja"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:51
+msgid "Browse in Software"
+msgstr "Pregledaj u Softveru"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:112
 msgid "Extension downloading"
 msgstr "Preuzimanje proširenja"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:114
 msgid "Error loading extension"
 msgstr "Greška učitavanja proširenja"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:86
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:116
 msgid "Extension does not support shell version"
 msgstr "Proširenje ne podržava inačicu ljuske"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:88
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Unknown extension error"
 msgstr "Nepoznata greška proširenja"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:109
-#: ../gtweak/tweaks/tweak_group_startup.py:229
-msgid "Remove"
-msgstr "Ukloni"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:141
-msgid "Uninstall Extension"
-msgstr "Ukloni proširenje"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:142
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Želite li ukloniti '%s' proširenje?"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:159
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Updating"
 msgstr "Nadopuna"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:170
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Error"
 msgstr "Greška"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:175
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Update"
 msgstr "Nadopuni"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
-msgid "Install Shell Extension"
-msgstr "Instaliraj proširenje ljuske"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:195
-msgid "Select an extension"
-msgstr "Odaberi proširenje"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:202
-msgid "Get more extensions"
-msgstr "Nabavi više proširenja"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:252
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "%s proširenje je nadopunjeno uspješno"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:254
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "%s proširenje je instalirano uspješno"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:259
-msgid "Error installing extension"
-msgstr "Greška instalacije proširenja"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:264
-msgid "Invalid extension"
-msgstr "Neispravno proširenje"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:33
 msgid "Show Application Menu"
@@ -473,6 +436,10 @@ msgstr "_Zatvori"
 #: ../gtweak/tweaks/tweak_group_startup.py:86
 msgid "_Add"
 msgstr "_Dodaj"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:229
+msgid "Remove"
+msgstr "Ukloni"
 
 #: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
@@ -653,3 +620,27 @@ msgstr ""
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Greška zapisivanja postavke"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "Ukloni proširenje"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "Želite li ukloniti '%s' proširenje?"
+
+#~ msgid "Install Shell Extension"
+#~ msgstr "Instaliraj proširenje ljuske"
+
+#~ msgid "Select an extension"
+#~ msgstr "Odaberi proširenje"
+
+#~ msgid "Get more extensions"
+#~ msgstr "Nabavi više proširenja"
+
+#~ msgid "%s extension updated successfully"
+#~ msgstr "%s proširenje je nadopunjeno uspješno"
+
+#~ msgid "Error installing extension"
+#~ msgstr "Greška instalacije proširenja"
+
+#~ msgid "Invalid extension"
+#~ msgstr "Neispravno proširenje"
