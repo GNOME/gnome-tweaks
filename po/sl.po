@@ -3,24 +3,25 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Martin Srebotnjak  <miles@filmsi.net>, 2011.
-# Matej Urbančič <mateju@svn.gnome.org>, 2011–2016.
+# Matej Urbančič <mateju@svn.gnome.org>, 2011–2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-11-15 20:01+0100\n"
-"PO-Revision-Date: 2016-11-15 20:03+0100\n"
+"POT-Creation-Date: 2017-05-05 14:08+0200\n"
+"PO-Revision-Date: 2017-05-05 14:08+0200\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.8.9\n"
+"X-Generator: Poedit 2.0.1\n"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
 #: ../gtweak/utils.py:327
@@ -34,7 +35,9 @@ msgstr "Prilagodi napredne nastavitve GNOME 3"
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:3
 msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
-msgstr "Program GNOME Tweak Tool omogoča prilagajanje naprednih možnosti okolja GNOME."
+msgstr ""
+"Program GNOME Tweak Tool omogoča prilagajanje naprednih možnosti okolja "
+"GNOME."
 
 #: ../data/gnome-tweak-tool.appdata.xml.in.h:4
 msgid ""
@@ -97,7 +100,7 @@ msgid "Appearance"
 msgstr "Videz"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:232
 msgid "Extensions"
 msgstr "Razširitve"
 
@@ -125,7 +128,7 @@ msgstr "Okna"
 msgid "Workspaces"
 msgstr "Delovne površine"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Mouse"
 msgstr "Miška"
 
@@ -137,11 +140,11 @@ msgstr "Datoteke"
 msgid "Miscellaneous"
 msgstr "Razno"
 
-#: ../gtweak/tweakview.py:100
+#: ../gtweak/tweakview.py:102
 msgid "Tweaks"
 msgstr "Prilagoditve"
 
-#: ../gtweak/tweakview.py:116
+#: ../gtweak/tweakview.py:118
 msgid "Search Tweaks..."
 msgstr "Iskanje prilagoditev ..."
 
@@ -260,7 +263,7 @@ msgid "Could not list shell extensions"
 msgstr "Ni mogoče izpisati seznama razširitev lupine"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+#: ../gtweak/tweaks/tweak_group_keymouse.py:36
 msgid "<i>Default</i>"
 msgstr "<i>Privzeto</i>"
 
@@ -306,78 +309,41 @@ msgstr "Onemogočeno"
 msgid "Typing"
 msgstr "Tipkanje"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:45
+msgid "No Extensions Installed"
+msgstr "Ni nameščenih razširitev"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:51
+msgid "Browse in Software"
+msgstr "Prebrskajte programsko opremo"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:112
 msgid "Extension downloading"
 msgstr "Prejemanje razširitve"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:114
 msgid "Error loading extension"
 msgstr "Napaka med nalaganjem razširitve"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:116
 msgid "Extension does not support shell version"
 msgstr "Razširitev ni priprejena za trenutno različico lupine"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Unknown extension error"
 msgstr "Neznana napaka razširitve"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:229
-msgid "Remove"
-msgstr "Odstrani"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-msgid "Uninstall Extension"
-msgstr "Odstrani razširitev"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Ali želite odstraniti razširitev »%s«?"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Updating"
 msgstr "Posodabljanje"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Error"
 msgstr "Napaka"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Update"
 msgstr "Posodobi"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
-msgid "Install Shell Extension"
-msgstr "Namestitev razširitve lupine"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
-msgid "Select an extension"
-msgstr "Izbor razširitve"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
-msgid "Get more extensions"
-msgstr "Iskanje razširitev"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "Razširitev %s je uspešno posodobljena"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "Razširitev %s je uspešno nameščena"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
-msgid "Error installing extension"
-msgstr "Napaka nameščanja razširitve"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Invalid extension"
-msgstr "Neveljavna razširitev"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:33
 msgid "Show Application Menu"
@@ -476,6 +442,10 @@ msgstr "_Zapri"
 msgid "_Add"
 msgstr "_Dodaj"
 
+#: ../gtweak/tweaks/tweak_group_startup.py:229
+msgid "Remove"
+msgstr "Odstrani"
+
 #: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "Nov zagonski program"
@@ -565,48 +535,48 @@ msgstr "Skrči"
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "Srednji klik miške kopira"
-
 #. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
+#: ../gtweak/tweaks/tweak_group_keymouse.py:30
 msgid "Key theme"
 msgstr "Osnovna tema"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:49
 msgid "Keyboard and Mouse"
 msgstr "Tipkovnica in miška"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:50
 msgid "Show All Input Sources"
 msgstr "Pokaži vse vhodne vire"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:55
 msgid "Switch between overview and desktop"
 msgstr "Preklop med pregledom in prikazom namizja"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Left super"
 msgstr "Leva menijska tipka"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Right super"
 msgstr "Desna menijska tipka"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:72
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
 msgid "Acceleration profile"
 msgstr "Profil pospeševanja"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:76
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Show location of pointer"
 msgstr "Pokaži mesto kazalnika"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:82
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+msgid "Middle-click Paste"
+msgstr "Srednji klik miške kopira"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:73
 msgid "Touchpad"
 msgstr "Sledilna ploščica"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:83
+#: ../gtweak/tweaks/tweak_group_keymouse.py:74
 msgid "Click method"
 msgstr "Način klika"
 
@@ -656,6 +626,30 @@ msgstr ""
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Napaka med zapisovanjem nastavitev"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "Odstrani razširitev"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "Ali želite odstraniti razširitev »%s«?"
+
+#~ msgid "Install Shell Extension"
+#~ msgstr "Namestitev razširitve lupine"
+
+#~ msgid "Select an extension"
+#~ msgstr "Izbor razširitve"
+
+#~ msgid "Get more extensions"
+#~ msgstr "Iskanje razširitev"
+
+#~ msgid "%s extension updated successfully"
+#~ msgstr "Razširitev %s je uspešno posodobljena"
+
+#~ msgid "Error installing extension"
+#~ msgstr "Napaka nameščanja razširitve"
+
+#~ msgid "Invalid extension"
+#~ msgstr "Neveljavna razširitev"
 
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "O programu"
