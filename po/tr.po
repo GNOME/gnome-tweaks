@@ -12,15 +12,16 @@
 # Necdet Yücel <necdetyucel@gmail.com>, 2015.
 # İşbaran Akçayır <isbaran@gmail.com>, 2015.
 # Muhammet Kara <muhammetk@gmail.com>, 2013, 2014, 2015, 2016.
+# Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-09-02 13:46+0000\n"
-"PO-Revision-Date: 2016-09-04 23:33+0300\n"
-"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
+"POT-Creation-Date: 2017-05-24 20:22+0000\n"
+"PO-Revision-Date: 2017-05-25 02:49+0300\n"
+"Last-Translator: Furkan Ahmet Kara <furkanahmetkara.fk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -106,7 +107,7 @@ msgid "Appearance"
 msgstr "Görünüm"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:232
 msgid "Extensions"
 msgstr "Eklentiler"
 
@@ -134,7 +135,7 @@ msgstr "Pencereler"
 msgid "Workspaces"
 msgstr "Çalışma Alanları"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:60
 msgid "Mouse"
 msgstr "Fare"
 
@@ -146,11 +147,11 @@ msgstr "Dosyalar"
 msgid "Miscellaneous"
 msgstr "Çeşitli"
 
-#: ../gtweak/tweakview.py:100
+#: ../gtweak/tweakview.py:102
 msgid "Tweaks"
 msgstr "İnce Ayarlar"
 
-#: ../gtweak/tweakview.py:116
+#: ../gtweak/tweakview.py:118
 msgid "Search Tweaks..."
 msgstr "İnce Ayar Ara..."
 
@@ -269,7 +270,7 @@ msgid "Could not list shell extensions"
 msgstr "Kabuk eklentileri listelenemiyor"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+#: ../gtweak/tweaks/tweak_group_keymouse.py:36
 msgid "<i>Default</i>"
 msgstr "<i>Öntanımlı</i>"
 
@@ -315,78 +316,41 @@ msgstr "Devre dışı"
 msgid "Typing"
 msgstr "Klavye"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:45
+msgid "No Extensions Installed"
+msgstr "Yüklü Eklenti Yok"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:51
+msgid "Browse in Software"
+msgstr "Software içinde ara"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:112
 msgid "Extension downloading"
 msgstr "Eklenti indiriliyor"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:114
 msgid "Error loading extension"
 msgstr "Eklenti çalıştırılırken hata"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:116
 msgid "Extension does not support shell version"
 msgstr "Eklenti kabuk sürümünü desteklemiyor"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Unknown extension error"
 msgstr "Bilinmeyen eklenti hatası"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:229
-msgid "Remove"
-msgstr "Kaldır"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-msgid "Uninstall Extension"
-msgstr "Eklentiyi Kaldır"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "'%s' eklentisini kaldırmak ister misiniz?"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Updating"
 msgstr "Güncelleniyor"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Error"
 msgstr "Hata"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Update"
 msgstr "Güncelle"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
-msgid "Install Shell Extension"
-msgstr "Kabuk Eklentisi Kur"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
-msgid "Select an extension"
-msgstr "Eklenti seç"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
-msgid "Get more extensions"
-msgstr "Daha fazla eklenti edin"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "%s eklentisi başarıyla güncellendi"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "%s eklentisi başarıyla kuruldu"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
-msgid "Error installing extension"
-msgstr "Eklenti kurulumunda hata"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Invalid extension"
-msgstr "Geçersiz eklenti"
 
 #: ../gtweak/tweaks/tweak_group_shell.py:33
 msgid "Show Application Menu"
@@ -485,6 +449,10 @@ msgstr "_Kapat"
 msgid "_Add"
 msgstr "_Ekle"
 
+#: ../gtweak/tweaks/tweak_group_startup.py:229
+msgid "Remove"
+msgstr "Kaldır"
+
 #: ../gtweak/tweaks/tweak_group_startup.py:253
 msgid "New startup application"
 msgstr "Yeni başlangıç uygulaması"
@@ -571,48 +539,48 @@ msgstr "Küçült"
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "Orta Tuş Tıklamasıyla Yapıştır"
-
 #. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
+#: ../gtweak/tweaks/tweak_group_keymouse.py:30
 msgid "Key theme"
 msgstr "Tuş teması"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
+#: ../gtweak/tweaks/tweak_group_keymouse.py:49
 msgid "Keyboard and Mouse"
 msgstr "Klavye ve Fare"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
+#: ../gtweak/tweaks/tweak_group_keymouse.py:50
 msgid "Show All Input Sources"
 msgstr "Tüm Giriş Kaynaklarını Göster"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
+#: ../gtweak/tweaks/tweak_group_keymouse.py:55
 msgid "Switch between overview and desktop"
 msgstr "Genel görünüm ve masaüstü arasında geçiş"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Left super"
 msgstr "Sol süper"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+#: ../gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Right super"
 msgstr "Sağ süper"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:72
+#: ../gtweak/tweaks/tweak_group_keymouse.py:61
 msgid "Acceleration profile"
 msgstr "Hızlandırma profili"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:76
+#: ../gtweak/tweaks/tweak_group_keymouse.py:65
 msgid "Show location of pointer"
 msgstr "İşaretçi konumunu göster"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:82
+#: ../gtweak/tweaks/tweak_group_keymouse.py:69
+msgid "Middle-click Paste"
+msgstr "Orta Tuş Tıklamasıyla Yapıştır"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:73
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:83
+#: ../gtweak/tweaks/tweak_group_keymouse.py:74
 msgid "Click method"
 msgstr "Tıklama yöntemi"
 
@@ -664,6 +632,30 @@ msgstr ""
 #: ../gtweak/widgets.py:512
 msgid "Error writing setting"
 msgstr "Ayar kaydedilirken hata"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "Eklentiyi Kaldır"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "'%s' eklentisini kaldırmak ister misiniz?"
+
+#~ msgid "Install Shell Extension"
+#~ msgstr "Kabuk Eklentisi Kur"
+
+#~ msgid "Select an extension"
+#~ msgstr "Eklenti seç"
+
+#~ msgid "Get more extensions"
+#~ msgstr "Daha fazla eklenti edin"
+
+#~ msgid "%s extension updated successfully"
+#~ msgstr "%s eklentisi başarıyla güncellendi"
+
+#~ msgid "Error installing extension"
+#~ msgstr "Eklenti kurulumunda hata"
+
+#~ msgid "Invalid extension"
+#~ msgstr "Geçersiz eklenti"
 
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "GNOME İnce Ayar Aracı Hakkında"
