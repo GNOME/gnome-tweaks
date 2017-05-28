@@ -20,30 +20,24 @@ import os.path
 from gi.repository import GLib
 
 import gtweak
-from gtweak.utils import XSettingsOverrides, walk_directories, make_combo_list_with_default
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GetterSetterSwitchTweak, Title, GSettingsComboEnumTweak
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GSettingsSwitchTweakValue, GetterSetterSwitchTweak, Title, GSettingsComboEnumTweak
 
-class KeyThemeSwitcher(GSettingsComboTweak):
+class KeyThemeSwitcher(GSettingsSwitchTweakValue):
     def __init__(self, **options):
-        GSettingsComboTweak.__init__(self,
-			# Translators: This setting refers to a set of pre-defined key bindings
-			_("Key theme"),
-            "org.gnome.desktop.interface",
-            "gtk-key-theme",
-            make_combo_list_with_default(
-                self._get_valid_key_themes(),
-                "Default",
-                default_text=_("<i>Default</i>")),
-            **options)
+        GSettingsSwitchTweakValue.__init__(self,
+                                           _("Emacs Input"),
+                                           "org.gnome.desktop.interface",
+                                           "gtk-key-theme",
+                                           **options)
 
-    def _get_valid_key_themes(self):
-        dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
-                 os.path.join(GLib.get_user_data_dir(), "themes"),
-                 os.path.join(os.path.expanduser("~"), ".themes"))
-        valid = walk_directories(dirs, lambda d:
-                    os.path.isfile(os.path.join(d, "gtk-3.0", "gtk-keys.css")) and \
-                    os.path.isfile(os.path.join(d, "gtk-2.0-key", "gtkrc")))
-        return valid
+    def get_active(self):
+        return "Emacs" in self.settings.get_string(self.key_name)
+
+    def set_active(self, v):
+        if v:
+            self.settings.set_string(self.key_name, "Emacs")
+        else:
+            self.settings.set_string(self.key_name, "Default")
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Keyboard & Mouse"),
