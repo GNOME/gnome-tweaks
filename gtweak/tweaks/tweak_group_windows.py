@@ -18,14 +18,11 @@
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, Tweak
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue, build_label_beside_widget
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue, build_label_beside_widget, _GSettingsTweak
 from gtweak.utils import XSettingsOverrides
 import gettext
 
 from gi.repository import Gtk, GLib
-
-_shell = GnomeShellFactory().get_shell()
-_shell_loaded = _shell is not None
 
 class ShowWindowButtons(GSettingsSwitchTweakValue):
 
@@ -35,31 +32,89 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
                                            name,
                                            "org.gnome.desktop.wm.preferences",
                                            "button-layout",
-                                           loaded=_shell_loaded,
                                            **options)
     def get_active(self):
         return self.value in self.settings.get_string(self.key_name)
 
     def set_active(self, v):
         val = self.settings.get_string(self.key_name)
-
         (left, colon, right) = val.partition(":")
-        rsplit = right.split(",")
 
-        if v:
-            rsplit.append(self.value)
-        else:
-            rsplit.remove(self.value)
+        if "close" in right:
+            rsplit = right.split(",")
 
-        def sort_buttons(x, y):
-            order = ["minimize", "maximize", "close"];
-            if x in order and y in order:
-                return order.index(x) - order.index(y)
+            if v:
+                rsplit.append(self.value)
             else:
-                return 0
-        rsplit.sort(cmp=sort_buttons)
+                rsplit.remove(self.value)
 
-        self.settings.set_string(self.key_name, left + colon + ",".join(rsplit))
+            def sort_buttons(x, y):
+                order = ["minimize", "maximize", "close"];
+                if x in order and y in order:
+                     return order.index(x) - order.index(y)
+                else:
+                    return 0
+            rsplit.sort(cmp=sort_buttons)
+
+            self.settings.set_string(self.key_name, left + colon + ",".join(rsplit))
+
+        else:
+            rsplit = left.split(",")
+
+            if v:
+                rsplit.append(self.value)
+            else:
+                rsplit.remove(self.value)
+
+            def sort_buttons(x, y):
+                order = ["close", "maximize", "minimize"];
+                if x in order and y in order:
+                     return order.index(x) - order.index(y)
+                else:
+                    return 0
+            rsplit.sort(cmp=sort_buttons)
+
+            self.settings.set_string(self.key_name, ",".join(rsplit) + colon + right)
+
+class PlaceWindowButtons(Gtk.Box, _GSettingsTweak):
+
+    def __init__(self, **options):
+        name = _("Placement")
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
+
+        _GSettingsTweak.__init__(self,
+                                 name,
+                                 "org.gnome.desktop.wm.preferences",
+                                 "button-layout",
+                                 **options)
+
+        box_btn = Gtk.ButtonBox()
+        box_btn.set_layout(Gtk.ButtonBoxStyle.EXPAND)
+
+        btn1 = Gtk.RadioButton.new_with_label_from_widget(None, _("Left"))
+        btn1.set_property("draw-indicator", False)
+
+        btn2 = Gtk.RadioButton.new_from_widget(btn1)
+        btn2.set_label(_("Right"))
+        btn2.set_property("draw-indicator", False)
+
+        val = self.settings.get_string(self.key_name)
+        (left, colon, right) = val.partition(":")
+        if "close" in right:
+           btn2.set_active(True)
+        btn2.connect("toggled", self.on_button_toggled)
+
+        box_btn.pack_start(btn1, True, True, 0)
+        box_btn.pack_start(btn2, True, True, 0)
+
+        build_label_beside_widget(name, box_btn, hbox=self)
+
+    def on_button_toggled(self, v):
+        val = self.settings.get_string(self.key_name)
+        (left, colon, right) = val.partition(":")
+        left = ','.join(list(reversed(left.split(','))))
+        right = ','.join(list(reversed(right.split(','))))
+        self.settings.set_string(self.key_name, right + colon + left)
 
 class WindowScalingFactorTweak(Gtk.Box, Tweak):
     def __init__(self, **options):
@@ -154,6 +209,7 @@ TWEAK_GROUPS = [
         Title(_("Titlebar Buttons"), "", uid="title-theme"),
         ShowWindowButtons(_("Maximize"), "maximize"),
         ShowWindowButtons(_("Minimize"), "minimize"),
+        PlaceWindowButtons(),
         Title(_("HiDPI"), "", uid="title-hidpi"),
         WindowScalingFactorTweak(),
     )
