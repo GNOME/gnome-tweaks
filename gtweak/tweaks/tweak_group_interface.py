@@ -38,7 +38,7 @@ _shell_loaded = _shell is not None
 class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-			"GTK+",
+			_("Applications"),
             "org.gnome.desktop.interface",
             "gtk-theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
@@ -107,7 +107,7 @@ class ShellThemeTweak(Gtk.Box, Tweak):
 
     def __init__(self, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        Tweak.__init__(self, _("Shell theme"), _("Install custom or user themes for gnome-shell"), **options)
+        Tweak.__init__(self, _("Shell"), _("Install custom or user themes for gnome-shell"), **options)
 
         #check the shell is running and the usertheme extension is present
         error = _("Unknown error")
@@ -258,11 +258,11 @@ TWEAK_GROUPS = [
         DarkThemeSwitcher(),
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-        Title(_("Theme"), "", uid="title-theme"),
+        GSettingsSwitchTweak(_("Animations"), "org.gnome.desktop.interface", "enable-animations"),
+        Title(_("Themes"), "", uid="title-theme"),
         GtkThemeSwitcher(),
-        IconThemeSwitcher(),
         CursorThemeSwitcher(),
+        IconThemeSwitcher(),
         ShellThemeTweak(loaded=_shell_loaded),
-        GSettingsSwitchTweak(_("Enable animations"), "org.gnome.desktop.interface", "enable-animations"),
     ),
 ]

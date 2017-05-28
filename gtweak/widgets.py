@@ -483,7 +483,7 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
         w.set_active(self._gtksettings.get_integer("gtk-application-prefer-dark-theme"))
 		
         title = _("Global Dark Theme")
-        description = _("Applications need to be restarted for change to take effect")
+        description = _("Applications need to be restarted for this change to take place.")
         w.connect("notify::active", self._on_switch_changed)
         
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
@@ -496,7 +496,8 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
         
         lbl_des = Gtk.Label()
         lbl_des.props.xalign = 0.0
-        lbl_des.set_markup("<span size='x-small'>"+GLib.markup_escape_text(description)+"</span>")
+        lbl_des.get_style_context().add_class("dim-label")
+        lbl_des.set_markup("<span size='small'>"+GLib.markup_escape_text(description)+"</span>")
         
         self.pack_start(hbox, False, False, 0)
         self.pack_start(lbl_des, False, False,0)
