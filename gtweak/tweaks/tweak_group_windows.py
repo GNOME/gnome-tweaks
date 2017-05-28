@@ -132,20 +132,25 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
         self._close()
         self._dialog.destroy()
 
+Focus =  GSettingsComboTweak(_("Focus Mode"), "org.gnome.desktop.wm.preferences", "focus-mode",
+      [("click", _("Click to Focus")), ("sloppy", _("Sloppy")), ("mouse", _("Mouse"))])
+depends_how = lambda x,kn: x.get_string(kn) in ("mouse", "sloppy")
+
 TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
-        GSettingsSwitchTweak(_("Attached Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs"),
-        GSettingsSwitchTweak(_("Automatically Raise Windows"),"org.gnome.desktop.wm.preferences", "auto-raise"),
-        GSettingsSwitchTweak(_("Resize with Secondary-click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
+        GSettingsSwitchTweak(_("Attach Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs",
+                        desc=_("When on, modal dialog windows are attached to their parent windows, and cannot be moved.")),
+        GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
         GSettingsComboTweak(_("Window Action Key"),
                         "org.gnome.desktop.wm.preferences",
                         "mouse-button-modifier",
                         [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
-        GSettingsComboEnumTweak(_("Focus Mode"), "org.gnome.desktop.wm.preferences", "focus-mode"),
+        Focus,
+        GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus, depends_how=depends_how),
         Title(_("Titlebar Actions"), "", uid="title-titlebar-actions"),
-        GSettingsComboEnumTweak(_("Double-click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
-        GSettingsComboEnumTweak(_("Middle-click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
-        GSettingsComboEnumTweak(_("Secondary-click"),"org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
+        GSettingsComboEnumTweak(_("Double-Click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
+        GSettingsComboEnumTweak(_("Middle-Click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
+        GSettingsComboEnumTweak(_("Secondary-Click"),"org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
         Title(_("Titlebar Buttons"), "", uid="title-theme"),
         ShowWindowButtons(_("Maximize"), "maximize"),
         ShowWindowButtons(_("Minimize"), "minimize"),
