@@ -102,6 +102,7 @@ class GnomeTweakTool(Gtk.Application):
         else:
             about_comment = _("GNOME Shell is not running")
 
+        about_comment += "\n" + _("GTK+") + " %d.%d.%d" % (Gtk.get_major_version(), Gtk.get_minor_version(), Gtk.get_micro_version())
         aboutdialog.set_comments(about_comment)
 
         aboutdialog.set_copyright("Copyright \xc2\xa9 2011 - 2013 John Stowers.")
