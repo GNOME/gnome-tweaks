@@ -22,6 +22,7 @@ from gi.repository import Gio
 from gi.repository import GLib
 
 import gtweak 
+from gtweak.defs import VERSION
 from gtweak.tweakmodel import TweakModel
 from gtweak.tweakview import Window
 from gtweak.utils import SchemaList
@@ -92,6 +93,7 @@ class GnomeTweakTool(Gtk.Application):
 
     def about_cb(self, action, parameter):
         aboutdialog = Gtk.AboutDialog(modal=True, transient_for=self.win)
+        aboutdialog.set_program_name(aboutdialog.get_program_name() + " %s" % VERSION)
 
         _shell = GnomeShellFactory().get_shell()
         if _shell is not None:
