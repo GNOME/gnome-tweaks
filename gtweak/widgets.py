@@ -275,13 +275,37 @@ class GSettingsSwitchTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         w = Gtk.Switch()
         self.settings.bind(key_name, w, "active", Gio.SettingsBindFlags.DEFAULT)
 
-        build_label_beside_widget(name, w, hbox=self)
-        self.widget_for_size_group = None
-
         self.add_dependency_on_tweak(
                 options.get("depends_on"),
                 options.get("depends_how")
         )
+
+        vbox1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        vbox1.props.spacing = UI_BOX_SPACING
+        lbl = Gtk.Label(label=name)
+        lbl.props.ellipsize = Pango.EllipsizeMode.END
+        lbl.props.xalign = 0.0
+        vbox1.pack_start(lbl, True, True, 0)
+
+        if options.get("desc"):
+            description = options.get("desc")
+            lbl_desc = Gtk.Label()
+            lbl_desc.props.xalign = 0.0
+            lbl_desc.set_line_wrap(True)
+            lbl_desc.get_style_context().add_class("dim-label")
+            lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(description)+"</span>")
+            vbox1.pack_start(lbl_desc, True, True, 0)
+
+        vbox2 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        vbox2_upper = Gtk.Box()
+        vbox2_lower = Gtk.Box()
+        vbox2.pack_start(vbox2_upper, True, True, 0)
+        vbox2.pack_start(w, False, False, 0)
+        vbox2.pack_start(vbox2_lower, True, True, 0)
+
+        self.pack_start(vbox1, True, True, 0)
+        self.pack_start(vbox2, False, False, 0)
+        self.widget_for_size_group = None
 
 class GSettingsFontButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
     def __init__(self, name, schema_name, key_name, **options):
