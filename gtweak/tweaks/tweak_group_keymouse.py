@@ -17,10 +17,10 @@
 
 import os.path
 
-from gi.repository import GLib
+from gi.repository import GLib, Gtk
 
 import gtweak
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GSettingsSwitchTweakValue, GetterSetterSwitchTweak, Title, GSettingsComboEnumTweak
+from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, GetterSetterSwitchTweak, Title, GSettingsComboEnumTweak, build_label_beside_widget
 
 class KeyThemeSwitcher(GSettingsSwitchTweakValue):
     def __init__(self, **options):
@@ -39,6 +39,35 @@ class KeyThemeSwitcher(GSettingsSwitchTweakValue):
         else:
             self.settings.set_string(self.key_name, "Default")
 
+class OverviewShortcutTweak(Gtk.Box, _GSettingsTweak):
+
+    def __init__(self, **options):
+        name = _("Overview Shortcut")
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
+        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "overlay-key", **options)
+
+        box_btn = Gtk.ButtonBox()
+        box_btn.set_layout(Gtk.ButtonBoxStyle.EXPAND)
+
+        btn1 = Gtk.RadioButton.new_with_label_from_widget(None, _("Left Super"))
+        btn1.set_property("draw-indicator", False)
+
+        btn2 = Gtk.RadioButton.new_from_widget(btn1)
+        btn2.set_label(_("Right Super"))
+        btn2.set_property("draw-indicator", False)
+
+        if (self.settings.get_string(self.key_name) == "Super_R"):
+            btn2.set_active(True)
+        btn1.connect("toggled", self.on_button_toggled, "Super_L")
+        btn2.connect("toggled", self.on_button_toggled, "Super_R")
+
+        box_btn.pack_start(btn1, True, True, 0)
+        box_btn.pack_start(btn2, True, True, 0)
+        build_label_beside_widget(name, box_btn, hbox=self)
+
+    def on_button_toggled(self, button, key):
+        self.settings[self.key_name] = key
+
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Keyboard & Mouse"),
         GSettingsSwitchTweak(_("Show Extended Input Sources"),
@@ -47,11 +76,7 @@ TWEAK_GROUPS = [
                               desc=_("Increases the choice of input sources in the Settings application."),
                               logout_required=True,),
         KeyThemeSwitcher(),
-        GSettingsComboTweak(_("Switch between overview and desktop"),
-                              "org.gnome.mutter",
-                              "overlay-key",
-                              [("Super_L", _("Left super")), ("Super_R", _("Right super"))]),
-              
+        OverviewShortcutTweak(),
         Title(_("Mouse"), ""),
         GSettingsComboEnumTweak(_("Acceleration Profile"),
                                 "org.gnome.desktop.peripherals.mouse",
