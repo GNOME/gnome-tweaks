@@ -95,9 +95,14 @@ class GnomeTweakTool(Gtk.Application):
 
         _shell = GnomeShellFactory().get_shell()
         if _shell is not None:
-            aboutdialog.set_comments(_("GNOME Shell v%s (%s mode)") % (_shell.version, _shell.mode))
+            if _shell.mode == "user":
+                about_comment = _("GNOME Shell") + " %s" % _shell.version
+            else:
+                about_comment = (_("GNOME Shell") + " %s " + _("(%s mode)")) % (_shell.version, _shell.mode)
         else:
-            aboutdialog.set_comments(_("GNOME Shell not running"))
+            about_comment = _("GNOME Shell is not running")
+
+        aboutdialog.set_comments(about_comment)
 
         aboutdialog.set_copyright("Copyright \xc2\xa9 2011 - 2013 John Stowers.")
         aboutdialog.set_logo_icon_name("gnome-tweak-tool")
