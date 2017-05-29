@@ -6,20 +6,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-09-02 13:46+0000\n"
-"PO-Revision-Date: 2016-09-04 09:19+0500\n"
+"POT-Creation-Date: 2017-05-29 15:09+0000\n"
+"PO-Revision-Date: 2017-05-29 20:47+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.8.12\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
+#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:35
 #: ../gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME қосымша баптаулары"
@@ -69,24 +69,32 @@ msgstr "Осы т_уралы"
 msgid "_Quit"
 msgstr "_Шығу"
 
-#: ../gtweak/app.py:78
+#: ../gtweak/app.py:79
 msgid "Reset to Defaults"
 msgstr "Бастапқы түріне тастау"
 
-#: ../gtweak/app.py:79
+#: ../gtweak/app.py:80
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Барлық қосымша баптауларды бастапқы мәндеріне тастау керек пе?"
 
-#: ../gtweak/app.py:98
-#, python-format
-msgid "GNOME Shell v%s (%s mode)"
-msgstr "GNOME Shell v%s (%s режимі)"
+#: ../gtweak/app.py:101 ../gtweak/app.py:103
+msgid "GNOME Shell"
+msgstr "GNOME Shell"
 
-#: ../gtweak/app.py:100
-msgid "GNOME Shell not running"
-msgstr "GNOME Shell орындалып тұрған жоқ"
+#: ../gtweak/app.py:103
+#, python-format
+msgid "(%s mode)"
+msgstr "(%s режимі)"
 
 #: ../gtweak/app.py:105
+msgid "GNOME Shell is not running"
+msgstr "GNOME Shell орындалып тұрған жоқ"
+
+#: ../gtweak/app.py:107
+msgid "GTK+"
+msgstr "GTK+"
+
+#: ../gtweak/app.py:113
 msgid "Homepage"
 msgstr "Үй парағы"
 
@@ -95,7 +103,7 @@ msgid "Appearance"
 msgstr "Сыртқы түрі"
 
 #: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:232
 msgid "Extensions"
 msgstr "Кеңейтулер"
 
@@ -107,7 +115,7 @@ msgstr "Қаріптер"
 msgid "Power"
 msgstr "Эл. қорегі"
 
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
+#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:304
 msgid "Startup Applications"
 msgstr "Автожөнелтілетін қолданбалар"
 
@@ -123,7 +131,8 @@ msgstr "Терезелер"
 msgid "Workspaces"
 msgstr "Жұмыс орындары"
 
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
+#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_windows.py:136
+#: ../gtweak/tweaks/tweak_group_keymouse.py:80
 msgid "Mouse"
 msgstr "Тышқан"
 
@@ -135,62 +144,59 @@ msgstr "Файлдар"
 msgid "Miscellaneous"
 msgstr "Әр түрлі"
 
-#: ../gtweak/tweakview.py:100
+#: ../gtweak/tweakview.py:103
 msgid "Tweaks"
 msgstr "Қосымша баптаулар"
 
-#: ../gtweak/tweakview.py:116
-msgid "Search Tweaks..."
-msgstr "Қосымша баптауларды іздеу..."
+#: ../gtweak/tweakview.py:119
+msgid "Search Tweaks…"
+msgstr "Қосымша баптауларды іздеу…"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:22
-msgid "Icons on Desktop"
-msgstr "Жұмыс үстеліндегі таңбашалар"
+#: ../gtweak/tweaks/tweak_group_desktop.py:20
+msgid "Show Icons"
+msgstr "Таңбашаларды көрсету"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:25
+#: ../gtweak/tweaks/tweak_group_desktop.py:23
 msgid "Desktop"
 msgstr "Жұмыс үстелі"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:27
-msgid "Computer"
-msgstr "Компьютер"
+#: ../gtweak/tweaks/tweak_group_desktop.py:24
+msgid "Icons on Desktop"
+msgstr "Жұмыс үстеліндегі таңбашалар"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:28
+#: ../gtweak/tweaks/tweak_group_desktop.py:26
 msgid "Home"
 msgstr "Үй бумасы"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:29
+#: ../gtweak/tweaks/tweak_group_desktop.py:27
 msgid "Network Servers"
 msgstr "Желілік серверлер"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:30
+#: ../gtweak/tweaks/tweak_group_desktop.py:28
 msgid "Trash"
 msgstr "Қоқыс шелегі"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:31
+#: ../gtweak/tweaks/tweak_group_desktop.py:29
 msgid "Mounted Volumes"
 msgstr "Тіркелген диск томдары"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:32
+#: ../gtweak/tweaks/tweak_group_desktop.py:30
 msgid "Background"
 msgstr "Фон"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:33
-#: ../gtweak/tweaks/tweak_group_desktop.py:36
-msgid "Mode"
-msgstr "Режимі"
-
+#: ../gtweak/tweaks/tweak_group_desktop.py:31
 #: ../gtweak/tweaks/tweak_group_desktop.py:34
-msgid "Background Location"
-msgstr "Фонның орналасуы"
+msgid "Image"
+msgstr "Сурет"
 
+#: ../gtweak/tweaks/tweak_group_desktop.py:32
 #: ../gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Adjustment"
+msgstr "Келтіру"
+
+#: ../gtweak/tweaks/tweak_group_desktop.py:33
 msgid "Lock Screen"
 msgstr "Блоктау экраны"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:37
-msgid "Lock Screen Location"
-msgstr "Блоктау экранның орналасуы"
 
 #: ../gtweak/tweaks/tweak_group_font.py:25
 msgid "Window Titles"
@@ -220,6 +226,11 @@ msgstr "Антиалиасинг"
 msgid "Scaling Factor"
 msgstr "Масштаб"
 
+#: ../gtweak/tweaks/tweak_group_interface.py:41
+#: ../gtweak/tweaks/tweak_group_startup.py:43
+msgid "Applications"
+msgstr "Қолданбалар"
+
 #: ../gtweak/tweaks/tweak_group_interface.py:65
 msgid "Icons"
 msgstr "Таңбашалар"
@@ -229,8 +240,8 @@ msgid "Cursor"
 msgstr "Курсор"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:110
-msgid "Shell theme"
-msgstr "Shell темасы"
+msgid "Shell"
+msgstr "Shell"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:110
 msgid "Install custom or user themes for gnome-shell"
@@ -258,7 +269,6 @@ msgid "Could not list shell extensions"
 msgstr "Shell кеңейтулерін тізіп шығару мүмкін емес"
 
 #: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "<i>Default</i>"
 msgstr "<i>Бастапқы</i>"
 
@@ -288,15 +298,15 @@ msgstr "Жарамсыз тема"
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
 #: ../gtweak/tweaks/tweak_group_interface.py:261
-msgid "Theme"
-msgstr "Тема"
+msgid "Animations"
+msgstr "Анимациялар"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:266
-msgid "Enable animations"
-msgstr "Анимацияларды іске қосу"
+#: ../gtweak/tweaks/tweak_group_interface.py:262
+msgid "Themes"
+msgstr "Темалар"
 
 #: ../gtweak/tweaks/tweak_group_xkb.py:55
-#: ../gtweak/tweaks/tweak_group_windows.py:143
+#: ../gtweak/tweaks/tweak_group_windows.py:147
 msgid "Disabled"
 msgstr "Сөндірулі"
 
@@ -304,181 +314,144 @@ msgstr "Сөндірулі"
 msgid "Typing"
 msgstr "Теру"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:45
+msgid "No Extensions Installed"
+msgstr "Кеңейтулер орнатылмаған"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:51
+msgid "Browse in Software"
+msgstr "БҚ қолданбасында шолу"
+
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:112
 msgid "Extension downloading"
 msgstr "Кеңейтуді жүктеп алу"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:114
 msgid "Error loading extension"
 msgstr "Кеңейтуді жүктеп алу қатесі"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:116
 msgid "Extension does not support shell version"
 msgstr "Кеңейту бұл shell нұсқасын қолдамайды"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Unknown extension error"
 msgstr "Кеңейтудің белгісіз қатесі"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:229
-msgid "Remove"
-msgstr "Өшіру"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-msgid "Uninstall Extension"
-msgstr "Кеңейтуді өшіру"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "'%s' кеңейтуін өшіруді шынымен қалайсыз ба?"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
 msgid "Updating"
 msgstr "Жаңарту"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
 msgid "Error"
 msgstr "Қате"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Update"
 msgstr "Жаңарту"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
-msgid "Install Shell Extension"
-msgstr "Shell кеңейтуін жаңарту"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
-msgid "Select an extension"
-msgstr "Кеңейтуді таңдау"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
-msgid "Get more extensions"
-msgstr "Көбірек кеңейтулерді алу"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "%s кеңейтуі сәтті жаңартылды"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "%s кеңейтуі сәтті орнатылды"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
-msgid "Error installing extension"
-msgstr "Кеңейтуді орнату қатесі"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Invalid extension"
-msgstr "Жарамсыз кеңейту"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:33
+#: ../gtweak/tweaks/tweak_group_shell.py:34
 msgid "Show Application Menu"
 msgstr "Қолданбалар мәзірін көрсету"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:46
+#: ../gtweak/tweaks/tweak_group_shell.py:47
 msgid "Workspace Creation"
 msgstr "Жұмыс орнын жасау"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:51
+#: ../gtweak/tweaks/tweak_group_shell.py:52
 msgid "Dynamic"
 msgstr "Динамикалық"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:51
+#: ../gtweak/tweaks/tweak_group_shell.py:52
 msgid "Static"
 msgstr "Статикалық"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:74
-msgid "Don't suspend on lid close"
+#: ../gtweak/tweaks/tweak_group_shell.py:75
+msgid "Don’t suspend on lid close"
 msgstr "Қақпа жабылғанда ұйықтамау"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:104
+#: ../gtweak/tweaks/tweak_group_shell.py:105
 msgid "Clock"
 msgstr "Сағат"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:105
+#: ../gtweak/tweaks/tweak_group_shell.py:106
 msgid "Show date"
 msgstr "Күнді көрсету"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:106
+#: ../gtweak/tweaks/tweak_group_shell.py:107
 msgid "Show seconds"
 msgstr "Секундтарды көрсету"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:107
+#: ../gtweak/tweaks/tweak_group_shell.py:108
 msgid "Calendar"
 msgstr "Күнтізбе"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:108
+#: ../gtweak/tweaks/tweak_group_shell.py:109
 msgid "Show week numbers"
 msgstr "Апта нөмірлерін көрсету"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:111
+#: ../gtweak/tweaks/tweak_group_shell.py:112
 msgid "When Power Button is Pressed"
 msgstr "Қорек батырмасы басылған кезде"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:112
+#: ../gtweak/tweaks/tweak_group_shell.py:113
 msgid "Action"
 msgstr "Әрекет"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:113
+#: ../gtweak/tweaks/tweak_group_shell.py:114
 msgid "When Laptop Lid is Closed"
 msgstr "Ноутбук қақпағы жабылса"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:114
+#: ../gtweak/tweaks/tweak_group_shell.py:115
 msgid "On Battery Power"
 msgstr "Батареядан жұмыс істеген кезде"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:115
+#: ../gtweak/tweaks/tweak_group_shell.py:116
 msgid "When plugged in"
 msgstr "Эл. желісінде болған кезде"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:116
+#: ../gtweak/tweaks/tweak_group_shell.py:117
 msgid "Suspend even if an external monitor is plugged in"
 msgstr "Сыртқы монитор жалғанып тұрса да, ұйықтату"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:121
+#: ../gtweak/tweaks/tweak_group_shell.py:122
 msgid "Number of Workspaces"
 msgstr "Жұмыс орындар саны"
 
-#: ../gtweak/tweaks/tweak_group_shell.py:122
+#: ../gtweak/tweaks/tweak_group_shell.py:123
 msgid "Workspaces only on primary display"
 msgstr "Жұмыс орындар тек біріншілік мониторда"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Қолданбалар"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications..."
-msgstr "Қолданбалардан іздеу..."
+#: ../gtweak/tweaks/tweak_group_startup.py:49
+msgid "Search Applications…"
+msgstr "Қолданбалардан іздеу…"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:56
+#: ../gtweak/tweaks/tweak_group_startup.py:57
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:75
+#: ../gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "орындалуда"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:85
+#: ../gtweak/tweaks/tweak_group_startup.py:86
 msgid "_Close"
 msgstr "_Жабу"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:86
+#: ../gtweak/tweaks/tweak_group_startup.py:87
 msgid "_Add"
 msgstr "Қо_су"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:253
+#: ../gtweak/tweaks/tweak_group_startup.py:230
+msgid "Remove"
+msgstr "Өшіру"
+
+#: ../gtweak/tweaks/tweak_group_startup.py:254
 msgid "New startup application"
 msgstr "Жаңа автожөнелтілетін қолданбасы"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:254
+#: ../gtweak/tweaks/tweak_group_startup.py:255
 msgid "Add a new application to be run at startup"
 msgstr "Жүйеге кірген кезде автожөнелтілетін қолданбаны қосу"
 
@@ -508,101 +481,124 @@ msgstr "Баптауларды қайтару"
 msgid "Keep Changes"
 msgstr "Өзгерістерді сақтау"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:137
-msgid "Attached Modal Dialogs"
-msgstr "Жалғанған модальді сұхбаттар"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:138
-msgid "Automatically Raise Windows"
-msgstr "Терезелерді автокөтеру"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:139
-msgid "Resize with Secondary-click"
-msgstr "Екіншілік шертумен өлшемін өзгерту"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:140
-msgid "Window Action Key"
-msgstr "Терезе әрекеттер пернесі"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:144
+#: ../gtweak/tweaks/tweak_group_windows.py:135
 msgid "Focus Mode"
 msgstr "Фокус режимі"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:145
+#: ../gtweak/tweaks/tweak_group_windows.py:136
+msgid "Click to Focus"
+msgstr "Фокусты алу үшін шерту"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:136
+msgid "Sloppy"
+msgstr "Дәлсіз"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:141
+msgid "Attach Modal Dialogs"
+msgstr "Жалғанған модальді сұхбаттар"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:142
+msgid ""
+"When on, modal dialog windows are attached to their parent windows, and "
+"cannot be moved."
+msgstr ""
+"Іске қосулы кезде, модальді сұхбаттар аталық терезелерге тіркелген, және "
+"оларды бөлек жылжыту мүмкін емес."
+
+#: ../gtweak/tweaks/tweak_group_windows.py:143
+msgid "Resize with Secondary-Click"
+msgstr "Екіншілік шертумен өлшемін өзгерту"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:144
+msgid "Window Action Key"
+msgstr "Терезе әрекеттер пернесі"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:149
+msgid "Raise Windows When Focused"
+msgstr "Терезелерді фокус алғанда көтеру"
+
+#: ../gtweak/tweaks/tweak_group_windows.py:150
 msgid "Titlebar Actions"
 msgstr "Атау жолағы әрекеттері"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:146
-msgid "Double-click"
+#: ../gtweak/tweaks/tweak_group_windows.py:151
+msgid "Double-Click"
 msgstr "Қос шерту"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:147
-msgid "Middle-click"
+#: ../gtweak/tweaks/tweak_group_windows.py:152
+msgid "Middle-Click"
 msgstr "Орта шерту"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:148
-msgid "Secondary-click"
+#: ../gtweak/tweaks/tweak_group_windows.py:153
+msgid "Secondary-Click"
 msgstr "Екіншілік шерту"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:149
+#: ../gtweak/tweaks/tweak_group_windows.py:154
 msgid "Titlebar Buttons"
 msgstr "Атау жолағы батырмалары"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:150
+#: ../gtweak/tweaks/tweak_group_windows.py:155
 msgid "Maximize"
 msgstr "Максималды қылу"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:151
+#: ../gtweak/tweaks/tweak_group_windows.py:156
 msgid "Minimize"
 msgstr "Минималды қылу"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:152
+#: ../gtweak/tweaks/tweak_group_windows.py:157
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "Орта батырмасымен кірістіру"
+#: ../gtweak/tweaks/tweak_group_keymouse.py:28
+msgid "Emacs Input"
+msgstr "Emacs кірісі"
 
-#. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
-msgid "Key theme"
-msgstr "Басты тема"
+#: ../gtweak/tweaks/tweak_group_keymouse.py:45
+msgid "Overview Shortcut"
+msgstr "Шолу көрінісі жарлығы"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
-msgid "Keyboard and Mouse"
-msgstr "Пернетақта және тышқан"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
-msgid "Show All Input Sources"
-msgstr "Барлық кіріс қайнар көздерін қолдау"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
-msgid "Switch between overview and desktop"
-msgstr "Қарап шығу және жұмыс үстелі арасында ауысу"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Left super"
+#: ../gtweak/tweaks/tweak_group_keymouse.py:52
+msgid "Left Super"
 msgstr "Сол жақ супер пернесі"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Right super"
+#: ../gtweak/tweaks/tweak_group_keymouse.py:56
+msgid "Right Super"
 msgstr "Оң жақ супер пернесі"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:72
-msgid "Acceleration profile"
-msgstr "Үдету профилі"
+msgid "Keyboard & Mouse"
+msgstr "Пернетақта және тышқан"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:73
+msgid "Show Extended Input Sources"
+msgstr "Кеңейтілген кіріс қайнар көздерін көрсету"
 
 #: ../gtweak/tweaks/tweak_group_keymouse.py:76
-msgid "Show location of pointer"
-msgstr "Курсор орналасуын көрсету"
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "Баптаулар қолданбасында кіріс қайнар көздерінің таңдауын арттыру."
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:82
+#: ../gtweak/tweaks/tweak_group_keymouse.py:81
+msgid "Acceleration Profile"
+msgstr "Үдету профилі"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:85
+msgid "Pointer Location"
+msgstr "Курсор орналасуы"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:89
+msgid "Press the Ctrl key to highlight the pointer."
+msgstr "Курсорды анықтау үшін Ctrl пернесін басу керек."
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:90
+msgid "Middle Click Paste"
+msgstr "Орта батырмасымен кірістіру"
+
+#: ../gtweak/tweaks/tweak_group_keymouse.py:94
 msgid "Touchpad"
 msgstr "Тачпад"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:83
-msgid "Click method"
+#: ../gtweak/tweaks/tweak_group_keymouse.py:95
+msgid "Click Method"
 msgstr "Шерту тәсілі"
 
 #: ../gtweak/tweaks/tweak_wacom.py:29
@@ -631,25 +627,76 @@ msgstr "Өзгерістер іске асуы үшін сессияны қай�
 msgid "Restart Session"
 msgstr "Сессияны қайта қосу"
 
-#: ../gtweak/widgets.py:476
+#: ../gtweak/widgets.py:500
 msgid "Enable dark theme for all applications"
 msgstr "Барлық қолданбалар үшін қараңғы теманы қолдану"
 
-#: ../gtweak/widgets.py:477
+#: ../gtweak/widgets.py:501
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Бұл сессияның барлық қолданбалары үшін қараңғы теманы іске қосу"
 
-#: ../gtweak/widgets.py:485
+#: ../gtweak/widgets.py:509
 msgid "Global Dark Theme"
 msgstr "Глобалды қараңғы тема"
 
-#: ../gtweak/widgets.py:486
-msgid "Applications need to be restarted for change to take effect"
-msgstr "Өзгеріс іске асуы үшін қолданбаларды қайта іске қосу керек"
+#: ../gtweak/widgets.py:510
+msgid "Applications need to be restarted for this change to take place."
+msgstr "Бұл өзгеріс іске асуы үшін қолданбаларды қайта іске қосу керек."
 
-#: ../gtweak/widgets.py:512
+#: ../gtweak/widgets.py:537
 msgid "Error writing setting"
 msgstr "Баптауды жазу қатесі"
+
+#~ msgid "GNOME Shell v%s (%s mode)"
+#~ msgstr "GNOME Shell v%s (%s режимі)"
+
+#~ msgid "Computer"
+#~ msgstr "Компьютер"
+
+#~ msgid "Mode"
+#~ msgstr "Режимі"
+
+#~ msgid "Lock Screen Location"
+#~ msgstr "Блоктау экранның орналасуы"
+
+#~ msgid "Enable animations"
+#~ msgstr "Анимацияларды іске қосу"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "Кеңейтуді өшіру"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "'%s' кеңейтуін өшіруді шынымен қалайсыз ба?"
+
+#~ msgid "Install Shell Extension"
+#~ msgstr "Shell кеңейтуін жаңарту"
+
+#~ msgid "Select an extension"
+#~ msgstr "Кеңейтуді таңдау"
+
+#~ msgid "Get more extensions"
+#~ msgstr "Көбірек кеңейтулерді алу"
+
+#~ msgid "%s extension updated successfully"
+#~ msgstr "%s кеңейтуі сәтті жаңартылды"
+
+#~ msgid "Error installing extension"
+#~ msgstr "Кеңейтуді орнату қатесі"
+
+#~ msgid "Invalid extension"
+#~ msgstr "Жарамсыз кеңейту"
+
+#~ msgid "Automatically Raise Windows"
+#~ msgstr "Терезелерді автокөтеру"
+
+#~ msgid "Key theme"
+#~ msgstr "Басты тема"
+
+#~ msgid "Switch between overview and desktop"
+#~ msgstr "Қарап шығу және жұмыс үстелі арасында ауысу"
+
+#~ msgid "Show location of pointer"
+#~ msgstr "Курсор орналасуын көрсету"
 
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "GNOME қосымша баптаулары жөнінде"
