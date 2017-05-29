@@ -21,7 +21,7 @@ import os.path
 
 import gtweak
 from gtweak.utils import SchemaList, LogoutNotification, Notification
-from gi.repository import Gtk
+from gi.repository import Gtk, GLib
 
 def N_(x): return x
 
@@ -38,6 +38,9 @@ TWEAK_GROUP_MOUSE = _("Mouse")
 TWEAK_GROUP_FILES = _("Files")
 
 LOG = logging.getLogger(__name__)
+
+def string_for_search(s):
+    return GLib.utf8_casefold(GLib.utf8_normalize(s, -1, GLib.NormalizeMode.ALL), -1)
 
 class Tweak(object):
 
@@ -57,10 +60,10 @@ class Tweak(object):
 
     def search_matches(self, txt):
         if self._search_cache == None:
-            self._search_cache = self.name.decode("utf-8","ignore").lower() + " " + \
-				 self.description.decode("utf-8","ignore").lower()
+            self._search_cache = string_for_search(self.name) + " " + \
+				 string_for_search(self.description)
             try:
-                self._search_cache += " " + self.extra_info.decode("utf-8","ignore").lower()
+                self._search_cache += " " + string_for_search(self.extra_info)
             except:
                 LOG.warning("Error adding search info", exc_info=True)
         return  txt in self._search_cache
