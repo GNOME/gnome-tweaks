@@ -23,7 +23,7 @@ import datetime
 from gi.repository import Gtk, Gdk, GObject
 
 import gtweak.tweakmodel
-from gtweak.tweakmodel import TweakModel
+from gtweak.tweakmodel import TweakModel, string_for_search
 from gtweak.widgets import Title
 
 class Window(Gtk.ApplicationWindow):
@@ -245,7 +245,7 @@ class Window(Gtk.ApplicationWindow):
             self.listbox.select_row(row)
 
     def _on_search(self, entry):
-        txt = entry.get_text().decode("utf-8","ignore").lower()
+        txt = string_for_search(entry.get_text())
         tweaks, group = self._model.search_matches(txt)
         self.show_only_tweaks(tweaks)        
         self._on_list_changed(group)
