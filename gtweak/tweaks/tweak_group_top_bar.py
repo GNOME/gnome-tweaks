@@ -19,7 +19,7 @@
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import TWEAK_GROUP_TOPBAR
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsCheckTweak, GetterSetterSwitchTweak, Title
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GetterSetterSwitchTweak, Title
 from gtweak.utils import XSettingsOverrides
 
 _shell = GnomeShellFactory().get_shell()
@@ -28,7 +28,7 @@ _shell_loaded = _shell is not None
 class ApplicationMenuTweak(GetterSetterSwitchTweak):
     def __init__(self, **options):
         self._xsettings = XSettingsOverrides()
-        GetterSetterSwitchTweak.__init__(self, _("Show Application Menu"), **options)
+        GetterSetterSwitchTweak.__init__(self, _("Application Menu"), **options)
 
     def get_active(self):
         return self._xsettings.get_shell_shows_app_menu()
@@ -40,9 +40,9 @@ TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_TOPBAR,
         ApplicationMenuTweak(),
         Title(_("Clock"),""),
-        GSettingsCheckTweak(_("Show date"),"org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-        GSettingsCheckTweak(_("Show seconds"), "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
+        GSettingsSwitchTweak(_("Date"),"org.gnome.desktop.interface", "clock-show-date"),
+        GSettingsSwitchTweak(_("Seconds"), "org.gnome.desktop.interface", "clock-show-seconds"),
         Title(_("Calendar"),""),
-        GSettingsCheckTweak(_("Show week numbers"),"org.gnome.desktop.calendar", "show-weekdate", schema_filename="org.gnome.desktop.calendar.gschema.xml"),
+        GSettingsSwitchTweak(_("Week Numbers"),"org.gnome.desktop.calendar", "show-weekdate"),
     )
 ]
