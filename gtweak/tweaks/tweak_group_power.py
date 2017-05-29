@@ -32,13 +32,13 @@ class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
                                     autostart_desktop_filename = "ignore-lid-switch-tweak.desktop",
                                     exec_cmd = self._inhibitor_path)
 
-        GetterSetterSwitchTweak.__init__(self, _("Don’t suspend on lid close"), **options)
+        GetterSetterSwitchTweak.__init__(self, _("Suspend when laptop lid is closed"), **options)
 
     def get_active(self):
-        return self._sync_inhibitor()
+        return not self._sync_inhibitor()
 
     def set_active(self, v):
-        self._dfile.update_start_at_login(v)
+        self._dfile.update_start_at_login(not v)
         self._sync_inhibitor()
 
     def _sync_inhibitor(self):
@@ -59,12 +59,7 @@ sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_POWER,
-        Title(_("When Power Button is Pressed"), "", uid="title-theme"),
-        GSettingsComboEnumTweak(_("Action"), "org.gnome.settings-daemon.plugins.power", "power-button-action", size_group=sg),
-        Title(_("When Laptop Lid is Closed"), "", uid="title-theme"),
-        GSettingsComboEnumTweak(_("On Battery Power"),"org.gnome.settings-daemon.plugins.power", "lid-close-battery-action", size_group=sg),
-        GSettingsComboEnumTweak(_("When plugged in"),"org.gnome.settings-daemon.plugins.power", "lid-close-ac-action", size_group=sg),
-        GSettingsSwitchTweak(_("Suspend even if an external monitor is plugged in"),"org.gnome.settings-daemon.plugins.power", "lid-close-suspend-with-external-monitor", size_group=sg),
         IgnoreLidSwitchTweak(),
-    )
+        GSettingsComboEnumTweak(_("Power Button Behavior"), "org.gnome.settings-daemon.plugins.power", "power-button-action", size_group=sg),
+    ),
 ]
