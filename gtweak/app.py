@@ -91,7 +91,7 @@ class GnomeTweakTool(Gtk.Application):
         ds.disable()
 
     def about_cb(self, action, parameter):
-        aboutdialog = Gtk.AboutDialog()
+        aboutdialog = Gtk.AboutDialog(modal=True, transient_for=self.win)
 
         _shell = GnomeShellFactory().get_shell()
         if _shell is not None:
