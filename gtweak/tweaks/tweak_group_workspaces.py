@@ -59,6 +59,7 @@ TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_WORKSPACES,
         sw,
         GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg),
-        GSettingsSwitchTweak(_("Workspaces only on primary display"),"org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", loaded=_shell_loaded),
+        Title(_("Display Handling"), "", uid="title-theme"),
+        GSettingsSwitchTweak(_("Workspaces on primary display only"),"org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", desc=_("Additional displays are treated as independent workspaces."),loaded=_shell_loaded),
     )
 ]
