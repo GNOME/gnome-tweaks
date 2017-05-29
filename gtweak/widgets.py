@@ -501,10 +501,11 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
                        _("Enable the dark theme hint for all the applications in the session"),
                        **options)
 
-        self._gtksettings = GtkSettingsManager()
+        self._gtksettings3 = GtkSettingsManager('3.0')
+        self._gtksettings4 = GtkSettingsManager('4.0')
 
         w = Gtk.Switch()
-        w.set_active(self._gtksettings.get_integer("gtk-application-prefer-dark-theme"))
+        w.set_active(self._gtksettings3.get_integer("gtk-application-prefer-dark-theme"))
 		
         title = _("Global Dark Theme")
         description = _("Applications need to be restarted for this change to take place.")
@@ -531,7 +532,9 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
         active = switch.get_active()
 
         try:
-            self._gtksettings.set_integer("gtk-application-prefer-dark-theme",
+            self._gtksettings3.set_integer("gtk-application-prefer-dark-theme",
+                                          active)
+            self._gtksettings4.set_integer("gtk-application-prefer-dark-theme",
                                           active)
         except:
             self.notify_information(_("Error writing setting"))

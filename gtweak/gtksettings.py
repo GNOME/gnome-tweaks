@@ -26,11 +26,10 @@ SETTINGS_GROUP_NAME = "Settings"
 
 LOG = logging.getLogger(__name__)
 
-@gtweak.utils.singleton
 class GtkSettingsManager:
-    def __init__(self):
+    def __init__(self, version):
         self._path = os.path.join(GLib.get_user_config_dir(),
-                                  "gtk-3.0",
+                                  "gtk-" + version,
                                   "settings.ini")
     def _get_keyfile(self):
         keyfile = None
