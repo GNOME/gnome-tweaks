@@ -96,5 +96,9 @@ TWEAK_GROUPS = [
                                 "org.gnome.desktop.peripherals.touchpad",
                                 "click-method",
                                 schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
+        GSettingsSwitchTweak(_("Disable While Typing"),
+                             "org.gnome.desktop.peripherals.touchpad",
+                             "disable-while-typing",
+                             schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
         ),
 ]
