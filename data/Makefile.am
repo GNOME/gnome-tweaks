@@ -8,12 +8,14 @@ gui_DATA = \
 desktop_in_files = gnome-tweak-tool.desktop.in
 desktopdir = $(datadir)/applications
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
-@INTLTOOL_DESKTOP_RULE@
+%.desktop: %.desktop.in Makefile
+	$(AM_V_GEN) $(MSGFMT) --desktop --template $< -d $(top_srcdir)/po -o $@
 
-@INTLTOOL_XML_RULE@
 appdatadir = $(datadir)/appdata
 appdata_in_files = gnome-tweak-tool.appdata.xml.in
 appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+%.xml: %.xml.in Makefile
+	$(AM_V_GEN) $(MSGFMT) --xml --template $< -d $(top_srcdir)/po -o $@
 
 EXTRA_DIST = \
 	$(appdata_in_files) \
