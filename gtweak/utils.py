@@ -151,7 +151,10 @@ class AutostartFile:
             raise Exception("Need either an appinfo or a file name")
 
         self._exec_cmd = exec_cmd
-        self._extra_exec_args = " %s\n" % extra_exec_args
+        if extra_exec_args:
+            self._extra_exec_args = " %s\n" % extra_exec_args
+        else:
+            self._extra_exec_args = "\n"
 
         user_autostart_dir = os.path.join(GLib.get_user_config_dir(), "autostart")
         if not os.path.isdir(user_autostart_dir):
