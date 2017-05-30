@@ -81,10 +81,14 @@ class PlaceWindowButtons(Gtk.Box, _GSettingsTweak):
         box_btn = Gtk.ButtonBox()
         box_btn.set_layout(Gtk.ButtonBoxStyle.EXPAND)
 
+        # Translators: For RTL languages, this is the "Right" direction since the
+        # interface is flipped
         btn1 = Gtk.RadioButton.new_with_label_from_widget(None, _("Left"))
         btn1.set_property("draw-indicator", False)
 
         btn2 = Gtk.RadioButton.new_from_widget(btn1)
+        # Translators: For RTL languages, this is the "Left" direction since the
+        # interface is flipped
         btn2.set_label(_("Right"))
         btn2.set_property("draw-indicator", False)
 
