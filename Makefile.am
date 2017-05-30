@@ -4,10 +4,6 @@ bin_SCRIPTS = \
 libexec_SCRIPTS = \
 	gnome-tweak-tool-lid-inhibitor
 
-gnome-tweak-tool-lid-inhibitor: gnome-tweak-tool-lid-inhibitor.in Makefile
-	$(AM_V_GEN)sed -e s!\@PYTHON\@!@PYTHON@! < $< > $@
-	chmod +x $@
-
 #nobase means gtweak dir is preserved in site-packages
 appdir = $(pythondir)
 nobase_dist_app_PYTHON = \
@@ -18,15 +14,14 @@ nobase_app_PYTHON = gtweak/defs.py
 
 EXTRA_DIST = \
 	$(bin_SCRIPTS) \
-	gnome-tweak-tool-lid-inhibitor.in
+	$(libexec_SCRIPTS)
 
 CLEANFILES = \
 	$(wildcard $(srcdir)/gtweak/*.pyc) \
 	$(wildcard $(srcdir)/gtweak/tweaks/*.pyc)
 
 DISTCLEANFILES = \
-	gtweak/defs.py \
-	gnome-tweak-tool-lid-inhibitor
+	gtweak/defs.py
 
 SUBDIRS = data po
 
