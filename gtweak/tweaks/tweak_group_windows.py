@@ -17,7 +17,7 @@
 
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import TWEAK_GROUP_WINDOWS, Tweak
+from gtweak.tweakmodel import Tweak
 from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsComboTweak, GSettingsSwitchTweak, Title, GSettingsSwitchTweakValue, build_label_beside_widget, _GSettingsTweak
 from gtweak.utils import XSettingsOverrides
 import gettext
@@ -182,7 +182,7 @@ Focus =  GSettingsComboTweak(_("Focus Mode"), "org.gnome.desktop.wm.preferences"
 depends_how = lambda x,kn: x.get_string(kn) in ("mouse", "sloppy")
 
 TWEAK_GROUPS = [
-    ListBoxTweakGroup(TWEAK_GROUP_WINDOWS,
+    ListBoxTweakGroup(_("Windows"),
         GSettingsSwitchTweak(_("Attach Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs",
                         desc=_("When on, modal dialog windows are attached to their parent windows, and cannot be moved.")),
         GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),

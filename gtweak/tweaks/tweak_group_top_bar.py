@@ -18,7 +18,6 @@
 
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import TWEAK_GROUP_TOPBAR
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GetterSetterSwitchTweak, Title
 from gtweak.utils import XSettingsOverrides
 
@@ -37,7 +36,7 @@ class ApplicationMenuTweak(GetterSetterSwitchTweak):
         self._xsettings.set_shell_shows_app_menu(v)
 
 TWEAK_GROUPS = [
-    ListBoxTweakGroup(TWEAK_GROUP_TOPBAR,
+    ListBoxTweakGroup(_("Top Bar"),
         ApplicationMenuTweak(),
         Title(_("Clock"),""),
         GSettingsSwitchTweak(_("Date"),"org.gnome.desktop.interface", "clock-show-date"),

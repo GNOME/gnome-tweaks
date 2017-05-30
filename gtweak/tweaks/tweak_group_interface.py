@@ -27,7 +27,7 @@ from gi.repository import GLib
 
 import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default, extract_zip_file
-from gtweak.tweakmodel import Tweak, TWEAK_GROUP_APPEARANCE
+from gtweak.tweakmodel import Tweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gsettings import GSettingsSetting
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher, Title, build_combo_box_text,build_label_beside_widget, FileChooserButton
@@ -254,7 +254,7 @@ class ShellThemeTweak(Gtk.Box, Tweak):
 
 
 TWEAK_GROUPS = [
-    ListBoxTweakGroup(TWEAK_GROUP_APPEARANCE,
+    ListBoxTweakGroup(_("Appearance"),
         DarkThemeSwitcher(),
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),

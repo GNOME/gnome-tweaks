@@ -21,7 +21,6 @@ from gi.repository import Gtk
 import gtweak
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.tweakmodel import TWEAK_GROUP_WORKSPACES
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, Title, _GSettingsTweak, build_combo_box_text, GSettingsSpinButtonTweak
 
 _shell = GnomeShellFactory().get_shell()
@@ -56,7 +55,7 @@ sw = StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded)
 depends_how = lambda x,kn: not(x.get_boolean(kn))
 
 TWEAK_GROUPS = [
-    ListBoxTweakGroup(TWEAK_GROUP_WORKSPACES,
+    ListBoxTweakGroup(_("Workspaces"),
         sw,
         GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg),
         Title(_("Display Handling"), "", uid="title-theme"),

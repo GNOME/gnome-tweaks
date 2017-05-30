@@ -17,11 +17,10 @@
 
 from gi.repository import Gtk
 
-from gtweak.tweakmodel import TWEAK_GROUP_FONTS
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSpinButtonTweak, GSettingsFontButtonTweak, GSettingsComboTweak
 
 TWEAK_GROUPS = [
-    ListBoxTweakGroup(TWEAK_GROUP_FONTS,
+    ListBoxTweakGroup(_("Fonts"),
         GSettingsFontButtonTweak(_("Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
         GSettingsFontButtonTweak(_("Interface"),"org.gnome.desktop.interface", "font-name"),
         GSettingsFontButtonTweak(_("Documents"), "org.gnome.desktop.interface", "document-font-name"),

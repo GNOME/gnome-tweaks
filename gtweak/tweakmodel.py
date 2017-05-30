@@ -25,18 +25,6 @@ from gi.repository import Gtk, GLib
 
 def N_(x): return x
 
-TWEAK_GROUP_APPEARANCE = _("Appearance")
-TWEAK_GROUP_EXTENSION = _("Extensions")
-TWEAK_GROUP_FONTS = _("Fonts")
-TWEAK_GROUP_POWER = _("Power")
-TWEAK_GROUP_APPLICATION = _("Startup Applications")
-TWEAK_GROUP_TOPBAR = _("Top Bar")
-TWEAK_GROUP_WINDOWS = _("Windows")
-TWEAK_GROUP_WORKSPACES = _("Workspaces")
-
-TWEAK_GROUP_MOUSE = _("Mouse")
-TWEAK_GROUP_FILES = _("Files")
-
 LOG = logging.getLogger(__name__)
 
 def string_for_search(s):

@@ -19,7 +19,6 @@
 from gi.repository import Gio, GLib
 
 import gtweak
-from gtweak.tweakmodel import TWEAK_GROUP_POWER
 from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettingsSwitchTweak, GetterSetterSwitchTweak, build_horizontal_sizegroup, Title, _GSettingsTweak
 from gtweak.utils import AutostartFile
 
@@ -58,7 +57,7 @@ class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
 sg = build_horizontal_sizegroup()
 
 TWEAK_GROUPS = [
-    ListBoxTweakGroup(TWEAK_GROUP_POWER,
+    ListBoxTweakGroup(_("Power"),
         IgnoreLidSwitchTweak(),
         GSettingsComboEnumTweak(_("Power Button Behavior"), "org.gnome.settings-daemon.plugins.power", "power-button-action", size_group=sg),
     ),
