@@ -16,6 +16,7 @@
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
 import os.path
+import errno
 import logging
 
 from gi.repository import GLib
@@ -54,6 +55,14 @@ class GtkSettingsManager:
     def set_integer(self, key, value):
         keyfile = self._get_keyfile()
         keyfile.set_integer(SETTINGS_GROUP_NAME, key, value)
+
+        try:
+            os.makedirs(os.path.dirname(self._path))
+        except OSError, e:
+            if e.errno is not errno.EEXIST:
+                raise
+        except:
+            raise
 
         try:
             data = keyfile.to_data()
