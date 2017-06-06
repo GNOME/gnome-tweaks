@@ -31,6 +31,8 @@ class GtkSettingsManager:
         self._path = os.path.join(GLib.get_user_config_dir(),
                                   "gtk-" + version,
                                   "settings.ini")
+        os.makedirs(os.path.dirname(self._path), exist_ok=True)
+
     def _get_keyfile(self):
         keyfile = None
         try:
@@ -53,13 +55,6 @@ class GtkSettingsManager:
     def set_integer(self, key, value):
         keyfile = self._get_keyfile()
         keyfile.set_integer(SETTINGS_GROUP_NAME, key, value)
-
-        try:
-            os.makedirs(os.path.dirname(self._path))
-        except FileExistsError:
-            pass
-        except:
-            raise
 
         try:
             data = keyfile.to_data()
