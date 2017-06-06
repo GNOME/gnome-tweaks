@@ -157,11 +157,7 @@ class AutostartFile:
             self._extra_exec_args = "\n"
 
         user_autostart_dir = os.path.join(GLib.get_user_config_dir(), "autostart")
-        if not os.path.isdir(user_autostart_dir):
-            try:
-                os.makedirs(user_autostart_dir)
-            except:
-                logging.critical("Could not create autostart dir: %s" % user_autostart_dir)
+        os.makedirs(user_autostart_dir, exist_ok=True)
 
         self._user_autostart_file = os.path.join(user_autostart_dir, self._autostart_desktop_filename)
 
