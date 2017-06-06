@@ -79,7 +79,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     #label. By convention this is true in the great majority of cases. Settings that
     #construct their own widgets will need to set this themselves
     lbl.set_mnemonic_widget(widget[-1])
-    
+
     return hbox
 
 def build_combo_box_text(selected, *values):
@@ -126,7 +126,7 @@ def build_tight_button(stock_id):
     provider = Gtk.CssProvider()
     provider.load_from_data(data)
     # 600 = GTK_STYLE_PROVIDER_PRIORITY_APPLICATION
-    button.get_style_context().add_provider(provider, 600) 
+    button.get_style_context().add_provider(provider, 600)
     return button
 
 def adjust_schema_for_overrides(originalSchema, key, options):
@@ -348,7 +348,7 @@ class GSettingsSpinButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 
         build_label_beside_widget(name, w, hbox=self)
         self.widget_for_size_group = w
-        
+
         self.add_dependency_on_tweak(
                 options.get("depends_on"),
                 options.get("depends_how")
@@ -506,11 +506,11 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
 
         w = Gtk.Switch()
         w.set_active(self._gtksettings3.get_integer("gtk-application-prefer-dark-theme"))
-		
+
         title = _("Global Dark Theme")
         description = _("Applications need to be restarted for this change to take place.")
         w.connect("notify::active", self._on_switch_changed)
-        
+
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         hbox.props.spacing = UI_BOX_SPACING
         lbl = Gtk.Label(label=title)
@@ -518,12 +518,12 @@ class DarkThemeSwitcher(Gtk.Box, Tweak):
         lbl.props.xalign = 0.0
         hbox.pack_start(lbl, True, True, 0)
         hbox.pack_start(w, False, False, 0)
-        
+
         lbl_des = Gtk.Label()
         lbl_des.props.xalign = 0.0
         lbl_des.get_style_context().add_class("dim-label")
         lbl_des.set_markup("<span size='small'>"+GLib.markup_escape_text(description)+"</span>")
-        
+
         self.pack_start(hbox, False, False, 0)
         self.pack_start(lbl_des, False, False,0)
         self.widget_for_size_group = None
@@ -549,7 +549,7 @@ class Title(Gtk.Box, Tweak):
         self.add(widget)
 
 class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
-    
+
     def __init__(self, name, schema_name, key_name, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
@@ -561,9 +561,9 @@ class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
 
     def _on_toggled(self, sw, pspec):
         self.set_active(sw.get_active())
-    
+
     def set_active(self, v):
         raise NotImplementedError()
-    
+
     def get_active(self):
         raise NotImplementedError()

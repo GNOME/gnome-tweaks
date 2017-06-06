@@ -154,7 +154,7 @@ class GSettingsSetting(Gio.Settings):
 
     def schema_get_summary(self, key):
         return self._schema._schema[key]["summary"]
-        
+
     def schema_get_description(self, key):
         return self._schema._schema[key]["description"]
 

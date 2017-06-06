@@ -60,5 +60,6 @@ TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Power"),
         IgnoreLidSwitchTweak(),
         GSettingsComboEnumTweak(_("Power Button Behavior"), "org.gnome.settings-daemon.plugins.power", "power-button-action", size_group=sg),
+        GSettingsSwitchTweak(_("Show Battery percentage in Top Bar"),"org.gnome.desktop.interface", "show-battery-percentage"),
     ),
 ]

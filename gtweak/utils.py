@@ -128,7 +128,7 @@ class AutostartManager:
     def get_user_autostart_files():
         return glob.glob(
                     os.path.join(
-                        GLib.get_user_config_dir(), "autostart", "*.desktop")) 
+                        GLib.get_user_config_dir(), "autostart", "*.desktop"))
 
     @staticmethod
     def get_system_autostart_files():
@@ -204,7 +204,7 @@ class AutostartFile:
             old = open(self._desktop_file, "r")
             new = open(self._user_autostart_file, "w")
 
-            for l in old.readlines():         
+            for l in old.readlines():
                 if l.startswith("Exec="):
                     if self._exec_cmd:
                         new.write("Exec=%s\n" % self._exec_cmd)
@@ -225,28 +225,28 @@ class SchemaList:
 
         if SchemaList.__list == None:
             SchemaList.__list = []
-            
+
     def get(self):
         return SchemaList.__list
-    
+
     def insert(self, key_name, schema_name):
         v = [key_name, schema_name]
         SchemaList.__list.append(v)
-    
+
     def reset(self):
         for i in SchemaList.__list:
             s = Gio.Settings(i[1])
             s.reset(i[0])
 @singleton
 class DisableExtension(GObject.GObject):
-    
+
     __gsignals__ = {
         "disable-extension": (GObject.SignalFlags.RUN_FIRST, GObject.TYPE_NONE,()),
-    }    
-    
+    }
+
     def __init__(self):
         GObject.GObject.__init__(self)
-    
+
     def disable(self):
         self.emit("disable-extension")
 
@@ -344,8 +344,8 @@ class LogoutNotification:
         d = Gio.bus_get_sync(Gio.BusType.SESSION, None)
         proxy = Gio.DBusProxy.new_sync(
                        d,Gio.DBusProxyFlags.NONE, None,
-                       'org.gnome.SessionManager', 
-                       '/org/gnome/SessionManager', 
+                       'org.gnome.SessionManager',
+                       '/org/gnome/SessionManager',
                        'org.gnome.SessionManager',
                        None)
         proxy.Logout('(u)', 0)

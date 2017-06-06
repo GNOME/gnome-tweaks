@@ -88,7 +88,7 @@ class ExtensionsDotGnomeDotOrg(GObject.GObject):
     def get_download_url(self, extinfo):
         url = "https://extensions.gnome.org/download-extension/%s.shell-extension.zip?version_tag=%d"
         #version tag is the pk in the shell_version_map
-        #url = url % (extinfo["uuid"], 
+        #url = url % (extinfo["uuid"],
 
 
 if __name__ == "__main__":

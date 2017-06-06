@@ -39,22 +39,22 @@ class Window(Gtk.ApplicationWindow):
             self.set_size_request(950, 700)
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_icon_name("gnome-tweak-tool")
-        
+
         self.hsize_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
 
         main_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         left_box = self.sidebar()
         right_box = self.main_content()
         separator = Gtk.Separator(orientation=Gtk.Orientation.VERTICAL)
-        
+
         titlebar = self.titlebar()
         self.set_titlebar(titlebar)
 
         main_box.pack_start(left_box, False, False, 0)
         main_box.pack_start(separator, False, False, 0)
         main_box.pack_start(right_box, True, True, 0)
-        
-        self.load_css()      
+
+        self.load_css()
         self._model = model
         self._model.load_tweaks(self)
         self.load_model_data()
@@ -65,7 +65,7 @@ class Window(Gtk.ApplicationWindow):
         self.connect("key-press-event", self._on_key_press)
         self.connect_after("key-press-event", self._after_key_press)
         self.add(main_box)
-    
+
     def titlebar(self):
 
         header = Gtk.Box()
@@ -107,22 +107,22 @@ class Window(Gtk.ApplicationWindow):
         header.pack_start(left_header, False, False, 0)
         header.pack_start(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL), False, False, 0)
         header.pack_start(right_header, True, True, 0)
-        
+
         self.hsize_group.add_widget(left_header)
 
         return header
-        
-        
+
+
     def sidebar(self):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        
+
         self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks…"))
         self.entry.connect("search-changed", self._on_search)
-        
+
         self.searchbar = Gtk.SearchBar()
         self.searchbar.add(self.entry)
         self.searchbar.props.hexpand = False
-        
+
         self.listbox = Gtk.ListBox()
         self.listbox.get_style_context().add_class("tweak-categories")
         self.listbox.set_size_request(200,-1)
@@ -132,24 +132,24 @@ class Window(Gtk.ApplicationWindow):
         scroll.set_policy(Gtk.PolicyType.NEVER,
                           Gtk.PolicyType.AUTOMATIC)
         scroll.add(self.listbox)
-        
+
         left_box.pack_start(self.searchbar, False, False, 0)
         left_box.pack_start(scroll, True, True, 0)
-        
+
         self.hsize_group.add_widget(left_box)
 
         return left_box
-        
-    def main_content(self):        
+
+    def main_content(self):
         right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        
+
         #GRR why can I not put margin in the CSS of a GtkStack
         self.stack = Gtk.Stack()
         self.stack.get_style_context().add_class("main-container")
         self.stack.props.margin = 20
-    
+
         right_box.pack_start(self.stack, True, True, 0)
-        
+
         return right_box
 
     def load_css(self):
@@ -178,7 +178,7 @@ class Window(Gtk.ApplicationWindow):
             row = _make_items_listbox(g)
             self.listbox.add(row)
             tweakgroup = self._model.get_value(
-                                self._model.get_tweakgroup_iter(g), 
+                                self._model.get_tweakgroup_iter(g),
                                 self._model.COLUMN_TWEAK)
             scroll = Gtk.ScrolledWindow()
             scroll.add(tweakgroup)
@@ -191,7 +191,7 @@ class Window(Gtk.ApplicationWindow):
         lbl = row.get_child()
         if lbl.get_text() in user_data:
             return row
-    
+
     def _list_header_func(self, row, before, user_data):
         if before and not row.get_header():
             row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
@@ -247,9 +247,9 @@ class Window(Gtk.ApplicationWindow):
     def _on_search(self, entry):
         txt = string_for_search(entry.get_text())
         tweaks, group = self._model.search_matches(txt)
-        self.show_only_tweaks(tweaks)        
+        self.show_only_tweaks(tweaks)
         self._on_list_changed(group)
-        
+
     def _on_select_row(self, listbox, row):
         if row:
             group = row.get_child().get_text()

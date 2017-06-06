@@ -31,7 +31,7 @@ class MainWindow:
 
         filename = os.path.join(gtweak.PKG_DATA_DIR, 'shell.ui')
         builder.add_from_file(filename)
-        
+
         model = TweakModel()
         view = TweakView(
                     builder,

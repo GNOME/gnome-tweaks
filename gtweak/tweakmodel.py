@@ -110,16 +110,16 @@ class TweakModel(Gtk.ListStore):
                 tweak_files.remove("tweak_group_test")
             except ValueError:
                 pass
-        
+
         groups = []
         tweaks = []
 
         mods = __import__("gtweak.tweaks", globals(), locals(), tweak_files, 0)
         for mod in [getattr(mods, file_name) for file_name in tweak_files]:
             groups.extend( getattr(mod, "TWEAK_GROUPS", []) )
-            
-        schemas = SchemaList() 
-   
+
+        schemas = SchemaList()
+
         for g in groups:
             g.main_window = main_window
             if g.tweaks:
@@ -141,17 +141,17 @@ class TweakModel(Gtk.ListStore):
         self._tweak_group_iters[tweakgroup.name] = _iter
 
     def search_matches(self, txt):
-        tweaks = []                                          
-        groups = []                                                             
-        
+        tweaks = []
+        groups = []
+
         for g in self.tweak_groups:
-            for t in  g.tweaks:                                             
-                if t.search_matches(txt): 
+            for t in  g.tweaks:
+                if t.search_matches(txt):
                     tweaks.append(t)
-                    if not g.name in groups:                          
+                    if not g.name in groups:
                         groups.append(g.name)
-        return tweaks, groups 
+        return tweaks, groups
 
     def get_tweakgroup_iter(self, name):
         return self._tweak_group_iters[name]
-        
+

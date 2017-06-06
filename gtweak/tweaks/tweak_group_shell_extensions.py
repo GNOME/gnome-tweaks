@@ -227,11 +227,11 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
                 logging.warning("Error listing extensions", exc_info=True)
         except:
             logging.warning("Error detecting shell", exc_info=True)
-        
+
         ListBoxTweakGroup.__init__(self,
                                    _("Extensions"),
                                    *extension_tweaks)
-        
+
         self.props.valign = Gtk.Align.FILL
 
         self.titlebar_widget = Gtk.Switch(visible=True)
