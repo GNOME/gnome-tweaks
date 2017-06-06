@@ -10,7 +10,9 @@ Running
 
  * If you wish to install system wide you must
 
-./autogen.sh && make && make install
+meson build-dir
+ninja -C build-dir
+ninja -C build-dir install
 
 TODO
 ----
