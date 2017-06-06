@@ -21,7 +21,7 @@ pythondir = join_paths(prefix, python3.sysconfig_path('purelib'))
 
 pkgdatadir = join_paths(datadir, meson.project_name())
 
-appdatadir = join_paths(datadir, 'appdata')
+appdatadir = join_paths(datadir, 'metainfo')
 desktopdir = join_paths(datadir, 'applications')
 gtweakdir = join_paths(pythondir, 'gtweak')
 icondir = join_paths(datadir, 'icons', 'hicolor')
