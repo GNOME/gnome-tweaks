@@ -45,14 +45,18 @@ class _ExtensionsBlankState(Gtk.Box):
         self.add(Gtk.Label(label="<b>" + _("No Extensions Installed") + "</b>",
                  use_markup=True, opacity=0.3))
 
-        self._swInfo = Gio.DesktopAppInfo.new("org.gnome.Software.desktop")
+        try:
+            self._swInfo = Gio.DesktopAppInfo.new("org.gnome.Software.desktop")
 
-        if self._swInfo:
-            btn = Gtk.Button(label=_("Browse in Software"),
-                             always_show_image=True, halign=Gtk.Align.CENTER,
-                             image=Gtk.Image(icon_name="org.gnome.Software-symbolic"))
-            btn.connect("clicked", self._on_browse_clicked)
-            self.add(btn)
+            if self._swInfo:
+                btn = Gtk.Button(label=_("Browse in Software"),
+                                 always_show_image=True, halign=Gtk.Align.CENTER,
+                                 image=Gtk.Image(icon_name="org.gnome.Software-symbolic"))
+                btn.connect("clicked", self._on_browse_clicked)
+                self.add(btn)
+
+        except:
+            logging.warning("Error detecting shell", exc_info=True)
 
         self.show_all()
 
