@@ -212,7 +212,7 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
                         df.get_name(),
                         df.get_description(),
                         **options)
-        
+
         grid = Gtk.Grid(column_spacing=10)
 
         icn = df.get_icon()

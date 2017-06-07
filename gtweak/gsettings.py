@@ -28,8 +28,10 @@ _SCHEMA_CACHE = {}
 _GSETTINGS_SCHEMAS = set(Gio.Settings.list_schemas())
 _GSETTINGS_RELOCATABLE_SCHEMAS = set(Gio.Settings.list_relocatable_schemas())
 
+
 class GSettingsMissingError(Exception):
     pass
+
 
 class _GSettingsSchema:
     def __init__(self, schema_name, schema_dir=None, schema_filename=None, **options):
@@ -72,19 +74,20 @@ class _GSettingsSchema:
                 if schema_name == schema.getAttribute("id"):
                     for key in schema.getElementsByTagName("key"):
                         name = key.getAttribute("name")
-                        #summary is 'compulsory', description is optional
-                        #... in theory, but we should not barf on bad schemas ever
+                        # summary is 'compulsory', description is optional
+                        # …in theory, but we should not barf on bad schemas ever
                         try:
                             summary = key.getElementsByTagName("summary")[0].childNodes[0].data
                         except:
                             summary = ""
-                            logging.info("Schema missing summary %s (key %s)" % (os.path.basename(schema_path),name))
+                            logging.info("Schema missing summary %s (key %s)" %
+                                         (os.path.basename(schema_path), name))
                         try:
                             description = key.getElementsByTagName("description")[0].childNodes[0].data
                         except:
                             description = ""
 
-                        #if missing translations, use the untranslated values
+                        # if missing translations, use the untranslated values
                         self._schema[name] = dict(
                             summary=translation.gettext(summary) if translation else summary,
                             description=translation.gettext(description) if translation else description
@@ -95,6 +98,7 @@ class _GSettingsSchema:
 
     def __repr__(self):
         return "<gtweak.gsettings._GSettingsSchema: %s>" % self._schema_name
+
 
 class GSettingsFakeSetting:
     def __init__(self):
@@ -110,6 +114,7 @@ class GSettingsFakeSetting:
         def noop(*args, **kwargs):
             pass
         return noop
+
 
 class GSettingsSetting(Gio.Settings):
     def __init__(self, schema_name, schema_dir=None, schema_path=None, **options):
@@ -181,7 +186,7 @@ class GSettingsSetting(Gio.Settings):
             self[key] = vals
             return True
         except ValueError:
-            #not present
+            # not present
             pass
 
     def setting_is_in_list(self, key, value):

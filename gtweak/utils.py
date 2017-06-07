@@ -349,4 +349,3 @@ class LogoutNotification:
                        'org.gnome.SessionManager',
                        None)
         proxy.Logout('(u)', 0)
-

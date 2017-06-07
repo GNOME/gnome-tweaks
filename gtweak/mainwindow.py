@@ -23,6 +23,7 @@ import gtweak
 from gtweak.tweakmodel import TweakModel
 from gtweak.tweakview import TweakView
 
+
 class MainWindow:
     def __init__(self):
         builder = Gtk.Builder()
@@ -39,4 +40,3 @@ class MainWindow:
         builder.get_object('overview_sw').add(view.treeview)
 
         view.run()
-

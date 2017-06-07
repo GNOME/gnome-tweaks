@@ -154,4 +154,3 @@ class TweakModel(Gtk.ListStore):
 
     def get_tweakgroup_iter(self, name):
         return self._tweak_group_iters[name]
-

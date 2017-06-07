@@ -29,11 +29,12 @@ from gtweak.utils import SchemaList
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.utils import DisableExtension
 
+
 class GnomeTweakTool(Gtk.Application):
 
     def __init__(self):
         GLib.set_application_name(_("GNOME Tweak Tool"))
-        Gtk.Application.__init__(self,application_id="org.gnome.TweakTool")
+        Gtk.Application.__init__(self, application_id="org.gnome.TweakTool")
         self.win = None
 
     def do_activate(self):
@@ -75,8 +76,8 @@ class GnomeTweakTool(Gtk.Application):
         self.add_action(quit_action)
 
     def reset_cb(self, action, parameter):
-        dialog = Gtk.MessageDialog(self.win,0, Gtk.MessageType.QUESTION,
-                    Gtk.ButtonsType.OK_CANCEL, _("Reset to Defaults"))
+        dialog = Gtk.MessageDialog(self.win, 0, Gtk.MessageType.QUESTION,
+                                   Gtk.ButtonsType.OK_CANCEL, _("Reset to Defaults"))
         dialog.format_secondary_text(_("Reset all tweak settings to the original default state?"))
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
@@ -100,11 +101,13 @@ class GnomeTweakTool(Gtk.Application):
             if _shell.mode == "user":
                 about_comment = _("GNOME Shell") + " %s" % _shell.version
             else:
-                about_comment = (_("GNOME Shell") + " %s " + _("(%s mode)")) % (_shell.version, _shell.mode)
+                about_comment = (_("GNOME Shell") + " %s " + _("(%s mode)")) % \
+                    (_shell.version, _shell.mode)
         else:
             about_comment = _("GNOME Shell is not running")
 
-        about_comment += "\n" + _("GTK+") + " %d.%d.%d" % (Gtk.get_major_version(), Gtk.get_minor_version(), Gtk.get_micro_version())
+        about_comment += "\n" + _("GTK+") + " %d.%d.%d" % \
+            (Gtk.get_major_version(), Gtk.get_minor_version(), Gtk.get_micro_version())
         aboutdialog.set_comments(about_comment)
 
         aboutdialog.set_copyright("Copyright \xc2\xa9 2011 - 2013 John Stowers.")
@@ -123,4 +126,3 @@ class GnomeTweakTool(Gtk.Application):
 
     def quit_cb(self, action, parameter):
         self.quit()
-

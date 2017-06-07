@@ -28,25 +28,28 @@ import gtweak
 if __name__ == '__main__':
     parser = optparse.OptionParser()
     parser.add_option("-t", "--test", action="store_true",
-                  help="Enable test and debug code")
+                      help="Enable test and debug code")
     parser.add_option("-l", "--load", action="store_true",
-                  help="Load all tweaks")
+                      help="Load all tweaks")
     parser.add_option("-p", "--prefix",
-                  help="Installation prefix (for gsettings schema, themes, etc)", metavar="[/, /usr]")
+                      help="Installation prefix (for gsettings schema, themes, etc)",
+                      metavar="[/, /usr]")
     parser.add_option("-v", "--verbose", action="store_true",
-                  help="Print the names of settings modified")
+                      help="Print the names of settings modified")
     parser.add_option("-d", "--debug", action="store_true",
-                  help="Enable debug output")
+                      help="Enable debug output")
     options, args = parser.parse_args()
 
     try:
-        from gtweak.defs import GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR, PKG_DATA_DIR, LOCALE_DIR, LIBEXEC_DIR
+        from gtweak.defs import GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR, \
+                                PKG_DATA_DIR, LOCALE_DIR, LIBEXEC_DIR
         _defs_present = True
     except ImportError:
-        GSETTINGS_SCHEMA_DIR = TWEAK_DIR = DATA_DIR = PKG_DATA_DIR = LOCALE_DIR = LIBEXEC_DIR = ""
+        GSETTINGS_SCHEMA_DIR = TWEAK_DIR = DATA_DIR = PKG_DATA_DIR = \
+                               LOCALE_DIR  = LIBEXEC_DIR = ""
         _defs_present = False
 
-    #the supplied prefix always beats the contents of defs
+    # the supplied prefix always beats the contents of defs
     if options.prefix or not _defs_present:
         _prefix = options.prefix or "/usr"
         DATA_DIR = os.path.join(_prefix, "share")
@@ -68,9 +71,9 @@ if __name__ == '__main__':
     gtweak.VERBOSE = options.verbose
 
     if options.debug:
-        level=logging.DEBUG
+        level = logging.DEBUG
     else:
-        level=logging.WARNING
+        level = logging.WARNING
     logging.basicConfig(format="%(levelname)-8s: %(message)s", level=level)
 
     locale.setlocale(locale.LC_ALL, None)
@@ -80,4 +83,3 @@ if __name__ == '__main__':
     app = GnomeTweakTool()
     exit_status = app.run(None)
     sys.exit(exit_status)
-
