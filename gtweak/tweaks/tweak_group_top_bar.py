@@ -43,5 +43,7 @@ TWEAK_GROUPS = [
         GSettingsSwitchTweak(_("Seconds"), "org.gnome.desktop.interface", "clock-show-seconds"),
         Title(_("Calendar"),""),
         GSettingsSwitchTweak(_("Week Numbers"),"org.gnome.desktop.calendar", "show-weekdate"),
+        Title(_("Power"),""),
+        GSettingsSwitchTweak(_("Battery Percentage"),"org.gnome.desktop.interface", "show-battery-percentage"),
     )
 ]
