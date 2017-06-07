@@ -30,4 +30,4 @@ subdir('gtweak')
 subdir('data')
 subdir('po')
 
-meson.add_install_script('meson-postinstall.sh')
+meson.add_install_script('meson-postinstall.py')
