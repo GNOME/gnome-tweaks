@@ -33,11 +33,12 @@ def _fix_shell_version_for_ego(version):
 def _get_shell_major_minor_version(version):
     return '.'.join(version.split('.')[0:2])
 
-class _ExtensionsBlankState(Gtk.Box):
+class _ExtensionsBlankState(Gtk.Box, Tweak):
 
     def __init__(self):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=18,
                                valign=Gtk.Align.CENTER)
+        Tweak.__init__(self, 'extensions', '')
 
         self.add(Gtk.Image(icon_name="gnome-tweak-tool-symbolic",
                  pixel_size=128, opacity=0.3))
@@ -247,7 +248,9 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
         self.connect("row-activated", self._on_row_activated, None);
 
         if not len(extension_tweaks):
-            self.set_placeholder(_ExtensionsBlankState())
+            placeholder = _ExtensionsBlankState()
+            self.set_placeholder(placeholder)
+            self.tweaks.append(placeholder)
 
     def _got_info(self, ego, resp, uuid, extension, widget):
         if uuid == extension["uuid"]:
