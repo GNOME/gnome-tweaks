@@ -237,12 +237,14 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
                                    _("Extensions"),
                                    *extension_tweaks)
 
+        if shell is None:
+            return # we're done
+
         self.props.valign = Gtk.Align.FILL
 
         self.titlebar_widget = Gtk.Switch(visible=True)
-        if shell is not None:
-            shell._settings.bind("disable-user-extensions", self.titlebar_widget,
-                                 "active", Gio.SettingsBindFlags.INVERT_BOOLEAN)
+        shell._settings.bind("disable-user-extensions", self.titlebar_widget,
+                             "active", Gio.SettingsBindFlags.INVERT_BOOLEAN)
 
         self.set_header_func(self._list_header_func, None)
         self.connect("row-activated", self._on_row_activated, None);
