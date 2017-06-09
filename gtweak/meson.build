@@ -22,7 +22,6 @@ shell_sources = [
   'gshellwrapper.py',
   'gtksettings.py',
   '__init__.py',
-  'mainwindow.py',
   'tweakmodel.py',
   'tweakview.py',
   'utils.py',
