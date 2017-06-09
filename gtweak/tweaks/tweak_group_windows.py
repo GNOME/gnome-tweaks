@@ -55,14 +55,14 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
 
         else:
             rsplit = left.split(",")
-            rsplit = [x for x in rsplit if x in ['appmenu', 'close', 'maximize', 'minimize']]
+            rsplit = [x for x in rsplit if x in ['appmenu', 'close', 'minimize', 'maximize']]
 
             if v:
                 rsplit.append(self.value)
             else:
                 rsplit.remove(self.value)
 
-            rsplit.sort(key=lambda x: ["appmenu", "close", "maximize", "minimize"].index(x))
+            rsplit.sort(key=lambda x: ["appmenu", "close", "minimize", "maximize"].index(x))
 
             self.settings.set_string(self.key_name, ",".join(rsplit) + colon + right)
 
