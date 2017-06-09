@@ -31,9 +31,9 @@ shell_sources = [
 
 tweak_sources = [
   'tweaks/__init__.py',
+  'tweaks/tweak_group_appearance.py',
   'tweaks/tweak_group_desktop.py',
   'tweaks/tweak_group_font.py',
-  'tweaks/tweak_group_interface.py',
   'tweaks/tweak_group_keymouse.py',
   'tweaks/tweak_group_power.py',
   'tweaks/tweak_group_shell_extensions.py',
