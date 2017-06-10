@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-06-07 13:00+0000\n"
-"PO-Revision-Date: 2017-06-10 11:26+0700\n"
+"POT-Creation-Date: 2017-06-10 13:05+0000\n"
+"PO-Revision-Date: 2017-06-10 20:46+0700\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.8.11\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:35 gtweak/utils.py:327
+#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:327
 msgid "GNOME Tweak Tool"
 msgstr "GNOME Alat Oprek"
 
@@ -74,32 +74,32 @@ msgstr "Tent_ang"
 msgid "_Quit"
 msgstr "_Keluar"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:80
 msgid "Reset to Defaults"
 msgstr "Reset ke Baku"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:81
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Reset semua pengaturan oprekan ke keadaan baku asli?"
 
-#: gtweak/app.py:101 gtweak/app.py:103
+#: gtweak/app.py:102 gtweak/app.py:104
 msgid "GNOME Shell"
 msgstr "Shell GNOME"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:104
 #, python-format
 msgid "(%s mode)"
 msgstr "(mode %s)"
 
-#: gtweak/app.py:105
+#: gtweak/app.py:107
 msgid "GNOME Shell is not running"
 msgstr "Shell GNOME tidak berjalan"
 
-#: gtweak/app.py:107
+#: gtweak/app.py:109
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:113
+#: gtweak/app.py:116
 msgid "Homepage"
 msgstr "Beranda"
 
@@ -114,6 +114,89 @@ msgstr "Oprekan"
 #: gtweak/tweakview.py:119
 msgid "Search Tweaks…"
 msgstr "Oprekan Pencarian..."
+
+#: gtweak/tweaks/tweak_group_appearance.py:41
+#: gtweak/tweaks/tweak_group_startup.py:43
+msgid "Applications"
+msgstr "Aplikasi"
+
+#: gtweak/tweaks/tweak_group_appearance.py:65
+msgid "Icons"
+msgstr "Ikon"
+
+#: gtweak/tweaks/tweak_group_appearance.py:83
+msgid "Cursor"
+msgstr "Kursor"
+
+#: gtweak/tweaks/tweak_group_appearance.py:110
+msgid "Shell"
+msgstr "Shell"
+
+#: gtweak/tweaks/tweak_group_appearance.py:110
+msgid "Install custom or user themes for gnome-shell"
+msgstr "Pasang tema pengguna atau ubahan bagi gnome-shell"
+
+#. check the shell is running and the usertheme extension is present
+#: gtweak/tweaks/tweak_group_appearance.py:113
+msgid "Unknown error"
+msgstr "Galat tak dikenal"
+
+#: gtweak/tweaks/tweak_group_appearance.py:118
+msgid "Shell not running"
+msgstr "Shell tidak sedang berjalan"
+
+#: gtweak/tweaks/tweak_group_appearance.py:140
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Ekstensi user-theme shell tak dipasang secara benar"
+
+#: gtweak/tweaks/tweak_group_appearance.py:143
+msgid "Shell user-theme extension not enabled"
+msgstr "Ekstensi user-theme shell tak diaktifkan"
+
+#: gtweak/tweaks/tweak_group_appearance.py:146
+msgid "Could not list shell extensions"
+msgstr "Tak bisa membuat daftar ekstensi shell"
+
+#: gtweak/tweaks/tweak_group_appearance.py:175
+msgid "<i>Default</i>"
+msgstr "<i>Bawaan</i>"
+
+#: gtweak/tweaks/tweak_group_appearance.py:181
+msgid "Select a theme"
+msgstr "Pilih tema"
+
+#: gtweak/tweaks/tweak_group_appearance.py:230
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "Tema %s sukses dimutakhirkan"
+
+#: gtweak/tweaks/tweak_group_appearance.py:232
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "Tema %s sukses dipasang"
+
+#: gtweak/tweaks/tweak_group_appearance.py:240
+msgid "Error installing theme"
+msgstr "Galat saat memasang tema"
+
+#. does not look like a valid theme
+#: gtweak/tweaks/tweak_group_appearance.py:245
+msgid "Invalid theme"
+msgstr "Tema tak valid"
+
+#: gtweak/tweaks/tweak_group_appearance.py:257
+msgid "Appearance"
+msgstr "Penampilan"
+
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: gtweak/tweaks/tweak_group_appearance.py:261
+msgid "Animations"
+msgstr "Animasi"
+
+#: gtweak/tweaks/tweak_group_appearance.py:262
+msgid "Themes"
+msgstr "Tema"
 
 #: gtweak/tweaks/tweak_group_desktop.py:20
 msgid "Show Icons"
@@ -193,94 +276,11 @@ msgstr "Antialias"
 msgid "Scaling Factor"
 msgstr "Faktor Penskalaan"
 
-#: gtweak/tweaks/tweak_group_interface.py:41
-#: gtweak/tweaks/tweak_group_startup.py:43
-msgid "Applications"
-msgstr "Aplikasi"
-
-#: gtweak/tweaks/tweak_group_interface.py:65
-msgid "Icons"
-msgstr "Ikon"
-
-#: gtweak/tweaks/tweak_group_interface.py:83
-msgid "Cursor"
-msgstr "Kursor"
-
-#: gtweak/tweaks/tweak_group_interface.py:110
-msgid "Shell"
-msgstr "Shell"
-
-#: gtweak/tweaks/tweak_group_interface.py:110
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Pasang tema pengguna atau ubahan bagi gnome-shell"
-
-#. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_interface.py:113
-msgid "Unknown error"
-msgstr "Galat tak dikenal"
-
-#: gtweak/tweaks/tweak_group_interface.py:118
-msgid "Shell not running"
-msgstr "Shell tidak sedang berjalan"
-
-#: gtweak/tweaks/tweak_group_interface.py:140
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Ekstensi user-theme shell tak dipasang secara benar"
-
-#: gtweak/tweaks/tweak_group_interface.py:143
-msgid "Shell user-theme extension not enabled"
-msgstr "Ekstensi user-theme shell tak diaktifkan"
-
-#: gtweak/tweaks/tweak_group_interface.py:146
-msgid "Could not list shell extensions"
-msgstr "Tak bisa membuat daftar ekstensi shell"
-
-#: gtweak/tweaks/tweak_group_interface.py:175
-msgid "<i>Default</i>"
-msgstr "<i>Bawaan</i>"
-
-#: gtweak/tweaks/tweak_group_interface.py:181
-msgid "Select a theme"
-msgstr "Pilih tema"
-
-#: gtweak/tweaks/tweak_group_interface.py:230
-#, python-format
-msgid "%s theme updated successfully"
-msgstr "Tema %s sukses dimutakhirkan"
-
-#: gtweak/tweaks/tweak_group_interface.py:232
-#, python-format
-msgid "%s theme installed successfully"
-msgstr "Tema %s sukses dipasang"
-
-#: gtweak/tweaks/tweak_group_interface.py:240
-msgid "Error installing theme"
-msgstr "Galat saat memasang tema"
-
-#. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_interface.py:245
-msgid "Invalid theme"
-msgstr "Tema tak valid"
-
-#: gtweak/tweaks/tweak_group_interface.py:257
-msgid "Appearance"
-msgstr "Penampilan"
-
-#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_interface.py:261
-msgid "Animations"
-msgstr "Animasi"
-
-#: gtweak/tweaks/tweak_group_interface.py:262
-msgid "Themes"
-msgstr "Tema"
-
-#: gtweak/tweaks/tweak_group_xkb.py:55 gtweak/tweaks/tweak_group_windows.py:196
+#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:196
 msgid "Disabled"
 msgstr "Dimatikan"
 
-#: gtweak/tweaks/tweak_group_xkb.py:182
+#: gtweak/tweaks/tweak_group_xkb.py:179
 msgid "Typing"
 msgstr "Mengetik"
 
@@ -297,43 +297,43 @@ msgstr "Daya"
 msgid "Power Button Behavior"
 msgstr "Perilaku Tombol Daya"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:45
+#: gtweak/tweaks/tweak_group_shell_extensions.py:46
 msgid "No Extensions Installed"
 msgstr "Tak Ada Ekstensi Terpasang"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:51
+#: gtweak/tweaks/tweak_group_shell_extensions.py:53
 msgid "Browse in Software"
 msgstr "Ramban di Perangkat Lunak"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:112
+#: gtweak/tweaks/tweak_group_shell_extensions.py:117
 msgid "Extension downloading"
 msgstr "Pengunduhan ekstensi"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:114
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Error loading extension"
 msgstr "Galat saat memuat ekstensi"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:116
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Extension does not support shell version"
 msgstr "Ekstensi tak mendukung versi shell"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Unknown extension error"
 msgstr "Galat ekstensi yang tak dikenal"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: gtweak/tweaks/tweak_group_shell_extensions.py:171
 msgid "Updating"
 msgstr "Memutakhirkan"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:186
+#: gtweak/tweaks/tweak_group_shell_extensions.py:191
 msgid "Error"
 msgstr "Galat"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:190
+#: gtweak/tweaks/tweak_group_shell_extensions.py:195
 msgid "Update"
 msgstr "Mutakhirkan"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:232
+#: gtweak/tweaks/tweak_group_shell_extensions.py:237
 msgid "Extensions"
 msgstr "Ekstensi"
 
@@ -461,7 +461,7 @@ msgid "Sloppy"
 msgstr "Tidak Rapi"
 
 #: gtweak/tweaks/tweak_group_windows.py:185
-#: gtweak/tweaks/tweak_group_keymouse.py:80
+#: gtweak/tweaks/tweak_group_keymouse.py:119
 msgid "Mouse"
 msgstr "Tetikus"
 
@@ -557,59 +557,68 @@ msgstr "Ruang kerja hanya pada tampilan primer"
 msgid "Additional displays are treated as independent workspaces."
 msgstr "Tampilan tambahan diperlakukan sebagai ruang kerja independen."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:28
+#: gtweak/tweaks/tweak_group_keymouse.py:30
 msgid "Emacs Input"
 msgstr "Masukan Emacs"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Overview Shortcut"
 msgstr "Ikhtisar Pintasan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:52
+#: gtweak/tweaks/tweak_group_keymouse.py:54
 msgid "Left Super"
 msgstr "Super Kiri"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:56
+#: gtweak/tweaks/tweak_group_keymouse.py:58
 msgid "Right Super"
 msgstr "Super Kanan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:72
+#: gtweak/tweaks/tweak_group_keymouse.py:81
+#: gtweak/tweaks/tweak_group_keymouse.py:89
+msgid "Additional Layout Options"
+msgstr "Opsi Susunan Tambahan"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:109
 msgid "Keyboard & Mouse"
 msgstr "Papan Tik & Tetikus"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:73
+#: gtweak/tweaks/tweak_group_keymouse.py:110
+msgid "Keyboard"
+msgstr "Papan Tik"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:111
 msgid "Show Extended Input Sources"
 msgstr "Tampilkan Sumber Masukan yang Diperluas"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:76
+#: gtweak/tweaks/tweak_group_keymouse.py:114
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Meningkatkan pilihan sumber masukan dalam aplikasi Pengaturan."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:81
+#: gtweak/tweaks/tweak_group_keymouse.py:120
 msgid "Acceleration Profile"
 msgstr "Profil Akselerasi"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid "Pointer Location"
 msgstr "Lokasi Penunjuk"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:89
+#: gtweak/tweaks/tweak_group_keymouse.py:128
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Tekan tombol Ctrl untuk menyorot penunjuk."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:90
+#: gtweak/tweaks/tweak_group_keymouse.py:129
 msgid "Middle Click Paste"
 msgstr "Tempel Klik Tengah"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:94
+#: gtweak/tweaks/tweak_group_keymouse.py:133
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:95
+#: gtweak/tweaks/tweak_group_keymouse.py:134
 msgid "Click Method"
 msgstr "Metode Klik"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:99
+#: gtweak/tweaks/tweak_group_keymouse.py:138
 msgid "Disable While Typing"
 msgstr "Nonaktifkan Ketika Mengetik"
 
