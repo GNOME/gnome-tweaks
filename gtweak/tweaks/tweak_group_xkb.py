@@ -21,14 +21,11 @@ import logging
 
 import gi
 gi.require_version("GnomeDesktop", "3.0")
-from gi.repository import Pango, Gtk, GnomeDesktop
-from gtweak.gshellwrapper import GnomeShellFactory
+from gi.repository import Gtk, GnomeDesktop
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget, GSettingsComboEnumTweak, GSettingsComboTweak, build_horizontal_sizegroup, ListBoxTweakGroup, Title
-from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
+from gtweak.widgets import GSettingsSwitchTweak, build_label_beside_widget, GSettingsComboEnumTweak, GSettingsComboTweak, build_horizontal_sizegroup, ListBoxTweakGroup
+from gtweak.gsettings import GSettingsSetting, GSettingsMissingError
 
-_shell = GnomeShellFactory().get_shell()
-_shell_loaded = _shell is not None
 
 class _XkbOption(Gtk.Expander, Tweak):
     def __init__(self, group_id, parent_settings, xkb_info, **options):
@@ -150,7 +147,7 @@ class _XkbOption(Gtk.Expander, Tweak):
         elif active and not w._val in self._values and w._val:
             self._parent_settings.setting_add_to_list(TypingTweakGroup.XKB_GSETTINGS_NAME, w._val)
 
-class TypingTweakGroup(Gtk.Box, TweakGroup):
+class TypingTweakGroup(Gtk.Box):
 
     XKB_GSETTINGS_SCHEMA = "org.gnome.desktop.input-sources"
     XKB_GSETTINGS_NAME = "xkb-options"
@@ -184,7 +181,3 @@ class TypingTweakGroup(Gtk.Box, TweakGroup):
     def _on_changed(self, *args):
         for obj in self._option_objects:
             obj.reload()
-
-TWEAK_GROUPS = [
-    TypingTweakGroup(),
-]

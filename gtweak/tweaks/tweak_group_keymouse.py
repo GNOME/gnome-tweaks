@@ -17,10 +17,12 @@
 
 import os.path
 
-from gi.repository import GLib, Gtk
+from gi.repository import GLib, Gtk, Gdk
 
 import gtweak
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, GetterSetterSwitchTweak, Title, GSettingsComboEnumTweak, build_label_beside_widget
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, Title, GSettingsComboEnumTweak, build_label_beside_widget, Tweak
+
+from gtweak.tweaks.tweak_group_xkb import TypingTweakGroup
 
 class KeyThemeSwitcher(GSettingsSwitchTweakValue):
     def __init__(self, **options):
@@ -68,8 +70,44 @@ class OverviewShortcutTweak(Gtk.Box, _GSettingsTweak):
     def on_button_toggled(self, button, key):
         self.settings[self.key_name] = key
 
+
+class AdditionalLayoutButton(Gtk.Box, Tweak):
+
+    def __init__(self):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=18,
+                               valign=Gtk.Align.CENTER)
+        Tweak.__init__(self, 'extensions', '')
+
+        btn = Gtk.Button(label=_("Additional Layout Options"),halign=Gtk.Align.END)
+        btn.connect("clicked", self._on_browse_clicked)
+        self.add(btn)
+
+        self.show_all()
+
+    def _on_browse_clicked(self, btn):
+        dialog = Gtk.Window()
+        dialog.set_title(_("Additional Layout Options"))
+        dialog.set_type_hint(Gdk.WindowTypeHint.DIALOG)
+        dialog.set_transient_for(self.main_window)
+        dialog.set_modal(True)
+
+        dialog.set_size_request(500,500)
+        geometry = Gdk.Geometry()
+        geometry.max_height = 500
+        dialog.set_geometry_hints(None, geometry, Gdk.WindowHints.MAX_SIZE)
+
+        scrolled_window = Gtk.ScrolledWindow()
+        scrolled_window.set_border_width(10)
+        box = TypingTweakGroup()
+        scrolled_window.add_with_viewport(box)
+
+        dialog.add(scrolled_window)
+        dialog.show_all()
+
+
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Keyboard & Mouse"),
+        Title(_("Keyboard"), ""),
         GSettingsSwitchTweak(_("Show Extended Input Sources"),
                               "org.gnome.desktop.input-sources",
                               "show-all-sources",
@@ -77,6 +115,7 @@ TWEAK_GROUPS = [
                               logout_required=True,),
         KeyThemeSwitcher(),
         OverviewShortcutTweak(),
+        AdditionalLayoutButton(),
         Title(_("Mouse"), ""),
         GSettingsComboEnumTweak(_("Acceleration Profile"),
                                 "org.gnome.desktop.peripherals.mouse",
