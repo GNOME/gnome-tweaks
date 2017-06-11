@@ -20,10 +20,13 @@ import os.path
 from gi.repository import GLib, Gtk, Gdk
 
 import gtweak
+from gtweak.gsettings import GSettingsSetting
+from gtweak.gshellwrapper import GnomeShellFactory
+from gtweak.tweaks.tweak_group_xkb import TypingTweakGroup
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, Title, GSettingsComboEnumTweak, build_label_beside_widget, Tweak, UI_BOX_SPACING
 
-from gtweak.tweaks.tweak_group_xkb import TypingTweakGroup
-from gtweak.gsettings import GSettingsSetting
+_shell = GnomeShellFactory().get_shell()
+_shell_loaded = _shell is not None
 
 
 class KeyThemeSwitcher(GSettingsSwitchTweakValue):
@@ -199,7 +202,7 @@ class OverviewShortcutTweak(Gtk.Box, _GSettingsTweak):
     def __init__(self, **options):
         name = _("Overview Shortcut")
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
-        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "overlay-key", **options)
+        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "overlay-key", loaded=_shell_loaded, **options)
 
         box_btn = Gtk.ButtonBox()
         box_btn.set_layout(Gtk.ButtonBoxStyle.EXPAND)
