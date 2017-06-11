@@ -557,7 +557,33 @@ class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
         sw = Gtk.Switch()
         sw.set_active(self.get_active())
         sw.connect("notify::active", self._on_toggled)
-        build_label_beside_widget(name, sw, hbox=self)
+
+        vbox1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        vbox1.props.spacing = UI_BOX_SPACING
+        lbl = Gtk.Label(label=name)
+        lbl.props.ellipsize = Pango.EllipsizeMode.END
+        lbl.props.xalign = 0.0
+        vbox1.pack_start(lbl, True, True, 0)
+
+        if options.get("desc"):
+            description = options.get("desc")
+            lbl_desc = Gtk.Label()
+            lbl_desc.props.xalign = 0.0
+            lbl_desc.set_line_wrap(True)
+            lbl_desc.get_style_context().add_class("dim-label")
+            lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(description)+"</span>")
+            vbox1.pack_start(lbl_desc, True, True, 0)
+
+        vbox2 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        vbox2_upper = Gtk.Box()
+        vbox2_lower = Gtk.Box()
+        vbox2.pack_start(vbox2_upper, True, True, 0)
+        vbox2.pack_start(sw, False, False, 0)
+        vbox2.pack_start(vbox2_lower, True, True, 0)
+
+        self.pack_start(vbox1, True, True, 0)
+        self.pack_start(vbox2, False, False, 0)
+        self.widget_for_size_group = None
 
     def _on_toggled(self, sw, pspec):
         self.set_active(sw.get_active())

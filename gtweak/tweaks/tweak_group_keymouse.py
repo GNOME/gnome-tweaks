@@ -32,6 +32,7 @@ class KeyThemeSwitcher(GSettingsSwitchTweakValue):
                                            _("Emacs Input"),
                                            "org.gnome.desktop.interface",
                                            "gtk-key-theme",
+                                           desc=_("Overrides shortcuts to use keybindings from the Emacs editor."),
                                            **options)
 
     def get_active(self):
