@@ -546,6 +546,8 @@ class Title(Gtk.Box, Tweak):
         widget = Gtk.Label()
         widget.set_markup("<b>"+GLib.markup_escape_text(name)+"</b>")
         widget.props.xalign = 0.0
+        if not options.get("top"):
+            widget.set_margin_top(10)
         self.add(widget)
 
 class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):

@@ -260,7 +260,7 @@ class AdditionalLayoutButton(Gtk.Box, Tweak):
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Keyboard & Mouse"),
-        Title(_("Keyboard"), ""),
+        Title(_("Keyboard"), "", top=True),
         GSettingsSwitchTweak(_("Show Extended Input Sources"),
                               "org.gnome.desktop.input-sources",
                               "show-all-sources",
