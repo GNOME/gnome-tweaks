@@ -30,7 +30,7 @@ _shell_loaded = _shell is not None
 class ApplicationMenuTweak(GetterSetterSwitchTweak):
     def __init__(self, **options):
         self._xsettings = XSettingsOverrides()
-        GetterSetterSwitchTweak.__init__(self, _("Show Application Menu"), **options)
+        GetterSetterSwitchTweak.__init__(self, _("Show Application Menu"), loaded=_shell_loaded, **options)
 
     def get_active(self):
         return self._xsettings.get_shell_shows_app_menu()
@@ -101,11 +101,11 @@ depends_how = lambda x,kn: not(x.get_boolean(kn))
 TWEAK_GROUPS = [
     ListBoxTweakGroup(TWEAK_GROUP_TOPBAR,
         ApplicationMenuTweak(),
-        Title(_("Clock"),""),
-        GSettingsCheckTweak(_("Show date"),"org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-        GSettingsCheckTweak(_("Show seconds"), "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml"),
-        Title(_("Calendar"),""),
-        GSettingsCheckTweak(_("Show week numbers"),"org.gnome.desktop.calendar", "show-weekdate", schema_filename="org.gnome.desktop.calendar.gschema.xml"),
+        Title(_("Clock"),"", loaded=_shell_loaded),
+        GSettingsCheckTweak(_("Show date"),"org.gnome.desktop.interface", "clock-show-date", schema_filename="org.gnome.desktop.interface.gschema.xml", loaded=_shell_loaded),
+        GSettingsCheckTweak(_("Show seconds"), "org.gnome.desktop.interface", "clock-show-seconds", schema_filename="org.gnome.desktop.interface.gschema.xml", loaded=_shell_loaded),
+        Title(_("Calendar"),"", loaded=_shell_loaded),
+        GSettingsCheckTweak(_("Show week numbers"),"org.gnome.desktop.calendar", "show-weekdate", schema_filename="org.gnome.desktop.calendar.gschema.xml", loaded=_shell_loaded),
     ),
     ListBoxTweakGroup(TWEAK_GROUP_POWER,
         Title(_("When Power Button is Pressed"), "", uid="title-theme"),
