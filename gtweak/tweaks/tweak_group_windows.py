@@ -42,7 +42,7 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
 
         if "close" in right:
             rsplit = right.split(",")
-            rsplit = [x for x in rsplit if x in ['appmenu', 'close', 'maximize', 'minimize']]
+            rsplit = [x for x in rsplit if x in ['appmenu', 'minimize', 'maximize', 'close']]
 
             if v:
                 rsplit.append(self.value)
@@ -55,14 +55,14 @@ class ShowWindowButtons(GSettingsSwitchTweakValue):
 
         else:
             rsplit = left.split(",")
-            rsplit = [x for x in rsplit if x in ['appmenu', 'close', 'minimize', 'maximize']]
+            rsplit = [x for x in rsplit if x in ['appmenu', 'minimize', 'maximize', 'close']]
 
             if v:
                 rsplit.append(self.value)
             else:
                 rsplit.remove(self.value)
 
-            rsplit.sort(key=lambda x: ["appmenu", "close", "minimize", "maximize"].index(x))
+            rsplit.sort(key=lambda x: ["close", "minimize", "maximize", "appmenu"].index(x))
 
             self.settings.set_string(self.key_name, ",".join(rsplit) + colon + right)
 
@@ -106,9 +106,17 @@ class PlaceWindowButtons(Gtk.Box, _GSettingsTweak):
     def on_button_toggled(self, v):
         val = self.settings.get_string(self.key_name)
         (left, colon, right) = val.partition(":")
-        left = ','.join(list(reversed(left.split(','))))
-        right = ','.join(list(reversed(right.split(','))))
-        self.settings.set_string(self.key_name, right + colon + left)
+
+        if "close" in left:
+            rsplit = left.split(",")
+            rsplit = [x for x in rsplit if x in ['appmenu', 'minimize', 'maximize', 'close']]
+            rsplit.sort(key=lambda x: ["appmenu", "minimize", "maximize", "close"].index(x))
+            self.settings.set_string(self.key_name, right + colon + ",".join(rsplit))
+        else:
+            rsplit = right.split(",")
+            rsplit = [x for x in rsplit if x in ['appmenu', 'minimize', 'maximize', 'close']]
+            rsplit.sort(key=lambda x: ["close", "minimize", "maximize", "appmenu"].index(x))
+            self.settings.set_string(self.key_name, ",".join(rsplit) + colon + left)
 
 class WindowScalingFactorTweak(Gtk.Box, Tweak):
     def __init__(self, **options):
