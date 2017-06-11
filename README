@@ -1,18 +1,47 @@
 GNOME TWEAK TOOL
-----------------
- * The first rule of gnome-tweak-tool is do not talk about gnome-tweak-tool
+================
 
-Running
+
+BUILD
+-----
+The only build-time dependency is [meson](http://mesonbuild.com/).
+
+    meson builddir
+    ninja -C builddir
+    ninja -C builddir install
+
+RUNTIME DEPENDENCIES
+--------------------
+* Python3
+* pygobject (>= 3.10)
+* gnome-settings-daemon
+
+* GIR files and libraries from:
+  - GLib
+  - GTK+ 3 (>= 3.12)
+  - gnome-desktop
+  - libsoup
+  - libnotify
+  - Pango
+
+* GSettings Schemas from:
+  - gsettings-desktop-schemas (>= 3.24)
+  - gnome-shell (>= 3.4)
+  - mutter
+
+* Optional:
+   - gnome-software (for links from GNOME Shell Extensions page)
+
+RUNNING
 -------
  * If you wish to run the application uninstalled, execute;
 
-./gnome-tweak-tool [-p /path/to/jhbuild/prefix/]
+    ./gnome-tweak-tool [-p /path/to/jhbuild/prefix/]
 
- * If you wish to install system wide you must
-
-meson build-dir
-ninja -C build-dir
-ninja -C build-dir install
+SUPPORTED DESKTOPS
+------------------
+Tweak Tool is designed for GNOME Shell but can be used in other desktops.
+A few features will be missing when Tweak Tool is run on a different desktop.
 
 TODO
 ----
@@ -20,3 +49,16 @@ TODO
    it hard to categorise things. Perhaps go to a named factory approach
  * Do some more things lazily to improve startup speed
 
+HOMEPAGE
+--------
+https://wiki.gnome.org/Apps/GnomeTweakTool
+
+DEVELOPMENT REPOSITORY
+----------------------
+https://git.gnome.org/browse/gnome-tweak-tool
+
+BUGS
+----
+https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool
+
+https://bugzilla.gnome.org/buglist.cgi?quicksearch=product%3A"gnome-tweak-tool"
