@@ -53,7 +53,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     if kwargs.get("hbox"):
         hbox = kwargs.get("hbox")
     else:
-        hbox = Gtk.HBox()
+        hbox = Gtk.Box()
 
     hbox.props.spacing = UI_BOX_SPACING
     lbl = Gtk.Label(label=txt)
