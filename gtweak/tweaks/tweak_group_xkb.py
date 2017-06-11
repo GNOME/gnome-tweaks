@@ -152,7 +152,7 @@ class TypingTweakGroup(Gtk.Box):
     XKB_GSETTINGS_SCHEMA = "org.gnome.desktop.input-sources"
     XKB_GSETTINGS_NAME = "xkb-options"
     # grp_led is unsupported
-    XKB_OPTIONS_BLACKLIST = {"grp_led"}
+    XKB_OPTIONS_BLACKLIST = {"grp_led", "Compose key"}
 
     def __init__(self):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=3)
