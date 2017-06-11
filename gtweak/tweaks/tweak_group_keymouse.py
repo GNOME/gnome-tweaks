@@ -20,8 +20,12 @@ import os.path
 from gi.repository import GLib
 
 import gtweak
+from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.utils import XSettingsOverrides, walk_directories, make_combo_list_with_default
 from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, GetterSetterSwitchTweak, Title, GSettingsComboEnumTweak
+
+_shell = GnomeShellFactory().get_shell()
+_shell_loaded = _shell is not None
 
 class KeyThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
@@ -55,7 +59,7 @@ TWEAK_GROUPS = [
         GSettingsComboTweak(_("Switch between overview and desktop"),
                               "org.gnome.mutter",
                               "overlay-key",
-                              [("Super_L", _("Left super")), ("Super_R", _("Right super"))]),
+                              [("Super_L", _("Left super")), ("Super_R", _("Right super"))], loaded=_shell_loaded),
               
         Title(_("Mouse"), ""),
         GSettingsComboEnumTweak(_("Acceleration profile"),
