@@ -21,13 +21,13 @@ from gi.repository import Gio, GLib, Gtk
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak
-from gtweak.widgets import ListBoxTweakGroup, build_horizontal_sizegroup, Title, _GSettingsTweak, GSettingsSpinButtonTweak
+from gtweak.widgets import ListBoxTweakGroup, build_horizontal_sizegroup, Title, GSettingsSpinButtonTweak
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
 
-class StaticWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
+class StaticWorkspaceTweak(Gtk.ListBox, Tweak):
 
     def __init__(self, **options):
         Gtk.ListBox.__init__(self)
@@ -57,7 +57,7 @@ class StaticWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
         lbl_desc.get_style_context().add_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check1 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check1 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         self.check1.set_no_show_all(True)
         self.check1.set_visible(self.settings[self.key_name])
 
@@ -83,7 +83,7 @@ class StaticWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
         lbl_desc.get_style_context().add_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check2 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check2 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         self.check2.set_no_show_all(True)
         self.check2.set_visible(not self.settings[self.key_name])
 
@@ -105,7 +105,7 @@ class StaticWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
             self.check1.hide()
             self.check2.show()
 
-class PrimaryWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
+class PrimaryWorkspaceTweak(Gtk.ListBox, Tweak):
 
     def __init__(self, **options):
         Gtk.ListBox.__init__(self)
@@ -136,7 +136,7 @@ class PrimaryWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
         lbl_desc.get_style_context().add_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check1 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check1 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         self.check1.set_no_show_all(True)
         self.check1.set_visible(self.settings[self.key_name])
 
@@ -162,7 +162,7 @@ class PrimaryWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
         lbl_desc.get_style_context().add_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check2 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check2 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         self.check2.set_no_show_all(True)
         self.check2.set_visible(not self.settings[self.key_name])
 
