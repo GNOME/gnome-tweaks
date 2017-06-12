@@ -25,7 +25,7 @@ import gettext
 from gi.repository import Gio, Gtk, GLib
 
 
-class Focus(Gtk.ListBox, _GSettingsTweak):
+class Focus(Gtk.ListBox, Tweak):
 
     def __init__(self, **options):
         Gtk.ListBox.__init__(self)
@@ -55,7 +55,7 @@ class Focus(Gtk.ListBox, _GSettingsTweak):
         lbl_desc.get_style_context().add_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check_click = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check_click = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         self.check_click.set_no_show_all(True)
         self.check_click.set_visible(self.settings[self.key_name] == "click")
 
@@ -81,7 +81,7 @@ class Focus(Gtk.ListBox, _GSettingsTweak):
         lbl_desc.get_style_context().add_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check_sloppy = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check_sloppy = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         self.check_sloppy.set_no_show_all(True)
         self.check_sloppy.set_visible(self.settings[self.key_name] == "sloppy")
 
@@ -107,7 +107,7 @@ class Focus(Gtk.ListBox, _GSettingsTweak):
         lbl_desc.get_style_context().add_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check_mouse = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check_mouse = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
         self.check_mouse.set_no_show_all(True)
         self.check_mouse.set_visible(self.settings[self.key_name] == "mouse")
 
