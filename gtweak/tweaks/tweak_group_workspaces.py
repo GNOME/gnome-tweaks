@@ -16,39 +16,173 @@
 # You should have received a copy of the GNU General Public License
 # along with gnome-tweak-tool.  If not, see <http://www.gnu.org/licenses/>.
 
-from gi.repository import Gtk
+from gi.repository import Gio, GLib, Gtk
 
 import gtweak
-from gtweak.gsettings import GSettingsSetting, GSettingsMissingError, GSettingsFakeSetting
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, build_label_beside_widget, build_horizontal_sizegroup, Title, _GSettingsTweak, build_combo_box_text, GSettingsSpinButtonTweak
+from gtweak.tweakmodel import Tweak
+from gtweak.widgets import ListBoxTweakGroup, build_horizontal_sizegroup, Title, _GSettingsTweak, GSettingsSpinButtonTweak
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
-class StaticWorkspaceTweak(Gtk.Box, _GSettingsTweak):
 
-    STATUS = {'dynamic':True, 'static': False}
+class StaticWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
 
     def __init__(self, **options):
-        name = _("Workspace Creation")
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "dynamic-workspaces", **options)
+        Gtk.ListBox.__init__(self)
+        Tweak.__init__(self, _("Dynamic Workspaces"), "", loaded=_shell_loaded,)
 
-        default = list(self.STATUS.keys())[list(self.STATUS.values()).index(self.settings[self.key_name])]
-        key_options = [("dynamic", _("Dynamic")), ("static", _("Static"))]
+        self.settings = Gio.Settings("org.gnome.mutter")
+        self.key_name = "dynamic-workspaces"
 
-        self.combo = build_combo_box_text(default, *key_options)
-        self.combo.connect('changed', self._on_combo_changed)
-        build_label_beside_widget(name, self.combo, hbox=self)
-        self.widget_for_size_group = self.combo
+        self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-    def _on_combo_changed(self, combo):
-        _iter = combo.get_active_iter()
-        if _iter:
-            value = combo.get_model().get_value(_iter, 0)
-            val = self.STATUS[value]
-            self.settings[self.key_name] = val
+        # Needs other page elements to get margins too
+        # self.props.margin_left = 50
+        # self.props.margin_right = 50
+
+        row = Gtk.ListBoxRow()
+        hbox = Gtk.Box()
+        hbox.props.margin = 10
+        row.add(hbox)
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+
+        lbl = Gtk.Label(_("Dynamic Workspaces"), xalign=0)
+        lbl.props.xalign = 0.0
+        desc = _("Workspaces can be created on demand, and are automatically removed when empty.")
+        lbl_desc = Gtk.Label()
+        lbl_desc.set_line_wrap(True)
+        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
+
+        self.check1 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check1.set_no_show_all(True)
+        self.check1.set_visible(self.settings[self.key_name])
+
+        vbox.pack_start(lbl, False, False, 0)
+        vbox.pack_start(lbl_desc, False, False, 0)
+        hbox.pack_start(vbox, False, False, 0)
+        hbox.pack_end(self.check1, False, False, 0)
+
+        self.add(row)
+
+        row = Gtk.ListBoxRow()
+        hbox = Gtk.Box()
+        hbox.props.margin = 10
+        row.add(hbox)
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+
+        lbl = Gtk.Label(_("Static Workspaces"), xalign=0)
+        lbl.props.xalign = 0.0
+        desc = _("Number of workspaces is fixed.")
+        lbl_desc = Gtk.Label()
+        lbl_desc.set_line_wrap(True)
+        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
+
+        self.check2 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check2.set_no_show_all(True)
+        self.check2.set_visible(not self.settings[self.key_name])
+
+        vbox.pack_start(lbl, False, False, 0)
+        vbox.pack_start(lbl_desc, False, False, 0)
+        hbox.pack_start(vbox, False, False, 0)
+        hbox.pack_end(self.check2, False, False, 0)
+
+        self.add(row)
+        self.connect('row-activated', self.on_row_clicked)
+
+    def on_row_clicked(self, box, row):
+        if row.get_index() == 0:
+            self.settings[self.key_name] = True
+            self.check1.show()
+            self.check2.hide()
+        else:
+            self.settings[self.key_name] = False
+            self.check1.hide()
+            self.check2.show()
+
+class PrimaryWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
+
+    def __init__(self, **options):
+        Gtk.ListBox.__init__(self)
+        Tweak.__init__(self, _("Display Handling"), "", loaded=_shell_loaded,)
+        name = _("Workspaces")
+
+        self.settings = Gio.Settings("org.gnome.mutter")
+        self.key_name = "workspaces-only-on-primary"
+
+        self.set_selection_mode(Gtk.SelectionMode.NONE)
+
+        # Needs other page elements to get margins too
+        # self.props.margin_left = 50
+        # self.props.margin_right = 50
+
+        row = Gtk.ListBoxRow()
+        hbox = Gtk.Box()
+        hbox.props.margin = 10
+        row.add(hbox)
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+
+        lbl = Gtk.Label(_("Workspaces on primary display only"), xalign=0)
+        lbl.props.xalign = 0.0
+        desc = _("Additional displays are treated as independent workspaces.")
+        lbl_desc = Gtk.Label()
+        lbl_desc.set_line_wrap(True)
+        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
+
+        self.check1 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check1.set_no_show_all(True)
+        self.check1.set_visible(self.settings[self.key_name])
+
+        vbox.pack_start(lbl, False, False, 0)
+        vbox.pack_start(lbl_desc, False, False, 0)
+        hbox.pack_start(vbox, False, False, 0)
+        hbox.pack_end(self.check1, False, False, 0)
+
+        self.add(row)
+
+        row = Gtk.ListBoxRow()
+        hbox = Gtk.Box()
+        hbox.props.margin = 10
+        row.add(hbox)
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+
+        lbl = Gtk.Label(_("Workspaces span displays"), xalign=0)
+        lbl.props.xalign = 0.0
+        desc = _("The current workspace includes additional displays.")
+        lbl_desc = Gtk.Label()
+        lbl_desc.set_line_wrap(True)
+        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
+
+        self.check2 = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check2.set_no_show_all(True)
+        self.check2.set_visible(not self.settings[self.key_name])
+
+        vbox.pack_start(lbl, False, False, 0)
+        vbox.pack_start(lbl_desc, False, False, 0)
+        hbox.pack_start(vbox, False, False, 0)
+        hbox.pack_end(self.check2, False, False, 0)
+
+        self.add(row)
+        self.connect('row-activated', self.on_row_clicked)
+
+    def on_row_clicked(self, box, row):
+        if row.get_index() == 0:
+            self.settings[self.key_name] = True
+            self.check1.show()
+            self.check2.hide()
+        else:
+            self.settings[self.key_name] = False
+            self.check1.hide()
+            self.check2.show()
 
 sg = build_horizontal_sizegroup()
 sw = StaticWorkspaceTweak(size_group=sg, loaded=_shell_loaded)
@@ -59,6 +193,6 @@ TWEAK_GROUPS = [
         sw,
         GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg),
         Title(_("Display Handling"), "", uid="title-theme", loaded=_shell_loaded),
-        GSettingsSwitchTweak(_("Workspaces on primary display only"),"org.gnome.mutter", "workspaces-only-on-primary", schema_filename="org.gnome.shell.gschema.xml", desc=_("Additional displays are treated as independent workspaces."), loaded=_shell_loaded),
+        PrimaryWorkspaceTweak(),
     )
 ]
