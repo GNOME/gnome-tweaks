@@ -89,7 +89,6 @@ class ComposeDialogLauncher(Gtk.Box, _GSettingsTweak):
 
     def on_button_clicked(self, widget, settings):
         a = ComposeDialog(self.main_window, widget, settings)
-        a.show_all()
         resp = a.run()
         a.destroy()
 
@@ -97,15 +96,6 @@ class ComposeDialogLauncher(Gtk.Box, _GSettingsTweak):
 class ComposeDialog(Gtk.Dialog, Gtk.Button):
     key_values = ["compose:sclk", "compose:prsc", "compose:menu", "compose:ralt", "compose:rctrl", "compose:rwin", "compose:caps", "compose:lctrl"]
     key_names = [_("Scroll Lock"), _("PrtScn"), _("Menu"), _("Right Alt"), _("Right Ctrl"), _("Right Super"), _("Caps Lock"), _("Left Ctrl")]
-    btn_sclk = Gtk.RadioButton.new_with_label_from_widget(None, _("Scroll Lock"))
-    btn_prsc = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("PrtScn"))
-    btn_menu = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Menu"))
-    btn_ralt = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Right Alt"))
-    btn_rctrl = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Right Ctrl"))
-    btn_rwin = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Right Super"))
-    btn_caps = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Caps Lock"))
-    btn_lctrl = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Left Ctrl"))
-    compose_buttons= [btn_sclk, btn_prsc, btn_menu, btn_ralt, btn_rctrl, btn_rwin, btn_caps, btn_lctrl]
 
     def __init__(self, parent, parent_button, settings):
         Gtk.Dialog.__init__(self)
@@ -116,6 +106,16 @@ class ComposeDialog(Gtk.Dialog, Gtk.Button):
         self.set_modal(True)
         self.set_transient_for(parent)
         self.set_size_request(500,-1)
+
+        btn_sclk = Gtk.RadioButton.new_with_label_from_widget(None, _("Scroll Lock"))
+        btn_prsc = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("PrtScn"))
+        btn_menu = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Menu"))
+        btn_ralt = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Right Alt"))
+        btn_rctrl = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Right Ctrl"))
+        btn_rwin = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Right Super"))
+        btn_caps = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Caps Lock"))
+        btn_lctrl = Gtk.RadioButton.new_with_label_from_widget(btn_sclk, _("Left Ctrl"))
+        compose_buttons= [btn_sclk, btn_prsc, btn_menu, btn_ralt, btn_rctrl, btn_rwin, btn_caps, btn_lctrl]
 
         hb = Gtk.HeaderBar()
         hb.set_show_close_button(True)
@@ -128,9 +128,9 @@ class ComposeDialog(Gtk.Dialog, Gtk.Button):
             if settings.setting_is_in_list("xkb-options", item):
                  compose_enabled = True
         switch.set_active(compose_enabled)
-        for button in self.compose_buttons:
+        for button in compose_buttons:
            button.set_sensitive(compose_enabled)
-        switch.connect("notify::active", self._on_switch_changed, parent_button, settings)
+        switch.connect("notify::active", self._on_switch_changed, parent_button, compose_buttons, settings)
 
         hb.pack_start(switch)
 
@@ -143,33 +143,33 @@ class ComposeDialog(Gtk.Dialog, Gtk.Button):
         self.get_content_area().pack_start(grid, True, True, 0)
 
         grid.attach(label, 0, 0, 4, 1)
-        grid.attach(self.btn_sclk, 1, 1, 1, 1)
-        grid.attach(self.btn_prsc, 1, 2, 1, 1)
-        grid.attach(self.btn_menu, 1, 3, 1, 1)
-        grid.attach(self.btn_ralt, 2, 1, 1, 1)
-        grid.attach(self.btn_rctrl, 2, 2, 1, 1)
-        grid.attach(self.btn_rwin, 2, 3, 1, 1)
-        grid.attach(self.btn_caps, 3, 1, 1, 1)
-        grid.attach(self.btn_lctrl, 3, 2, 1, 1)
+        grid.attach(btn_sclk, 1, 1, 1, 1)
+        grid.attach(btn_prsc, 1, 2, 1, 1)
+        grid.attach(btn_menu, 1, 3, 1, 1)
+        grid.attach(btn_ralt, 2, 1, 1, 1)
+        grid.attach(btn_rctrl, 2, 2, 1, 1)
+        grid.attach(btn_rwin, 2, 3, 1, 1)
+        grid.attach(btn_caps, 3, 1, 1, 1)
+        grid.attach(btn_lctrl, 3, 2, 1, 1)
 
         if settings.setting_is_in_list("xkb-options", "compose:sclk"):
-            self.btn_sclk.set_active(True)
+            btn_sclk.set_active(True)
         elif settings.setting_is_in_list("xkb-options", "compose:prsc"):
-            self.btn_prsc.set_active(True)
+            btn_prsc.set_active(True)
         elif settings.setting_is_in_list("xkb-options", "compose:menu"):
-            self.btn_menu.set_active(True)
+            btn_menu.set_active(True)
         elif settings.setting_is_in_list("xkb-options", "compose:ralt"):
-            self.btn_ralt.set_active(True)
+            btn_ralt.set_active(True)
         elif settings.setting_is_in_list("xkb-options", "compose:rctrl"):
-            self.btn_rctrl.set_active(True)
+            btn_rctrl.set_active(True)
         elif settings.setting_is_in_list("xkb-options", "compose:rwin"):
-            self.btn_rwin.set_active(True)
+            btn_rwin.set_active(True)
         elif settings.setting_is_in_list("xkb-options", "compose:caps"):
-            self.btn_caps.set_active(True)
+            btn_caps.set_active(True)
         elif settings.setting_is_in_list("xkb-options", "compose:lctrl"):
-            self.btn_lctrl.set_active(True)
+            btn_lctrl.set_active(True)
 
-        for index, button in enumerate(self.compose_buttons):
+        for index, button in enumerate(compose_buttons):
            button.set_sensitive(compose_enabled)
            button.connect("toggled", self.on_button_toggled, index, parent_button, settings)
 
@@ -181,9 +181,9 @@ class ComposeDialog(Gtk.Dialog, Gtk.Button):
         settings.setting_add_to_list("xkb-options", self.key_values[index])
         parent_button.set_label(self.key_names[index])
 
-    def _on_switch_changed(self, switch, param, parent_button, settings):
+    def _on_switch_changed(self, switch, param, parent_button, compose_buttons, settings):
         compose_enabled = switch.get_active()
-        for button in self.compose_buttons:
+        for button in compose_buttons:
            button.set_sensitive(compose_enabled)
         # Until we implement storing the old Compose key setting somewhere,
         # just force the key to Scroll Lock since it's first in the list.
@@ -191,7 +191,7 @@ class ComposeDialog(Gtk.Dialog, Gtk.Button):
             settings.setting_add_to_list("xkb-options", "compose:sclk")
             parent_button.set_label(_("Scroll Lock"))
         else:
-            self.btn_sclk.set_active(True)
+            compose_buttons[0].set_active(True)
             for item in self.key_values:
                 settings.setting_remove_from_list("xkb-options", item)
             parent_button.set_label(_("Disabled"))
