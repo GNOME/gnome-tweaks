@@ -37,6 +37,20 @@ def _list_header_func(row, before, user_data):
     if before and not row.get_header():
         row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
 
+
+class AutostartTitle(Gtk.Box, Tweak):
+
+    def __init__(self, **options):
+        Gtk.Box.__init__(self)
+        desc = _("Startup applications are automatically started when you log in.")
+        Tweak.__init__(self, _("Startup Applications"), desc, **options)
+
+        label = Gtk.Label(desc)
+        label.get_style_context().add_class("dim-label")
+        self.props.margin_bottom = 10
+        self.add(label)
+
+
 class _AppChooser(Gtk.Dialog):
     def __init__(self, main_window, running_exes, startup_apps):
         uhb = Gtk.Settings.get_default().props.gtk_dialogs_use_header
@@ -278,7 +292,7 @@ class AddStartupTweak(Gtk.ListBoxRow, Tweak):
 
 class AutostartListBoxTweakGroup(ListBoxTweakGroup):
     def __init__(self):
-        tweaks = []
+        tweaks = [AutostartTitle()]
 
         self.asm = AutostartManager()
         files = self.asm.get_user_autostart_files()
