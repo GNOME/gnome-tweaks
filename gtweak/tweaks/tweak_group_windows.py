@@ -22,7 +22,120 @@ from gtweak.widgets import ListBoxTweakGroup, GSettingsComboEnumTweak, GSettings
 from gtweak.utils import XSettingsOverrides
 import gettext
 
-from gi.repository import Gtk, GLib
+from gi.repository import Gio, Gtk, GLib
+
+
+class Focus(Gtk.ListBox, _GSettingsTweak):
+
+    def __init__(self, **options):
+        Gtk.ListBox.__init__(self)
+        Tweak.__init__(self, _("Focus Mode"), "")
+
+        self.settings = Gio.Settings("org.gnome.desktop.wm.preferences")
+        self.key_name = "focus-mode"
+
+        self.set_selection_mode(Gtk.SelectionMode.NONE)
+
+        # Needs other page elements to get margins too
+        # self.props.margin_left = 50
+        # self.props.margin_right = 50
+
+        row = Gtk.ListBoxRow()
+        hbox = Gtk.Box()
+        hbox.props.margin = 10
+        row.add(hbox)
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+
+        lbl = Gtk.Label(_("Click to Focus"), xalign=0)
+        lbl.props.xalign = 0.0
+        desc = _("Windows are focused when they are clicked.")
+        lbl_desc = Gtk.Label()
+        lbl_desc.set_line_wrap(True)
+        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
+
+        self.check_click = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check_click.set_no_show_all(True)
+        self.check_click.set_visible(self.settings[self.key_name] == "click")
+
+        vbox.pack_start(lbl, False, False, 0)
+        vbox.pack_start(lbl_desc, False, False, 0)
+        hbox.pack_start(vbox, False, False, 0)
+        hbox.pack_end(self.check_click, False, False, 0)
+
+        self.add(row)
+
+        row = Gtk.ListBoxRow()
+        hbox = Gtk.Box()
+        hbox.props.margin = 10
+        row.add(hbox)
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+
+        lbl = Gtk.Label(_("Sloppy"), xalign=0)
+        lbl.props.xalign = 0.0
+        desc = _("Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered.")
+        lbl_desc = Gtk.Label()
+        lbl_desc.set_line_wrap(True)
+        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
+
+        self.check_sloppy = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check_sloppy.set_no_show_all(True)
+        self.check_sloppy.set_visible(self.settings[self.key_name] == "sloppy")
+
+        vbox.pack_start(lbl, False, False, 0)
+        vbox.pack_start(lbl_desc, False, False, 0)
+        hbox.pack_start(vbox, False, False, 0)
+        hbox.pack_end(self.check_sloppy, False, False, 0)
+
+        self.add(row)
+
+        row = Gtk.ListBoxRow()
+        hbox = Gtk.Box()
+        hbox.props.margin = 10
+        row.add(hbox)
+
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+
+        lbl = Gtk.Label(_("Secondary-Click"), xalign=0)
+        lbl.props.xalign = 0.0
+        desc = _("Window is focused when hovered with the pointer. Hovering the desktop removes focus from the previous window.")
+        lbl_desc = Gtk.Label()
+        lbl_desc.set_line_wrap(True)
+        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
+
+        self.check_mouse = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
+        self.check_mouse.set_no_show_all(True)
+        self.check_mouse.set_visible(self.settings[self.key_name] == "mouse")
+
+        vbox.pack_start(lbl, False, False, 0)
+        vbox.pack_start(lbl_desc, False, False, 0)
+        hbox.pack_start(vbox, False, False, 0)
+        hbox.pack_end(self.check_mouse, False, False, 0)
+
+        self.add(row)
+        self.connect('row-activated', self.on_row_clicked)
+
+    def on_row_clicked(self, box, row):
+        if row.get_index() == 0:
+            self.settings[self.key_name] = "click"
+            self.check_click.show()
+            self.check_sloppy.hide()
+            self.check_mouse.hide()
+        elif row.get_index() == 1:
+            self.settings[self.key_name] = "sloppy"
+            self.check_click.hide()
+            self.check_sloppy.show()
+            self.check_mouse.hide()
+        else:
+            self.settings[self.key_name] = "mouse"
+            self.check_click.hide()
+            self.check_sloppy.hide()
+            self.check_mouse.show()
+
 
 class ShowWindowButtons(GSettingsSwitchTweakValue):
 
@@ -189,8 +302,6 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
         self._close()
         self._dialog.destroy()
 
-Focus =  GSettingsComboTweak(_("Focus Mode"), "org.gnome.desktop.wm.preferences", "focus-mode",
-      [("click", _("Click to Focus")), ("sloppy", _("Sloppy")), ("mouse", _("Mouse"))])
 depends_how = lambda x,kn: x.get_string(kn) in ("mouse", "sloppy")
 
 TWEAK_GROUPS = [
@@ -202,8 +313,9 @@ TWEAK_GROUPS = [
                         "org.gnome.desktop.wm.preferences",
                         "mouse-button-modifier",
                         [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
-        Focus,
-        GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus, depends_how=depends_how),
+        Title(_("Window Focus"), "", uid="title-theme"),
+        Focus(),
+        GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how),
         Title(_("Titlebar Actions"), "", uid="title-titlebar-actions"),
         GSettingsComboEnumTweak(_("Double-Click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
         GSettingsComboEnumTweak(_("Middle-Click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
