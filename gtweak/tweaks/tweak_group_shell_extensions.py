@@ -304,7 +304,10 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
         ListBoxTweakGroup.__init__(self,
                                    _("Extensions"),
                                    *extension_tweaks)
-        
+
+        if shell is None:
+            return # We're done
+
         self.titlebar_widget = Gtk.Switch(visible=True)
         shell._settings.bind("disable-user-extensions", self.titlebar_widget,
                              "active", Gio.SettingsBindFlags.INVERT_BOOLEAN)
