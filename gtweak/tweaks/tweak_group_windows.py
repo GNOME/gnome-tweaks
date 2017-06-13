@@ -29,7 +29,7 @@ class Focus(Gtk.ListBox, Tweak):
 
     def __init__(self, **options):
         Gtk.ListBox.__init__(self)
-        Tweak.__init__(self, _("Focus Mode"), "")
+        Tweak.__init__(self, _("Window Focus"), _("Click to Focus"))
 
         self.settings = Gio.Settings("org.gnome.desktop.wm.preferences")
         self.key_name = "focus-mode"
@@ -313,7 +313,7 @@ TWEAK_GROUPS = [
                         "org.gnome.desktop.wm.preferences",
                         "mouse-button-modifier",
                         [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
-        Title(_("Window Focus"), "", uid="title-theme"),
+        Title(_("Window Focus"), _("Click to Focus"), uid="title-theme"),
         Focus(),
         GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how),
         Title(_("Titlebar Actions"), "", uid="title-titlebar-actions"),
