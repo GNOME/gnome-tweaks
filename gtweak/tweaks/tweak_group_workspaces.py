@@ -109,7 +109,7 @@ class PrimaryWorkspaceTweak(Gtk.ListBox, Tweak):
 
     def __init__(self, **options):
         Gtk.ListBox.__init__(self)
-        Tweak.__init__(self, _("Display Handling"), "", loaded=_shell_loaded,)
+        Tweak.__init__(self, _("Display Handling"), _("Workspaces span displays"), loaded=_shell_loaded,)
         name = _("Workspaces")
 
         self.settings = Gio.Settings("org.gnome.mutter")
