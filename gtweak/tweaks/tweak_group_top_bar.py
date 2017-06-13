@@ -66,12 +66,11 @@ class ApplicationMenuTweak(GetterSetterSwitchTweak):
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Top Bar"),
         ApplicationMenuTweak(),
+        GSettingsSwitchTweak(_("Battery Percentage"),"org.gnome.desktop.interface", "show-battery-percentage", loaded=_shell_loaded),
         Title(_("Clock"),"", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Date"),"org.gnome.desktop.interface", "clock-show-date", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Seconds"), "org.gnome.desktop.interface", "clock-show-seconds", loaded=_shell_loaded),
         Title(_("Calendar"),"", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Week Numbers"),"org.gnome.desktop.calendar", "show-weekdate", loaded=_shell_loaded),
-        Title(_("Power"),"", loaded=_shell_loaded),
-        GSettingsSwitchTweak(_("Battery Percentage"),"org.gnome.desktop.interface", "show-battery-percentage", loaded=_shell_loaded),
     )
 ]
