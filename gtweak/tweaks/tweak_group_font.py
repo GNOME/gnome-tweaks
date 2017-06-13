@@ -110,9 +110,9 @@ class FontXSettingsTweak(Gtk.Box, Tweak):
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Fonts"),
-        GSettingsFontButtonTweak(_("Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
+        GSettingsFontButtonTweak(_("Window Title"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
         GSettingsFontButtonTweak(_("Interface"),"org.gnome.desktop.interface", "font-name"),
-        GSettingsFontButtonTweak(_("Documents"), "org.gnome.desktop.interface", "document-font-name"),
+        GSettingsFontButtonTweak(_("Document"), "org.gnome.desktop.interface", "document-font-name"),
         GSettingsFontButtonTweak(_("Monospace"), "org.gnome.desktop.interface", "monospace-font-name"),
         FontXSettingsTweak(),
         GSettingsSpinButtonTweak(_("Scaling Factor"),
