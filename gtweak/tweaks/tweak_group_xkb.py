@@ -166,7 +166,7 @@ class TypingTweakGroup(Gtk.Box):
             self.loaded = True
         except GSettingsMissingError:
             logging.info("Typing missing schema %s" % self.XKB_GSETTINGS_SCHEMA)
-            self.loaded = False            
+            self.loaded = False
         except AttributeError:
             logging.warning("Typing missing GnomeDesktop.gir with Xkb support")
             self.loaded = False

@@ -222,7 +222,7 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
     def __init__(self, df, **options):
 
         Gtk.ListBoxRow.__init__(self)
-        Tweak.__init__(self, 
+        Tweak.__init__(self,
                         df.get_name(),
                         df.get_description(),
                         **options)

@@ -81,7 +81,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         self.hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
         self.hbox.props.border_width = 10
         self.hbox.props.spacing = 12
-    
+
         self._shell = shell
         state = ext.get("state")
         uuid = ext["uuid"]
@@ -91,7 +91,6 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         shell._settings.bind("disable-user-extensions", self,
                              "sensitive", Gio.SettingsBindFlags.INVERT_BOOLEAN)
 
-                        
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         lbl_name = Gtk.Label(xalign=0.0)
         name_markup = GLib.markup_escape_text(ext["name"].lower().capitalize())
@@ -99,11 +98,11 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         lbl_desc = _ExtensionDescriptionLabel(xalign=0.0, yalign=0.0, wrap=True, lines=2)
         desc = GLib.markup_escape_text(ext["description"].lower().capitalize().split('\n')[0])
         lbl_desc.set_markup("<span foreground='#A19C9C' size='small'>"+desc+"</span>")
-        lbl_desc.props.ellipsize = Pango.EllipsizeMode.END 
-        
+        lbl_desc.props.ellipsize = Pango.EllipsizeMode.END
+
         vbox.pack_start(lbl_name, False, False, 0)
         vbox.pack_start(lbl_desc, False, False, 0)
-        
+
         self.hbox.pack_start(vbox, True, True, 10)
 
         info = None
@@ -149,7 +148,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
 
         de = DisableExtension()
         de.connect('disable-extension', self._on_disable_extension, sw)
-    
+
         self.add(self.hbox)
         self.widget_for_size_group = None
 
@@ -181,18 +180,18 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
                  GLib.Variant('(sava{sv})',
                               ('details', [GLib.Variant('(ss)', (self._app_id, ''))], {})),
                  None, 0, -1, None)
-    
+
     def reply_handler(self, proxy_object, result, user_data):
         if result == 's':
             user_data.hide()
-            self.set_sensitive(True) 
+            self.set_sensitive(True)
 
     def error_handler(self, proxy_object, result, user_data):
         user_data.set_label(_("Error"))
         print(result)
 
     def add_update_button(self, uuid):
-        updateButton = Gtk.Button(_("Update"))   
+        updateButton = Gtk.Button(_("Update"))
         updateButton.get_style_context().add_class("suggested-action")
         updateButton.connect("clicked", self._on_extension_update, uuid)
         updateButton.show()
@@ -201,7 +200,7 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
     def make_image(self, icon, tip):
         image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU)
         image.set_tooltip_text(tip)
-        return image    
+        return image
 
 class ShellExtensionTweakGroup(ListBoxTweakGroup):
     def __init__(self):

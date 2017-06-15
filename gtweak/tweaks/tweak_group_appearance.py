@@ -62,7 +62,7 @@ class GtkThemeSwitcher(GSettingsComboTweak):
 class IconThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-			_("Icons"),            
+			_("Icons"),
 			"org.gnome.desktop.interface",
             "icon-theme",
             make_combo_list_with_default(self._get_valid_icon_themes(), "Adwaita"),

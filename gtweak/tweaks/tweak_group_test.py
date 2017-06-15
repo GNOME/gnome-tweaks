@@ -1,4 +1,4 @@
-# This file is part of gnome-tweak-tool. 
+# This file is part of gnome-tweak-tool.
 # -*- coding: utf-8 -*-
 #
 # Copyright (c) 2011 John Stowers
