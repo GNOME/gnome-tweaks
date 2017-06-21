@@ -239,11 +239,11 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
         self._xsettings = XSettingsOverrides()
         self._original_factor = self._xsettings.get_window_scaling_factor()
 
-        adjustment = Gtk.Adjustment(lower=1, upper=2, step_increment=1, page_increment=1)
-        w = Gtk.SpinButton()
-        w.set_adjustment(adjustment)
+        w = Gtk.SpinButton.new_with_range(1, 2, 1)
+        w.set_numeric(True)
         w.set_digits(0)
-        adjustment.set_value(self._xsettings.get_window_scaling_factor())
+        w.set_update_policy(Gtk.SpinButtonUpdatePolicy.IF_VALID)
+        w.set_value(self._xsettings.get_window_scaling_factor())
         w.connect("value-changed", self._on_value_changed)
 
         build_label_beside_widget(self.name, w, hbox=self)
