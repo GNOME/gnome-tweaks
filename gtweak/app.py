@@ -33,7 +33,7 @@ from gtweak.utils import DisableExtension
 class GnomeTweakTool(Gtk.Application):
 
     def __init__(self):
-        GLib.set_application_name(_("GNOME Tweak Tool"))
+        GLib.set_application_name(_("GNOME Tweaks"))
         Gtk.Application.__init__(self, application_id="org.gnome.TweakTool")
         self.win = None
 

@@ -308,7 +308,7 @@ class XSettingsOverrides:
 
 class Notification:
     def __init__(self, summary, body):
-        if Notify.is_initted() or Notify.init("GNOME Tweak Tool"):
+        if Notify.is_initted() or Notify.init("GNOME Tweaks"):
             self.notification = Notify.Notification.new(
                                     summary,
                                     body,
@@ -324,7 +324,7 @@ class Notification:
 @singleton
 class LogoutNotification:
     def __init__(self):
-        if Notify.is_initted() or Notify.init(_("GNOME Tweak Tool")):
+        if Notify.is_initted() or Notify.init(_("GNOME Tweaks")):
             self.notification = Notify.Notification.new(
                                 _("Configuration changes require restart"),
                                 _("Your session needs to be restarted for settings to take effect"),
