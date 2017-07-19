@@ -308,7 +308,7 @@ class XSettingsOverrides:
 
 class Notification:
     def __init__(self, summary, body):
-        if Notify.is_initted() or Notify.init("GNOME Tweaks"):
+        if Notify.is_initted() or Notify.init(_("GNOME Tweaks")):
             self.notification = Notify.Notification.new(
                                     summary,
                                     body,
