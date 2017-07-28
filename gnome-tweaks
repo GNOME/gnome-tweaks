@@ -25,9 +25,10 @@ import gi
 gi.require_version("Gtk", "3.0")
 
 import gtweak
+from gtweak.defs import VERSION
 
 if __name__ == '__main__':
-    parser = optparse.OptionParser()
+    parser = optparse.OptionParser(version=VERSION)
     parser.add_option("-t", "--test", action="store_true",
                       help="Enable test and debug code")
     parser.add_option("-l", "--load", action="store_true",
