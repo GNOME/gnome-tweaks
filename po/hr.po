@@ -1,646 +1,3706 @@
-# Croatian translation for gnome-tweak-tool.
-# Copyright (C) 2017 gnome-tweak-tool's COPYRIGHT HOLDER
-# This file is distributed under the same license as the gnome-tweak-tool package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# Translation of gedit to Croatiann
+# Copyright (C) Croatiann team
+# Translators: Automatski Prijevod <>,Bozo Juretic <bjuretic@srce.hr>,Danijel Studen <dstuden@vuka.hr>,Denis Lackovic <delacko@fly.srk.fer.hr>,Mato Kutlić <mate@iskraemeco.hr>,pr pr <delacko@192.168.0.1>,Robert Sedak <robert.sedak@sk.t-com.hr>,Vlatko Kosturjak <kost@linux.hr>,
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool gnome-3-24\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-04-11 12:57+0000\n"
-"PO-Revision-Date: 2017-04-30 00:48+0200\n"
+"Project-Id-Version: gedit 0\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=gedit&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-06-28 17:23+0000\n"
+"PO-Revision-Date: 2017-07-29 13:15+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
-"Language-Team: Croatian <hr@li.org>\n"
+"Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2016-09-22 10:43+0000\n"
+"X-Generator: Poedit 2.0.3\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
-#: ../gtweak/utils.py:327
-msgid "GNOME Tweak Tool"
-msgstr "GNOME alat prilagodbe"
+#: ../data/org.gnome.gedit.appdata.xml.in.h:1
+#: ../data/org.gnome.gedit.desktop.in.in.h:2
+msgid "Edit text files"
+msgstr "Uređivanje tekstovnih datoteka"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Prilagodite napredne GNOME 3 postavke"
-
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
-msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
-msgstr "GNOME alat prilagodbe omogućava prilagodbu naprednih GNOME mogućnosti."
-
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
+#: ../data/org.gnome.gedit.appdata.xml.in.h:2
 msgid ""
-"It can install and manage themes and extensions, change power settings, "
-"manage startup applications, and enable desktop icons among other settings."
+"gedit is the official text editor of the GNOME desktop environment. While "
+"aiming at simplicity and ease of use, gedit is a powerful general purpose "
+"text editor."
 msgstr ""
-"Može instalirati i upravljati temama i proširenjima, promijeniti postavke "
-"energije, upravljati pokretanjem aplikacijama i omogućiti ikone radne "
-"površine i još mnogo drugih postavki."
+"gedit je službeni uređivač teksta za GNOME radno okruženje. Dok je usmjeren "
+"na jednostavnost i lako korištenje, gedit je snažan uređivač teksta opće "
+"namjene."
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Tool"
-msgstr "Alat prilagodbe"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:3
+#: ../data/org.gnome.gedit.appdata.xml.in.h:3
 msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+"Whether you are writing the next bestseller, programming an innovative "
+"application, or simply taking some quick notes, gedit will be a reliable "
+"tool to accomplish your task."
 msgstr ""
-"Postavke;Napredno;Osobitosti;Proširenja;Slova;Teme;XKB;Tipkovnica;Tipkanje;"
-
-#: ../data/shell.ui.h:1
-msgid "_Reset to Defaults"
-msgstr "_Vrati na izvorno"
-
-#: ../data/shell.ui.h:2
-msgid "Disable All Shell Extensions"
-msgstr "Onemogući sva proširenja ljuske"
-
-#: ../data/shell.ui.h:3
-msgid "_About"
-msgstr "_O programu"
-
-#: ../data/shell.ui.h:4
-msgid "_Quit"
-msgstr "_Zatvori"
-
-#: ../gtweak/app.py:78
-msgid "Reset to Defaults"
-msgstr "Vrati na izvorno"
-
-#: ../gtweak/app.py:79
-msgid "Reset all tweak settings to the original default state?"
-msgstr "Želite li vratiti sve prilagođene postavke na izvorno stanje?"
-
-#: ../gtweak/app.py:98
-#, python-format
-msgid "GNOME Shell v%s (%s mode)"
-msgstr "GNOME ljuska v%s (%s način)"
-
-#: ../gtweak/app.py:100
-msgid "GNOME Shell not running"
-msgstr "GNOME ljuska nije pokrenuta"
-
-#: ../gtweak/app.py:105
-msgid "Homepage"
-msgstr "Naslovnica"
-
-#: ../gtweak/tweakmodel.py:28
-msgid "Appearance"
-msgstr "Izgled"
-
-#: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:232
-msgid "Extensions"
-msgstr "Proširenja"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Fonts"
-msgstr "Slova"
-
-#: ../gtweak/tweakmodel.py:31
-msgid "Power"
-msgstr "Energija"
-
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
-msgid "Startup Applications"
-msgstr "Pokrenute aplikacije"
-
-#: ../gtweak/tweakmodel.py:33
-msgid "Top Bar"
-msgstr "Gornja traka"
-
-#: ../gtweak/tweakmodel.py:34
-msgid "Windows"
-msgstr "Windows"
-
-#: ../gtweak/tweakmodel.py:35
-msgid "Workspaces"
-msgstr "Radni prostori"
-
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:60
-msgid "Mouse"
-msgstr "Miš"
-
-#: ../gtweak/tweakmodel.py:38
-msgid "Files"
-msgstr "Datoteke"
-
-#: ../gtweak/tweakmodel.py:52
-msgid "Miscellaneous"
-msgstr "Ostalo"
-
-#: ../gtweak/tweakview.py:102
-msgid "Tweaks"
-msgstr "Prilagodbe"
-
-#: ../gtweak/tweakview.py:118
-msgid "Search Tweaks..."
-msgstr "Pretraži prilagodbe..."
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:22
-msgid "Icons on Desktop"
-msgstr "Ikone radne površine"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:25
-msgid "Desktop"
-msgstr "Radna površina"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:27
-msgid "Computer"
-msgstr "Računalo"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:28
-msgid "Home"
-msgstr "Osobna mapa"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:29
-msgid "Network Servers"
-msgstr "Mrežni poslužitelji"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:30
-msgid "Trash"
-msgstr "Smeće"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:31
-msgid "Mounted Volumes"
-msgstr "Montirani uređaji"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:32
-msgid "Background"
-msgstr "Pozadina"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:33
-#: ../gtweak/tweaks/tweak_group_desktop.py:36
-msgid "Mode"
-msgstr "Način"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:34
-msgid "Background Location"
-msgstr "Lokacija pozadine"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:35
-msgid "Lock Screen"
-msgstr "Zaključavanje zaslona"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:37
-msgid "Lock Screen Location"
-msgstr "Lokacija zaključavanja zaslona"
-
-#: ../gtweak/tweaks/tweak_group_font.py:25
-msgid "Window Titles"
-msgstr "Naslovi prozora"
-
-#: ../gtweak/tweaks/tweak_group_font.py:26
-msgid "Interface"
-msgstr "Sučelje"
-
-#: ../gtweak/tweaks/tweak_group_font.py:27
-msgid "Documents"
-msgstr "Dokumenti"
-
-#: ../gtweak/tweaks/tweak_group_font.py:28
-msgid "Monospace"
-msgstr "Monospace"
-
-#: ../gtweak/tweaks/tweak_group_font.py:29
-msgid "Hinting"
-msgstr "Naglašavanje"
-
-#: ../gtweak/tweaks/tweak_group_font.py:31
-msgid "Antialiasing"
-msgstr "Zaglađivanje"
-
-#: ../gtweak/tweaks/tweak_group_font.py:33
-msgid "Scaling Factor"
-msgstr "Faktor promjene veličine"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:65
-msgid "Icons"
-msgstr "Ikone"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:83
-msgid "Cursor"
-msgstr "Pokazivač"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:110
-msgid "Shell theme"
-msgstr "Tema ljuske"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:110
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Instaliraj prilagođenu ili korisnikovu temu za gnome ljusku"
-
-#. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:113
-msgid "Unknown error"
-msgstr "Nepoznata greška"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:118
-msgid "Shell not running"
-msgstr "Ljuska nije pokrenuta"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:140
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Proširenje teme korisnika je instalirano neispravno"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:143
-msgid "Shell user-theme extension not enabled"
-msgstr "Proširenje teme korisnika nije omogućeno"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:146
-msgid "Could not list shell extensions"
-msgstr "Nemoguć prikaz popisa proširenja ljuske"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:36
-msgid "<i>Default</i>"
-msgstr "<i>Zadano</i>"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:181
-msgid "Select a theme"
-msgstr "Odaberi temu"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:230
-#, python-format
-msgid "%s theme updated successfully"
-msgstr "%s tema je nadopunjena uspješno"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:232
-#, python-format
-msgid "%s theme installed successfully"
-msgstr "%s tema je instalirana uspješno"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:240
-msgid "Error installing theme"
-msgstr "Greška instalacije teme"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:245
-msgid "Invalid theme"
-msgstr "Neispravana tema"
-
-#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:261
-msgid "Theme"
-msgstr "Tema"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:266
-msgid "Enable animations"
-msgstr "Omogući animacije"
-
-#: ../gtweak/tweaks/tweak_group_xkb.py:55
-#: ../gtweak/tweaks/tweak_group_windows.py:143
-msgid "Disabled"
-msgstr "Onemogućeno"
-
-#: ../gtweak/tweaks/tweak_group_xkb.py:161
-msgid "Typing"
-msgstr "Tipkanje"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:45
-msgid "No Extensions Installed"
-msgstr "Nema instaliranih proširenja"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:51
-msgid "Browse in Software"
-msgstr "Pregledaj u Softveru"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:112
-msgid "Extension downloading"
-msgstr "Preuzimanje proširenja"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:114
-msgid "Error loading extension"
-msgstr "Greška učitavanja proširenja"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:116
-msgid "Extension does not support shell version"
-msgstr "Proširenje ne podržava inačicu ljuske"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:118
-msgid "Unknown extension error"
-msgstr "Nepoznata greška proširenja"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
-msgid "Updating"
-msgstr "Nadopuna"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
-msgid "Error"
-msgstr "Greška"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:190
-msgid "Update"
-msgstr "Nadopuni"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:33
-msgid "Show Application Menu"
-msgstr "Prikaži izbornik aplikacija"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:46
-msgid "Workspace Creation"
-msgstr "Stvaranje radnih prostora"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Dynamic"
-msgstr "Promjenjivo"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Static"
-msgstr "Nepromjenjivo"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:74
-msgid "Don't suspend on lid close"
-msgstr "Ne suspendiraj pri zatvaranju zaslona prijenosnika"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:104
-msgid "Clock"
-msgstr "Sat"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:105
-msgid "Show date"
-msgstr "Prikaži datum"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:106
-msgid "Show seconds"
-msgstr "Prikaži sekunde"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:107
-msgid "Calendar"
-msgstr "Kalendar"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:108
-msgid "Show week numbers"
-msgstr "Prikaži brojeve tjedana"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "When Power Button is Pressed"
-msgstr "Kada je tipka isključivanja pritisnuta"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:112
-msgid "Action"
-msgstr "Radnja"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:113
-msgid "When Laptop Lid is Closed"
-msgstr "Kada je zaslon prijenosnika zatovern"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:114
-msgid "On Battery Power"
-msgstr "Na bateriji"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:115
-msgid "When plugged in"
-msgstr "Na napajanju"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:116
-msgid "Suspend even if an external monitor is plugged in"
-msgstr "Suspendiraj čak i ako je vanjski zaslon priključen"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:121
-msgid "Number of Workspaces"
-msgstr "Broj radnih prostora"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:122
-msgid "Workspaces only on primary display"
-msgstr "Radni prostori samo na glavnom zaslonu"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Aplikacije"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications..."
-msgstr "Potraži aplikaciju..."
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:56
-msgid "<primary>f"
-msgstr "<glavna>f"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:75
-msgid "running"
-msgstr "pokrenuto"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:85
-msgid "_Close"
-msgstr "_Zatvori"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:86
-msgid "_Add"
-msgstr "_Dodaj"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:229
+"Bilo da pišete sljedeći bestseler, programirate inovativnu aplikaciju, ili "
+"jednostavno zapisujete neke kratke bilješke, gedit je pouzdan alat za "
+"obavljanje vaših zadataka."
+
+#: ../data/org.gnome.gedit.appdata.xml.in.h:4
+msgid ""
+"Its flexible plugin system allows you to tailor the application to your "
+"needs and adapt it to your workflow."
+msgstr ""
+"Ima prilagodljiv sustav priključaka koji vam dopušta prilagođavanje "
+"aplikacije vašim potrebama i vašem radu."
+
+#: ../data/org.gnome.gedit.desktop.in.in.h:1 ../gedit/gedit-print-job.c:730
+msgid "Text Editor"
+msgstr "Uređivač teksta"
+
+#: ../data/org.gnome.gedit.desktop.in.in.h:3
+msgid "gedit Text Editor"
+msgstr "gedit uređivač teksta"
+
+#: ../data/org.gnome.gedit.desktop.in.in.h:4
+msgid "Text;Editor;Plaintext;Write;"
+msgstr "Tekst;Uređivač;Izvorantekst;Piši;"
+
+#: ../data/org.gnome.gedit.desktop.in.in.h:5
+msgid "New Window"
+msgstr "Novi prozor"
+
+#: ../data/org.gnome.gedit.desktop.in.in.h:6
+msgid "New Document"
+msgstr "Novi dokument"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:1
+msgid "Use Default Font"
+msgstr "Koristi uobičajena slova"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:2
+msgid ""
+"Whether to use the system's default fixed width font for editing text "
+"instead of a font specific to gedit. If this option is turned off, then the "
+"font named in the \"Editor Font\" option will be used instead of the system "
+"font."
+msgstr ""
+"Treba li koristiti sustavom zadana slova nepromjenjive širine za uređivanje "
+"teksta umjesto slova određenih za gedit. Ako je ova mogućnost isključena, "
+"onda će se umjesto slova sustava koristiti slova imenovana u mogućnosti "
+"\"Uređivač slova\"."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:3
+msgid "'Monospace 12'"
+msgstr "'Monospace 12'"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:4
+msgid "Editor Font"
+msgstr "Slova uređivača"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:5
+msgid ""
+"A custom font that will be used for the editing area. This will only take "
+"effect if the \"Use Default Font\" option is turned off."
+msgstr ""
+"Odabrana slova koja će biti korištena u prostoru za uređivanje teksta. Nema "
+"učinka ako je postavka \"Koristi uobičajena slova\" uključena."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:6
+msgid "Style Scheme"
+msgstr "Shema izgleda"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:7
+msgid "The ID of a GtkSourceView Style Scheme used to color the text."
+msgstr "ID GtkSourceWiew shema izgleda koje će se koristiti za boju teksta."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:8
+msgid "Create Backup Copies"
+msgstr "Stvori sigurnosne kopije"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:9
+msgid "Whether gedit should create backup copies for the files it saves."
+msgstr "Treba li gedit stvoriti sigurnosne kopije za datoteke koju sprema."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:10
+msgid "Autosave"
+msgstr "Automatsko spremanje"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:11
+msgid ""
+"Whether gedit should automatically save modified files after a time "
+"interval. You can set the time interval with the \"Autosave Interval\" "
+"option."
+msgstr ""
+"Treba li gedit automatski spremati promijenjene datoteke nakon određenog "
+"vremenskog razdoblja? Vremensko razdoblje možete postaviti s \"Razdoblje "
+"automatskog spremanja\". mogućnosti"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:12
+msgid "Autosave Interval"
+msgstr "Razdoblje automatskog spremanja"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:13
+msgid ""
+"Number of minutes after which gedit will automatically save modified files. "
+"This will only take effect if the \"Autosave\" option is turned on."
+msgstr ""
+"Broj minuta nakon kojih će gedit automatski spremiti promijenjene datoteke. "
+"To će biti primijenjeno samo ako je mogućnost \"Automatsko spremanje\" "
+"isključena."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:14
+msgid "Maximum Number of Undo Actions"
+msgstr "Najveći broj radnji poništavanja"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:15
+msgid ""
+"Maximum number of actions that gedit will be able to undo or redo. Use "
+"\"-1\" for unlimited number of actions."
+msgstr ""
+"Najveći broj radnji koje će gedit moći poništiti ili vratiti. Koristite "
+"\"-1\" za neograničen broj radnji."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:16
+msgid "Line Wrapping Mode"
+msgstr "Način prijeloma retka"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:17
+msgid ""
+"Specifies how to wrap long lines in the editing area. Use \"none\" for no "
+"wrapping, \"word\" for wrapping at word boundaries, and \"char\" for "
+"wrapping at individual character boundaries. Note that the values are case-"
+"sensitive, so make sure they appear exactly as mentioned here."
+msgstr ""
+"Određuje kako će se prelomiti dugi redci u području uređivanja. Koristite "
+"\"ništa\" - bez prijeloma, \"riječ\" za prijelom na granicama riječi i \"znak"
+"\" za prijelom na granicama znakova. Vrijednosti su osjetljive na velika i "
+"mala slova, stoga pazite da se pojavljuju na isti način kao i ovdje."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:18
+msgid "Last split mode choice for line wrapping mode"
+msgstr "Posljednji odabir načina prijeloma prijelom redaka"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:19
+msgid ""
+"Specifies the last split mode used with line wrapping mode, so that when "
+"wrapping mode is off we still remember the split mode choice. Use \"word\" "
+"for wrapping at word boundaries, and \"char\" for wrapping at individual "
+"character boundaries."
+msgstr ""
+"Određuje posljednji način prijeloma korišten kod prijeloma redaka, stoga "
+"kada je način prijeloma redaka isključen, još je uvijek zapamćen način "
+"prijeloma. Koristite \"word\" za prijelom kod riječi ili \"char\" za "
+"prijelom kod pojedinog znaka."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:20
+msgid "Tab Size"
+msgstr "Tab veličina"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:21
+msgid ""
+"Specifies the number of spaces that should be displayed instead of Tab "
+"characters."
+msgstr "Određuje broj razmaka koji se prikazuju umjesto Tab znaka."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:22
+msgid "Insert spaces"
+msgstr "Umetni razmake"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:23
+msgid "Whether gedit should insert spaces instead of tabs."
+msgstr "Treba li gedit umetnuti razmake umjesto tabova."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:24
+msgid "Automatic indent"
+msgstr "Automatsko poravnavanje"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:25
+msgid "Whether gedit should enable automatic indentation."
+msgstr "Treba li gedit omogućiti automatsko poravnavanje"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:26
+msgid "Display Line Numbers"
+msgstr "Prikaži brojeve redaka"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:27
+msgid "Whether gedit should display line numbers in the editing area."
+msgstr ""
+"Treba li gedit prikazivati brojeve redaka u prostoru za izmjenu teksta."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:28
+msgid "Highlight Current Line"
+msgstr "Istakni trenutni redak"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:29
+msgid "Whether gedit should highlight the current line."
+msgstr "Treba li gedit istaknuti trenutni redak."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:30
+msgid "Highlight Matching Brackets"
+msgstr "Istakni odgovarajuće zagrade"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:31
+msgid "Whether gedit should highlight matching brackets."
+msgstr "Treba li gedit istaknuti odgovarajuće zagrade."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:32
+msgid "Display Right Margin"
+msgstr "Prikaži desni rub"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:33
+msgid "Whether gedit should display the right margin in the editing area."
+msgstr "Treba li gedit prikazivati desni rub u prostoru uređivanja teksta."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:34
+msgid "Right Margin Position"
+msgstr "Položaj desnog ruba"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:35
+msgid "Specifies the position of the right margin."
+msgstr "Određuje položaj desnog ruba."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:36
+msgid "Display Overview Map"
+msgstr "Prikaži pregled mape"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:37
+msgid "Whether gedit should display the overview map for the document."
+msgstr "Treba li gedit prikazati pregled mape za dokument."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:38
+msgid "Document background pattern type"
+msgstr "Vrsta uzorka pozadine dokumenta"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:39
+msgid "Whether the document will get a background pattern painted."
+msgstr "Treba li pozadini dokumenta dodati obojani uzorak"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:40
+msgid "Smart Home End"
+msgstr "Pametne Home i End tipke"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:41
+msgid ""
+"Specifies how the cursor moves when the HOME and END keys are pressed. Use "
+"\"disabled\" to always move at the start/end of the line, \"after\" to move "
+"to the start/end of the line the first time the keys are pressed and to the "
+"start/end of the text ignoring whitespaces the second time the keys are "
+"pressed, \"before\" to move to the start/end of the text before moving to "
+"the start/end of the line and \"always\" to always move to the start/end of "
+"the text instead of the start/end of the line."
+msgstr ""
+"Određuje kako se pomiče pokazivač kada se pritisnu tipke HOME i END. "
+"Koristite \"onemogućeno\" kako bi se uvijek pomakli na početak/kraj retka, "
+"\"poslije\" za pomicanje na početak/kraj retka kad su prvi put pritisnute i "
+"za pomicanje na početak/kraj retka zanemarujući praznine pri drugom "
+"pritisku, \"prije\" za pomicanje na početak/kraj teksta prije pomicanja na "
+"početak/kraj retka i \"uvijek\" kako biste se uvijek pomaknuli na početak/"
+"kraj teksta umjesto na početak/kraj retka."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:42
+msgid "Restore Previous Cursor Position"
+msgstr "Vrati prijašnji položaj pokazivača"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:43
+msgid ""
+"Whether gedit should restore the previous cursor position when a file is "
+"loaded."
+msgstr ""
+"Treba li gedit postaviti pokazivač na prijašnji položaj prilikom učitavanja "
+"datoteke."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:44
+msgid "Enable Syntax Highlighting"
+msgstr "Uključi isticanje sintakse"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:45
+msgid "Whether gedit should enable syntax highlighting."
+msgstr "Treba li gedit omogućiti isticanje sintakse."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:46
+msgid "Enable Search Highlighting"
+msgstr "Omogući isticanje pretraga"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:47
+msgid ""
+"Whether gedit should highlight all the occurrences of the searched text."
+msgstr ""
+"Treba li gedit isticati sva pojavljivanja teksta za kojm se pretražuje."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:48
+msgid "Ensure Trailing Newline"
+msgstr "Osiguraj novi redak na kraju"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:49
+msgid ""
+"Whether gedit will ensure that documents always end with a trailing newline."
+msgstr ""
+"Treba li gedit osigurati da dokumenti uvijek imaju novi redak na kraju."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:50
+msgid "Toolbar is Visible"
+msgstr "Alatna traka je vidljiva"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:51
+msgid "Whether the toolbar should be visible in editing windows."
+msgstr "Treba li alatna traka biti vidljiva u prozorima za uređivanje."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:52
+msgid "Notebook Show Tabs Mode"
+msgstr "Prikazivanje kartica na prijenosnicima"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:53
+msgid ""
+"Specifies when to show the notebook tabs. Use \"never\" to never show the "
+"tabs, \"always\" to always show the tabs, and \"auto\" to show the tabs only "
+"when there is more than one tab. Note that the values are case-sensitive, so "
+"make sure they appear exactly as mentioned here."
+msgstr ""
+"Određuje kako će se prikazivati kartice na prijenosnicima. Koristite \"nikad"
+"\" - nikad se ne prikazuju, \"uvijek\" uvijek se prikazuju i \"auto\" kako "
+"bi se kartice prikazivale samo ako ih je više od jedne. Vrijednosti su "
+"osjetljive na velika i mala slova, stoga pazite da se pojavljuju na isti "
+"način kao i ovdje."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:54
+msgid "Status Bar is Visible"
+msgstr "Statusna traka je vidljiva"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:55
+msgid ""
+"Whether the status bar at the bottom of editing windows should be visible."
+msgstr "Treba li statusna traka u dnu prozora za uređivanje biti vidljiva."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:56
+msgid "Side panel is Visible"
+msgstr "Bočni panel je vidljiv"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:57
+msgid ""
+"Whether the side panel at the left of editing windows should be visible."
+msgstr "Treba li bočni panel lijevo od prozora za uređivanje biti vidljiv."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:58
+msgid "Maximum Recent Files"
+msgstr "Najviše nedavno otvorenih datoteka"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:59
+msgid ""
+"Specifies the maximum number of recently opened files that will be displayed "
+"in the \"Recent Files\" submenu."
+msgstr ""
+"Određuje najveći broj nedavno otvorenih datoteka koje se prikazuju u "
+"podizborniku \"Nedavno otvorene datoteke\"."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:60
+msgid "Print Syntax Highlighting"
+msgstr "Ispis isticanja sintakse"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:61
+msgid "Whether gedit should print syntax highlighting when printing documents."
+msgstr ""
+"Treba li gedit ispisivati istaknutu sintaksu prilikom ispisa dokumenata."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:62
+msgid "Print Header"
+msgstr "Ispis zaglavlja"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:63
+msgid "Whether gedit should include a document header when printing documents."
+msgstr "Treba li gedit uključiti zaglavlje dokumenta prilikom ispisa."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:64
+msgid "Printing Line Wrapping Mode"
+msgstr "Ispis načina prijeloma redaka"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:65
+msgid ""
+"Specifies how to wrap long lines for printing. Use \"none\" for no wrapping, "
+"\"word\" for wrapping at word boundaries, and \"char\" for wrapping at "
+"individual character boundaries. Note that the values are case-sensitive, so "
+"make sure they appear exactly as mentioned here."
+msgstr ""
+"Određuje kako će se prelamati dugi redci za ispisivanje. Koristite \"ništa\" "
+"- bez prijeloma, \"riječ\" za prijelom na granicama riječi i \"znak\" za "
+"prijelom na granicama znakova. Vrijednosti su osjetljive na velika i mala "
+"slova, stoga pazite da se pojavljuju na isti način kao i ovdje."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:66
+msgid "Print Line Numbers"
+msgstr "Ispis brojeva redaka"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:67
+msgid ""
+"If this value is 0, then no line numbers will be inserted when printing a "
+"document. Otherwise, gedit will print line numbers every such number of "
+"lines."
+msgstr ""
+"Ukoliko je ova vrijednost 0 prilikom ispisa dokumenta neće biti umetnuti "
+"brojevi redaka. U suprotnom, ispisivati će se broj retka na svakih toliko "
+"redaka."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:68
+msgid "'Monospace 9'"
+msgstr "'Monospace 9'"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:69
+msgid "Body Font for Printing"
+msgstr "Slova glavnog teksta pri ispisu"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:70
+msgid ""
+"Specifies the font to use for a document's body when printing documents."
+msgstr ""
+"Određuje vrstu slova koja se koriste za glavni tekst dokumenta prilikom "
+"ispisa."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:71
+msgid "'Sans 11'"
+msgstr "'Sans 11'"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:72
+msgid "Header Font for Printing"
+msgstr "Slova zaglavlja prilikom ispisa"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:73
+msgid ""
+"Specifies the font to use for page headers when printing a document. This "
+"will only take effect if the \"Print Header\" option is turned on."
+msgstr ""
+"Određuje slova koja se koristeza ispis zaglavlja stranice. Ovo ima efekta "
+"samo ako je uključena mogućnost \"Ispisuj zaglavlje\"."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:74
+msgid "'Sans 8'"
+msgstr "'Sans 8'"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:75
+msgid "Line Number Font for Printing"
+msgstr "Slova broja retka prilikom ispisa"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:76
+msgid ""
+"Specifies the font to use for line numbers when printing. This will only "
+"take effect if the \"Print Line Numbers\" option is non-zero."
+msgstr ""
+"Određuje slova koja se koriste za ispis brojeva redaka. Ovo ima učinak samo "
+"ako mogućnost \"Ispisuj brojeve redaka\" nije postavljena na 0."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:77
+msgid "Margin Left"
+msgstr "Lijevi rub"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:78
+msgid "The left margin, in millimeters."
+msgstr "Lijevi rub u milimetrima."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:79
+msgid "Margin Top"
+msgstr "Gornji rub"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:80
+msgid "The top margin, in millimeters."
+msgstr "Gornji rub u milimetrima."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:81
+msgid "Margin Right"
+msgstr "Desni rub"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:82
+msgid "The right margin, in millimeters."
+msgstr "Desni rub u milimetrima."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:83
+msgid "Margin Bottom"
+msgstr "Donji rub"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:84
+msgid "The bottom margin, in millimeters."
+msgstr "Donji rub u milimetrima."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:85
+msgid "Candidate Encodings"
+msgstr "Kôdne stranice"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:86
+msgid ""
+"List of candidate encodings shown in the Character Encoding menu in the open/"
+"save file chooser. \"CURRENT\" represents the current locale encoding. Only "
+"recognized encodings are used. The default value is the empty list, in which "
+"case gedit will choose good defaults depending on the country and language."
+msgstr ""
+"Popis kôdnih stranica prikazanih u izborniku kôdnih stranica. \"CURRENT\" "
+"Predstavlja trenutnu lokalnu kôdnu stranicu. Samo se prepoznate lokalne "
+"kôdne stranice koriste. Zadana vrijednost je prazan popis, za koji će gedit "
+"odabrati najbolju zadanu kôdnu stranicu ovisno o zemlji i jeziku."
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:87
+msgid "Active plugins"
+msgstr "Aktivni priključci"
+
+#: ../data/org.gnome.gedit.gschema.xml.in.h:88
+msgid ""
+"List of active plugins. It contains the \"Location\" of the active plugins. "
+"See the .gedit-plugin file for obtaining the \"Location\" of a given plugin."
+msgstr ""
+"Popis aktivnih priključaka. Sadrži 'Lokaciju' aktivnih priključaka. "
+"Pogledajte .gedit-plugin datoteku za 'Lokaciju' datog priključka."
+
+#: ../gedit/gedit-app.c:110
+msgid "Show the application's version"
+msgstr "Prikaži inačicu aplikacije"
+
+#: ../gedit/gedit-app.c:116
+msgid "Display list of possible values for the encoding option"
+msgstr "Prikaži popis mogućih vrijednosti za mogućnosti kôdiranja"
+
+#: ../gedit/gedit-app.c:123
+msgid ""
+"Set the character encoding to be used to open the files listed on the "
+"command line"
+msgstr ""
+"Kôdna stranica koja će se koristiti za otvaranje datoteka popisanih u "
+"naredbenom retku"
+
+#: ../gedit/gedit-app.c:124
+msgid "ENCODING"
+msgstr "KÔDIRANJE"
+
+#: ../gedit/gedit-app.c:130
+msgid "Create a new top-level window in an existing instance of gedit"
+msgstr "Stvori novi sadržajni prozor u postojećem gedit primjerku"
+
+#: ../gedit/gedit-app.c:137
+msgid "Create a new document in an existing instance of gedit"
+msgstr "Stvori novi dokument u postojećem gedit primjerku"
+
+#: ../gedit/gedit-app.c:144
+msgid "Open files and block process until files are closed"
+msgstr "Otvori datoteke i blokiraj procese dok se datoteke ne zatvore"
+
+#: ../gedit/gedit-app.c:151
+msgid "Run gedit in standalone mode"
+msgstr "Pokreni gedit u samostalnom načinu rada"
+
+#: ../gedit/gedit-app.c:158
+msgid "[FILE...] [+LINE[:COLUMN]]"
+msgstr "[DATOTEKA...][+REDAK[:STUPAC]]"
+
+#: ../gedit/gedit-app.c:273
+msgid "There was an error displaying the help."
+msgstr "Došlo je do greške pri prikazivanju pomoći."
+
+#: ../gedit/gedit-app.c:967
+#, c-format
+msgid "%s: invalid encoding."
+msgstr "%s: pogrešno kôdiranje."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:277
+msgid "Close _without Saving"
+msgstr "Zatvori _bez spremanja"
+
+#: ../gedit/gedit-close-confirmation-dialog.c:278
+#: ../gedit/gedit-commands-file.c:462 ../gedit/gedit-commands-file.c:567
+#: ../gedit/gedit-commands-file.c:643 ../gedit/gedit-commands-file.c:854
+#: ../gedit/gedit-commands-file.c:1568 ../gedit/gedit-encodings-dialog.c:194
+#: ../gedit/gedit-io-error-info-bar.c:130
+#: ../gedit/gedit-io-error-info-bar.c:511
+#: ../gedit/gedit-preferences-dialog.c:825
+#: ../gedit/gedit-progress-info-bar.c:49
+#: ../gedit/resources/ui/gedit-encodings-dialog.ui.h:2
+#: ../gedit/resources/ui/gedit-highlight-mode-dialog.ui.h:2
+#: ../plugins/filebrowser/gedit-file-browser-utils.c:170
+#: ../plugins/quickopen/quickopen/popup.py:38
+#: ../plugins/snippets/snippets/manager.py:781
+#: ../plugins/snippets/snippets/manager.py:866
+#: ../plugins/snippets/snippets/manager.py:904
+#: ../plugins/sort/resources/ui/gedit-sort-plugin.ui.h:6
+#: ../plugins/time/resources/ui/gedit-time-dialog.ui.h:8
+msgid "_Cancel"
+msgstr "_Odustani"
+
+#: ../gedit/gedit-close-confirmation-dialog.c:306
+#: ../gedit/resources/gtk/menus.ui.h:10
+#: ../gedit/resources/gtk/menus-traditional.ui.h:4
+msgid "_Save As…"
+msgstr "_Spremi kao..."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:306
+#: ../gedit/gedit-commands-file.c:855
+#: ../gedit/resources/gtk/menus-common.ui.h:18
+#: ../gedit/resources/ui/gedit-window.ui.h:7
+#: ../plugins/snippets/snippets/manager.py:867
+#: ../plugins/snippets/snippets/manager.py:905
+msgid "_Save"
+msgstr "_Spremi"
+
+#: ../gedit/gedit-close-confirmation-dialog.c:324
+#, c-format
+msgid ""
+"If you don't save, changes from the last %ld second will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Ako ne spremite, promjene u zadnjoj %ld sekundi će biti zauvijek izgubljene."
+msgstr[1] ""
+"Ako ne spremite, promjene u zadnje %ld sekunde će biti zauvijek izgubljene."
+msgstr[2] ""
+"Ako ne spremite, promjene u zadnjih %ld sekundi će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:333
+msgid ""
+"If you don't save, changes from the last minute will be permanently lost."
+msgstr ""
+"Ako ne spremite, promjene u zadnjoj minuti će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:339
+#, c-format
+msgid ""
+"If you don't save, changes from the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Ako ne spremite, promjene u zadnjoj minuti i %ld sekundi će biti zauvijek "
+"izgubljene."
+msgstr[1] ""
+"Ako ne spremite, promjene u zadnjoj minuti i %ld sekunde će biti zauvijek "
+"izgubljene."
+msgstr[2] ""
+"Ako ne spremite, promjene u zadnjoj minuti i %ld sekundi će biti zauvijek "
+"izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:349
+#, c-format
+msgid ""
+"If you don't save, changes from the last %ld minute will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Ako ne spremite, promjene u zadnjoj %ld minuti će biti zauvijek izgubljene."
+msgstr[1] ""
+"Ako ne spremite, promjene u zadnje %ld minute će biti zauvijek izgubljene."
+msgstr[2] ""
+"Ako ne spremite, promjene u zadnjih %ld minuti će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:364
+msgid "If you don't save, changes from the last hour will be permanently lost."
+msgstr "Ako ne spremite, promjene u zadnjem satu će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:370
+#, c-format
+msgid ""
+"If you don't save, changes from the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Ako ne spremite, promjene u zadnjem satu i %d minuti će biti zauvijek "
+"izgubljene."
+msgstr[1] ""
+"Ako ne spremite, promjene u zadnjem satu i %d minute će biti zauvijek "
+"izgubljene."
+msgstr[2] ""
+"Ako ne spremite, promjene u zadnjem satu i %d minuti će biti zauvijek "
+"izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:385
+#, c-format
+msgid ""
+"If you don't save, changes from the last %d hour will be permanently lost."
+msgid_plural ""
+"If you don't save, changes from the last %d hours will be permanently lost."
+msgstr[0] ""
+"Ako ne spremite, promjene u zadnjem %d satu će biti zauvijek izgubljene."
+msgstr[1] ""
+"Ako ne spremite, promjene u zadnjih %d sata će biti zauvijek izgubljene."
+msgstr[2] ""
+"Ako ne spremite, promjene u zadnjih %d sati će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:414
+#, c-format
+msgid "Changes to document “%s” will be permanently lost."
+msgstr "Promjene dokumenta “%s” će biti trajno izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:419
+#, c-format
+msgid "Save changes to document “%s” before closing?"
+msgstr "Spremi promjene dokumenta “%s” prije zatvaranja?"
+
+#: ../gedit/gedit-close-confirmation-dialog.c:434
+#: ../gedit/gedit-close-confirmation-dialog.c:558
+msgid "Saving has been disabled by the system administrator."
+msgstr "Administrator sustava je onemogućio spremanje."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:500
+#, c-format
+msgid "Changes to %d document will be permanently lost."
+msgid_plural "Changes to %d documents will be permanently lost."
+msgstr[0] "Promjene na %d dokumentu će biti zauvijek izgubljene."
+msgstr[1] "Promjene na %d dokumenta će biti zauvijek izgubljene."
+msgstr[2] "Promjene na %d dokumenata će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-close-confirmation-dialog.c:508
+#, c-format
+msgid "There is %d document with unsaved changes. Save changes before closing?"
+msgid_plural ""
+"There are %d documents with unsaved changes. Save changes before closing?"
+msgstr[0] ""
+"Postoji %d dokument s promjenama koje nisu spremljene. Želite li spremiti "
+"promjene prije zatvaranja?"
+msgstr[1] ""
+"Postoje %d dokumenta s promjenama koje nisu spremljene. Želite li spremiti "
+"promjene prije zatvaranja?"
+msgstr[2] ""
+"Postoji %d dokumenata s promjenama koje nisu spremljene. Želite li spremiti "
+"promjene prije zatvaranja?"
+
+#: ../gedit/gedit-close-confirmation-dialog.c:534
+msgid "Docum_ents with unsaved changes:"
+msgstr "Dokum_enti s promjenama koje nisu spremljene:"
+
+#: ../gedit/gedit-close-confirmation-dialog.c:538
+msgid "S_elect the documents you want to save:"
+msgstr "O_daberite dokumente koje želite spremiti:"
+
+#: ../gedit/gedit-close-confirmation-dialog.c:562
+msgid "If you don't save, all your changes will be permanently lost."
+msgstr "Ako ne spremite, sve vaše promjene će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-commands-file.c:261
+#, c-format
+msgid "Loading file '%s'…"
+msgstr "Učitavanje datoteke '%s'..."
+
+#: ../gedit/gedit-commands-file.c:270
+#, c-format
+msgid "Loading %d file…"
+msgid_plural "Loading %d files…"
+msgstr[0] "Učitavanje %d datoteke..."
+msgstr[1] "Učitavanje %d datoteke..."
+msgstr[2] "Učitavanje %d datoteka..."
+
+#. Translators: "Open" is the title of the file chooser window.
+#: ../gedit/gedit-commands-file.c:456
+msgctxt "window title"
+msgid "Open"
+msgstr "Otvori"
+
+#: ../gedit/gedit-commands-file.c:463
+#: ../gedit/resources/gtk/menus-common.ui.h:15
+#: ../gedit/resources/ui/gedit-window.ui.h:3
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:1
+#: ../plugins/quickopen/quickopen/popup.py:39
+#: ../plugins/snippets/snippets/manager.py:782
+msgid "_Open"
+msgstr "_Otvori"
+
+#: ../gedit/gedit-commands-file.c:558
+#, c-format
+msgid "The file \"%s\" is read-only."
+msgstr "Datoteka \"%s\" je samo za čitanje."
+
+#: ../gedit/gedit-commands-file.c:563
+msgid "Do you want to try to replace it with the one you are saving?"
+msgstr "Želite li ju pokušati zamijeniti s ovom koju spremate?"
+
+#: ../gedit/gedit-commands-file.c:568
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:4
+msgid "_Replace"
+msgstr "_Zamijeni"
+
+#: ../gedit/gedit-commands-file.c:608
+msgid "Save the file using compression?"
+msgstr "Spremi datoteku koristeći sažimanje?"
+
+#: ../gedit/gedit-commands-file.c:612
+msgid "Save the file as plain text?"
+msgstr "Želite li spremiti datoteku kao običan tekst?"
+
+#: ../gedit/gedit-commands-file.c:625
+#, c-format
+msgid ""
+"The file \"%s\" was previously saved as plain text and will now be saved "
+"using compression."
+msgstr ""
+"Datoteka \"%s\" je bila spremljena kao običan tekst te će sada biti "
+"spremljena koristeći sažimanje."
+
+#: ../gedit/gedit-commands-file.c:629
+msgid "_Save Using Compression"
+msgstr "_Spremi koristeći sažimanje"
+
+#: ../gedit/gedit-commands-file.c:634
+#, c-format
+msgid ""
+"The file \"%s\" was previously saved using compression and will now be saved "
+"as plain text."
+msgstr ""
+"Datoteka \"%s\" je bila spremljena u sažetom obliku te će sada biti "
+"spremljena kao običan tekst."
+
+#: ../gedit/gedit-commands-file.c:637
+msgid "_Save As Plain Text"
+msgstr "_Spremi kao običan tekst"
+
+#: ../gedit/gedit-commands-file.c:752 ../gedit/gedit-commands-file.c:1019
+#, c-format
+msgid "Saving file '%s'…"
+msgstr "Spremanje datoteke \"%s\"..."
+
+#. Translators: "Save As" is the title of the file chooser window.
+#: ../gedit/gedit-commands-file.c:847
+msgctxt "window title"
+msgid "Save As"
+msgstr "Spremi kao"
+
+#: ../gedit/gedit-commands-file.c:1429
+#, c-format
+msgid "Reverting the document '%s'…"
+msgstr "Vraćanje dokumenta \"%s\" u izvorno stanje..."
+
+#: ../gedit/gedit-commands-file.c:1476
+#, c-format
+msgid "Revert unsaved changes to document '%s'?"
+msgstr ""
+"Želite li vratiti nespremljene promjenu u izvorno stanje u dokumentu \"%s\"?"
+
+#: ../gedit/gedit-commands-file.c:1485
+#, c-format
+msgid ""
+"Changes made to the document in the last %ld second will be permanently lost."
+msgid_plural ""
+"Changes made to the document in the last %ld seconds will be permanently "
+"lost."
+msgstr[0] ""
+"Promjene učinjene u dokumentu u zadnjoj %ld sekundi će biti zauvijek "
+"izgubljene."
+msgstr[1] ""
+"Promjene učinjene u dokumentu u zadnje %ld sekunde će biti zauvijek "
+"izgubljene."
+msgstr[2] ""
+"Promjene učinjene u dokumentu u zadnjih %ld sekundi će biti zauvijek "
+"izgubljene."
+
+#: ../gedit/gedit-commands-file.c:1494
+msgid ""
+"Changes made to the document in the last minute will be permanently lost."
+msgstr ""
+"Promjene učinjene u dokumentu u zadnjoj minuti će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-commands-file.c:1500
+#, c-format
+msgid ""
+"Changes made to the document in the last minute and %ld second will be "
+"permanently lost."
+msgid_plural ""
+"Changes made to the document in the last minute and %ld seconds will be "
+"permanently lost."
+msgstr[0] ""
+"Promjene učinjene u dokumentu u zadnjoj minuti i %ld sekundi će biti "
+"zauvijek izgubljene."
+msgstr[1] ""
+"Promjene učinjene u dokumentu u zadnjoj minuti i %ld sekunde će biti "
+"zauvijek izgubljene."
+msgstr[2] ""
+"Promjene učinjene u dokumentu u zadnjoj minuti i %ld sekundi će biti "
+"zauvijek izgubljene."
+
+#: ../gedit/gedit-commands-file.c:1510
+#, c-format
+msgid ""
+"Changes made to the document in the last %ld minute will be permanently lost."
+msgid_plural ""
+"Changes made to the document in the last %ld minutes will be permanently "
+"lost."
+msgstr[0] ""
+"Promjene učinjene u dokumentu u zadnjoj %ld minuti će biti zauvijek "
+"izgubljene."
+msgstr[1] ""
+"Promjene učinjene u dokumentu u zadnje %ld minute će biti zauvijek "
+"izgubljene."
+msgstr[2] ""
+"Promjene učinjene u dokumentu u zadnjih %ld minuti će biti zauvijek "
+"izgubljene."
+
+#: ../gedit/gedit-commands-file.c:1525
+msgid "Changes made to the document in the last hour will be permanently lost."
+msgstr ""
+"Promjene učinjene u dokumentu u zadnjem satu će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-commands-file.c:1531
+#, c-format
+msgid ""
+"Changes made to the document in the last hour and %d minute will be "
+"permanently lost."
+msgid_plural ""
+"Changes made to the document in the last hour and %d minutes will be "
+"permanently lost."
+msgstr[0] ""
+"Promjene učinjene u dokumentu u zadnjem satu i %d minuti će biti zauvijek "
+"izgubljene."
+msgstr[1] ""
+"Promjene učinjene u dokumentu u zadnjem satu i %d minute će biti zauvijek "
+"izgubljene."
+msgstr[2] ""
+"Promjene učinjene u dokumentu u zadnjem satu i %d minuti će biti zauvijek "
+"izgubljene."
+
+#: ../gedit/gedit-commands-file.c:1546
+#, c-format
+msgid ""
+"Changes made to the document in the last %d hour will be permanently lost."
+msgid_plural ""
+"Changes made to the document in the last %d hours will be permanently lost."
+msgstr[0] ""
+"Promjene učinjene u dokumentu u zadnjem %d satu će biti zauvijek izgubljene."
+msgstr[1] ""
+"Promjene učinjene u dokumentu u zadnjih %d sata će biti zauvijek izgubljene."
+msgstr[2] ""
+"Promjene učinjene u dokumentu u zadnjih %d sati će biti zauvijek izgubljene."
+
+#: ../gedit/gedit-commands-file.c:1569
+msgid "_Revert"
+msgstr "_Vrati u izvorno stanje"
+
+#: ../gedit/gedit-commands-help.c:110
+msgid "gedit is a small and lightweight text editor for the GNOME Desktop"
+msgstr "gedit je mali i jednostavani uređivač teksta za GNOME radno okruženje"
+
+#: ../gedit/gedit-commands-help.c:132
+msgid "translator-credits"
+msgstr ""
+"lokalizacija@linux.hr\n"
+"\n"
+"Launchpad Contributions:\n"
+"  Ante Karamatić https://launchpad.net/~ivoks\n"
+"  Danijel Šnajder https://launchpad.net/~phantomlord-deactivatedaccount\n"
+"  Domagoj Peck https://launchpad.net/~domagojpeck\n"
+"  Filip https://launchpad.net/~f1novkoski\n"
+"  Igor Švarc https://launchpad.net/~igor-svarc\n"
+"  Ivica Petrinic https://launchpad.net/~ivicap\n"
+"  Josip Lazic https://launchpad.net/~josip\n"
+"  Josip Lazic https://launchpad.net/~svakak\n"
+"  Krešo Kunjas https://launchpad.net/~deresh\n"
+"  Mario Splivalo https://launchpad.net/~mariosplivalo\n"
+"  Miroslav Matejaš https://launchpad.net/~silverspace+amd64\n"
+"  Saša Teković https://launchpad.net/~hseagle2015\n"
+"  antisa https://launchpad.net/~antisa\n"
+"  gogo https://launchpad.net/~trebelnik-stefina\n"
+"  zvacet https://launchpad.net/~ivicakolic"
+
+#: ../gedit/gedit-commands-search.c:107
+#, c-format
+msgid "Found and replaced %d occurrence"
+msgid_plural "Found and replaced %d occurrences"
+msgstr[0] "Pronađeno i zamijenjeno %d pojavljivanje"
+msgstr[1] "Pronađena i zamijenjena %d pojavljivanja"
+msgstr[2] "Pronađeno i zamijenjeno %d pojavljivanja"
+
+#: ../gedit/gedit-commands-search.c:116
+msgid "Found and replaced one occurrence"
+msgstr "Pronađeno i zamijenjeno jedno pojavljivanje"
+
+#. Translators: %s is replaced by the text
+#. entered by the user in the search box
+#: ../gedit/gedit-commands-search.c:142
+#, c-format
+msgid "\"%s\" not found"
+msgstr "\"%s\" nije pronađen"
+
+#: ../gedit/gedit-document.c:1103 ../gedit/gedit-document.c:1136
+#, c-format
+msgid "Untitled Document %d"
+msgstr "Bezimeni dokument %d"
+
+#: ../gedit/gedit-documents-panel.c:399
+#, c-format
+msgid "Tab Group %i"
+msgstr "Grupa kartica %i"
+
+#: ../gedit/gedit-documents-panel.c:499 ../gedit/gedit-window.c:1161
+#: ../gedit/gedit-window.c:1167 ../gedit/gedit-window.c:1175
+msgid "Read-Only"
+msgstr "Samo za čitanje"
+
+#: ../gedit/gedit-encodings-combo-box.c:299
+#: ../gedit/gedit-file-chooser-dialog-osx.c:565
+msgid "Automatically Detected"
+msgstr "Automatski otkriveno"
+
+#: ../gedit/gedit-encodings-combo-box.c:328
+#: ../gedit/gedit-file-chooser-dialog-osx.c:574
+msgid "Add or Remove..."
+msgstr "Dodaj ili ukloni..."
+
+#: ../gedit/gedit-encoding-items.c:92
+#, c-format
+msgid "Current Locale (%s)"
+msgstr "Trenutni lokalni jezik (%s)"
+
+#: ../gedit/gedit-encodings-dialog.c:95
+#, c-format
+msgid "%s (Current Locale)"
+msgstr "%s (Trenutni lokalni jezik)"
+
+#: ../gedit/gedit-encodings-dialog.c:190
+msgid "Do you really want to reset the character encodings' preferences?"
+msgstr "Želite li stvarno vratiti na zadano osobitosti kôdiranja znakova?"
+
+#. Reset button
+#: ../gedit/gedit-encodings-dialog.c:195 ../gedit/gedit-encodings-dialog.c:820
+msgid "_Reset"
+msgstr "_Vrati zadano"
+
+#: ../gedit/gedit-encodings-dialog.c:731
+msgid "Add"
+msgstr "Dodaj"
+
+#: ../gedit/gedit-encodings-dialog.c:774
 msgid "Remove"
 msgstr "Ukloni"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:253
-msgid "New startup application"
-msgstr "Nova aplikacija pokretanja"
+#: ../gedit/gedit-encodings-dialog.c:785
+msgid "Move to a higher priority"
+msgstr "Premjesti u viši prioritet"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:254
-msgid "Add a new application to be run at startup"
-msgstr "Dodaj novu aplikaciju koja će se pokrenuti pri pokretanju sustava"
+#: ../gedit/gedit-encodings-dialog.c:796
+msgid "Move to a lower priority"
+msgstr "Premjesti u niži prioritet"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
-msgid "Window scaling"
-msgstr "Promjena veličine prozora"
+#: ../gedit/gedit-file-chooser-dialog-gtk.c:41
+#: ../gedit/gedit-preferences-dialog.c:834
+msgid "All Files"
+msgstr "Sve datoteke"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Prilagodi GDK faktor promjene veličine prozora za HiDPI"
+#: ../gedit/gedit-file-chooser-dialog-gtk.c:42
+msgid "All Text Files"
+msgstr "Sve tekstovne datoteke"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:95
-#, python-format
-msgid "Settings will be reverted in %d second"
-msgid_plural "Settings will be reverted in %d seconds"
-msgstr[0] "Postavke će se vratiti za %d sekundu"
-msgstr[1] "Postavke će se vratiti za %d sekunde"
-msgstr[2] "Postavke će se vratiti za %d sekundi"
+#: ../gedit/gedit-file-chooser-dialog-gtk.c:307
+msgid "C_haracter Encoding:"
+msgstr "Kôdiranje z_nakova:"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:111
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Želite li zadržati ove HiDPI postavke zaslona?"
+#: ../gedit/gedit-file-chooser-dialog-gtk.c:366
+msgid "L_ine Ending:"
+msgstr "Završetak r_etka:"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:118
-msgid "Revert Settings"
-msgstr "Vrati postavke"
+#: ../gedit/gedit-file-chooser-dialog-osx.c:547
+msgid "Character Encoding:"
+msgstr "Kôdne stranice:"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:119
-msgid "Keep Changes"
-msgstr "Zadrži promjene"
+#: ../gedit/gedit-file-chooser-dialog-osx.c:620
+msgid "Line Ending:"
+msgstr "Završetak retka:"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:137
-msgid "Attached Modal Dialogs"
-msgstr "Pričvrsti prozore dijaloga"
+#: ../gedit/gedit-highlight-mode-selector.c:269 ../gedit/gedit-window.c:1245
+#: ../plugins/externaltools/tools/manager.py:108
+#: ../plugins/externaltools/tools/manager.py:317
+#: ../plugins/externaltools/tools/manager.py:433
+#: ../plugins/externaltools/tools/manager.py:767
+msgid "Plain Text"
+msgstr "Običan tekst"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:138
-msgid "Automatically Raise Windows"
-msgstr "Automatski povećava prozore"
+#: ../gedit/gedit-io-error-info-bar.c:143
+#: ../gedit/gedit-io-error-info-bar.c:491
+msgid "_Retry"
+msgstr "_Pokušaj ponovno"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:139
-msgid "Resize with Secondary-click"
-msgstr "Povećaj s dvostrukim klikom"
+#: ../gedit/gedit-io-error-info-bar.c:163
+#, c-format
+msgid "Could not find the file “%s”."
+msgstr "Nemoguće je pronaći datoteku “%s”."
 
-#: ../gtweak/tweaks/tweak_group_windows.py:140
-msgid "Window Action Key"
-msgstr "Radnja tipke prozora"
+#: ../gedit/gedit-io-error-info-bar.c:165
+#: ../gedit/gedit-io-error-info-bar.c:205
+#: ../gedit/gedit-io-error-info-bar.c:212
+msgid "Please check that you typed the location correctly and try again."
+msgstr "Provjerite jeste li ispravno upisali lokaciju i pokušajte ponovo."
 
-#: ../gtweak/tweaks/tweak_group_windows.py:144
-msgid "Focus Mode"
-msgstr "Način fokusa"
+#. Translators: %s is a URI scheme (like for example http:, ftp:, etc.)
+#: ../gedit/gedit-io-error-info-bar.c:184
+#, c-format
+msgid "Unable to handle “%s:” locations."
+msgstr "Nemoguće rukovanje s “%s:” lokacijom."
 
-#: ../gtweak/tweaks/tweak_group_windows.py:145
-msgid "Titlebar Actions"
-msgstr "Radnja naslovne trake"
+#: ../gedit/gedit-io-error-info-bar.c:190
+msgid "Unable to handle this location."
+msgstr "Nemoguće rukovanje s ovom lokacijom."
 
-#: ../gtweak/tweaks/tweak_group_windows.py:146
-msgid "Double-click"
-msgstr "Dvostruki klik"
+#: ../gedit/gedit-io-error-info-bar.c:199
+msgid "The location of the file cannot be accessed."
+msgstr "Lokaciji datoteke se ne može pristupiti."
 
-#: ../gtweak/tweaks/tweak_group_windows.py:147
-msgid "Middle-click"
-msgstr "Srednji klik"
+#: ../gedit/gedit-io-error-info-bar.c:203
+#, c-format
+msgid "“%s” is a directory."
+msgstr "“%s” je direktorij."
 
-#: ../gtweak/tweaks/tweak_group_windows.py:148
-msgid "Secondary-click"
-msgstr "Pomoćni klik"
+#: ../gedit/gedit-io-error-info-bar.c:210
+#, c-format
+msgid "“%s” is not a valid location."
+msgstr "“%s” nije valjana lokacija."
 
-#: ../gtweak/tweaks/tweak_group_windows.py:149
-msgid "Titlebar Buttons"
-msgstr "Tipke naslovne trake"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:150
-msgid "Maximize"
-msgstr "Uvećaj"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:151
-msgid "Minimize"
-msgstr "Smanji"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:152
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:30
-msgid "Key theme"
-msgstr "Tipka teme"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:49
-msgid "Keyboard and Mouse"
-msgstr "Tipkovnica i miš"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:50
-msgid "Show All Input Sources"
-msgstr "Prikaži sve ulazne izvore"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:55
-msgid "Switch between overview and desktop"
-msgstr "Prebaci između pregleda i radne površine"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:58
-msgid "Left super"
-msgstr "Lijevi super"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:58
-msgid "Right super"
-msgstr "Desni super"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
-msgid "Acceleration profile"
-msgstr "Profil ubrzanja"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:65
-msgid "Show location of pointer"
-msgstr "Prikaži lokaciju pokazivača"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Middle-click Paste"
-msgstr "Lijepljenje srednjim klikom"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:73
-msgid "Touchpad"
-msgstr "Touchpad"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:74
-msgid "Click method"
-msgstr "Način klikanja"
-
-#: ../gtweak/tweaks/tweak_wacom.py:29
-msgid "Device"
-msgstr "Uređaj"
-
-#: ../gtweak/tweaks/tweak_wacom.py:38
-msgid "Wacom"
-msgstr "Wacom"
-
-#. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:72
-#, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(zadana)</i>"
-
-#: ../gtweak/utils.py:329
-msgid "Configuration changes require restart"
-msgstr "Promjene postavki zahtijevaju ponovno pokretanje"
-
-#: ../gtweak/utils.py:330
-msgid "Your session needs to be restarted for settings to take effect"
-msgstr "Vaša sesija se mora ponovno pokrenuti za primjenu promjena"
-
-#: ../gtweak/utils.py:334
-msgid "Restart Session"
-msgstr "Ponovno pokreni sesiju"
-
-#: ../gtweak/widgets.py:476
-msgid "Enable dark theme for all applications"
-msgstr "Omogući tamnu temu za sve aplikacije"
-
-#: ../gtweak/widgets.py:477
-msgid "Enable the dark theme hint for all the applications in the session"
-msgstr "Omogući isticanje tamne teme za sve aplikacije u sesiji"
-
-#: ../gtweak/widgets.py:485
-msgid "Global Dark Theme"
-msgstr "Globalna tamna tema"
-
-#: ../gtweak/widgets.py:486
-msgid "Applications need to be restarted for change to take effect"
+#. Translators: %s is a host name
+#: ../gedit/gedit-io-error-info-bar.c:246
+#, c-format
+msgid ""
+"Host “%s” could not be found. Please check that your proxy settings are "
+"correct and try again."
 msgstr ""
-"Aplikacija se mora ponovno pokrenuti kako bi se ova promjena primijenila"
+"Računalo “%s” se ne može pronaći. Provjerite jesu li vaše proxy postavke "
+"ispravne i pokušajte ponovno."
 
-#: ../gtweak/widgets.py:512
-msgid "Error writing setting"
-msgstr "Greška zapisivanja postavke"
+#: ../gedit/gedit-io-error-info-bar.c:261
+#, c-format
+msgid ""
+"Hostname was invalid. Please check that you typed the location correctly and "
+"try again."
+msgstr ""
+"Naziv računala nije valjan. Provjerite jeste li ispravno upisali lokaciju i "
+"pokušajte ponovo."
 
-#~ msgid "Uninstall Extension"
-#~ msgstr "Ukloni proširenje"
+#: ../gedit/gedit-io-error-info-bar.c:269
+#, c-format
+msgid "“%s” is not a regular file."
+msgstr "“%s” nije ispravna datoteka."
 
-#~ msgid "Do you want to uninstall the '%s' extension?"
-#~ msgstr "Želite li ukloniti '%s' proširenje?"
+#: ../gedit/gedit-io-error-info-bar.c:274
+msgid "Connection timed out. Please try again."
+msgstr "Vrijeme povezivanja isteklo. Pokušajte ponovno."
 
-#~ msgid "Install Shell Extension"
-#~ msgstr "Instaliraj proširenje ljuske"
+#: ../gedit/gedit-io-error-info-bar.c:307
+#, c-format
+msgid "Unexpected error: %s"
+msgstr "Neočekivana greška: %s"
 
-#~ msgid "Select an extension"
-#~ msgstr "Odaberi proširenje"
+#: ../gedit/gedit-io-error-info-bar.c:343
+msgid "Cannot find the requested file. Perhaps it has recently been deleted."
+msgstr "Nemoguć pronalazak zatražene datoteke. Možda je nedavno obrisana."
 
-#~ msgid "Get more extensions"
-#~ msgstr "Nabavi više proširenja"
+#: ../gedit/gedit-io-error-info-bar.c:353
+#, c-format
+msgid "Could not revert the file “%s”."
+msgstr "Nemoguće vraćanje datoteke “%s”."
 
-#~ msgid "%s extension updated successfully"
-#~ msgstr "%s proširenje je nadopunjeno uspješno"
+#: ../gedit/gedit-io-error-info-bar.c:380
+msgid "Ch_aracter Encoding:"
+msgstr "Kôdiranje zn_akova:"
 
-#~ msgid "Error installing extension"
-#~ msgstr "Greška instalacije proširenja"
+#: ../gedit/gedit-io-error-info-bar.c:441
+#, c-format
+msgid "The location “%s” is not currently reachable."
+msgstr "Lokacija “%s” nije trenutno dostupna."
 
-#~ msgid "Invalid extension"
-#~ msgstr "Neispravno proširenje"
+#: ../gedit/gedit-io-error-info-bar.c:456
+msgid "Your system is offline. Check your network."
+msgstr "Vaš sustav nema pristup internetu. Provjerite svoju mrežu."
+
+#. Translators: the access key chosen for this string should be
+#. different from other main menu access keys (Open, Edit, View...)
+#: ../gedit/gedit-io-error-info-bar.c:499
+#: ../gedit/gedit-io-error-info-bar.c:768
+msgid "Edit Any_way"
+msgstr "Sve_jedno uredi"
+
+#: ../gedit/gedit-io-error-info-bar.c:591
+msgid ""
+"The number of followed links is limited and the actual file could not be "
+"found within this limit."
+msgstr ""
+"Broj poveznica koje se slijede je ograničen i stvarna datoteka nije "
+"pronađena unutar ovih ograničenja."
+
+#: ../gedit/gedit-io-error-info-bar.c:595
+msgid "You do not have the permissions necessary to open the file."
+msgstr "Nemate potrebne dozvole potrebne za otvaranje datoteke."
+
+#: ../gedit/gedit-io-error-info-bar.c:601
+msgid "Unable to detect the character encoding."
+msgstr "Nemoguće otkrivanje kôdiranja znakova."
+
+#: ../gedit/gedit-io-error-info-bar.c:602
+#: ../gedit/gedit-io-error-info-bar.c:626
+msgid "Please check that you are not trying to open a binary file."
+msgstr "Provjerite da ne pokušavate otvoriti izvršnu datoteku."
+
+#: ../gedit/gedit-io-error-info-bar.c:603
+msgid "Select a character encoding from the menu and try again."
+msgstr "Odaberite kôdnu stranicu u izborniku i pokušajte ponovno."
+
+#: ../gedit/gedit-io-error-info-bar.c:609
+#, c-format
+msgid "There was a problem opening the file “%s”."
+msgstr "Dogodila se greška pri otvaranju datoteke “%s”."
+
+#: ../gedit/gedit-io-error-info-bar.c:611
+msgid ""
+"The file you opened has some invalid characters. If you continue editing "
+"this file you could corrupt this document."
+msgstr ""
+"Datoteka koju ste otvorili sadrži nevaljane znakove. Ako nastavite s "
+"uređivanjem ove datoteke možete ju oštetiti."
+
+#: ../gedit/gedit-io-error-info-bar.c:614
+msgid "You can also choose another character encoding and try again."
+msgstr "Još možete odabrati drugu kôdnu stranicu i pokušati ponovno."
+
+#: ../gedit/gedit-io-error-info-bar.c:623
+#, c-format
+msgid "Could not open the file “%s” using the “%s” character encoding."
+msgstr "Nemoguće otvaranje datoteke “%s” koja koristi“%s” kôdiranje znakova."
+
+#: ../gedit/gedit-io-error-info-bar.c:627
+#: ../gedit/gedit-io-error-info-bar.c:702
+msgid "Select a different character encoding from the menu and try again."
+msgstr "Odaberite neku drugu kôdnu stranicu i pokušajte ponovno."
+
+#: ../gedit/gedit-io-error-info-bar.c:639
+#, c-format
+msgid "Could not open the file “%s”."
+msgstr "Nemoguće otvaranje datoteke “%s”."
+
+#: ../gedit/gedit-io-error-info-bar.c:697
+#, c-format
+msgid "Could not save the file “%s” using the “%s” character encoding."
+msgstr "Nemoguće spremanje datoteke “%s” koja koristi “%s” kôdiranje znakova."
+
+#: ../gedit/gedit-io-error-info-bar.c:700
+msgid ""
+"The document contains one or more characters that cannot be encoded using "
+"the specified character encoding."
+msgstr ""
+"Dokument sadrži jedan ili više znakova koji ne mogu biti kôdirani odabranom "
+"kôdnom stranicom."
+
+#. Translators: the access key chosen for this string should be
+#. different from other main menu access keys (Open, Edit, View...)
+#: ../gedit/gedit-io-error-info-bar.c:773
+msgid "D_on't Edit"
+msgstr "N_emoj urediti"
+
+#: ../gedit/gedit-io-error-info-bar.c:783
+#, c-format
+msgid "This file “%s” is already open in another window."
+msgstr "Datoteka “%s” je već otvorena u drugom prozoru."
+
+#: ../gedit/gedit-io-error-info-bar.c:797
+msgid "Do you want to edit it anyway?"
+msgstr "Želite li ju ipak urediti?"
+
+#: ../gedit/gedit-io-error-info-bar.c:853
+#: ../gedit/gedit-io-error-info-bar.c:943
+#: ../gedit/gedit-io-error-info-bar.c:1235
+msgid "S_ave Anyway"
+msgstr "S_premi svejedno"
+
+#: ../gedit/gedit-io-error-info-bar.c:856
+#: ../gedit/gedit-io-error-info-bar.c:946
+#: ../gedit/gedit-io-error-info-bar.c:1238
+msgid "D_on't Save"
+msgstr "_Ne spremaj"
+
+#. FIXME: review this message, it's not clear since for the user the "modification"
+#. * could be interpreted as the changes he made in the document. beside "reading" is
+#. * not accurate (since last load/save)
+#.
+#: ../gedit/gedit-io-error-info-bar.c:870
+#, c-format
+msgid "The file “%s” has been modified since reading it."
+msgstr "Datoteka “%s” je promijenjena od kada ste ju čitali."
+
+#: ../gedit/gedit-io-error-info-bar.c:885
+msgid "If you save it, all the external changes could be lost. Save it anyway?"
+msgstr ""
+"Ukoliko ju sada spremite sve promjene napravljene izvan gedita biti će "
+"izgubljene Jeste li sigurni?"
+
+#: ../gedit/gedit-io-error-info-bar.c:965
+#, c-format
+msgid "Could not create a backup file while saving “%s”"
+msgstr "Nemoguće stvaranje sigurnosne kopije datoteke pri spremanju “%s”"
+
+#: ../gedit/gedit-io-error-info-bar.c:970
+#, c-format
+msgid "Could not create a temporary backup file while saving “%s”"
+msgstr ""
+"Nemoguće stvaranje privremene sigurnosne kopije datoteke pri spremanju “%s”"
+
+#: ../gedit/gedit-io-error-info-bar.c:987
+msgid ""
+"Could not back up the old copy of the file before saving the new one. You "
+"can ignore this warning and save the file anyway, but if an error occurs "
+"while saving, you could lose the old copy of the file. Save anyway?"
+msgstr ""
+"Nemoguće stvaranje sigurnosne kopije stare kopije datoteke prije spremanja "
+"nove. Možete zanemariti ovo upozorenje i ipak spremiti datoteku, ali ako "
+"greške nastanu pri spremanju, možete izgubiti staru kopiju datoteke. Želite "
+"li ipak spremi?"
+
+#. Translators: %s is a URI scheme (like for example http:, ftp:, etc.)
+#: ../gedit/gedit-io-error-info-bar.c:1047
+#, c-format
+msgid ""
+"Cannot handle “%s:” locations in write mode. Please check that you typed the "
+"location correctly and try again."
+msgstr ""
+"Nemoguće rukovanje “%s:” lokacijom u načinu zapisivanja. Provjerite jeste li "
+"upisali lokaciju ispravno i ponovno pokušajte."
+
+#: ../gedit/gedit-io-error-info-bar.c:1055
+msgid ""
+"Cannot handle this location in write mode. Please check that you typed the "
+"location correctly and try again."
+msgstr ""
+"Nemoguće rukovanje ovom lokacijom u načinu zapisivanja. Provjerite jeste li "
+"upisali lokaciju ispravno i ponovno pokušajte."
+
+#: ../gedit/gedit-io-error-info-bar.c:1064
+#, c-format
+msgid ""
+"“%s” is not a valid location. Please check that you typed the location "
+"correctly and try again."
+msgstr ""
+"“%s” nije valjana lokacija. Provjerite jeste li upisali lokaciju ispravno i "
+"ponovno pokušajte."
+
+#: ../gedit/gedit-io-error-info-bar.c:1071
+msgid ""
+"You do not have the permissions necessary to save the file. Please check "
+"that you typed the location correctly and try again."
+msgstr ""
+"Nemate potrebne dozvole za spremanje datoteke. Provjerite jeste li ispravno "
+"upisali lokaciju i probajte ponovno."
+
+#: ../gedit/gedit-io-error-info-bar.c:1077
+msgid ""
+"There is not enough disk space to save the file. Please free some disk space "
+"and try again."
+msgstr ""
+"Nema dovoljno prostora na disku za spremanje datoteke. Oslobodite nešto "
+"prostora na disku i pokušajte ponovno."
+
+#: ../gedit/gedit-io-error-info-bar.c:1082
+msgid ""
+"You are trying to save the file on a read-only disk. Please check that you "
+"typed the location correctly and try again."
+msgstr ""
+"Pokušavate spremiti datoteku na disk koji je samo za čitanje. Provjerite "
+"jeste li ispravno upisali lokaciju i probajte ponovno."
+
+#: ../gedit/gedit-io-error-info-bar.c:1088
+msgid "A file with the same name already exists. Please use a different name."
+msgstr "Datoteka s istim nazivom već postoji. Koristite drugi naziv."
+
+#: ../gedit/gedit-io-error-info-bar.c:1093
+msgid ""
+"The disk where you are trying to save the file has a limitation on length of "
+"the file names. Please use a shorter name."
+msgstr ""
+"Disk na koji pokušavate spremiti datoteku ima ograničenje na dužinu naziva "
+"datoteke. Koristite kraći naziv."
+
+#: ../gedit/gedit-io-error-info-bar.c:1104
+msgid ""
+"The disk where you are trying to save the file has a limitation on file "
+"sizes. Please try saving a smaller file or saving it to a disk that does not "
+"have this limitation."
+msgstr ""
+"Disk na koji pokušavate spremiti datoteku ima ograničenja na veličine "
+"datoteka. Pokušajte spremiti datoteku manje veličine ili na neki drugi disk "
+"koji nema ovo ograničenje."
+
+#: ../gedit/gedit-io-error-info-bar.c:1121
+#, c-format
+msgid "Could not save the file “%s”."
+msgstr "Nemoguće spremanje datoteke “%s”."
+
+#: ../gedit/gedit-io-error-info-bar.c:1161
+#, c-format
+msgid "The file “%s” changed on disk."
+msgstr "Datoteka “%s” je promijenjena na disku."
+
+#: ../gedit/gedit-io-error-info-bar.c:1172
+msgid "Drop Changes and _Reload"
+msgstr "Odbaci promjene i _učitaj ponovno"
+
+#: ../gedit/gedit-io-error-info-bar.c:1182
+#: ../gedit/resources/gtk/menus-common.ui.h:21
+#: ../gedit/resources/gtk/menus.ui.h:7
+#: ../gedit/resources/gtk/menus-traditional.ui.h:1
+msgid "_Reload"
+msgstr "_Učitaj ponovo"
+
+#: ../gedit/gedit-io-error-info-bar.c:1187
+msgid "_Ignore"
+msgstr "_Zanemari"
+
+#: ../gedit/gedit-io-error-info-bar.c:1248
+#, c-format
+msgid "Some invalid chars have been detected while saving “%s”"
+msgstr "Neki neispravni znakovi su otkriveni pri spremanju“%s”"
+
+#: ../gedit/gedit-io-error-info-bar.c:1264
+msgid ""
+"If you continue saving this file you can corrupt the document.  Save anyway?"
+msgstr ""
+"Ako nastavite sa spremanjem ove datoteke možete oštetiti dokument. Želite li "
+"svejedno spremiti?"
+
+#: ../gedit/gedit-preferences-dialog.c:455
+msgid "Click on this button to select the font to be used by the editor"
+msgstr "Kliknite na ovu tipku za odabir slova koje će koristiti uređivač"
+
+#: ../gedit/gedit-preferences-dialog.c:461
+#, c-format
+msgid "_Use the system fixed width font (%s)"
+msgstr "_Koristi širinu slova određenu sustavom (%s)"
+
+#: ../gedit/gedit-preferences-dialog.c:601
+#, c-format
+msgid "Directory '%s' could not be created: g_mkdir_with_parents() failed: %s"
+msgstr "Direktorij '%s' nije stvoren: g_mkdir_with_parents() neuspjelo:%s"
+
+#: ../gedit/gedit-preferences-dialog.c:798
+msgid "The selected color scheme cannot be installed."
+msgstr "Odabrana shema boja se ne može instalirati."
+
+#: ../gedit/gedit-preferences-dialog.c:821
+msgid "Add Scheme"
+msgstr "Dodaj shemu"
+
+#: ../gedit/gedit-preferences-dialog.c:826
+msgid "A_dd Scheme"
+msgstr "D_odaj shemu"
+
+#: ../gedit/gedit-preferences-dialog.c:830
+msgid "Color Scheme Files"
+msgstr "Datoteke shema boja"
+
+#: ../gedit/gedit-preferences-dialog.c:861
+#, c-format
+msgid "Could not remove color scheme \"%s\"."
+msgstr "Shemu boja \"%s\" nije moguće ukloniti."
+
+#: ../gedit/gedit-print-job.c:227
+msgid "Preparing..."
+msgstr "Pripremanje..."
+
+#: ../gedit/gedit-print-job.c:539
+#, c-format
+msgid "File: %s"
+msgstr "Datoteka: %s"
+
+#. Translators: %N is the current page number, %Q is the total
+#. * number of pages (ex. Page 2 of 10)
+#.
+#: ../gedit/gedit-print-job.c:548
+msgid "Page %N of %Q"
+msgstr "Stranica %N od %Q"
+
+#: ../gedit/gedit-print-job.c:626
+#, c-format
+msgid "Rendering page %d of %d..."
+msgstr "Iscrtavanje stranice %d od %d..."
+
+#: ../gedit/gedit-print-preview.c:653
+#, c-format
+msgid "Page %d of %d"
+msgstr "Stranica %d od %d"
+
+#: ../gedit/gedit-replace-dialog.c:690
+#: ../plugins/externaltools/tools/tools.ui.h:7
+msgid "Nothing"
+msgstr "Ništa"
+
+#: ../gedit/gedit-replace-dialog.c:779
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:1
+msgid "Find and Replace"
+msgstr "Potraži i zamijeni"
+
+#. Use spaces to leave padding proportional to the font size
+#: ../gedit/gedit-statusbar.c:58 ../gedit/gedit-statusbar.c:64
+msgid "OVR"
+msgstr "OVR"
+
+#: ../gedit/gedit-statusbar.c:58 ../gedit/gedit-statusbar.c:64
+msgid "INS"
+msgstr "INS"
+
+#: ../gedit/gedit-statusbar.c:244
+#, c-format
+msgid "There is a tab with errors"
+msgid_plural "There are %d tabs with errors"
+msgstr[0] "Postoji %d Tab razmak s greškama"
+msgstr[1] "Postoje %d Tab razmaka s greškama"
+msgstr[2] "Postoji %d Tab razmaka s greškama"
+
+#. Translators: the first %s is a file name (e.g. test.txt) the second one
+#. is a directory (e.g. ssh://master.gnome.org/home/users/paolo)
+#: ../gedit/gedit-tab.c:814
+#, c-format
+msgid "Reverting %s from %s"
+msgstr "Vraćanje u izvorno stanje %s iz %s"
+
+#: ../gedit/gedit-tab.c:821
+#, c-format
+msgid "Reverting %s"
+msgstr "Vraćanje u izvorno stanje %s"
+
+#. Translators: the first %s is a file name (e.g. test.txt) the second one
+#. is a directory (e.g. ssh://master.gnome.org/home/users/paolo)
+#: ../gedit/gedit-tab.c:834
+#, c-format
+msgid "Loading %s from %s"
+msgstr "Učitavanje %s iz %s"
+
+#: ../gedit/gedit-tab.c:841
+#, c-format
+msgid "Loading %s"
+msgstr "Učitavanje %s"
+
+#. Translators: the first %s is a file name (e.g. test.txt) the second one
+#. is a directory (e.g. ssh://master.gnome.org/home/users/paolo)
+#: ../gedit/gedit-tab.c:921
+#, c-format
+msgid "Saving %s to %s"
+msgstr "Spremanje %s u %s"
+
+#: ../gedit/gedit-tab.c:926
+#, c-format
+msgid "Saving %s"
+msgstr "Spremanje %s"
+
+#: ../gedit/gedit-tab.c:1529
+#, c-format
+msgid "Error opening file %s"
+msgstr "Greška pri otvaranju datoteke %s"
+
+#: ../gedit/gedit-tab.c:1534
+#, c-format
+msgid "Error reverting file %s"
+msgstr "Greška pri vraćanju datoteke %s u izvorno stanje"
+
+#: ../gedit/gedit-tab.c:1539
+#, c-format
+msgid "Error saving file %s"
+msgstr "Greška pri spremanju datoteke %s"
+
+#: ../gedit/gedit-tab.c:1570
+msgid "Name:"
+msgstr "Naziv:"
+
+#: ../gedit/gedit-tab.c:1571
+msgid "MIME Type:"
+msgstr "MIME vrsta:"
+
+#: ../gedit/gedit-tab.c:1572
+msgid "Encoding:"
+msgstr "Kôdna stranica:"
+
+#: ../gedit/gedit-utils.c:841
+msgid "Please check your installation."
+msgstr "Provjerite vašu instalaciju."
+
+#: ../gedit/gedit-utils.c:902
+#, c-format
+msgid "Unable to open UI file %s. Error: %s"
+msgstr "Nemoguće otvoriti UI datoteku %s. Greška: %s"
+
+#: ../gedit/gedit-utils.c:921
+#, c-format
+msgid "Unable to find the object '%s' inside file %s."
+msgstr "Nemoguće pronaći objekt '%s' unutar datoteke %s."
+
+#. Translators: '/ on <remote-share>'
+#: ../gedit/gedit-utils.c:1159
+#, c-format
+msgid "/ on %s"
+msgstr "/ na %s"
+
+#: ../gedit/gedit-utils.c:1463
+msgid "Unix/Linux"
+msgstr "Unix/Linux"
+
+#: ../gedit/gedit-utils.c:1465
+msgid "Mac OS Classic"
+msgstr "Mac OS Classic"
+
+#: ../gedit/gedit-utils.c:1467
+msgid "Windows"
+msgstr "Windows"
+
+#: ../gedit/gedit-view.c:468
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:2
+msgid "_Display line numbers"
+msgstr "_Prikaži brojeve redaka"
+
+#. Translators: the first %d is the position of the current search
+#. * occurrence, and the second %d is the total number of search
+#. * occurrences.
+#.
+#: ../gedit/gedit-view-frame.c:674
+#, c-format
+msgid "%d of %d"
+msgstr "%d od %d"
+
+#. create "Wrap Around" menu item.
+#: ../gedit/gedit-view-frame.c:766
+msgid "_Wrap Around"
+msgstr "_Omotaj oko"
+
+#. create "Match as Regular Expression" menu item.
+#: ../gedit/gedit-view-frame.c:776
+msgid "Match as _Regular Expression"
+msgstr "Podudaranje s _običnim izrazom"
+
+#. create "Match Entire Word Only" menu item.
+#: ../gedit/gedit-view-frame.c:790
+msgid "Match _Entire Word Only"
+msgstr "Pretraži samo _cijelu riječ"
+
+#. create "Match Case" menu item.
+#: ../gedit/gedit-view-frame.c:804
+msgid "_Match Case"
+msgstr "Pretraži pazeći na velika/mala slova"
+
+#: ../gedit/gedit-view-frame.c:1026
+msgid "String you want to search for"
+msgstr "Niz znakova koji se pretražuju"
+
+#: ../gedit/gedit-view-frame.c:1038
+msgid "Line you want to move the cursor to"
+msgstr "Redak na koji želite pomaknuti pokazivač"
+
+#: ../gedit/gedit-window.c:998
+msgid "Bracket match is out of range"
+msgstr "Odgovarajuće zagrade su van raspona"
+
+#: ../gedit/gedit-window.c:1003
+msgid "Bracket match not found"
+msgstr "Nisu pronađene odgovarajuće zagrade"
+
+#: ../gedit/gedit-window.c:1008
+#, c-format
+msgid "Bracket match found on line: %d"
+msgstr "Odgovarajuće zagrade pronađene u retku: %d"
+
+#. Translators: "Ln" is an abbreviation for "Line", Col is an abbreviation for "Column". Please,
+#. use abbreviations if possible to avoid space problems.
+#: ../gedit/gedit-window.c:1043
+#, c-format
+msgid "  Ln %d, Col %d"
+msgstr "  Red %d, stupac %d"
+
+#: ../gedit/gedit-window.c:1227
+#, c-format
+msgid "Tab Width: %u"
+msgstr "Širina kartice: %u"
+
+#: ../gedit/gedit-window.c:1596
+msgid "There are unsaved documents"
+msgstr "Postoje nespremljeni dokumenti"
+
+#: ../gedit/gedit-window.c:2444
+msgid "Change side panel page"
+msgstr "Promijeni stranicu bočnog panela"
+
+#: ../gedit/gedit-window.c:2464 ../gedit/resources/ui/gedit-window.ui.h:1
+msgid "Documents"
+msgstr "Dokumenti"
+
+#. ex:set ts=8 noet:
+#: ../gedit/resources/gtk/menus-common.ui.h:1
+msgid "Move _Left"
+msgstr "Premjesti _lijevo"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:2
+msgid "Move _Right"
+msgstr "Premjesti _desno"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:3
+msgid "Move to New _Window"
+msgstr "Premjesti u novi _prozor"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:4
+msgid "Move to New Tab _Group"
+msgstr "Premjesti u novu grupu _kartica"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:5
+#: ../gedit/resources/gtk/menus.ui.h:22
+#: ../gedit/resources/gtk/menus-traditional.ui.h:20
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:2
+#: ../plugins/time/resources/ui/gedit-time-setup-dialog.ui.h:2
+msgid "_Close"
+msgstr "_Zatvori"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:6
+msgid "Automatic Indentation"
+msgstr "Automatsko poravnavanje"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:7
+msgid "Use Spaces"
+msgstr "Koristi razmake"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:8
+msgid "Display line numbers"
+msgstr "Prikaži brojeve redaka"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:9
+msgid "Display right margin"
+msgstr "Prikaži desni rub"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:10
+msgid "Highlight current line"
+msgstr "Istakni trenutni redak"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:11
+msgid "Text wrapping"
+msgstr "Prijelom teksta"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:12
+msgid "_File"
+msgstr "_Datoteka"
+
+#. _New is the menu item under the File menu on OS X which creates a new empty document.
+#: ../gedit/resources/gtk/menus-common.ui.h:14
+msgid "_New"
+msgstr "_Novi"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:16
+msgid "Open _Recent"
+msgstr "Otvori _nedavno"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:17
+msgid "Reopen Closed _Tab"
+msgstr "Ponovno otvori zatvorenu _karticu"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:19
+msgid "Save _As…"
+msgstr "Spremi _kao..."
+
+#: ../gedit/resources/gtk/menus-common.ui.h:20
+#: ../gedit/resources/gtk/menus.ui.h:1
+msgid "_New Window"
+msgstr "_Novi prozor"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:22
+#: ../gedit/resources/gtk/menus.ui.h:8
+#: ../gedit/resources/gtk/menus-traditional.ui.h:2
+msgid "_Print…"
+msgstr "_Ispiši..."
+
+#: ../gedit/resources/gtk/menus-common.ui.h:23
+#: ../gedit/resources/gtk/menus.ui.h:6
+#: ../gedit/resources/gtk/menus-traditional.ui.h:21
+msgid "_Quit"
+msgstr "_Odustani"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:24
+msgid "_Edit"
+msgstr "_Uredi"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:25
+msgid "_Undo"
+msgstr "_Vrati"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:26
+msgid "_Redo"
+msgstr "_Ponovi"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:27
+msgid "C_ut"
+msgstr "I_zreži"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:28
+msgid "_Copy"
+msgstr "_Kopiraj"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:29
+msgid "_Paste"
+msgstr "_Zalijepi"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:30
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:919
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:957
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:7
+msgid "_Delete"
+msgstr "_Obriši"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:31
+msgid "Overwrite _Mode"
+msgstr "_Način prebrisivanja"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:32
+msgid "Select _All"
+msgstr "Odaberi _sve"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:33
+#: ../gedit/resources/gtk/menus.ui.h:2
+#: ../gedit/resources/gtk/menus-traditional.ui.h:15
+msgid "_Preferences"
+msgstr "_Osobitosti"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:34
+msgid "_View"
+msgstr "_Pogled"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:35
+#: ../gedit/resources/gtk/menus.ui.h:17
+#: ../gedit/resources/gtk/menus-traditional.ui.h:11
+msgid "Side _Panel"
+msgstr "Bočni _panel"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:36
+#: ../gedit/resources/gtk/menus.ui.h:18
+#: ../gedit/resources/gtk/menus-traditional.ui.h:12
+msgid "_Bottom Panel"
+msgstr "_Donji panel"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:37
+#: ../gedit/resources/gtk/menus.ui.h:9
+#: ../gedit/resources/gtk/menus-traditional.ui.h:3
+msgid "_Fullscreen"
+msgstr "_Cjelozaslonski prikaz"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:38
+#: ../gedit/resources/gtk/menus.ui.h:19
+#: ../gedit/resources/gtk/menus-traditional.ui.h:13
+msgid "_Highlight Mode…"
+msgstr "_Način isticanja..."
+
+#: ../gedit/resources/gtk/menus-common.ui.h:39
+msgid "_Search"
+msgstr "_Pretraži"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:40
+#: ../gedit/resources/gtk/menus.ui.h:12
+#: ../gedit/resources/gtk/menus-traditional.ui.h:6
+msgid "_Find…"
+msgstr "_Potraži..."
+
+#: ../gedit/resources/gtk/menus-common.ui.h:41
+msgid "Find Ne_xt"
+msgstr "Pretaži _sljedeće"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:42
+msgid "Find Pre_vious"
+msgstr "Pronađi pri_jašnje"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:43
+msgid "Find and _Replace…"
+msgstr "Potraži i _zamijeni..."
+
+#: ../gedit/resources/gtk/menus-common.ui.h:44
+#: ../gedit/resources/gtk/menus.ui.h:14
+#: ../gedit/resources/gtk/menus-traditional.ui.h:8
+msgid "_Clear Highlight"
+msgstr "_Ukloni isticanje"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:45
+msgid "Go to _Line…"
+msgstr "Idi na _redak..."
+
+#: ../gedit/resources/gtk/menus-common.ui.h:46
+msgid "_Tools"
+msgstr "_Alati"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:47
+msgid "_Documents"
+msgstr "_Dokumenti"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:48
+msgid "_Save All"
+msgstr "_Spremi sve"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:49
+#: ../gedit/resources/gtk/menus.ui.h:21
+#: ../gedit/resources/gtk/menus-traditional.ui.h:19
+msgid "_Close All"
+msgstr "_Zatvori sve"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:50
+msgid "_New Tab Group"
+msgstr "_Nova grupa kartica"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:51
+msgid "P_revious Tab Group"
+msgstr "P_rijašnja grupa kartica"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:52
+msgid "Nex_t Tab Group"
+msgstr "Sljedeć_a grupa kartica"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:53
+msgid "_Previous Document"
+msgstr "_Prijašnjni dokument"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:54
+msgid "N_ext Document"
+msgstr "S_ljedeći dokument"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:55
+msgid "_Move To New Window"
+msgstr "_Premjesti u novi prozor"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:56
+#: ../gedit/resources/gtk/menus.ui.h:4
+#: ../gedit/resources/gtk/menus-traditional.ui.h:17
+#: ../plugins/spell/gedit-spell-plugin.c:246
+#: ../plugins/time/resources/ui/gedit-time-dialog.ui.h:7
+msgid "_Help"
+msgstr "_Pomoć"
+
+#: ../gedit/resources/gtk/menus-common.ui.h:57
+#: ../gedit/resources/gtk/menus.ui.h:5
+#: ../gedit/resources/gtk/menus-traditional.ui.h:18
+msgid "_About"
+msgstr "_O programu"
+
+#: ../gedit/resources/gtk/menus.ui.h:3
+#: ../gedit/resources/gtk/menus-traditional.ui.h:16
+msgid "_Keyboard Shortcuts"
+msgstr "_Prečaci tipkovnice"
+
+#: ../gedit/resources/gtk/menus.ui.h:11
+#: ../gedit/resources/gtk/menus-traditional.ui.h:5
+msgid "Save _All"
+msgstr "_Spremi sve"
+
+#: ../gedit/resources/gtk/menus.ui.h:13
+#: ../gedit/resources/gtk/menus-traditional.ui.h:7
+msgid "_Find and Replace…"
+msgstr "_Potraži i zamijeni..."
+
+#: ../gedit/resources/gtk/menus.ui.h:15
+#: ../gedit/resources/gtk/menus-traditional.ui.h:9
+msgid "_Go to Line…"
+msgstr "_Idi na redak..."
+
+#: ../gedit/resources/gtk/menus.ui.h:16
+#: ../gedit/resources/gtk/menus-traditional.ui.h:10
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:13
+msgid "View"
+msgstr "Pogled"
+
+#: ../gedit/resources/gtk/menus.ui.h:20
+#: ../gedit/resources/gtk/menus-traditional.ui.h:14
+msgid "Tools"
+msgstr "Alati"
+
+#: ../gedit/resources/ui/gedit-encodings-dialog.ui.h:1
+msgid "Character Encodings"
+msgstr "Kodne stranice"
+
+#: ../gedit/resources/ui/gedit-encodings-dialog.ui.h:3
+msgid "_Apply"
+msgstr "_Primijeni"
+
+#: ../gedit/resources/ui/gedit-encodings-dialog.ui.h:4
+msgid "A_vailable Encodings"
+msgstr "D_ostupne kôdne stranice:"
+
+#: ../gedit/resources/ui/gedit-encodings-dialog.ui.h:5
+msgid "Cho_sen Encodings"
+msgstr "Odabrane kodne stranice"
+
+#: ../gedit/resources/ui/gedit-encodings-dialog.ui.h:6
+msgid "_Description"
+msgstr "_Opis"
+
+#: ../gedit/resources/ui/gedit-encodings-dialog.ui.h:7
+msgid "_Encoding"
+msgstr "_Kôdne stranice"
+
+#: ../gedit/resources/ui/gedit-highlight-mode-dialog.ui.h:1
+msgid "Highlight Mode"
+msgstr "Način isticanja"
+
+#: ../gedit/resources/ui/gedit-highlight-mode-dialog.ui.h:3
+msgid "_Select"
+msgstr "_Odaberi"
+
+#: ../gedit/resources/ui/gedit-highlight-mode-selector.ui.h:1
+msgid "Search highlight mode..."
+msgstr "Pretraži način isticanja..."
+
+#: ../gedit/resources/ui/gedit-open-document-selector.ui.h:1
+msgid "No results"
+msgstr "Nema rezultata"
+
+#: ../gedit/resources/ui/gedit-open-document-selector.ui.h:2
+msgid "Other _Documents…"
+msgstr "Ostali _dokumenti..."
+
+#: ../gedit/resources/ui/gedit-open-document-selector.ui.h:3
+msgid "Open another file"
+msgstr "Otvori drugu datoteku"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:1
+msgid "Preferences"
+msgstr "Osobitosti"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:3
+msgid "Display right _margin at column:"
+msgstr "Prikaži desni _rub kod stupca:"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:4
+msgid "Display _statusbar"
+msgstr "Prikaži _statusnu traku"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:5
+msgid "Display _overview map"
+msgstr "Prikaži _mapu pregleda"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:6
+msgid "Display _grid pattern"
+msgstr "Prikaži _rešetkasi uzorak"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:7
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:9
+msgid "Text Wrapping"
+msgstr "Prijelom teksta"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:8
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:10
+msgid "Enable text _wrapping"
+msgstr "Omogući _prijelom teksta"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:9
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:11
+msgid "Do not _split words over two lines"
+msgstr "Ne _dijeli riječi u dva retka"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:10
+msgid "Highlighting"
+msgstr "Isticanje"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:11
+msgid "Highlight current _line"
+msgstr "Istakni trenutni _redak"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:12
+msgid "Highlight matching _brackets"
+msgstr "Isticanje odgovarajućih _zagrada"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:14
+msgid "Tab Stops"
+msgstr "Tab"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:15
+msgid "_Tab width:"
+msgstr "_Tab širina:"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:16
+msgid "Insert _spaces instead of tabs"
+msgstr "Umetni razmake umje_sto Tabova"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:17
+msgid "_Enable automatic indentation"
+msgstr "_Omogući automatsko poravnavanje"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:18
+msgid "File Saving"
+msgstr "Spremanje datoteke"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:19
+msgid "Create a _backup copy of files before saving"
+msgstr "Stvori _sigurnosnu kopiju datoteka prije spremanja"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:20
+msgid "_Autosave files every"
+msgstr "_Automatsko spremanje datoteka svakih"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:21
+msgid "_minutes"
+msgstr "_minuta"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:22
+msgid "Editor"
+msgstr "Uređivač"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:23
+#: ../plugins/externaltools/org.gnome.gedit.plugins.externaltools.gschema.xml.in.h:3
+#: ../plugins/pythonconsole/org.gnome.gedit.plugins.pythonconsole.gschema.xml.in.h:7
+msgid "Font"
+msgstr "Slova"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:24
+msgid "Editor _font: "
+msgstr "Slova _uređivača: "
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:25
+msgid "Pick the editor font"
+msgstr "Odaberite slova uređivača"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:26
+msgid "Color Scheme"
+msgstr "Shema boja"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:27
+msgid "Install scheme"
+msgstr "Instaliraj shemu"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:28
+msgid "Install Scheme"
+msgstr "Instaliraj shemu"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:29
+msgid "Uninstall scheme"
+msgstr "Ukloni shemu"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:30
+msgid "Uninstall Scheme"
+msgstr "Ukloni shemu"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:31
+msgid "Font & Colors"
+msgstr "Slova i boje"
+
+#: ../gedit/resources/ui/gedit-preferences-dialog.ui.h:32
+msgid "Plugins"
+msgstr "Priključci"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:1
+msgid "Syntax Highlighting"
+msgstr "Isticanje sintakse"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:2
+msgid "Print synta_x highlighting"
+msgstr "Ispiši isticanje sintaks_e"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:3
+msgid "Line Numbers"
+msgstr "Brojevi redaka"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:4
+msgid "Print line nu_mbers"
+msgstr "Ispiši brojeve _redaka"
+
+#.
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:6
+msgid "_Number every"
+msgstr "_Broj svaki"
+
+#.
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:8
+msgid "lines"
+msgstr "redka"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:12
+msgid "Page header"
+msgstr "Zaglavlje stranice"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:13
+msgid "Print page _headers"
+msgstr "Ispiši zaglavlja _stranica"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:14
+msgid "Fonts"
+msgstr "Slova"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:15
+msgid "_Body:"
+msgstr "_Glavni tekst:"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:16
+msgid "_Line numbers:"
+msgstr "Brojevi _redaka:"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:17
+msgid "He_aders and footers:"
+msgstr "Za_glavlja i podnožja:"
+
+#: ../gedit/resources/ui/gedit-print-preferences.ui.h:18
+msgid "_Restore Default Fonts"
+msgstr "V_rati zadana slova"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:1
+msgid "Show the previous page"
+msgstr "Prikaži prijašnju stranicu"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:2
+msgid "Show the next page"
+msgstr "Prikaži sljedeću stranicu"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:3
+msgid "Current page (Alt+P)"
+msgstr "Trenutna stranica (Alt+P)"
+
+#. the "of" from "1 of 19" in print preview
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:5
+msgid "of"
+msgstr "od"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:6
+msgid "Page total"
+msgstr "Ukupno stranica"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:7
+msgid "The total number of pages in the document"
+msgstr "Ukupan broj stranica u dokumentu"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:8
+msgid "Show multiple pages"
+msgstr "Prikaži više stranica"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:9
+msgid "Zoom 1:1"
+msgstr "Uvećanje 1:1"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:10
+msgid "Zoom to fit the whole page"
+msgstr "Prilagodi uvećanje za prikaz cijele stranice"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:11
+msgid "Zoom the page in"
+msgstr "Povećaj stranicu"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:12
+msgid "Zoom the page out"
+msgstr "Smanji stranicu"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:13
+msgid "Close print preview"
+msgstr "Zatvori pregled ispisa"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:14
+msgid "_Close Preview"
+msgstr "_Zatvori pregled"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:15
+msgid "Page Preview"
+msgstr "Pregled stranice"
+
+#: ../gedit/resources/ui/gedit-print-preview.ui.h:16
+msgid "The preview of a page in the document to be printed"
+msgstr "Pregled stranice u dokumentu koji treba ispisati"
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:3
+msgid "Replace _All"
+msgstr "_Zamijeni sve"
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:5
+msgctxt "label of the find button"
+msgid "_Find"
+msgstr "_Potraži"
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:6
+msgctxt "label on the left of the GtkEntry containing text to search"
+msgid "F_ind "
+msgstr "P_otraži "
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:7
+msgid "Replace _with "
+msgstr "Zamijeni _s "
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:8
+msgid "_Match case"
+msgstr "_Traži velika i mala slova"
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:9
+msgid "Match _entire word only"
+msgstr "Traži samo _cijelu riječ"
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:10
+msgid "Re_gular expression"
+msgstr "Uo_bičajeni izraz"
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:11
+msgid "Search _backwards"
+msgstr "Traži _unatrag"
+
+#: ../gedit/resources/ui/gedit-replace-dialog.ui.h:12
+msgid "Wra_p around"
+msgstr "_Omotaj oko"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:1
+msgctxt "shortcut window"
+msgid "Documents"
+msgstr "Dokumenti"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:2
+msgctxt "shortcut window"
+msgid "Create a new document in a tab"
+msgstr "Stvori novi dokument u kartici"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:3
+msgctxt "shortcut window"
+msgid "Open a document"
+msgstr "Otvori dokument"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:4
+msgctxt "shortcut window"
+msgid "Save the document"
+msgstr "Spremi dokument"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:5
+msgctxt "shortcut window"
+msgid "Save the document with a new filename"
+msgstr "Spremi dokument pod novim nazivom"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:6
+msgctxt "shortcut window"
+msgid "Save all the documents"
+msgstr "Spremi sve dokumente"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:7
+msgctxt "shortcut window"
+msgid "Close the document"
+msgstr "Zatvori dokument"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:8
+msgctxt "shortcut window"
+msgid "Close all the documents"
+msgstr "Zatvori sve dokumente"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:9
+msgctxt "shortcut window"
+msgid "Reopen the most recently closed document"
+msgstr "Ponovno otvori nedavno zatvorene dokumente"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:10
+msgctxt "shortcut window"
+msgid "Switch to the next document"
+msgstr "Prebaci na sljedeći dokument"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:11
+msgctxt "shortcut window"
+msgid "Switch to the previous document"
+msgstr "Prebaci na prijašnji dokument"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:12
+msgctxt "shortcut window"
+msgid "Switch to the first - ninth document"
+msgstr "Prebaci na prvi - deveti dokument"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:13
+msgctxt "shortcut window"
+msgid "Windows and Panels"
+msgstr "Prozori i paneli"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:14
+msgctxt "shortcut window"
+msgid "Create a new document in a window"
+msgstr "Stvori novi dokument u prozoru"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:15
+msgctxt "shortcut window"
+msgid "Create a new tab group"
+msgstr "Stvori novi grupu kartica"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:16
+msgctxt "shortcut window"
+msgid "Show side panel"
+msgstr "Prikaži bočni panel"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:17
+msgctxt "shortcut window"
+msgid "Show bottom panel"
+msgstr "Prikaži donji panel"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:18
+msgctxt "shortcut window"
+msgid "Fullscreen on / off"
+msgstr "Cjelozaslonski prikaz uklj. / isklj."
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:19
+msgctxt "shortcut window"
+msgid "Quit the application"
+msgstr "Zatvori aplikaciju"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:20
+msgctxt "shortcut window"
+msgid "Find and Replace"
+msgstr "Potraži i zamijeni"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:21
+msgctxt "shortcut window"
+msgid "Find"
+msgstr "Potraži"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:22
+msgctxt "shortcut window"
+msgid "Find the next match"
+msgstr "Potraži sljedeće podudaranje"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:23
+msgctxt "shortcut window"
+msgid "Find the previous match"
+msgstr "Potraži prijašnje podudaranje"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:24
+msgctxt "shortcut window"
+msgid "Clear highlight"
+msgstr "Ukloni isticanje"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:25
+msgctxt "shortcut window"
+msgid "Go to line"
+msgstr "Idi na redak"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:26
+msgctxt "shortcut window"
+msgid "Copy and Paste"
+msgstr "Kopiraj i zalijepi"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:27
+msgctxt "shortcut window"
+msgid "Copy selected text to clipboard"
+msgstr "Kopiraj odabrani tekst u međuspremnik"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:28
+msgctxt "shortcut window"
+msgid "Cut selected text to clipboard"
+msgstr "Izreži odabrani tekst u međuspremnik"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:29
+msgctxt "shortcut window"
+msgid "Paste text from clipboard"
+msgstr "Zalijepi sadržaj iz međuspremnika"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:30
+msgctxt "shortcut window"
+msgid "Undo and Redo"
+msgstr "Poništi i ponovi"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:31
+msgctxt "shortcut window"
+msgid "Undo previous command"
+msgstr "Poništi prijašnju naredbu"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:32
+msgctxt "shortcut window"
+msgid "Redo previous command"
+msgstr "Ponovi prijašnju naredbu"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:33
+msgctxt "shortcut window"
+msgid "Selection"
+msgstr "Odabir"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:34
+msgctxt "shortcut window"
+msgid "Select all text"
+msgstr "Odaberi sav tekst"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:35
+msgctxt "shortcut window"
+msgid "Editing"
+msgstr "Uređivanje"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:36
+msgctxt "shortcut window"
+msgid "Toggle insert / overwrite"
+msgstr "Uklj./Isklj. umetanje / prebrisivanje"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:37
+msgctxt "shortcut window"
+msgid "Delete current line"
+msgstr "Obriši trenutni redak"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:38
+msgctxt "shortcut window"
+msgid "Join selected lines"
+msgstr "Spoji odabrane redke"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:39
+msgctxt "shortcut window"
+msgid "Move current line up"
+msgstr "Pomakni trenutni redak gore"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:40
+msgctxt "shortcut window"
+msgid "Move current line down"
+msgstr "Pomakni trenutni redak dolje"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:41
+msgctxt "shortcut window"
+msgid "Move current word left"
+msgstr "Pomakni trenutnu riječ lijevo"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:42
+msgctxt "shortcut window"
+msgid "Move current word right"
+msgstr "Pomakni trenutnu riječ desno"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:43
+msgctxt "shortcut window"
+msgid "Convert to uppercase"
+msgstr "Pretvori u velika slova"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:44
+msgctxt "shortcut window"
+msgid "Convert to lowercase"
+msgstr "Pretvori u mala slova"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:45
+msgctxt "shortcut window"
+msgid "Invert case"
+msgstr "Obrni velika/mala slova"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:46
+msgctxt "shortcut window"
+msgid "Increment number at cursor"
+msgstr "Povećaj broj pri pokazivaču miša"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:47
+msgctxt "shortcut window"
+msgid "Decrement number at cursor"
+msgstr "Smanji broj pri pokazivaču miša"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:48
+msgctxt "shortcut window"
+msgid "Tools"
+msgstr "Alati"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:49
+msgctxt "shortcut window"
+msgid "Check spelling"
+msgstr "Provjera pravopisa"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:50
+msgctxt "shortcut window"
+msgid "Print the document"
+msgstr "Ispiši dokument"
+
+#: ../gedit/resources/ui/gedit-shortcuts.ui.h:51
+msgctxt "shortcut window"
+msgid "Show completion window"
+msgstr "Prikaži prozor dovršavanja"
+
+#: ../gedit/resources/ui/gedit-tab-label.ui.h:1
+msgid "Close Document"
+msgstr "Zatvori dokument"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:2
+msgid "Open a file"
+msgstr "Otvori datoteku"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:4
+msgid "Open"
+msgstr "Otvori"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:5
+msgid "Create a new document"
+msgstr "Stvori novi dokument"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:6
+msgid "New"
+msgstr "_Novi"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:8
+msgid "Save the current file"
+msgstr "Spremi trenutnu datoteku"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:9
+msgid "Save"
+msgstr "Spremi"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:10
+msgid "Hide panel"
+msgstr "Sakrij panel"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:11
+msgid "Open a file dialog"
+msgstr "Otvori dijalog datoteke"
+
+#: ../gedit/resources/ui/gedit-window.ui.h:12
+msgid "Leave Fullscreen"
+msgstr "Napusti cijeli zaslon"
+
+#: ../plugins/checkupdate/checkupdate.plugin.desktop.in.h:1
+msgid "Check update"
+msgstr "Provjeri za nadopune"
+
+#: ../plugins/checkupdate/checkupdate.plugin.desktop.in.h:2
+msgid "Check for latest version of gedit"
+msgstr "Potraži najnoviju inačicu gedita"
+
+#: ../plugins/checkupdate/gedit-check-update-plugin.c:245
+msgid "There was an error displaying the URI."
+msgstr "Dogodila se greška u prikazivanju URI-ja."
+
+#: ../plugins/checkupdate/gedit-check-update-plugin.c:282
+msgid "_Download"
+msgstr "_Preuzmi"
+
+#: ../plugins/checkupdate/gedit-check-update-plugin.c:283
+msgid "_Ignore Version"
+msgstr "_Zanemari inačicu"
+
+#: ../plugins/checkupdate/gedit-check-update-plugin.c:288
+msgid "There is a new version of gedit"
+msgstr "Dostupna je nova inačica gedita"
+
+#: ../plugins/checkupdate/gedit-check-update-plugin.c:291
+msgid ""
+"You can download the new version of gedit by clicking on the download button "
+"or ignore that version and wait for a new one"
+msgstr ""
+"Možete preuzeti novu inačicu gedita klikom na tipku \"Preuzmi\" dolje ili "
+"možete zanemariti tu inačicu i pričekati novu"
+
+#. ex:set ts=8 noet:
+#: ../plugins/checkupdate/org.gnome.gedit.plugins.checkupdate.gschema.xml.in.h:1
+msgid "Version to Ignore"
+msgstr "Inačica za zanemariti"
+
+#. This is releated to the next gedit version to be released
+#: ../plugins/checkupdate/org.gnome.gedit.plugins.checkupdate.gschema.xml.in.h:3
+msgid "Version to ignore until a newer version is released."
+msgstr "Inačica za zanemariti dok ne bude dostupna nova."
+
+#. ex:set ts=8 noet:
+#: ../plugins/docinfo/docinfo.plugin.desktop.in.h:1
+#: ../plugins/docinfo/resources/ui/gedit-docinfo-plugin.ui.h:1
+msgid "Document Statistics"
+msgstr "Statistika dokumenta"
+
+#: ../plugins/docinfo/docinfo.plugin.desktop.in.h:2
+msgid "Report the number of words, lines and characters in a document."
+msgstr "Prijavi broj riječi, redaka i znakova u dokumentu."
+
+#: ../plugins/docinfo/gedit-docinfo-plugin.c:537
+msgid "_Document Statistics"
+msgstr "_Statistika dokumenta"
+
+#: ../plugins/docinfo/resources/ui/gedit-docinfo-plugin.ui.h:2
+msgid "Document"
+msgstr "Dokument"
+
+#: ../plugins/docinfo/resources/ui/gedit-docinfo-plugin.ui.h:3
+msgid "Selection"
+msgstr "Odabir"
+
+#: ../plugins/docinfo/resources/ui/gedit-docinfo-plugin.ui.h:4
+msgid "Lines"
+msgstr "Redci"
+
+#: ../plugins/docinfo/resources/ui/gedit-docinfo-plugin.ui.h:5
+msgid "Words"
+msgstr "Riječi"
+
+#: ../plugins/docinfo/resources/ui/gedit-docinfo-plugin.ui.h:6
+msgid "Characters (with spaces)"
+msgstr "Znakova (s razmacima)"
+
+#: ../plugins/docinfo/resources/ui/gedit-docinfo-plugin.ui.h:7
+msgid "Characters (no spaces)"
+msgstr "Znakova (bez razmaka)"
+
+#: ../plugins/docinfo/resources/ui/gedit-docinfo-plugin.ui.h:8
+msgid "Bytes"
+msgstr "Bajtova"
+
+#: ../plugins/externaltools/data/build.desktop.in.h:1
+msgid "Build"
+msgstr "Izgradi"
+
+#: ../plugins/externaltools/data/build.desktop.in.h:2
+msgid "Run \"make\" in the document directory"
+msgstr "Pokrenite \"make\" u direktoriju dokumenta"
+
+#: ../plugins/externaltools/data/open-terminal-here.desktop.in.h:1
+#: ../plugins/externaltools/data/open-terminal-here-osx.desktop.in.h:1
+msgid "Open terminal here"
+msgstr "Otvori terminal ovdje"
+
+#: ../plugins/externaltools/data/open-terminal-here.desktop.in.h:2
+#: ../plugins/externaltools/data/open-terminal-here-osx.desktop.in.h:2
+msgid "Open a terminal in the document location"
+msgstr "Otvori terminal u lokaciji dokumenta"
+
+#: ../plugins/externaltools/data/remove-trailing-spaces.desktop.in.h:1
+msgid "Remove trailing spaces"
+msgstr "Ukloni prateće razmake"
+
+#: ../plugins/externaltools/data/remove-trailing-spaces.desktop.in.h:2
+msgid "Remove useless trailing spaces in your file"
+msgstr "Uklonite beskorisne prateće razmake u vašoj datoteci"
+
+#: ../plugins/externaltools/data/run-command.desktop.in.h:1
+msgid "Run command"
+msgstr "Pokreni naredbu"
+
+#: ../plugins/externaltools/data/run-command.desktop.in.h:2
+msgid "Execute a custom command and put its output in a new document"
+msgstr "Pokreni prilagođenu naredbu i stavi njezin izlaz u novi dokument"
+
+#: ../plugins/externaltools/data/send-to-fpaste.desktop.in.h:1
+msgid "Send to fpaste"
+msgstr "Pošalji na fpaste"
+
+#: ../plugins/externaltools/data/send-to-fpaste.desktop.in.h:2
+msgid "Paste selected text or current document to fpaste"
+msgstr "Zalijepi odabrani tekst ili trenutni dokument na fpaste"
+
+#: ../plugins/externaltools/externaltools.plugin.desktop.in.h:1
+msgid "External Tools"
+msgstr "Vanjski alati"
+
+#: ../plugins/externaltools/externaltools.plugin.desktop.in.h:2
+msgid "Execute external commands and shell scripts."
+msgstr "Pokreni vanjske (eksterne) naredbe i skripte ljuske."
+
+#: ../plugins/externaltools/org.gnome.gedit.plugins.externaltools.gschema.xml.in.h:1
+#: ../plugins/pythonconsole/org.gnome.gedit.plugins.pythonconsole.gschema.xml.in.h:5
+msgid "Whether to use the system font"
+msgstr "Treba li koristiti slova sustava"
+
+#: ../plugins/externaltools/org.gnome.gedit.plugins.externaltools.gschema.xml.in.h:2
+msgid ""
+"If true, the external tools will use the desktop-global standard font if "
+"it's monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Ako je odabrano, vanjski alati će koristiti standardna slova radne površine "
+"ako je ono monospace (i najsličnija moguća slova)."
+
+#: ../plugins/externaltools/org.gnome.gedit.plugins.externaltools.gschema.xml.in.h:4
+#: ../plugins/pythonconsole/org.gnome.gedit.plugins.pythonconsole.gschema.xml.in.h:8
+msgid "A Pango font name. Examples are \"Sans 12\" or \"Monospace Bold 14\"."
+msgstr "Naziv slova Pango. Primjeri su \"Sans 12\" ili \"Monospace Bold 14\"."
+
+#: ../plugins/externaltools/tools/appactivatable.py:126
+msgid "Manage _External Tools..."
+msgstr "Upravljanje _vanjskim alatima..."
+
+#: ../plugins/externaltools/tools/appactivatable.py:131
+msgid "External _Tools"
+msgstr "Vanjski _alati"
+
+#: ../plugins/externaltools/tools/capture.py:99
+#, python-format
+msgid "Could not execute command: %s"
+msgstr "Nemoguće pokretanje naredbe: %s"
+
+#: ../plugins/externaltools/tools/functions.py:184
+msgid "You must be inside a word to run this command"
+msgstr "Morate biti unutar riječi za pokretanje ove naredbe"
+
+#: ../plugins/externaltools/tools/functions.py:302
+msgid "Running tool:"
+msgstr "Pokretanje alata:"
+
+#: ../plugins/externaltools/tools/functions.py:333
+msgid "Done."
+msgstr "Završeno."
+
+#: ../plugins/externaltools/tools/functions.py:335
+msgid "Exited"
+msgstr "Izlaz"
+
+#: ../plugins/externaltools/tools/manager.py:106
+msgid "All languages"
+msgstr "Svi jezici"
+
+#: ../plugins/externaltools/tools/manager.py:422
+#: ../plugins/externaltools/tools/manager.py:426
+#: ../plugins/externaltools/tools/manager.py:765
+#: ../plugins/externaltools/tools/tools.ui.h:31
+msgid "All Languages"
+msgstr "Svi jezici"
+
+#: ../plugins/externaltools/tools/manager.py:539
+msgid "New tool"
+msgstr "Novi alat"
+
+#: ../plugins/externaltools/tools/manager.py:676
+#, python-format
+msgid "This accelerator is already bound to %s"
+msgstr "Ovaj prečac tipkovnice već je povezan s %s"
+
+#: ../plugins/externaltools/tools/manager.py:720
+msgid "Type a new accelerator, or press Backspace to clear"
+msgstr "Otipkajte novi prečac tipkovnice ili pritisnite Backspace za brisanje"
+
+#: ../plugins/externaltools/tools/manager.py:722
+msgid "Type a new accelerator"
+msgstr "Otipkajte novi prečac tipkovnice"
+
+#: ../plugins/externaltools/tools/outputpanel.py:122
+msgid "Stopped."
+msgstr "Zaustavljeno."
+
+#. ex:ts=4:et:
+#: ../plugins/externaltools/tools/outputpanel.ui.h:1
+msgid "Stop Tool"
+msgstr "Alat zaustavljanja"
+
+#: ../plugins/externaltools/tools/tools.ui.h:1
+msgid "Always available"
+msgstr "Uvijek dostupno"
+
+#: ../plugins/externaltools/tools/tools.ui.h:2
+msgid "All documents"
+msgstr "Svi dokumenti"
+
+#: ../plugins/externaltools/tools/tools.ui.h:3
+msgid "All documents except untitled ones"
+msgstr "Svi dokumenti osim onih bez naziva"
+
+#: ../plugins/externaltools/tools/tools.ui.h:4
+msgid "Local files only"
+msgstr "Samo lokalne datoteke"
+
+#: ../plugins/externaltools/tools/tools.ui.h:5
+msgid "Remote files only"
+msgstr "Samo udaljene datoteke"
+
+#: ../plugins/externaltools/tools/tools.ui.h:6
+msgid "Untitled documents only"
+msgstr "Samo neimenovane datoteke"
+
+#: ../plugins/externaltools/tools/tools.ui.h:8
+msgid "Current document"
+msgstr "Trenutni dokument"
+
+#: ../plugins/externaltools/tools/tools.ui.h:9
+msgid "Current selection"
+msgstr "Trenutni odabir"
+
+#: ../plugins/externaltools/tools/tools.ui.h:10
+msgid "Current selection (default to document)"
+msgstr "Trenutni odabir (uobičajeno za dokument)"
+
+#: ../plugins/externaltools/tools/tools.ui.h:11
+msgid "Current line"
+msgstr "Trenutni redak"
+
+#: ../plugins/externaltools/tools/tools.ui.h:12
+msgid "Current word"
+msgstr "Trenutna riječ"
+
+#: ../plugins/externaltools/tools/tools.ui.h:13
+msgid "Display in bottom pane"
+msgstr "Prikaži u donjem panelu"
+
+#: ../plugins/externaltools/tools/tools.ui.h:14
+msgid "Create new document"
+msgstr "Napravi novi dokument"
+
+#: ../plugins/externaltools/tools/tools.ui.h:15
+msgid "Append to current document"
+msgstr "Dodaj na trenutni dokument"
+
+#: ../plugins/externaltools/tools/tools.ui.h:16
+msgid "Replace current document"
+msgstr "Zamijeni trenutni dokument"
+
+#: ../plugins/externaltools/tools/tools.ui.h:17
+msgid "Replace current selection"
+msgstr "Zamijeni trenutni odabir"
+
+#: ../plugins/externaltools/tools/tools.ui.h:18
+msgid "Insert at cursor position"
+msgstr "Umetni na mjestu pokazivača"
+
+#: ../plugins/externaltools/tools/tools.ui.h:19
+msgid "Manage External Tools"
+msgstr "Upravljanje vanjskim alatima"
+
+#: ../plugins/externaltools/tools/tools.ui.h:20
+msgid "Add a new tool"
+msgstr "Dodaj novi alat"
+
+#: ../plugins/externaltools/tools/tools.ui.h:21
+msgid "Add Tool"
+msgstr "Dodaj alat"
+
+#: ../plugins/externaltools/tools/tools.ui.h:22
+msgid "Remove selected tool"
+msgstr "Ukloni odabrani alat"
+
+#: ../plugins/externaltools/tools/tools.ui.h:23
+msgid "Remove Tool"
+msgstr "Ukloni alat"
+
+#: ../plugins/externaltools/tools/tools.ui.h:24
+msgid "Revert tool"
+msgstr "Vrati alat"
+
+#: ../plugins/externaltools/tools/tools.ui.h:25
+msgid "Revert Tool"
+msgstr "Vrati alat"
+
+#: ../plugins/externaltools/tools/tools.ui.h:26
+msgid "Shortcut _key:"
+msgstr "Tipka _prečaca:"
+
+#: ../plugins/externaltools/tools/tools.ui.h:27
+msgid "_Save:"
+msgstr "_Spremi:"
+
+#: ../plugins/externaltools/tools/tools.ui.h:28
+msgid "_Input:"
+msgstr "_Ulaz:"
+
+#: ../plugins/externaltools/tools/tools.ui.h:29
+msgid "_Output:"
+msgstr "_Izlaz:"
+
+#: ../plugins/externaltools/tools/tools.ui.h:30
+msgid "_Applicability:"
+msgstr "_Primjenjivo na:"
+
+#: ../plugins/externaltools/tools/windowactivatable.py:119
+msgid "Tool Output"
+msgstr "Izlaz alata"
+
+#. ex:ts=4:et:
+#: ../plugins/filebrowser/filebrowser.plugin.desktop.in.h:1
+msgid "File Browser Panel"
+msgstr "Panel pregleda datoteka"
+
+#: ../plugins/filebrowser/filebrowser.plugin.desktop.in.h:2
+msgid "Easy file access from the side panel"
+msgstr "Lagano pristupanje datotekama iz bočnog panela"
+
+#: ../plugins/filebrowser/gedit-file-bookmarks-store.c:205
+msgid "Home"
+msgstr "Naslovnica"
+
+#: ../plugins/filebrowser/gedit-file-bookmarks-store.c:231
+msgid "File System"
+msgstr "Datotečni sustav"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:523
+msgid "File Browser"
+msgstr "Preglednik datoteka"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:659
+msgid "An error occurred while creating a new directory"
+msgstr "Pojavila se greška prilikom stvaranja novog direktorija"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:662
+msgid "An error occurred while creating a new file"
+msgstr "Pojavila se greška prilikom stvaranja nove datoteke"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:665
+msgid "An error occurred while renaming a file or directory"
+msgstr "Pojavila se greška prilikom preimenovanja datoteke ili direktorija"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:668
+msgid "An error occurred while deleting a file or directory"
+msgstr "Pojavila se greška prilikom brisanja datoteke ili direktorija"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:671
+msgid "An error occurred while opening a directory in the file manager"
+msgstr ""
+"Pojavila se greška prilikom otvaranja direktorija u upravitelju datoteka"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:674
+msgid "An error occurred while setting a root directory"
+msgstr "Pojavila se greška prilikom postavljanja korijenskog direktorija"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:677
+msgid "An error occurred while loading a directory"
+msgstr "Pojavila se greška prilikom učitavanja direktorija"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:680
+msgid "An error occurred"
+msgstr "Došlo je do greške"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:902
+msgid ""
+"Cannot move file to trash, do you\n"
+"want to delete permanently?"
+msgstr ""
+"Nije moguće premjestiti datoteku u\n"
+"smeće, želite li je trajno obrisati?"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:907
+#, c-format
+msgid "The file \"%s\" cannot be moved to the trash."
+msgstr "Datoteka \"%s\" se ne može premjestiti u smeće."
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:912
+msgid "The selected files cannot be moved to the trash."
+msgstr "Odabrane datoteke se ne mogu premjestiti u smeće."
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:943
+#, c-format
+msgid "Are you sure you want to permanently delete \"%s\"?"
+msgstr "Sigurno želite trajno obrisati \"%s\"?"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:948
+msgid "Are you sure you want to permanently delete the selected files?"
+msgstr "Sigurno želite trajno obrisati odabrane datoteke?"
+
+#: ../plugins/filebrowser/gedit-file-browser-plugin.c:951
+msgid "If you delete an item, it is permanently lost."
+msgstr "Ukoliko obrišete stavku, biti će trajno izgubljena."
+
+#: ../plugins/filebrowser/gedit-file-browser-store.c:1794
+msgid "(Empty)"
+msgstr "(Prazno)"
+
+#: ../plugins/filebrowser/gedit-file-browser-store.c:3515
+msgid ""
+"The renamed file is currently filtered out. You need to adjust your filter "
+"settings to make the file visible"
+msgstr ""
+"Preimenovana datoteka je trenutno filtrirana. Trebate prilagoditi vaše "
+"postavke filtra kako bi datoteku učinili vidljivom"
+
+#. Translators: This is the default name of new files created by the file browser pane.
+#: ../plugins/filebrowser/gedit-file-browser-store.c:3772
+msgid "Untitled File"
+msgstr "Neimenovana datoteka"
+
+#: ../plugins/filebrowser/gedit-file-browser-store.c:3800
+msgid ""
+"The new file is currently filtered out. You need to adjust your filter "
+"settings to make the file visible"
+msgstr ""
+"Nova datoteka je trenutno filtrirana. Trebate prilagoditi vaše postavke "
+"filtra kako bi datoteku učinili vidljivom"
+
+#. Translators: This is the default name of new directories created by the file browser pane.
+#: ../plugins/filebrowser/gedit-file-browser-store.c:3831
+msgid "Untitled Folder"
+msgstr "Neimenovana mapa"
+
+#: ../plugins/filebrowser/gedit-file-browser-store.c:3856
+msgid ""
+"The new directory is currently filtered out. You need to adjust your filter "
+"settings to make the directory visible"
+msgstr ""
+"Novi direktorij je trenutno filtriran. Trebate prilagoditi vaše postavke "
+"filtra kako bi direktorij učinili vidljivim"
+
+#: ../plugins/filebrowser/gedit-file-browser-widget.c:754
+msgid "Bookmarks"
+msgstr "Zabilješke"
+
+#: ../plugins/filebrowser/gedit-file-browser-widget.c:1995
+#, c-format
+msgid "No mount object for mounted volume: %s"
+msgstr "Nema objekta montiranja za montirani uređaj: %s"
+
+#: ../plugins/filebrowser/gedit-file-browser-widget.c:2072
+#, c-format
+msgid "Could not open media: %s"
+msgstr "Nemoguće otvoriti medij: %s"
+
+#: ../plugins/filebrowser/gedit-file-browser-widget.c:2119
+#, c-format
+msgid "Could not mount volume: %s"
+msgstr "Nemoguće montirati uređaj: %s"
+
+#: ../plugins/filebrowser/gedit-file-browser-widget.c:2769
+#, c-format
+msgid "Error when loading '%s': No such directory"
+msgstr "Greška pri učitavanju '%s': Nema takvog direktorija"
+
+#. ex:set ts=8 noet:
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:1
+msgid "Open With Tree View"
+msgstr "Otvori u pogledu stabla"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:2
+msgid ""
+"Open the tree view when the file browser plugin gets loaded instead of the "
+"bookmarks view"
+msgstr ""
+"Otvori pogled stabla kada se učita priključak datotečnog preglednika umjesto "
+"pogleda zabilješka"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:3
+msgid "File Browser Root Directory"
+msgstr "Korjenski direktorij preglednika datoteka"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:4
+msgid ""
+"The file browser root directory to use when loading the file browser plugin "
+"and onload/tree_view is TRUE."
+msgstr ""
+"Korijenski direktorij datotečnog preglednika koji će se koristiti kad se "
+"učitava priključak datotečnog preglednika kad je onload/stablasti_pogled "
+"ISTINITO."
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:5
+msgid "File Browser Virtual Root Directory"
+msgstr "Virtualni korjenski direktorij preglednika datoteka"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:6
+msgid ""
+"The file browser virtual root directory to use when loading the file browser "
+"plugin when onload/tree_view is TRUE. The virtual root must always be below "
+"the actual root."
+msgstr ""
+"Virtualni korijenski direktorij datotečnog preglednika koji će se koristiti "
+"kad se učitava priključak datotečnog preglednika kad je onload/"
+"stablasti_pogled ISTINITO."
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:7
+msgid "Enable Restore of Remote Locations"
+msgstr "Omogući obnavljanje udaljenih lokacija"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:8
+msgid "Sets whether to enable restoring of remote locations."
+msgstr "Određuje hoće li se omogućiti obnavljanje udaljenih lokacija."
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:9
+msgid "Set Location to First Document"
+msgstr "Postavi lokaciju na prvi dokument"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:10
+msgid ""
+"If TRUE the file browser plugin will view the directory of the first opened "
+"document given that the file browser hasn't been used yet. (Thus this "
+"generally applies to opening a document from the command line or opening it "
+"with Nautilus, etc.)"
+msgstr ""
+"Ako je odabrano priključak preglednika datoteka će pregledati direktorij "
+"prvog otvorenog dokumenta s obzirom da preglednika datoteka još nije bio "
+"upotrebljen. (Ovo se onda uobičajeno odnosi na otvaranje dokumenta iz "
+"naredbenog redka ili iz Nautilusa itd.)"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:11
+msgid "File Browser Filter Mode"
+msgstr "Način rada filtra za preglednik datoteka"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:12
+msgid ""
+"This value determines what files get filtered from the file browser. Valid "
+"values are: none (filter nothing), hide-hidden (filter hidden files) and "
+"hide-binary (filter binary files)."
+msgstr ""
+"Ova vrijednost određuje koje se datoteke filtriraju iz preglednika datoteka. "
+"Valjane vrijednosti su: ništa (nemoj ništa filtrirati), sakrij-skrivene "
+"(filtriraj skrivene datoteke) i sakrij-binarne (filtriraj binarne datoteke)."
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:13
+msgid "File Browser Filter Pattern"
+msgstr "Način filtriranja preglednika datoteka"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:14
+msgid ""
+"The filter pattern to filter the file browser with. This filter works on top "
+"of the filter_mode."
+msgstr ""
+"Način filtriranja za filtriranje preglednika datoteka. Ovaj filter radi "
+"povrh filter_način rada."
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:15
+msgid "File Browser Binary Patterns"
+msgstr "Binarni uzorci preglednika datoteka"
+
+#: ../plugins/filebrowser/org.gnome.gedit.plugins.filebrowser.gschema.xml.in.h:16
+msgid "The supplemental patterns to use when filtering binary files."
+msgstr "Dodatni uzorci za korištenje pri filtriranju binarnih datoteka."
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:2
+msgid "_Set Root to Active Document"
+msgstr "_Postavi korijenski pristup aktivnom dokumentu"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:3
+msgid "_New Folder"
+msgstr "_Nova mapa"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:4
+msgid "New F_ile"
+msgstr "Nova d_atoteka"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:5
+msgid "_Rename..."
+msgstr "_Preimenuj..."
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:6
+msgid "_Move to Trash"
+msgstr "_Premjesti u smeće"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:8
+msgid "Re_fresh View"
+msgstr "Os_vježi pogled"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:9
+msgid "_View Folder"
+msgstr "_Pregledaj mapu"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:10
+msgid "_Open in Terminal"
+msgstr "_Otvori u terminalu"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:11
+msgid "_Filter"
+msgstr "_Filter"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:12
+msgid "Show _Hidden"
+msgstr "Prikaži _skrivene"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:13
+msgid "Show _Binary"
+msgstr "Prikaži _binarne"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-menus.ui.h:14
+msgid "Match Filename"
+msgstr "Podudaraj naziv datoteke"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-widget.ui.h:1
+msgid "History"
+msgstr "Povijest"
+
+#: ../plugins/filebrowser/resources/ui/gedit-file-browser-widget.ui.h:2
+msgid "Open history menu"
+msgstr "Otvori izbornik povijesti"
+
+#: ../plugins/modelines/modelines.plugin.desktop.in.h:1
+msgid "Modelines"
+msgstr "Modelines"
+
+#: ../plugins/modelines/modelines.plugin.desktop.in.h:2
+msgid "Emacs, Kate and Vim-style modelines support for gedit."
+msgstr "Emacs, Kate i Vim modelines podržane u geditu."
+
+#: ../plugins/pythonconsole/org.gnome.gedit.plugins.pythonconsole.gschema.xml.in.h:1
+msgid "Command Color Text"
+msgstr "Boja teksta naredbe"
+
+#: ../plugins/pythonconsole/org.gnome.gedit.plugins.pythonconsole.gschema.xml.in.h:2
+msgid "The command color text"
+msgstr "Boja teksta naredbe"
+
+#: ../plugins/pythonconsole/org.gnome.gedit.plugins.pythonconsole.gschema.xml.in.h:3
+msgid "Error Color Text"
+msgstr "Boja teksta greške"
+
+#: ../plugins/pythonconsole/org.gnome.gedit.plugins.pythonconsole.gschema.xml.in.h:4
+msgid "The error color text"
+msgstr "Boja teksta greške"
+
+#: ../plugins/pythonconsole/org.gnome.gedit.plugins.pythonconsole.gschema.xml.in.h:6
+msgid ""
+"If true, the terminal will use the desktop-global standard font if it's "
+"monospace (and the most similar font it can come up with otherwise)."
+msgstr ""
+"Ako je odabrano, terminal će koristiti standardna slova radne površine ako "
+"je monospace (ili najsličnija slova)."
+
+#: ../plugins/pythonconsole/pythonconsole/config.ui.h:1
+msgid "C_ommand color:"
+msgstr "N_aredbena boja:"
+
+#: ../plugins/pythonconsole/pythonconsole/config.ui.h:2
+msgid "_Error color:"
+msgstr "Boja _greške:"
+
+#. ex:et:ts=4:
+#: ../plugins/pythonconsole/pythonconsole/__init__.py:53
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:1
+msgid "Python Console"
+msgstr "Python konzola"
+
+#: ../plugins/pythonconsole/pythonconsole.plugin.desktop.in.h:2
+msgid "Interactive Python console standing in the bottom panel"
+msgstr "Interaktivna Python konzola smještena u donjem panelu"
+
+#: ../plugins/quickopen/quickopen/__init__.py:40
+msgid "Quick Open..."
+msgstr "Brzo otvori..."
+
+#. ex:ts=4:et:
+#: ../plugins/quickopen/quickopen.plugin.desktop.in.h:1
+#: ../plugins/quickopen/quickopen/popup.py:33
+msgid "Quick Open"
+msgstr "Brzo otvaranje"
+
+#: ../plugins/quickopen/quickopen.plugin.desktop.in.h:2
+msgid "Quickly open files"
+msgstr "Brzo otvaranje datoteka"
+
+#: ../plugins/quickopen/quickopen/popup.py:83
+msgid "Type to search..."
+msgstr "Upišite za pretragu..."
+
+#: ../plugins/snippets/snippets/appactivatable.py:81
+msgid "Manage _Snippets..."
+msgstr "Upravljanje _isječcima..."
+
+#. Do the fancy completion dialog
+#. ex:ts=4:et:
+#: ../plugins/snippets/snippets/document.py:56
+#: ../plugins/snippets/snippets/document.py:145
+#: ../plugins/snippets/snippets/document.py:659
+#: ../plugins/snippets/snippets.plugin.desktop.in.h:1
+msgid "Snippets"
+msgstr "Isječci"
+
+#: ../plugins/snippets/snippets/exporter.py:80
+#, python-format
+msgid "The archive \"%s\" could not be created"
+msgstr "Arhiva \"%s\" se ne može stvoriti"
+
+#: ../plugins/snippets/snippets/exporter.py:97
+#, python-format
+msgid "Target directory \"%s\" does not exist"
+msgstr "Ciljani direktorij  \"%s\" ne postoji"
+
+#: ../plugins/snippets/snippets/exporter.py:100
+#, python-format
+msgid "Target directory \"%s\" is not a valid directory"
+msgstr "Ciljani direktorij  \"%s\" nije valjani direktorij"
+
+#: ../plugins/snippets/snippets/importer.py:47
+#: ../plugins/snippets/snippets/importer.py:108
+#, python-format
+msgid "File \"%s\" does not exist"
+msgstr "Datoteka \"%s\" ne postoji"
+
+#: ../plugins/snippets/snippets/importer.py:50
+#, python-format
+msgid "File \"%s\" is not a valid snippets file"
+msgstr "Datoteka \"%s\" nije valjana datoteka isječka"
+
+#: ../plugins/snippets/snippets/importer.py:67
+#, python-format
+msgid "Imported file \"%s\" is not a valid snippets file"
+msgstr "Uvezena datoteka \"%s\" nije valjana datoteka isječka"
+
+#: ../plugins/snippets/snippets/importer.py:77
+#, python-format
+msgid "The archive \"%s\" could not be extracted"
+msgstr "Arhiva \"%s\" se ne može raspakirati"
+
+#: ../plugins/snippets/snippets/importer.py:95
+#, python-format
+msgid "The following files could not be imported: %s"
+msgstr "Sljedeće datoteke ne mogu biti uvežene: %s"
+
+#: ../plugins/snippets/snippets/importer.py:111
+#: ../plugins/snippets/snippets/importer.py:124
+#, python-format
+msgid "File \"%s\" is not a valid snippets archive"
+msgstr "Datoteka \"%s\" nije valjana arhiva isječka"
+
+#: ../plugins/snippets/snippets/manager.py:42
+msgid "Snippets archive"
+msgstr "Arhiva isječaka"
+
+#: ../plugins/snippets/snippets/manager.py:66
+msgid "Add a new snippet..."
+msgstr "Dodaj novi isječak..."
+
+#: ../plugins/snippets/snippets/manager.py:116
+msgid "Global"
+msgstr "Globalno"
+
+#: ../plugins/snippets/snippets/manager.py:406
+msgid "Revert selected snippet"
+msgstr "Vrati odabrani isječak"
+
+#: ../plugins/snippets/snippets/manager.py:409
+#: ../plugins/snippets/snippets/snippets.ui.h:4
+msgid "Delete selected snippet"
+msgstr "Obriši odabrani isječak"
+
+#. self['hbox_tab_trigger'].set_spacing(3)
+#: ../plugins/snippets/snippets/manager.py:662
+msgid ""
+"This is not a valid Tab trigger. Triggers can either contain alphanumeric "
+"characters (or _, : and .) or a single (non-alphanumeric) character like: {, "
+"[, etc."
+msgstr ""
+"Ovo nije valjani Tab aktivator. Aktivatori mogu sadržavati ili slovno-"
+"brojevni znakove (ili _, : i .) ili jednostruki (ne-slovno-brojevni) znak "
+"poput: {, [, itd."
+
+#. self['hbox_tab_trigger'].set_spacing(0)
+#: ../plugins/snippets/snippets/manager.py:669
+#: ../plugins/snippets/snippets/snippets.ui.h:14
+msgid "Single word the snippet is activated with after pressing Tab"
+msgstr "Jedna riječ kojom se aktivira isječak nakon što se pritisne Tab"
+
+#: ../plugins/snippets/snippets/manager.py:758
+#, python-format
+msgid "The following error occurred while importing: %s"
+msgstr "Pojavila se sljedeća greška prilikom uvoženja: %s"
+
+#: ../plugins/snippets/snippets/manager.py:765
+msgid "Import successfully completed"
+msgstr "Uvoz uspješno završen"
+
+#: ../plugins/snippets/snippets/manager.py:779
+#: ../plugins/snippets/snippets/snippets.ui.h:6
+msgid "Import snippets"
+msgstr "Uvezi isječke"
+
+#: ../plugins/snippets/snippets/manager.py:784
+#: ../plugins/snippets/snippets/manager.py:870
+#: ../plugins/snippets/snippets/manager.py:933
+msgid "All supported archives"
+msgstr "Sve podržane arhive"
+
+#: ../plugins/snippets/snippets/manager.py:785
+#: ../plugins/snippets/snippets/manager.py:871
+#: ../plugins/snippets/snippets/manager.py:934
+msgid "Gzip compressed archive"
+msgstr "Gzip sažeta arhiva"
+
+#: ../plugins/snippets/snippets/manager.py:786
+#: ../plugins/snippets/snippets/manager.py:872
+#: ../plugins/snippets/snippets/manager.py:935
+msgid "Bzip2 compressed archive"
+msgstr "Bzip2 sažeta arhiva"
+
+#: ../plugins/snippets/snippets/manager.py:787
+msgid "Single snippets file"
+msgstr "Datoteka s pojedinačnim isječcima"
+
+#: ../plugins/snippets/snippets/manager.py:788
+#: ../plugins/snippets/snippets/manager.py:874
+#: ../plugins/snippets/snippets/manager.py:937
+msgid "All files"
+msgstr "Sve datoteke"
+
+#: ../plugins/snippets/snippets/manager.py:800
+#, python-format
+msgid "The following error occurred while exporting: %s"
+msgstr "Pojavila se sljedeća greška prilikom izvoženja: %s"
+
+#: ../plugins/snippets/snippets/manager.py:804
+msgid "Export successfully completed"
+msgstr "Izvoz uspješno završen"
+
+#. Ask if system snippets should also be exported
+#: ../plugins/snippets/snippets/manager.py:844
+#: ../plugins/snippets/snippets/manager.py:911
+msgid "Do you want to include selected <b>system</b> snippets in your export?"
+msgstr "Želite li uključiti odabrane <b>sustavske</b> isječke prilikom izvoza?"
+
+#: ../plugins/snippets/snippets/manager.py:859
+#: ../plugins/snippets/snippets/manager.py:929
+msgid "There are no snippets selected to be exported"
+msgstr "Nema odabranih isječaka za izvoz"
+
+#: ../plugins/snippets/snippets/manager.py:864
+#: ../plugins/snippets/snippets/manager.py:902
+msgid "Export snippets"
+msgstr "Izvoz isječaka"
+
+#: ../plugins/snippets/snippets/manager.py:1041
+msgid "Type a new shortcut, or press Backspace to clear"
+msgstr "Upišite novi prečac, ili pritisnite Backspace za brisanje"
+
+#: ../plugins/snippets/snippets/manager.py:1043
+msgid "Type a new shortcut"
+msgstr "Upišite novi prečac"
+
+#: ../plugins/snippets/snippets/placeholder.py:597
+#, python-format
+msgid ""
+"Execution of the Python command (%s) exceeds the maximum time, execution "
+"aborted."
+msgstr ""
+"Pokretanje Python naredbe (%s) prelazi maksimalno vrijeme, izvršavanje "
+"prekinuto."
+
+#: ../plugins/snippets/snippets/placeholder.py:605
+#, python-format
+msgid "Execution of the Python command (%s) failed: %s"
+msgstr "Pokretanje Python naredbe (%s) nije uspjelo: %s"
+
+#: ../plugins/snippets/snippets.plugin.desktop.in.h:2
+msgid "Insert often-used pieces of text in a fast way"
+msgstr "Umetni  na brzi način često korištene dijelove teksta"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:1
+msgid "Manage Snippets"
+msgstr "Upravljaj isječcima"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:2
+msgid "Create new snippet"
+msgstr "Napravi novi isječak"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:3
+msgid "Add Snippet"
+msgstr "Dodaj isječak"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:5
+msgid "Remove Snippet"
+msgstr "Ukloni isječak"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:7
+msgid "Import Snippets"
+msgstr "Uvezi isječke"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:8
+msgid "Export selected snippets"
+msgstr "Izvezi odabrane isječke"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:9
+msgid "Export Snippets"
+msgstr "Izvezi isječke"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:10
+msgid "Activation"
+msgstr "Aktiviranje"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:11
+msgid "    "
+msgstr "    "
+
+#. "tab" here means the tab key, not the notebook tab!
+#: ../plugins/snippets/snippets/snippets.ui.h:13
+msgid "_Tab trigger:"
+msgstr "_Tab aktivator:"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:15
+msgid "S_hortcut key:"
+msgstr "Prečac t_ipkovnice:"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:16
+msgid "Shortcut key with which the snippet is activated"
+msgstr "Prečac tipkovnice kojim se aktivira isječak"
+
+#: ../plugins/snippets/snippets/snippets.ui.h:17
+msgid "_Drop targets:"
+msgstr "_Otkaži mete:"
+
+#: ../plugins/sort/gedit-sort-plugin.c:243
+msgid "S_ort..."
+msgstr "R_azvrstaj..."
+
+#. ex:set ts=8 noet:
+#: ../plugins/sort/resources/ui/gedit-sort-plugin.ui.h:1
+#: ../plugins/sort/sort.plugin.desktop.in.h:1
+msgid "Sort"
+msgstr "Razvrstaj"
+
+#: ../plugins/sort/resources/ui/gedit-sort-plugin.ui.h:2
+msgid "_Reverse order"
+msgstr "_Obrnuti poredak"
+
+#: ../plugins/sort/resources/ui/gedit-sort-plugin.ui.h:3
+msgid "R_emove duplicates"
+msgstr "U_kloni duplikate"
+
+#: ../plugins/sort/resources/ui/gedit-sort-plugin.ui.h:4
+msgid "C_ase sensitive"
+msgstr "O_sjetljivo na velika ili mala slova"
+
+#: ../plugins/sort/resources/ui/gedit-sort-plugin.ui.h:5
+msgid "S_tart at column:"
+msgstr "K_reni od stupca:"
+
+#: ../plugins/sort/resources/ui/gedit-sort-plugin.ui.h:7
+msgid "_Sort"
+msgstr "_Razvrstaj"
+
+#: ../plugins/sort/sort.plugin.desktop.in.h:2
+msgid "Sorts a document or selected text."
+msgstr "Razvrstava dokument ili odabrani tekst."
+
+#: ../plugins/spell/gedit-spell-app-activatable.c:143
+msgid "_Check Spelling..."
+msgstr "_Provjera pravopisa..."
+
+#: ../plugins/spell/gedit-spell-app-activatable.c:147
+msgid "Set _Language..."
+msgstr "Postavi _jezik..."
+
+#: ../plugins/spell/gedit-spell-app-activatable.c:151
+msgid "_Highlight Misspelled Words"
+msgstr "_Istakni krivo napisane riječi"
+
+#. ex:set ts=8 noet:
+#: ../plugins/spell/spell.plugin.desktop.in.h:1
+msgid "Spell Checker"
+msgstr "Alat za provjeru pravopisa"
+
+#: ../plugins/spell/spell.plugin.desktop.in.h:2
+msgid "Checks the spelling of the current document."
+msgstr "Provjerava pravopis u trenuntom dokumentu."
+
+#: ../plugins/time/gedit-time-plugin.c:265
+msgid "In_sert Date and Time..."
+msgstr "Um_etni datum i vrijeme..."
+
+#: ../plugins/time/gedit-time-plugin.c:491
+msgid "Available formats"
+msgstr "Dostupni formati"
+
+#. ex:set ts=8 noet:
+#: ../plugins/time/org.gnome.gedit.plugins.time.gschema.xml.in.h:1
+msgid "Prompt Type"
+msgstr "Vrsta upita"
+
+#: ../plugins/time/org.gnome.gedit.plugins.time.gschema.xml.in.h:2
+msgid ""
+"If the user should be prompted for a format or if the selected or custom "
+"format should be used."
+msgstr ""
+"Treba li korisnika pitati za format ili će se koristiti odabrani ili "
+"prilagođeni format."
+
+#: ../plugins/time/org.gnome.gedit.plugins.time.gschema.xml.in.h:3
+msgid "Selected Format"
+msgstr "Odabrani format"
+
+#: ../plugins/time/org.gnome.gedit.plugins.time.gschema.xml.in.h:4
+msgid "The selected format used when inserting the date/time."
+msgstr "Odabrani format koji je korišten pri umetanju datuma/vremena."
+
+#: ../plugins/time/org.gnome.gedit.plugins.time.gschema.xml.in.h:5
+msgid "Custom Format"
+msgstr "Prilagođeni format"
+
+#: ../plugins/time/org.gnome.gedit.plugins.time.gschema.xml.in.h:6
+msgid "The custom format used when inserting the date/time."
+msgstr "Prilagođeni format koji je korišten pri umetanju datuma/vremena."
+
+#: ../plugins/time/resources/ui/gedit-time-dialog.ui.h:1
+msgid "Insert Date and Time"
+msgstr "Umetni datum i vrijeme"
+
+#: ../plugins/time/resources/ui/gedit-time-dialog.ui.h:2
+#: ../plugins/time/resources/ui/gedit-time-setup-dialog.ui.h:5
+msgid "Use the _selected format"
+msgstr "Koristi _odabrani format"
+
+#: ../plugins/time/resources/ui/gedit-time-dialog.ui.h:3
+#: ../plugins/time/resources/ui/gedit-time-setup-dialog.ui.h:6
+msgid "_Use custom format"
+msgstr "_Koristi prilagođeni format"
+
+#. Translators: Use the more common date format in your locale
+#: ../plugins/time/resources/ui/gedit-time-dialog.ui.h:5
+#: ../plugins/time/resources/ui/gedit-time-setup-dialog.ui.h:9
+#, no-c-format
+msgid "%d/%m/%Y %H:%M:%S"
+msgstr "%d/%m/%Y %H:%M:%S"
+
+#. Translators: This example should follow the date format defined in the entry above
+#: ../plugins/time/resources/ui/gedit-time-dialog.ui.h:6
+#: ../plugins/time/resources/ui/gedit-time-setup-dialog.ui.h:11
+msgid "01/11/2009 17:52:00"
+msgstr "01/11/2009 17:52:00"
+
+#: ../plugins/time/resources/ui/gedit-time-dialog.ui.h:9
+msgid "_Insert"
+msgstr "_Umetni"
+
+#: ../plugins/time/resources/ui/gedit-time-setup-dialog.ui.h:1
+msgid "Configure date/time plugin"
+msgstr "Podesi priključak za datum/vrijeme"
+
+#: ../plugins/time/resources/ui/gedit-time-setup-dialog.ui.h:3
+msgid "When inserting date/time..."
+msgstr "Pri umetanju datuma/vremena..."
+
+#: ../plugins/time/resources/ui/gedit-time-setup-dialog.ui.h:4
+msgid "_Prompt for a format"
+msgstr "_Upitaj za format"
+
+#: ../plugins/time/time.plugin.desktop.in.h:1
+msgid "Insert Date/Time"
+msgstr "Umetni datum/vrijeme"
+
+#: ../plugins/time/time.plugin.desktop.in.h:2
+msgid "Inserts current date and time at the cursor position."
+msgstr "Umeće trenutni datum i vrijeme na mjesto pokazivača."
