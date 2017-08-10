@@ -23,7 +23,7 @@ gtweakdir = join_paths(pythondir, 'gtweak')
 icondir = join_paths(datadir, 'icons', 'hicolor')
 schemadir = join_paths(datadir, 'glib-2.0', 'schemas')
 
-install_data('gnome-tweaks', install_dir: bindir)
+install_data('gnome-tweak-tool', install_dir: bindir)
 install_data('gnome-tweak-tool-lid-inhibitor', install_dir: libexecdir)
 
 subdir('gtweak')
