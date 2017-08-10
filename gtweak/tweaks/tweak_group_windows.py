@@ -25,7 +25,12 @@ import gettext
 from gi.repository import Gio, Gtk, GLib
 
 
-class Focus(Gtk.ListBox, Tweak):
+class Focus(GSettingsComboEnumTweak):
+    def __init__(self, **options):
+        GSettingsComboEnumTweak.__init__(self, _("Focus Mode"), "org.gnome.desktop.wm.preferences", "focus-mode")
+
+
+class NewFocusListBox(Gtk.ListBox, Tweak):
 
     def __init__(self, **options):
         Gtk.ListBox.__init__(self)
