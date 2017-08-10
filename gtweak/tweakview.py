@@ -143,10 +143,8 @@ class Window(Gtk.ApplicationWindow):
     def main_content(self):
         right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
-        #GRR why can I not put margin in the CSS of a GtkStack
         self.stack = Gtk.Stack()
         self.stack.get_style_context().add_class("main-container")
-        self.stack.props.margin = 20
 
         right_box.pack_start(self.stack, True, True, 0)
 

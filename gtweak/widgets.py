@@ -217,6 +217,7 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
                         name=options['uid'])
         self.get_style_context().add_class(
                         options.get('css_class','tweak-group'))
+        self.props.margin = 20
         self.props.vexpand = False
         self.props.valign = Gtk.Align.START
 
