@@ -302,7 +302,10 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
         self._close()
         self._dialog.destroy()
 
+Title(_("HiDPI"), "", uid="title-hidpi")
+
 depends_how = lambda x,kn: x.get_string(kn) in ("mouse", "sloppy")
+
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Windows"),
@@ -324,8 +327,6 @@ TWEAK_GROUPS = [
         ShowWindowButtons(_("Maximize"), "maximize"),
         ShowWindowButtons(_("Minimize"), "minimize"),
         PlaceWindowButtons(),
-        Title(_("HiDPI"), "", uid="title-hidpi"),
-        WindowScalingFactorTweak(),
     )
 ]
 
