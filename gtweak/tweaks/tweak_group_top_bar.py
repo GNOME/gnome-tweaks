@@ -44,23 +44,29 @@ class ApplicationMenuTweak(GetterSetterSwitchTweak):
         self._xsettings.set_shell_shows_app_menu(v)
 
         if v:
+            self.notify_logout()
             return
         val = self.settings.get_string(self.key_name)
-        (left, colon, right) = val.partition(":")
-
-        if "close" in right:
-            rsplit = right.split(",")
-            rsplit = [x for x in rsplit if x in ["minimize", "maximize", "close"]]
-            rsplit.append("appmenu")
-            rsplit.sort(key=lambda x: ["appmenu", "minimize", "maximize", "close"].index(x))
-            self.settings.set_string(self.key_name, left + colon + ",".join(rsplit))
-
+        if "appmenu" in val:
+            self.notify_logout()
+            return
         else:
-            rsplit = left.split(",")
-            rsplit = [x for x in rsplit if x in ["minimize", "maximize", "close"]]
-            rsplit.append("appmenu")
-            rsplit.sort(key=lambda x: ["close", "minimize", "maximize", "appmenu"].index(x))
-            self.settings.set_string(self.key_name, ",".join(rsplit) + colon + right)
+            (left, colon, right) = val.partition(":")
+
+            if "close" in right:
+                rsplit = right.split(",")
+                rsplit = [x for x in rsplit if x in ["minimize", "maximize", "close"]]
+                rsplit.append("appmenu")
+                rsplit.sort(key=lambda x: ["appmenu", "minimize", "maximize", "close"].index(x))
+                self.settings.set_string(self.key_name, left + colon + ",".join(rsplit))
+
+            else:
+                rsplit = left.split(",")
+                rsplit = [x for x in rsplit if x in ["minimize", "maximize", "close"]]
+                rsplit.append("appmenu")
+                rsplit.sort(key=lambda x: ["close", "minimize", "maximize", "appmenu"].index(x))
+                self.settings.set_string(self.key_name, ",".join(rsplit) + colon + right)
+        self.notify_logout()
 
 
 TWEAK_GROUPS = [
