@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-24\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-07-19 19:09+0000\n"
-"PO-Revision-Date: 2017-07-31 01:25+0200\n"
+"POT-Creation-Date: 2017-08-13 19:58+0000\n"
+"PO-Revision-Date: 2017-08-20 22:18+0200\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
@@ -20,7 +20,8 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 2.0.3\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:327
+#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:311
+#: gtweak/utils.py:327
 msgid "GNOME Tweaks"
 msgstr "GNOME prilagoditelj"
 
@@ -293,9 +294,9 @@ msgstr "Monospace"
 
 #: gtweak/tweaks/tweak_group_font.py:118
 msgid "Scaling Factor"
-msgstr "Faktor promjene veličine"
+msgstr "Razmjer promjene veličine"
 
-#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:315
+#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:318
 #: gtweak/tweaks/tweak_group_keymouse.py:61
 #: gtweak/tweaks/tweak_group_keymouse.py:197
 msgid "Disabled"
@@ -307,29 +308,9 @@ msgstr "Tipkanje"
 
 #: gtweak/tweaks/tweak_group_power.py:36
 msgid "Suspend when laptop lid is closed"
-msgstr "Suspendiraj kada je zaslon prijenosnika zatovern"
+msgstr "Suspendiraj kada je zaslon prijenosnika zatvoren"
 
-#: gtweak/tweaks/tweak_group_power.py:64 gtweak/tweaks/tweak_group_power.py:177
-msgid "Power Button Behavior"
-msgstr "Ponašanje tipke isključivanja"
-
-#: gtweak/tweaks/tweak_group_power.py:80
-msgid "Suspend"
-msgstr "Suspendiraj"
-
-#: gtweak/tweaks/tweak_group_power.py:97
-msgid "Hibernate"
-msgstr "Hiberniraj"
-
-#: gtweak/tweaks/tweak_group_power.py:114
-msgid "Power Off"
-msgstr "Isključi"
-
-#: gtweak/tweaks/tweak_group_power.py:132
-msgid "No Action"
-msgstr "Bez radnje"
-
-#: gtweak/tweaks/tweak_group_power.py:175
+#: gtweak/tweaks/tweak_group_power.py:60
 msgid "Power"
 msgstr "Energija"
 
@@ -448,13 +429,13 @@ msgid "Week Numbers"
 msgstr "Brojevi tjedana"
 
 #: gtweak/tweaks/tweak_group_windows.py:32
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:319
 msgid "Window Focus"
 msgstr "Fokusiranje prozora"
 
 #: gtweak/tweaks/tweak_group_windows.py:32
 #: gtweak/tweaks/tweak_group_windows.py:50
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:319
 msgid "Click to Focus"
 msgstr "Klikni za fokusiranje"
 
@@ -464,16 +445,18 @@ msgstr "Prozori su fokusirani kada se na njih klikne."
 
 #: gtweak/tweaks/tweak_group_windows.py:76
 msgid "Sloppy"
-msgstr ""
+msgstr "Neorganiziran"
 
 #: gtweak/tweaks/tweak_group_windows.py:78
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
 msgstr ""
+"Prozor je fokusiran kada se prelazi pokazivačem preko njega. Prozor ostaje "
+"fokusiran kada se prelazi pokazivačem po radnoj površini."
 
 #: gtweak/tweaks/tweak_group_windows.py:102
-#: gtweak/tweaks/tweak_group_windows.py:322
+#: gtweak/tweaks/tweak_group_windows.py:325
 msgid "Secondary-Click"
 msgstr "Pomoćni klik"
 
@@ -482,6 +465,8 @@ msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
 msgstr ""
+"Prozor je fokusiran kada se prelazi pokazivačem preko njega. Prijelaz "
+"pokazivačem po radnoj površini uklanja fokus iz prijašnjeg prozora."
 
 #: gtweak/tweaks/tweak_group_windows.py:185
 msgid "Placement"
@@ -527,15 +512,19 @@ msgstr "Vrati postavke"
 msgid "Keep Changes"
 msgstr "Zadrži promjene"
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:305
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: gtweak/tweaks/tweak_group_windows.py:311
 msgid "Windows"
 msgstr "Windows"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
+#: gtweak/tweaks/tweak_group_windows.py:312
 msgid "Attach Modal Dialogs"
 msgstr "Pričvrsti prozore dijaloga"
 
-#: gtweak/tweaks/tweak_group_windows.py:310
+#: gtweak/tweaks/tweak_group_windows.py:313
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -543,45 +532,41 @@ msgstr ""
 "Kada je uključeno, dijalog prozora je pričvršćen na sadržajni porozor i ne "
 "može se pomaknuti."
 
-#: gtweak/tweaks/tweak_group_windows.py:311
+#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Resize with Secondary-Click"
 msgstr "Povećaj pomoćnim klikom"
 
-#: gtweak/tweaks/tweak_group_windows.py:312
+#: gtweak/tweaks/tweak_group_windows.py:315
 msgid "Window Action Key"
 msgstr "Radnja tipke prozora"
 
-#: gtweak/tweaks/tweak_group_windows.py:318
+#: gtweak/tweaks/tweak_group_windows.py:321
 msgid "Raise Windows When Focused"
 msgstr "Uzdigni prozore pri fokusu"
 
-#: gtweak/tweaks/tweak_group_windows.py:319
+#: gtweak/tweaks/tweak_group_windows.py:322
 msgid "Titlebar Actions"
 msgstr "Radnja naslovne trake"
 
-#: gtweak/tweaks/tweak_group_windows.py:320
+#: gtweak/tweaks/tweak_group_windows.py:323
 msgid "Double-Click"
 msgstr "Dvostruki klik"
 
-#: gtweak/tweaks/tweak_group_windows.py:321
+#: gtweak/tweaks/tweak_group_windows.py:324
 msgid "Middle-Click"
 msgstr "Srednji klik"
 
-#: gtweak/tweaks/tweak_group_windows.py:323
+#: gtweak/tweaks/tweak_group_windows.py:326
 msgid "Titlebar Buttons"
 msgstr "Tipke naslovne trake"
 
-#: gtweak/tweaks/tweak_group_windows.py:324
+#: gtweak/tweaks/tweak_group_windows.py:327
 msgid "Maximize"
 msgstr "Uvećaj"
 
-#: gtweak/tweaks/tweak_group_windows.py:325
+#: gtweak/tweaks/tweak_group_windows.py:328
 msgid "Minimize"
 msgstr "Smanji"
-
-#: gtweak/tweaks/tweak_group_windows.py:327
-msgid "HiDPI"
-msgstr "HiDPI"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:34
 #: gtweak/tweaks/tweak_group_workspaces.py:52
@@ -805,26 +790,41 @@ msgstr "Vaša sesija se mora ponovno pokrenuti za primjenu promjena"
 msgid "Restart Session"
 msgstr "Ponovno pokreni sesiju"
 
-#: gtweak/widgets.py:500
+#: gtweak/widgets.py:501
 msgid "Enable dark theme for all applications"
 msgstr "Omogući tamnu temu za sve aplikacije"
 
-#: gtweak/widgets.py:501
+#: gtweak/widgets.py:502
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Omogući isticanje tamne teme za sve aplikacije u sesiji"
 
-#: gtweak/widgets.py:510
+#: gtweak/widgets.py:511
 msgid "Global Dark Theme"
 msgstr "Globalna tamna tema"
 
-#: gtweak/widgets.py:511
+#: gtweak/widgets.py:512
 msgid "Applications need to be restarted for this change to take place."
 msgstr ""
 "Aplikacija se mora ponovno pokrenuti kako bi se ova promjena primijenila."
 
-#: gtweak/widgets.py:540
+#: gtweak/widgets.py:541
 msgid "Error writing setting"
 msgstr "Greška zapisivanja postavke"
+
+#~ msgid "Power Button Behavior"
+#~ msgstr "Ponašanje tipke isključivanja"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspendiraj"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hiberniraj"
+
+#~ msgid "Power Off"
+#~ msgstr "Isključi"
+
+#~ msgid "No Action"
+#~ msgstr "Bez radnje"
 
 #~ msgid "Tweak Tool"
 #~ msgstr "Alat prilagodbe"
