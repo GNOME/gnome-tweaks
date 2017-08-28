@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: "
-"http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-09-12 23:58+0000\n"
+"https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-08-10 23:06+0000\n"
 "PO-Revision-Date: 2016-09-08 23:54+0200\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -21,21 +21,24 @@ msgstr ""
 "X-Generator: Virtaal 0.7.1\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
-#: ../gtweak/utils.py:327
-msgid "GNOME Tweak Tool"
+#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:311
+#: gtweak/utils.py:327
+#, fuzzy
+#| msgid "GNOME Tweak Tool"
+msgid "GNOME Tweaks"
 msgstr "GNOME Tilpasningsværktøj"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
-#: ../data/gnome-tweak-tool.desktop.in.h:2
+#: data/gnome-tweak-tool.appdata.xml.in:7 data/gnome-tweak-tool.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Tilpas avancerede indstillinger for GNOME 3"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
-msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+#: data/gnome-tweak-tool.appdata.xml.in:9
+#, fuzzy
+#| msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "GNOME Tweak Tool tillader ændring af avancerede GNOME-indstillinger."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
+#: data/gnome-tweak-tool.appdata.xml.in:12
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -44,623 +47,939 @@ msgstr ""
 "strømindstillinger, håndtere opstartsprogrammer samt aktivere "
 "skrivebordsikoner med mere."
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Tool"
-msgstr "Tilpasningsværktøj"
+#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:103
+msgid "Tweaks"
+msgstr "Tilpasninger"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:3
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/gnome-tweak-tool.desktop.in:6
+msgid "gnome-tweak-tool"
+msgstr ""
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/gnome-tweak-tool.desktop.in:13
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
 ""
 "Indstillinger;Avanceret;Egenskaber;Udvidelser;Skrifttyper;Tema;XKB;Tastatur;Indtastning;"
 
-#: ../data/shell.ui.h:1
+#: data/shell.ui:7
 msgid "_Reset to Defaults"
 msgstr "_Nulstil til standarder"
 
-#: ../data/shell.ui.h:2
+#: data/shell.ui:11
 msgid "Disable All Shell Extensions"
 msgstr "Deaktivér alle Shell-udvidelser"
 
-#: ../data/shell.ui.h:3
+#: data/shell.ui:17
 msgid "_About"
 msgstr "_Om"
 
-#: ../data/shell.ui.h:4
+#: data/shell.ui:21
 msgid "_Quit"
 msgstr "_Afslut"
 
-#: ../gtweak/app.py:78
+#: gtweak/app.py:80
 msgid "Reset to Defaults"
 msgstr "Nulstil til standarder"
 
-#: ../gtweak/app.py:79
+#: gtweak/app.py:81
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Nulstil alle tilpasningsindstillinger til original standardtilstand?"
 
-#: ../gtweak/app.py:98
-#, python-format
-msgid "GNOME Shell v%s (%s mode)"
-msgstr "GNOME Shell v%s (%s-tilstand)"
-
-#: ../gtweak/app.py:100
-msgid "GNOME Shell not running"
+#: gtweak/app.py:102 gtweak/app.py:104
+#, fuzzy
+#| msgid "GNOME Shell not running"
+msgid "GNOME Shell"
 msgstr "GNOME Shell kører ikke"
 
-#: ../gtweak/app.py:105
+#: gtweak/app.py:104
+#, python-format
+msgid "(%s mode)"
+msgstr ""
+
+#: gtweak/app.py:107
+#, fuzzy
+#| msgid "GNOME Shell not running"
+msgid "GNOME Shell is not running"
+msgstr "GNOME Shell kører ikke"
+
+#: gtweak/app.py:109
+msgid "GTK+"
+msgstr ""
+
+#: gtweak/app.py:116
 msgid "Homepage"
 msgstr "Hjemmeside"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Appearance"
-msgstr "Udseende"
-
-#: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
-msgid "Extensions"
-msgstr "Udvidelser"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Fonts"
-msgstr "Skrifttyper"
-
-#: ../gtweak/tweakmodel.py:31
-msgid "Power"
-msgstr "Strøm"
-
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
-msgid "Startup Applications"
-msgstr "Opstartsprogrammer"
-
-#: ../gtweak/tweakmodel.py:33
-msgid "Top Bar"
-msgstr "Toppanel"
-
-#: ../gtweak/tweakmodel.py:34
-msgid "Windows"
-msgstr "Vinduer"
-
-#: ../gtweak/tweakmodel.py:35
-msgid "Workspaces"
-msgstr "Arbejdsområder"
-
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
-msgid "Mouse"
-msgstr "Mus"
-
-#: ../gtweak/tweakmodel.py:38
-msgid "Files"
-msgstr "Filer"
-
-#: ../gtweak/tweakmodel.py:52
+#: gtweak/tweakmodel.py:43
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: ../gtweak/tweakview.py:100
-msgid "Tweaks"
-msgstr "Tilpasninger"
-
-#: ../gtweak/tweakview.py:116
-msgid "Search Tweaks..."
+#: gtweak/tweakview.py:119
+#, fuzzy
+#| msgid "Search Tweaks..."
+msgid "Search Tweaks…"
 msgstr "Søg tilpasninger …"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:22
-msgid "Icons on Desktop"
-msgstr "Ikoner på skrivebord"
+#: gtweak/tweaks/tweak_group_appearance.py:41
+#: gtweak/tweaks/tweak_group_startup.py:57
+msgid "Applications"
+msgstr "Programmer"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:25
-msgid "Desktop"
-msgstr "Skrivebord"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:27
-msgid "Computer"
-msgstr "Computer"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:28
-msgid "Home"
-msgstr "Hjem"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:29
-msgid "Network Servers"
-msgstr "Netværksservere"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:30
-msgid "Trash"
-msgstr "Papirkurv"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:31
-msgid "Mounted Volumes"
-msgstr "Monterede diskenheder"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:32
-msgid "Background"
-msgstr "Baggrund"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:33
-#: ../gtweak/tweaks/tweak_group_desktop.py:36
-msgid "Mode"
-msgstr "Tilstand"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:34
-msgid "Background Location"
-msgstr "Baggrundsplacering"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:35
-msgid "Lock Screen"
-msgstr "Lås skærm"
-
-# Så vidt jeg kan se/gætte er der tale om placeringen af ikonet eller lign.
-#
-# https://mail.gnome.org/archives/commits-list/2014-January/msg02769.html
-#
-# som linker til:
-#
-# https://bugzilla.gnome.org/show_bug.cgi?id=709877
-#: ../gtweak/tweaks/tweak_group_desktop.py:37
-msgid "Lock Screen Location"
-msgstr "Placering af lås skærm"
-
-#: ../gtweak/tweaks/tweak_group_font.py:25
-msgid "Window Titles"
-msgstr "Vinduestitler"
-
-#: ../gtweak/tweaks/tweak_group_font.py:26
-msgid "Interface"
-msgstr "Grænseflade"
-
-#: ../gtweak/tweaks/tweak_group_font.py:27
-msgid "Documents"
-msgstr "Dokumenter"
-
-#: ../gtweak/tweaks/tweak_group_font.py:28
-msgid "Monospace"
-msgstr "Fastbredde"
-
-#: ../gtweak/tweaks/tweak_group_font.py:29
-msgid "Hinting"
-msgstr "Hintning"
-
-#: ../gtweak/tweaks/tweak_group_font.py:31
-msgid "Antialiasing"
-msgstr "Udjævning"
-
-#: ../gtweak/tweaks/tweak_group_font.py:33
-msgid "Scaling Factor"
-msgstr "Skaleringsfaktor"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:65
 msgid "Icons"
 msgstr "Ikoner"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:83
+#: gtweak/tweaks/tweak_group_appearance.py:83
 msgid "Cursor"
 msgstr "Markør"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:110
-msgid "Shell theme"
+#: gtweak/tweaks/tweak_group_appearance.py:110
+#, fuzzy
+#| msgid "Shell theme"
+msgid "Shell"
 msgstr "Shell-tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Installér tilpasset- eller brugertema til gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:113
 msgid "Unknown error"
 msgstr "Ukendt fejl"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:118
 msgid "Shell not running"
 msgstr "Shell kører ikke"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:140
+#: gtweak/tweaks/tweak_group_appearance.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Shell-user-theme-udvidelse er ikke korrekt installeret"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell-user-theme-udvidelse er ikke aktiveret"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:146
 msgid "Could not list shell extensions"
 msgstr "Kunne ikke vise shell-udvidelser"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+#: gtweak/tweaks/tweak_group_appearance.py:175
 msgid "<i>Default</i>"
 msgstr "<i>Standard</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:181
+#: gtweak/tweaks/tweak_group_appearance.py:181
 msgid "Select a theme"
 msgstr "Vælg et tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:230
+#: gtweak/tweaks/tweak_group_appearance.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s-temaet blev opdateret"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:232
+#: gtweak/tweaks/tweak_group_appearance.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s-temaet blev installeret"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: gtweak/tweaks/tweak_group_appearance.py:240
 msgid "Error installing theme"
 msgstr "Fejl under installation af tema"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:245
+#: gtweak/tweaks/tweak_group_appearance.py:245
 msgid "Invalid theme"
 msgstr "Ugyldigt tema"
 
+#: gtweak/tweaks/tweak_group_appearance.py:257
+msgid "Appearance"
+msgstr "Udseende"
+
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:261
-msgid "Theme"
+#: gtweak/tweaks/tweak_group_appearance.py:261
+#, fuzzy
+#| msgid "Applications"
+msgid "Animations"
+msgstr "Programmer"
+
+#: gtweak/tweaks/tweak_group_appearance.py:262
+#, fuzzy
+#| msgid "Theme"
+msgid "Themes"
 msgstr "Tema"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:266
-msgid "Enable animations"
-msgstr "Slå animationer til"
+#: gtweak/tweaks/tweak_group_desktop.py:20
+#, fuzzy
+#| msgid "Show seconds"
+msgid "Show Icons"
+msgstr "Vis sekunder"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:55
-#: ../gtweak/tweaks/tweak_group_windows.py:143
+#: gtweak/tweaks/tweak_group_desktop.py:23
+msgid "Desktop"
+msgstr "Skrivebord"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
+msgid "Icons on Desktop"
+msgstr "Ikoner på skrivebord"
+
+#: gtweak/tweaks/tweak_group_desktop.py:26
+msgid "Home"
+msgstr "Hjem"
+
+#: gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Network Servers"
+msgstr "Netværksservere"
+
+#: gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Trash"
+msgstr "Papirkurv"
+
+#: gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Mounted Volumes"
+msgstr "Monterede diskenheder"
+
+#: gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Background"
+msgstr "Baggrund"
+
+#: gtweak/tweaks/tweak_group_desktop.py:31
+#: gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Image"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_desktop.py:32
+#: gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Adjustment"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_desktop.py:33
+msgid "Lock Screen"
+msgstr "Lås skærm"
+
+#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:35
+msgid "Hinting"
+msgstr "Hintning"
+
+#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:67
+msgid "Antialiasing"
+msgstr "Udjævning"
+
+#: gtweak/tweaks/tweak_group_font.py:44
+msgid "Full"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_font.py:50
+msgid "Medium"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_font.py:56
+msgid "Slight"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_font.py:62 gtweak/tweaks/tweak_group_font.py:87
+msgid "None"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_font.py:75
+msgid "Subpixel (for LCD screens)"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_font.py:81
+msgid "Standard (grayscale)"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_font.py:112
+msgid "Fonts"
+msgstr "Skrifttyper"
+
+#: gtweak/tweaks/tweak_group_font.py:113
+#, fuzzy
+#| msgid "Window Titles"
+msgid "Window Title"
+msgstr "Vinduestitler"
+
+#: gtweak/tweaks/tweak_group_font.py:114
+msgid "Interface"
+msgstr "Grænseflade"
+
+#: gtweak/tweaks/tweak_group_font.py:115
+#, fuzzy
+#| msgid "Documents"
+msgid "Document"
+msgstr "Dokumenter"
+
+#: gtweak/tweaks/tweak_group_font.py:116
+msgid "Monospace"
+msgstr "Fastbredde"
+
+#: gtweak/tweaks/tweak_group_font.py:118
+msgid "Scaling Factor"
+msgstr "Skaleringsfaktor"
+
+#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:318
+#: gtweak/tweaks/tweak_group_keymouse.py:61
+#: gtweak/tweaks/tweak_group_keymouse.py:197
 msgid "Disabled"
 msgstr "Deaktiveret"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:161
+#: gtweak/tweaks/tweak_group_xkb.py:179
 msgid "Typing"
 msgstr "Indtastning"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: gtweak/tweaks/tweak_group_power.py:36
+#, fuzzy
+#| msgid "When Laptop Lid is Closed"
+msgid "Suspend when laptop lid is closed"
+msgstr "Når låget på den bærbare lukkes"
+
+#: gtweak/tweaks/tweak_group_power.py:60
+msgid "Power"
+msgstr "Strøm"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:46
+#, fuzzy
+#| msgid "%s extension installed successfully"
+msgid "No Extensions Installed"
+msgstr "%s-udvidelsen blev installeret"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:53
+msgid "Browse in Software"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:116
 msgid "Extension downloading"
 msgstr "Henter udvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Error loading extension"
 msgstr "Fejl under indlæsning af udvidelse"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+#: gtweak/tweaks/tweak_group_shell_extensions.py:120
 msgid "Extension does not support shell version"
 msgstr "Udvidelse understøtter ikke shell-version"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+#: gtweak/tweaks/tweak_group_shell_extensions.py:122
 msgid "Unknown extension error"
 msgstr "Ukendt udvidelsesfejl"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:229
-msgid "Remove"
-msgstr "Fjern"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-msgid "Uninstall Extension"
-msgstr "Afinstallér udvidelse"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Vil du afinstallere udvidelsen \"%s\"?"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Updating"
 msgstr "Opdaterer"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Error"
 msgstr "Fejl"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: gtweak/tweaks/tweak_group_shell_extensions.py:194
 msgid "Update"
 msgstr "Opdatér"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
-msgid "Install Shell Extension"
-msgstr "Installér Shell-udvidelse"
+#: gtweak/tweaks/tweak_group_shell_extensions.py:236
+msgid "Extensions"
+msgstr "Udvidelser"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
-msgid "Select an extension"
-msgstr "Vælg en udvidelse"
+#: gtweak/tweaks/tweak_group_startup.py:45
+msgid "Startup applications are automatically started when you log in."
+msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
-msgid "Get more extensions"
-msgstr "Hent flere udvidelser"
+#: gtweak/tweaks/tweak_group_startup.py:46
+#: gtweak/tweaks/tweak_group_startup.py:318
+msgid "Startup Applications"
+msgstr "Opstartsprogrammer"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "%s-udvidelsen blev opdateret"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "%s-udvidelsen blev installeret"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
-msgid "Error installing extension"
-msgstr "Fejl under installation af udvidelse"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Invalid extension"
-msgstr "Ugyldig udvidelse"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:33
-msgid "Show Application Menu"
-msgstr "Vis programmenu"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:46
-msgid "Workspace Creation"
-msgstr "Oprettelse af arbejdsområde"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Dynamic"
-msgstr "Dynamisk"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Static"
-msgstr "Statisk"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:74
-msgid "Don't suspend on lid close"
-msgstr "Gå ikke i hvile når låget lukkes"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:104
-msgid "Clock"
-msgstr "Ur"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:105
-msgid "Show date"
-msgstr "Vis dato"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:106
-msgid "Show seconds"
-msgstr "Vis sekunder"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:107
-msgid "Calendar"
-msgstr "Kalender"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:108
-msgid "Show week numbers"
-msgstr "Vis ugenumre"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "When Power Button is Pressed"
-msgstr "Når der trykkes på tænd-/sluk-knappen"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:112
-msgid "Action"
-msgstr "Handling"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:113
-msgid "When Laptop Lid is Closed"
-msgstr "Når låget på den bærbare lukkes"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:114
-msgid "On Battery Power"
-msgstr "På batteristrøm"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:115
-msgid "When plugged in"
-msgstr "Ved ekstern strøm"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:116
-msgid "Suspend even if an external monitor is plugged in"
-msgstr "Gå i hviletilstand, selv når en ekstern skærm er sat til"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:121
-msgid "Number of Workspaces"
-msgstr "Antal af arbejdsområder"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:122
-msgid "Workspaces only on primary display"
-msgstr "Arbejdsområder kun på primær skærm"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Programmer"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications..."
+#: gtweak/tweaks/tweak_group_startup.py:63
+#, fuzzy
+#| msgid "Search Applications..."
+msgid "Search Applications…"
 msgstr "Søg efter programmer …"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:56
+#: gtweak/tweaks/tweak_group_startup.py:71
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:75
+#: gtweak/tweaks/tweak_group_startup.py:90
 msgid "running"
 msgstr "kører"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:85
+#: gtweak/tweaks/tweak_group_startup.py:100
 msgid "_Close"
 msgstr "_Luk"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:86
+#: gtweak/tweaks/tweak_group_startup.py:101
 msgid "_Add"
 msgstr "_Tilføj"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:253
+#: gtweak/tweaks/tweak_group_startup.py:244
+msgid "Remove"
+msgstr "Fjern"
+
+#: gtweak/tweaks/tweak_group_startup.py:268
 msgid "New startup application"
 msgstr "Nyt opstartsprogram"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:254
+#: gtweak/tweaks/tweak_group_startup.py:269
 msgid "Add a new application to be run at startup"
 msgstr "Tilføj et nyt program, der skal køres ved opstart"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:30
+#, fuzzy
+#| msgid "Show Application Menu"
+msgid "Application Menu"
+msgstr "Vis programmenu"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:67
+msgid "Top Bar"
+msgstr "Toppanel"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:69
+#, fuzzy
+#| msgid "On Battery Power"
+msgid "Battery Percentage"
+msgstr "På batteristrøm"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:70
+msgid "Clock"
+msgstr "Ur"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:71
+msgid "Date"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_top_bar.py:72
+#, fuzzy
+#| msgid "Show seconds"
+msgid "Seconds"
+msgstr "Vis sekunder"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:73
+msgid "Calendar"
+msgstr "Kalender"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:74
+#, fuzzy
+#| msgid "Show week numbers"
+msgid "Week Numbers"
+msgstr "Vis ugenumre"
+
+#: gtweak/tweaks/tweak_group_windows.py:32
+#: gtweak/tweaks/tweak_group_windows.py:319
+#, fuzzy
+#| msgid "Windows"
+msgid "Window Focus"
+msgstr "Vinduer"
+
+#: gtweak/tweaks/tweak_group_windows.py:32
+#: gtweak/tweaks/tweak_group_windows.py:50
+#: gtweak/tweaks/tweak_group_windows.py:319
+#, fuzzy
+#| msgid "Click method"
+msgid "Click to Focus"
+msgstr "Klikmetode"
+
+#: gtweak/tweaks/tweak_group_windows.py:52
+msgid "Windows are focused when they are clicked."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_windows.py:76
+msgid "Sloppy"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_windows.py:78
+msgid ""
+"Window is focused when hovered with the pointer. Windows remain focused when "
+"the desktop is hovered."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_windows.py:102
+#: gtweak/tweaks/tweak_group_windows.py:325
+#, fuzzy
+#| msgid "Secondary-click"
+msgid "Secondary-Click"
+msgstr "Sekundært klik"
+
+#: gtweak/tweaks/tweak_group_windows.py:104
+msgid ""
+"Window is focused when hovered with the pointer. Hovering the desktop "
+"removes focus from the previous window."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_windows.py:185
+msgid "Placement"
+msgstr ""
+
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:199
+msgid "Left"
+msgstr ""
+
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:205
+#, fuzzy
+#| msgid "Right super"
+msgid "Right"
+msgstr "Højre super"
+
+#: gtweak/tweaks/tweak_group_windows.py:237
 msgid "Window scaling"
 msgstr "Vinduesskalering"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: gtweak/tweaks/tweak_group_windows.py:237
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Justér GDK-vinduesskaleringsfaktor til HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:95
+#: gtweak/tweaks/tweak_group_windows.py:265
 #, python-format
 msgid "Settings will be reverted in %d second"
 msgid_plural "Settings will be reverted in %d seconds"
 msgstr[0] "Indstillingerne vil blive gendannet om %d sekund"
 msgstr[1] "Indstillingerne vil blive gendannet om %d sekunder"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:111
+#: gtweak/tweaks/tweak_group_windows.py:281
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "Vil du beholde disse HiDPI-indstillinger?"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:118
+#: gtweak/tweaks/tweak_group_windows.py:288
 msgid "Revert Settings"
 msgstr "Gendan indstillinger"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:119
+#: gtweak/tweaks/tweak_group_windows.py:289
 msgid "Keep Changes"
 msgstr "Behold ændringer"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:137
-msgid "Attached Modal Dialogs"
-msgstr "Tilføjede modale dialoger"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:138
-msgid "Automatically Raise Windows"
-msgstr "Fremhæv automatisk vinduer"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:139
-msgid "Resize with Secondary-click"
-msgstr "Tilpas størrelse med sekundært klik"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:140
-msgid "Window Action Key"
-msgstr "Handlingstast for vindue"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:144
-msgid "Focus Mode"
-msgstr "Fokustilstand"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:145
-msgid "Titlebar Actions"
-msgstr "Titelpanelets handlinger"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:146
-msgid "Double-click"
-msgstr "Dobbeltklik"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:147
-msgid "Middle-click"
-msgstr "Klik med midterste museknap"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:148
-msgid "Secondary-click"
-msgstr "Sekundært klik"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:149
-msgid "Titlebar Buttons"
-msgstr "Knapper på titelpanel"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:150
-msgid "Maximize"
-msgstr "Maksimér"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:151
-msgid "Minimize"
-msgstr "Minimér"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:152
+#: gtweak/tweaks/tweak_group_windows.py:305
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "Indsæt ved klik på midterse museknap"
+#: gtweak/tweaks/tweak_group_windows.py:311
+msgid "Windows"
+msgstr "Vinduer"
 
-#. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
-msgid "Key theme"
-msgstr "Markørtema"
+#: gtweak/tweaks/tweak_group_windows.py:312
+#, fuzzy
+#| msgid "Attached Modal Dialogs"
+msgid "Attach Modal Dialogs"
+msgstr "Tilføjede modale dialoger"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
-msgid "Keyboard and Mouse"
-msgstr "Tastatur og mus"
+#: gtweak/tweaks/tweak_group_windows.py:313
+msgid ""
+"When on, modal dialog windows are attached to their parent windows, and "
+"cannot be moved."
+msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
-msgid "Show All Input Sources"
-msgstr "Vis alle inputkilder"
+#: gtweak/tweaks/tweak_group_windows.py:314
+#, fuzzy
+#| msgid "Resize with Secondary-click"
+msgid "Resize with Secondary-Click"
+msgstr "Tilpas størrelse med sekundært klik"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
-msgid "Switch between overview and desktop"
-msgstr "Skift mellem oversigt og skrivebord"
+#: gtweak/tweaks/tweak_group_windows.py:315
+msgid "Window Action Key"
+msgstr "Handlingstast for vindue"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Left super"
-msgstr "Venstre super"
+#: gtweak/tweaks/tweak_group_windows.py:321
+msgid "Raise Windows When Focused"
+msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Right super"
+#: gtweak/tweaks/tweak_group_windows.py:322
+msgid "Titlebar Actions"
+msgstr "Titelpanelets handlinger"
+
+#: gtweak/tweaks/tweak_group_windows.py:323
+#, fuzzy
+#| msgid "Double-click"
+msgid "Double-Click"
+msgstr "Dobbeltklik"
+
+#: gtweak/tweaks/tweak_group_windows.py:324
+#, fuzzy
+#| msgid "Middle-click"
+msgid "Middle-Click"
+msgstr "Klik med midterste museknap"
+
+#: gtweak/tweaks/tweak_group_windows.py:326
+msgid "Titlebar Buttons"
+msgstr "Knapper på titelpanel"
+
+#: gtweak/tweaks/tweak_group_windows.py:327
+msgid "Maximize"
+msgstr "Maksimér"
+
+#: gtweak/tweaks/tweak_group_windows.py:328
+msgid "Minimize"
+msgstr "Minimér"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:34
+#: gtweak/tweaks/tweak_group_workspaces.py:52
+#, fuzzy
+#| msgid "Workspaces"
+msgid "Dynamic Workspaces"
+msgstr "Arbejdsområder"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:54
+msgid ""
+"Workspaces can be created on demand, and are automatically removed when "
+"empty."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_workspaces.py:78
+#, fuzzy
+#| msgid "Workspaces"
+msgid "Static Workspaces"
+msgstr "Arbejdsområder"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:80
+#, fuzzy
+#| msgid "Number of Workspaces"
+msgid "Number of workspaces is fixed."
+msgstr "Antal af arbejdsområder"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:112
+#: gtweak/tweaks/tweak_group_workspaces.py:195
+msgid "Display Handling"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_workspaces.py:112
+#: gtweak/tweaks/tweak_group_workspaces.py:157
+#, fuzzy
+#| msgid "Workspaces only on primary display"
+msgid "Workspaces span displays"
+msgstr "Arbejdsområder kun på primær skærm"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:113
+#: gtweak/tweaks/tweak_group_workspaces.py:192
+msgid "Workspaces"
+msgstr "Arbejdsområder"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:131
+#, fuzzy
+#| msgid "Workspaces only on primary display"
+msgid "Workspaces on primary display only"
+msgstr "Arbejdsområder kun på primær skærm"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:133
+msgid "Additional displays are treated as independent workspaces."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_workspaces.py:159
+msgid "The current workspace includes additional displays."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_workspaces.py:194
+msgid "Number of Workspaces"
+msgstr "Antal af arbejdsområder"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:35
+msgid "Emacs Input"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:38
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:54
+#: gtweak/tweaks/tweak_group_keymouse.py:122
+msgid "Compose Key"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:110
+#: gtweak/tweaks/tweak_group_keymouse.py:192
+msgid "Scroll Lock"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:111
+msgid "PrtScn"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:112
+msgid "Menu"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:113
+#, fuzzy
+#| msgid "Right super"
+msgid "Right Alt"
 msgstr "Højre super"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:72
-msgid "Acceleration profile"
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:114
+#, fuzzy
+#| msgid "Right super"
+msgid "Right Ctrl"
+msgstr "Højre super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:115
+#: gtweak/tweaks/tweak_group_keymouse.py:214
+#, fuzzy
+#| msgid "Right super"
+msgid "Right Super"
+msgstr "Højre super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:116
+msgid "Caps Lock"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:117
+#, fuzzy
+#| msgid "Left super"
+msgid "Left Ctrl"
+msgstr "Venstre super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Allows entering additional characters."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:140
+msgid ""
+"The compose key allows a wide variety of characters to be entered. To use "
+"it, press the compose key and then a sequence of characters.\n"
+"\n"
+"Many unusual characters can be entered by combining standard ones. For "
+"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
+"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:203
+msgid "Overview Shortcut"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:210
+#, fuzzy
+#| msgid "Left super"
+msgid "Left Super"
+msgstr "Venstre super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:237
+#: gtweak/tweaks/tweak_group_keymouse.py:245
+msgid "Additional Layout Options"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:265
+#, fuzzy
+#| msgid "Keyboard and Mouse"
+msgid "Keyboard & Mouse"
+msgstr "Tastatur og mus"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:266
+#, fuzzy
+#| msgid "Keyboard and Mouse"
+msgid "Keyboard"
+msgstr "Tastatur og mus"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:267
+#, fuzzy
+#| msgid "Show All Input Sources"
+msgid "Show Extended Input Sources"
+msgstr "Vis alle inputkilder"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:270
+msgid "Increases the choice of input sources in the Settings application."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:276
+msgid "Mouse"
+msgstr "Mus"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:277
+#, fuzzy
+#| msgid "Acceleration profile"
+msgid "Acceleration Profile"
 msgstr "Accelerationsprofil"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:76
-msgid "Show location of pointer"
-msgstr "Vis markørens placering"
+#: gtweak/tweaks/tweak_group_keymouse.py:281
+#, fuzzy
+#| msgid "Background Location"
+msgid "Pointer Location"
+msgstr "Baggrundsplacering"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:82
+#: gtweak/tweaks/tweak_group_keymouse.py:285
+msgid "Press the Ctrl key to highlight the pointer."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:286
+#, fuzzy
+#| msgid "Middle-click Paste"
+msgid "Middle Click Paste"
+msgstr "Indsæt ved klik på midterse museknap"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:290
 msgid "Touchpad"
 msgstr "Pegeplade"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:83
-msgid "Click method"
+#: gtweak/tweaks/tweak_group_keymouse.py:291
+#, fuzzy
+#| msgid "Click method"
+msgid "Click Method"
 msgstr "Klikmetode"
 
-#: ../gtweak/tweaks/tweak_wacom.py:29
+#: gtweak/tweaks/tweak_group_keymouse.py:295
+msgid "Disable While Typing"
+msgstr ""
+
+#: gtweak/tweaks/tweak_wacom.py:29
 msgid "Device"
 msgstr "Enhed"
 
-#: ../gtweak/tweaks/tweak_wacom.py:38
+#: gtweak/tweaks/tweak_wacom.py:38
 msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:72
+#: gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standard)</i>"
 
-#: ../gtweak/utils.py:329
+#: gtweak/utils.py:329
 msgid "Configuration changes require restart"
 msgstr "Konfigurationsændringer kræver genstart"
 
-#: ../gtweak/utils.py:330
+#: gtweak/utils.py:330
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Din session skal genstartes for at ændringerne træder i kraft"
 
-#: ../gtweak/utils.py:334
+#: gtweak/utils.py:334
 msgid "Restart Session"
 msgstr "Genstart session"
 
-#: ../gtweak/widgets.py:476
+#: gtweak/widgets.py:501
 msgid "Enable dark theme for all applications"
 msgstr "Aktivér mørkt tema for alle programmer"
 
-#: ../gtweak/widgets.py:477
+#: gtweak/widgets.py:502
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Aktivér det mørke tema for alle programmerne i denne session"
 
-#: ../gtweak/widgets.py:485
+#: gtweak/widgets.py:511
 msgid "Global Dark Theme"
 msgstr "Globalt mørkt tema"
 
-#: ../gtweak/widgets.py:486
-msgid "Applications need to be restarted for change to take effect"
+#: gtweak/widgets.py:512
+#, fuzzy
+#| msgid "Applications need to be restarted for change to take effect"
+msgid "Applications need to be restarted for this change to take place."
 msgstr "Programmerne skal genstartes for at ændringer træder i kraft"
 
-#: ../gtweak/widgets.py:512
+#: gtweak/widgets.py:541
 msgid "Error writing setting"
 msgstr "Fejl under skrivning af indstilling"
 
+#~ msgid "Tweak Tool"
+#~ msgstr "Tilpasningsværktøj"
+
+#~ msgid "GNOME Shell v%s (%s mode)"
+#~ msgstr "GNOME Shell v%s (%s-tilstand)"
+
+#~ msgid "Files"
+#~ msgstr "Filer"
+
+#~ msgid "Computer"
+#~ msgstr "Computer"
+
+#~ msgid "Mode"
+#~ msgstr "Tilstand"
+
+#~ # Så vidt jeg kan se/gætte er der tale om placeringen af ikonet eller lign.
+#~ #
+#~ # https://mail.gnome.org/archives/commits-list/2014-January/msg02769.html
+#~ #
+#~ # som linker til:
+#~ #
+#~ # https://bugzilla.gnome.org/show_bug.cgi?id=709877
+#~ msgid "Lock Screen Location"
+#~ msgstr "Placering af lås skærm"
+
+#~ msgid "Enable animations"
+#~ msgstr "Slå animationer til"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "Afinstallér udvidelse"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "Vil du afinstallere udvidelsen “%s”?"
+
+#~ msgid "Install Shell Extension"
+#~ msgstr "Installér Shell-udvidelse"
+
+#~ msgid "Select an extension"
+#~ msgstr "Vælg en udvidelse"
+
+#~ msgid "Get more extensions"
+#~ msgstr "Hent flere udvidelser"
+
+#~ msgid "%s extension updated successfully"
+#~ msgstr "%s-udvidelsen blev opdateret"
+
+#~ msgid "Error installing extension"
+#~ msgstr "Fejl under installation af udvidelse"
+
+#~ msgid "Invalid extension"
+#~ msgstr "Ugyldig udvidelse"
+
+#~ msgid "Workspace Creation"
+#~ msgstr "Oprettelse af arbejdsområde"
+
+#~ msgid "Dynamic"
+#~ msgstr "Dynamisk"
+
+#~ msgid "Static"
+#~ msgstr "Statisk"
+
+#~ msgid "Don't suspend on lid close"
+#~ msgstr "Gå ikke i hvile når låget lukkes"
+
+#~ msgid "Show date"
+#~ msgstr "Vis dato"
+
+#~ msgid "When Power Button is Pressed"
+#~ msgstr "Når der trykkes på tænd-/sluk-knappen"
+
+#~ msgid "Action"
+#~ msgstr "Handling"
+
+#~ msgid "When plugged in"
+#~ msgstr "Ved ekstern strøm"
+
+#~ msgid "Suspend even if an external monitor is plugged in"
+#~ msgstr "Gå i hviletilstand, selv når en ekstern skærm er sat til"
+
+#~ msgid "Automatically Raise Windows"
+#~ msgstr "Fremhæv automatisk vinduer"
+
+#~ msgid "Focus Mode"
+#~ msgstr "Fokustilstand"
+
+#~ msgid "Key theme"
+#~ msgstr "Markørtema"
+
+#~ msgid "Switch between overview and desktop"
+#~ msgstr "Skift mellem oversigt og skrivebord"
+
+#~ msgid "Show location of pointer"
+#~ msgstr "Vis markørens placering"
+
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "Om GNOME Tilpasningsværktøj"
+
 
