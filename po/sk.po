@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-06-27 22:25+0000\n"
-"PO-Revision-Date: 2017-07-13 16:16+0200\n"
+"POT-Creation-Date: 2017-08-13 19:58+0000\n"
+"PO-Revision-Date: 2017-09-02 09:57+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -17,21 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.3\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:327
-msgid "GNOME Tweak Tool"
-msgstr "Nástroj na vyladenie nastavení prostredia GNOME"
+#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:311
+#: gtweak/utils.py:327
+msgid "GNOME Tweaks"
+msgstr "Vyladenia prostredia GNOME"
 
 #: data/gnome-tweak-tool.appdata.xml.in:7 data/gnome-tweak-tool.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Vyladenie pokročilých nastavení prostredia GNOME 3"
 
 #: data/gnome-tweak-tool.appdata.xml.in:9
-msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
-"Nástroj na vyladenie nastavení pre prostredie GNOME umožňuje upravovať "
-"pokročilé voľby prostredia GNOME."
+"Aplikácia Vyladenia prostredia GNOME umožňuje upravovať pokročilé voľby "
+"prostredia GNOME."
 
 #: data/gnome-tweak-tool.appdata.xml.in:12
 msgid ""
@@ -42,9 +43,9 @@ msgstr ""
 "napájania, spravovať aplikácie spúšťané pri štarte systému, povoliť ikony na "
 "pracovnej ploche a mnoho iných nastavení."
 
-#: data/gnome-tweak-tool.desktop.in:3
-msgid "Tweak Tool"
-msgstr "Nástroj na vyladenie nastavení"
+#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:103
+msgid "Tweaks"
+msgstr "Vyladenia"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/gnome-tweak-tool.desktop.in:6
@@ -111,10 +112,6 @@ msgstr "Domovská stránka"
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
-#: gtweak/tweakview.py:103
-msgid "Tweaks"
-msgstr "Vyladenia"
-
 # placeholder text
 #: gtweak/tweakview.py:119
 msgid "Search Tweaks…"
@@ -134,7 +131,6 @@ msgid "Cursor"
 msgstr "Kurzor"
 
 #: gtweak/tweaks/tweak_group_appearance.py:110
-#| msgid "Shell theme"
 msgid "Shell"
 msgstr "Shell"
 
@@ -313,7 +309,7 @@ msgstr "Písmo s pevnou šírkou"
 msgid "Scaling Factor"
 msgstr "Faktor nastavenia mierky"
 
-#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:315
+#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:318
 #: gtweak/tweaks/tweak_group_keymouse.py:61
 #: gtweak/tweaks/tweak_group_keymouse.py:197
 msgid "Disabled"
@@ -327,27 +323,7 @@ msgstr "Písanie"
 msgid "Suspend when laptop lid is closed"
 msgstr "Uspať po zavretí krytu notebooku"
 
-#: gtweak/tweaks/tweak_group_power.py:64 gtweak/tweaks/tweak_group_power.py:177
-msgid "Power Button Behavior"
-msgstr "Správanie tlačidla napájania"
-
-#: gtweak/tweaks/tweak_group_power.py:80
-msgid "Suspend"
-msgstr "Uspať"
-
-#: gtweak/tweaks/tweak_group_power.py:97
-msgid "Hibernate"
-msgstr "Hibernovať"
-
-#: gtweak/tweaks/tweak_group_power.py:114
-msgid "Power Off"
-msgstr "Vypnúť"
-
-#: gtweak/tweaks/tweak_group_power.py:132
-msgid "No Action"
-msgstr "Žiadna akcia"
-
-#: gtweak/tweaks/tweak_group_power.py:175
+#: gtweak/tweaks/tweak_group_power.py:60
 msgid "Power"
 msgstr "Napájanie"
 
@@ -471,13 +447,13 @@ msgid "Week Numbers"
 msgstr "Čísla týždňov"
 
 #: gtweak/tweaks/tweak_group_windows.py:32
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:319
 msgid "Window Focus"
 msgstr "Zameranie okna"
 
 #: gtweak/tweaks/tweak_group_windows.py:32
 #: gtweak/tweaks/tweak_group_windows.py:50
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:319
 msgid "Click to Focus"
 msgstr "Zamerať kliknutím"
 
@@ -499,7 +475,7 @@ msgstr ""
 "zamerané po prejdení ukazovateľom ponad plochu."
 
 #: gtweak/tweaks/tweak_group_windows.py:102
-#: gtweak/tweaks/tweak_group_windows.py:322
+#: gtweak/tweaks/tweak_group_windows.py:325
 msgid "Secondary-Click"
 msgstr "Kliknutie vedľajším tlačidlom"
 
@@ -555,15 +531,19 @@ msgstr "Vrátiť nastavenia"
 msgid "Keep Changes"
 msgstr "Ponechať zmeny"
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:305
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: gtweak/tweaks/tweak_group_windows.py:311
 msgid "Windows"
 msgstr "Okná"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
+#: gtweak/tweaks/tweak_group_windows.py:312
 msgid "Attach Modal Dialogs"
 msgstr "Pripojiť modálne dialógové okná"
 
-#: gtweak/tweaks/tweak_group_windows.py:310
+#: gtweak/tweaks/tweak_group_windows.py:313
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -571,48 +551,44 @@ msgstr ""
 "Keď je voľba zapnutá, modálne dialógové okná sú pripojené k svojim "
 "rodičovským oknám a nemôžu byť odstránené."
 
-#: gtweak/tweaks/tweak_group_windows.py:311
+#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Resize with Secondary-Click"
 msgstr "Zmeniť veľkosť kliknutím vedľajšieho tlačidla"
 
 # PM: čo je to za kláves? Nemyslí sa tým akčný kláves Windows? (ten s logom windows)
 # Alebo sú to akčné klávesy pracujúce s oknom?
 # DK: suvisi to s akcnymi klavesmi okna.je tam na vyber moznost "super" a ta je spojena s windows klavesom
-#: gtweak/tweaks/tweak_group_windows.py:312
+#: gtweak/tweaks/tweak_group_windows.py:315
 msgid "Window Action Key"
 msgstr "Kláves akcie okna"
 
-#: gtweak/tweaks/tweak_group_windows.py:318
+#: gtweak/tweaks/tweak_group_windows.py:321
 msgid "Raise Windows When Focused"
 msgstr "Preniesť okná do popredia po zameraní"
 
-#: gtweak/tweaks/tweak_group_windows.py:319
+#: gtweak/tweaks/tweak_group_windows.py:322
 msgid "Titlebar Actions"
 msgstr "Akcie v titulku okna"
 
-#: gtweak/tweaks/tweak_group_windows.py:320
+#: gtweak/tweaks/tweak_group_windows.py:323
 msgid "Double-Click"
 msgstr "Dvojité kliknutie"
 
-#: gtweak/tweaks/tweak_group_windows.py:321
+#: gtweak/tweaks/tweak_group_windows.py:324
 msgid "Middle-Click"
 msgstr "Kliknutie stredným tlačidlom"
 
-#: gtweak/tweaks/tweak_group_windows.py:323
+#: gtweak/tweaks/tweak_group_windows.py:326
 msgid "Titlebar Buttons"
 msgstr "Tlačidlá v záhlaví okna"
 
-#: gtweak/tweaks/tweak_group_windows.py:324
+#: gtweak/tweaks/tweak_group_windows.py:327
 msgid "Maximize"
 msgstr "Maximalizovať"
 
-#: gtweak/tweaks/tweak_group_windows.py:325
+#: gtweak/tweaks/tweak_group_windows.py:328
 msgid "Minimize"
 msgstr "Minimalizovať"
-
-#: gtweak/tweaks/tweak_group_windows.py:327
-msgid "HiDPI"
-msgstr "HiDPI"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:34
 #: gtweak/tweaks/tweak_group_workspaces.py:52
@@ -643,7 +619,6 @@ msgstr "Ovládanie displejov"
 #: gtweak/tweaks/tweak_group_workspaces.py:112
 #: gtweak/tweaks/tweak_group_workspaces.py:157
 #, fuzzy
-#| msgid "Workspaces only on primary display"
 msgid "Workspaces span displays"
 msgstr "Pracovné priestory iba na hlavnom displeji"
 
@@ -679,7 +654,7 @@ msgstr "Nahradí klávesové skratky z editora Emacs."
 #: gtweak/tweaks/tweak_group_keymouse.py:54
 #: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Compose Key"
-msgstr ""
+msgstr "Kláves Compose"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:59
 #: gtweak/tweaks/tweak_group_keymouse.py:98
@@ -832,27 +807,45 @@ msgstr "Aby sa prejavili zmeny, musíte reštartovať vašu reláciu"
 msgid "Restart Session"
 msgstr "Reštartovať reláciu"
 
-#: gtweak/widgets.py:500
+#: gtweak/widgets.py:501
 msgid "Enable dark theme for all applications"
 msgstr "Povoliť tmavú tému pre všetky aplikácie"
 
 # description
 # PM: nehodí sa tu skôr "odporúčanie"
-#: gtweak/widgets.py:501
+#: gtweak/widgets.py:502
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Povolí radu o tmavej téme pre všetky aplikácie v relácii"
 
-#: gtweak/widgets.py:510
+#: gtweak/widgets.py:511
 msgid "Global Dark Theme"
 msgstr "Globálna tmavá téma"
 
-#: gtweak/widgets.py:511
+#: gtweak/widgets.py:512
 msgid "Applications need to be restarted for this change to take place."
 msgstr "Aby sa prejavili zmeny, musíte reštartovať aplikácie."
 
-#: gtweak/widgets.py:540
+#: gtweak/widgets.py:541
 msgid "Error writing setting"
 msgstr "Chyba pri zapisovaní nastavení"
+
+#~ msgid "Tweak Tool"
+#~ msgstr "Nástroj na vyladenie nastavení"
+
+#~ msgid "Power Button Behavior"
+#~ msgstr "Správanie tlačidla napájania"
+
+#~ msgid "Suspend"
+#~ msgstr "Uspať"
+
+#~ msgid "Hibernate"
+#~ msgstr "Hibernovať"
+
+#~ msgid "Power Off"
+#~ msgstr "Vypnúť"
+
+#~ msgid "No Action"
+#~ msgstr "Žiadna akcia"
 
 #~ msgid "GNOME Shell v%s (%s mode)"
 #~ msgstr "Shell prostredia GNOME v. %s (režim %s)"
