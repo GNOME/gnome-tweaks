@@ -85,8 +85,8 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         self._shell = shell
         state = ext.get("state")
         uuid = ext["uuid"]
-
-        self._app_id = uuid + ".shell-extension"
+        uuid = uuid.replace('@', '_')
+        self._app_id = "user/*/extensions-web/shell-extension/" + uuid + "/*"
 
         shell._settings.bind("disable-user-extensions", self,
                              "sensitive", Gio.SettingsBindFlags.INVERT_BOOLEAN)
