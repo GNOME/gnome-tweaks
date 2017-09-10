@@ -11,20 +11,19 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-08-13 19:58+0000\n"
-"PO-Revision-Date: 2017-08-18 10:49+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
+"POT-Creation-Date: 2017-09-07 07:12+0000\n"
+"PO-Revision-Date: 2017-09-10 20:27+0200\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:311
 #: gtweak/utils.py:327
-#| msgid "GNOME Tweak Tool"
 msgid "GNOME Tweaks"
 msgstr "GNOME Finomhangoló"
 
@@ -33,11 +32,9 @@ msgid "Tweak advanced GNOME 3 settings"
 msgstr "A GNOME 3 speciális beállításainak módosítása"
 
 #: data/gnome-tweak-tool.appdata.xml.in:9
-#| msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
-"A GNOME Finomhangoló lehetővé teszi speciális GNOME beállítások "
-"módosítását."
+"A GNOME Finomhangoló lehetővé teszi speciális GNOME beállítások módosítását."
 
 #: data/gnome-tweak-tool.appdata.xml.in:12
 msgid ""
@@ -404,35 +401,41 @@ msgstr "Új bejelentkezési alkalmazás"
 msgid "Add a new application to be run at startup"
 msgstr "Új, bejelentkezéskor futtatandó alkalmazás hozzáadása"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:30
+#: gtweak/tweaks/tweak_group_top_bar.py:27
+msgid "Activities Overview Hot Corner"
+msgstr "Tevékenységek áttekintés forró sarok"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:32
 msgid "Application Menu"
 msgstr "Alkalmazásmenü"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:75
 msgid "Top Bar"
 msgstr "Felső sáv"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:77
 msgid "Battery Percentage"
 msgstr "Töltöttség százalékosan"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:70
+#. Requires patch from https://bugzilla.gnome.org/688320
+#. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
+#: gtweak/tweaks/tweak_group_top_bar.py:80
 msgid "Clock"
 msgstr "Óra"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:71
+#: gtweak/tweaks/tweak_group_top_bar.py:81
 msgid "Date"
 msgstr "Dátum"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:72
+#: gtweak/tweaks/tweak_group_top_bar.py:82
 msgid "Seconds"
 msgstr "Másodperc"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:73
+#: gtweak/tweaks/tweak_group_top_bar.py:83
 msgid "Calendar"
 msgstr "Naptár"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:74
+#: gtweak/tweaks/tweak_group_top_bar.py:84
 msgid "Week Numbers"
 msgstr "Hetek száma"
 
@@ -819,77 +822,3 @@ msgstr "A változtatás életbe lépéséhez újra kell indítani az alkalmazás
 msgid "Error writing setting"
 msgstr "Hiba a beállítás írásakor"
 
-#~ msgid "Tweak Tool"
-#~ msgstr "Finomhangoló eszköz"
-
-#~| msgid "When Power Button is Pressed"
-#~ msgid "Power Button Behavior"
-#~ msgstr "Bekapcsoló gomb viselkedése"
-
-#~ msgid "Suspend"
-#~ msgstr "Felfüggesztés"
-
-#~ msgid "Hibernate"
-#~ msgstr "Hibernálás"
-
-#~| msgid "Power"
-#~ msgid "Power Off"
-#~ msgstr "Kikapcsolás"
-
-#~| msgid "Action"
-#~ msgid "No Action"
-#~ msgstr "Nincs művelet"
-
-#~ msgid "GNOME Shell v%s (%s mode)"
-#~ msgstr "GNOME Shell v%s (%s mód)"
-
-#~ msgid "Files"
-#~ msgstr "Fájlok"
-
-#~ msgid "Computer"
-#~ msgstr "Sajátgép"
-
-#~ msgid "Mode"
-#~ msgstr "Mód"
-
-#~ msgid "Lock Screen Location"
-#~ msgstr "Képernyő zárolásának helye"
-
-#~ msgid "Enable animations"
-#~ msgstr "Animáció engedélyezése"
-
-#~ msgid "Workspace Creation"
-#~ msgstr "Munkaterület-létrehozás"
-
-#~ msgid "Dynamic"
-#~ msgstr "Dinamikus"
-
-#~ msgid "Static"
-#~ msgstr "Statikus"
-
-#~ msgid "Don't suspend on lid close"
-#~ msgstr "Ne függessze fel a fedél lezárásakor"
-
-#~ msgid "Show date"
-#~ msgstr "Dátum megjelenítése"
-
-#~ msgid "When plugged in"
-#~ msgstr "Ha csatlakoztatva van"
-
-#~ msgid "Suspend even if an external monitor is plugged in"
-#~ msgstr "Felfüggesztés külső monitor csatlakoztatásakor"
-
-#~ msgid "Automatically Raise Windows"
-#~ msgstr "Ablakok előtérbe hozása automatikusan"
-
-#~ msgid "Focus Mode"
-#~ msgstr "Fókuszmód"
-
-#~ msgid "Key theme"
-#~ msgstr "Billentyűtéma"
-
-#~ msgid "Switch between overview and desktop"
-#~ msgstr "Váltás az áttekintés és az asztal között"
-
-#~ msgid "Show location of pointer"
-#~ msgstr "Mutató helyének kiemelése"
