@@ -1,5 +1,5 @@
 project('gnome-tweak-tool',
-  version: '3.25.92',
+  version: '3.26.0',
   meson_version: '>= 0.40.0'
 )
 
