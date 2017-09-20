@@ -21,20 +21,18 @@ from gi.repository import Gio, GLib, Gtk
 import gtweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak
-from gtweak.widgets import ListBoxTweakGroup, build_horizontal_sizegroup, Title, GSettingsSpinButtonTweak
+from gtweak.widgets import ListBoxTweakGroup, build_horizontal_sizegroup, Title, GSettingsSpinButtonTweak, _GSettingsTweak
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
 
-class StaticWorkspaceTweak(Gtk.ListBox, Tweak):
+class StaticWorkspaceTweak(Gtk.ListBox, _GSettingsTweak):
 
     def __init__(self, **options):
+        name = _("Dynamic Workspaces")
         Gtk.ListBox.__init__(self)
-        Tweak.__init__(self, _("Dynamic Workspaces"), "", loaded=_shell_loaded,)
-
-        self.settings = Gio.Settings("org.gnome.mutter")
-        self.key_name = "dynamic-workspaces"
+        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "dynamic-workspaces", loaded=_shell_loaded)
 
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
@@ -49,7 +47,7 @@ class StaticWorkspaceTweak(Gtk.ListBox, Tweak):
 
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
-        lbl = Gtk.Label(_("Dynamic Workspaces"), xalign=0)
+        lbl = Gtk.Label(name, xalign=0)
         lbl.props.xalign = 0.0
         desc = _("Workspaces can be created on demand, and are automatically removed when empty.")
         lbl_desc = Gtk.Label()
@@ -108,12 +106,10 @@ class StaticWorkspaceTweak(Gtk.ListBox, Tweak):
 class PrimaryWorkspaceTweak(Gtk.ListBox, Tweak):
 
     def __init__(self, **options):
+        name = _("Workspaces")
         Gtk.ListBox.__init__(self)
         Tweak.__init__(self, _("Display Handling"), _("Workspaces span displays"), loaded=_shell_loaded,)
-        name = _("Workspaces")
-
-        self.settings = Gio.Settings("org.gnome.mutter")
-        self.key_name = "workspaces-only-on-primary"
+        _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "workspaces-only-on-primary", loaded=_shell_loaded)
 
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
