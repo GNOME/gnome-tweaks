@@ -133,14 +133,14 @@ def adjust_schema_for_overrides(originalSchema, key, options):
     if (_shell is None):
         return originalSchema
 
-    if (_shell.mode == 'classic'):
-        overridesSchema = "org.gnome.shell.extensions.classic-overrides"
-        overridesFile = None
-    elif (_shell.mode == 'ubuntu'):
-        return originalSchema
-    else:
+    if (_shell.mode == 'user'):
         overridesSchema = "org.gnome.shell.overrides"
         overridesFile = "org.gnome.shell.gschema.xml"
+    elif (_shell.mode == 'classic'):
+        overridesSchema = "org.gnome.shell.extensions.classic-overrides"
+        overridesFile = None
+    else:
+        return originalSchema
 
     try:
         if (key in GSettingsSetting(overridesSchema, schema_filename=overridesFile).list_keys()):
