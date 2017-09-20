@@ -187,7 +187,7 @@ depends_how = lambda x,kn: not(x.get_boolean(kn))
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Workspaces"),
         sw,
-        GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg),
+        GSettingsSpinButtonTweak(_("Number of Workspaces"), "org.gnome.desktop.wm.preferences", "num-workspaces", depends_on = sw, depends_how=depends_how, size_group=sg, loaded=_shell_loaded),
         Title(_("Display Handling"), "", uid="title-theme", loaded=_shell_loaded),
         PrimaryWorkspaceTweak(),
     )
