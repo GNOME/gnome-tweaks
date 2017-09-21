@@ -117,6 +117,8 @@ class Window(Gtk.ApplicationWindow):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks…"))
+        if (Gtk.check_version(3, 22, 20) == None):
+            self.entry.set_input_hints(Gtk.InputHints.NO_EMOJI)
         self.entry.connect("search-changed", self._on_search)
 
         self.searchbar = Gtk.SearchBar()

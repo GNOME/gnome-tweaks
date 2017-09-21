@@ -63,6 +63,8 @@ class _AppChooser(Gtk.Dialog):
                 placeholder_text=_("Search Applications…"))
         self.entry.set_width_chars(30)
         self.entry.props.activates_default=True
+        if (Gtk.check_version(3, 22, 20) == None):
+            self.entry.set_input_hints(Gtk.InputHints.NO_EMOJI)
 
         self.searchbar = Gtk.SearchBar()
         self.searchbar.add(self.entry)
