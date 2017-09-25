@@ -1,973 +1,2334 @@
-# Galician translations for PACKAGE package.
-# Copyright (C) 2011 THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# fran <frandieguez@gnome.org>, 2011.
-# Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
+# Galician translation for flatpak.
+# Copyright (C) 2017 flatpak's COPYRIGHT HOLDER
+# This file is distributed under the same license as the flatpak package.
+# Fran Dieguez <frandieguez@gnome.org>, 2017.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-08-10 23:06+0000\n"
-"PO-Revision-Date: 2017-08-12 16:50+0200\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Galician\n"
+"Project-Id-Version: flatpak master\n"
+"Report-Msgid-Bugs-To: https://github.com/flatpak/flatpak/issues\n"
+"POT-Creation-Date: 2017-09-25 03:24+0000\n"
+"PO-Revision-Date: 2017-09-25 03:24+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Galician <gnome-gl-list@gnome.org>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
-"X-Project-Style: gnome\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:311
-#: gtweak/utils.py:327
-msgid "GNOME Tweaks"
-msgstr "Axustes de GNOME"
-
-#: data/gnome-tweak-tool.appdata.xml.in:7 data/gnome-tweak-tool.desktop.in:4
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Axustes avanzados en GNOME 3"
-
-#: data/gnome-tweak-tool.appdata.xml.in:9
-msgid "GNOME Tweaks allows adjusting advanced GNOME options."
+#: app/flatpak-builtins-add-remote.c:57
+msgid "Do nothing if the provided remote exists"
 msgstr ""
-"Axustes de GNOME permítelle realizar axustes avanzados nas opcións de GNOME."
 
-#: data/gnome-tweak-tool.appdata.xml.in:12
+#: app/flatpak-builtins-add-remote.c:58
+msgid "LOCATION specifies a configuration file, not the repo location"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:63
+msgid "Enable GPG verification"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:64
+msgid "Mark the remote as enumerate"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:65
+msgid "Mark the remote as used for dependencies"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:66
+msgid "Set a new url"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:66 app/flatpak-builtins-build-bundle.c:57
+#: app/flatpak-builtins-build-bundle.c:58
+#: app/flatpak-builtins-list-remotes.c:109
+#: app/flatpak-builtins-repo-update.c:52
+msgid "URL"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:67
+msgid "Enable the remote"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:68
+msgid "Update extra metadata from the summary file"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:73
+msgid "Disable GPG verification"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:74
+msgid "Mark the remote as don't enumerate"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:75
+msgid "Mark the remote as don't use for deps"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:76
+msgid "Set priority (default 1, higher is more prioritized)"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:76
+msgid "PRIORITY"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:77
+msgid "A nice name to use for this remote"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:77 app/flatpak-builtins-repo-update.c:53
+msgid "TITLE"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:78
+msgid "Default branch to use for this remote"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:78 app/flatpak-builtins-repo.c:153
+#: app/flatpak-builtins-repo-update.c:54 app/flatpak-builtins-run.c:54
+msgid "BRANCH"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:80 app/flatpak-builtins-build-export.c:67
+#: app/flatpak-builtins-repo-update.c:56
+msgid "Collection ID"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:80 app/flatpak-builtins-repo-update.c:56
+msgid "COLLECTION-ID"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:82
+msgid "Import GPG key from FILE (- for stdin)"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:82 app/flatpak-builtins-build-bundle.c:59
+#: app/flatpak-builtins-build.c:50 app/flatpak-builtins-build-export.c:60
+#: app/flatpak-builtins-install.c:66 app/flatpak-builtins-repo-update.c:59
+msgid "FILE"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:83
+msgid "Disable the remote"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:84
+msgid "Add OCI registry"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:312
+msgid "NAME LOCATION - Add a remote repository"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:321
+#: app/flatpak-builtins-delete-remote.c:58 app/flatpak-builtins-info.c:104
+msgid "NAME must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:324 app/flatpak-builtins-build-sign.c:71
+#: app/flatpak-builtins-repo.c:174 app/flatpak-builtins-repo-update.c:429
+msgid "LOCATION must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:327
+#: app/flatpak-builtins-build-bundle.c:473
+#: app/flatpak-builtins-build-export.c:676
+#: app/flatpak-builtins-build-import-bundle.c:182
+#: app/flatpak-builtins-build-init.c:181 app/flatpak-builtins-build-sign.c:74
+#: app/flatpak-builtins-delete-remote.c:63
+#: app/flatpak-builtins-document-export.c:102
+#: app/flatpak-builtins-document-info.c:75
+#: app/flatpak-builtins-document-list.c:70
+#: app/flatpak-builtins-document-unexport.c:67 app/flatpak-builtins-info.c:111
+#: app/flatpak-builtins-install.c:265 app/flatpak-builtins-install.c:399
+#: app/flatpak-builtins-list.c:377 app/flatpak-builtins-list-remotes.c:66
+#: app/flatpak-builtins-ls-remote.c:84 app/flatpak-builtins-make-current.c:67
+#: app/flatpak-builtins-override.c:66
+msgid "Too many arguments"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:332
+#: app/flatpak-builtins-build-export.c:692
+#, c-format
+msgid "‘%s’ is not a valid collection ID: %s"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:336
+msgid "GPG verification is required if collections are enabled"
+msgstr ""
+
+#. Do nothing
+#: app/flatpak-builtins-add-remote.c:351
+#, c-format
+msgid "Remote %s already exists"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:359
+msgid "No url specified in flatpakrepo file"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:403
+#, c-format
+msgid "Warning: Could not update extra metadata for '%s': %s\n"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:451
+msgid "NAME - Modify a remote repository"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:460
+msgid "Remote NAME must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:465
+#, c-format
+msgid "No remote %s"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:471
+#, c-format
+msgid "Updating extra metadata from remote summary for %s\n"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:474
+#, c-format
+msgid "Error updating extra metadata for '%s': %s\n"
+msgstr ""
+
+#: app/flatpak-builtins-add-remote.c:475
+#, c-format
+msgid "Could not update extra metadata for %s"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:55
+msgid "Export runtime instead of app"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:56
+msgid "Arch to bundle for"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:56
+#: app/flatpak-builtins-build-export.c:55 app/flatpak-builtins-build-init.c:49
+#: app/flatpak-builtins-build-sign.c:41 app/flatpak-builtins-info.c:48
+#: app/flatpak-builtins-install.c:56 app/flatpak-builtins-list.c:52
+#: app/flatpak-builtins-ls-remote.c:48 app/flatpak-builtins-make-current.c:38
+#: app/flatpak-builtins-run.c:52 app/flatpak-builtins-uninstall.c:44
+#: app/flatpak-builtins-update.c:53
+msgid "ARCH"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:57
+msgid "Url for repo"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:58
+msgid "Url for runtime flatpakrepo file"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:59
+msgid "Add GPG key from FILE (- for stdin)"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:60
+msgid "Export oci image instead of flatpak bundle"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:61
+msgid "GPG Key ID to sign the OCI image with"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:61
+#: app/flatpak-builtins-build-commit-from.c:55
+#: app/flatpak-builtins-build-export.c:61
+#: app/flatpak-builtins-build-import-bundle.c:46
+#: app/flatpak-builtins-build-sign.c:43 app/flatpak-builtins-repo-update.c:60
+msgid "KEY-ID"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:62
+#: app/flatpak-builtins-build-commit-from.c:56
+#: app/flatpak-builtins-build-export.c:64
+#: app/flatpak-builtins-build-import-bundle.c:47
+#: app/flatpak-builtins-build-sign.c:44 app/flatpak-builtins-repo-update.c:61
+msgid "GPG Homedir to use when looking for keyrings"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:62
+#: app/flatpak-builtins-build-commit-from.c:56
+#: app/flatpak-builtins-build-export.c:64
+#: app/flatpak-builtins-build-import-bundle.c:47
+#: app/flatpak-builtins-build-sign.c:44 app/flatpak-builtins-repo-update.c:61
+msgid "HOMEDIR"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:463
 msgid ""
-"It can install and manage themes and extensions, change power settings, "
-"manage startup applications, and enable desktop icons among other settings."
+"LOCATION FILENAME NAME [BRANCH] - Create a single file bundle from a local "
+"repository"
 msgstr ""
-"Pode instalar e xestionar temas e extensións, axustar configuracións de "
-"enerxía, xestionar os aplicativos de inicio e activar as iconas do "
-"escritorio entre outras preferencias."
 
-#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:103
-msgid "Tweaks"
-msgstr "Axustes"
+#: app/flatpak-builtins-build-bundle.c:470
+msgid "LOCATION, FILENAME and NAME must be specified"
+msgstr ""
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-tweak-tool.desktop.in:6
-msgid "gnome-tweak-tool"
-msgstr "gnome-tweak-tool"
+#: app/flatpak-builtins-build-bundle.c:488
+#: app/flatpak-builtins-build-commit-from.c:103
+#: app/flatpak-builtins-build-commit-from.c:113
+#: app/flatpak-builtins-build-import-bundle.c:191
+#, c-format
+msgid "'%s' is not a valid repository"
+msgstr ""
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-tweak-tool.desktop.in:13
+#: app/flatpak-builtins-build-bundle.c:500 app/flatpak-builtins-build-sign.c:86
+#, c-format
+msgid "'%s' is not a valid name: %s"
+msgstr ""
+
+#: app/flatpak-builtins-build-bundle.c:503
+#: app/flatpak-builtins-build-export.c:699 app/flatpak-builtins-build-sign.c:89
+#, c-format
+msgid "'%s' is not a valid branch name: %s"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:46
+msgid "Use Platform runtime rather than Sdk"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:47
+msgid "Add bind mount"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:47
+msgid "DEST=SRC"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:48
+msgid "Start build in this directory"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:48 app/flatpak-builtins-build.c:49
+#: app/flatpak-builtins-build-init.c:58
+msgid "DIR"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:49
+msgid "Where to look for custom sdk dir (defaults to 'usr')"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:50 app/flatpak-builtins-build-export.c:60
+msgid "Use alternative file for the metadata"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:51
+msgid "Kill processes when the parent process dies"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:52
+msgid "Export application homedir directory to build"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:112
+msgid "DIRECTORY [COMMAND [args...]] - Build in directory"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:135 app/flatpak-builtins-build-finish.c:526
+msgid "DIRECTORY must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:146 app/flatpak-builtins-build-export.c:721
+#, c-format
+msgid "Build directory %s not initialized, use flatpak build-init"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:165
+msgid "metadata invalid, not application or runtime"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:261
+#, c-format
+msgid "No extension point matching %s in %s"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:397
+#, c-format
+msgid "Missing '=' in bind mount option '%s'"
+msgstr ""
+
+#: app/flatpak-builtins-build.c:423 common/flatpak-run.c:5020
+msgid "Unable to start app"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:47
+msgid "Source repo dir"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:47
+msgid "SRC-REPO"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:48
+msgid "Source repo ref"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:48
+msgid "SRC-REF"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:51
+#: app/flatpak-builtins-build-export.c:53
+msgid "One line subject"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:51
+#: app/flatpak-builtins-build-export.c:53
+msgid "SUBJECT"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:52
+#: app/flatpak-builtins-build-export.c:54
+msgid "Full description"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:52
+#: app/flatpak-builtins-build-export.c:54
+msgid "BODY"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:53
+#: app/flatpak-builtins-build-export.c:57
+#: app/flatpak-builtins-build-import-bundle.c:48
+msgid "Update the appstream branch"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:54
+#: app/flatpak-builtins-build-export.c:58
+#: app/flatpak-builtins-build-import-bundle.c:49
+msgid "Don't update the summary"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:55
+#: app/flatpak-builtins-build-export.c:61
+#: app/flatpak-builtins-build-import-bundle.c:46
+#: app/flatpak-builtins-build-sign.c:43
+msgid "GPG Key ID to sign the commit with"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:78
+msgid "DST-REPO [DST-REF]... - Make a new commit based on existing commit(s)"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:85
+msgid "DST-REPO must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-build-commit-from.c:93
 msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+"If --src-repo is not specified, exactly one destination ref must be specified"
 msgstr ""
-"Preferencias;Avanzado;Configuracións;Extensións;Tipos de letra;Tema;XKB;"
-"Teclado;Escritura;"
 
-#: data/shell.ui:7
-msgid "_Reset to Defaults"
-msgstr "_Restabelecer os predeterminados"
-
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Desactivar todas as extensións do Shell"
-
-#: data/shell.ui:17
-msgid "_About"
-msgstr "_Sobre"
-
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Saír"
-
-#: gtweak/app.py:80
-msgid "Reset to Defaults"
-msgstr "Restabelecer aos predeterminados"
-
-#: gtweak/app.py:81
-msgid "Reset all tweak settings to the original default state?"
-msgstr ""
-"Restabelecer todas as configuracións de axustes ao seu estado orixinal?"
-
-#: gtweak/app.py:102 gtweak/app.py:104
-msgid "GNOME Shell"
-msgstr "GNOME Shell"
-
-#: gtweak/app.py:104
-#, python-format
-msgid "(%s mode)"
-msgstr "(modo %s)"
-
-#: gtweak/app.py:107
-msgid "GNOME Shell is not running"
-msgstr "GNOME Shell non está executándose"
-
-#: gtweak/app.py:109
-msgid "GTK+"
-msgstr "GTK+"
-
-#: gtweak/app.py:116
-msgid "Homepage"
-msgstr "Páxina web"
-
-#: gtweak/tweakmodel.py:43
-msgid "Miscellaneous"
-msgstr "Miscelánea"
-
-#: gtweak/tweakview.py:119
-msgid "Search Tweaks…"
-msgstr "Buscar axustes…"
-
-#: gtweak/tweaks/tweak_group_appearance.py:41
-#: gtweak/tweaks/tweak_group_startup.py:57
-msgid "Applications"
-msgstr "Aplicativos"
-
-#: gtweak/tweaks/tweak_group_appearance.py:65
-msgid "Icons"
-msgstr "Iconas"
-
-#: gtweak/tweaks/tweak_group_appearance.py:83
-msgid "Cursor"
-msgstr "Cursor"
-
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Shell"
-msgstr "Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Instalar temas de usuario ou personalizados para gnome-shell"
-
-#. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
-msgid "Unknown error"
-msgstr "Erro descoñecido"
-
-#: gtweak/tweaks/tweak_group_appearance.py:118
-msgid "Shell not running"
-msgstr "Non se está executando o Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:140
-msgid "Shell user-theme extension incorrectly installed"
-msgstr ""
-"Non foi posíbel instalar correctamente a extensión do tema de usuario do "
-"Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:143
-msgid "Shell user-theme extension not enabled"
-msgstr "Extensión do tema de usuario do Shell non activado"
-
-#: gtweak/tweaks/tweak_group_appearance.py:146
-msgid "Could not list shell extensions"
-msgstr "Non foi posíbel listar as extensión do Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:175
-msgid "<i>Default</i>"
-msgstr "<i>Predeterminada</i>"
-
-#: gtweak/tweaks/tweak_group_appearance.py:181
-msgid "Select a theme"
-msgstr "Seleccionar un tema"
-
-#: gtweak/tweaks/tweak_group_appearance.py:230
-#, python-format
-msgid "%s theme updated successfully"
-msgstr "Tema %s actualizado correctamente"
-
-#: gtweak/tweaks/tweak_group_appearance.py:232
-#, python-format
-msgid "%s theme installed successfully"
-msgstr "Tema %s instalado correctamente"
-
-#: gtweak/tweaks/tweak_group_appearance.py:240
-msgid "Error installing theme"
-msgstr "Produciuse un erro ao instalar o tema"
-
-#. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:245
-msgid "Invalid theme"
-msgstr "Tema non válido"
-
-#: gtweak/tweaks/tweak_group_appearance.py:257
-msgid "Appearance"
-msgstr "Aparencia"
-
-#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:261
-msgid "Animations"
-msgstr "Animacións"
-
-#: gtweak/tweaks/tweak_group_appearance.py:262
-msgid "Themes"
-msgstr "Temas"
-
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Show Icons"
-msgstr "Mostrar iconas"
-
-#: gtweak/tweaks/tweak_group_desktop.py:23
-msgid "Desktop"
-msgstr "Escritorio"
-
-#: gtweak/tweaks/tweak_group_desktop.py:24
-msgid "Icons on Desktop"
-msgstr "Iconas no escritorio"
-
-#: gtweak/tweaks/tweak_group_desktop.py:26
-msgid "Home"
-msgstr "Cartafol persoal"
-
-#: gtweak/tweaks/tweak_group_desktop.py:27
-msgid "Network Servers"
-msgstr "Servidores de rede"
-
-#: gtweak/tweaks/tweak_group_desktop.py:28
-msgid "Trash"
-msgstr "Lixo"
-
-#: gtweak/tweaks/tweak_group_desktop.py:29
-msgid "Mounted Volumes"
-msgstr "Volumes montados"
-
-#: gtweak/tweaks/tweak_group_desktop.py:30
-msgid "Background"
-msgstr "Fondo de pantalla"
-
-#: gtweak/tweaks/tweak_group_desktop.py:31
-#: gtweak/tweaks/tweak_group_desktop.py:34
-msgid "Image"
-msgstr "Imaxe"
-
-#: gtweak/tweaks/tweak_group_desktop.py:32
-#: gtweak/tweaks/tweak_group_desktop.py:35
-msgid "Adjustment"
-msgstr "Axuste"
-
-#: gtweak/tweaks/tweak_group_desktop.py:33
-msgid "Lock Screen"
-msgstr "Bloqueo de pantalla"
-
-#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:35
-msgid "Hinting"
-msgstr "Optimización"
-
-#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:67
-msgid "Antialiasing"
-msgstr "Suavizado"
-
-#: gtweak/tweaks/tweak_group_font.py:44
-msgid "Full"
-msgstr "Completo"
-
-#: gtweak/tweaks/tweak_group_font.py:50
-msgid "Medium"
-msgstr "Medio"
-
-#: gtweak/tweaks/tweak_group_font.py:56
-msgid "Slight"
-msgstr "Leve"
-
-#: gtweak/tweaks/tweak_group_font.py:62 gtweak/tweaks/tweak_group_font.py:87
-msgid "None"
-msgstr "Ningún"
-
-#: gtweak/tweaks/tweak_group_font.py:75
-msgid "Subpixel (for LCD screens)"
-msgstr "Subpíxel (para pantallas LCD)"
-
-#: gtweak/tweaks/tweak_group_font.py:81
-msgid "Standard (grayscale)"
-msgstr "Estándar (escala de grises)"
-
-#: gtweak/tweaks/tweak_group_font.py:112
-msgid "Fonts"
-msgstr "Tipos de letra"
-
-#: gtweak/tweaks/tweak_group_font.py:113
-msgid "Window Title"
-msgstr "Título da xanela"
-
-#: gtweak/tweaks/tweak_group_font.py:114
-msgid "Interface"
-msgstr "Interface"
-
-#: gtweak/tweaks/tweak_group_font.py:115
-msgid "Document"
-msgstr "Documento"
-
-#: gtweak/tweaks/tweak_group_font.py:116
-msgid "Monospace"
-msgstr "Monoespaciada"
-
-#: gtweak/tweaks/tweak_group_font.py:118
-msgid "Scaling Factor"
-msgstr "Factor de escala"
-
-#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:318
-#: gtweak/tweaks/tweak_group_keymouse.py:61
-#: gtweak/tweaks/tweak_group_keymouse.py:197
-msgid "Disabled"
-msgstr "Desactivado"
-
-#: gtweak/tweaks/tweak_group_xkb.py:179
-msgid "Typing"
-msgstr "Escritura"
-
-#: gtweak/tweaks/tweak_group_power.py:36
-msgid "Suspend when laptop lid is closed"
-msgstr "Suspender cando se peche a tapa do portátil"
-
-#: gtweak/tweaks/tweak_group_power.py:60
-msgid "Power"
-msgstr "Enerxía"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:46
-msgid "No Extensions Installed"
-msgstr "Non hai extensións instaladas"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:53
-msgid "Browse in Software"
-msgstr "Explorar en Software"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:116
-msgid "Extension downloading"
-msgstr "Descarga de extensións"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
-msgid "Error loading extension"
-msgstr "Produciuse un erro ao cargar a extensión"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
-msgid "Extension does not support shell version"
-msgstr "A extensión non é compatíbel con esta versión do Shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
-msgid "Unknown extension error"
-msgstr "Produciuse un erro descoñecido na extensión "
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:170
-msgid "Updating"
-msgstr "Actualizando"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:190
-msgid "Error"
-msgstr "Erro"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:194
-msgid "Update"
-msgstr "Actualizar"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:236
-msgid "Extensions"
-msgstr "Extensións"
-
-#: gtweak/tweaks/tweak_group_startup.py:45
-msgid "Startup applications are automatically started when you log in."
-msgstr "Os aplicativos de inicio execútanse automaticamente ao iniciar sesión."
-
-#: gtweak/tweaks/tweak_group_startup.py:46
-#: gtweak/tweaks/tweak_group_startup.py:318
-msgid "Startup Applications"
-msgstr "Aplicativos de inicio"
-
-#: gtweak/tweaks/tweak_group_startup.py:63
-msgid "Search Applications…"
-msgstr "Buscar aplicativos…"
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:71
-msgid "<primary>f"
-msgstr "<primary>f"
-
-#: gtweak/tweaks/tweak_group_startup.py:90
-msgid "running"
-msgstr "en execución"
-
-#: gtweak/tweaks/tweak_group_startup.py:100
-msgid "_Close"
-msgstr "_Pechar"
-
-#: gtweak/tweaks/tweak_group_startup.py:101
-msgid "_Add"
-msgstr "_Engadir"
-
-#: gtweak/tweaks/tweak_group_startup.py:244
-msgid "Remove"
-msgstr "Eliminar"
-
-#: gtweak/tweaks/tweak_group_startup.py:268
-msgid "New startup application"
-msgstr "Non aplicativo de inicio"
-
-#: gtweak/tweaks/tweak_group_startup.py:269
-msgid "Add a new application to be run at startup"
-msgstr "Engadir un novo aplicativo para executarse ao inicio"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:30
-msgid "Application Menu"
-msgstr "Menú de aplicativos"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:67
-msgid "Top Bar"
-msgstr "Barra superior"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:69
-msgid "Battery Percentage"
-msgstr "Porcentaxe da batería"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:70
-msgid "Clock"
-msgstr "Reloxo"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:71
-msgid "Date"
-msgstr "Data"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:72
-msgid "Seconds"
-msgstr "Segundos"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:73
-msgid "Calendar"
-msgstr "Calendario"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:74
-msgid "Week Numbers"
-msgstr "Número da semana"
-
-#: gtweak/tweaks/tweak_group_windows.py:32
-#: gtweak/tweaks/tweak_group_windows.py:319
-msgid "Window Focus"
-msgstr "Foco da xanela"
-
-#: gtweak/tweaks/tweak_group_windows.py:32
-#: gtweak/tweaks/tweak_group_windows.py:50
-#: gtweak/tweaks/tweak_group_windows.py:319
-msgid "Click to Focus"
-msgstr "Premer par enfocar"
-
-#: gtweak/tweaks/tweak_group_windows.py:52
-msgid "Windows are focused when they are clicked."
-msgstr "A xanela enfócase cando se preme."
-
-#: gtweak/tweaks/tweak_group_windows.py:76
-msgid "Sloppy"
-msgstr "Pouco riguroso"
-
-#: gtweak/tweaks/tweak_group_windows.py:78
+#: app/flatpak-builtins-build-commit-from.c:96
 msgid ""
-"Window is focused when hovered with the pointer. Windows remain focused when "
-"the desktop is hovered."
+"If --src-ref is specified, exactly one destination ref must be specified"
 msgstr ""
-"A xanela recibe o foco cando se pasa o punteiro por enriba. Manténo cando se "
-"pasa o punteiro escritorio."
 
-#: gtweak/tweaks/tweak_group_windows.py:102
-#: gtweak/tweaks/tweak_group_windows.py:325
-msgid "Secondary-Click"
-msgstr "Clic secundario"
+#: app/flatpak-builtins-build-commit-from.c:99
+msgid "Either --src-repo or --src-ref must be specified."
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:104
+#: app/flatpak-builtins-build-commit-from.c:251
+msgid "Can't commit from partial source commit."
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:55
+msgid "Architecture to export for (must be host compatible)"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:56
+msgid "Commit runtime (/usr), not /app"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:59
+msgid "Use alternative directory for the files"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:59
+msgid "SUBDIR"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:62
+msgid "Files to exclude"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:62
+#: app/flatpak-builtins-build-export.c:63
+msgid "PATTERN"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:63
+msgid "Excluded files to include"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:65
+msgid "Override the timestamp of the commit"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:65
+msgid "ISO-8601-TIMESTAMP"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:551
+#, c-format
+msgid "Invalid uri type %s, only http/https supported"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:569
+#, c-format
+msgid "Unable to find basename in %s, specify a name explicitly"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:578
+msgid "No slashes allowed in extra data name"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:590
+#, c-format
+msgid "Invalid format for sha256 checksum: '%s'"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:600
+msgid "Extra data sizes of zero not supported"
+msgstr ""
+
+#: app/flatpak-builtins-build-export.c:662
 msgid ""
-"Window is focused when hovered with the pointer. Hovering the desktop "
-"removes focus from the previous window."
+"LOCATION DIRECTORY [BRANCH] - Create a repository from a build directory"
 msgstr ""
-"A xanela enfócase ao pasar co rato por enriba. Ao pasar polo escritorio "
-"quitase o foco da anterior xanela."
 
-#: gtweak/tweaks/tweak_group_windows.py:185
-msgid "Placement"
-msgstr "Posicionamento"
+#: app/flatpak-builtins-build-export.c:670
+msgid "LOCATION and DIRECTORY must be specified"
+msgstr ""
 
-#. Translators: For RTL languages, this is the "Right" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:199
-msgid "Left"
-msgstr "Esquerda"
+#: app/flatpak-builtins-build-export.c:738
+#: app/flatpak-builtins-build-finish.c:554
+msgid "No name specified in the metadata"
+msgstr ""
 
-#. Translators: For RTL languages, this is the "Left" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:205
-msgid "Right"
-msgstr "Dereita"
+#: app/flatpak-builtins-build-finish.c:47
+msgid "Command to set"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:237
-msgid "Window scaling"
-msgstr "Escalado de xanelas"
+#: app/flatpak-builtins-build-finish.c:47 app/flatpak-builtins-run.c:53
+#: app/flatpak-main.c:146
+msgid "COMMAND"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:237
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Axustar o factor de escalado de xanelas XDK para HiDPI"
+#: app/flatpak-builtins-build-finish.c:48
+msgid "Flatpak version to require"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:265
-#, python-format
-msgid "Settings will be reverted in %d second"
-msgid_plural "Settings will be reverted in %d seconds"
-msgstr[0] "Volverase ás anteriores preferencias en %d segundo"
-msgstr[1] "Volverase ás anteriores preferencias en %d segundos"
+#: app/flatpak-builtins-build-finish.c:48
+msgid "MAJOR.MINOR.MICRO"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:281
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Desexa manter estas preferencias de HiDPI?"
+#: app/flatpak-builtins-build-finish.c:49
+msgid "Don't process exports"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:288
-msgid "Revert Settings"
-msgstr "Volver ás anteriores"
+#: app/flatpak-builtins-build-finish.c:50
+msgid "Extra data info"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:289
-msgid "Keep Changes"
-msgstr "Manter cambios"
+#: app/flatpak-builtins-build-finish.c:51
+msgid "Add extension point info"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:305
-msgid "HiDPI"
-msgstr "HiDPI"
+#: app/flatpak-builtins-build-finish.c:51
+msgid "NAME=VARIABLE[=VALUE]"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:311
-msgid "Windows"
-msgstr "Xanelas"
+#: app/flatpak-builtins-build-finish.c:52
+msgid "Change the sdk used for the app"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Attach Modal Dialogs"
-msgstr "Diálogos modais anexos"
+#: app/flatpak-builtins-build-finish.c:52
+msgid "SDK"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: app/flatpak-builtins-build-finish.c:53
+msgid "Change the runtime used for the app"
+msgstr ""
+
+#: app/flatpak-builtins-build-finish.c:53 app/flatpak-builtins-build-init.c:50
+#: app/flatpak-builtins-run.c:56
+msgid "RUNTIME"
+msgstr ""
+
+#: app/flatpak-builtins-build-finish.c:54
+msgid "Set generic metadata option"
+msgstr ""
+
+#: app/flatpak-builtins-build-finish.c:54
+msgid "GROUP=KEY[=VALUE]"
+msgstr ""
+
+#: app/flatpak-builtins-build-finish.c:431
+#, c-format
+msgid "Too few elements in --extra-data argument %s"
+msgstr ""
+
+#: app/flatpak-builtins-build-finish.c:463
+#, c-format
 msgid ""
-"When on, modal dialog windows are attached to their parent windows, and "
-"cannot be moved."
+"Too few elements in --metadata argument %s, format should be "
+"GROUP=KEY[=VALUE]]"
 msgstr ""
-"Ao estar activado, as xanelas de diálogo modais anéxanse ás súas xanelas "
-"pai, e non poden moverse."
 
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Resize with Secondary-Click"
-msgstr "Redimensionar co clic secundario"
-
-#: gtweak/tweaks/tweak_group_windows.py:315
-msgid "Window Action Key"
-msgstr "Tecla de acción da xanela"
-
-#: gtweak/tweaks/tweak_group_windows.py:321
-msgid "Raise Windows When Focused"
-msgstr "Elevar xanelas ao enfocalas"
-
-#: gtweak/tweaks/tweak_group_windows.py:322
-msgid "Titlebar Actions"
-msgstr "Accións da barra de título"
-
-#: gtweak/tweaks/tweak_group_windows.py:323
-msgid "Double-Click"
-msgstr "Duplo clic"
-
-#: gtweak/tweaks/tweak_group_windows.py:324
-msgid "Middle-Click"
-msgstr "Clic central"
-
-#: gtweak/tweaks/tweak_group_windows.py:326
-msgid "Titlebar Buttons"
-msgstr "Botóns da barra de título"
-
-#: gtweak/tweaks/tweak_group_windows.py:327
-msgid "Maximize"
-msgstr "Maximizar"
-
-#: gtweak/tweaks/tweak_group_windows.py:328
-msgid "Minimize"
-msgstr "Minimizar"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:34
-#: gtweak/tweaks/tweak_group_workspaces.py:52
-msgid "Dynamic Workspaces"
-msgstr "Espazos de traballo dinámicos"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:54
+#: app/flatpak-builtins-build-finish.c:478
+#, c-format
 msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
+"Too few elements in --extension argument %s, format should be "
+"NAME=VAR[=VALUE]"
 msgstr ""
-"Os espazos de traballo poden crearse baixo demanda, e poden eliminarse cando "
-"se baleiran."
 
-#: gtweak/tweaks/tweak_group_workspaces.py:78
-msgid "Static Workspaces"
-msgstr "Espazos de traballo estáticos"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:80
-msgid "Number of workspaces is fixed."
-msgstr "O número de espazos de traballo é fixo."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:112
-#: gtweak/tweaks/tweak_group_workspaces.py:195
-msgid "Display Handling"
-msgstr "Xestión de pantallas"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:112
-#: gtweak/tweaks/tweak_group_workspaces.py:157
-#| msgid "Workspaces only on primary display"
-msgid "Workspaces span displays"
-msgstr "Visualizacións de áreas de traballo espandidas"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-#: gtweak/tweaks/tweak_group_workspaces.py:192
-msgid "Workspaces"
-msgstr "Espazos de traballo"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:131
-msgid "Workspaces on primary display only"
-msgstr "Espazos de traballo só no monitor principal"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:133
-msgid "Additional displays are treated as independent workspaces."
+#: app/flatpak-builtins-build-finish.c:516
+msgid "DIRECTORY - Finalize a build directory"
 msgstr ""
-"As pantallas adicionais son tratadas como espazos de traballo independentes."
 
-#: gtweak/tweaks/tweak_group_workspaces.py:159
-msgid "The current workspace includes additional displays."
-msgstr "O espazo de traballo actual inclúe pantallas adicionais."
+#: app/flatpak-builtins-build-finish.c:538
+#, c-format
+msgid "Build directory %s not initialized"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_workspaces.py:194
-msgid "Number of Workspaces"
-msgstr "Número de espazos de traballo"
+#: app/flatpak-builtins-build-finish.c:559
+#, c-format
+msgid "Build directory %s already finalized"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:35
-msgid "Emacs Input"
-msgstr "Entrada Emacs"
+#: app/flatpak-builtins-build-finish.c:572
+msgid "Please review the exported files and the metadata\n"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:38
-msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr "Sobrescribe os atallos para usar as combinacións do editor Emacs."
+#: app/flatpak-builtins-build-import-bundle.c:44
+msgid "Override the ref used for the imported bundle"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:54
-#: gtweak/tweaks/tweak_group_keymouse.py:122
-msgid "Compose Key"
-msgstr "Tecla Compose"
+#: app/flatpak-builtins-build-import-bundle.c:44
+msgid "REF"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:110
-#: gtweak/tweaks/tweak_group_keymouse.py:192
-msgid "Scroll Lock"
-msgstr "Bloqueo de desprazamento"
+#: app/flatpak-builtins-build-import-bundle.c:45
+msgid "Import oci image instead of flatpak bundle"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:111
-msgid "PrtScn"
-msgstr "PrtScn"
+#: app/flatpak-builtins-build-import-bundle.c:82
+#, c-format
+msgid "Ref '%s' not found in registry"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:112
-msgid "Menu"
-msgstr "Menú"
+#: app/flatpak-builtins-build-import-bundle.c:91
+msgid "Multiple images in registry, specify a ref with --ref"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:113
-msgid "Right Alt"
-msgstr "Alt dereito"
+#: app/flatpak-builtins-build-import-bundle.c:172
+msgid "LOCATION FILENAME - Import a file bundle into a local repository"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:114
-msgid "Right Ctrl"
-msgstr "Ctrl dereito"
+#: app/flatpak-builtins-build-import-bundle.c:179
+msgid "LOCATION and FILENAME must be specified"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:115
-#: gtweak/tweaks/tweak_group_keymouse.py:214
-msgid "Right Super"
-msgstr "Super dereito"
+#: app/flatpak-builtins-build-init.c:49 app/flatpak-builtins-info.c:48
+#: app/flatpak-builtins-run.c:52
+msgid "Arch to use"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:116
-msgid "Caps Lock"
-msgstr "Bloq Maiús"
+#: app/flatpak-builtins-build-init.c:50
+msgid "Initialize var from named runtime"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:117
-#| msgid "Left super"
-msgid "Left Ctrl"
-msgstr "Ctrl esquerdo"
+#: app/flatpak-builtins-build-init.c:51
+msgid "Initialize apps from named app"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:65
-msgid "Allows entering additional characters."
-msgstr "Permítelle escribir caracteres adicionais."
+#: app/flatpak-builtins-build-init.c:51
+msgid "APP"
+msgstr ""
 
-#: gtweak/tweaks/tweak_group_keymouse.py:140
+#: app/flatpak-builtins-build-init.c:52
+msgid "Specify version for --base"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:52 app/flatpak-builtins-run.c:57
+msgid "VERSION"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:53
+msgid "Include this base extension"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:53 app/flatpak-builtins-build-init.c:57
+msgid "EXTENSION"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:54
+msgid "Initialize /usr with a writable copy of the sdk"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:55
+msgid "Specify the build type (app, runtime, extension)"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:55
+msgid "TYPE"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:56
+msgid "Add a tag"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:56
+msgid "TAG"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:57
+msgid "Include this sdk extension in /usr"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:58
+msgid "Where to store sdk (defaults to 'usr')"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:59
+msgid "Re-initialize the sdk/var"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:102
+#, c-format
+msgid "Requested extension %s is only partially installed"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:131
+#, c-format
+msgid "Requested extension %s not installed"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:171
 msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
+"DIRECTORY APPNAME SDK RUNTIME [BRANCH] - Initialize a directory for building"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:178
+msgid "RUNTIME must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:199
+#, c-format
+msgid "'%s' is not a valid build type name, use app, runtime or extension"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:205 app/flatpak-builtins-override.c:71
+#, c-format
+msgid "'%s' is not a valid application name: %s"
+msgstr ""
+
+#: app/flatpak-builtins-build-init.c:235
+#, c-format
+msgid "Build directory %s already initialized"
+msgstr ""
+
+#: app/flatpak-builtins-build-sign.c:41 app/flatpak-builtins-install.c:56
+msgid "Arch to install for"
+msgstr ""
+
+#: app/flatpak-builtins-build-sign.c:42 app/flatpak-builtins-install.c:62
+#: app/flatpak-builtins-uninstall.c:48 app/flatpak-builtins-update.c:61
+msgid "Look for runtime with the specified name"
+msgstr ""
+
+#: app/flatpak-builtins-build-sign.c:64
+msgid "LOCATION [ID [BRANCH]] - Sign an application or runtime"
+msgstr ""
+
+#: app/flatpak-builtins-build-sign.c:92
+msgid "No gpg key ids specified"
+msgstr ""
+
+#: app/flatpak-builtins-delete-remote.c:37
+msgid "Remove remote even if in use"
+msgstr ""
+
+#: app/flatpak-builtins-delete-remote.c:49
+msgid "NAME - Delete a remote repository"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:54
+msgid "Create a unique document reference"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:55
+msgid "Make the document transient for the current session"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:56
+msgid "Don't require the file to exist already"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:57
+msgid "Give the app read permissions"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:58
+msgid "Give the app write permissions"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:59
+msgid "Give the app delete permissions"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:60
+msgid "Give the app permissions to grant further permissions"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:61
+msgid "Revoke read permissions of the app"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:62
+msgid "Revoke write permissions of the app"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:63
+msgid "Revoke delete permissions of the app"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:64
+msgid "Revoke the permission to grant further permissions"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:65
+msgid "Add permissions for this app"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:65
+msgid "APPID"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:90
+msgid "FILE - Export a file to apps"
+msgstr ""
+
+#: app/flatpak-builtins-document-export.c:99
+#: app/flatpak-builtins-document-info.c:72
+#: app/flatpak-builtins-document-unexport.c:64
+msgid "FILE must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-document-info.c:63
+msgid "FILE - Get information about an exported file"
+msgstr ""
+
+#: app/flatpak-builtins-document-info.c:100
+#: app/flatpak-builtins-document-unexport.c:87
+msgid "Not exported\n"
+msgstr ""
+
+#: app/flatpak-builtins-document-list.c:56
+msgid "[APPID] - List exported files"
+msgstr ""
+
+#: app/flatpak-builtins-document-unexport.c:55
+msgid "FILE - Unexport a file to apps"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:82
+msgid ""
+"SANDBOXEDPID [COMMAND [args...]] - Run a command inside a running sandbox"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:103
+msgid "SANDBOXEDPID and COMMAND must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:109
+msgid "Not running as root, may be unable to enter namespace"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:115
+#, c-format
+msgid "Invalid pid %s"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:119
+#, c-format
+msgid "No such pid %s"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:131
+msgid "Can't read cwd"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:136
+msgid "Can't read root"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:145
+#, c-format
+msgid "Invalid %s namespace for pid %d"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:150
+#, c-format
+msgid "Invalid %s namespace for self"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:162
+#, c-format
+msgid "Can't open %s namespace: %s"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:171
+#, c-format
+msgid "Can't enter %s namespace: %s"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:177
+msgid "Can't chdir"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:180
+msgid "Can't chroot"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:227
+msgid "Can't switch gid"
+msgstr ""
+
+#: app/flatpak-builtins-enter.c:230
+msgid "Can't switch uid"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:49 app/flatpak-builtins-list.c:46
+#: app/flatpak-builtins-list-remotes.c:43
+msgid "Show user installations"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:50 app/flatpak-builtins-list.c:47
+#: app/flatpak-builtins-list-remotes.c:44
+msgid "Show system-wide installations"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:51 app/flatpak-builtins-list.c:48
+#: app/flatpak-builtins-list-remotes.c:45
+msgid "Show specific system-wide installations"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:52
+msgid "Show ref"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:53
+msgid "Show commit"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:54
+msgid "Show origin"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:55
+msgid "Show size"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:56
+msgid "Show metadata"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:57
+msgid "Show extensions"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:97
+msgid "NAME [BRANCH] - Get info about installed app and/or runtime"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:157
+msgid "ref not present in origin"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:159
+msgid "Ref:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:160 app/flatpak-builtins-info.c:270
+msgid "ID:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:161
+msgid "Arch:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:162
+msgid "Branch:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:163 app/flatpak-builtins-info.c:271
+msgid "Origin:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:166
+msgid "Active commit:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:167
+msgid "Latest commit:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:170 app/flatpak-builtins-info.c:272
+msgid "Commit:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:172
+msgid "alt-id:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:173
+msgid "Location:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:174 app/flatpak-builtins-info.c:273
+msgid "Installed size:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:179
+msgid "Runtime:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:184
+msgid "Installed subdirectories:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:269
+msgid "Extension:"
+msgstr ""
+
+#: app/flatpak-builtins-info.c:280
+msgid "Subpaths:"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:57
+msgid "Don't pull, only install from local cache"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:58 app/flatpak-builtins-update.c:57
+msgid "Don't deploy, only download to local cache"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:59
+msgid "Don't install related refs"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:60 app/flatpak-builtins-update.c:59
+msgid "Don't verify/install runtime dependencies"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:61 app/flatpak-builtins-update.c:60
+msgid "Don't use static deltas"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:63 app/flatpak-builtins-uninstall.c:49
+#: app/flatpak-builtins-update.c:62
+msgid "Look for app with the specified name"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:64
+msgid "Assume LOCATION is a .flatpak single-file bundle"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:65
+msgid "Assume LOCATION is a .flatpakref application description"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:66
+msgid "Check bundle signatures with GPG key from FILE (- for stdin)"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:67
+msgid "Only install this subpath"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:67 app/flatpak-builtins-update.c:64
+msgid "PATH"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:68 app/flatpak-builtins-update.c:65
+msgid "Automatically answer yes for all questions"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:210
+#, c-format
+msgid ""
+"This application depends on runtimes from:\n"
+"  %s\n"
+"Configure this as new remote '%s'"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:214 app/flatpak-builtins-install.c:340
+#, c-format
+msgid "Configuring %s as new remote '%s'"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:262
+msgid "Bundle filename must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:272
+msgid "Remote bundles are not supported"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:336
+#, c-format
+msgid ""
+"The remote '%s', at location %s contains additional applications.\n"
+"Do you want to install other applications from here?"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:396
+msgid "Filename or uri must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:440
+#, c-format
+msgid "Installing: %s\n"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:470
+msgid "LOCATION/REMOTE [REF...] - Install applications or runtimes"
+msgstr ""
+
+#: app/flatpak-builtins-install.c:491
+msgid "REMOTE and REF must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:49
+msgid "Show extra information"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:50
+msgid "List installed runtimes"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:51
+msgid "List installed applications"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:52
+msgid "Arch to show"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:53 app/flatpak-builtins-ls-remote.c:49
+msgid "List all refs (including locale/debug)"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:131 app/flatpak-builtins-ls-remote.c:129
+#: app/flatpak-builtins-repo.c:98
+msgid "Ref"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:134 app/flatpak-builtins-ls-remote.c:131
+msgid "Origin"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:135
+msgid "Active commit"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:136
+msgid "Latest commit"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:137 app/flatpak-builtins-ls-remote.c:133
+msgid "Installed size"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:139 app/flatpak-builtins-list-remotes.c:112
+msgid "Options"
+msgstr ""
+
+#: app/flatpak-builtins-list.c:370
+msgid " - List installed apps and/or runtimes"
+msgstr ""
+
+#: app/flatpak-builtins-list-remotes.c:46
+msgid "Show remote details"
+msgstr ""
+
+#: app/flatpak-builtins-list-remotes.c:47
+msgid "Show disabled remotes"
+msgstr ""
+
+#: app/flatpak-builtins-list-remotes.c:59
+msgid " - List remote repositories"
+msgstr ""
+
+#: app/flatpak-builtins-list-remotes.c:105
+msgid "Name"
+msgstr ""
+
+#: app/flatpak-builtins-list-remotes.c:108
+msgid "Title"
+msgstr ""
+
+#: app/flatpak-builtins-list-remotes.c:110
+msgid "Priority"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:44
+msgid "Show arches and branches"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:45
+msgid "Show only runtimes"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:46
+msgid "Show only apps"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:47
+msgid "Show only those where updates are available"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:48
+msgid "Limit to this arch (* for all)"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:74
+msgid " REMOTE - Show available runtimes and applications"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:132
+msgid "Commit"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:134
+msgid "Download size"
+msgstr ""
+
+#: app/flatpak-builtins-ls-remote.c:245
+msgid "No ref information available in repository"
+msgstr ""
+
+#: app/flatpak-builtins-make-current.c:38
+msgid "Arch to make current for"
+msgstr ""
+
+#: app/flatpak-builtins-make-current.c:57
+msgid "APP BRANCH - Make branch of application current"
+msgstr ""
+
+#: app/flatpak-builtins-make-current.c:64 app/flatpak-builtins-override.c:63
+#: app/flatpak-builtins-run.c:105
+msgid "APP must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-make-current.c:79
+msgid "BRANCH must be specified"
+msgstr ""
+
+#: app/flatpak-builtins-make-current.c:92
+#, c-format
+msgid "App %s branch %s is not installed"
+msgstr ""
+
+#: app/flatpak-builtins-override.c:53
+msgid "APP - Override settings for application"
+msgstr ""
+
+#: app/flatpak-builtins-repo.c:99
+msgid "Installed"
+msgstr ""
+
+#: app/flatpak-builtins-repo.c:100
+msgid "Download"
+msgstr ""
+
+#: app/flatpak-builtins-repo.c:151
+msgid "Print general information about the repository"
+msgstr ""
+
+#: app/flatpak-builtins-repo.c:152
+msgid "List the branches in the repository"
+msgstr ""
+
+#: app/flatpak-builtins-repo.c:153
+msgid "Print metadata for a branch"
+msgstr ""
+
+#: app/flatpak-builtins-repo.c:167
+msgid "LOCATION - Repository maintenance"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:52
+msgid "Redirect this repo to a new URL"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:53
+msgid "A nice name to use for this repository"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:54
+msgid "Default branch to use for this repository"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:57
+msgid "Permanently deploy collection ID to client remote configurations"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:59
+msgid "Import new default GPG public key from FILE"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:60
+msgid "GPG Key ID to sign the summary with"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:62
+msgid "Generate delta files"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:63
+msgid "Prune unused objects"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:64
+msgid "Only traverse DEPTH parents for each commit (default: -1=infinite)"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:64
+msgid "DEPTH"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:193
+#, c-format
+msgid "Generating delta: %s (%.10s)\n"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:195
+#, c-format
+msgid "Generating delta: %s (%.10s-%.10s)\n"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:203
+#, c-format
+msgid "Failed to generate delta %s (%.10s): "
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:206
+#, c-format
+msgid "Failed to generate delta %s (%.10s-%.10s): "
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:422
+msgid "LOCATION - Update repository metadata"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:494
+msgid "Updating appstream branch\n"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:515
+msgid "Updating summary\n"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:534
+#, c-format
+msgid "Total objects: %u\n"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:536
+msgid "No unreachable objects\n"
+msgstr ""
+
+#: app/flatpak-builtins-repo-update.c:538
+#, c-format
+msgid "Deleted %u objects, %s freed\n"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:53
+msgid "Command to run"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:54
+msgid "Branch to use"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:55
+msgid "Use development runtime"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:56
+msgid "Runtime to use"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:57
+msgid "Runtime version to use"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:58
+msgid "Log session bus calls"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:59
+msgid "Log system bus calls"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:60
+msgid "Log accessibility bus calls"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:61
+msgid "Enable file forwarding"
+msgstr ""
+
+#: app/flatpak-builtins-run.c:82
+msgid "APP [args...] - Run an app"
+msgstr ""
+
+#: app/flatpak-builtins-uninstall.c:44
+msgid "Arch to uninstall"
+msgstr ""
+
+#: app/flatpak-builtins-uninstall.c:45
+msgid "Keep ref in local repository"
+msgstr ""
+
+#: app/flatpak-builtins-uninstall.c:46
+msgid "Don't uninstall related refs"
+msgstr ""
+
+#: app/flatpak-builtins-uninstall.c:47
+msgid "Remove files even if running"
+msgstr ""
+
+#: app/flatpak-builtins-uninstall.c:69
+msgid "REF... - Uninstall an application"
+msgstr ""
+
+#: app/flatpak-builtins-uninstall.c:76
+msgid "Must specify at least one REF"
+msgstr ""
+
+#: app/flatpak-builtins-uninstall.c:129 app/flatpak-transaction.c:340
+#, c-format
+msgid "Warning: Problem looking for related refs: %s\n"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:53
+msgid "Arch to update for"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:54
+msgid "Commit to deploy"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:54
+msgid "COMMIT"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:55
+msgid "Remove old files even if running"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:56
+msgid "Don't pull, only update from local cache"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:58
+msgid "Don't update related refs"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:63
+msgid "Update appstream for remote"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:64
+msgid "Only update this subpath"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:95
+#, c-format
+msgid "Updating appstream for remote %s\n"
+msgstr ""
+
+#: app/flatpak-builtins-update.c:133
+msgid "[REF...] - Update applications or runtimes"
+msgstr ""
+
+#. translators: please keep the leading space
+#: app/flatpak-main.c:59
+msgid " Manage installed apps and runtimes"
+msgstr ""
+
+#: app/flatpak-main.c:60
+msgid "Install an application or runtime"
+msgstr ""
+
+#: app/flatpak-main.c:61
+msgid "Update an installed application or runtime"
+msgstr ""
+
+#: app/flatpak-main.c:62
+msgid "Uninstall an installed application or runtime"
+msgstr ""
+
+#: app/flatpak-main.c:63
+msgid "List installed apps and/or runtimes"
+msgstr ""
+
+#: app/flatpak-main.c:64
+msgid "Show info for installed app or runtime"
+msgstr ""
+
+#. translators: please keep the leading newline and space
+#: app/flatpak-main.c:67
+msgid ""
 "\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+" Running applications"
 msgstr ""
-"A tecla de composición permítelle introducir unha ampla variedade de "
-"caracteres. Para usala, prema a tecla de composicón seguida por <b>C</b> e "
-"<b>o</b> escribirá <b>©</b>, <b>a</b> seguida de <b>'</b> escribirá <b>á</b>.\n"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:203
-msgid "Overview Shortcut"
-msgstr "Vista xeral de atallos"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:210
-msgid "Left Super"
-msgstr "Súper esquerdo"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:237
-#: gtweak/tweaks/tweak_group_keymouse.py:245
-msgid "Additional Layout Options"
-msgstr "Opcións de disposición adicionais"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:265
-msgid "Keyboard & Mouse"
-msgstr "Teclado e rato"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:266
-msgid "Keyboard"
-msgstr "Teclado"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:267
-msgid "Show Extended Input Sources"
-msgstr "Mostrar todas as orixes de entrada estendidas"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:270
-msgid "Increases the choice of input sources in the Settings application."
+#: app/flatpak-main.c:68
+msgid "Run an application"
 msgstr ""
-"Incrementa as opcións das orixes de entrada no aplicativo Preferencias."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:276
-msgid "Mouse"
-msgstr "Rato"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:277
-msgid "Acceleration Profile"
-msgstr "Perfil de aceleración"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:281
-msgid "Pointer Location"
-msgstr "Localización do punteiro"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:285
-msgid "Press the Ctrl key to highlight the pointer."
-msgstr "Premer a tecla Ctrl para realzar o punteiro."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:286
-msgid "Middle Click Paste"
-msgstr "Pegar co botón do medio"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:290
-msgid "Touchpad"
-msgstr "Área táctil"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:291
-msgid "Click Method"
-msgstr "Método de clic"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:295
-msgid "Disable While Typing"
-msgstr "Desactivar ao escribir"
-
-#: gtweak/tweaks/tweak_wacom.py:29
-msgid "Device"
-msgstr "Dispositivo"
-
-#: gtweak/tweaks/tweak_wacom.py:38
-msgid "Wacom"
-msgstr "Wacom"
-
-#. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:72
-#, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(predeterminado)</i>"
-
-#: gtweak/utils.py:329
-msgid "Configuration changes require restart"
-msgstr "Os cambios de configuración requiren reiniciar"
-
-#: gtweak/utils.py:330
-msgid "Your session needs to be restarted for settings to take effect"
-msgstr "Debe reiniciar a sesión para que se apliquen os cambios"
-
-#: gtweak/utils.py:334
-msgid "Restart Session"
-msgstr "Reiniciar sesión"
-
-#: gtweak/widgets.py:501
-msgid "Enable dark theme for all applications"
-msgstr "Activar o tema escuro para todos os aplicativos"
-
-#: gtweak/widgets.py:502
-msgid "Enable the dark theme hint for all the applications in the session"
-msgstr "Activar a suxestión de tema escuro para todos os aplicativos na sesión"
-
-#: gtweak/widgets.py:511
-msgid "Global Dark Theme"
-msgstr "Tema escuro global"
-
-#: gtweak/widgets.py:512
-msgid "Applications need to be restarted for this change to take place."
-msgstr "Os aplicativos deben reiniciarse para que se aplique o cambio."
-
-#: gtweak/widgets.py:541
-msgid "Error writing setting"
-msgstr "Produciuse un erro ao gravar a configuración"
-
-#~| msgid "Power Button Action"
-#~ msgid "Power Button Behavior"
-#~ msgstr "Comportamento do botón de acendido"
-
-#~ msgid "Suspend"
-#~ msgstr "Suspender"
-
-#~ msgid "Hibernate"
-#~ msgstr "Hibernar"
-
-#~| msgid "Power"
-#~ msgid "Power Off"
-#~ msgstr "Apagar"
-
-#~| msgid "Action"
-#~ msgid "No Action"
-#~ msgstr "Sen acción"
-
-#~ msgid "Tweak Tool"
-#~ msgstr "Ferramenta de axustes"
-
-#~ msgid "GNOME Shell v%s (%s mode)"
-#~ msgstr "GNOME Shell v%s (modo %s)"
-
-#~ msgid "Files"
-#~ msgstr "Ficheiros"
-
-#~ msgid "Computer"
-#~ msgstr "Computador"
-
-#~ msgid "Mode"
-#~ msgstr "Modo"
-
-#~ msgid "Lock Screen Location"
-#~ msgstr "Localización do bloqueo de pantalla"
-
-#~ msgid "Shell theme"
-#~ msgstr "Tema do Shell"
-
-#~ msgid "Enable animations"
-#~ msgstr "Activar animacións"
-
-#~ msgid "Uninstall Extension"
-#~ msgstr "Desinstalar extensión"
-
-#~ msgid "Do you want to uninstall the '%s' extension?"
-#~ msgstr "Desexa desinstalar a extensión «%s»?"
-
-#~ msgid "Install Shell Extension"
-#~ msgstr "Instalar extensión do Shell"
-
-#~ msgid "Select an extension"
-#~ msgstr "Seleccionar unha extensión"
-
-#~ msgid "Get more extensions"
-#~ msgstr "Obter máis extensións"
-
-#~ msgid "%s extension updated successfully"
-#~ msgstr "Extensión %s anovada correctamente"
-
-#~ msgid "Error installing extension"
-#~ msgstr "Produciuse un erro ao instalar a extensión"
-
-#~ msgid "Invalid extension"
-#~ msgstr "Extensión non válida"
-
-#~ msgid "Workspace Creation"
-#~ msgstr "Creación de espazos de traballo"
-
-#~ msgid "Dynamic"
-#~ msgstr "Dinámico"
-
-#~ msgid "Static"
-#~ msgstr "Estáticos"
-
-#~ msgid "Don't suspend on lid close"
-#~ msgstr "Non supsender ao pechar a tapa"
-
-#~ msgid "Show date"
-#~ msgstr "Mostrar data"
-
-#~ msgid "When Power Button is Pressed"
-#~ msgstr "Ao premer o botón de acendido"
-
-#~ msgid "When plugged in"
-#~ msgstr "Ao estar enchufado"
-
-#~ msgid "Suspend even if an external monitor is plugged in"
-#~ msgstr "Suspender incluso se está conectado un monitor externo"
-
-#~ msgid "Automatically Raise Windows"
-#~ msgstr "Elevar xanelas automaticamente"
-
-#~ msgid "Focus Mode"
-#~ msgstr "Modo de enfoque"
-
-#~ msgid "Key theme"
-#~ msgstr "Tema de teclas"
-
-#~ msgid "Switch between overview and desktop"
-#~ msgstr "Troca entre vista xeral e escritorio"
-
-#~ msgid "Show location of pointer"
-#~ msgstr "Mostrar a localización do punteiro"
-
-#~ msgid "About GNOME Tweak Tool"
-#~ msgstr "Sobre Ferramenta de axustes de GNOME"
-
-#~ msgid "Add Application"
-#~ msgstr "Engadir aplicativo"
-
-#~ msgid "Window"
-#~ msgstr "Xanela"
-
-#~ msgid "Super left"
-#~ msgstr "Super esquerdo"
-
-#~ msgid "Super right"
-#~ msgstr "Super dereito"
-
-#~ msgid "_Help"
-#~ msgstr "_Axuda"
-
-#~ msgid "_About Tweak Tool"
-#~ msgstr "_Sobre Ferramenta de axustes"
-
-#~ msgid "The shell must be restarted for changes to take effect"
-#~ msgstr "Debe reiniciar o shell para que se apliquen os cambios"
-
-#~ msgid ""
-#~ "Disable gnome-shell dynamic workspace management, use static workspaces"
-#~ msgstr ""
-#~ "Desactivar a xestión dinámica de espazos de traballo de gnome-shell, usar "
-#~ "espazos de traballo estáticos"
-
-#~ msgid "welcome"
-#~ msgstr "benvido"
-
-#~ msgid "Shell Extensions"
-#~ msgstr "Extensións do Shell"
-
-#~ msgid "All"
-#~ msgstr "Todos"
-
-#~ msgid "Icon theme"
-#~ msgstr "Tema de iconas"
-
-#~ msgid "Keybinding theme"
-#~ msgstr "Tema de asociación de teclas"
-
-#~ msgid "The shell may need to be restarted to apply the theme"
-#~ msgstr "Pode que sexa necesario reiniciar GNOME-Shell para aplicar o tema"
-
-#~ msgid "File Manager"
-#~ msgstr "Xestor de ficheiros"
+#: app/flatpak-main.c:69
+msgid "Override permissions for an application"
+msgstr ""
+
+#: app/flatpak-main.c:70
+msgid "Specify default version to run"
+msgstr ""
+
+#: app/flatpak-main.c:71
+msgid "Enter the namespace of a running application"
+msgstr ""
+
+#. translators: please keep the leading newline and space
+#: app/flatpak-main.c:74
+msgid ""
+"\n"
+" Manage file access"
+msgstr ""
+
+#: app/flatpak-main.c:75
+msgid "Grant an application access to a specific file"
+msgstr ""
+
+#: app/flatpak-main.c:76
+msgid "Revoke access to a specific file"
+msgstr ""
+
+#: app/flatpak-main.c:77
+msgid "Show information about a specific file"
+msgstr ""
+
+#: app/flatpak-main.c:78
+msgid "List exported files"
+msgstr ""
+
+#. translators: please keep the leading newline and space
+#: app/flatpak-main.c:81
+msgid ""
+"\n"
+" Manage remote repositories"
+msgstr ""
+
+#: app/flatpak-main.c:82
+msgid "List all configured remotes"
+msgstr ""
+
+#: app/flatpak-main.c:83
+msgid "Add a new remote repository (by URL)"
+msgstr ""
+
+#: app/flatpak-main.c:84
+msgid "Modify properties of a configured remote"
+msgstr ""
+
+#: app/flatpak-main.c:85
+msgid "Delete a configured remote"
+msgstr ""
+
+#: app/flatpak-main.c:87
+msgid "List contents of a configured remote"
+msgstr ""
+
+#. translators: please keep the leading newline and space
+#: app/flatpak-main.c:90
+msgid ""
+"\n"
+" Build applications"
+msgstr ""
+
+#: app/flatpak-main.c:91
+msgid "Initialize a directory for building"
+msgstr ""
+
+#: app/flatpak-main.c:92
+msgid "Run a build command inside the build dir"
+msgstr ""
+
+#: app/flatpak-main.c:93
+msgid "Finish a build dir for export"
+msgstr ""
+
+#: app/flatpak-main.c:94
+msgid "Export a build dir to a repository"
+msgstr ""
+
+#: app/flatpak-main.c:95
+msgid "Create a bundle file from a build directory"
+msgstr ""
+
+#: app/flatpak-main.c:96
+msgid "Import a bundle file"
+msgstr ""
+
+#: app/flatpak-main.c:97
+msgid "Sign an application or runtime"
+msgstr ""
+
+#: app/flatpak-main.c:98
+msgid "Update the summary file in a repository"
+msgstr ""
+
+#: app/flatpak-main.c:99
+msgid "Create new commit based on existing ref"
+msgstr ""
+
+#: app/flatpak-main.c:100
+msgid "Print information about a repo"
+msgstr ""
+
+#: app/flatpak-main.c:106
+msgid "Print debug information during command processing"
+msgstr ""
+
+#: app/flatpak-main.c:107
+msgid "Print OSTree debug information during command processing"
+msgstr ""
+
+#: app/flatpak-main.c:108
+msgid "Show help options"
+msgstr ""
+
+#: app/flatpak-main.c:113
+msgid "Print version information and exit"
+msgstr ""
+
+#: app/flatpak-main.c:114
+msgid "Print default arch and exit"
+msgstr ""
+
+#: app/flatpak-main.c:115
+msgid "Print supported arches and exit"
+msgstr ""
+
+#: app/flatpak-main.c:116
+msgid "Print active gl drivers and exit"
+msgstr ""
+
+#: app/flatpak-main.c:121
+msgid "Work on user installations"
+msgstr ""
+
+#: app/flatpak-main.c:122
+msgid "Work on system-wide installations (default)"
+msgstr ""
+
+#: app/flatpak-main.c:123
+msgid "Work on a specific system-wide installation"
+msgstr ""
+
+#: app/flatpak-main.c:123
+msgid "NAME"
+msgstr ""
+
+#: app/flatpak-main.c:149
+msgid "Builtin Commands:"
+msgstr ""
+
+#: app/flatpak-main.c:367
+#, c-format
+msgid "Unknown command '%s'"
+msgstr ""
+
+#: app/flatpak-main.c:375
+msgid "No command specified"
+msgstr ""
+
+#: app/flatpak-main.c:491
+msgid "error:"
+msgstr ""
+
+#: app/flatpak-transaction.c:302
+#, c-format
+msgid "Found in remote %s, do you want to install it?"
+msgstr ""
+
+#: app/flatpak-transaction.c:307
+msgid "Found in several remotes:\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:312
+msgid "Which do you want to install (0 to abort)?"
+msgstr ""
+
+#: app/flatpak-transaction.c:402
+#, c-format
+msgid "Required runtime for %s (%s) is not installed, searching...\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:408
+#, c-format
+msgid "The required runtime %s was not found in a configured remote.\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:469 common/flatpak-dir.c:1084
+#: common/flatpak-dir.c:1395 common/flatpak-dir.c:1431
+#: common/flatpak-dir.c:1453 common/flatpak-dir.c:9896
+#: common/flatpak-utils.c:1256 common/flatpak-utils.c:1350
+#, c-format
+msgid "%s not installed"
+msgstr ""
+
+#: app/flatpak-transaction.c:475
+#, c-format
+msgid "Remote %s disabled, ignoring %s update"
+msgstr ""
+
+#: app/flatpak-transaction.c:485
+#, c-format
+msgid "%s already installed, skipping\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:529
+#, c-format
+msgid "%s needs a later flatpak version (%s)"
+msgstr ""
+
+#: app/flatpak-transaction.c:703
+msgid "install"
+msgstr ""
+
+#: app/flatpak-transaction.c:704
+#, c-format
+msgid "Installing: %s from %s\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:720
+msgid "update"
+msgstr ""
+
+#: app/flatpak-transaction.c:728
+#, c-format
+msgid "Updating: %s from %s\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:748
+#, c-format
+msgid "Now at %s.\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:754
+msgid "No updates.\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:772
+msgid "install bundle"
+msgstr ""
+
+#: app/flatpak-transaction.c:773
+#, c-format
+msgid "Installing: %s from bundle %s\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:785
+#, c-format
+msgid "Warning: Failed to %s %s: %s\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:790
+#, c-format
+msgid "Error: Failed to %s %s: %s\n"
+msgstr ""
+
+#: app/flatpak-transaction.c:795
+msgid "One or more operations failed"
+msgstr ""
+
+#: common/flatpak-dir.c:972
+#, c-format
+msgid "No overrides found for %s"
+msgstr ""
+
+#: common/flatpak-dir.c:1586
+#, c-format
+msgid "While opening repository %s: "
+msgstr ""
+
+#: common/flatpak-dir.c:1726 common/flatpak-dir.c:5063
+msgid "Can't create deploy directory"
+msgstr ""
+
+#: common/flatpak-dir.c:2406
+#, c-format
+msgid "Invalid sha256 for extra data uri %s"
+msgstr ""
+
+#: common/flatpak-dir.c:2411
+#, c-format
+msgid "Empty name for extra data uri %s"
+msgstr ""
+
+#: common/flatpak-dir.c:2418
+#, c-format
+msgid "Unsupported extra data uri %s"
+msgstr ""
+
+#: common/flatpak-dir.c:2432
+#, c-format
+msgid "Failed to load local extra-data %s: %s"
+msgstr ""
+
+#: common/flatpak-dir.c:2435
+#, c-format
+msgid "Wrong size for extra-data %s"
+msgstr ""
+
+#: common/flatpak-dir.c:2450
+#, c-format
+msgid "While downloading %s: "
+msgstr ""
+
+#: common/flatpak-dir.c:2457
+#, c-format
+msgid "Wrong size for extra data %s"
+msgstr ""
+
+#: common/flatpak-dir.c:2468
+#, c-format
+msgid "Invalid checksum for extra data %s"
+msgstr ""
+
+#: common/flatpak-dir.c:2724
+#, c-format
+msgid "%s commit %s already installed"
+msgstr ""
+
+#: common/flatpak-dir.c:3051 common/flatpak-dir.c:3365
+#, c-format
+msgid "While pulling %s from remote %s: "
+msgstr ""
+
+#: common/flatpak-dir.c:3250
+#, c-format
+msgid "Can't find %s in remote %s"
+msgstr ""
+
+#: common/flatpak-dir.c:3923
+msgid "Not enough memory"
+msgstr ""
+
+#: common/flatpak-dir.c:3942
+msgid "Failed to read from exported file"
+msgstr ""
+
+#: common/flatpak-dir.c:4133
+msgid "Error reading mimetype xml file"
+msgstr ""
+
+#: common/flatpak-dir.c:4138
+msgid "Invalid mimetype xml file"
+msgstr ""
+
+#: common/flatpak-dir.c:4680
+msgid "While getting detached metadata: "
+msgstr ""
+
+#: common/flatpak-dir.c:4698
+msgid "While creating extradir: "
+msgstr ""
+
+#: common/flatpak-dir.c:4719
+msgid "Invalid sha256 for extra data"
+msgstr ""
+
+#: common/flatpak-dir.c:4748
+msgid "Wrong size for extra data"
+msgstr ""
+
+#: common/flatpak-dir.c:4752
+msgid "Invalid checksum for extra data"
+msgstr ""
+
+#: common/flatpak-dir.c:4761
+#, c-format
+msgid "While writing extra data file '%s': "
+msgstr ""
+
+#: common/flatpak-dir.c:4945
+#, c-format
+msgid "apply_extra script failed, exit status %d"
+msgstr ""
+
+#: common/flatpak-dir.c:5022
+#, c-format
+msgid "While trying to resolve ref %s: "
+msgstr ""
+
+#: common/flatpak-dir.c:5037
+#, c-format
+msgid "%s is not available"
+msgstr ""
+
+#: common/flatpak-dir.c:5052 common/flatpak-dir.c:5390
+#: common/flatpak-dir.c:6158 common/flatpak-dir.c:6171
+#: common/flatpak-dir.c:6247
+#, c-format
+msgid "%s branch %s already installed"
+msgstr ""
+
+#: common/flatpak-dir.c:5071
+#, c-format
+msgid "Failed to read commit %s: "
+msgstr ""
+
+#: common/flatpak-dir.c:5091
+#, c-format
+msgid "While trying to checkout %s into %s: "
+msgstr ""
+
+#: common/flatpak-dir.c:5116 common/flatpak-dir.c:5147
+msgid "While trying to checkout metadata subpath: "
+msgstr ""
+
+#: common/flatpak-dir.c:5157
+msgid "While trying to remove existing extra dir: "
+msgstr ""
+
+#: common/flatpak-dir.c:5168
+msgid "While trying to apply extra data: "
+msgstr ""
+
+#: common/flatpak-dir.c:5195
+#, c-format
+msgid "Invalid deployed ref %s: "
+msgstr ""
+
+#: common/flatpak-dir.c:5202
+#, c-format
+msgid "Invalid commit ref %s: "
+msgstr ""
+
+#: common/flatpak-dir.c:5210
+#, c-format
+msgid "Deployed ref %s kind does not match commit (%s)"
+msgstr ""
+
+#: common/flatpak-dir.c:5218
+#, c-format
+msgid "Deployed ref %s name does not match commit (%s)"
+msgstr ""
+
+#: common/flatpak-dir.c:5226
+#, c-format
+msgid "Deployed ref %s arch does not match commit (%s)"
+msgstr ""
+
+#: common/flatpak-dir.c:5232
+#, c-format
+msgid "Deployed ref %s branch does not match commit (%s)"
+msgstr ""
+
+#: common/flatpak-dir.c:5238
+#, c-format
+msgid "Deployed ref %s does not match commit (%s)"
+msgstr ""
+
+#: common/flatpak-dir.c:5257
+msgid "Deployed metadata does not match commit"
+msgstr ""
+
+#: common/flatpak-dir.c:6019
+#, c-format
+msgid "This version of %s is already installed"
+msgstr ""
+
+#: common/flatpak-dir.c:6026
+msgid "Can't change remote during bundle install"
+msgstr ""
+
+#: common/flatpak-dir.c:6569
+#, c-format
+msgid "%s branch %s is not installed"
+msgstr ""
+
+#: common/flatpak-dir.c:6813
+#, c-format
+msgid "%s branch %s not installed"
+msgstr ""
+
+#: common/flatpak-dir.c:7696
+#, c-format
+msgid "Nothing matches %s"
+msgstr ""
+
+#: common/flatpak-dir.c:7773
+#, c-format
+msgid "Can't find ref %s%s%s%s%s"
+msgstr ""
+
+#: common/flatpak-dir.c:7815
+#, c-format
+msgid "Error searching remote %s: %s"
+msgstr ""
+
+#: common/flatpak-dir.c:7860
+#, c-format
+msgid "Error searching local repository: %s"
+msgstr ""
+
+#: common/flatpak-dir.c:7981
+#, c-format
+msgid "%s %s not installed"
+msgstr ""
+
+#: common/flatpak-dir.c:8054
+#, c-format
+msgid "Could not find installation %s"
+msgstr ""
+
+#: common/flatpak-dir.c:8583
+#, c-format
+msgid "Runtime %s, branch %s is already installed"
+msgstr ""
+
+#: common/flatpak-dir.c:8584
+#, c-format
+msgid "App %s, branch %s is already installed"
+msgstr ""
+
+#: common/flatpak-dir.c:9043
+msgid "Remote title not set"
+msgstr ""
+
+#: common/flatpak-dir.c:9065
+msgid "Remote default-branch not set"
+msgstr ""
+
+#: common/flatpak-dir.c:9559
+msgid "No flatpak cache in remote summary"
+msgstr ""
+
+#: common/flatpak-dir.c:9569
+#, c-format
+msgid "No entry for %s in remote summary flatpak cache "
+msgstr ""
+
+#: common/flatpak-run.c:257
+#, c-format
+msgid "Unknown share type %s, valid types are: %s"
+msgstr ""
+
+#: common/flatpak-run.c:292
+#, c-format
+msgid "Unknown policy type %s, valid types are: %s"
+msgstr ""
+
+#: common/flatpak-run.c:330
+#, c-format
+msgid "Invalid dbus name %s\n"
+msgstr ""
+
+#: common/flatpak-run.c:343
+#, c-format
+msgid "Unknown socket type %s, valid types are: %s"
+msgstr ""
+
+#: common/flatpak-run.c:372
+#, c-format
+msgid "Unknown device type %s, valid types are: %s"
+msgstr ""
+
+#: common/flatpak-run.c:400
+#, c-format
+msgid "Unknown feature type %s, valid types are: %s"
+msgstr ""
+
+#: common/flatpak-run.c:773
+#, c-format
+msgid ""
+"Unknown filesystem location %s, valid locations are: host, home, xdg-"
+"*[/...], ~/dir, /dir"
+msgstr ""
+
+#: common/flatpak-run.c:1039
+#, c-format
+msgid "Invalid env format %s"
+msgstr ""
+
+#: common/flatpak-run.c:1179
+msgid "Share with host"
+msgstr ""
+
+#: common/flatpak-run.c:1179 common/flatpak-run.c:1180
+msgid "SHARE"
+msgstr ""
+
+#: common/flatpak-run.c:1180
+msgid "Unshare with host"
+msgstr ""
+
+#: common/flatpak-run.c:1181
+msgid "Expose socket to app"
+msgstr ""
+
+#: common/flatpak-run.c:1181 common/flatpak-run.c:1182
+msgid "SOCKET"
+msgstr ""
+
+#: common/flatpak-run.c:1182
+msgid "Don't expose socket to app"
+msgstr ""
+
+#: common/flatpak-run.c:1183
+msgid "Expose device to app"
+msgstr ""
+
+#: common/flatpak-run.c:1183 common/flatpak-run.c:1184
+msgid "DEVICE"
+msgstr ""
+
+#: common/flatpak-run.c:1184
+msgid "Don't expose device to app"
+msgstr ""
+
+#: common/flatpak-run.c:1185
+msgid "Allow feature"
+msgstr ""
+
+#: common/flatpak-run.c:1185 common/flatpak-run.c:1186
+msgid "FEATURE"
+msgstr ""
+
+#: common/flatpak-run.c:1186
+msgid "Don't allow feature"
+msgstr ""
+
+#: common/flatpak-run.c:1187
+msgid "Expose filesystem to app (:ro for read-only)"
+msgstr ""
+
+#: common/flatpak-run.c:1187
+msgid "FILESYSTEM[:ro]"
+msgstr ""
+
+#: common/flatpak-run.c:1188
+msgid "Don't expose filesystem to app"
+msgstr ""
+
+#: common/flatpak-run.c:1188
+msgid "FILESYSTEM"
+msgstr ""
+
+#: common/flatpak-run.c:1189
+msgid "Set environment variable"
+msgstr ""
+
+#: common/flatpak-run.c:1189
+msgid "VAR=VALUE"
+msgstr ""
+
+#: common/flatpak-run.c:1190
+msgid "Allow app to own name on the session bus"
+msgstr ""
+
+#: common/flatpak-run.c:1190 common/flatpak-run.c:1191
+#: common/flatpak-run.c:1192 common/flatpak-run.c:1193
+msgid "DBUS_NAME"
+msgstr ""
+
+#: common/flatpak-run.c:1191
+msgid "Allow app to talk to name on the session bus"
+msgstr ""
+
+#: common/flatpak-run.c:1192
+msgid "Allow app to own name on the system bus"
+msgstr ""
+
+#: common/flatpak-run.c:1193
+msgid "Allow app to talk to name on the system bus"
+msgstr ""
+
+#: common/flatpak-run.c:1194
+msgid "Add generic policy option"
+msgstr ""
+
+#: common/flatpak-run.c:1194 common/flatpak-run.c:1195
+msgid "SUBSYSTEM.KEY=VALUE"
+msgstr ""
+
+#: common/flatpak-run.c:1195
+msgid "Remove generic policy option"
+msgstr ""
+
+#: common/flatpak-run.c:1196
+msgid "Persist home directory"
+msgstr ""
+
+#: common/flatpak-run.c:1196
+msgid "FILENAME"
+msgstr ""
+
+#. This is not needed/used anymore, so hidden, but we accept it for backwards compat
+#: common/flatpak-run.c:1198
+msgid "Don't require a running session (no cgroups creation)"
+msgstr ""
+
+#: common/flatpak-run.c:1882
+msgid "Failed to create temporary file"
+msgstr ""
+
+#: common/flatpak-run.c:1889
+msgid "Failed to unlink temporary file"
+msgstr ""
+
+#: common/flatpak-run.c:1907
+msgid "Failed to write to temporary file"
+msgstr ""
+
+#: common/flatpak-run.c:3642
+#, c-format
+msgid "Failed to open flatpak-info temp file: %s"
+msgstr ""
+
+#: common/flatpak-run.c:3704 common/flatpak-run.c:3714
+#, c-format
+msgid "Failed to open temp file: %s"
+msgstr ""
+
+#: common/flatpak-run.c:4064
+msgid "Unable to create sync pipe"
+msgstr ""
+
+#: common/flatpak-run.c:4091
+#, c-format
+msgid "Failed to open app info file: %s"
+msgstr ""
+
+#: common/flatpak-run.c:4121
+msgid "Failed to sync with dbus proxy"
+msgstr ""
+
+#: common/flatpak-utils.c:2815
+msgid "No extra data sources"
+msgstr ""
+
+#. SECURITY:
+#. - Normal users do not need authentication to install signed applications
+#. from signed repositories, as this cannot exploit a system.
+#. - Paranoid users (or parents!) can change this to 'auth_admin' or
+#. 'auth_admin_keep'.
+#: system-helper/org.freedesktop.Flatpak.policy.in:23
+msgid "Install signed application"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:24
+#: system-helper/org.freedesktop.Flatpak.policy.in:41
+#: system-helper/org.freedesktop.Flatpak.policy.in:103
+msgid "Authentication is required to install software"
+msgstr ""
+
+#. SECURITY:
+#. - Normal users do not need authentication to install signed applications
+#. from signed repositories, as this cannot exploit a system.
+#. - Paranoid users (or parents!) can change this to 'auth_admin' or
+#. 'auth_admin_keep'.
+#: system-helper/org.freedesktop.Flatpak.policy.in:40
+msgid "Install signed runtime"
+msgstr ""
+
+#. SECURITY:
+#. - Normal users do not require admin authentication to update an
+#. app as the commit will be signed, and the action is required
+#. to update the system when unattended.
+#. - Changing this to anything other than 'yes' will break unattended
+#. updates.
+#: system-helper/org.freedesktop.Flatpak.policy.in:58
+msgid "Update signed application"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:59
+#: system-helper/org.freedesktop.Flatpak.policy.in:77
+#: system-helper/org.freedesktop.Flatpak.policy.in:154
+msgid "Authentication is required to update software"
+msgstr ""
+
+#. SECURITY:
+#. - Normal users do not require admin authentication to update a
+#. runtime as the commit will be signed, and the action is required
+#. to update the system when unattended.
+#. - Changing this to anything other than 'yes' will break unattended
+#. updates.
+#: system-helper/org.freedesktop.Flatpak.policy.in:76
+msgid "Update signed runtime"
+msgstr ""
+
+#. SECURITY:
+#. - Normal users do not need authentication to update metadata
+#. from signed repositories.
+#: system-helper/org.freedesktop.Flatpak.policy.in:91
+msgid "Update remote metadata"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:92
+msgid "Authentication is required to update remote info"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:102
+msgid "Install bundle"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:113
+msgid "Uninstall runtime"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:114
+#: system-helper/org.freedesktop.Flatpak.policy.in:125
+msgid "Authentication is required to uninstall software"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:124
+msgid "Uninstall app"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:135
+msgid "Configure Remote"
+msgstr ""
+
+#: system-helper/org.freedesktop.Flatpak.policy.in:136
+msgid "Authentication is required to configure software repositories"
+msgstr ""
+
+#. SECURITY:
+#. - Normal users do not require admin authentication to update
+#. appstream data as it will be signed, and the action is required
+#. to update the system when unattended.
+#. - Changing this to anything other than 'yes' will break unattended
+#. updates.
+#: system-helper/org.freedesktop.Flatpak.policy.in:153
+msgid "Update appstream"
+msgstr ""
