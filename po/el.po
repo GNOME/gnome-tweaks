@@ -8,37 +8,38 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-09-02 13:46+0000\n"
-"PO-Revision-Date: 2016-09-12 00:37+0300\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
+"POT-Creation-Date: 2017-09-06 14:32+0000\n"
+"PO-Revision-Date: 2017-09-09 03:05+0200\n"
+"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
 "Language-Team: www.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.8\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
-#: ../gtweak/utils.py:327
-msgid "GNOME Tweak Tool"
+#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:311
+#: gtweak/utils.py:327
+#| msgid "GNOME Tweak Tool"
+msgid "GNOME Tweaks"
 msgstr "Εργαλείο μικρορυθμίσεων GNOME"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
-#: ../data/gnome-tweak-tool.desktop.in.h:2
+#: data/gnome-tweak-tool.appdata.xml.in:7 data/gnome-tweak-tool.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Επεξεργαστείτε τις προχωρημένες ρυθμίσεις του GNOME 3"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
-msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+#: data/gnome-tweak-tool.appdata.xml.in:9
+#| msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
+msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
 "Το εργαλείο μικρορυθμίσεων GNOME επιτρέπει τη ρύθμιση προχωρημένων επιλογών "
 "του GNOME."
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
+#: data/gnome-tweak-tool.appdata.xml.in:12
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -47,11 +48,17 @@ msgstr ""
 "τις ρυθμίσεις ενέργειας, να διαχειριστεί τις εφαρμογές εκκίνησης και να "
 "ενεργοποιήσει τα εικονίδια επιφάνειας εργασίας μεταξύ άλλων ρυθμίσεων."
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Tool"
-msgstr "Εργαλείο μικρορυθμίσεων"
+#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:103
+msgid "Tweaks"
+msgstr "Μικρορυθμίσεις"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:3
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/gnome-tweak-tool.desktop.in:6
+msgid "gnome-tweak-tool"
+msgstr "gnome-tweak-tool"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/gnome-tweak-tool.desktop.in:13
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
@@ -59,604 +66,892 @@ msgstr ""
 "πληκτρολόγιο;πληκτρολόγηση;Settings;Advanced;Preferences;Extensions;Fonts;"
 "Theme;XKB;Keyboard;Typing;"
 
-#: ../data/shell.ui.h:1
+#: data/shell.ui:7
 msgid "_Reset to Defaults"
 msgstr "Επανα_φορά στις προεπιλογές"
 
-#: ../data/shell.ui.h:2
+#: data/shell.ui:11
 msgid "Disable All Shell Extensions"
 msgstr "Εγκατάσταση επεκτάσεων όλων των κελύφων"
 
-#: ../data/shell.ui.h:3
+#: data/shell.ui:17
 msgid "_About"
 msgstr "_Περί"
 
-#: ../data/shell.ui.h:4
+#: data/shell.ui:21
 msgid "_Quit"
 msgstr "Έ_ξοδος"
 
-#: ../gtweak/app.py:78
+#: gtweak/app.py:80
 msgid "Reset to Defaults"
 msgstr "Επαναφορά προεπιλογών"
 
-#: ../gtweak/app.py:79
+#: gtweak/app.py:81
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Επαναφορά όλων των μικρορυθμίσεων στην αρχική προεπιλεγμένη κατάσταση;"
 
-#: ../gtweak/app.py:98
-#, python-format
-msgid "GNOME Shell v%s (%s mode)"
-msgstr "GNOME Shell v%s (κατάσταση %s)"
+#: gtweak/app.py:102 gtweak/app.py:104
+#| msgid "GNOME Shell not running"
+msgid "GNOME Shell"
+msgstr "GNOME Shell"
 
-#: ../gtweak/app.py:100
-msgid "GNOME Shell not running"
+#: gtweak/app.py:104
+#, python-format
+msgid "(%s mode)"
+msgstr "(%s λειτουργία)"
+
+#: gtweak/app.py:107
+#| msgid "GNOME Shell not running"
+msgid "GNOME Shell is not running"
 msgstr "Δεν εκτελείται το GNOME Shell"
 
-#: ../gtweak/app.py:105
+#: gtweak/app.py:109
+msgid "GTK+"
+msgstr "GTK+"
+
+#: gtweak/app.py:116
 msgid "Homepage"
 msgstr "Αρχική σελίδα"
 
-#: ../gtweak/tweakmodel.py:28
-msgid "Appearance"
-msgstr "Εμφάνιση"
-
-#: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
-msgid "Extensions"
-msgstr "Επεκτάσεις"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Fonts"
-msgstr "Γραμματοσειρές"
-
-#: ../gtweak/tweakmodel.py:31
-msgid "Power"
-msgstr "Ενέργεια"
-
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
-msgid "Startup Applications"
-msgstr "Εφαρμογές εκκίνησης"
-
-#: ../gtweak/tweakmodel.py:33
-msgid "Top Bar"
-msgstr "Πάνω μπάρα"
-
-#: ../gtweak/tweakmodel.py:34
-msgid "Windows"
-msgstr "Παράθυρα"
-
-#: ../gtweak/tweakmodel.py:35
-msgid "Workspaces"
-msgstr "Χώροι εργασίας"
-
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
-msgid "Mouse"
-msgstr "Ποντίκι"
-
-#: ../gtweak/tweakmodel.py:38
-msgid "Files"
-msgstr "Αρχεία"
-
-#: ../gtweak/tweakmodel.py:52
+#: gtweak/tweakmodel.py:43
 msgid "Miscellaneous"
 msgstr "Διάφορα"
 
-#: ../gtweak/tweakview.py:100
-msgid "Tweaks"
-msgstr "Μικρορυθμίσεις"
-
-#: ../gtweak/tweakview.py:116
-msgid "Search Tweaks..."
+#: gtweak/tweakview.py:119
+#| msgid "Search Tweaks..."
+msgid "Search Tweaks…"
 msgstr "Αναζήτηση μικρορυθμίσεων..."
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:22
-msgid "Icons on Desktop"
-msgstr "Εικονίδια στην επιφάνεια εργασίας"
+#: gtweak/tweaks/tweak_group_appearance.py:41
+#: gtweak/tweaks/tweak_group_startup.py:57
+msgid "Applications"
+msgstr "Εφαρμογές"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:25
-msgid "Desktop"
-msgstr "Επιφάνεια εργασίας"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:27
-msgid "Computer"
-msgstr "Υπολογιστής"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:28
-msgid "Home"
-msgstr "Αρχική σελίδα"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:29
-msgid "Network Servers"
-msgstr "Διακομιστές δικτύου"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:30
-msgid "Trash"
-msgstr "Απορρίμματα"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:31
-msgid "Mounted Volumes"
-msgstr "Προσαρτημένοι τόμοι"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:32
-msgid "Background"
-msgstr "Παρασκήνιο"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:33
-#: ../gtweak/tweaks/tweak_group_desktop.py:36
-msgid "Mode"
-msgstr "Κατάσταση"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:34
-msgid "Background Location"
-msgstr "Θέση παρασκηνίου"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:35
-msgid "Lock Screen"
-msgstr "Κλείδωμα οθόνης"
-
-#: ../gtweak/tweaks/tweak_group_desktop.py:37
-msgid "Lock Screen Location"
-msgstr "Κλείδωμα θέσης οθόνης"
-
-#: ../gtweak/tweaks/tweak_group_font.py:25
-msgid "Window Titles"
-msgstr "Τίτλοι παραθύρου"
-
-#: ../gtweak/tweaks/tweak_group_font.py:26
-msgid "Interface"
-msgstr "Διεπαφή"
-
-#: ../gtweak/tweaks/tweak_group_font.py:27
-msgid "Documents"
-msgstr "Έγγραφα"
-
-#: ../gtweak/tweaks/tweak_group_font.py:28
-msgid "Monospace"
-msgstr "Monospace (σταθερού πλάτους)"
-
-#: ../gtweak/tweaks/tweak_group_font.py:29
-msgid "Hinting"
-msgstr "Hinting"
-
-#: ../gtweak/tweaks/tweak_group_font.py:31
-msgid "Antialiasing"
-msgstr "Εξομάλυνση"
-
-#: ../gtweak/tweaks/tweak_group_font.py:33
-msgid "Scaling Factor"
-msgstr "Συντελεστής κλιμάκωσης"
-
-#: ../gtweak/tweaks/tweak_group_interface.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:65
 msgid "Icons"
 msgstr "Εικονίδια"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:83
+#: gtweak/tweaks/tweak_group_appearance.py:83
 msgid "Cursor"
 msgstr "Δρομέας"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:110
-msgid "Shell theme"
-msgstr "Θέμα κέλυφους"
+#: gtweak/tweaks/tweak_group_appearance.py:110
+msgid "Shell"
+msgstr "Κέλυφος"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Εγκατάσταση θεμάτων χρήστη για το gnome shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:113
 msgid "Unknown error"
 msgstr "Άγνωστο σφάλμα"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:118
 msgid "Shell not running"
 msgstr "Το κέλυφος δεν εκτελείται"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:140
+#: gtweak/tweaks/tweak_group_appearance.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Δεν έχει εγκατασταθεί σωστά η επέκταση user-theme"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "Δεν είναι ενεργοποιημένη η επέκταση του κελύφους user-theme"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:146
 msgid "Could not list shell extensions"
 msgstr "Αδυναμία καταγραφής των επεκτάσεων του κελύφους"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+#: gtweak/tweaks/tweak_group_appearance.py:175
 msgid "<i>Default</i>"
 msgstr "<i>Προεπιλογή</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:181
+#: gtweak/tweaks/tweak_group_appearance.py:181
 msgid "Select a theme"
 msgstr "Επιλέξτε ένα θέμα"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:230
+#: gtweak/tweaks/tweak_group_appearance.py:230
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Το θέμα %s ενημερώθηκε με επιτυχία"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:232
+#: gtweak/tweaks/tweak_group_appearance.py:232
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Το θέμα %s εγκαταστάθηκε με επιτυχία"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: gtweak/tweaks/tweak_group_appearance.py:240
 msgid "Error installing theme"
 msgstr "Σφάλμα εγκατάστασης θέματος"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:245
+#: gtweak/tweaks/tweak_group_appearance.py:245
 msgid "Invalid theme"
 msgstr "Μη έγκυρο θέμα"
 
+#: gtweak/tweaks/tweak_group_appearance.py:257
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:261
-msgid "Theme"
-msgstr "Θέμα"
+#: gtweak/tweaks/tweak_group_appearance.py:261
+#| msgid "Applications"
+msgid "Animations"
+msgstr "Κινούμενα εφέ"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:266
-msgid "Enable animations"
-msgstr "Ενεργοποίηση εφέ"
+#: gtweak/tweaks/tweak_group_appearance.py:262
+#| msgid "Theme"
+msgid "Themes"
+msgstr "Θέματα"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:55
-#: ../gtweak/tweaks/tweak_group_windows.py:143
+#: gtweak/tweaks/tweak_group_desktop.py:20
+#| msgid "Show seconds"
+msgid "Show Icons"
+msgstr "Εμφάνιση εικονιδίων"
+
+#: gtweak/tweaks/tweak_group_desktop.py:23
+msgid "Desktop"
+msgstr "Επιφάνεια εργασίας"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
+msgid "Icons on Desktop"
+msgstr "Εικονίδια στην επιφάνεια εργασίας"
+
+#: gtweak/tweaks/tweak_group_desktop.py:26
+msgid "Home"
+msgstr "Αρχική σελίδα"
+
+#: gtweak/tweaks/tweak_group_desktop.py:27
+msgid "Network Servers"
+msgstr "Διακομιστές δικτύου"
+
+#: gtweak/tweaks/tweak_group_desktop.py:28
+msgid "Trash"
+msgstr "Απορρίμματα"
+
+#: gtweak/tweaks/tweak_group_desktop.py:29
+msgid "Mounted Volumes"
+msgstr "Προσαρτημένοι τόμοι"
+
+#: gtweak/tweaks/tweak_group_desktop.py:30
+msgid "Background"
+msgstr "Παρασκήνιο"
+
+#: gtweak/tweaks/tweak_group_desktop.py:31
+#: gtweak/tweaks/tweak_group_desktop.py:34
+msgid "Image"
+msgstr "Εικόνα"
+
+#: gtweak/tweaks/tweak_group_desktop.py:32
+#: gtweak/tweaks/tweak_group_desktop.py:35
+msgid "Adjustment"
+msgstr "Προσαρμογή"
+
+#: gtweak/tweaks/tweak_group_desktop.py:33
+msgid "Lock Screen"
+msgstr "Κλείδωμα οθόνης"
+
+#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:35
+msgid "Hinting"
+msgstr "Hinting"
+
+#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:67
+msgid "Antialiasing"
+msgstr "Εξομάλυνση"
+
+#: gtweak/tweaks/tweak_group_font.py:44
+msgid "Full"
+msgstr "Πλήρες"
+
+#: gtweak/tweaks/tweak_group_font.py:50
+msgid "Medium"
+msgstr "Μεσαίο"
+
+#: gtweak/tweaks/tweak_group_font.py:56
+msgid "Slight"
+msgstr "Ελαφρά"
+
+#: gtweak/tweaks/tweak_group_font.py:62 gtweak/tweaks/tweak_group_font.py:87
+msgid "None"
+msgstr "Κανένα"
+
+#: gtweak/tweaks/tweak_group_font.py:75
+msgid "Subpixel (for LCD screens)"
+msgstr "Υποεικονοστοιχείο (για οθόνες LCD)"
+
+#: gtweak/tweaks/tweak_group_font.py:81
+msgid "Standard (grayscale)"
+msgstr "Τυπικό (κλιμακα του γκρι)"
+
+#: gtweak/tweaks/tweak_group_font.py:112
+msgid "Fonts"
+msgstr "Γραμματοσειρές"
+
+#: gtweak/tweaks/tweak_group_font.py:113
+#| msgid "Window Titles"
+msgid "Window Title"
+msgstr "Τίτλος παραθύρου"
+
+#: gtweak/tweaks/tweak_group_font.py:114
+msgid "Interface"
+msgstr "Διεπαφή"
+
+#: gtweak/tweaks/tweak_group_font.py:115
+#| msgid "Documents"
+msgid "Document"
+msgstr "Έγγραφο"
+
+#: gtweak/tweaks/tweak_group_font.py:116
+msgid "Monospace"
+msgstr "Monospace (σταθερού πλάτους)"
+
+#: gtweak/tweaks/tweak_group_font.py:118
+msgid "Scaling Factor"
+msgstr "Συντελεστής κλιμάκωσης"
+
+#: gtweak/tweaks/tweak_group_xkb.py:52
+#: gtweak/tweaks/tweak_group_windows.py:318
+#: gtweak/tweaks/tweak_group_keymouse.py:61
+#: gtweak/tweaks/tweak_group_keymouse.py:197
 msgid "Disabled"
 msgstr "Απενεργοποιημένο"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:161
+#: gtweak/tweaks/tweak_group_xkb.py:179
 msgid "Typing"
 msgstr "Πληκτρολόγηση"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
+#: gtweak/tweaks/tweak_group_power.py:36
+#| msgid "When Laptop Lid is Closed"
+msgid "Suspend when laptop lid is closed"
+msgstr "Σε αναστολή όταν κλείνει το καπάκι του φορητού"
+
+#: gtweak/tweaks/tweak_group_power.py:60
+msgid "Power"
+msgstr "Ενέργεια"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:46
+#| msgid "%s extension installed successfully"
+msgid "No Extensions Installed"
+msgstr "Καμία εγκατεστημένη επέκταση"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:53
+msgid "Browse in Software"
+msgstr "Αναζήτηση στο Λογισμικό"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:116
 msgid "Extension downloading"
 msgstr "Λήψη επέκτασης"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
+#: gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Error loading extension"
 msgstr "Σφάλμα κατά το άνοιγμα της επέκτασης"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
+#: gtweak/tweaks/tweak_group_shell_extensions.py:120
 msgid "Extension does not support shell version"
 msgstr "Η επέκταση δεν υποστηρίζεται από την έκδοση του κελύφους"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
+#: gtweak/tweaks/tweak_group_shell_extensions.py:122
 msgid "Unknown extension error"
 msgstr "Άγνωστο σφάλμα επέκτασης"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:229
-msgid "Remove"
-msgstr "Αφαίρεση"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-msgid "Uninstall Extension"
-msgstr "Απεγκατάσταση επέκτασης"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "Θέλετε να απεγκαταστήσετε την επέκταση '%s';"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
+#: gtweak/tweaks/tweak_group_shell_extensions.py:170
 msgid "Updating"
 msgstr "Ενημέρωση"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
+#: gtweak/tweaks/tweak_group_shell_extensions.py:190
 msgid "Error"
 msgstr "Σφάλμα"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
+#: gtweak/tweaks/tweak_group_shell_extensions.py:194
 msgid "Update"
 msgstr "Ενημέρωση"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
-msgid "Install Shell Extension"
-msgstr "Εγκατάσταση επέκτασης κελύφους"
+#: gtweak/tweaks/tweak_group_shell_extensions.py:236
+msgid "Extensions"
+msgstr "Επεκτάσεις"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
-msgid "Select an extension"
-msgstr "Επιλέξτε μια επέκταση"
+#: gtweak/tweaks/tweak_group_startup.py:45
+msgid "Startup applications are automatically started when you log in."
+msgstr "Οι εφαρμογές εκκίνησης εκτελούνται αυτόματα κατά τη σύνδεση."
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
-msgid "Get more extensions"
-msgstr "Λήψη περισσότερων επεκτάσεων"
+#: gtweak/tweaks/tweak_group_startup.py:46
+#: gtweak/tweaks/tweak_group_startup.py:318
+msgid "Startup Applications"
+msgstr "Εφαρμογές εκκίνησης"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "Η επέκταση %s ενημερώθηκε με επιτυχία"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "Η επέκταση %s εγκαταστάθηκε με επιτυχία"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
-msgid "Error installing extension"
-msgstr "Σφάλμα κατά την εγκατάσταση της επέκτασης"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Invalid extension"
-msgstr "Μη έγκυρη επέκταση"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:33
-msgid "Show Application Menu"
-msgstr "Εμφάνιση μενού εφαρμογών"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:46
-msgid "Workspace Creation"
-msgstr "Δημιουργία χώρου εργασίας"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Dynamic"
-msgstr "Δυναμική"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Static"
-msgstr "Στατική"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:74
-msgid "Don't suspend on lid close"
-msgstr "Να μην γίνεται αναστολή όταν κλείνει το καπάκι"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:104
-msgid "Clock"
-msgstr "Ρολόι"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:105
-msgid "Show date"
-msgstr "Εμφάνιση ημερομηνίας"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:106
-msgid "Show seconds"
-msgstr "Εμφάνιση δευτερολέπτων"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:107
-msgid "Calendar"
-msgstr "Ημερολόγιο"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:108
-msgid "Show week numbers"
-msgstr "Εμφάνιση αριθμών εβδομάδων"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "When Power Button is Pressed"
-msgstr "Όταν πατιέται το κουμπί Τερματισμός"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:112
-msgid "Action"
-msgstr "Ενέργεια"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:113
-msgid "When Laptop Lid is Closed"
-msgstr "Όταν κλείνει το καπάκι του φορητού"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:114
-msgid "On Battery Power"
-msgstr "Τροφοδοσία από μπαταρία"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:115
-msgid "When plugged in"
-msgstr "Όταν είναι στο ρεύμα"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:116
-msgid "Suspend even if an external monitor is plugged in"
-msgstr "Αναστολή ακόμα κι αν μια εξωτερική οθόνη είναι συνδεμένη"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:121
-msgid "Number of Workspaces"
-msgstr "Αριθμός χώρων εργασίας"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:122
-msgid "Workspaces only on primary display"
-msgstr "Χώροι εργασίας μόνο στην κύρια οθόνη"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Εφαρμογές"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications..."
+#: gtweak/tweaks/tweak_group_startup.py:63
+#| msgid "Search Applications..."
+msgid "Search Applications…"
 msgstr "Αναζήτηση εφαρμογών..."
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:56
+#: gtweak/tweaks/tweak_group_startup.py:71
 msgid "<primary>f"
 msgstr "<primary>φ"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:75
+#: gtweak/tweaks/tweak_group_startup.py:90
 msgid "running"
 msgstr "εκτέλεση"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:85
+#: gtweak/tweaks/tweak_group_startup.py:100
 msgid "_Close"
 msgstr "_Κλείσιμο"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:86
+#: gtweak/tweaks/tweak_group_startup.py:101
 msgid "_Add"
 msgstr "_Προσθήκη"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:253
+#: gtweak/tweaks/tweak_group_startup.py:244
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#: gtweak/tweaks/tweak_group_startup.py:268
 msgid "New startup application"
 msgstr "Νέα εφαρμογή στην έναρξη"
 
-#: ../gtweak/tweaks/tweak_group_startup.py:254
+#: gtweak/tweaks/tweak_group_startup.py:269
 msgid "Add a new application to be run at startup"
 msgstr "Προσθήκη μιας νέας εφαρμογής που θα εκτελείται στην έναρξη"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:30
+#| msgid "Show Application Menu"
+msgid "Application Menu"
+msgstr "Μενού εφαρμογών"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:73
+msgid "Top Bar"
+msgstr "Πάνω μπάρα"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:75
+#| msgid "On Battery Power"
+msgid "Battery Percentage"
+msgstr "Ποσοστό μπαταρίας"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:76
+msgid "Clock"
+msgstr "Ρολόι"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:77
+msgid "Date"
+msgstr "Ημερομηνία"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:78
+#| msgid "Show seconds"
+msgid "Seconds"
+msgstr "Δευτερόλεπτα"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:79
+msgid "Calendar"
+msgstr "Ημερολόγιο"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:80
+#| msgid "Show week numbers"
+msgid "Week Numbers"
+msgstr "Αριθμός εβδομάδας"
+
+#: gtweak/tweaks/tweak_group_windows.py:32
+#: gtweak/tweaks/tweak_group_windows.py:319
+#| msgid "Windows"
+msgid "Window Focus"
+msgstr "Εστίαση παραθύρου"
+
+#: gtweak/tweaks/tweak_group_windows.py:32
+#: gtweak/tweaks/tweak_group_windows.py:50
+#: gtweak/tweaks/tweak_group_windows.py:319
+#| msgid "Click method"
+msgid "Click to Focus"
+msgstr "Κάντε κλικ για εστίαση"
+
+#: gtweak/tweaks/tweak_group_windows.py:52
+msgid "Windows are focused when they are clicked."
+msgstr "Με κλικ στα παράθυρα γίνεται εστίαση."
+
+#: gtweak/tweaks/tweak_group_windows.py:76
+msgid "Sloppy"
+msgstr "Πρόχειρα"
+
+#: gtweak/tweaks/tweak_group_windows.py:78
+msgid ""
+"Window is focused when hovered with the pointer. Windows remain focused when "
+"the desktop is hovered."
+msgstr ""
+"Γίνεται εστίαση στο παράθυρο όταν αιωρείται με το δείκτη. Τα παράθυρα "
+"παραμένουν εστιασμένα όταν η επιφάνεια εργασίας αιωρείται."
+
+#: gtweak/tweaks/tweak_group_windows.py:102
+#: gtweak/tweaks/tweak_group_windows.py:325
+#| msgid "Secondary-click"
+msgid "Secondary-Click"
+msgstr "Δευτερεύον κλικ"
+
+#: gtweak/tweaks/tweak_group_windows.py:104
+msgid ""
+"Window is focused when hovered with the pointer. Hovering the desktop "
+"removes focus from the previous window."
+msgstr ""
+"Γίνεται εστίαση στο παράθυρο όταν αιωρείται με το δείκτη. Αιώρηση της "
+"επιφάνειας εργασίας αφαιρεί την εστίαση από το προηγούμενο παράθυρο."
+
+#: gtweak/tweaks/tweak_group_windows.py:185
+msgid "Placement"
+msgstr "Τοποθέτηση"
+
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:199
+msgid "Left"
+msgstr "Αριστερά"
+
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:205
+#| msgid "Right super"
+msgid "Right"
+msgstr "Δεξιά"
+
+#: gtweak/tweaks/tweak_group_windows.py:237
 msgid "Window scaling"
 msgstr "Κλιμάκωση παραθύρου"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:67
+#: gtweak/tweaks/tweak_group_windows.py:237
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Ρύθμιση του συντελεστή κλιμάκωσης παραθύρου GDK για HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:95
+#: gtweak/tweaks/tweak_group_windows.py:265
 #, python-format
 msgid "Settings will be reverted in %d second"
 msgid_plural "Settings will be reverted in %d seconds"
 msgstr[0] "Θα γίνει επαναφορά ρυθμίσεων σε %d δευτερόλεπτο"
 msgstr[1] "Θα γίνει επαναφορά ρυθμίσεων σε %d δευτερόλεπτα"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:111
+#: gtweak/tweaks/tweak_group_windows.py:281
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "Θέλετε να διατηρήσετε αυτές τις ρυθμίσες HiDPI;"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:118
+#: gtweak/tweaks/tweak_group_windows.py:288
 msgid "Revert Settings"
 msgstr "Επαναφορά ρυθμίσεων"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:119
+#: gtweak/tweaks/tweak_group_windows.py:289
 msgid "Keep Changes"
 msgstr "Διατήρηση αλλαγών"
 
-#: ../gtweak/tweaks/tweak_group_windows.py:137
-msgid "Attached Modal Dialogs"
-msgstr "Προσαρτημένοι αναγκαστικοί διάλογοι"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:138
-msgid "Automatically Raise Windows"
-msgstr "Αυτόματη ανύψωση παραθύρων"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:139
-msgid "Resize with Secondary-click"
-msgstr "Αυξομείωση με δευτερεύον πάτημα"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:140
-msgid "Window Action Key"
-msgstr "Κλειδί ενέργειας παραθύρου"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:144
-msgid "Focus Mode"
-msgstr "Κατάσταση εστίασης"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:145
-msgid "Titlebar Actions"
-msgstr "Ενέργειες γραμμής τίτλου"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:146
-msgid "Double-click"
-msgstr "Διπλό κλικ"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:147
-msgid "Middle-click"
-msgstr "Μεσαίο κλικ"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:148
-msgid "Secondary-click"
-msgstr "Δευτερεύον κλικ"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:149
-msgid "Titlebar Buttons"
-msgstr "Πλήκτρα γραμμής τίτλου"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:150
-msgid "Maximize"
-msgstr "Μεγιστοποίηση"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:151
-msgid "Minimize"
-msgstr "Ελαχιστοποίηση"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:152
+#: gtweak/tweaks/tweak_group_windows.py:305
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "Επικόλληση μεσαίου κλικ"
+#: gtweak/tweaks/tweak_group_windows.py:311
+msgid "Windows"
+msgstr "Παράθυρα"
 
-#. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
-msgid "Key theme"
-msgstr "Θέμα κλειδιού"
+#: gtweak/tweaks/tweak_group_windows.py:312
+#| msgid "Attached Modal Dialogs"
+msgid "Attach Modal Dialogs"
+msgstr "Επισύναψη σχηματικών διαλόγων"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
-msgid "Keyboard and Mouse"
-msgstr "Πληκτρολόγιο και ποντίκι"
+#: gtweak/tweaks/tweak_group_windows.py:313
+msgid ""
+"When on, modal dialog windows are attached to their parent windows, and "
+"cannot be moved."
+msgstr ""
+"Όταν είναι ενεργό, τα παράθυρα σχηματικών διαλόγων επισυνάπτονται στα γονικά "
+"παράθυρά τους και δεν μπορούν να μετακινηθούν."
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
-msgid "Show All Input Sources"
-msgstr "Εμφάνιση όλων των πηγών εισόδου"
+#: gtweak/tweaks/tweak_group_windows.py:314
+#| msgid "Resize with Secondary-click"
+msgid "Resize with Secondary-Click"
+msgstr "Αυξομείωση με δευτερεύον πάτημα"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
-msgid "Switch between overview and desktop"
-msgstr "Εναλλαγή μεταξύ επισκόπησης και επιφάνειας εργασίας"
+#: gtweak/tweaks/tweak_group_windows.py:315
+msgid "Window Action Key"
+msgstr "Κλειδί ενέργειας παραθύρου"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Left super"
-msgstr "Αριστερό super"
+#: gtweak/tweaks/tweak_group_windows.py:321
+msgid "Raise Windows When Focused"
+msgstr "Ανύψωση παραθύρων όταν γίνεται εστίαση"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Right super"
+#: gtweak/tweaks/tweak_group_windows.py:322
+msgid "Titlebar Actions"
+msgstr "Ενέργειες γραμμής τίτλου"
+
+#: gtweak/tweaks/tweak_group_windows.py:323
+#| msgid "Double-click"
+msgid "Double-Click"
+msgstr "Διπλό κλικ"
+
+#: gtweak/tweaks/tweak_group_windows.py:324
+#| msgid "Middle-click"
+msgid "Middle-Click"
+msgstr "Μεσαίο κλικ"
+
+#: gtweak/tweaks/tweak_group_windows.py:326
+msgid "Titlebar Buttons"
+msgstr "Πλήκτρα γραμμής τίτλου"
+
+#: gtweak/tweaks/tweak_group_windows.py:327
+msgid "Maximize"
+msgstr "Μεγιστοποίηση"
+
+#: gtweak/tweaks/tweak_group_windows.py:328
+msgid "Minimize"
+msgstr "Ελαχιστοποίηση"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:34
+#: gtweak/tweaks/tweak_group_workspaces.py:52
+#| msgid "Workspaces"
+msgid "Dynamic Workspaces"
+msgstr "Δυναμικοί χώροι εργασίας"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:54
+msgid ""
+"Workspaces can be created on demand, and are automatically removed when "
+"empty."
+msgstr ""
+"Οι χώροι εργασίας μπορούν να δημιουργηθούν κατόπιν αιτήματος και "
+"καταργούνται αυτόματα όταν είναι κενοί."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:78
+#| msgid "Workspaces"
+msgid "Static Workspaces"
+msgstr "Στατικοί χώροι εργασίας"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:80
+#| msgid "Number of Workspaces"
+msgid "Number of workspaces is fixed."
+msgstr "Ο αριθμός των χώρων εργασίας είναι σταθερός."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:112
+#: gtweak/tweaks/tweak_group_workspaces.py:195
+msgid "Display Handling"
+msgstr "Χειρισμός οθονών"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:112
+#: gtweak/tweaks/tweak_group_workspaces.py:157
+#| msgid "Workspaces only on primary display"
+msgid "Workspaces span displays"
+msgstr "Χώροι εργασίας που συνδέουν οθόνες"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:113
+#: gtweak/tweaks/tweak_group_workspaces.py:192
+msgid "Workspaces"
+msgstr "Χώροι εργασίας"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:131
+#| msgid "Workspaces only on primary display"
+msgid "Workspaces on primary display only"
+msgstr "Χώροι εργασίας μόνο στην κύρια οθόνη"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:133
+msgid "Additional displays are treated as independent workspaces."
+msgstr "Οι πρόσθετες οθόνες αντιμετωπίζονται ως ανεξάρτητοι χώροι εργασίας."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:159
+msgid "The current workspace includes additional displays."
+msgstr "Ο τρέχων χώρος εργασίας περιλαμβάνει επιπλέον οθόνες."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:194
+msgid "Number of Workspaces"
+msgstr "Αριθμός χώρων εργασίας"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:35
+msgid "Emacs Input"
+msgstr "Εισαγωγή Emacs"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:38
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
+msgstr ""
+"Παράκαμψη συντομεύσεων για να χρησιμοποιήσετε συνδυασμούς πλήκτρων του "
+"επεξεργαστή Emacs."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:54
+#: gtweak/tweaks/tweak_group_keymouse.py:122
+msgid "Compose Key"
+msgstr "Κλειδί σύνθεσης"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:110
+#: gtweak/tweaks/tweak_group_keymouse.py:192
+msgid "Scroll Lock"
+msgstr "Scroll Lock"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:111
+msgid "PrtScn"
+msgstr "PrtScn"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:112
+msgid "Menu"
+msgstr "Μενού"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:113
+#| msgid "Right super"
+msgid "Right Alt"
+msgstr "Δεξιό Alt"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:114
+#| msgid "Right super"
+msgid "Right Ctrl"
+msgstr "Δεξιό Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:115
+#: gtweak/tweaks/tweak_group_keymouse.py:214
+#| msgid "Right super"
+msgid "Right Super"
 msgstr "Δεξιό super"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:72
-msgid "Acceleration profile"
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:116
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+#: gtweak/tweaks/tweak_group_keymouse.py:117
+#| msgid "Left super"
+msgid "Left Ctrl"
+msgstr "Αριστερό Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:65
+msgid "Allows entering additional characters."
+msgstr "Επιτρέπεται εισαγωγή επιπροσθέτων χαρακτήρων."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:140
+msgid ""
+"The compose key allows a wide variety of characters to be entered. To use "
+"it, press the compose key and then a sequence of characters.\n"
+"\n"
+"Many unusual characters can be entered by combining standard ones. For "
+"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
+"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+msgstr ""
+"Το πλήκτρο σύνθεσης επιτρέπει την εισαγωγή πολλών χαρακτήρων. Για να το "
+"χρησιμοποιήσετε, πατήστε το πλήκτρο σύνθεσης και στη συνέχεια μια ακολουθία "
+"χαρακτήρων. \n"
+"\n"
+"Πολλοί σπάνιοι χαρακτήρες μπορούν να εισαχθούν συνδυάζοντας τυπικούς "
+"χαρακτήρες. Για παράδειγμα, το κλειδί σύνθεσης που ακολουθείται από <b>C</b> "
+"και <b>o</b> θα εισάγει <b>©</b>, το <b>a</b> ακολουθούμενο από <b>'</b> θα "
+"εισάγει <b>á</b>.\n"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:203
+msgid "Overview Shortcut"
+msgstr "Συντόμευση επισκόπησης"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:210
+#| msgid "Left super"
+msgid "Left Super"
+msgstr "Αριστερό super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:237
+#: gtweak/tweaks/tweak_group_keymouse.py:245
+msgid "Additional Layout Options"
+msgstr "Πρόσθετες επιλογές διάταξης"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:265
+#| msgid "Keyboard and Mouse"
+msgid "Keyboard & Mouse"
+msgstr "Πληκτρολόγιο και ποντίκι"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:266
+#| msgid "Keyboard and Mouse"
+msgid "Keyboard"
+msgstr "Πληκτρολόγιο"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:267
+#| msgid "Show All Input Sources"
+msgid "Show Extended Input Sources"
+msgstr "Εμφάνιση εκτεταμένων πηγών εισαγωγής"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:270
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "Αύξηση επιλογής πηγών εισόδου στην εφαρμογή Ρυθμίσεων."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:276
+msgid "Mouse"
+msgstr "Ποντίκι"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:277
+#| msgid "Acceleration profile"
+msgid "Acceleration Profile"
 msgstr "Προφίλ επιτάχυνσης"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:76
-msgid "Show location of pointer"
-msgstr "Εμφάνιση θέσης δείκτη"
+#: gtweak/tweaks/tweak_group_keymouse.py:281
+#| msgid "Background Location"
+msgid "Pointer Location"
+msgstr "Θέση δείκτη"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:82
+#: gtweak/tweaks/tweak_group_keymouse.py:285
+msgid "Press the Ctrl key to highlight the pointer."
+msgstr "Πατήστε το κλειδί Ctrl για να επισημάνετε το δείκτη."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:286
+#| msgid "Middle-click Paste"
+msgid "Middle Click Paste"
+msgstr "Επικόλληση μεσαίου κλικ"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:290
 msgid "Touchpad"
 msgstr "Πινακίδα αφής"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:83
-msgid "Click method"
+#: gtweak/tweaks/tweak_group_keymouse.py:291
+#| msgid "Click method"
+msgid "Click Method"
 msgstr "Μέθοδος πατήματος"
 
-#: ../gtweak/tweaks/tweak_wacom.py:29
+#: gtweak/tweaks/tweak_group_keymouse.py:295
+msgid "Disable While Typing"
+msgstr "Απενεργοποίηση κατά την πληκτρολόγηση"
+
+#: gtweak/tweaks/tweak_wacom.py:29
 msgid "Device"
 msgstr "Συσκευή"
 
-#: ../gtweak/tweaks/tweak_wacom.py:38
+#: gtweak/tweaks/tweak_wacom.py:38
 msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:72
+#: gtweak/utils.py:72
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(προεπιλογή)</i>"
 
-#: ../gtweak/utils.py:329
+#: gtweak/utils.py:329
 msgid "Configuration changes require restart"
 msgstr "Οι αλλαγές απαιτούν επανεκκίνηση"
 
-#: ../gtweak/utils.py:330
+#: gtweak/utils.py:330
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Η συνεδρία σας πρέπει να επανεκκινηθεί για να εφαρμοστούν οι αλλαγές"
 
-#: ../gtweak/utils.py:334
+#: gtweak/utils.py:334
 msgid "Restart Session"
 msgstr "Επανεκκίνηση συνεδρίας"
 
-#: ../gtweak/widgets.py:476
+#: gtweak/widgets.py:501
 msgid "Enable dark theme for all applications"
 msgstr "Ενεργοποίηση σκούρου θέματος για όλες τις εφαρμογές"
 
-#: ../gtweak/widgets.py:477
+#: gtweak/widgets.py:502
 msgid "Enable the dark theme hint for all the applications in the session"
 msgstr "Ενεργοποίηση σκούρας υπόδειξης για όλες τις εφαρμογές της συνεδρίας"
 
-#: ../gtweak/widgets.py:485
+#: gtweak/widgets.py:511
 msgid "Global Dark Theme"
 msgstr "Γενικό σκούρο θέμα"
 
-#: ../gtweak/widgets.py:486
-msgid "Applications need to be restarted for change to take effect"
-msgstr "Οι εφαρμογές πρέπει να επανεκκινηθεί για να εφαρμοστούν οι αλλαγές"
+#: gtweak/widgets.py:512
+#| msgid "Applications need to be restarted for change to take effect"
+msgid "Applications need to be restarted for this change to take place."
+msgstr "Πρέπει να επανεκκινηθούν οι εφαρμογές ώστε να εφαρμοστούν οι αλλαγές."
 
-#: ../gtweak/widgets.py:512
+#: gtweak/widgets.py:541
 msgid "Error writing setting"
 msgstr "Σφάλμα στην εγγραφή της ρύθμισης"
+
+#~ msgid "Tweak Tool"
+#~ msgstr "Εργαλείο μικρορυθμίσεων"
+
+#~ msgid "GNOME Shell v%s (%s mode)"
+#~ msgstr "GNOME Shell v%s (κατάσταση %s)"
+
+#~ msgid "Files"
+#~ msgstr "Αρχεία"
+
+#~ msgid "Computer"
+#~ msgstr "Υπολογιστής"
+
+#~ msgid "Mode"
+#~ msgstr "Κατάσταση"
+
+#~ msgid "Lock Screen Location"
+#~ msgstr "Κλείδωμα θέσης οθόνης"
+
+#~ msgid "Shell theme"
+#~ msgstr "Θέμα κέλυφους"
+
+#~ msgid "Enable animations"
+#~ msgstr "Ενεργοποίηση εφέ"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "Απεγκατάσταση επέκτασης"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "Θέλετε να απεγκαταστήσετε την επέκταση '%s';"
+
+#~ msgid "Install Shell Extension"
+#~ msgstr "Εγκατάσταση επέκτασης κελύφους"
+
+#~ msgid "Select an extension"
+#~ msgstr "Επιλέξτε μια επέκταση"
+
+#~ msgid "Get more extensions"
+#~ msgstr "Λήψη περισσότερων επεκτάσεων"
+
+#~ msgid "%s extension updated successfully"
+#~ msgstr "Η επέκταση %s ενημερώθηκε με επιτυχία"
+
+#~ msgid "Error installing extension"
+#~ msgstr "Σφάλμα κατά την εγκατάσταση της επέκτασης"
+
+#~ msgid "Invalid extension"
+#~ msgstr "Μη έγκυρη επέκταση"
+
+#~ msgid "Workspace Creation"
+#~ msgstr "Δημιουργία χώρου εργασίας"
+
+#~ msgid "Dynamic"
+#~ msgstr "Δυναμική"
+
+#~ msgid "Static"
+#~ msgstr "Στατική"
+
+#~ msgid "Don't suspend on lid close"
+#~ msgstr "Να μην γίνεται αναστολή όταν κλείνει το καπάκι"
+
+#~ msgid "Show date"
+#~ msgstr "Εμφάνιση ημερομηνίας"
+
+#~ msgid "When Power Button is Pressed"
+#~ msgstr "Όταν πατιέται το κουμπί Τερματισμός"
+
+#~ msgid "Action"
+#~ msgstr "Ενέργεια"
+
+#~ msgid "When plugged in"
+#~ msgstr "Όταν είναι στο ρεύμα"
+
+#~ msgid "Suspend even if an external monitor is plugged in"
+#~ msgstr "Αναστολή ακόμα κι αν μια εξωτερική οθόνη είναι συνδεμένη"
+
+#~ msgid "Automatically Raise Windows"
+#~ msgstr "Αυτόματη ανύψωση παραθύρων"
+
+#~ msgid "Focus Mode"
+#~ msgstr "Κατάσταση εστίασης"
+
+#~ msgid "Key theme"
+#~ msgstr "Θέμα κλειδιού"
+
+#~ msgid "Switch between overview and desktop"
+#~ msgstr "Εναλλαγή μεταξύ επισκόπησης και επιφάνειας εργασίας"
+
+#~ msgid "Show location of pointer"
+#~ msgstr "Εμφάνιση θέσης δείκτη"
 
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "Περί Εργαλείο μικρορυθμίσεων GNOME"
@@ -681,9 +976,6 @@ msgstr "Σφάλμα στην εγγραφή της ρύθμισης"
 
 #~ msgid "welcome"
 #~ msgstr "καλωσήλθατε"
-
-#~ msgid "Shell"
-#~ msgstr "Κέλυφος"
 
 #~ msgid "Shell Extensions"
 #~ msgstr "Eπεκτάσεις κελύφους"
