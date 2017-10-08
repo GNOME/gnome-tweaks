@@ -28,6 +28,7 @@ RUNTIME DEPENDENCIES
   - gsettings-desktop-schemas (>= 3.24)
   - gnome-shell (>= 3.24)
   - mutter
+  - nautilus
 
 * Optional:
    - gnome-software (for links from GNOME Shell Extensions page)
