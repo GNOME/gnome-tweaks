@@ -258,12 +258,12 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
             return False
 
         self._update_countdown_message()
-        self._dialog.format_secondary_text(self._second_message % self._countdown)
+        self._dialog.format_secondary_text(self._second_message.format(self._countdown))
         return True
 
     def _update_countdown_message(self):
-        self._second_message = gettext.ngettext("Settings will be reverted in %d second",
-                                                "Settings will be reverted in %d seconds",
+        self._second_message = gettext.ngettext("Settings will be reverted in {0} second",
+                                                "Settings will be reverted in {0} seconds",
                                                 self._countdown)
 
     def _close(self):
@@ -287,7 +287,7 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
                                text=first_message)
         self._dialog.add_buttons(_("Revert Settings"), Gtk.ResponseType.NO,
                                 _("Keep Changes"), Gtk.ResponseType.YES)
-        self._dialog.format_secondary_text(self._second_message % self._countdown)
+        self._dialog.format_secondary_text(self._second_message.format(self._countdown))
 
         self._source = GLib.timeout_add_seconds(interval=1, function=self._timeout_func)
 
