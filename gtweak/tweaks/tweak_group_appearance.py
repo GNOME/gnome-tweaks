@@ -57,6 +57,12 @@ class GtkThemeSwitcher(GSettingsComboTweak):
                     os.path.exists(os.path.join(d, "gtk-2.0")) and \
                         (os.path.exists(os.path.join(d, "gtk-3.0")) or \
                          os.path.exists(os.path.join(d, "gtk-3.{}".format(gtk_ver)))))
+
+        if 'Adwaita' not in valid:
+            valid += ['Adwaita']
+        if 'HighContrast' not in valid:
+            valid += ['HighContrast']
+
         return valid
 
 class IconThemeSwitcher(GSettingsComboTweak):
