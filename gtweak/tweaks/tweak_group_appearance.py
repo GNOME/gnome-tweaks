@@ -53,16 +53,11 @@ class GtkThemeSwitcher(GSettingsComboTweak):
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
                  os.path.join(GLib.get_user_data_dir(), "themes"),
                  os.path.join(os.path.expanduser("~"), ".themes"))
-        valid = walk_directories(dirs, lambda d:
+        valid = ['Adwaita', 'HighContrast']
+        valid += walk_directories(dirs, lambda d:
                     os.path.exists(os.path.join(d, "gtk-3.0", "gtk.css")) or \
                          os.path.exists(os.path.join(d, "gtk-3.{}".format(gtk_ver))))
-
-        if 'Adwaita' not in valid:
-            valid += ['Adwaita']
-        if 'HighContrast' not in valid:
-            valid += ['HighContrast']
-
-        return valid
+        return set(valid)
 
 class IconThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
@@ -80,7 +75,7 @@ class IconThemeSwitcher(GSettingsComboTweak):
         valid = walk_directories(dirs, lambda d:
                     os.path.isdir(d) and \
 			os.path.exists(os.path.join(d, "index.theme")))
-        return valid
+        return set(valid)
 
 class CursorThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
