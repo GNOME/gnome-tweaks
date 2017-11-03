@@ -45,7 +45,7 @@ class GtkThemeSwitcher(GSettingsComboTweak):
             **options)
 
     def _get_valid_themes(self):
-        """ Only shows themes that have variations for gtk+-3 and gtk+-2 """
+        """ Only shows themes that have variations for gtk3"""
         gtk_ver = Gtk.MINOR_VERSION
         if gtk_ver % 2: # Want even number
             gtk_ver += 1
@@ -54,9 +54,8 @@ class GtkThemeSwitcher(GSettingsComboTweak):
                  os.path.join(GLib.get_user_data_dir(), "themes"),
                  os.path.join(os.path.expanduser("~"), ".themes"))
         valid = walk_directories(dirs, lambda d:
-                    os.path.exists(os.path.join(d, "gtk-2.0")) and \
-                        (os.path.exists(os.path.join(d, "gtk-3.0")) or \
-                         os.path.exists(os.path.join(d, "gtk-3.{}".format(gtk_ver)))))
+                    os.path.exists(os.path.join(d, "gtk-3.0", "gtk.css")) or \
+                         os.path.exists(os.path.join(d, "gtk-3.{}".format(gtk_ver))))
         return valid
 
 class IconThemeSwitcher(GSettingsComboTweak):
