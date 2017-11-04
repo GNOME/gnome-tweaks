@@ -164,6 +164,7 @@ class ShellThemeTweak(Gtk.Box, Tweak):
                         os.path.exists(os.path.join(d, "gnome-shell", "gnome-shell.css")))
             #the default value to reset the shell is an empty string
             valid.extend( ("",) )
+            valid = set(valid)
 
             #build a combo box with all the valid theme options
             #manually add Adwaita to represent the default
