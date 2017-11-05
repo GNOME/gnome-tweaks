@@ -53,7 +53,7 @@ class GtkThemeSwitcher(GSettingsComboTweak):
         dirs = ( os.path.join(gtweak.DATA_DIR, "themes"),
                  os.path.join(GLib.get_user_data_dir(), "themes"),
                  os.path.join(os.path.expanduser("~"), ".themes"))
-        valid = ['Adwaita', 'HighContrast']
+        valid = ['Adwaita', 'HighContrast', 'HighContrastInverse']
         valid += walk_directories(dirs, lambda d:
                     os.path.exists(os.path.join(d, "gtk-3.0", "gtk.css")) or \
                          os.path.exists(os.path.join(d, "gtk-3.{}".format(gtk_ver))))
