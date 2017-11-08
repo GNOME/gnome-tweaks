@@ -1,3 +1,6 @@
+# SPDX-License-Identifier: GPL-3.0+
+# License-Filename: LICENSES/GPL-3.0
+
 import os.path
 import zipfile
 import tempfile

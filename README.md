@@ -63,3 +63,12 @@ BUGS
 https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool
 
 https://bugzilla.gnome.org/buglist.cgi?quicksearch=product%3Agnome-tweak-tool
+
+LICENSE
+-------
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later version.
+
+data/gnome-tweak-tool-appdata.xml.in is licensed under the Creative Commons
+CC0-1.0 license.
