@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-08-13 19:58+0000\n"
-"PO-Revision-Date: 2017-08-15 19:31+0200\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"POT-Creation-Date: 2017-09-12 15:26+0000\n"
+"PO-Revision-Date: 2017-10-08 17:06+0200\n"
+"Last-Translator: Борисав Живановић <borisavzivanovic@gmail.com>\n"
 "Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.0.3\n"
 
 #: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:311
 #: gtweak/utils.py:327
@@ -399,35 +399,41 @@ msgstr "Нови почетни програм"
 msgid "Add a new application to be run at startup"
 msgstr "Додајте нови програм који ће бити покренут на почетку"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:30
+#: gtweak/tweaks/tweak_group_top_bar.py:27
+msgid "Activities Overview Hot Corner"
+msgstr "Преглед активности у врућем ћошку"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:32
 msgid "Application Menu"
 msgstr "Изборник програма"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:75
 msgid "Top Bar"
 msgstr "Горња трака"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:77
 msgid "Battery Percentage"
 msgstr "Проценат напуњености батерије"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:70
+#. Requires patch from https://bugzilla.gnome.org/688320
+#. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
+#: gtweak/tweaks/tweak_group_top_bar.py:80
 msgid "Clock"
 msgstr "Сат"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:71
+#: gtweak/tweaks/tweak_group_top_bar.py:81
 msgid "Date"
 msgstr "Датум"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:72
+#: gtweak/tweaks/tweak_group_top_bar.py:82
 msgid "Seconds"
 msgstr "Секунде"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:73
+#: gtweak/tweaks/tweak_group_top_bar.py:83
 msgid "Calendar"
 msgstr "Календар"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:74
+#: gtweak/tweaks/tweak_group_top_bar.py:84
 msgid "Week Numbers"
 msgstr "Бројеви недеља"
 
