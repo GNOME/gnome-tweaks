@@ -17,7 +17,8 @@ from gtweak.utils import walk_directories, make_combo_list_with_default, extract
 from gtweak.tweakmodel import Tweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gsettings import GSettingsSetting
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, DarkThemeSwitcher, Title, build_combo_box_text,build_label_beside_widget, FileChooserButton
+from gtweak.gtksettings import GtkSettingsManager
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, Title, build_combo_box_text,build_label_beside_widget, FileChooserButton
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -30,6 +31,9 @@ class GtkThemeSwitcher(GSettingsComboTweak):
             "gtk-theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
             **options)
+
+        self._gtksettings3 = GtkSettingsManager('3.0')
+        self._gtksettings4 = GtkSettingsManager('4.0')
 
     def _get_valid_themes(self):
         """ Only shows themes that have variations for gtk3"""
@@ -45,6 +49,22 @@ class GtkThemeSwitcher(GSettingsComboTweak):
                     os.path.exists(os.path.join(d, "gtk-3.0", "gtk.css")) or \
                          os.path.exists(os.path.join(d, "gtk-3.{}".format(gtk_ver))))
         return set(valid)
+
+    def _on_combo_changed(self, combo):
+        _iter = combo.get_active_iter()
+        if _iter:
+            value = combo.get_model().get_value(_iter, 0)
+            self.settings.set_string(self.key_name, value)
+        # Turn off Global Dark Theme when theme is changed.
+        # https://bugzilla.gnome.org/783666
+        try:
+            self._gtksettings3.set_integer("gtk-application-prefer-dark-theme",
+                                          0)
+            self._gtksettings4.set_integer("gtk-application-prefer-dark-theme",
+                                          0)
+        except:
+            self.notify_information(_("Error writing setting"))
+
 
 class IconThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
@@ -243,7 +263,6 @@ class ShellThemeTweak(Gtk.Box, Tweak):
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Appearance"),
-        DarkThemeSwitcher(),
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
         GSettingsSwitchTweak(_("Animations"), "org.gnome.desktop.interface", "enable-animations"),

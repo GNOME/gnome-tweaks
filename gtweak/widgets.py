@@ -484,51 +484,6 @@ class GetterSetterSwitchTweak(Gtk.Box, Tweak):
     def set_active(self, v):
         raise NotImplementedError()
 
-class DarkThemeSwitcher(Gtk.Box, Tweak):
-    def __init__(self, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL)
-        Tweak.__init__(self, _("Enable dark theme for all applications"),
-                       _("Enable the dark theme hint for all the applications in the session"),
-                       **options)
-
-        self._gtksettings3 = GtkSettingsManager('3.0')
-        self._gtksettings4 = GtkSettingsManager('4.0')
-
-        w = Gtk.Switch()
-        w.set_active(self._gtksettings3.get_integer("gtk-application-prefer-dark-theme"))
-
-        title = _("Global Dark Theme")
-        description = _("Applications need to be restarted for this change to take place.")
-        w.connect("notify::active", self._on_switch_changed)
-
-        hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
-        hbox.props.spacing = UI_BOX_SPACING
-        lbl = Gtk.Label(label=title)
-        lbl.props.ellipsize = Pango.EllipsizeMode.END
-        lbl.props.xalign = 0.0
-        hbox.pack_start(lbl, True, True, 0)
-        hbox.pack_start(w, False, False, 0)
-
-        lbl_des = Gtk.Label()
-        lbl_des.props.xalign = 0.0
-        lbl_des.get_style_context().add_class("dim-label")
-        lbl_des.set_markup("<span size='small'>"+GLib.markup_escape_text(description)+"</span>")
-
-        self.pack_start(hbox, False, False, 0)
-        self.pack_start(lbl_des, False, False,0)
-        self.widget_for_size_group = None
-
-    def _on_switch_changed(self, switch, param):
-        active = switch.get_active()
-
-        try:
-            self._gtksettings3.set_integer("gtk-application-prefer-dark-theme",
-                                          active)
-            self._gtksettings4.set_integer("gtk-application-prefer-dark-theme",
-                                          active)
-        except:
-            self.notify_information(_("Error writing setting"))
-
 class Title(Gtk.Box, Tweak):
     def __init__(self, name, desc, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
