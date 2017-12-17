@@ -8,6 +8,7 @@ import tempfile
 import shutil
 import subprocess
 import glob
+import itertools
 
 import gtweak
 from gtweak.gsettings import GSettingsSetting
@@ -103,6 +104,22 @@ def execute_subprocess(cmd_then_args, block=True):
     if block:
         stdout, stderr = p.communicate()
         return stdout, stderr, p.returncode
+
+def get_resource_dirs(resource):
+    """Returns a list of all known resource dirs for a given resource.
+
+    :param str resource:
+        Name of the resource (e.g. "themes")
+    :return:
+        A list of resource dirs
+    """
+    dirs = [os.path.join(dir, resource)
+            for dir in itertools.chain(GLib.get_system_data_dirs(),
+                                       (gtweak.DATA_DIR,
+                                        GLib.get_user_data_dir()))]
+    dirs += [os.path.join(os.path.expanduser("~"), ".{}".format(resource))]
+
+    return [dir for dir in dirs if os.path.isdir(dir)]
 
 @singleton
 class AutostartManager:
