@@ -100,7 +100,7 @@ class CursorThemeSwitcher(GSettingsComboTweak):
         valid = walk_directories(dirs, lambda d:
                     os.path.isdir(d) and \
                         os.path.exists(os.path.join(d, "cursors")))
-        return valid
+        return set(valid)
 
 class ShellThemeTweak(Gtk.Box, Tweak):
 
