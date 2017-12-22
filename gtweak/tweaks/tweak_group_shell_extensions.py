@@ -43,7 +43,7 @@ class _ExtensionsBlankState(Gtk.Box, Tweak):
                                valign=Gtk.Align.CENTER)
         Tweak.__init__(self, 'extensions', '')
 
-        self.add(Gtk.Image(icon_name="gnome-tweak-tool-symbolic",
+        self.add(Gtk.Image(icon_name="org.gnome.tweaks-symbolic",
                  pixel_size=128, opacity=0.3))
 
         self.add(Gtk.Label(label="<b>" + _("No Extensions Installed") + "</b>",

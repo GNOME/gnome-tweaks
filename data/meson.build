@@ -6,7 +6,7 @@ gui_data = [
 ]
 install_data(gui_data, install_dir: pkgdatadir)
 
-desktop_file = 'gnome-tweak-tool.desktop'
+desktop_file = 'org.gnome.tweaks.desktop'
 i18n.merge_file(desktop_file,
   input: desktop_file + '.in',
   output: desktop_file,
@@ -16,7 +16,7 @@ i18n.merge_file(desktop_file,
   type: 'desktop'
 )
 
-appdata_file = 'gnome-tweak-tool.appdata.xml'
+appdata_file = 'org.gnome.tweaks.appdata.xml'
 i18n.merge_file(appdata_file,
   input: appdata_file + '.in',
   output: appdata_file,

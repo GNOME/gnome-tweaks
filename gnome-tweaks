@@ -58,7 +58,7 @@ if __name__ == '__main__':
     gtweak.LIBEXEC_DIR = LIBEXEC_DIR
     gtweak.ENABLE_TEST = options.test
     gtweak.ALL_TWEAKS = options.load
-    gtweak.APP_NAME = "gnome-tweak-tool"
+    gtweak.APP_NAME = "gnome-tweaks"
     gtweak.VERBOSE = options.verbose
 
     if options.debug:
@@ -70,8 +70,8 @@ if __name__ == '__main__':
     locale.setlocale(locale.LC_ALL, None)
     gettext.install(gtweak.APP_NAME, LOCALE_DIR, names=('gettext', 'ngettext'))
 
-    from gtweak.app import GnomeTweakTool
-    app = GnomeTweakTool()
+    from gtweak.app import GnomeTweaks
+    app = GnomeTweaks()
     signal.signal(signal.SIGINT, signal.SIG_DFL)
     exit_status = app.run(None)
     sys.exit(exit_status)

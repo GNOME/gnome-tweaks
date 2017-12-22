@@ -299,11 +299,11 @@ class Notification:
             self.notification = Notify.Notification.new(
                                     summary,
                                     body,
-                                    'gnome-tweak-tool'
+                                    'gnome-tweaks'
             )
             self.notification.set_hint(
                                 "desktop-entry",
-                                GLib.Variant('s', 'gnome-tweak-tool'))
+                                GLib.Variant('s', 'org.gnome.tweaks'))
             self.notification.show()
         else:
             raise Exception("Not Supported")
@@ -315,14 +315,14 @@ class LogoutNotification:
             self.notification = Notify.Notification.new(
                                 _("Configuration changes require restart"),
                                 _("Your session needs to be restarted for settings to take effect"),
-                                'gnome-tweak-tool')
+                                'gnome-tweaks')
             self.notification.add_action(
                                 "restart",
                                 _("Restart Session"),
                                 self._logout, None, None)
             self.notification.set_hint(
                                 "desktop-entry",
-                                GLib.Variant('s', 'gnome-tweak-tool'))
+                                GLib.Variant('s', 'org.gnome.tweaks'))
             self.notification.show()
         else:
             raise Exception("Not Supported")

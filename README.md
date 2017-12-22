@@ -37,7 +37,7 @@ RUNNING
 -------
  * If you wish to run the application uninstalled, execute;
 
-    ./gnome-tweak-tool [-p /path/to/jhbuild/prefix/]
+    ./gnome-tweaks [-p /path/to/jhbuild/prefix/]
 
 SUPPORTED DESKTOPS
 ------------------
@@ -70,5 +70,5 @@ This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later version.
 
-data/gnome-tweak-tool-appdata.xml.in is licensed under the Creative Commons
+data/org.gnome.tweaks.appdata.xml.in is licensed under the Creative Commons
 CC0-1.0 license.

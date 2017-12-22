@@ -24,7 +24,7 @@ class Window(Gtk.ApplicationWindow):
         else:
             self.set_size_request(950, 700)
         self.set_position(Gtk.WindowPosition.CENTER)
-        self.set_icon_name("gnome-tweak-tool")
+        self.set_icon_name("org.gnome.tweaks")
 
         self.hsize_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
 
