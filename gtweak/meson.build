@@ -37,6 +37,7 @@ tweak_sources = [
   'tweaks/tweak_group_keymouse.py',
   'tweaks/tweak_group_power.py',
   'tweaks/tweak_group_shell_extensions.py',
+  'tweaks/tweak_group_sound.py',
   'tweaks/tweak_group_startup.py',
   'tweaks/tweak_group_test.py',
   'tweaks/tweak_group_top_bar.py',
