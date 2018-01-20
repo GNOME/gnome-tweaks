@@ -8,14 +8,15 @@
 # Benjamin Steinwender <b@stbe.at>, 2014.
 # Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>, 2015.
 # Bernd Homuth <dev@hmt.im>, 2015.
+# Tim Sabsch <tim@sabsch.com>, 2017-2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-11-11 17:31+0000\n"
-"PO-Revision-Date: 2017-11-12 15:43+0100\n"
+"POT-Creation-Date: 2018-01-10 14:05+0000\n"
+"PO-Revision-Date: 2018-01-19 23:48+0100\n"
 "Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.5\n"
 
 #: data/gnome-tweak-tool.appdata.xml.in:7
 msgid "The GNOME Project"
@@ -125,87 +126,91 @@ msgstr "Verschiedenes"
 msgid "Search Tweaks…"
 msgstr "Einstellungen suchen …"
 
-#: gtweak/tweaks/tweak_group_appearance.py:28
+#: gtweak/tweaks/tweak_group_appearance.py:29
 #: gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Anwendungen"
 
-#: gtweak/tweaks/tweak_group_appearance.py:52
+#: gtweak/tweaks/tweak_group_appearance.py:66
+msgid "Error writing setting"
+msgstr "Fehler beim Festlegen"
+
+#: gtweak/tweaks/tweak_group_appearance.py:72
 msgid "Icons"
 msgstr "Symbole"
 
 # Gemeint ist der mauszeiger, nicht die eingabemarke in Texten
-#: gtweak/tweaks/tweak_group_appearance.py:70
+#: gtweak/tweaks/tweak_group_appearance.py:90
 msgid "Cursor"
 msgstr "Mauszeiger"
 
-#: gtweak/tweaks/tweak_group_appearance.py:97
+#: gtweak/tweaks/tweak_group_appearance.py:117
 msgid "Shell"
 msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:97
+#: gtweak/tweaks/tweak_group_appearance.py:117
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Eigene oder Benutzerthemen in der Gnome Shell installieren"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:100
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Unknown error"
 msgstr "Unbekannter Fehler"
 
-#: gtweak/tweaks/tweak_group_appearance.py:105
+#: gtweak/tweaks/tweak_group_appearance.py:125
 msgid "Shell not running"
 msgstr "Shell wird nicht ausgeführt"
 
-#: gtweak/tweaks/tweak_group_appearance.py:127
+#: gtweak/tweaks/tweak_group_appearance.py:147
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Benutzerthema-Erweiterung wurde nicht korrekt installiert"
 
-#: gtweak/tweaks/tweak_group_appearance.py:130
+#: gtweak/tweaks/tweak_group_appearance.py:150
 msgid "Shell user-theme extension not enabled"
 msgstr "Benutzerthema-Erweiterung ist nicht aktiviert"
 
-#: gtweak/tweaks/tweak_group_appearance.py:133
+#: gtweak/tweaks/tweak_group_appearance.py:153
 msgid "Could not list shell extensions"
 msgstr "Shell-Erweiterungen konnten nicht aufgelistet werden"
 
-#: gtweak/tweaks/tweak_group_appearance.py:163
+#: gtweak/tweaks/tweak_group_appearance.py:183
 msgid "<i>Default</i>"
 msgstr "<i>Vorgabe</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:169
+#: gtweak/tweaks/tweak_group_appearance.py:189
 msgid "Select a theme"
 msgstr "Thema wählen"
 
-#: gtweak/tweaks/tweak_group_appearance.py:218
+#: gtweak/tweaks/tweak_group_appearance.py:238
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Thema %s wurde erfolgreich aktualisiert"
 
-#: gtweak/tweaks/tweak_group_appearance.py:220
+#: gtweak/tweaks/tweak_group_appearance.py:240
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Thema %s wurde erfolgreich installiert"
 
-#: gtweak/tweaks/tweak_group_appearance.py:228
+#: gtweak/tweaks/tweak_group_appearance.py:248
 msgid "Error installing theme"
 msgstr "Fehler beim Installieren des Themas"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:253
 msgid "Invalid theme"
 msgstr "Ungültiges Thema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:245
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Appearance"
 msgstr "Erscheinungsbild"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:249
+#: gtweak/tweaks/tweak_group_appearance.py:268
 msgid "Animations"
 msgstr "Animationen"
 
-#: gtweak/tweaks/tweak_group_appearance.py:250
+#: gtweak/tweaks/tweak_group_appearance.py:269
 msgid "Themes"
 msgstr "Themen"
 
@@ -411,6 +416,23 @@ msgstr "Neue Start-Anwendung"
 #: gtweak/tweaks/tweak_group_startup.py:256
 msgid "Add a new application to be run at startup"
 msgstr "Eine neue Anwendung hinzufügen, die beim Start ausgeführt werden soll"
+
+#: gtweak/tweaks/tweak_group_sound.py:12
+msgid "Sound"
+msgstr "Audio"
+
+#: gtweak/tweaks/tweak_group_sound.py:13
+msgid "Over-Amplification"
+msgstr "Übersteuerung"
+
+#: gtweak/tweaks/tweak_group_sound.py:14
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Erlaubt das Erhöhen der Lautstärke auf über 100%. Dies kann zu einem Verlust "
+"der Klangqualität führen; Es ist besser, die Lautstärke-Einstellungen der "
+"Anwendung zu erhöhen, wenn möglich."
 
 #: gtweak/tweaks/tweak_group_top_bar.py:13
 msgid "Activities Overview Hot Corner"
@@ -813,24 +835,16 @@ msgstr ""
 msgid "Restart Session"
 msgstr "Sitzung neu starten"
 
-#: gtweak/widgets.py:490
-msgid "Enable dark theme for all applications"
-msgstr "Dunkles Thema für alle Anwendungen aktivieren"
+#~ msgid "Enable dark theme for all applications"
+#~ msgstr "Dunkles Thema für alle Anwendungen aktivieren"
 
-#: gtweak/widgets.py:491
-msgid "Enable the dark theme hint for all the applications in the session"
-msgstr "Das dunkle Thema für alle Anwendungen in der Sitzung aktivieren"
+#~ msgid "Enable the dark theme hint for all the applications in the session"
+#~ msgstr "Das dunkle Thema für alle Anwendungen in der Sitzung aktivieren"
 
-#: gtweak/widgets.py:500
-msgid "Global Dark Theme"
-msgstr "Globales dunkles Thema"
+#~ msgid "Global Dark Theme"
+#~ msgstr "Globales dunkles Thema"
 
-#: gtweak/widgets.py:501
-msgid "Applications need to be restarted for this change to take place."
-msgstr ""
-"Die Anwendungen müssen neu gestartet werden, damit die Änderungen wirksam "
-"werden."
-
-#: gtweak/widgets.py:530
-msgid "Error writing setting"
-msgstr "Fehler beim Festlegen"
+#~ msgid "Applications need to be restarted for this change to take place."
+#~ msgstr ""
+#~ "Die Anwendungen müssen neu gestartet werden, damit die Änderungen wirksam "
+#~ "werden."
