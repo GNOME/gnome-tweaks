@@ -52,17 +52,15 @@ TODO
 
 HOMEPAGE
 --------
-https://wiki.gnome.org/Apps/GnomeTweakTool
+https://wiki.gnome.org/Apps/Tweaks
 
 DEVELOPMENT REPOSITORY
 ----------------------
-https://git.gnome.org/browse/gnome-tweak-tool
+https://gitlab.gnome.org/GNOME/gnome-tweaks
 
 BUGS
 ----
-https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-tweak-tool
-
-https://bugzilla.gnome.org/buglist.cgi?quicksearch=product%3Agnome-tweak-tool
+https://gitlab.gnome.org/GNOME/gnome-tweaks/issues
 
 LICENSE
 -------
