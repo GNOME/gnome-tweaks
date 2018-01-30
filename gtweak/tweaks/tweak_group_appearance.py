@@ -18,7 +18,7 @@ from gtweak.tweakmodel import Tweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gtksettings import GtkSettingsManager
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, Title, build_combo_box_text,build_label_beside_widget, FileChooserButton
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, GSettingsComboEnumTweak, Title, build_combo_box_text,build_label_beside_widget, FileChooserButton, GSettingsFileChooserButtonTweak
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -262,5 +262,19 @@ TWEAK_GROUPS = [
         CursorThemeSwitcher(),
         IconThemeSwitcher(),
         ShellThemeTweak(loaded=_shell_loaded),
+
+        Title(_("Background"), "", uid="title-theme"),
+        GSettingsFileChooserButtonTweak(_("Image"),"org.gnome.desktop.background", "picture-uri",
+            local_only=True, mimetypes=["application/xml","image/png","image/jpeg"]),
+        GSettingsComboEnumTweak(_("Adjustment"),"org.gnome.desktop.background", "picture-options"),
+
+        Title(_("Lock Screen"), "", uid="title-theme"),
+        GSettingsFileChooserButtonTweak(_("Image"),"org.gnome.desktop.screensaver", "picture-uri",
+            local_only=True, mimetypes=["application/xml","image/png","image/jpeg"]),
+        GSettingsComboEnumTweak(_("Adjustment"),"org.gnome.desktop.screensaver", "picture-options"),
+
+        # Title(_("Files"), ""),
+        # GSettingsSwitchTweak(_("Use location entry"), "org.gnome.nautilus.preferences",
+        # "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml"),
     ),
 ]
