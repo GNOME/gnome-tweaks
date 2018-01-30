@@ -31,7 +31,8 @@ shell_sources = [
 tweak_sources = [
   'tweaks/__init__.py',
   'tweaks/tweak_group_appearance.py',
-  'tweaks/tweak_group_desktop.py',
+# Distros that still include Nautilus 3.26 should uncomment the next line
+#  'tweaks/tweak_group_desktop.py',
   'tweaks/tweak_group_font.py',
   'tweaks/tweak_group_keymouse.py',
   'tweaks/tweak_group_power.py',
