@@ -323,7 +323,7 @@ class ClickMethod(Gtk.ListBox, Tweak):
 
         lbl = Gtk.Label(_("Disabled"), xalign=0)
         lbl.props.xalign = 0.0
-        desc = _("Don't use mouse click emulation.")
+        desc = _("Don’t use mouse click emulation.")
         lbl_desc = Gtk.Label()
         lbl_desc.set_line_wrap(True)
         lbl_desc.get_style_context().add_class("dim-label")
