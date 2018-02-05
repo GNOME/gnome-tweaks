@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-11-04 16:32+0000\n"
-"PO-Revision-Date: 2017-11-06 14:40+0700\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
+"POT-Creation-Date: 2018-01-30 19:20+0000\n"
+"PO-Revision-Date: 2018-02-05 12:05+0700\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -18,26 +17,26 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:7
+#: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Proyek GNOME"
 
-#: data/gnome-tweak-tool.appdata.xml.in:9 gtweak/app.py:36 gtweak/utils.py:311
-#: gtweak/utils.py:327
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:315
+#: gtweak/utils.py:331
 msgid "GNOME Tweaks"
 msgstr "GNOME Oprek"
 
-#: data/gnome-tweak-tool.appdata.xml.in:10 data/gnome-tweak-tool.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Ubah pengaturan tingkat lanjut GNOME 3"
 
-#: data/gnome-tweak-tool.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:12
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "GNOME Oprek memungkinkan menyetel opsi-opsi tingkat lanjut GNOME."
 
-#: data/gnome-tweak-tool.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:15
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -46,17 +45,17 @@ msgstr ""
 "mengelola aplikasi awal mula, dan memfungsikan ikon desktop selain "
 "pengaturan-pengaturan lain."
 
-#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:103
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
 msgid "Tweaks"
 msgstr "Oprekan"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-tweak-tool.desktop.in:6
-msgid "gnome-tweak-tool"
-msgstr "gnome-tweak-tool"
+#: data/org.gnome.tweaks.desktop.in:6
+msgid "org.gnome.tweaks"
+msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-tweak-tool.desktop.in:13
+#: data/org.gnome.tweaks.desktop.in:14
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
@@ -79,386 +78,408 @@ msgstr "Tent_ang"
 msgid "_Quit"
 msgstr "_Keluar"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:67
 msgid "Reset to Defaults"
 msgstr "Reset ke Baku"
 
-#: gtweak/app.py:81
+#: gtweak/app.py:68
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Reset semua pengaturan oprekan ke keadaan baku asli?"
 
-#: gtweak/app.py:102 gtweak/app.py:104
+#: gtweak/app.py:89 gtweak/app.py:91
 msgid "GNOME Shell"
 msgstr "Shell GNOME"
 
-#: gtweak/app.py:104
+#: gtweak/app.py:91
 #, python-format
 msgid "(%s mode)"
 msgstr "(mode %s)"
 
-#: gtweak/app.py:107
+#: gtweak/app.py:94
 msgid "GNOME Shell is not running"
 msgstr "Shell GNOME tidak berjalan"
 
-#: gtweak/app.py:109
+#: gtweak/app.py:96
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:116
+#: gtweak/app.py:103
 msgid "Homepage"
 msgstr "Beranda"
 
-#: gtweak/tweakmodel.py:43
+#: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
 msgstr "Rupa-rupa"
 
-#: gtweak/tweakview.py:119
+#: gtweak/tweakview.py:105
 msgid "Search Tweaks…"
 msgstr "Oprekan Pencarian..."
 
-#: gtweak/tweaks/tweak_group_appearance.py:41
-#: gtweak/tweaks/tweak_group_startup.py:57
+#: gtweak/tweaks/tweak_group_appearance.py:29
+#: gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: gtweak/tweaks/tweak_group_appearance.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:63
+msgid "Error writing setting"
+msgstr "Galat saat menulis pengaturan"
+
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Ikon"
 
-#: gtweak/tweaks/tweak_group_appearance.py:83
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Kursor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:108
 msgid "Shell"
 msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:108
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Pasang tema pengguna atau ubahan bagi gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:111
 msgid "Unknown error"
 msgstr "Galat tak dikenal"
 
-#: gtweak/tweaks/tweak_group_appearance.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:116
 msgid "Shell not running"
 msgstr "Shell tidak sedang berjalan"
 
-#: gtweak/tweaks/tweak_group_appearance.py:140
+#: gtweak/tweaks/tweak_group_appearance.py:138
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Ekstensi user-theme shell tak dipasang secara benar"
 
-#: gtweak/tweaks/tweak_group_appearance.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:141
 msgid "Shell user-theme extension not enabled"
 msgstr "Ekstensi user-theme shell tak diaktifkan"
 
-#: gtweak/tweaks/tweak_group_appearance.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:144
 msgid "Could not list shell extensions"
 msgstr "Tak bisa membuat daftar ekstensi shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:176
+#: gtweak/tweaks/tweak_group_appearance.py:174
 msgid "<i>Default</i>"
 msgstr "<i>Bawaan</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:182
+#: gtweak/tweaks/tweak_group_appearance.py:180
 msgid "Select a theme"
 msgstr "Pilih tema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:229
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Tema %s sukses dimutakhirkan"
 
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:231
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Tema %s sukses dipasang"
 
-#: gtweak/tweaks/tweak_group_appearance.py:241
+#: gtweak/tweaks/tweak_group_appearance.py:239
 msgid "Error installing theme"
 msgstr "Galat saat memasang tema"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:246
+#: gtweak/tweaks/tweak_group_appearance.py:244
 msgid "Invalid theme"
 msgstr "Tema tak valid"
 
-#: gtweak/tweaks/tweak_group_appearance.py:258
+#: gtweak/tweaks/tweak_group_appearance.py:256
 msgid "Appearance"
 msgstr "Penampilan"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:262
+#: gtweak/tweaks/tweak_group_appearance.py:259
 msgid "Animations"
 msgstr "Animasi"
 
-#: gtweak/tweaks/tweak_group_appearance.py:263
+#: gtweak/tweaks/tweak_group_appearance.py:260
 msgid "Themes"
 msgstr "Tema"
 
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Show Icons"
-msgstr "Tampilkan Ikon"
-
-#: gtweak/tweaks/tweak_group_desktop.py:23
-msgid "Desktop"
-msgstr "Desktop"
-
-#: gtweak/tweaks/tweak_group_desktop.py:24
-msgid "Icons on Desktop"
-msgstr "Ikon pada Desktop"
-
-#: gtweak/tweaks/tweak_group_desktop.py:26
-msgid "Home"
-msgstr "Rumah"
-
-#: gtweak/tweaks/tweak_group_desktop.py:27
-msgid "Network Servers"
-msgstr "Server Jaringan"
-
-#: gtweak/tweaks/tweak_group_desktop.py:28
-msgid "Trash"
-msgstr "Tong Sampah"
-
-#: gtweak/tweaks/tweak_group_desktop.py:29
-msgid "Mounted Volumes"
-msgstr "Volume Dikait"
-
-#: gtweak/tweaks/tweak_group_desktop.py:30
+#: gtweak/tweaks/tweak_group_appearance.py:266
 msgid "Background"
 msgstr "Latar Belakang"
 
-#: gtweak/tweaks/tweak_group_desktop.py:31
-#: gtweak/tweaks/tweak_group_desktop.py:34
+#: gtweak/tweaks/tweak_group_appearance.py:267
+#: gtweak/tweaks/tweak_group_appearance.py:272
 msgid "Image"
 msgstr "Gambar"
 
-#: gtweak/tweaks/tweak_group_desktop.py:32
-#: gtweak/tweaks/tweak_group_desktop.py:35
+#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:274
 msgid "Adjustment"
 msgstr "Penyesuaian"
 
-#: gtweak/tweaks/tweak_group_desktop.py:33
+#: gtweak/tweaks/tweak_group_appearance.py:271
 msgid "Lock Screen"
 msgstr "Kunci Layar"
 
-#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:35
+#: gtweak/tweaks/tweak_group_desktop.py:7
+msgid "Show Icons"
+msgstr "Tampilkan Ikon"
+
+#: gtweak/tweaks/tweak_group_desktop.py:10
+msgid "Desktop"
+msgstr "Desktop"
+
+#: gtweak/tweaks/tweak_group_desktop.py:11
+msgid "Icons on Desktop"
+msgstr "Ikon pada Desktop"
+
+#: gtweak/tweaks/tweak_group_desktop.py:13
+msgid "Home"
+msgstr "Rumah"
+
+#: gtweak/tweaks/tweak_group_desktop.py:14
+msgid "Network Servers"
+msgstr "Server Jaringan"
+
+#: gtweak/tweaks/tweak_group_desktop.py:15
+msgid "Trash"
+msgstr "Tong Sampah"
+
+#: gtweak/tweaks/tweak_group_desktop.py:16
+msgid "Mounted Volumes"
+msgstr "Volume Dikait"
+
+#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
 msgid "Hinting"
 msgstr "Hinting"
 
-#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:67
+#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
 msgid "Antialiasing"
 msgstr "Antialias"
 
-#: gtweak/tweaks/tweak_group_font.py:44
+#: gtweak/tweaks/tweak_group_font.py:31
 msgid "Full"
 msgstr "Penuh"
 
-#: gtweak/tweaks/tweak_group_font.py:50
+#: gtweak/tweaks/tweak_group_font.py:37
 msgid "Medium"
 msgstr "Sedang"
 
-#: gtweak/tweaks/tweak_group_font.py:56
+#: gtweak/tweaks/tweak_group_font.py:43
 msgid "Slight"
 msgstr "Tipis"
 
-#: gtweak/tweaks/tweak_group_font.py:62 gtweak/tweaks/tweak_group_font.py:87
+#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
 msgid "None"
 msgstr "Nihil"
 
-#: gtweak/tweaks/tweak_group_font.py:75
+#: gtweak/tweaks/tweak_group_font.py:62
 msgid "Subpixel (for LCD screens)"
 msgstr "Subpixel (untuk layar LCD)"
 
-#: gtweak/tweaks/tweak_group_font.py:81
+#: gtweak/tweaks/tweak_group_font.py:68
 msgid "Standard (grayscale)"
 msgstr "Standar (grayscale)"
 
-#: gtweak/tweaks/tweak_group_font.py:112
+#: gtweak/tweaks/tweak_group_font.py:99
 msgid "Fonts"
 msgstr "Fonta"
 
-#: gtweak/tweaks/tweak_group_font.py:113
+#: gtweak/tweaks/tweak_group_font.py:100
 msgid "Window Title"
 msgstr "Judul Jendela"
 
-#: gtweak/tweaks/tweak_group_font.py:114
+#: gtweak/tweaks/tweak_group_font.py:101
 msgid "Interface"
 msgstr "Antar Muka"
 
-#: gtweak/tweaks/tweak_group_font.py:115
+#: gtweak/tweaks/tweak_group_font.py:102
 msgid "Document"
 msgstr "Dokumen"
 
-#: gtweak/tweaks/tweak_group_font.py:116
+#: gtweak/tweaks/tweak_group_font.py:103
 msgid "Monospace"
 msgstr "Monospace"
 
-#: gtweak/tweaks/tweak_group_font.py:118
+#: gtweak/tweaks/tweak_group_font.py:105
 msgid "Scaling Factor"
 msgstr "Faktor Penskalaan"
 
-#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:318
-#: gtweak/tweaks/tweak_group_keymouse.py:61
-#: gtweak/tweaks/tweak_group_keymouse.py:197
+#: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_keymouse.py:48
+#: gtweak/tweaks/tweak_group_keymouse.py:184
+#: gtweak/tweaks/tweak_group_keymouse.py:324
 msgid "Disabled"
 msgstr "Dimatikan"
 
-#: gtweak/tweaks/tweak_group_xkb.py:179
+#: gtweak/tweaks/tweak_group_xkb.py:166
 msgid "Typing"
 msgstr "Mengetik"
 
-#: gtweak/tweaks/tweak_group_power.py:36
+#: gtweak/tweaks/tweak_group_power.py:22
 msgid "Suspend when laptop lid is closed"
 msgstr "Suspensi ketika lid laptop ditutup"
 
-#: gtweak/tweaks/tweak_group_power.py:60
+#: gtweak/tweaks/tweak_group_power.py:46
 msgid "Power"
 msgstr "Daya"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:46
+#: gtweak/tweaks/tweak_group_shell_extensions.py:49
 msgid "No Extensions Installed"
 msgstr "Tak Ada Ekstensi Terpasang"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:53
+#: gtweak/tweaks/tweak_group_shell_extensions.py:56
 msgid "Browse in Software"
 msgstr "Ramban di Perangkat Lunak"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:115
+#: gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Extension downloading"
 msgstr "Pengunduhan ekstensi"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:117
+#: gtweak/tweaks/tweak_group_shell_extensions.py:120
 msgid "Error loading extension"
 msgstr "Galat saat memuat ekstensi"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
+#: gtweak/tweaks/tweak_group_shell_extensions.py:122
 msgid "Extension does not support shell version"
 msgstr "Ekstensi tak mendukung versi shell"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
+#: gtweak/tweaks/tweak_group_shell_extensions.py:124
 msgid "Unknown extension error"
 msgstr "Galat ekstensi yang tak dikenal"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:169
+#: gtweak/tweaks/tweak_group_shell_extensions.py:172
 msgid "Updating"
 msgstr "Memutakhirkan"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:189
+#: gtweak/tweaks/tweak_group_shell_extensions.py:192
 msgid "Error"
 msgstr "Galat"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
+#: gtweak/tweaks/tweak_group_shell_extensions.py:196
 msgid "Update"
 msgstr "Mutakhirkan"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:235
+#: gtweak/tweaks/tweak_group_shell_extensions.py:238
 msgid "Extensions"
 msgstr "Ekstensi"
 
-#: gtweak/tweaks/tweak_group_startup.py:45
+#: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Aplikasi awal mula secara otomatis dimulai saat Anda masuk."
 
-#: gtweak/tweaks/tweak_group_startup.py:46
-#: gtweak/tweaks/tweak_group_startup.py:320
+#: gtweak/tweaks/tweak_group_startup.py:31
+#: gtweak/tweaks/tweak_group_startup.py:305
 msgid "Startup Applications"
 msgstr "Aplikasi Awal Mula"
 
-#: gtweak/tweaks/tweak_group_startup.py:63
+#: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
 msgstr "Cari Aplikasi..."
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:73
+#: gtweak/tweaks/tweak_group_startup.py:58
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:92
+#: gtweak/tweaks/tweak_group_startup.py:77
 msgid "running"
 msgstr "berjalan"
 
-#: gtweak/tweaks/tweak_group_startup.py:102
+#: gtweak/tweaks/tweak_group_startup.py:87
 msgid "_Close"
 msgstr "_Tutup"
 
-#: gtweak/tweaks/tweak_group_startup.py:103
+#: gtweak/tweaks/tweak_group_startup.py:88
 msgid "_Add"
 msgstr "T_ambah"
 
-#: gtweak/tweaks/tweak_group_startup.py:246
+#: gtweak/tweaks/tweak_group_startup.py:231
 msgid "Remove"
 msgstr "Hapus"
 
-#: gtweak/tweaks/tweak_group_startup.py:270
+#: gtweak/tweaks/tweak_group_startup.py:255
 msgid "New startup application"
 msgstr "Aplikasi awal mula baru"
 
-#: gtweak/tweaks/tweak_group_startup.py:271
+#: gtweak/tweaks/tweak_group_startup.py:256
 msgid "Add a new application to be run at startup"
 msgstr "Tambahkan aplikasi baru untuk dijalankan saat awal mula"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:27
+#: gtweak/tweaks/tweak_group_sound.py:12
+msgid "Sound"
+msgstr "Suara"
+
+#: gtweak/tweaks/tweak_group_sound.py:13
+msgid "Over-Amplification"
+msgstr "Penguatan Berlebih"
+
+#: gtweak/tweaks/tweak_group_sound.py:14
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Memungkinkan menaikkan volume di atas 100%. Hal ini dapat mengakibatkan "
+"hilangnya kualitas audio; lebih baik untuk meningkatkan pengaturan volume "
+"aplikasi, jika memungkinkan."
+
+#: gtweak/tweaks/tweak_group_top_bar.py:13
 msgid "Activities Overview Hot Corner"
 msgstr "Pojok Panas Ringkasan Aktivitas"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:32
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Application Menu"
 msgstr "Menu Aplikasi"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:75
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Top Bar"
 msgstr "Bilah Puncak"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:77
+#: gtweak/tweaks/tweak_group_top_bar.py:63
 msgid "Battery Percentage"
 msgstr "Persentase Baterai"
 
 #. Requires patch from https://bugzilla.gnome.org/688320
 #. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
-#: gtweak/tweaks/tweak_group_top_bar.py:80
+#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Clock"
 msgstr "Jam"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:81
+#: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Date"
 msgstr "Tanggal"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:82
+#: gtweak/tweaks/tweak_group_top_bar.py:68
 msgid "Seconds"
 msgstr "Detik"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:83
+#: gtweak/tweaks/tweak_group_top_bar.py:69
 msgid "Calendar"
 msgstr "Kalender"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:84
+#: gtweak/tweaks/tweak_group_top_bar.py:70
 msgid "Week Numbers"
 msgstr "Nomor Minggu"
 
-#: gtweak/tweaks/tweak_group_windows.py:32
-#: gtweak/tweaks/tweak_group_windows.py:319
+#: gtweak/tweaks/tweak_group_windows.py:19
+#: gtweak/tweaks/tweak_group_windows.py:306
 msgid "Window Focus"
 msgstr "Fokus Jendela"
 
-#: gtweak/tweaks/tweak_group_windows.py:32
-#: gtweak/tweaks/tweak_group_windows.py:50
-#: gtweak/tweaks/tweak_group_windows.py:319
+#: gtweak/tweaks/tweak_group_windows.py:19
+#: gtweak/tweaks/tweak_group_windows.py:37
+#: gtweak/tweaks/tweak_group_windows.py:306
 msgid "Click to Focus"
 msgstr "Klik untuk Fokus"
 
-#: gtweak/tweaks/tweak_group_windows.py:52
+#: gtweak/tweaks/tweak_group_windows.py:39
 msgid "Windows are focused when they are clicked."
 msgstr "Jendela terfokus saat diklik."
 
-#: gtweak/tweaks/tweak_group_windows.py:76
+#: gtweak/tweaks/tweak_group_windows.py:63
 msgid "Sloppy"
 msgstr "Tidak Rapi"
 
-#: gtweak/tweaks/tweak_group_windows.py:78
+#: gtweak/tweaks/tweak_group_windows.py:65
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -466,12 +487,12 @@ msgstr ""
 "Jendela difokuskan saat melayang dengan pointer. Jendela tetap fokus saat "
 "destop melayang."
 
-#: gtweak/tweaks/tweak_group_windows.py:102
-#: gtweak/tweaks/tweak_group_windows.py:325
+#: gtweak/tweaks/tweak_group_windows.py:89
+#: gtweak/tweaks/tweak_group_windows.py:312
 msgid "Secondary-Click"
 msgstr "Klik Sekunder"
 
-#: gtweak/tweaks/tweak_group_windows.py:104
+#: gtweak/tweaks/tweak_group_windows.py:91
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -479,61 +500,61 @@ msgstr ""
 "Jendela difokuskan saat melayang dengan pointer. Melayang destop menghapus "
 "fokus dari jendela sebelumnya."
 
-#: gtweak/tweaks/tweak_group_windows.py:185
+#: gtweak/tweaks/tweak_group_windows.py:172
 msgid "Placement"
 msgstr "Penempatan"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:199
+#: gtweak/tweaks/tweak_group_windows.py:186
 msgid "Left"
 msgstr "Kiri"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:205
+#: gtweak/tweaks/tweak_group_windows.py:192
 msgid "Right"
 msgstr "Kanan"
 
-#: gtweak/tweaks/tweak_group_windows.py:237
+#: gtweak/tweaks/tweak_group_windows.py:224
 msgid "Window scaling"
 msgstr "Penskalaan jendela"
 
-#: gtweak/tweaks/tweak_group_windows.py:237
+#: gtweak/tweaks/tweak_group_windows.py:224
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Setel faktor skala jendela GDK untuk HiDPI"
 
-#: gtweak/tweaks/tweak_group_windows.py:265
+#: gtweak/tweaks/tweak_group_windows.py:252
 #, python-brace-format
 msgid "Settings will be reverted in {0} second"
 msgid_plural "Settings will be reverted in {0} seconds"
 msgstr[0] "Pengaturan akan dikembalikan dalam {0} detik"
 
-#: gtweak/tweaks/tweak_group_windows.py:281
+#: gtweak/tweaks/tweak_group_windows.py:268
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "Apakah Anda ingin mempertahankan pengaturan HiDPI ini?"
 
-#: gtweak/tweaks/tweak_group_windows.py:288
+#: gtweak/tweaks/tweak_group_windows.py:275
 msgid "Revert Settings"
 msgstr "Balikkan Tatanan"
 
-#: gtweak/tweaks/tweak_group_windows.py:289
+#: gtweak/tweaks/tweak_group_windows.py:276
 msgid "Keep Changes"
 msgstr "Simpan Perubahan"
 
-#: gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_windows.py:292
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: gtweak/tweaks/tweak_group_windows.py:311
+#: gtweak/tweaks/tweak_group_windows.py:298
 msgid "Windows"
 msgstr "Jendela"
 
-#: gtweak/tweaks/tweak_group_windows.py:312
+#: gtweak/tweaks/tweak_group_windows.py:299
 msgid "Attach Modal Dialogs"
 msgstr "Lampirkan Dialog Modal"
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: gtweak/tweaks/tweak_group_windows.py:300
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -541,47 +562,47 @@ msgstr ""
 "Saat masuk, jendela dialog modal terpasang ke jendela induk mereka, dan "
 "tidak bisa digerakkan."
 
-#: gtweak/tweaks/tweak_group_windows.py:314
+#: gtweak/tweaks/tweak_group_windows.py:301
 msgid "Resize with Secondary-Click"
 msgstr "Ubah Ukuran dengan Klik Sekunder"
 
-#: gtweak/tweaks/tweak_group_windows.py:315
+#: gtweak/tweaks/tweak_group_windows.py:302
 msgid "Window Action Key"
 msgstr "Tombol Aksi Jendela"
 
-#: gtweak/tweaks/tweak_group_windows.py:321
+#: gtweak/tweaks/tweak_group_windows.py:308
 msgid "Raise Windows When Focused"
 msgstr "Naikkan Jendela Saat Fokus"
 
-#: gtweak/tweaks/tweak_group_windows.py:322
+#: gtweak/tweaks/tweak_group_windows.py:309
 msgid "Titlebar Actions"
 msgstr "Aksi Bilah Judul"
 
-#: gtweak/tweaks/tweak_group_windows.py:323
+#: gtweak/tweaks/tweak_group_windows.py:310
 msgid "Double-Click"
 msgstr "Klik Ganda"
 
-#: gtweak/tweaks/tweak_group_windows.py:324
+#: gtweak/tweaks/tweak_group_windows.py:311
 msgid "Middle-Click"
 msgstr "Klik Tengah"
 
-#: gtweak/tweaks/tweak_group_windows.py:326
+#: gtweak/tweaks/tweak_group_windows.py:313
 msgid "Titlebar Buttons"
 msgstr "Tombol Bilah Judul"
 
-#: gtweak/tweaks/tweak_group_windows.py:327
+#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Maximize"
 msgstr "Maksimalkan"
 
-#: gtweak/tweaks/tweak_group_windows.py:328
+#: gtweak/tweaks/tweak_group_windows.py:315
 msgid "Minimize"
 msgstr "Minimalkan"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:33
+#: gtweak/tweaks/tweak_group_workspaces.py:19
 msgid "Dynamic Workspaces"
 msgstr "Ruang Kerja Dinamis"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:52
+#: gtweak/tweaks/tweak_group_workspaces.py:38
 msgid ""
 "Workspaces can be created on demand, and are automatically removed when "
 "empty."
@@ -589,114 +610,114 @@ msgstr ""
 "Ruang kerja dapat dibuat sesuai permintaan, dan secara otomatis dihapus saat "
 "kosong."
 
-#: gtweak/tweaks/tweak_group_workspaces.py:76
+#: gtweak/tweaks/tweak_group_workspaces.py:62
 msgid "Static Workspaces"
 msgstr "Ruang Kerja Statis"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:78
+#: gtweak/tweaks/tweak_group_workspaces.py:64
 msgid "Number of workspaces is fixed."
 msgstr "Cacah ruang kerja adalah tetap"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:109
-#: gtweak/tweaks/tweak_group_workspaces.py:188
+#: gtweak/tweaks/tweak_group_workspaces.py:95
+#: gtweak/tweaks/tweak_group_workspaces.py:174
 msgid "Workspaces"
 msgstr "Ruang kerja"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:111
-#: gtweak/tweaks/tweak_group_workspaces.py:191
+#: gtweak/tweaks/tweak_group_workspaces.py:97
+#: gtweak/tweaks/tweak_group_workspaces.py:177
 msgid "Display Handling"
 msgstr "Penanganan Tampilan"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:111
-#: gtweak/tweaks/tweak_group_workspaces.py:153
+#: gtweak/tweaks/tweak_group_workspaces.py:97
+#: gtweak/tweaks/tweak_group_workspaces.py:139
 msgid "Workspaces span displays"
 msgstr "Ruang kerja menampilkan span"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:127
+#: gtweak/tweaks/tweak_group_workspaces.py:113
 msgid "Workspaces on primary display only"
 msgstr "Ruang kerja hanya pada tampilan primer"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:129
+#: gtweak/tweaks/tweak_group_workspaces.py:115
 msgid "Additional displays are treated as independent workspaces."
 msgstr "Tampilan tambahan diperlakukan sebagai ruang kerja independen."
 
-#: gtweak/tweaks/tweak_group_workspaces.py:155
+#: gtweak/tweaks/tweak_group_workspaces.py:141
 msgid "The current workspace includes additional displays."
 msgstr "Ruang kerja saat ini mencakup tampilan tambahan."
 
-#: gtweak/tweaks/tweak_group_workspaces.py:190
+#: gtweak/tweaks/tweak_group_workspaces.py:176
 msgid "Number of Workspaces"
 msgstr "Cacah Ruang Kerja"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:35
+#: gtweak/tweaks/tweak_group_keymouse.py:22
 msgid "Emacs Input"
 msgstr "Masukan Emacs"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:38
+#: gtweak/tweaks/tweak_group_keymouse.py:25
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr ""
 "Ganti pintasan untuk menggunakan penguncian tombol dari peyunting Emacs."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:54
-#: gtweak/tweaks/tweak_group_keymouse.py:122
+#: gtweak/tweaks/tweak_group_keymouse.py:41
+#: gtweak/tweaks/tweak_group_keymouse.py:109
 msgid "Compose Key"
 msgstr "Tombol Gubah"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:110
-#: gtweak/tweaks/tweak_group_keymouse.py:192
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:97
+#: gtweak/tweaks/tweak_group_keymouse.py:179
 msgid "Scroll Lock"
 msgstr "Scroll Lock"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
 #: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:111
 msgid "PrtScn"
 msgstr "PrtScn"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:112
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:99
 msgid "Menu"
 msgstr "Menu"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:113
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:100
 msgid "Right Alt"
 msgstr "Alt Kanan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:114
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:101
 msgid "Right Ctrl"
 msgstr "Ctrl Kanan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:115
-#: gtweak/tweaks/tweak_group_keymouse.py:214
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:102
+#: gtweak/tweaks/tweak_group_keymouse.py:201
 msgid "Right Super"
 msgstr "Super Kanan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:116
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:103
 msgid "Caps Lock"
 msgstr "Caps Lock"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:117
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:104
 msgid "Left Ctrl"
 msgstr "Ctrl Kiri"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:65
+#: gtweak/tweaks/tweak_group_keymouse.py:52
 msgid "Allows entering additional characters."
 msgstr "Memungkinkan memasukkan karakter tambahan."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:140
+#: gtweak/tweaks/tweak_group_keymouse.py:127
 msgid ""
 "The compose key allows a wide variety of characters to be entered. To use "
 "it, press the compose key and then a sequence of characters.\n"
@@ -713,112 +734,136 @@ msgstr ""
 "akan menulis <b>©</b>, <b>a</b> diikuti oleh <b>'</b>  akan menulis <b>á</"
 "b>.\n"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:203
+#: gtweak/tweaks/tweak_group_keymouse.py:190
 msgid "Overview Shortcut"
 msgstr "Ikhtisar Pintasan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:210
+#: gtweak/tweaks/tweak_group_keymouse.py:197
 msgid "Left Super"
 msgstr "Super Kiri"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:237
-#: gtweak/tweaks/tweak_group_keymouse.py:245
+#: gtweak/tweaks/tweak_group_keymouse.py:224
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Additional Layout Options"
 msgstr "Opsi Susunan Tambahan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:265
+#: gtweak/tweaks/tweak_group_keymouse.py:254
+#: gtweak/tweaks/tweak_group_keymouse.py:393
+msgid "Mouse Click Emulation"
+msgstr "Emulasi Klik Tetikus"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:272
+msgid "Fingers"
+msgstr "Jari"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:274
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+"Klik touchpad dengan dua jari untuk klik kanan dan tiga jari untuk klik "
+"tengah."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:298
+msgid "Area"
+msgstr "Wilayah"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:300
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+"Klik kanan bawah touchpad untuk klik kanan dan tengah bawah untuk klik "
+"tengah."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:326
+msgid "Don’t use mouse click emulation."
+msgstr "Jangan gunakan emulasi klik tetikus."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:363
 msgid "Keyboard & Mouse"
 msgstr "Papan Tik & Tetikus"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:266
+#: gtweak/tweaks/tweak_group_keymouse.py:364
 msgid "Keyboard"
 msgstr "Papan Tik"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:267
+#: gtweak/tweaks/tweak_group_keymouse.py:365
 msgid "Show Extended Input Sources"
 msgstr "Tampilkan Sumber Masukan yang Diperluas"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:270
+#: gtweak/tweaks/tweak_group_keymouse.py:368
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Meningkatkan pilihan sumber masukan dalam aplikasi Pengaturan."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:276
+#: gtweak/tweaks/tweak_group_keymouse.py:374
 msgid "Mouse"
 msgstr "Tetikus"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:277
+#: gtweak/tweaks/tweak_group_keymouse.py:375
 msgid "Acceleration Profile"
 msgstr "Profil Akselerasi"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:281
+#: gtweak/tweaks/tweak_group_keymouse.py:379
 msgid "Pointer Location"
 msgstr "Lokasi Penunjuk"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:285
+#: gtweak/tweaks/tweak_group_keymouse.py:383
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Tekan tombol Ctrl untuk menyorot penunjuk."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:286
+#: gtweak/tweaks/tweak_group_keymouse.py:384
 msgid "Middle Click Paste"
 msgstr "Tempel Klik Tengah"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:290
+#: gtweak/tweaks/tweak_group_keymouse.py:388
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:291
-msgid "Click Method"
-msgstr "Metode Klik"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:295
+#: gtweak/tweaks/tweak_group_keymouse.py:389
 msgid "Disable While Typing"
 msgstr "Nonaktifkan Ketika Mengetik"
 
-#: gtweak/tweaks/tweak_wacom.py:29
+#: gtweak/tweaks/tweak_wacom.py:16
 msgid "Device"
 msgstr "Perangkat"
 
-#: gtweak/tweaks/tweak_wacom.py:38
+#: gtweak/tweaks/tweak_wacom.py:25
 msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:72
+#: gtweak/utils.py:60
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(bawaan)</i>"
 
-#: gtweak/utils.py:329
+#: gtweak/utils.py:333
 msgid "Configuration changes require restart"
 msgstr "Perubahan konfigurasi memerlukan start ulang"
 
-#: gtweak/utils.py:330
+#: gtweak/utils.py:334
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Sesi Anda mesti dimulai ulang agar perubahan berdampak"
 
-#: gtweak/utils.py:334
+#: gtweak/utils.py:338
 msgid "Restart Session"
 msgstr "Mulai Ulang Sesi"
 
-#: gtweak/widgets.py:503
-msgid "Enable dark theme for all applications"
-msgstr "Fungsikan tema gelap bagi semua aplikasi"
+#~ msgid "Click Method"
+#~ msgstr "Metode Klik"
 
-#: gtweak/widgets.py:504
-msgid "Enable the dark theme hint for all the applications in the session"
-msgstr "Fungsikan petunjuk tema gelap bagi semua aplikasi dalam sesi"
+#~ msgid "Enable dark theme for all applications"
+#~ msgstr "Fungsikan tema gelap bagi semua aplikasi"
 
-#: gtweak/widgets.py:513
-msgid "Global Dark Theme"
-msgstr "Tema Gelap Global"
+#~ msgid "Enable the dark theme hint for all the applications in the session"
+#~ msgstr "Fungsikan petunjuk tema gelap bagi semua aplikasi dalam sesi"
 
-#: gtweak/widgets.py:514
-msgid "Applications need to be restarted for this change to take place."
-msgstr "Aplikasi mesti dimulai ulang agar perubahan berdampak."
+#~ msgid "Global Dark Theme"
+#~ msgstr "Tema Gelap Global"
 
-#: gtweak/widgets.py:543
-msgid "Error writing setting"
-msgstr "Galat saat menulis pengaturan"
+#~ msgid "Applications need to be restarted for this change to take place."
+#~ msgstr "Aplikasi mesti dimulai ulang agar perubahan berdampak."
 
 #~ msgid "Power Button Behavior"
 #~ msgstr "Perilaku Tombol Daya"
