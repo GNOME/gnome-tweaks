@@ -1,1 +1,1 @@
-i18n.gettext('gnome-tweak-tool', preset: 'glib')
+i18n.gettext('gnome-tweaks', preset: 'glib')
