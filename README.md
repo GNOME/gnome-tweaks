@@ -25,7 +25,7 @@ RUNTIME DEPENDENCIES
   - Pango
 
 * GSettings Schemas from:
-  - gsettings-desktop-schemas (>= 3.24)
+  - gsettings-desktop-schemas (>= 3.27.90)
   - gnome-shell (>= 3.24)
   - mutter
 
