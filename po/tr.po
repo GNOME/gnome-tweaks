@@ -15,15 +15,16 @@
 # Furkan Tokaç <developmentft@gmail.com>, 2017.
 # Nurperi Utlu <utlunurperi@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2013, 2014, 2015, 2016, 2017.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-11-13 21:14+0000\n"
-"PO-Revision-Date: 2017-11-26 21:55+0300\n"
-"Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
+"POT-Creation-Date: 2018-01-10 14:05+0000\n"
+"PO-Revision-Date: 2018-01-21 13:29+0300\n"
+"Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +47,7 @@ msgstr "GNOME İnce Ayarlar"
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Gelişmiş GNOME 3 ayarlarını yapılandırın"
 
-#: data/gnome-tweak-tool.appdata.xml.in:9
+#: data/gnome-tweak-tool.appdata.xml.in:12
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "GNOME İnce Ayarlar, gelişmiş GNOME ayarları yapabilmenizi sağlar."
 
@@ -245,7 +246,7 @@ msgstr "Bağlı Birimler"
 
 #: gtweak/tweaks/tweak_group_desktop.py:17
 msgid "Background"
-msgstr "Arkaplan"
+msgstr "Arka Plan"
 
 #: gtweak/tweaks/tweak_group_desktop.py:18
 #: gtweak/tweaks/tweak_group_desktop.py:21
@@ -341,7 +342,7 @@ msgstr "Yüklü Eklenti Yok"
 
 #: gtweak/tweaks/tweak_group_shell_extensions.py:56
 msgid "Browse in Software"
-msgstr "Software içinde ara"
+msgstr "Yazılımlarʼda Göz At"
 
 #: gtweak/tweaks/tweak_group_shell_extensions.py:118
 msgid "Extension downloading"
@@ -417,41 +418,59 @@ msgstr "Yeni başlangıç uygulaması"
 msgid "Add a new application to be run at startup"
 msgstr "Başlangıçta çalışacak yeni bir uygulama ekle"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:27
+#: gtweak/tweaks/tweak_group_sound.py:12
+msgid "Sound"
+msgstr "Ses"
+
+#: gtweak/tweaks/tweak_group_sound.py:13
+#| msgid "Applications"
+msgid "Over-Amplification"
+msgstr "Aşırı Yükseltme"
+
+#: gtweak/tweaks/tweak_group_sound.py:14
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Sesi %100ʼün üstüne çıkarmayı sağlar. Bu, ses niteliğinin kaybıyla "
+"sonuçlanabilir; eğer oluyorsa, uygulama ses ayarlarının yükseltilmesi daha "
+"iyidir."
+
+#: gtweak/tweaks/tweak_group_top_bar.py:13
 msgid "Activities Overview Hot Corner"
 msgstr "Etkinlikler Genel Görünümü Etkin Köşesi"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:32
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Application Menu"
 msgstr "Uygulama Menüsü"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:75
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Top Bar"
 msgstr "Tepe Çubuğu"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:77
+#: gtweak/tweaks/tweak_group_top_bar.py:63
 msgid "Battery Percentage"
 msgstr "Pil Yüzdesi"
 
 #. Requires patch from https://bugzilla.gnome.org/688320
 #. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
-#: gtweak/tweaks/tweak_group_top_bar.py:80
+#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Clock"
 msgstr "Saat"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:81
+#: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Date"
 msgstr "Tarih"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:82
+#: gtweak/tweaks/tweak_group_top_bar.py:68
 msgid "Seconds"
 msgstr "Saniye"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:83
+#: gtweak/tweaks/tweak_group_top_bar.py:69
 msgid "Calendar"
 msgstr "Takvim"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:84
+#: gtweak/tweaks/tweak_group_top_bar.py:70
 msgid "Week Numbers"
 msgstr "Hafta Numaraları"
 
@@ -521,8 +540,6 @@ msgstr "GDK pencere ölçekleme oranını HiDPI için ayarla"
 
 #: gtweak/tweaks/tweak_group_windows.py:252
 #, python-brace-format
-#| msgid "Settings will be reverted in %d second"
-#| msgid_plural "Settings will be reverted in %d seconds"
 msgid "Settings will be reverted in {0} second"
 msgid_plural "Settings will be reverted in {0} seconds"
 msgstr[0] "Ayarlar {0} saniye içinde eski haline döndürülecek"
@@ -632,7 +649,7 @@ msgstr "Çalışma alanlarını ekranlara yay"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:113
 msgid "Workspaces on primary display only"
-msgstr "Çalışma alanları sadece birincil ekranda"
+msgstr "Çalışma alanları yalnızca birincil ekranda"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:115
 msgid "Additional displays are treated as independent workspaces."
@@ -711,7 +728,7 @@ msgstr "Sol Ctrl"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:52
 msgid "Allows entering additional characters."
-msgstr "Ek karakter girilmesine izin verir."
+msgstr "Ek karakter girilmesini sağlar."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:127
 msgid ""
@@ -746,7 +763,7 @@ msgstr "Ek Düzen Seçenekleri"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:252
 msgid "Keyboard & Mouse"
-msgstr "Klavye & Fare"
+msgstr "Klavye ve Fare"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
 msgid "Keyboard"
@@ -782,7 +799,7 @@ msgstr "Orta Tuşa Tıklayarak Yapıştır"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:277
 msgid "Touchpad"
-msgstr "Touchpad"
+msgstr "Dokunmatik Yüzey"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:278
 msgid "Click Method"
