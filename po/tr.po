@@ -20,10 +20,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2018-01-10 14:05+0000\n"
-"PO-Revision-Date: 2018-01-21 13:29+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
+"POT-Creation-Date: 2018-02-20 23:09+0000\n"
+"PO-Revision-Date: 2018-02-25 16:14+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -34,24 +33,24 @@ msgstr ""
 "X-Generator: Gtranslator 2.91.7\n"
 "X-POOTLE-MTIME: 1420705374.000000\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:7
+#: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
-#: data/gnome-tweak-tool.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:298
-#: gtweak/utils.py:314
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:315
+#: gtweak/utils.py:331
 msgid "GNOME Tweaks"
 msgstr "GNOME İnce Ayarlar"
 
-#: data/gnome-tweak-tool.appdata.xml.in:10 data/gnome-tweak-tool.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Gelişmiş GNOME 3 ayarlarını yapılandırın"
 
-#: data/gnome-tweak-tool.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:12
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "GNOME İnce Ayarlar, gelişmiş GNOME ayarları yapabilmenizi sağlar."
 
-#: data/gnome-tweak-tool.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:15
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -60,17 +59,18 @@ msgstr ""
 "başlangıç uygulamalarını yönetebilir, masa üstü simgelerini ve diğer birçok "
 "ayarları etkinleştirebilir."
 
-#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
 msgid "Tweaks"
 msgstr "İnce Ayarlar"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-tweak-tool.desktop.in:6
-msgid "gnome-tweak-tool"
-msgstr "gnome-tweak-tool"
+#: data/org.gnome.tweaks.desktop.in:6
+#| msgid "gnome-tweak-tool"
+msgid "org.gnome.tweaks"
+msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-tweak-tool.desktop.in:13
+#: data/org.gnome.tweaks.desktop.in:14
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
@@ -127,94 +127,112 @@ msgstr "Çeşitli"
 
 #: gtweak/tweakview.py:105
 msgid "Search Tweaks…"
-msgstr "İnce Ayar Ara..."
+msgstr "İnce Ayar Ara…"
 
 #: gtweak/tweaks/tweak_group_appearance.py:29
 #: gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: gtweak/tweaks/tweak_group_appearance.py:66
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Ayar kaydedilirken hata"
 
-#: gtweak/tweaks/tweak_group_appearance.py:72
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Simgeler"
 
-#: gtweak/tweaks/tweak_group_appearance.py:90
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "İmleç"
 
-#: gtweak/tweaks/tweak_group_appearance.py:117
+#: gtweak/tweaks/tweak_group_appearance.py:108
 msgid "Shell"
 msgstr "Kabuk"
 
-#: gtweak/tweaks/tweak_group_appearance.py:117
+#: gtweak/tweaks/tweak_group_appearance.py:108
 msgid "Install custom or user themes for gnome-shell"
 msgstr "gnome-shell için özel temalar veya kullanıcı temaları kur"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:120
+#: gtweak/tweaks/tweak_group_appearance.py:111
 msgid "Unknown error"
 msgstr "Bilinmeyen hata"
 
-#: gtweak/tweaks/tweak_group_appearance.py:125
+#: gtweak/tweaks/tweak_group_appearance.py:116
 msgid "Shell not running"
 msgstr "Kabuk çalışmıyor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:147
+#: gtweak/tweaks/tweak_group_appearance.py:138
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Shell user-theme eklentisi hatalı yüklenmiş"
 
-#: gtweak/tweaks/tweak_group_appearance.py:150
+#: gtweak/tweaks/tweak_group_appearance.py:141
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell user-theme eklentisi aktifleştirilmedi"
 
-#: gtweak/tweaks/tweak_group_appearance.py:153
+#: gtweak/tweaks/tweak_group_appearance.py:144
 msgid "Could not list shell extensions"
 msgstr "Kabuk eklentileri listelenemiyor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:183
+#: gtweak/tweaks/tweak_group_appearance.py:174
 msgid "<i>Default</i>"
 msgstr "<i>Öntanımlı</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:189
+#: gtweak/tweaks/tweak_group_appearance.py:180
 msgid "Select a theme"
 msgstr "Tema seçin"
 
-#: gtweak/tweaks/tweak_group_appearance.py:238
+#: gtweak/tweaks/tweak_group_appearance.py:229
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s teması başarıyla güncellendi"
 
-#: gtweak/tweaks/tweak_group_appearance.py:240
+#: gtweak/tweaks/tweak_group_appearance.py:231
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s teması başarıyla kuruldu"
 
-#: gtweak/tweaks/tweak_group_appearance.py:248
+#: gtweak/tweaks/tweak_group_appearance.py:239
 msgid "Error installing theme"
 msgstr "Tema kurulurken hata"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:253
+#: gtweak/tweaks/tweak_group_appearance.py:244
 msgid "Invalid theme"
 msgstr "Geçersiz tema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
+#: gtweak/tweaks/tweak_group_appearance.py:256
 msgid "Appearance"
 msgstr "Görünüm"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:268
+#: gtweak/tweaks/tweak_group_appearance.py:259
 msgid "Animations"
 msgstr "Animasyonlar"
 
-#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:260
 msgid "Themes"
 msgstr "Temalar"
+
+#: gtweak/tweaks/tweak_group_appearance.py:266
+msgid "Background"
+msgstr "Arka Plan"
+
+#: gtweak/tweaks/tweak_group_appearance.py:267
+#: gtweak/tweaks/tweak_group_appearance.py:272
+msgid "Image"
+msgstr "Görüntü"
+
+#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:274
+msgid "Adjustment"
+msgstr "Ayarlama"
+
+#: gtweak/tweaks/tweak_group_appearance.py:271
+msgid "Lock Screen"
+msgstr "Kilit Ekranı"
 
 #: gtweak/tweaks/tweak_group_desktop.py:7
 msgid "Show Icons"
@@ -243,24 +261,6 @@ msgstr "Çöp"
 #: gtweak/tweaks/tweak_group_desktop.py:16
 msgid "Mounted Volumes"
 msgstr "Bağlı Birimler"
-
-#: gtweak/tweaks/tweak_group_desktop.py:17
-msgid "Background"
-msgstr "Arka Plan"
-
-#: gtweak/tweaks/tweak_group_desktop.py:18
-#: gtweak/tweaks/tweak_group_desktop.py:21
-msgid "Image"
-msgstr "Görüntü"
-
-#: gtweak/tweaks/tweak_group_desktop.py:19
-#: gtweak/tweaks/tweak_group_desktop.py:22
-msgid "Adjustment"
-msgstr "Ayarlama"
-
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Lock Screen"
-msgstr "Kilit Ekranı"
 
 #: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
 msgid "Hinting"
@@ -321,8 +321,9 @@ msgstr "Ölçekleme Oranı"
 #: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
 #: gtweak/tweaks/tweak_group_keymouse.py:48
 #: gtweak/tweaks/tweak_group_keymouse.py:184
+#: gtweak/tweaks/tweak_group_keymouse.py:324
 msgid "Disabled"
-msgstr "Devre dışı"
+msgstr "Devre Dışı"
 
 #: gtweak/tweaks/tweak_group_xkb.py:166
 msgid "Typing"
@@ -423,7 +424,6 @@ msgid "Sound"
 msgstr "Ses"
 
 #: gtweak/tweaks/tweak_group_sound.py:13
-#| msgid "Applications"
 msgid "Over-Amplification"
 msgstr "Aşırı Yükseltme"
 
@@ -761,51 +761,80 @@ msgstr "Sol Süper"
 msgid "Additional Layout Options"
 msgstr "Ek Düzen Seçenekleri"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:252
+#: gtweak/tweaks/tweak_group_keymouse.py:254
+#: gtweak/tweaks/tweak_group_keymouse.py:393
+msgid "Mouse Click Emulation"
+msgstr "Fare Tıkı Öykünme"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:272
+msgid "Fingers"
+msgstr "Parmaklar"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:274
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+"Sağ tık için dokunmatik düzeye iki parmakla ve orta tık için üç parmakla "
+"tıklayın."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:298
+msgid "Area"
+msgstr "Alan"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:300
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+"Sağ tık için dokunmatik yüzeyin sağ alt köşesine ve orta tık için alt "
+"ortasına tıklayın."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:326
+msgid "Don’t use mouse click emulation."
+msgstr "Fare tıkı öykünmeyi kullanma."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:363
 msgid "Keyboard & Mouse"
 msgstr "Klavye ve Fare"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
+#: gtweak/tweaks/tweak_group_keymouse.py:364
 msgid "Keyboard"
 msgstr "Klavye"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:254
+#: gtweak/tweaks/tweak_group_keymouse.py:365
 msgid "Show Extended Input Sources"
 msgstr "Genişletilmiş Giriş Kaynaklarını Göster"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:257
+#: gtweak/tweaks/tweak_group_keymouse.py:368
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Ayarlar uygulamasındaki girdi kaynakları tercihlerini arttır."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:263
+#: gtweak/tweaks/tweak_group_keymouse.py:374
 msgid "Mouse"
 msgstr "Fare"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:264
+#: gtweak/tweaks/tweak_group_keymouse.py:375
 msgid "Acceleration Profile"
 msgstr "Hızlandırma Profili"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:268
+#: gtweak/tweaks/tweak_group_keymouse.py:379
 msgid "Pointer Location"
 msgstr "İmleç Konumu"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:272
+#: gtweak/tweaks/tweak_group_keymouse.py:383
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "İmleci vurgulamak için Ctrl tuşuna bas."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:384
 msgid "Middle Click Paste"
 msgstr "Orta Tuşa Tıklayarak Yapıştır"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:277
+#: gtweak/tweaks/tweak_group_keymouse.py:388
 msgid "Touchpad"
 msgstr "Dokunmatik Yüzey"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:278
-msgid "Click Method"
-msgstr "Tıklama Yöntemi"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:282
+#: gtweak/tweaks/tweak_group_keymouse.py:389
 msgid "Disable While Typing"
 msgstr "Yazarken Devre Dışı Bırak"
 
@@ -818,23 +847,26 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:60
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(öntanımlı)</i>"
 
-#: gtweak/utils.py:316
+#: gtweak/utils.py:333
 msgid "Configuration changes require restart"
 msgstr "Yapılandırma değişiklikleri yeniden başlatmayı gerektirir"
 
-#: gtweak/utils.py:317
+#: gtweak/utils.py:334
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Ayarların etkili olması için oturumunuzun yeniden başlatılması gerekiyor"
 
-#: gtweak/utils.py:321
+#: gtweak/utils.py:338
 msgid "Restart Session"
 msgstr "Oturumu Yeniden Başlat"
+
+#~ msgid "Click Method"
+#~ msgstr "Tıklama Yöntemi"
 
 #~ msgid "Enable dark theme for all applications"
 #~ msgstr "Koyu temayı tüm uygulamalar için etkinleştir"
