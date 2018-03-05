@@ -6,15 +6,14 @@
 # Andrey Inishev <inish777@gmail.com>, 2013.
 # Ivan Komaritsyn <vantu5z@mail.ru>, 2015.
 # Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012, 2015.
-# Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013, 2014, 2015, 2016.
+# Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-12-14 11:49+0000\n"
-"PO-Revision-Date: 2017-12-14 14:54+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
+"POT-Creation-Date: 2018-02-20 23:09+0000\n"
+"PO-Revision-Date: 2018-03-05 19:18+0300\n"
 "Last-Translator: Stas Solovey <whats_up@tut.by>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -23,29 +22,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:7
+#: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
-#: data/gnome-tweak-tool.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:298
-#: gtweak/utils.py:314
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:315
+#: gtweak/utils.py:331
 msgid "GNOME Tweaks"
 msgstr "Доп. настройки GNOME"
 
-#: data/gnome-tweak-tool.appdata.xml.in:10 data/gnome-tweak-tool.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Настройка дополнительных параметров GNOME 3"
 
 # тут дословный перевод не годится, получится масло масленое
-#: data/gnome-tweak-tool.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:12
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
 "Дополнительные настройки GNOME позволяют точнее настроить среду рабочего "
 "стола GNOME."
 
-#: data/gnome-tweak-tool.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:15
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -55,17 +54,17 @@ msgstr ""
 "включать отображение значков на рабочем столе, а также изменять другие "
 "параметры."
 
-#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
 msgid "Tweaks"
 msgstr "Доп. настройки GNOME"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-tweak-tool.desktop.in:6
-msgid "gnome-tweak-tool"
-msgstr "gnome-tweak-tool"
+#: data/org.gnome.tweaks.desktop.in:6
+msgid "org.gnome.tweaks"
+msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-tweak-tool.desktop.in:13
+#: data/org.gnome.tweaks.desktop.in:14
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
@@ -130,87 +129,105 @@ msgstr "Поиск настроек…"
 msgid "Applications"
 msgstr "Приложения"
 
-#: gtweak/tweaks/tweak_group_appearance.py:66
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Ошибка записи параметров"
 
-#: gtweak/tweaks/tweak_group_appearance.py:72
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Значки"
 
-#: gtweak/tweaks/tweak_group_appearance.py:90
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Указатель мыши"
 
-#: gtweak/tweaks/tweak_group_appearance.py:117
+#: gtweak/tweaks/tweak_group_appearance.py:108
 msgid "Shell"
 msgstr "Тема Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:117
+#: gtweak/tweaks/tweak_group_appearance.py:108
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Установка собственных тем для gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:120
+#: gtweak/tweaks/tweak_group_appearance.py:111
 msgid "Unknown error"
 msgstr "Неизвестная ошибка"
 
-#: gtweak/tweaks/tweak_group_appearance.py:125
+#: gtweak/tweaks/tweak_group_appearance.py:116
 msgid "Shell not running"
 msgstr "Shell не запущен"
 
-#: gtweak/tweaks/tweak_group_appearance.py:147
+#: gtweak/tweaks/tweak_group_appearance.py:138
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Расширение «user-theme» неправильно установлено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:150
+#: gtweak/tweaks/tweak_group_appearance.py:141
 msgid "Shell user-theme extension not enabled"
 msgstr "Расширение «user-theme» не включено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:153
+#: gtweak/tweaks/tweak_group_appearance.py:144
 msgid "Could not list shell extensions"
 msgstr "Не удалось получить список расширений"
 
-#: gtweak/tweaks/tweak_group_appearance.py:183
+#: gtweak/tweaks/tweak_group_appearance.py:174
 msgid "<i>Default</i>"
 msgstr "<i>По умолчанию</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:189
+#: gtweak/tweaks/tweak_group_appearance.py:180
 msgid "Select a theme"
 msgstr "Выберите тему"
 
-#: gtweak/tweaks/tweak_group_appearance.py:238
+#: gtweak/tweaks/tweak_group_appearance.py:229
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Тема %s успешно обновлена"
 
-#: gtweak/tweaks/tweak_group_appearance.py:240
+#: gtweak/tweaks/tweak_group_appearance.py:231
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Тема %s успешно установлена"
 
-#: gtweak/tweaks/tweak_group_appearance.py:248
+#: gtweak/tweaks/tweak_group_appearance.py:239
 msgid "Error installing theme"
 msgstr "Ошибка установки темы"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:253
+#: gtweak/tweaks/tweak_group_appearance.py:244
 msgid "Invalid theme"
 msgstr "Недопустимая тема"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
+#: gtweak/tweaks/tweak_group_appearance.py:256
 msgid "Appearance"
 msgstr "Внешний вид"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:268
+#: gtweak/tweaks/tweak_group_appearance.py:259
 msgid "Animations"
 msgstr "Анимации"
 
-#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:260
 msgid "Themes"
 msgstr "Темы"
+
+#: gtweak/tweaks/tweak_group_appearance.py:266
+msgid "Background"
+msgstr "Фон рабочего стола"
+
+#: gtweak/tweaks/tweak_group_appearance.py:267
+#: gtweak/tweaks/tweak_group_appearance.py:272
+msgid "Image"
+msgstr "Изображение"
+
+#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:274
+msgid "Adjustment"
+msgstr "Подгонка"
+
+#: gtweak/tweaks/tweak_group_appearance.py:271
+msgid "Lock Screen"
+msgstr "Экран блокировки"
 
 #: gtweak/tweaks/tweak_group_desktop.py:7
 msgid "Show Icons"
@@ -239,24 +256,6 @@ msgstr "Корзина"
 #: gtweak/tweaks/tweak_group_desktop.py:16
 msgid "Mounted Volumes"
 msgstr "Устройства"
-
-#: gtweak/tweaks/tweak_group_desktop.py:17
-msgid "Background"
-msgstr "Фон рабочего стола"
-
-#: gtweak/tweaks/tweak_group_desktop.py:18
-#: gtweak/tweaks/tweak_group_desktop.py:21
-msgid "Image"
-msgstr "Изображение"
-
-#: gtweak/tweaks/tweak_group_desktop.py:19
-#: gtweak/tweaks/tweak_group_desktop.py:22
-msgid "Adjustment"
-msgstr "Подгонка"
-
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Lock Screen"
-msgstr "Экран блокировки"
 
 #: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
 msgid "Hinting"
@@ -317,6 +316,7 @@ msgstr "Коэффициент масштабирования"
 #: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
 #: gtweak/tweaks/tweak_group_keymouse.py:48
 #: gtweak/tweaks/tweak_group_keymouse.py:184
+#: gtweak/tweaks/tweak_group_keymouse.py:324
 msgid "Disabled"
 msgstr "Выключено"
 
@@ -413,6 +413,23 @@ msgstr "Добавить приложение в автозапуск"
 #: gtweak/tweaks/tweak_group_startup.py:256
 msgid "Add a new application to be run at startup"
 msgstr "Добавить новое приложение для запуска при загрузке"
+
+#: gtweak/tweaks/tweak_group_sound.py:12
+msgid "Sound"
+msgstr "Звук"
+
+#: gtweak/tweaks/tweak_group_sound.py:13
+msgid "Over-Amplification"
+msgstr "Сверх усиление"
+
+#: gtweak/tweaks/tweak_group_sound.py:14
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Позволяет увеличить громкость выше 100%. Это может привести к потере "
+"качества звука; лучше увеличить громкость в настройках приложения, если это "
+"возможно."
 
 #: gtweak/tweaks/tweak_group_top_bar.py:13
 msgid "Activities Overview Hot Corner"
@@ -742,51 +759,81 @@ msgstr "Левый Super"
 msgid "Additional Layout Options"
 msgstr "Дополнительные параметры раскладки"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:252
+#: gtweak/tweaks/tweak_group_keymouse.py:254
+#: gtweak/tweaks/tweak_group_keymouse.py:393
+msgid "Mouse Click Emulation"
+msgstr "Эмуляция нажатия мышкой"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:272
+msgid "Fingers"
+msgstr "Пальцы"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:274
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+"Нажмите на сенсорную панель двумя пальцами для эмуляции нажатия правой "
+"кнопки мыши и тремя пальцами для средней."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:298
+msgid "Area"
+msgstr "Область"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:300
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+"Нажмите на правую нижнюю часть сенсорной панели для эмуляции нажатия правой "
+"кнопки мыши и на середину нижней части для эмуляции нажатия средней кнопки "
+"мыши."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:326
+msgid "Don’t use mouse click emulation."
+msgstr "Не использовать эмуляцию мыши."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:363
 msgid "Keyboard & Mouse"
 msgstr "Клавиатура и мышь"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
+#: gtweak/tweaks/tweak_group_keymouse.py:364
 msgid "Keyboard"
 msgstr "Клавиатура"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:254
+#: gtweak/tweaks/tweak_group_keymouse.py:365
 msgid "Show Extended Input Sources"
 msgstr "Показывать дополнительные источники ввода"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:257
+#: gtweak/tweaks/tweak_group_keymouse.py:368
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Увеличивает выбор источников ввода в приложении «Настройки»."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:263
+#: gtweak/tweaks/tweak_group_keymouse.py:374
 msgid "Mouse"
 msgstr "Мышь"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:264
+#: gtweak/tweaks/tweak_group_keymouse.py:375
 msgid "Acceleration Profile"
 msgstr "Профиль ускорения"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:268
+#: gtweak/tweaks/tweak_group_keymouse.py:379
 msgid "Pointer Location"
 msgstr "Положение курсора"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:272
+#: gtweak/tweaks/tweak_group_keymouse.py:383
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Нажмите клавишу Ctrl, чтобы подсветить указатель."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:384
 msgid "Middle Click Paste"
 msgstr "Вставка при нажатии средней кнопки мыши"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:277
+#: gtweak/tweaks/tweak_group_keymouse.py:388
 msgid "Touchpad"
 msgstr "Сенсорная панель"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:278
-msgid "Click Method"
-msgstr "Метод нажатия"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:282
+#: gtweak/tweaks/tweak_group_keymouse.py:389
 msgid "Disable While Typing"
 msgstr "Отключить при вводе"
 
@@ -799,23 +846,26 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:60
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(по умолчанию)</i>"
 
-#: gtweak/utils.py:316
+#: gtweak/utils.py:333
 msgid "Configuration changes require restart"
 msgstr "Изменения конфигурации требуют перезагрузки"
 
-#: gtweak/utils.py:317
+#: gtweak/utils.py:334
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Сеанс пользователя необходимо перезапустить, чтобы изменения вступили в силу"
 
-#: gtweak/utils.py:321
+#: gtweak/utils.py:338
 msgid "Restart Session"
 msgstr "Перезапустить сеанс пользователя"
+
+#~ msgid "Click Method"
+#~ msgstr "Метод нажатия"
 
 #~ msgid "Enable dark theme for all applications"
 #~ msgstr "Включить тёмную тему для всех приложений"
