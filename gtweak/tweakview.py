@@ -19,10 +19,10 @@ class Window(Gtk.ApplicationWindow):
                                        application=app,
                                        show_menubar=False)
 
-        if Gdk.Screen.get_default().get_height() < 800:
+        if Gdk.Screen.get_default().get_width() < 800:
             self.maximize()
-        else:
-            self.set_size_request(950, 700)
+        elif Gdk.Screen.get_default().get_width() => 800:
+            self.set_default_size(950, 700)
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_icon_name("org.gnome.tweaks")
 
