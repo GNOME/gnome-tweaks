@@ -28,10 +28,10 @@ RUNTIME DEPENDENCIES
   - gsettings-desktop-schemas (>= 3.27.90)
   - gnome-shell (>= 3.24)
   - mutter
-  - nautilus
 
 * Optional:
    - gnome-software (for links from GNOME Shell Extensions page)
+   - nautilus 3.26 or older (for icons on the desktop)
 
 RUNNING
 -------
