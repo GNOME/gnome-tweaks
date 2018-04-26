@@ -3,15 +3,14 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Martin Srebotnjak  <miles@filmsi.net>, 2011.
-# Matej Urbančič <mateju@svn.gnome.org>, 2011–2017.
+# Matej Urbančič <mateju@svn.gnome.org>, 2011–2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-12-26 20:58+0000\n"
-"PO-Revision-Date: 2017-12-31 12:35+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
+"POT-Creation-Date: 2018-03-20 21:38+0000\n"
+"PO-Revision-Date: 2018-03-23 22:03+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -21,27 +20,27 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.0.6\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:7
+#: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/gnome-tweak-tool.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:298
-#: gtweak/utils.py:314
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:315
+#: gtweak/utils.py:331
 msgid "GNOME Tweaks"
 msgstr "GNOME Tweaks"
 
-#: data/gnome-tweak-tool.appdata.xml.in:10 data/gnome-tweak-tool.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
 msgstr "Prilagajanje naprednih nastavitev GNOME 3"
 
-#: data/gnome-tweak-tool.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:12
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
 "Program GNOME Tweaks omogoča prilagajanje naprednih možnosti okolja GNOME."
 
-#: data/gnome-tweak-tool.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:15
 msgid ""
 "It can install and manage themes and extensions, change power settings, "
 "manage startup applications, and enable desktop icons among other settings."
@@ -49,17 +48,17 @@ msgstr ""
 "Omogoča nameščanje in urejanje tem in razširitev, spreminjanje nastavitev "
 "porabe energije, urejanje zagonskih programov in drugo."
 
-#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
 msgid "Tweaks"
 msgstr "Prilagoditve"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-tweak-tool.desktop.in:6
-msgid "gnome-tweak-tool"
-msgstr "gnome-tweak-tool"
+#: data/org.gnome.tweaks.desktop.in:6
+msgid "org.gnome.tweaks"
+msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-tweak-tool.desktop.in:13
+#: data/org.gnome.tweaks.desktop.in:14
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
@@ -124,133 +123,137 @@ msgstr "Iskanje prilagoditev ..."
 msgid "Applications"
 msgstr "Programi"
 
-#: gtweak/tweaks/tweak_group_appearance.py:66
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Napaka med zapisovanjem nastavitev"
 
-#: gtweak/tweaks/tweak_group_appearance.py:72
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Ikone"
 
-#: gtweak/tweaks/tweak_group_appearance.py:90
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Kazalka"
 
-#: gtweak/tweaks/tweak_group_appearance.py:117
+#: gtweak/tweaks/tweak_group_appearance.py:108
 msgid "Shell"
 msgstr "Lupina"
 
-#: gtweak/tweaks/tweak_group_appearance.py:117
+#: gtweak/tweaks/tweak_group_appearance.py:108
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Namesti ali  uporabi temo za lupinsko sejo po meri"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:120
+#: gtweak/tweaks/tweak_group_appearance.py:111
 msgid "Unknown error"
 msgstr "Neznana napaka"
 
-#: gtweak/tweaks/tweak_group_appearance.py:125
+#: gtweak/tweaks/tweak_group_appearance.py:116
 msgid "Shell not running"
 msgstr "Lupina ni zagnana"
 
-#: gtweak/tweaks/tweak_group_appearance.py:147
+#: gtweak/tweaks/tweak_group_appearance.py:138
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Razširitev uporabniške teme je nepravilno nameščena"
 
-#: gtweak/tweaks/tweak_group_appearance.py:150
+#: gtweak/tweaks/tweak_group_appearance.py:141
 msgid "Shell user-theme extension not enabled"
 msgstr "Razširitev uporabniške teme ni omogočena"
 
-#: gtweak/tweaks/tweak_group_appearance.py:153
+#: gtweak/tweaks/tweak_group_appearance.py:144
 msgid "Could not list shell extensions"
 msgstr "Ni mogoče izpisati seznama razširitev lupine"
 
-#: gtweak/tweaks/tweak_group_appearance.py:183
+#: gtweak/tweaks/tweak_group_appearance.py:174
 msgid "<i>Default</i>"
 msgstr "<i>Privzeto</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:189
+#: gtweak/tweaks/tweak_group_appearance.py:180
 msgid "Select a theme"
 msgstr "Izbor teme"
 
-#: gtweak/tweaks/tweak_group_appearance.py:238
+#: gtweak/tweaks/tweak_group_appearance.py:229
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Tema %s je uspešno posodobljena"
 
-#: gtweak/tweaks/tweak_group_appearance.py:240
+#: gtweak/tweaks/tweak_group_appearance.py:231
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Tema %s je uspešno nameščena"
 
-#: gtweak/tweaks/tweak_group_appearance.py:248
+#: gtweak/tweaks/tweak_group_appearance.py:239
 msgid "Error installing theme"
 msgstr "Napaka nameščanja teme"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:253
+#: gtweak/tweaks/tweak_group_appearance.py:244
 msgid "Invalid theme"
 msgstr "Neveljavna tema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
+#: gtweak/tweaks/tweak_group_appearance.py:256
 msgid "Appearance"
 msgstr "Videz"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:268
+#: gtweak/tweaks/tweak_group_appearance.py:259
 msgid "Animations"
 msgstr "Animacije"
 
-#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:260
 msgid "Themes"
 msgstr "Teme"
+
+#: gtweak/tweaks/tweak_group_appearance.py:266
+msgid "Background"
+msgstr "Ozadje"
+
+#: gtweak/tweaks/tweak_group_appearance.py:267
+#: gtweak/tweaks/tweak_group_appearance.py:272
+msgid "Image"
+msgstr "Slika"
+
+#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:274
+msgid "Adjustment"
+msgstr "Prilagoditev"
+
+#: gtweak/tweaks/tweak_group_appearance.py:271
+msgid "Lock Screen"
+msgstr "Zakleni zaslon"
 
 #: gtweak/tweaks/tweak_group_desktop.py:7
 msgid "Show Icons"
 msgstr "Pokaži ikone"
 
-#: gtweak/tweaks/tweak_group_desktop.py:10
-msgid "Desktop"
-msgstr "Namizje"
-
-#: gtweak/tweaks/tweak_group_desktop.py:11
-msgid "Icons on Desktop"
-msgstr "Ikone na namizju"
-
+#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
+#. *work* unless we have a version of Nautilus that still has the ability to
+#. draw the desktop; use one of the settings that was present in that version
+#. to probe for it.
 #: gtweak/tweaks/tweak_group_desktop.py:13
 msgid "Home"
 msgstr "Osebna mapa"
 
-#: gtweak/tweaks/tweak_group_desktop.py:14
+#: gtweak/tweaks/tweak_group_desktop.py:20
+msgid "Desktop"
+msgstr "Namizje"
+
+#: gtweak/tweaks/tweak_group_desktop.py:21
+msgid "Icons on Desktop"
+msgstr "Ikone na namizju"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
 msgid "Network Servers"
 msgstr "Omrežni strežniki"
 
-#: gtweak/tweaks/tweak_group_desktop.py:15
+#: gtweak/tweaks/tweak_group_desktop.py:25
 msgid "Trash"
 msgstr "Smeti"
 
-#: gtweak/tweaks/tweak_group_desktop.py:16
+#: gtweak/tweaks/tweak_group_desktop.py:26
 msgid "Mounted Volumes"
 msgstr "Priklopljeni nosilci"
-
-#: gtweak/tweaks/tweak_group_desktop.py:17
-msgid "Background"
-msgstr "Ozadje"
-
-#: gtweak/tweaks/tweak_group_desktop.py:18
-#: gtweak/tweaks/tweak_group_desktop.py:21
-msgid "Image"
-msgstr "Slika"
-
-#: gtweak/tweaks/tweak_group_desktop.py:19
-#: gtweak/tweaks/tweak_group_desktop.py:22
-msgid "Adjustment"
-msgstr "Prilagoditev"
-
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Lock Screen"
-msgstr "Zakleni zaslon"
 
 #: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
 msgid "Hinting"
@@ -311,6 +314,7 @@ msgstr "Faktor povečave"
 #: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
 #: gtweak/tweaks/tweak_group_keymouse.py:48
 #: gtweak/tweaks/tweak_group_keymouse.py:184
+#: gtweak/tweaks/tweak_group_keymouse.py:324
 msgid "Disabled"
 msgstr "Onemogočeno"
 
@@ -408,41 +412,56 @@ msgstr "Nov zagonski program"
 msgid "Add a new application to be run at startup"
 msgstr "Dodaj nov program za zagon ob prijavi"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:13
-msgid "Activities Overview Hot Corner"
-msgstr "Vroči kot predogleda dejavnosti"
+#: gtweak/tweaks/tweak_group_sound.py:12
+msgid "Sound"
+msgstr "Zvok"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_sound.py:13
+msgid "Over-Amplification"
+msgstr "Prekoračitev glasnosti"
+
+#: gtweak/tweaks/tweak_group_sound.py:14
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Dovoli povečanje glasnosti nad 100 %. To vpliva na kakovost zvoka, zato je "
+"bolj priporočljivo povečati glasnost na sistemski ravni, če je to mogoče."
+
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Application Menu"
 msgstr "Meni programov"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:59
 msgid "Top Bar"
 msgstr "Vrhnja vrstica"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Battery Percentage"
 msgstr "Odstotek polnosti baterija"
 
 #. Requires patch from https://bugzilla.gnome.org/688320
-#. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Activities Overview Hot Corner"
+msgstr "Vroči kot predogleda dejavnosti"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Ura"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:65
 msgid "Date"
 msgstr "Datum"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Seconds"
 msgstr "sekunde"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Calendar"
 msgstr "Koledar"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:70
+#: gtweak/tweaks/tweak_group_top_bar.py:68
 msgid "Week Numbers"
 msgstr "Številke tednov"
 
@@ -736,51 +755,80 @@ msgstr "Leva tipka pop"
 msgid "Additional Layout Options"
 msgstr "Dodatne možnosti razporeditve"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:252
+#: gtweak/tweaks/tweak_group_keymouse.py:254
+#: gtweak/tweaks/tweak_group_keymouse.py:393
+msgid "Mouse Click Emulation"
+msgstr "Posnemanje klika miške"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:272
+msgid "Fingers"
+msgstr "Prsti"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:274
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+"Pritisk na sledilno ploščico z dvema prstoma posnema klik desnega in s tremi "
+"prsti za klik srednjega gumba miške."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:298
+msgid "Area"
+msgstr "Območje"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:300
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+"Pritisk na desni spodnji rob sledilne ploščice posnema klik desnega in "
+"spodnjega levega za klik srednjega gumba miške."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:326
+msgid "Don’t use mouse click emulation."
+msgstr "Ne uporabi posnemanja klikov miške."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:363
 msgid "Keyboard & Mouse"
 msgstr "Tipkovnica in miška"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
+#: gtweak/tweaks/tweak_group_keymouse.py:364
 msgid "Keyboard"
 msgstr "Tipkovnica"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:254
+#: gtweak/tweaks/tweak_group_keymouse.py:365
 msgid "Show Extended Input Sources"
 msgstr "Pokaži razširjene vhodne vire"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:257
+#: gtweak/tweaks/tweak_group_keymouse.py:368
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Povečaj izbor vhodnih virov v programu nastavitev."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:263
+#: gtweak/tweaks/tweak_group_keymouse.py:374
 msgid "Mouse"
 msgstr "Miška"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:264
+#: gtweak/tweaks/tweak_group_keymouse.py:375
 msgid "Acceleration Profile"
 msgstr "Profil pospeševanja"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:268
+#: gtweak/tweaks/tweak_group_keymouse.py:379
 msgid "Pointer Location"
 msgstr "Mesto kazalke"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:272
+#: gtweak/tweaks/tweak_group_keymouse.py:383
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Pritisnite tipko CTRL za poudarjanje kazalnika."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:384
 msgid "Middle Click Paste"
 msgstr "Srednji klik miške prilepi"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:277
+#: gtweak/tweaks/tweak_group_keymouse.py:388
 msgid "Touchpad"
 msgstr "Sledilna ploščica"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:278
-msgid "Click Method"
-msgstr "Način klika"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:282
+#: gtweak/tweaks/tweak_group_keymouse.py:389
 msgid "Disable While Typing"
 msgstr "Onemogoči med tipkanjem"
 
@@ -793,22 +841,25 @@ msgid "Wacom"
 msgstr "Tablica Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:60
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(privzeto)</i>"
 
-#: gtweak/utils.py:316
+#: gtweak/utils.py:333
 msgid "Configuration changes require restart"
 msgstr "Nastavitev zahteva ponovni zagon"
 
-#: gtweak/utils.py:317
+#: gtweak/utils.py:334
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Sejo je treba ponovno zagnati za uveljavitev novih nastavitev"
 
-#: gtweak/utils.py:321
+#: gtweak/utils.py:338
 msgid "Restart Session"
 msgstr "Ponovno zaženi sejo"
+
+#~ msgid "Click Method"
+#~ msgstr "Način klika"
 
 #~ msgid "Enable dark theme for all applications"
 #~ msgstr "Omogoči temno temo za vse programe"

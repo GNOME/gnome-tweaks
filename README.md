@@ -31,6 +31,7 @@ RUNTIME DEPENDENCIES
 
 * Optional:
    - gnome-software (for links from GNOME Shell Extensions page)
+   - nautilus 3.26 or older (for icons on the desktop)
 
 RUNNING
 -------

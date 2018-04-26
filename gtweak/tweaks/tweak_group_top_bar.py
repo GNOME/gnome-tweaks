@@ -10,8 +10,6 @@ from gtweak.utils import XSettingsOverrides
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
-hot_corner_label = _("Activities Overview Hot Corner")
-
 class ApplicationMenuTweak(GetterSetterSwitchTweak):
     def __init__(self, **options):
         self._xsettings = XSettingsOverrides()
@@ -62,7 +60,7 @@ TWEAK_GROUPS = [
         ApplicationMenuTweak(),
         GSettingsSwitchTweak(_("Battery Percentage"),"org.gnome.desktop.interface", "show-battery-percentage", loaded=_shell_loaded),
         # Requires patch from https://bugzilla.gnome.org/688320
-        # GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
+        GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
         Title(_("Clock"),"", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Date"),"org.gnome.desktop.interface", "clock-show-date", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Seconds"), "org.gnome.desktop.interface", "clock-show-seconds", loaded=_shell_loaded),
