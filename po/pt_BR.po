@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-01-30 19:20+0000\n"
-"PO-Revision-Date: 2018-02-03 08:33-0200\n"
+"POT-Creation-Date: 2018-03-26 22:12+0000\n"
+"PO-Revision-Date: 2018-04-29 11:33-0200\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -55,7 +55,6 @@ msgstr "Ajustes"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.tweaks.desktop.in:6
-#| msgid "gnome-tweak-tool"
 msgid "org.gnome.tweaks"
 msgstr "org.gnome.tweaks"
 
@@ -230,27 +229,31 @@ msgstr "Tela de bloqueio"
 msgid "Show Icons"
 msgstr "Mostrar ícones"
 
-#: gtweak/tweaks/tweak_group_desktop.py:10
-msgid "Desktop"
-msgstr "Área de trabalho"
-
-#: gtweak/tweaks/tweak_group_desktop.py:11
-msgid "Icons on Desktop"
-msgstr "Ícones da área de trabalho"
-
+#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
+#. *work* unless we have a version of Nautilus that still has the ability to
+#. draw the desktop; use one of the settings that was present in that version
+#. to probe for it.
 #: gtweak/tweaks/tweak_group_desktop.py:13
 msgid "Home"
 msgstr "Pasta pessoal"
 
-#: gtweak/tweaks/tweak_group_desktop.py:14
+#: gtweak/tweaks/tweak_group_desktop.py:20
+msgid "Desktop"
+msgstr "Área de trabalho"
+
+#: gtweak/tweaks/tweak_group_desktop.py:21
+msgid "Icons on Desktop"
+msgstr "Ícones da área de trabalho"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
 msgid "Network Servers"
 msgstr "Servidores de rede"
 
-#: gtweak/tweaks/tweak_group_desktop.py:15
+#: gtweak/tweaks/tweak_group_desktop.py:25
 msgid "Trash"
 msgstr "Lixeira"
 
-#: gtweak/tweaks/tweak_group_desktop.py:16
+#: gtweak/tweaks/tweak_group_desktop.py:26
 msgid "Mounted Volumes"
 msgstr "Volumes montados"
 
@@ -422,7 +425,6 @@ msgid "Sound"
 msgstr "Som"
 
 #: gtweak/tweaks/tweak_group_sound.py:13
-#| msgid "Applications"
 msgid "Over-Amplification"
 msgstr "Amplificação extra"
 
@@ -435,41 +437,40 @@ msgstr ""
 "qualidade do áudio; é melhor aumentar as configurações de amplificação do "
 "volume, se possível."
 
-#: gtweak/tweaks/tweak_group_top_bar.py:13
-msgid "Activities Overview Hot Corner"
-msgstr "Canto ativo do panorama de atividades"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Application Menu"
 msgstr "Menu de aplicativos"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:59
 msgid "Top Bar"
 msgstr "Barra superior"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Battery Percentage"
 msgstr "Percentagem da bateria"
 
 #. Requires patch from https://bugzilla.gnome.org/688320
-#. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Activities Overview Hot Corner"
+msgstr "Canto ativo do panorama de atividades"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Relógio"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:65
 msgid "Date"
 msgstr "Data"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Seconds"
 msgstr "Segundos"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Calendar"
 msgstr "Calendário"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:70
+#: gtweak/tweaks/tweak_group_top_bar.py:68
 msgid "Week Numbers"
 msgstr "Números das semanas"
 
@@ -539,8 +540,6 @@ msgstr "Ajusta o fator de escala da janela de GDK para HiDPI"
 
 #: gtweak/tweaks/tweak_group_windows.py:252
 #, python-brace-format
-#| msgid "Settings will be reverted in %d second"
-#| msgid_plural "Settings will be reverted in %d seconds"
 msgid "Settings will be reverted in {0} second"
 msgid_plural "Settings will be reverted in {0} seconds"
 msgstr[0] "A configurações serão revertidas em {0} segundo"
@@ -751,7 +750,7 @@ msgstr ""
 
 #: gtweak/tweaks/tweak_group_keymouse.py:190
 msgid "Overview Shortcut"
-msgstr "Visão geral de atalho"
+msgstr "Atalho do panorama de atividades"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:197
 msgid "Left Super"
