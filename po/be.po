@@ -1,0 +1,865 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
+"POT-Creation-Date: 2018-04-08 14:56+0000\n"
+"PO-Revision-Date: 2018-04-27 23:23+0300\n"
+"Last-Translator: Uladzimir Manulenka <vlma@tut.by>\n"
+"Language-Team: \n"
+"Language: be_BY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: data/org.gnome.tweaks.appdata.xml.in:7
+msgid "The GNOME Project"
+msgstr "Праект GNOME"
+
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:315
+#: gtweak/utils.py:331
+msgid "GNOME Tweaks"
+msgstr "Дабудова асяроддзя GNOME"
+
+#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+msgid "Tweak advanced GNOME 3 settings"
+msgstr "Дабудова прасунутых наладаў GNOME 3"
+
+#: data/org.gnome.tweaks.appdata.xml.in:12
+msgid "GNOME Tweaks allows adjusting advanced GNOME options."
+msgstr ""
+"Дабудова асяроддзя GNOME дазваляе папраўляць прасунутыя магчымасці GNOME."
+
+#: data/org.gnome.tweaks.appdata.xml.in:15
+msgid ""
+"It can install and manage themes and extensions, change power settings, "
+"manage startup applications, and enable desktop icons among other settings."
+msgstr ""
+"Яна дазваляе ўсталёўваць і кіраваць тэмамі і пашырэннямі, змяняць налады "
+"сілкавання, кіраваць стартавымі дастасаванямі і ўключаць значкі на працоўным "
+"стале акрамя іншых установак."
+
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+msgid "Tweaks"
+msgstr "Дабудовы"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.tweaks.desktop.in:6
+#| msgid "gnome-tweak-tool"
+msgid "org.gnome.tweaks"
+msgstr "org.gnome.tweaks"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.tweaks.desktop.in:14
+msgid ""
+"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr ""
+"Устаноўкі;Прасунутыя;Параметры;Пашырэнні;Шрыфты;Тэмы;XKB;Клавіятура;Друк;"
+
+#: data/shell.ui:7
+msgid "_Reset to Defaults"
+msgstr "_Пачатковыя ўстаноўкі"
+
+#: data/shell.ui:11
+msgid "Disable All Shell Extensions"
+msgstr "Адключыць усе пашырэнні абалонкі"
+
+#: data/shell.ui:17
+msgid "_About"
+msgstr "_Пра"
+
+#: data/shell.ui:21
+msgid "_Quit"
+msgstr "_Выхад"
+
+#: gtweak/app.py:67
+msgid "Reset to Defaults"
+msgstr "Пачатковыя ўстаноўкі"
+
+#: gtweak/app.py:68
+msgid "Reset all tweak settings to the original default state?"
+msgstr "Скасаваць усе дабудаваныя ўстаноўкі да іх пачатковага стану?"
+
+#: gtweak/app.py:89 gtweak/app.py:91
+msgid "GNOME Shell"
+msgstr "Абалонка GNOME"
+
+#: gtweak/app.py:91
+#, python-format
+msgid "(%s mode)"
+msgstr "(%s рэжым)"
+
+#: gtweak/app.py:94
+msgid "GNOME Shell is not running"
+msgstr "Абалонка GNOME не запушчана"
+
+#: gtweak/app.py:96
+msgid "GTK+"
+msgstr "GTK+"
+
+#: gtweak/app.py:103
+msgid "Homepage"
+msgstr "Хатняя старонка"
+
+#: gtweak/tweakmodel.py:30
+msgid "Miscellaneous"
+msgstr "Рознае"
+
+#: gtweak/tweakview.py:105
+msgid "Search Tweaks…"
+msgstr "Пошук дабудовы…"
+
+#: gtweak/tweaks/tweak_group_appearance.py:29
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Дастасаванні"
+
+#: gtweak/tweaks/tweak_group_appearance.py:63
+msgid "Error writing setting"
+msgstr "Памылка запісу наладаў"
+
+#: gtweak/tweaks/tweak_group_appearance.py:69
+msgid "Icons"
+msgstr "Значкі працоўнага стала"
+
+#: gtweak/tweaks/tweak_group_appearance.py:84
+msgid "Cursor"
+msgstr "Курсор"
+
+#: gtweak/tweaks/tweak_group_appearance.py:108
+msgid "Shell"
+msgstr "Абалонка"
+
+#: gtweak/tweaks/tweak_group_appearance.py:108
+msgid "Install custom or user themes for gnome-shell"
+msgstr "Усталяванне тэмаў карыстальніка для gnome-shell"
+
+#. check the shell is running and the usertheme extension is present
+#: gtweak/tweaks/tweak_group_appearance.py:111
+msgid "Unknown error"
+msgstr "Невядомая памылка"
+
+#: gtweak/tweaks/tweak_group_appearance.py:116
+msgid "Shell not running"
+msgstr "Абалонка не запушчана"
+
+#: gtweak/tweaks/tweak_group_appearance.py:138
+msgid "Shell user-theme extension incorrectly installed"
+msgstr "Тэма карыстальніка для абалонкі ўсталяваная няслушна"
+
+#: gtweak/tweaks/tweak_group_appearance.py:141
+msgid "Shell user-theme extension not enabled"
+msgstr "Тэма карыстальніка для абалонкі не ўключаная"
+
+#: gtweak/tweaks/tweak_group_appearance.py:144
+msgid "Could not list shell extensions"
+msgstr "Не магчыма атрымаць спіс пашырэнняў абалонкі"
+
+#: gtweak/tweaks/tweak_group_appearance.py:174
+msgid "<i>Default</i>"
+msgstr "<i>Па змаўчанні</i>"
+
+#: gtweak/tweaks/tweak_group_appearance.py:180
+msgid "Select a theme"
+msgstr "Выбраць тэму"
+
+#: gtweak/tweaks/tweak_group_appearance.py:229
+#, python-format
+msgid "%s theme updated successfully"
+msgstr "Тэма %s паспяхова абноўленая"
+
+#: gtweak/tweaks/tweak_group_appearance.py:231
+#, python-format
+msgid "%s theme installed successfully"
+msgstr "Тэма %s паспяхова ўсталяваная"
+
+#: gtweak/tweaks/tweak_group_appearance.py:239
+msgid "Error installing theme"
+msgstr "Памылка ўсталявання тэмы"
+
+#. does not look like a valid theme
+#: gtweak/tweaks/tweak_group_appearance.py:244
+msgid "Invalid theme"
+msgstr "Няслушная тэма"
+
+#: gtweak/tweaks/tweak_group_appearance.py:256
+msgid "Appearance"
+msgstr "Выгляд"
+
+#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
+#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Animations"
+msgstr "Анімацыя"
+
+#: gtweak/tweaks/tweak_group_appearance.py:260
+msgid "Themes"
+msgstr "Тэмы"
+
+#: gtweak/tweaks/tweak_group_appearance.py:266
+msgid "Background"
+msgstr "Фон працоўнага стала"
+
+#: gtweak/tweaks/tweak_group_appearance.py:267
+#: gtweak/tweaks/tweak_group_appearance.py:272
+msgid "Image"
+msgstr "Выява"
+
+#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:274
+msgid "Adjustment"
+msgstr "Рэгуляванне"
+
+#: gtweak/tweaks/tweak_group_appearance.py:271
+msgid "Lock Screen"
+msgstr "Блакіраванне экрана"
+
+#: gtweak/tweaks/tweak_group_desktop.py:7
+msgid "Show Icons"
+msgstr "Паказаць значкі"
+
+#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
+#. *work* unless we have a version of Nautilus that still has the ability to
+#. draw the desktop; use one of the settings that was present in that version
+#. to probe for it.
+#: gtweak/tweaks/tweak_group_desktop.py:13
+msgid "Home"
+msgstr "Хатні каталог"
+
+#: gtweak/tweaks/tweak_group_desktop.py:20
+msgid "Desktop"
+msgstr "Працоўны стол"
+
+#: gtweak/tweaks/tweak_group_desktop.py:21
+msgid "Icons on Desktop"
+msgstr "Значкі на працоўным стале"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
+msgid "Network Servers"
+msgstr "Сеткавыя серверы"
+
+#: gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Trash"
+msgstr "Сметніца"
+
+#: gtweak/tweaks/tweak_group_desktop.py:26
+msgid "Mounted Volumes"
+msgstr "Усталяваныя аб'ёмы"
+
+#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+msgid "Hinting"
+msgstr "Хінцінг"
+
+#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
+msgid "Antialiasing"
+msgstr "Згладжванне"
+
+#: gtweak/tweaks/tweak_group_font.py:31
+msgid "Full"
+msgstr "Запоўнены"
+
+#: gtweak/tweaks/tweak_group_font.py:37
+msgid "Medium"
+msgstr "Сярэдні"
+
+#: gtweak/tweaks/tweak_group_font.py:43
+msgid "Slight"
+msgstr "Нязначны"
+
+#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+msgid "None"
+msgstr "Няма"
+
+#: gtweak/tweaks/tweak_group_font.py:62
+msgid "Subpixel (for LCD screens)"
+msgstr "Субпіксельнае (для LCD экранаў)"
+
+#: gtweak/tweaks/tweak_group_font.py:68
+msgid "Standard (grayscale)"
+msgstr "Стандартнае (адценне шэрага)"
+
+#: gtweak/tweaks/tweak_group_font.py:99
+msgid "Fonts"
+msgstr "Шрыфты"
+
+#: gtweak/tweaks/tweak_group_font.py:100
+msgid "Window Title"
+msgstr "Загаловак акна"
+
+#: gtweak/tweaks/tweak_group_font.py:101
+msgid "Interface"
+msgstr "Інтэрфэйс"
+
+#: gtweak/tweaks/tweak_group_font.py:102
+msgid "Document"
+msgstr "Дакумэнт"
+
+#: gtweak/tweaks/tweak_group_font.py:103
+msgid "Monospace"
+msgstr "Фіксаваная шырыня шрыфта"
+
+#: gtweak/tweaks/tweak_group_font.py:105
+msgid "Scaling Factor"
+msgstr "Каэфіцыент маштабавання"
+
+#: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_keymouse.py:48
+#: gtweak/tweaks/tweak_group_keymouse.py:184
+#: gtweak/tweaks/tweak_group_keymouse.py:324
+msgid "Disabled"
+msgstr "Адключаны"
+
+#: gtweak/tweaks/tweak_group_xkb.py:166
+msgid "Typing"
+msgstr "Клавіятура"
+
+#: gtweak/tweaks/tweak_group_power.py:22
+msgid "Suspend when laptop lid is closed"
+msgstr "Прыпыніць, калі крышка ноўтбука зачыненая"
+
+#: gtweak/tweaks/tweak_group_power.py:46
+msgid "Power"
+msgstr "Сілкаване"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:49
+msgid "No Extensions Installed"
+msgstr "Намя ўсталяваных пашырэнняў"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:56
+msgid "Browse in Software"
+msgstr "Пошук у праграмным забеспячэнні"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+msgid "Extension downloading"
+msgstr "Пашырэнне загружаецца"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+msgid "Error loading extension"
+msgstr "Памылка загрузкі пашырэння"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+msgid "Extension does not support shell version"
+msgstr "Пашырэнне не падтрымлівае версію абалонкі"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+msgid "Unknown extension error"
+msgstr "Невядомая памылка пашырэння"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+msgid "Updating"
+msgstr "Абнаўленне"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+msgid "Error"
+msgstr "Памылка"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+msgid "Update"
+msgstr "Абнавіць"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+msgid "Extensions"
+msgstr "Пашырэнні"
+
+#: gtweak/tweaks/tweak_group_startup.py:30
+msgid "Startup applications are automatically started when you log in."
+msgstr "Запуск пашырэнняў пачынаецца аўтаматычна калі вы ўваходзіце ў сістэму."
+
+#: gtweak/tweaks/tweak_group_startup.py:31
+#: gtweak/tweaks/tweak_group_startup.py:305
+msgid "Startup Applications"
+msgstr "Запуск пашырэнняў"
+
+#: gtweak/tweaks/tweak_group_startup.py:48
+msgid "Search Applications…"
+msgstr "Пошук дастасаванняў…"
+
+#. Translators: This is the accelerator for opening the AppChooser search-bar
+#: gtweak/tweaks/tweak_group_startup.py:58
+msgid "<primary>f"
+msgstr "<primary>f"
+
+#: gtweak/tweaks/tweak_group_startup.py:77
+msgid "running"
+msgstr "запушчанае"
+
+#: gtweak/tweaks/tweak_group_startup.py:87
+msgid "_Close"
+msgstr "_Зачыніць"
+
+#: gtweak/tweaks/tweak_group_startup.py:88
+msgid "_Add"
+msgstr "_Дадаць"
+
+#: gtweak/tweaks/tweak_group_startup.py:231
+msgid "Remove"
+msgstr "Выдаліць"
+
+#: gtweak/tweaks/tweak_group_startup.py:255
+msgid "New startup application"
+msgstr "Новае дастасаванне для запуску пад час загрузкі"
+
+#: gtweak/tweaks/tweak_group_startup.py:256
+msgid "Add a new application to be run at startup"
+msgstr "Дадаць новае дастасаванне для запуску пад час загрузкі"
+
+#: gtweak/tweaks/tweak_group_sound.py:12
+msgid "Sound"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_sound.py:13
+#, fuzzy
+#| msgid "Applications"
+msgid "Over-Amplification"
+msgstr "Дастасаванні"
+
+#: gtweak/tweaks/tweak_group_sound.py:14
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_top_bar.py:16
+msgid "Application Menu"
+msgstr "Меню дастасаванняў"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:59
+msgid "Top Bar"
+msgstr "Верхняя панэль"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:61
+msgid "Battery Percentage"
+msgstr "Узровень зараду акумулятара"
+
+#. Requires patch from https://bugzilla.gnome.org/688320
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Activities Overview Hot Corner"
+msgstr "Папярэдні прагляд пры навядзенні курсора на вугал экрану"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:64
+msgid "Clock"
+msgstr "Гадзіннік"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:65
+msgid "Date"
+msgstr "Дата"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:66
+msgid "Seconds"
+msgstr "Секунд"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:67
+msgid "Calendar"
+msgstr "Каляндар"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:68
+msgid "Week Numbers"
+msgstr "Нумар тыдня"
+
+#: gtweak/tweaks/tweak_group_windows.py:19
+#: gtweak/tweaks/tweak_group_windows.py:306
+msgid "Window Focus"
+msgstr "Актывацыя вакна"
+
+#: gtweak/tweaks/tweak_group_windows.py:19
+#: gtweak/tweaks/tweak_group_windows.py:37
+#: gtweak/tweaks/tweak_group_windows.py:306
+msgid "Click to Focus"
+msgstr "Клікніце для актывацыі"
+
+#: gtweak/tweaks/tweak_group_windows.py:39
+msgid "Windows are focused when they are clicked."
+msgstr "Вокны становяцца актыўнымі пасля націску."
+
+#: gtweak/tweaks/tweak_group_windows.py:63
+msgid "Sloppy"
+msgstr "Навядзенне актывізуе"
+
+#: gtweak/tweaks/tweak_group_windows.py:65
+msgid ""
+"Window is focused when hovered with the pointer. Windows remain focused when "
+"the desktop is hovered."
+msgstr ""
+"Акно становіцца актыўным, калі курсор перамяшчаецца над ім. Навядзенне "
+"курсора на працоўны стол не знімае актыўнасць вокнаў."
+
+#: gtweak/tweaks/tweak_group_windows.py:89
+#: gtweak/tweaks/tweak_group_windows.py:312
+msgid "Secondary-Click"
+msgstr "Дапаможны клік"
+
+#: gtweak/tweaks/tweak_group_windows.py:91
+msgid ""
+"Window is focused when hovered with the pointer. Hovering the desktop "
+"removes focus from the previous window."
+msgstr ""
+"Вакно становіцца актыўным, калі курсор перамяшчаецца над імі. Навядзецце "
+"курсора на працоўны стол знімае актыўнасць папярэдняга акна."
+
+#: gtweak/tweaks/tweak_group_windows.py:172
+msgid "Placement"
+msgstr "Размяшчэнне"
+
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:186
+msgid "Left"
+msgstr "Улева"
+
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:192
+msgid "Right"
+msgstr "Управа"
+
+#: gtweak/tweaks/tweak_group_windows.py:224
+msgid "Window scaling"
+msgstr "Маштабаванне акна"
+
+#: gtweak/tweaks/tweak_group_windows.py:224
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "Рэгулюе каэфіціэнт маштабавання вокнаў GDK для HiDPI"
+
+#: gtweak/tweaks/tweak_group_windows.py:252
+#, python-brace-format
+msgid "Settings will be reverted in {0} second"
+msgid_plural "Settings will be reverted in {0} seconds"
+msgstr[0] "Налады будуць адноўленыя праз {0} секунду"
+msgstr[1] "Налады будуць адноўленыя праз {0} секунды"
+msgstr[2] "Налады будуць адноўленыя праз {0} секунд"
+
+#: gtweak/tweaks/tweak_group_windows.py:268
+msgid "Do you want to keep these HiDPI settings?"
+msgstr "Жадаеце пакінуць гэтыя налады HiDPI?"
+
+#: gtweak/tweaks/tweak_group_windows.py:275
+msgid "Revert Settings"
+msgstr "Аднавіць налады"
+
+#: gtweak/tweaks/tweak_group_windows.py:276
+msgid "Keep Changes"
+msgstr "Пакінуць налады"
+
+#: gtweak/tweaks/tweak_group_windows.py:292
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: gtweak/tweaks/tweak_group_windows.py:298
+msgid "Windows"
+msgstr "Вокны"
+
+#: gtweak/tweaks/tweak_group_windows.py:299
+msgid "Attach Modal Dialogs"
+msgstr "Далучаныя мадальныя дыялогавыя вокны"
+
+#: gtweak/tweaks/tweak_group_windows.py:300
+msgid ""
+"When on, modal dialog windows are attached to their parent windows, and "
+"cannot be moved."
+msgstr ""
+"Калі ўключана, далучэнні мадальных дыялогавых вокнаў будуць далучаны на "
+"бацькоўскага вакна і ня змогуць быць выдалены."
+
+#: gtweak/tweaks/tweak_group_windows.py:301
+msgid "Resize with Secondary-Click"
+msgstr "Змена памеру пасля кліку правай кнопкай мышы"
+
+#: gtweak/tweaks/tweak_group_windows.py:302
+msgid "Window Action Key"
+msgstr "Кнопка кіравання акном"
+
+#: gtweak/tweaks/tweak_group_windows.py:308
+msgid "Raise Windows When Focused"
+msgstr "Вокны паднімаюцца пасля актывізацыі"
+
+#: gtweak/tweaks/tweak_group_windows.py:309
+msgid "Titlebar Actions"
+msgstr "Кіраванне на загалоўку вакна"
+
+#: gtweak/tweaks/tweak_group_windows.py:310
+msgid "Double-Click"
+msgstr "Падвойны клік мышы"
+
+#: gtweak/tweaks/tweak_group_windows.py:311
+msgid "Middle-Click"
+msgstr "Націск сярэдняй кнопкі мышы"
+
+#: gtweak/tweaks/tweak_group_windows.py:313
+msgid "Titlebar Buttons"
+msgstr "Кнопкі кіравання на загалоўку вакна"
+
+#: gtweak/tweaks/tweak_group_windows.py:314
+msgid "Maximize"
+msgstr "Разгарнуць"
+
+#: gtweak/tweaks/tweak_group_windows.py:315
+msgid "Minimize"
+msgstr "Згарнуць"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:19
+msgid "Dynamic Workspaces"
+msgstr "Дынамічныя працоўныя прасторы"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:38
+msgid ""
+"Workspaces can be created on demand, and are automatically removed when "
+"empty."
+msgstr ""
+"Працоўныя прасторы могуць быць створаныя па патрабаванні і аўтаматычна "
+"выдаленыя калі застануцца пустымі."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:62
+msgid "Static Workspaces"
+msgstr "Статычныя працоўныя прасторы"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:64
+msgid "Number of workspaces is fixed."
+msgstr "Колькасць працоўных прастораў фіксаваная."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:95
+#: gtweak/tweaks/tweak_group_workspaces.py:174
+msgid "Workspaces"
+msgstr "Працоўныя прасторы"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:97
+#: gtweak/tweaks/tweak_group_workspaces.py:177
+msgid "Display Handling"
+msgstr "Кіраванне маніторамі"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:97
+#: gtweak/tweaks/tweak_group_workspaces.py:139
+msgid "Workspaces span displays"
+msgstr "Працоўныя прасторы на ўсіх маніторах"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:113
+msgid "Workspaces on primary display only"
+msgstr "Працоўныя прасторы толькі на асноўным маніторы"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:115
+msgid "Additional displays are treated as independent workspaces."
+msgstr "Дадатковыя маніторы лічацца незалежнымі працоўнымі прасторамі."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:141
+msgid "The current workspace includes additional displays."
+msgstr "Бягучая працоўная прастора ўключае ў сябе дадатковыя маніторы."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:176
+msgid "Number of Workspaces"
+msgstr "Колькасць працоўных прастораў"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:22
+msgid "Emacs Input"
+msgstr "Увод як у Emacs"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:25
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
+msgstr "Змяняе вызначэнне камбінацыяў кнопак з рэдактара Emacs."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:41
+#: gtweak/tweaks/tweak_group_keymouse.py:109
+msgid "Compose Key"
+msgstr "Кампазіцыйная кнопка"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:97
+#: gtweak/tweaks/tweak_group_keymouse.py:179
+msgid "Scroll Lock"
+msgstr "Scroll Lock"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+msgid "PrtScn"
+msgstr "PrtScn"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:99
+msgid "Menu"
+msgstr "Меню"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:100
+msgid "Right Alt"
+msgstr "Правая кнопка Alt"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:101
+msgid "Right Ctrl"
+msgstr "Правая кнопка Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:102
+#: gtweak/tweaks/tweak_group_keymouse.py:201
+msgid "Right Super"
+msgstr "Правая кнопка Super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:103
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:46
+#: gtweak/tweaks/tweak_group_keymouse.py:85
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+msgid "Left Ctrl"
+msgstr "Левая кнопка Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:52
+msgid "Allows entering additional characters."
+msgstr "Дазваляе ўвод дадатковых сімвалаў."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:127
+msgid ""
+"The compose key allows a wide variety of characters to be entered. To use "
+"it, press the compose key and then a sequence of characters.\n"
+"\n"
+"Many unusual characters can be entered by combining standard ones. For "
+"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
+"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+msgstr ""
+"Кампазіцыйная кнопка дазваляе ўводзіць разнастайныя сімвалы. Каб пачаць ёй "
+"карыстацца націсніце кампазіцыйную кнопку і паслядоўнасць сімвалаў.\n"
+"\n"
+"Шмат незвычайных сімвалаў можа быць уведзена праз аб'яднанне стандартных. "
+"Напрыклад націснуўны кампазіцыйную кпонку, а потым <b>C</b> і <b>o</b> "
+"атрымаецца <b>©</b>, <b>a</b> пасля <b>'</b> атрымаецца <b>á</b>.\n"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:190
+msgid "Overview Shortcut"
+msgstr "Скарачэнне для ўвахода ў меню Агляд"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:197
+msgid "Left Super"
+msgstr "Левая кнопка Super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:224
+#: gtweak/tweaks/tweak_group_keymouse.py:232
+msgid "Additional Layout Options"
+msgstr "Дадатковыя магчымасці раскладкі"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:254
+#: gtweak/tweaks/tweak_group_keymouse.py:393
+msgid "Mouse Click Emulation"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:272
+msgid "Fingers"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:274
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:298
+msgid "Area"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:300
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:326
+msgid "Don’t use mouse click emulation."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:363
+msgid "Keyboard & Mouse"
+msgstr "Клавіятура і мыш"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:364
+msgid "Keyboard"
+msgstr "Клавіятура"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:365
+msgid "Show Extended Input Sources"
+msgstr "Паказаць пашыраныя крыніцы ўводу"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:368
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "Павялічвае выбар крыніцаў уводу ў наладах дастасавання."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:374
+msgid "Mouse"
+msgstr "Мыш"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:375
+msgid "Acceleration Profile"
+msgstr "Профіль паскарэння"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:379
+msgid "Pointer Location"
+msgstr "Знаходжанне курсора"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:383
+msgid "Press the Ctrl key to highlight the pointer."
+msgstr "Націсніце кнопку Ctrl каб выдзеліць указальнік."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:384
+msgid "Middle Click Paste"
+msgstr "Устаўка праз націск сярэдняй кнопкі мышы"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:388
+msgid "Touchpad"
+msgstr "Сэнсарная панэль"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:389
+msgid "Disable While Typing"
+msgstr "Адключыць пад час друкавання"
+
+#: gtweak/tweaks/tweak_wacom.py:16
+msgid "Device"
+msgstr "Прылада"
+
+#: gtweak/tweaks/tweak_wacom.py:25
+msgid "Wacom"
+msgstr "Wacom"
+
+#. indicates the default theme, e.g Adwaita (default)
+#: gtweak/utils.py:60
+#, python-format
+msgid "%s <i>(default)</i>"
+msgstr "%s <i>(па змаўчанні)</i>"
+
+#: gtweak/utils.py:333
+msgid "Configuration changes require restart"
+msgstr "Змены канфігурацыі патрабуюць перазагрузкі"
+
+#: gtweak/utils.py:334
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Вашу сесію трэба перазапусціць каб налады пачалі дзейнічаць"
+
+#: gtweak/utils.py:338
+msgid "Restart Session"
+msgstr "Перазапусціць сесію"
+
+#~ msgid "Click Method"
+#~ msgstr "Метад націску"
+
+#~ msgid "Enable dark theme for all applications"
+#~ msgstr "Уключыць цёмную тэму для ўсіх дастасаванняў"
+
+#~ msgid "Enable the dark theme hint for all the applications in the session"
+#~ msgstr "Уключыць цёмную тэму для ўсіх дастасаванняў гэтай сесіі"
+
+#~ msgid "Global Dark Theme"
+#~ msgstr "Ужыць цёмную тэму глабальна"
+
+#~ msgid "Applications need to be restarted for this change to take place."
+#~ msgstr "Дастасаванні трэба перазапусціць каб гэтыя змены пачалі дзейнічаць."
