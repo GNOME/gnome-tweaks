@@ -201,13 +201,22 @@ class OverviewShortcutTweak(Gtk.Box, _GSettingsTweak):
         btn2.set_label(_("Right Super"))
         btn2.set_property("draw-indicator", False)
 
-        if (self.settings.get_string(self.key_name) == "Super_R"):
+        btn3 = Gtk.RadioButton.new_from_widget(btn1)
+        btn3.set_label(_("Disable"))
+        btn3.set_property("draw-indicator", False)
+
+        key_setting = self.settings.get_string(self.key_name)
+        if (key_setting == "Super_R"):
             btn2.set_active(True)
+        elif (key_setting == ""):
+            btn3.set_active(True)
         btn1.connect("toggled", self.on_button_toggled, "Super_L")
         btn2.connect("toggled", self.on_button_toggled, "Super_R")
+        btn3.connect("toggled", self.on_button_toggled, "")
 
         box_btn.pack_start(btn1, True, True, 0)
         box_btn.pack_start(btn2, True, True, 0)
+        box_btn.pack_start(btn3, True, True, 0)
         build_label_beside_widget(name, box_btn, hbox=self)
 
     def on_button_toggled(self, button, key):
