@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-01-30 19:20+0000\n"
-"PO-Revision-Date: 2018-02-05 12:05+0700\n"
+"POT-Creation-Date: 2018-05-11 22:04+0000\n"
+"PO-Revision-Date: 2018-05-12 14:18+0700\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -224,27 +224,31 @@ msgstr "Kunci Layar"
 msgid "Show Icons"
 msgstr "Tampilkan Ikon"
 
-#: gtweak/tweaks/tweak_group_desktop.py:10
-msgid "Desktop"
-msgstr "Desktop"
-
-#: gtweak/tweaks/tweak_group_desktop.py:11
-msgid "Icons on Desktop"
-msgstr "Ikon pada Desktop"
-
+#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
+#. *work* unless we have a version of Nautilus that still has the ability to
+#. draw the desktop; use one of the settings that was present in that version
+#. to probe for it.
 #: gtweak/tweaks/tweak_group_desktop.py:13
 msgid "Home"
 msgstr "Rumah"
 
-#: gtweak/tweaks/tweak_group_desktop.py:14
+#: gtweak/tweaks/tweak_group_desktop.py:20
+msgid "Desktop"
+msgstr "Desktop"
+
+#: gtweak/tweaks/tweak_group_desktop.py:21
+msgid "Icons on Desktop"
+msgstr "Ikon pada Desktop"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
 msgid "Network Servers"
 msgstr "Server Jaringan"
 
-#: gtweak/tweaks/tweak_group_desktop.py:15
+#: gtweak/tweaks/tweak_group_desktop.py:25
 msgid "Trash"
 msgstr "Tong Sampah"
 
-#: gtweak/tweaks/tweak_group_desktop.py:16
+#: gtweak/tweaks/tweak_group_desktop.py:26
 msgid "Mounted Volumes"
 msgstr "Volume Dikait"
 
@@ -285,369 +289,24 @@ msgid "Fonts"
 msgstr "Fonta"
 
 #: gtweak/tweaks/tweak_group_font.py:100
-msgid "Window Title"
-msgstr "Judul Jendela"
-
-#: gtweak/tweaks/tweak_group_font.py:101
 msgid "Interface"
 msgstr "Antar Muka"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:101
 msgid "Document"
 msgstr "Dokumen"
 
-#: gtweak/tweaks/tweak_group_font.py:103
+#: gtweak/tweaks/tweak_group_font.py:102
 msgid "Monospace"
 msgstr "Monospace"
+
+#: gtweak/tweaks/tweak_group_font.py:103
+msgid "Legacy Window Title"
+msgstr "Warisan Judul Jendela"
 
 #: gtweak/tweaks/tweak_group_font.py:105
 msgid "Scaling Factor"
 msgstr "Faktor Penskalaan"
-
-#: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
-#: gtweak/tweaks/tweak_group_keymouse.py:48
-#: gtweak/tweaks/tweak_group_keymouse.py:184
-#: gtweak/tweaks/tweak_group_keymouse.py:324
-msgid "Disabled"
-msgstr "Dimatikan"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
-msgid "Typing"
-msgstr "Mengetik"
-
-#: gtweak/tweaks/tweak_group_power.py:22
-msgid "Suspend when laptop lid is closed"
-msgstr "Suspensi ketika lid laptop ditutup"
-
-#: gtweak/tweaks/tweak_group_power.py:46
-msgid "Power"
-msgstr "Daya"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Tak Ada Ekstensi Terpasang"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Ramban di Perangkat Lunak"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
-msgid "Extension downloading"
-msgstr "Pengunduhan ekstensi"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
-msgid "Error loading extension"
-msgstr "Galat saat memuat ekstensi"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
-msgid "Extension does not support shell version"
-msgstr "Ekstensi tak mendukung versi shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
-msgid "Unknown extension error"
-msgstr "Galat ekstensi yang tak dikenal"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
-msgid "Updating"
-msgstr "Memutakhirkan"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
-msgid "Error"
-msgstr "Galat"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
-msgid "Update"
-msgstr "Mutakhirkan"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
-msgid "Extensions"
-msgstr "Ekstensi"
-
-#: gtweak/tweaks/tweak_group_startup.py:30
-msgid "Startup applications are automatically started when you log in."
-msgstr "Aplikasi awal mula secara otomatis dimulai saat Anda masuk."
-
-#: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
-msgid "Startup Applications"
-msgstr "Aplikasi Awal Mula"
-
-#: gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications…"
-msgstr "Cari Aplikasi..."
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:58
-msgid "<primary>f"
-msgstr "<primary>f"
-
-#: gtweak/tweaks/tweak_group_startup.py:77
-msgid "running"
-msgstr "berjalan"
-
-#: gtweak/tweaks/tweak_group_startup.py:87
-msgid "_Close"
-msgstr "_Tutup"
-
-#: gtweak/tweaks/tweak_group_startup.py:88
-msgid "_Add"
-msgstr "T_ambah"
-
-#: gtweak/tweaks/tweak_group_startup.py:231
-msgid "Remove"
-msgstr "Hapus"
-
-#: gtweak/tweaks/tweak_group_startup.py:255
-msgid "New startup application"
-msgstr "Aplikasi awal mula baru"
-
-#: gtweak/tweaks/tweak_group_startup.py:256
-msgid "Add a new application to be run at startup"
-msgstr "Tambahkan aplikasi baru untuk dijalankan saat awal mula"
-
-#: gtweak/tweaks/tweak_group_sound.py:12
-msgid "Sound"
-msgstr "Suara"
-
-#: gtweak/tweaks/tweak_group_sound.py:13
-msgid "Over-Amplification"
-msgstr "Penguatan Berlebih"
-
-#: gtweak/tweaks/tweak_group_sound.py:14
-msgid ""
-"Allows raising the volume above 100%. This can result in a loss of audio "
-"quality; it is better to increase application volume settings, if possible."
-msgstr ""
-"Memungkinkan menaikkan volume di atas 100%. Hal ini dapat mengakibatkan "
-"hilangnya kualitas audio; lebih baik untuk meningkatkan pengaturan volume "
-"aplikasi, jika memungkinkan."
-
-#: gtweak/tweaks/tweak_group_top_bar.py:13
-msgid "Activities Overview Hot Corner"
-msgstr "Pojok Panas Ringkasan Aktivitas"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:18
-msgid "Application Menu"
-msgstr "Menu Aplikasi"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Top Bar"
-msgstr "Bilah Puncak"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:63
-msgid "Battery Percentage"
-msgstr "Persentase Baterai"
-
-#. Requires patch from https://bugzilla.gnome.org/688320
-#. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
-#: gtweak/tweaks/tweak_group_top_bar.py:66
-msgid "Clock"
-msgstr "Jam"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:67
-msgid "Date"
-msgstr "Tanggal"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:68
-msgid "Seconds"
-msgstr "Detik"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:69
-msgid "Calendar"
-msgstr "Kalender"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:70
-msgid "Week Numbers"
-msgstr "Nomor Minggu"
-
-#: gtweak/tweaks/tweak_group_windows.py:19
-#: gtweak/tweaks/tweak_group_windows.py:306
-msgid "Window Focus"
-msgstr "Fokus Jendela"
-
-#: gtweak/tweaks/tweak_group_windows.py:19
-#: gtweak/tweaks/tweak_group_windows.py:37
-#: gtweak/tweaks/tweak_group_windows.py:306
-msgid "Click to Focus"
-msgstr "Klik untuk Fokus"
-
-#: gtweak/tweaks/tweak_group_windows.py:39
-msgid "Windows are focused when they are clicked."
-msgstr "Jendela terfokus saat diklik."
-
-#: gtweak/tweaks/tweak_group_windows.py:63
-msgid "Sloppy"
-msgstr "Tidak Rapi"
-
-#: gtweak/tweaks/tweak_group_windows.py:65
-msgid ""
-"Window is focused when hovered with the pointer. Windows remain focused when "
-"the desktop is hovered."
-msgstr ""
-"Jendela difokuskan saat melayang dengan pointer. Jendela tetap fokus saat "
-"destop melayang."
-
-#: gtweak/tweaks/tweak_group_windows.py:89
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Secondary-Click"
-msgstr "Klik Sekunder"
-
-#: gtweak/tweaks/tweak_group_windows.py:91
-msgid ""
-"Window is focused when hovered with the pointer. Hovering the desktop "
-"removes focus from the previous window."
-msgstr ""
-"Jendela difokuskan saat melayang dengan pointer. Melayang destop menghapus "
-"fokus dari jendela sebelumnya."
-
-#: gtweak/tweaks/tweak_group_windows.py:172
-msgid "Placement"
-msgstr "Penempatan"
-
-#. Translators: For RTL languages, this is the "Right" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:186
-msgid "Left"
-msgstr "Kiri"
-
-#. Translators: For RTL languages, this is the "Left" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:192
-msgid "Right"
-msgstr "Kanan"
-
-#: gtweak/tweaks/tweak_group_windows.py:224
-msgid "Window scaling"
-msgstr "Penskalaan jendela"
-
-#: gtweak/tweaks/tweak_group_windows.py:224
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Setel faktor skala jendela GDK untuk HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:252
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Pengaturan akan dikembalikan dalam {0} detik"
-
-#: gtweak/tweaks/tweak_group_windows.py:268
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Apakah Anda ingin mempertahankan pengaturan HiDPI ini?"
-
-#: gtweak/tweaks/tweak_group_windows.py:275
-msgid "Revert Settings"
-msgstr "Balikkan Tatanan"
-
-#: gtweak/tweaks/tweak_group_windows.py:276
-msgid "Keep Changes"
-msgstr "Simpan Perubahan"
-
-#: gtweak/tweaks/tweak_group_windows.py:292
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:298
-msgid "Windows"
-msgstr "Jendela"
-
-#: gtweak/tweaks/tweak_group_windows.py:299
-msgid "Attach Modal Dialogs"
-msgstr "Lampirkan Dialog Modal"
-
-#: gtweak/tweaks/tweak_group_windows.py:300
-msgid ""
-"When on, modal dialog windows are attached to their parent windows, and "
-"cannot be moved."
-msgstr ""
-"Saat masuk, jendela dialog modal terpasang ke jendela induk mereka, dan "
-"tidak bisa digerakkan."
-
-#: gtweak/tweaks/tweak_group_windows.py:301
-msgid "Resize with Secondary-Click"
-msgstr "Ubah Ukuran dengan Klik Sekunder"
-
-#: gtweak/tweaks/tweak_group_windows.py:302
-msgid "Window Action Key"
-msgstr "Tombol Aksi Jendela"
-
-#: gtweak/tweaks/tweak_group_windows.py:308
-msgid "Raise Windows When Focused"
-msgstr "Naikkan Jendela Saat Fokus"
-
-#: gtweak/tweaks/tweak_group_windows.py:309
-msgid "Titlebar Actions"
-msgstr "Aksi Bilah Judul"
-
-#: gtweak/tweaks/tweak_group_windows.py:310
-msgid "Double-Click"
-msgstr "Klik Ganda"
-
-#: gtweak/tweaks/tweak_group_windows.py:311
-msgid "Middle-Click"
-msgstr "Klik Tengah"
-
-#: gtweak/tweaks/tweak_group_windows.py:313
-msgid "Titlebar Buttons"
-msgstr "Tombol Bilah Judul"
-
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Maximize"
-msgstr "Maksimalkan"
-
-#: gtweak/tweaks/tweak_group_windows.py:315
-msgid "Minimize"
-msgstr "Minimalkan"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Ruang Kerja Dinamis"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr ""
-"Ruang kerja dapat dibuat sesuai permintaan, dan secara otomatis dihapus saat "
-"kosong."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Ruang Kerja Statis"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Cacah ruang kerja adalah tetap"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Ruang kerja"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Penanganan Tampilan"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Ruang kerja menampilkan span"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Ruang kerja hanya pada tampilan primer"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Tampilan tambahan diperlakukan sebagai ruang kerja independen."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Ruang kerja saat ini mencakup tampilan tambahan."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Cacah Ruang Kerja"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:22
 msgid "Emacs Input"
@@ -712,6 +371,13 @@ msgstr "Caps Lock"
 #: gtweak/tweaks/tweak_group_keymouse.py:104
 msgid "Left Ctrl"
 msgstr "Ctrl Kiri"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:48
+#: gtweak/tweaks/tweak_group_keymouse.py:184
+#: gtweak/tweaks/tweak_group_keymouse.py:324
+#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Dimatikan"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:52
 msgid "Allows entering additional characters."
@@ -823,6 +489,360 @@ msgstr "Touchpad"
 #: gtweak/tweaks/tweak_group_keymouse.py:389
 msgid "Disable While Typing"
 msgstr "Nonaktifkan Ketika Mengetik"
+
+#: gtweak/tweaks/tweak_group_power.py:22
+msgid "Suspend when laptop lid is closed"
+msgstr "Suspensi ketika lid laptop ditutup"
+
+#: gtweak/tweaks/tweak_group_power.py:46
+msgid "Power"
+msgstr "Daya"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:49
+msgid "No Extensions Installed"
+msgstr "Tak Ada Ekstensi Terpasang"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:56
+msgid "Browse in Software"
+msgstr "Ramban di Perangkat Lunak"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+msgid "Extension downloading"
+msgstr "Pengunduhan ekstensi"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+msgid "Error loading extension"
+msgstr "Galat saat memuat ekstensi"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+msgid "Extension does not support shell version"
+msgstr "Ekstensi tak mendukung versi shell"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+msgid "Unknown extension error"
+msgstr "Galat ekstensi yang tak dikenal"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+msgid "Updating"
+msgstr "Memutakhirkan"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+msgid "Error"
+msgstr "Galat"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+msgid "Update"
+msgstr "Mutakhirkan"
+
+#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+msgid "Extensions"
+msgstr "Ekstensi"
+
+#: gtweak/tweaks/tweak_group_sound.py:12
+msgid "Sound"
+msgstr "Suara"
+
+#: gtweak/tweaks/tweak_group_sound.py:13
+msgid "Over-Amplification"
+msgstr "Penguatan Berlebih"
+
+#: gtweak/tweaks/tweak_group_sound.py:14
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Memungkinkan menaikkan volume di atas 100%. Hal ini dapat mengakibatkan "
+"hilangnya kualitas audio; lebih baik untuk meningkatkan pengaturan volume "
+"aplikasi, jika memungkinkan."
+
+#: gtweak/tweaks/tweak_group_startup.py:30
+msgid "Startup applications are automatically started when you log in."
+msgstr "Aplikasi awal mula secara otomatis dimulai saat Anda masuk."
+
+#: gtweak/tweaks/tweak_group_startup.py:31
+#: gtweak/tweaks/tweak_group_startup.py:305
+msgid "Startup Applications"
+msgstr "Aplikasi Awal Mula"
+
+#: gtweak/tweaks/tweak_group_startup.py:48
+msgid "Search Applications…"
+msgstr "Cari Aplikasi..."
+
+#. Translators: This is the accelerator for opening the AppChooser search-bar
+#: gtweak/tweaks/tweak_group_startup.py:58
+msgid "<primary>f"
+msgstr "<primary>f"
+
+#: gtweak/tweaks/tweak_group_startup.py:77
+msgid "running"
+msgstr "berjalan"
+
+#: gtweak/tweaks/tweak_group_startup.py:87
+msgid "_Close"
+msgstr "_Tutup"
+
+#: gtweak/tweaks/tweak_group_startup.py:88
+msgid "_Add"
+msgstr "T_ambah"
+
+#: gtweak/tweaks/tweak_group_startup.py:231
+msgid "Remove"
+msgstr "Hapus"
+
+#: gtweak/tweaks/tweak_group_startup.py:255
+msgid "New startup application"
+msgstr "Aplikasi awal mula baru"
+
+#: gtweak/tweaks/tweak_group_startup.py:256
+msgid "Add a new application to be run at startup"
+msgstr "Tambahkan aplikasi baru untuk dijalankan saat awal mula"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:57
+msgid "Placement"
+msgstr "Penempatan"
+
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_title_bar.py:71
+msgid "Left"
+msgstr "Kiri"
+
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_title_bar.py:77
+msgid "Right"
+msgstr "Kanan"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:108
+msgid "Window Titlebars"
+msgstr "Bilah Judul Jendela"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:109
+msgid "Titlebar Actions"
+msgstr "Aksi Bilah Judul"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:110
+msgid "Double-Click"
+msgstr "Klik Ganda"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:111
+msgid "Middle-Click"
+msgstr "Klik Tengah"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:112
+#: gtweak/tweaks/tweak_group_windows.py:88
+msgid "Secondary-Click"
+msgstr "Klik Sekunder"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:113
+msgid "Titlebar Buttons"
+msgstr "Tombol Bilah Judul"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:114
+msgid "Maximize"
+msgstr "Maksimalkan"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:115
+msgid "Minimize"
+msgstr "Minimalkan"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:16
+msgid "Application Menu"
+msgstr "Menu Aplikasi"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:59
+msgid "Top Bar"
+msgstr "Bilah Puncak"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:61
+msgid "Battery Percentage"
+msgstr "Persentase Baterai"
+
+#. Requires patch from https://bugzilla.gnome.org/688320
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Activities Overview Hot Corner"
+msgstr "Pojok Panas Ringkasan Aktivitas"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:64
+msgid "Clock"
+msgstr "Jam"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:65
+msgid "Date"
+msgstr "Tanggal"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:66
+msgid "Seconds"
+msgstr "Detik"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:67
+msgid "Calendar"
+msgstr "Kalender"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:68
+msgid "Week Numbers"
+msgstr "Nomor Minggu"
+
+#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:215
+msgid "Window Focus"
+msgstr "Fokus Jendela"
+
+#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:36
+#: gtweak/tweaks/tweak_group_windows.py:215
+msgid "Click to Focus"
+msgstr "Klik untuk Fokus"
+
+#: gtweak/tweaks/tweak_group_windows.py:38
+msgid "Windows are focused when they are clicked."
+msgstr "Jendela terfokus saat diklik."
+
+#: gtweak/tweaks/tweak_group_windows.py:62
+msgid "Sloppy"
+msgstr "Tidak Rapi"
+
+#: gtweak/tweaks/tweak_group_windows.py:64
+msgid ""
+"Window is focused when hovered with the pointer. Windows remain focused when "
+"the desktop is hovered."
+msgstr ""
+"Jendela difokuskan saat melayang dengan pointer. Jendela tetap fokus saat "
+"destop melayang."
+
+#: gtweak/tweaks/tweak_group_windows.py:90
+msgid ""
+"Window is focused when hovered with the pointer. Hovering the desktop "
+"removes focus from the previous window."
+msgstr ""
+"Jendela difokuskan saat melayang dengan pointer. Melayang destop menghapus "
+"fokus dari jendela sebelumnya."
+
+#: gtweak/tweaks/tweak_group_windows.py:129
+msgid "Window scaling"
+msgstr "Penskalaan jendela"
+
+#: gtweak/tweaks/tweak_group_windows.py:129
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "Setel faktor skala jendela GDK untuk HiDPI"
+
+#: gtweak/tweaks/tweak_group_windows.py:157
+#, python-brace-format
+msgid "Settings will be reverted in {0} second"
+msgid_plural "Settings will be reverted in {0} seconds"
+msgstr[0] "Pengaturan akan dikembalikan dalam {0} detik"
+
+#: gtweak/tweaks/tweak_group_windows.py:173
+msgid "Do you want to keep these HiDPI settings?"
+msgstr "Apakah Anda ingin mempertahankan pengaturan HiDPI ini?"
+
+#: gtweak/tweaks/tweak_group_windows.py:180
+msgid "Revert Settings"
+msgstr "Balikkan Tatanan"
+
+#: gtweak/tweaks/tweak_group_windows.py:181
+msgid "Keep Changes"
+msgstr "Simpan Perubahan"
+
+#: gtweak/tweaks/tweak_group_windows.py:197
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: gtweak/tweaks/tweak_group_windows.py:203
+msgid "Windows"
+msgstr "Jendela"
+
+#: gtweak/tweaks/tweak_group_windows.py:204
+msgid "Attach Modal Dialogs"
+msgstr "Lampirkan Dialog Modal"
+
+#: gtweak/tweaks/tweak_group_windows.py:205
+msgid ""
+"When on, modal dialog windows are attached to their parent windows, and "
+"cannot be moved."
+msgstr ""
+"Saat masuk, jendela dialog modal terpasang ke jendela induk mereka, dan "
+"tidak bisa digerakkan."
+
+#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
+#: gtweak/tweaks/tweak_group_windows.py:207
+msgid "Edge Tiling"
+msgstr "Ubinkan ke Tepi"
+
+#: gtweak/tweaks/tweak_group_windows.py:208
+msgid "When on, windows are tiled when dragged to screen edges."
+msgstr "Saat hidup, jendela diubinkan ketika diseret ke tepi layar."
+
+#: gtweak/tweaks/tweak_group_windows.py:209
+msgid "Center New Windows"
+msgstr "Tengahkan Jendela Baru"
+
+#: gtweak/tweaks/tweak_group_windows.py:210
+msgid "Resize with Secondary-Click"
+msgstr "Ubah Ukuran dengan Klik Sekunder"
+
+#: gtweak/tweaks/tweak_group_windows.py:211
+msgid "Window Action Key"
+msgstr "Tombol Aksi Jendela"
+
+#: gtweak/tweaks/tweak_group_windows.py:217
+msgid "Raise Windows When Focused"
+msgstr "Naikkan Jendela Saat Fokus"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:19
+msgid "Dynamic Workspaces"
+msgstr "Ruang Kerja Dinamis"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:38
+msgid ""
+"Workspaces can be created on demand, and are automatically removed when "
+"empty."
+msgstr ""
+"Ruang kerja dapat dibuat sesuai permintaan, dan secara otomatis dihapus saat "
+"kosong."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:62
+msgid "Static Workspaces"
+msgstr "Ruang Kerja Statis"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:64
+msgid "Number of workspaces is fixed."
+msgstr "Cacah ruang kerja adalah tetap"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:95
+#: gtweak/tweaks/tweak_group_workspaces.py:174
+msgid "Workspaces"
+msgstr "Ruang kerja"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:97
+#: gtweak/tweaks/tweak_group_workspaces.py:177
+msgid "Display Handling"
+msgstr "Penanganan Tampilan"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:97
+#: gtweak/tweaks/tweak_group_workspaces.py:139
+msgid "Workspaces span displays"
+msgstr "Ruang kerja menampilkan span"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:113
+msgid "Workspaces on primary display only"
+msgstr "Ruang kerja hanya pada tampilan primer"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:115
+msgid "Additional displays are treated as independent workspaces."
+msgstr "Tampilan tambahan diperlakukan sebagai ruang kerja independen."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:141
+msgid "The current workspace includes additional displays."
+msgstr "Ruang kerja saat ini mencakup tampilan tambahan."
+
+#: gtweak/tweaks/tweak_group_workspaces.py:176
+msgid "Number of Workspaces"
+msgstr "Cacah Ruang Kerja"
+
+#: gtweak/tweaks/tweak_group_xkb.py:166
+msgid "Typing"
+msgstr "Mengetik"
 
 #: gtweak/tweaks/tweak_wacom.py:16
 msgid "Device"
