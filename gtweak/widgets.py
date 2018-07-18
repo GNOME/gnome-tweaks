@@ -116,32 +116,9 @@ def build_tight_button(stock_id):
     button.get_style_context().add_provider(provider, 600)
     return button
 
-def adjust_schema_for_overrides(originalSchema, key, options):
-    if (_shell is None):
-        return originalSchema
-
-    if (_shell.mode == 'user'):
-        overridesSchema = "org.gnome.shell.overrides"
-        overridesFile = "org.gnome.shell.gschema.xml"
-    elif (_shell.mode == 'classic'):
-        overridesSchema = "org.gnome.shell.extensions.classic-overrides"
-        overridesFile = None
-    else:
-        return originalSchema
-
-    try:
-        if (key in GSettingsSetting(overridesSchema, schema_filename=overridesFile).list_keys()):
-            options['schema_filename'] = overridesFile
-            return overridesSchema
-    except GSettingsMissingError as e:
-        logging.info("GSetting missing %s", e)
-
-    return originalSchema
-
 
 class _GSettingsTweak(Tweak):
     def __init__(self, name, schema_name, key_name, **options):
-        schema_name = adjust_schema_for_overrides(schema_name, key_name, options)
         self.schema_name = schema_name
         self.key_name = key_name
         self._extra_info = None
