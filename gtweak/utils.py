@@ -10,15 +10,14 @@ import subprocess
 import glob
 import itertools
 
-import gtweak
-from gtweak.gsettings import GSettingsSetting
-
 import gi
 gi.require_version("Notify", "0.7")
 from gi.repository import GObject
 from gi.repository import GLib
 from gi.repository import Gio
 from gi.repository import Notify
+
+import gtweak
 
 def singleton(cls):
     """
