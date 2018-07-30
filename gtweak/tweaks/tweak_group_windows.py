@@ -59,7 +59,7 @@ class Focus(Gtk.ListBox, Tweak):
 
         vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
-        lbl = Gtk.Label(_("Sloppy"), xalign=0)
+        lbl = Gtk.Label(_("Focus on Hover"), xalign=0)
         lbl.props.xalign = 0.0
         desc = _("Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered.")
         lbl_desc = Gtk.Label()
