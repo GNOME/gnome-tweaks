@@ -17,7 +17,7 @@ RUNTIME DEPENDENCIES
 * gnome-settings-daemon
 
 * GIR files and libraries from:
-  - GLib
+  - GLib (>= 2.57.2)
   - GTK+ 3 (>= 3.12)
   - gnome-desktop
   - libsoup
