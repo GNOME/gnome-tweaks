@@ -7,7 +7,6 @@ import os.path
 from gi.repository import Gio, GLib, Gtk, Gdk
 
 import gtweak
-from gtweak.gsettings import GSettingsSetting
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweaks.tweak_group_xkb import TypingTweakGroup
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, Title, GSettingsComboEnumTweak, build_label_beside_widget, Tweak, UI_BOX_SPACING
