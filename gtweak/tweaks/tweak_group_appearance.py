@@ -256,7 +256,6 @@ TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Appearance"),
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-        GSettingsSwitchTweak(_("Animations"), "org.gnome.desktop.interface", "enable-animations"),
         Title(_("Themes"), "", uid="title-theme"),
         GtkThemeSwitcher(),
         CursorThemeSwitcher(),
