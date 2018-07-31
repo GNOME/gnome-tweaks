@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-05-20 23:56+0000\n"
-"PO-Revision-Date: 2018-05-22 13:00+0200\n"
+"POT-Creation-Date: 2018-07-30 21:51+0000\n"
+"PO-Revision-Date: 2018-07-31 12:04+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
@@ -199,28 +199,24 @@ msgstr "Apariencia"
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
 #: gtweak/tweaks/tweak_group_appearance.py:259
-msgid "Animations"
-msgstr "Animaciones"
-
-#: gtweak/tweaks/tweak_group_appearance.py:260
 msgid "Themes"
 msgstr "Temas"
 
-#: gtweak/tweaks/tweak_group_appearance.py:266
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Background"
 msgstr "Fondo"
 
-#: gtweak/tweaks/tweak_group_appearance.py:267
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:266
+#: gtweak/tweaks/tweak_group_appearance.py:271
 msgid "Image"
 msgstr "Imagen"
 
-#: gtweak/tweaks/tweak_group_appearance.py:269
-#: gtweak/tweaks/tweak_group_appearance.py:274
+#: gtweak/tweaks/tweak_group_appearance.py:268
+#: gtweak/tweaks/tweak_group_appearance.py:273
 msgid "Adjustment"
 msgstr "Ajuste"
 
-#: gtweak/tweaks/tweak_group_appearance.py:271
+#: gtweak/tweaks/tweak_group_appearance.py:270
 msgid "Lock Screen"
 msgstr "Bloquear la pantalla"
 
@@ -293,25 +289,53 @@ msgid "Fonts"
 msgstr "Tipografías"
 
 #: gtweak/tweaks/tweak_group_font.py:100
-msgid "Interface"
-msgstr "Interfaz"
+#| msgid "Interface"
+msgid "Interface Text"
+msgstr "Texto de la interfaz"
 
 #: gtweak/tweaks/tweak_group_font.py:101
-msgid "Document"
-msgstr "Documento"
+#| msgid "Document"
+msgid "Document Text"
+msgstr "Texto del documento"
 
 #: gtweak/tweaks/tweak_group_font.py:102
-msgid "Monospace"
-msgstr "Monoespaciada"
+#| msgid "Monospace"
+msgid "Monospace Text"
+msgstr "Texto monoespaciado"
 
 #: gtweak/tweaks/tweak_group_font.py:103
-#| msgid "Window Title"
-msgid "Legacy Window Title"
-msgstr "Título de la ventana heredada"
+#| msgid "Legacy Window Title"
+msgid "Legacy Window Titles"
+msgstr "Títulos de ventanas heredadas"
 
 #: gtweak/tweaks/tweak_group_font.py:105
 msgid "Scaling Factor"
 msgstr "Factor de escalado"
+
+#: gtweak/tweaks/tweak_group_general.py:22
+msgid "Suspend when laptop lid is closed"
+msgstr "Suspender al cerrar la tapa del portátil"
+
+#: gtweak/tweaks/tweak_group_general.py:46
+msgid "General"
+msgstr "General"
+
+#: gtweak/tweaks/tweak_group_general.py:47
+msgid "Animations"
+msgstr "Animaciones"
+
+#: gtweak/tweaks/tweak_group_general.py:49
+msgid "Over-Amplification"
+msgstr "Sobre-amplificación"
+
+#: gtweak/tweaks/tweak_group_general.py:50
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Permite subir el volumen por encima del 100%. Esto puede provocar pérdida en "
+"la calidad del sonido; es mejor subir el volumen en la aplicación, si es "
+"posible."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:22
 msgid "Emacs Input"
@@ -380,8 +404,7 @@ msgstr "Ctrl izquierda"
 #: gtweak/tweaks/tweak_group_keymouse.py:48
 #: gtweak/tweaks/tweak_group_keymouse.py:184
 #: gtweak/tweaks/tweak_group_keymouse.py:324
-#: gtweak/tweaks/tweak_group_windows.py:214
-#: gtweak/tweaks/tweak_group_xkb.py:39
+#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
 msgid "Disabled"
 msgstr "Desactivada"
 
@@ -497,14 +520,6 @@ msgstr "Touchpad"
 msgid "Disable While Typing"
 msgstr "Desactivar al escribir"
 
-#: gtweak/tweaks/tweak_group_power.py:22
-msgid "Suspend when laptop lid is closed"
-msgstr "Suspender al cerrar la tapa del portátil"
-
-#: gtweak/tweaks/tweak_group_power.py:46
-msgid "Power"
-msgstr "Energía"
-
 #: gtweak/tweaks/tweak_group_shell_extensions.py:49
 msgid "No Extensions Installed"
 msgstr "No hay extensiones instaladas"
@@ -544,23 +559,6 @@ msgstr "Actualizar"
 #: gtweak/tweaks/tweak_group_shell_extensions.py:238
 msgid "Extensions"
 msgstr "Extensiones"
-
-#: gtweak/tweaks/tweak_group_sound.py:12
-msgid "Sound"
-msgstr "Sonido"
-
-#: gtweak/tweaks/tweak_group_sound.py:13
-msgid "Over-Amplification"
-msgstr "Sobre-amplificación"
-
-#: gtweak/tweaks/tweak_group_sound.py:14
-msgid ""
-"Allows raising the volume above 100%. This can result in a loss of audio "
-"quality; it is better to increase application volume settings, if possible."
-msgstr ""
-"Permite subir el volumen por encima del 100%. Esto puede provocar pérdida en "
-"la calidad del sonido; es mejor subir el volumen en la aplicación, si es "
-"posible."
 
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
@@ -707,8 +705,9 @@ msgid "Windows are focused when they are clicked."
 msgstr "Las ventanas reciben el foco cuando se las pulsa"
 
 #: gtweak/tweaks/tweak_group_windows.py:62
-msgid "Sloppy"
-msgstr "Poco riguroso"
+#| msgid "Focus Mode"
+msgid "Focus on Hover"
+msgstr "Foco al pasar por encima"
 
 #: gtweak/tweaks/tweak_group_windows.py:64
 msgid ""
@@ -880,6 +879,15 @@ msgstr "Se debe reiniciar la sesión para que los cambios tengan efecto"
 msgid "Restart Session"
 msgstr "Reiniciar la sesión"
 
+#~ msgid "Power"
+#~ msgstr "Energía"
+
+#~ msgid "Sound"
+#~ msgstr "Sonido"
+
+#~ msgid "Sloppy"
+#~ msgstr "Poco riguroso"
+
 #~ msgid "Click Method"
 #~ msgstr "Método de pulsación"
 
@@ -916,9 +924,6 @@ msgstr "Reiniciar la sesión"
 
 #~ msgid "Files"
 #~ msgstr "Nautilus"
-
-#~ msgid "Focus Mode"
-#~ msgstr "Modo del foco"
 
 #~ msgid "Workspace Creation"
 #~ msgstr "Creación de áreas de trabajo"
