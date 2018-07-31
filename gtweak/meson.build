@@ -33,17 +33,17 @@ tweak_sources = [
   'tweaks/tweak_group_appearance.py',
   'tweaks/tweak_group_desktop.py',
   'tweaks/tweak_group_font.py',
+  'tweaks/tweak_group_general.py',
   'tweaks/tweak_group_keymouse.py',
-  'tweaks/tweak_group_power.py',
   'tweaks/tweak_group_shell_extensions.py',
-  'tweaks/tweak_group_sound.py',
   'tweaks/tweak_group_startup.py',
   'tweaks/tweak_group_test.py',
+  'tweaks/tweak_group_title_bar.py',
   'tweaks/tweak_group_top_bar.py',
   'tweaks/tweak_group_windows.py',
   'tweaks/tweak_group_workspaces.py',
   'tweaks/tweak_group_xkb.py',
-  'tweaks/tweak_wacom.py'
+  'tweaks/tweak_wacom.py',
 ]
 
 install_data(shell_sources, install_dir: gtweakdir)
