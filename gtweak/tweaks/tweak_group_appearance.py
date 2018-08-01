@@ -23,6 +23,11 @@ from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsCom
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
+# This is a placeholder for a Sound Theme dropdown box for the Appearance panel.
+# This will allow us to add the dropdown box later without needing a new
+# translatable string.
+sound_label = _("Sound")
+
 class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
