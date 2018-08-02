@@ -99,7 +99,7 @@ class GnomeTweaks(Gtk.Application):
 
         aboutdialog.set_copyright("Copyright © 2011 - 2013 John Stowers.")
         aboutdialog.set_logo_icon_name("org.gnome.tweaks")
-        aboutdialog.set_website("https://wiki.gnome.org/Apps/GnomeTweakTool")
+        aboutdialog.set_website("https://wiki.gnome.org/Apps/Tweaks")
         aboutdialog.set_website_label(_("Homepage"))
         aboutdialog.set_license_type(Gtk.License.GPL_3_0)
 
