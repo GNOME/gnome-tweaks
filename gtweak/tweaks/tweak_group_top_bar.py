@@ -63,6 +63,7 @@ TWEAK_GROUPS = [
         GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
         Title(_("Clock"),"", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Date"),"org.gnome.desktop.interface", "clock-show-date", loaded=_shell_loaded),
+        GSettingsSwitchTweak(_("Weekday"),"org.gnome.desktop.interface", "clock-show-weekday", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Seconds"), "org.gnome.desktop.interface", "clock-show-seconds", loaded=_shell_loaded),
         Title(_("Calendar"),"", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Week Numbers"),"org.gnome.desktop.calendar", "show-weekdate", loaded=_shell_loaded),

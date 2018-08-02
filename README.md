@@ -19,7 +19,7 @@ RUNTIME DEPENDENCIES
 * GIR files and libraries from:
   - GLib (>= 2.57.2)
   - GTK+ 3 (>= 3.12)
-  - gnome-desktop
+  - gnome-desktop (>= 3.29.90.1)
   - libsoup
   - libnotify
   - Pango
