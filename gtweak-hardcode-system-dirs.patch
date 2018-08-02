@@ -1,0 +1,25 @@
+From 37f2874afe678f3cfc29efd9f85bc450a14d4541 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Florian=20M=C3=BCllner?= <fmuellner@gnome.org>
+Date: Thu, 22 Sep 2016 10:18:22 +0200
+Subject: [PATCH] defs: Hardcode system dirs
+
+---
+ gtweak/defs.py.in | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/gtweak/defs.py.in b/gtweak/defs.py.in
+index 6c8fdf8..2d6bf31 100644
+--- a/gtweak/defs.py.in
++++ b/gtweak/defs.py.in
+@@ -1,6 +1,6 @@
+-DATA_DIR = "@DATADIR@"
++DATA_DIR = "/usr/share"
+ PKG_DATA_DIR = "@PKGDATADIR@"
+-GSETTINGS_SCHEMA_DIR = "@GSETTINGSSCHEMADIR@"
++GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas"
+ TWEAK_DIR = "@TWEAKDIR@"
+ VERSION = "@VERSION@"
+ LOCALE_DIR = "@LOCALEDIR@"
+-- 
+2.9.3
+
