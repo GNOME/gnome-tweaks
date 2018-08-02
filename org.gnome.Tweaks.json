@@ -1,0 +1,60 @@
+{
+    "app-id" : "org.gnome.tweaks",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "master",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "gnome-tweaks",
+    "tags" : [
+        "nightly"
+    ],
+    "desktop-file-name-prefix" : "(Nightly) ",
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--talk-name=org.gnome.Shell",
+        "--filesystem=/usr/share/glib-2.0/schemas:ro",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:rw",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "build-options" : {
+        "cflags" : "-O2 -g",
+        "env" : {
+        }
+    },
+    "cleanup" : [
+        "/include",
+        "/lib/*.la",
+        "/lib/*.a",
+        "/lib/pkgconfig",
+        "/share/gir-1.0"
+    ],
+    "modules" : [
+        {
+            "name" : "gnome-desktop",
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gnome-desktop.git"
+                }
+            ]
+        },
+        {
+            "name" : "gnome-tweaks",
+            "buildsystem" : "meson",
+            "builddir" : true,
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gnome-tweaks.git"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "gtweak-hardcode-system-dirs.patch"
+                }
+            ]
+        }
+    ]
+}
