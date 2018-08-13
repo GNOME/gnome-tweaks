@@ -4,7 +4,7 @@ GNOME TWEAKS
 
 BUILD
 -----
-The only build-time dependency is [meson](http://mesonbuild.com/).
+The only build-time dependency is [meson](https://mesonbuild.com/).
 
     meson builddir
     ninja -C builddir
@@ -68,5 +68,5 @@ This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later version.
 
-data/org.gnome.tweaks.appdata.xml.in is licensed under the Creative Commons
-CC0-1.0 license.
+data/org.gnome.tweaks.appdata.xml.in is licensed under the [Creative Commons
+CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode) license.
