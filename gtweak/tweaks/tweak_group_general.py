@@ -5,10 +5,13 @@
 from gi.repository import Gio, GLib, Gtk
 
 import gtweak
+from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.tweakmodel import Tweak
 from gtweak.widgets import ListBoxTweakGroup, GetterSetterSwitchTweak, GSettingsSwitchTweak
 from gtweak.utils import AutostartFile
 
+_shell = GnomeShellFactory().get_shell()
+_shell_not_ubuntu = _shell.mode != 'ubuntu'
 
 class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
     def __init__(self, **options):
@@ -42,11 +45,13 @@ class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
                      None, 0, -1, None)
             return False
 
+
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("General"),
         GSettingsSwitchTweak(_("Animations"), "org.gnome.desktop.interface", "enable-animations"),
         IgnoreLidSwitchTweak(),
+        # Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
         GSettingsSwitchTweak(_("Over-Amplification"), "org.gnome.desktop.sound", "allow-volume-above-100-percent",
-            desc=_("Allows raising the volume above 100%. This can result in a loss of audio quality; it is better to increase application volume settings, if possible.")),
+            desc=_("Allows raising the volume above 100%. This can result in a loss of audio quality; it is better to increase application volume settings, if possible."), loaded=_shell_not_ubuntu),
     ),
 ]
