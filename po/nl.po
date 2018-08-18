@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Erwin Poeze  <donnut@outlook.com>, 2014.
-# Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2014, 2015, 2016.
+# Hannie Dumoleyn <hannie@ubuntu-nl.org>, 2014, 2015, 2016, 2018.
 # Wouter Bolsterlee <wbolster@gnome.org>, 2014.
 # Justin van Steijn <jvs@fsfe.org>, 2016, 2017, 2018.
 # Nathan Follens <nthn@unseen.is>, 2016-2018.
@@ -11,23 +11,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-02-07 18:42+0000\n"
-"PO-Revision-Date: 2018-02-21 21:22+0100\n"
-"Last-Translator: Justin van Steijn <jvs@fsfe.org>\n"
+"POT-Creation-Date: 2018-08-02 03:05+0000\n"
+"PO-Revision-Date: 2018-08-18 10:39+0100\n"
+"Last-Translator: Hannie Dumoleyn <hannie@ubuntu-nl.org>\n"
 "Language-Team: Dutch <gnome-nl-list@gnome.org>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Lokalize 2.0\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Het Gnome-project"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:315
-#: gtweak/utils.py:331
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
+#: gtweak/utils.py:330
 msgid "GNOME Tweaks"
 msgstr "Gnome Afstelhulp"
 
@@ -119,109 +119,115 @@ msgstr "Diversen"
 msgid "Search Tweaks…"
 msgstr "Afstellingen zoeken…"
 
-#: gtweak/tweaks/tweak_group_appearance.py:29
+#: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Toepassingen"
 
-#: gtweak/tweaks/tweak_group_appearance.py:63
+#: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
 msgstr "Opslaan instelling is mislukt"
 
-#: gtweak/tweaks/tweak_group_appearance.py:69
+#: gtweak/tweaks/tweak_group_appearance.py:94
 msgid "Icons"
 msgstr "Pictogrammen"
 
-#: gtweak/tweaks/tweak_group_appearance.py:84
+#: gtweak/tweaks/tweak_group_appearance.py:109
 msgid "Cursor"
 msgstr "Cursor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:108
+#: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Shell"
 msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:108
+#: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Zelfgemaakte of gebruikersthema’s voor Gnome-shell installeren"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:111
+#: gtweak/tweaks/tweak_group_appearance.py:136
 msgid "Unknown error"
 msgstr "Onbekende fout"
 
-#: gtweak/tweaks/tweak_group_appearance.py:116
+#: gtweak/tweaks/tweak_group_appearance.py:141
 msgid "Shell not running"
 msgstr "Shell draait niet"
 
-#: gtweak/tweaks/tweak_group_appearance.py:138
+#: gtweak/tweaks/tweak_group_appearance.py:163
 msgid "Shell user-theme extension incorrectly installed"
 msgstr ""
 "Shell-uitbreiding ‘user-theme’ (gebruikersthema) is onjuist geïnstalleerd"
 
-#: gtweak/tweaks/tweak_group_appearance.py:141
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell-uitbreiding ‘user-theme’ (gebruikersthema) is uitgeschakeld"
 
-#: gtweak/tweaks/tweak_group_appearance.py:144
+#: gtweak/tweaks/tweak_group_appearance.py:169
 msgid "Could not list shell extensions"
 msgstr "Tonen van shell-uitbreidingen is mislukt"
 
-#: gtweak/tweaks/tweak_group_appearance.py:174
+#: gtweak/tweaks/tweak_group_appearance.py:199
 msgid "<i>Default</i>"
 msgstr "<i>Standaard</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:180
+#: gtweak/tweaks/tweak_group_appearance.py:205
 msgid "Select a theme"
 msgstr "Een thema selecteren"
 
-#: gtweak/tweaks/tweak_group_appearance.py:229
+#: gtweak/tweaks/tweak_group_appearance.py:254
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s-thema is met succes bijgewerkt"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:256
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s-thema is geïnstalleerd"
 
-#: gtweak/tweaks/tweak_group_appearance.py:239
+#: gtweak/tweaks/tweak_group_appearance.py:264
 msgid "Error installing theme"
 msgstr "Installeren thema is mislukt"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:244
+#: gtweak/tweaks/tweak_group_appearance.py:269
 msgid "Invalid theme"
 msgstr "Ongeldig thema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:256
+#: gtweak/tweaks/tweak_group_appearance.py:281
 msgid "Appearance"
 msgstr "Uiterlijk"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:259
-msgid "Animations"
-msgstr "Animaties"
-
-#: gtweak/tweaks/tweak_group_appearance.py:260
+#: gtweak/tweaks/tweak_group_appearance.py:284
 msgid "Themes"
 msgstr "Thema’s"
 
-#: gtweak/tweaks/tweak_group_appearance.py:266
+#: gtweak/tweaks/tweak_group_appearance.py:289
+msgid "Sound"
+msgstr "Geluid"
+
+# Evenementen\gebeurtenissen of effecten? - Hannie
+#: gtweak/tweaks/tweak_group_appearance.py:290
+msgid "Specifies which sound theme to use for sound events."
+msgstr ""
+"Bepaalt welk geluidsthema gebruikt moet worden voor geluidsgebeurtenissen."
+
+#: gtweak/tweaks/tweak_group_appearance.py:292
 msgid "Background"
 msgstr "Achtergrond"
 
-#: gtweak/tweaks/tweak_group_appearance.py:267
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:293
+#: gtweak/tweaks/tweak_group_appearance.py:298
 msgid "Image"
 msgstr "Afbeelding"
 
-#: gtweak/tweaks/tweak_group_appearance.py:269
-#: gtweak/tweaks/tweak_group_appearance.py:274
+#: gtweak/tweaks/tweak_group_appearance.py:295
+#: gtweak/tweaks/tweak_group_appearance.py:300
 msgid "Adjustment"
 msgstr "Aanpassing"
 
-#: gtweak/tweaks/tweak_group_appearance.py:271
+#: gtweak/tweaks/tweak_group_appearance.py:297
 msgid "Lock Screen"
 msgstr "Scherm vergrendelen"
 
@@ -229,28 +235,32 @@ msgstr "Scherm vergrendelen"
 msgid "Show Icons"
 msgstr "Pictogrammen tonen"
 
-#: gtweak/tweaks/tweak_group_desktop.py:10
-msgid "Desktop"
-msgstr "Bureaublad"
-
-#: gtweak/tweaks/tweak_group_desktop.py:11
-msgid "Icons on Desktop"
-msgstr "Pictogrammen op bureaublad"
-
 # twijfel of dit klop binnen de context
+#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
+#. *work* unless we have a version of Nautilus that still has the ability to
+#. draw the desktop; use one of the settings that was present in that version
+#. to probe for it.
 #: gtweak/tweaks/tweak_group_desktop.py:13
 msgid "Home"
 msgstr "Persoonlijke map"
 
-#: gtweak/tweaks/tweak_group_desktop.py:14
+#: gtweak/tweaks/tweak_group_desktop.py:20
+msgid "Desktop"
+msgstr "Bureaublad"
+
+#: gtweak/tweaks/tweak_group_desktop.py:21
+msgid "Icons on Desktop"
+msgstr "Pictogrammen op bureaublad"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
 msgid "Network Servers"
 msgstr "Netwerkservers"
 
-#: gtweak/tweaks/tweak_group_desktop.py:15
+#: gtweak/tweaks/tweak_group_desktop.py:25
 msgid "Trash"
 msgstr "Prullenbak"
 
-#: gtweak/tweaks/tweak_group_desktop.py:16
+#: gtweak/tweaks/tweak_group_desktop.py:26
 msgid "Mounted Volumes"
 msgstr "Aangekoppelde volumina"
 
@@ -291,43 +301,234 @@ msgid "Fonts"
 msgstr "Lettertypen"
 
 #: gtweak/tweaks/tweak_group_font.py:100
-msgid "Window Title"
-msgstr "Venstertitel"
+#| msgid "Interface"
+msgid "Interface Text"
+msgstr "Tekst interface"
 
 #: gtweak/tweaks/tweak_group_font.py:101
-msgid "Interface"
-msgstr "Interface"
+#| msgid "Document"
+msgid "Document Text"
+msgstr "Document-tekst"
 
 #: gtweak/tweaks/tweak_group_font.py:102
-msgid "Document"
-msgstr "Document"
+#| msgid "Monospace"
+msgid "Monospace Text"
+msgstr "Tekst met vaste tekenbreedte"
 
 #: gtweak/tweaks/tweak_group_font.py:103
-msgid "Monospace"
-msgstr "Niet-proportioneel"
+#| msgid "Window Title"
+msgid "Legacy Window Titles"
+msgstr "Legacy-venstertitels"
 
 #: gtweak/tweaks/tweak_group_font.py:105
 msgid "Scaling Factor"
 msgstr "Schaalfactor"
 
-#: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
-#: gtweak/tweaks/tweak_group_keymouse.py:48
-#: gtweak/tweaks/tweak_group_keymouse.py:184
-#: gtweak/tweaks/tweak_group_keymouse.py:324
-msgid "Disabled"
-msgstr "Uitgeschakeld"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
-msgid "Typing"
-msgstr "Typen"
-
-#: gtweak/tweaks/tweak_group_power.py:22
+#: gtweak/tweaks/tweak_group_general.py:22
 msgid "Suspend when laptop lid is closed"
 msgstr "Pauzestand bij sluiten laptopklep"
 
-#: gtweak/tweaks/tweak_group_power.py:46
-msgid "Power"
-msgstr "Energie"
+#: gtweak/tweaks/tweak_group_general.py:46
+msgid "General"
+msgstr "Algemeen"
+
+#: gtweak/tweaks/tweak_group_general.py:47
+msgid "Animations"
+msgstr "Animaties"
+
+#: gtweak/tweaks/tweak_group_general.py:49
+msgid "Over-Amplification"
+msgstr "Overversterking"
+
+#: gtweak/tweaks/tweak_group_general.py:50
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Toestaan dat het volume boven 100% komt. Dit kan de geluidskwaliteit "
+"verlagen; het is beter de volume-instellingen van de gewenste toepassing te "
+"verhogen, indien mogelijk."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:21
+msgid "Emacs Input"
+msgstr "Emacs-invoer"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:24
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
+msgstr ""
+"Overschrijft standaardsneltoetsen om sneltoetsen van Emacs te gebruiken."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:40
+#: gtweak/tweaks/tweak_group_keymouse.py:108
+msgid "Compose Key"
+msgstr "Samensteltoets"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:96
+#: gtweak/tweaks/tweak_group_keymouse.py:178
+msgid "Scroll Lock"
+msgstr "Scroll lock"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:97
+msgid "PrtScn"
+msgstr "PrtScn"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+msgid "Menu"
+msgstr "Menu"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:99
+msgid "Right Alt"
+msgstr "Rechter Alt"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:100
+msgid "Right Ctrl"
+msgstr "Rechter Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:101
+#: gtweak/tweaks/tweak_group_keymouse.py:200
+msgid "Right Super"
+msgstr "Rechter Super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:102
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:103
+msgid "Left Ctrl"
+msgstr "Linker Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:47
+#: gtweak/tweaks/tweak_group_keymouse.py:183
+#: gtweak/tweaks/tweak_group_keymouse.py:323
+#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Allows entering additional characters."
+msgstr "Invoer van extra tekens toestaan."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:126
+msgid ""
+"The compose key allows a wide variety of characters to be entered. To use "
+"it, press the compose key and then a sequence of characters.\n"
+"\n"
+"Many unusual characters can be entered by combining standard ones. For "
+"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
+"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+msgstr ""
+"Met de opsteltoets kunt u een uitgebreide keuze aan tekens invoeren. Druk "
+"hiervoor op de opsteltoets en vervolgens een reeks tekens.\n"
+"\n"
+"Veel ongebruikelijke tekens kunnen ingevoerd worden door standaardtekens te "
+"combineren. Zo leidt de opsteltoets gevolgd door <b>C</b> en <b>o</b> tot "
+"<b>©</b>, <b>a</b> gevolgd door <b>'</b> vormt dan weer <b>á</b>.\n"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:189
+msgid "Overview Shortcut"
+msgstr "Overzichtsneltoets"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:196
+msgid "Left Super"
+msgstr "Linker super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:223
+#: gtweak/tweaks/tweak_group_keymouse.py:231
+msgid "Additional Layout Options"
+msgstr "Extra vormgevingsopties"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:253
+#: gtweak/tweaks/tweak_group_keymouse.py:392
+msgid "Mouse Click Emulation"
+msgstr "Muisklikemulatie"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:271
+msgid "Fingers"
+msgstr "Vingers"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:273
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+"Klik met twee vingers op het touchpad voor een rechtermuisklik, en drie "
+"vingers voor een middenmuisklik."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:297
+msgid "Area"
+msgstr "Gebied"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:299
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+"Klik rechtsonder het touchpad voor een rechtermuisklik, en middenonder voor "
+"een middenmuisklik."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:325
+msgid "Don’t use mouse click emulation."
+msgstr "Geen muisklikemulatie gebruiken."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:362
+msgid "Keyboard & Mouse"
+msgstr "Toetsenbord & muis"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:363
+msgid "Keyboard"
+msgstr "Toetsenbord"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:364
+msgid "Show Extended Input Sources"
+msgstr "Uitgebreide invoerbronnen tonen"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:367
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "Verhoogt het aantal invoerbronnen beschikbaar in de Instellingen."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:373
+msgid "Mouse"
+msgstr "Muis"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:374
+msgid "Acceleration Profile"
+msgstr "Acceleratieprofiel"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:378
+msgid "Pointer Location"
+msgstr "Aanwijzerlocatie"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:382
+msgid "Press the Ctrl key to highlight the pointer."
+msgstr "Druk op Ctrl om de aanwijzer te belichten."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:383
+msgid "Middle Click Paste"
+msgstr "Plakken met middelste muisknop"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:387
+msgid "Touchpad"
+msgstr "Touchpad"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:388
+msgid "Disable While Typing"
+msgstr "Uitschakelen tijdens typen"
 
 #: gtweak/tweaks/tweak_group_shell_extensions.py:49
 msgid "No Extensions Installed"
@@ -411,81 +612,118 @@ msgstr "Nieuwe opstarttoepassing"
 msgid "Add a new application to be run at startup"
 msgstr "Een nieuwe toepassing toevoegen om uit te voeren bij het opstarten"
 
-#: gtweak/tweaks/tweak_group_sound.py:12
-msgid "Sound"
-msgstr "Geluid"
+#: gtweak/tweaks/tweak_group_title_bar.py:57
+msgid "Placement"
+msgstr "Plaatsing"
 
-#: gtweak/tweaks/tweak_group_sound.py:13
-msgid "Over-Amplification"
-msgstr "Overversterking"
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_title_bar.py:71
+msgid "Left"
+msgstr "Links"
 
-#: gtweak/tweaks/tweak_group_sound.py:14
-msgid ""
-"Allows raising the volume above 100%. This can result in a loss of audio "
-"quality; it is better to increase application volume settings, if possible."
-msgstr ""
-"Toestaan dat het volume boven 100% komt. Dit kan de geluidskwaliteit "
-"verlagen; het is beter de volume-instellingen van de gewenste toepassing te "
-"verhogen, indien mogelijk."
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_title_bar.py:77
+msgid "Right"
+msgstr "Rechts"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:13
-msgid "Activities Overview Hot Corner"
-msgstr "Snelhoek tot activiteitenoverzicht"
+#: gtweak/tweaks/tweak_group_title_bar.py:108
+#| msgid "Window Title"
+msgid "Window Titlebars"
+msgstr "Venster-titelbalken"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_title_bar.py:109
+msgid "Titlebar Actions"
+msgstr "Acties titelbalk"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:110
+msgid "Double-Click"
+msgstr "Dubbelklik"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:111
+msgid "Middle-Click"
+msgstr "Middelste muisknop"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:112
+#: gtweak/tweaks/tweak_group_windows.py:88
+msgid "Secondary-Click"
+msgstr "Rechtermuisknop"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:113
+msgid "Titlebar Buttons"
+msgstr "Knoppen titelbalk"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:114
+msgid "Maximize"
+msgstr "Maximaliseren"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:115
+msgid "Minimize"
+msgstr "Minimaliseren"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Application Menu"
 msgstr "Toepassingsmenu"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:59
 msgid "Top Bar"
 msgstr "Bovenste balk"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Battery Percentage"
 msgstr "Accupercentage"
 
 #. Requires patch from https://bugzilla.gnome.org/688320
-#. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Activities Overview Hot Corner"
+msgstr "Snelhoek tot activiteitenoverzicht"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Klok"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:65
 msgid "Date"
 msgstr "Datum"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:66
+msgid "Weekday"
+msgstr "Weekdag"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Seconds"
 msgstr "Seconden"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:68
 msgid "Calendar"
 msgstr "Agenda"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:70
+#: gtweak/tweaks/tweak_group_top_bar.py:69
 msgid "Week Numbers"
 msgstr "Weeknummers"
 
-#: gtweak/tweaks/tweak_group_windows.py:19
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:215
 msgid "Window Focus"
 msgstr "Vensterfocus"
 
-#: gtweak/tweaks/tweak_group_windows.py:19
-#: gtweak/tweaks/tweak_group_windows.py:37
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:36
+#: gtweak/tweaks/tweak_group_windows.py:215
 msgid "Click to Focus"
 msgstr "Klik voor focus"
 
-#: gtweak/tweaks/tweak_group_windows.py:39
+#: gtweak/tweaks/tweak_group_windows.py:38
 msgid "Windows are focused when they are clicked."
 msgstr "Vensters krijgen focus bij aanklikken."
 
-#: gtweak/tweaks/tweak_group_windows.py:63
-msgid "Sloppy"
-msgstr "Slordig"
+#: gtweak/tweaks/tweak_group_windows.py:62
+#| msgid "Focus Mode"
+msgid "Focus on Hover"
+msgstr "Focus op zweven"
 
-#: gtweak/tweaks/tweak_group_windows.py:65
+#: gtweak/tweaks/tweak_group_windows.py:64
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -493,12 +731,7 @@ msgstr ""
 "Venster krijgt focus wanneer de aanwijzer er over zweeft. Vensters behouden "
 "focus wanneer aanwijzer over bureaublad zweeft."
 
-#: gtweak/tweaks/tweak_group_windows.py:89
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Secondary-Click"
-msgstr "Rechtermuisknop"
-
-#: gtweak/tweaks/tweak_group_windows.py:91
+#: gtweak/tweaks/tweak_group_windows.py:90
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -506,62 +739,46 @@ msgstr ""
 "Venster krijgt focus wanneer aanwijzer er over zweeft. Vensters verliezen "
 "focus wanneer aanwijzer over bureaublad zweeft."
 
-#: gtweak/tweaks/tweak_group_windows.py:172
-msgid "Placement"
-msgstr "Plaatsing"
-
-#. Translators: For RTL languages, this is the "Right" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:186
-msgid "Left"
-msgstr "Links"
-
-#. Translators: For RTL languages, this is the "Left" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:192
-msgid "Right"
-msgstr "Rechts"
-
-#: gtweak/tweaks/tweak_group_windows.py:224
+#: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Window scaling"
 msgstr "Vensters schalen"
 
-#: gtweak/tweaks/tweak_group_windows.py:224
+#: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "Schalingsfactor van GDK-venster voor HiDPI aanpassen"
 
-#: gtweak/tweaks/tweak_group_windows.py:252
+#: gtweak/tweaks/tweak_group_windows.py:157
 #, python-brace-format
 msgid "Settings will be reverted in {0} second"
 msgid_plural "Settings will be reverted in {0} seconds"
 msgstr[0] "Instellingen worden teruggezet in {0} seconde"
 msgstr[1] "Instellingen worden teruggezet in {0} seconden"
 
-#: gtweak/tweaks/tweak_group_windows.py:268
+#: gtweak/tweaks/tweak_group_windows.py:173
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "Wilt u deze HiDPI-instellingen behouden?"
 
-#: gtweak/tweaks/tweak_group_windows.py:275
+#: gtweak/tweaks/tweak_group_windows.py:180
 msgid "Revert Settings"
 msgstr "Instellingen terugzetten"
 
-#: gtweak/tweaks/tweak_group_windows.py:276
+#: gtweak/tweaks/tweak_group_windows.py:181
 msgid "Keep Changes"
 msgstr "Wijzigingen behouden"
 
-#: gtweak/tweaks/tweak_group_windows.py:292
+#: gtweak/tweaks/tweak_group_windows.py:197
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
+#: gtweak/tweaks/tweak_group_windows.py:203
 msgid "Windows"
 msgstr "Vensters"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:204
 msgid "Attach Modal Dialogs"
 msgstr "Modale dialoogvensters koppelen"
 
-#: gtweak/tweaks/tweak_group_windows.py:300
+#: gtweak/tweaks/tweak_group_windows.py:205
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -569,41 +786,32 @@ msgstr ""
 "Indien ingeschakeld, worden alle modale dialoogvensters aan hun "
 "oudervensters gekoppeld, en kunnen niet verplaatst worden."
 
-#: gtweak/tweaks/tweak_group_windows.py:301
+#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
+#: gtweak/tweaks/tweak_group_windows.py:207
+msgid "Edge Tiling"
+msgstr "Randtegeling"
+
+#: gtweak/tweaks/tweak_group_windows.py:208
+msgid "When on, windows are tiled when dragged to screen edges."
+msgstr ""
+"Indien aan, dan worden vensters getegeld wanneer ze naar de schermranden"
+" worden gesleept."
+
+#: gtweak/tweaks/tweak_group_windows.py:209
+msgid "Center New Windows"
+msgstr "Nieuwe vensters centreren"
+
+#: gtweak/tweaks/tweak_group_windows.py:210
 msgid "Resize with Secondary-Click"
 msgstr "Afmetingen wijzigen met rechtermuisknop"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:211
 msgid "Window Action Key"
 msgstr "Vensteractietoets"
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:217
 msgid "Raise Windows When Focused"
 msgstr "Vensters naar voorgrond bij focus"
-
-#: gtweak/tweaks/tweak_group_windows.py:309
-msgid "Titlebar Actions"
-msgstr "Acties titelbalk"
-
-#: gtweak/tweaks/tweak_group_windows.py:310
-msgid "Double-Click"
-msgstr "Dubbelklik"
-
-#: gtweak/tweaks/tweak_group_windows.py:311
-msgid "Middle-Click"
-msgstr "Middelste muisknop"
-
-#: gtweak/tweaks/tweak_group_windows.py:313
-msgid "Titlebar Buttons"
-msgstr "Knoppen titelbalk"
-
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Maximize"
-msgstr "Maximaliseren"
-
-#: gtweak/tweaks/tweak_group_windows.py:315
-msgid "Minimize"
-msgstr "Minimaliseren"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:19
 msgid "Dynamic Workspaces"
@@ -656,179 +864,9 @@ msgstr "De huidige werkruimte bevat extra schermen."
 msgid "Number of Workspaces"
 msgstr "Aantal werkruimten"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:22
-msgid "Emacs Input"
-msgstr "Emacs-invoer"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:25
-msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr ""
-"Overschrijft standaardsneltoetsen om sneltoetsen van Emacs te gebruiken."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:41
-#: gtweak/tweaks/tweak_group_keymouse.py:109
-msgid "Compose Key"
-msgstr "Samensteltoets"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-#: gtweak/tweaks/tweak_group_keymouse.py:179
-msgid "Scroll Lock"
-msgstr "Scroll lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "PrtScn"
-msgstr "PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Menu"
-msgstr "Menu"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Alt"
-msgstr "Rechter Alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-msgid "Right Ctrl"
-msgstr "Rechter Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-#: gtweak/tweaks/tweak_group_keymouse.py:201
-msgid "Right Super"
-msgstr "Rechter Super"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Caps Lock"
-msgstr "Caps Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:104
-msgid "Left Ctrl"
-msgstr "Linker Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:52
-msgid "Allows entering additional characters."
-msgstr "Invoer van extra tekens toestaan."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:127
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"Met de opsteltoets kunt u een uitgebreide keuze aan tekens invoeren. Druk "
-"hiervoor op de opsteltoets en vervolgens een reeks tekens.\n"
-"\n"
-"Veel ongebruikelijke tekens kunnen ingevoerd worden door standaardtekens te "
-"combineren. Zo leidt de opsteltoets gevolgd door <b>C</b> en <b>o</b> tot "
-"<b>©</b>, <b>a</b> gevolgd door <b>'</b> vormt dan weer <b>á</b>.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:190
-msgid "Overview Shortcut"
-msgstr "Overzichtsneltoets"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:197
-msgid "Left Super"
-msgstr "Linker super"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:224
-#: gtweak/tweaks/tweak_group_keymouse.py:232
-msgid "Additional Layout Options"
-msgstr "Extra vormgevingsopties"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:254
-#: gtweak/tweaks/tweak_group_keymouse.py:393
-msgid "Mouse Click Emulation"
-msgstr "Muisklikemulatie"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:272
-msgid "Fingers"
-msgstr "Vingers"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:274
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"Klik met twee vingers op het touchpad voor een rechtermuisklik, en drie "
-"vingers voor een middenmuisklik."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:298
-msgid "Area"
-msgstr "Gebied"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:300
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Klik rechtsonder het touchpad voor een rechtermuisklik, en middenonder voor "
-"een middenmuisklik."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:326
-msgid "Don’t use mouse click emulation."
-msgstr "Geen muisklikemulatie gebruiken."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:363
-msgid "Keyboard & Mouse"
-msgstr "Toetsenbord & muis"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:364
-msgid "Keyboard"
-msgstr "Toetsenbord"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:365
-msgid "Show Extended Input Sources"
-msgstr "Uitgebreide invoerbronnen tonen"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:368
-msgid "Increases the choice of input sources in the Settings application."
-msgstr "Verhoogt het aantal invoerbronnen beschikbaar in de Instellingen."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:374
-msgid "Mouse"
-msgstr "Muis"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:375
-msgid "Acceleration Profile"
-msgstr "Acceleratieprofiel"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:379
-msgid "Pointer Location"
-msgstr "Aanwijzerlocatie"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:383
-msgid "Press the Ctrl key to highlight the pointer."
-msgstr "Druk op Ctrl om de aanwijzer te belichten."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:384
-msgid "Middle Click Paste"
-msgstr "Plakken met middelste muisknop"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:388
-msgid "Touchpad"
-msgstr "Touchpad"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:389
-msgid "Disable While Typing"
-msgstr "Uitschakelen tijdens typen"
+#: gtweak/tweaks/tweak_group_xkb.py:166
+msgid "Typing"
+msgstr "Typen"
 
 #: gtweak/tweaks/tweak_wacom.py:16
 msgid "Device"
@@ -839,22 +877,28 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:60
+#: gtweak/utils.py:59
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standaard)</i>"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:332
 msgid "Configuration changes require restart"
 msgstr "Wijzigingen in de configuratie vereisen een herstart"
 
-#: gtweak/utils.py:334
+#: gtweak/utils.py:333
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Uw sessie moet opnieuw gestart worden om de wijzigingen te activeren"
 
-#: gtweak/utils.py:338
+#: gtweak/utils.py:337
 msgid "Restart Session"
 msgstr "Sessie herstarten"
+
+#~ msgid "Power"
+#~ msgstr "Energie"
+
+#~ msgid "Sloppy"
+#~ msgstr "Slordig"
 
 #~ msgid "Click Method"
 #~ msgstr "Klikmethode"
@@ -946,9 +990,6 @@ msgstr "Sessie herstarten"
 
 #~ msgid "Automatically Raise Windows"
 #~ msgstr "Automatisch verhogen vensters"
-
-#~ msgid "Focus Mode"
-#~ msgstr "Focusmodus"
 
 #~ msgid "Key theme"
 #~ msgstr "Toetsthema"
