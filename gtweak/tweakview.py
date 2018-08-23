@@ -154,7 +154,9 @@ class Window(Gtk.ApplicationWindow):
             return row
 
         groups = list(self._model._tweak_group_names.keys())
+        general_group = groups.pop(3)
         groups = sorted(groups)
+        groups.insert(0, general_group)
 
         for g in groups:
             row = _make_items_listbox(g)
