@@ -57,10 +57,10 @@ class ApplicationMenuTweak(GetterSetterSwitchTweak):
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Top Bar"),
-        ApplicationMenuTweak(),
-        GSettingsSwitchTweak(_("Battery Percentage"),"org.gnome.desktop.interface", "show-battery-percentage", loaded=_shell_loaded),
         # Requires patch from https://bugzilla.gnome.org/688320
         GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
+        ApplicationMenuTweak(),
+        GSettingsSwitchTweak(_("Battery Percentage"),"org.gnome.desktop.interface", "show-battery-percentage", loaded=_shell_loaded),
         Title(_("Clock"),"", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Weekday"),"org.gnome.desktop.interface", "clock-show-weekday", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Date"),"org.gnome.desktop.interface", "clock-show-date", loaded=_shell_loaded),
