@@ -3,14 +3,11 @@
 # License-Filename: LICENSES/GPL-3.0
 
 import os.path
-import logging
-import datetime
 
 from gi.repository import Gtk, Gdk, GObject
 
 import gtweak.tweakmodel
-from gtweak.tweakmodel import TweakModel, string_for_search
-from gtweak.widgets import Title
+from gtweak.tweakmodel import string_for_search
 
 class Window(Gtk.ApplicationWindow):
 
@@ -42,7 +39,7 @@ class Window(Gtk.ApplicationWindow):
         self.load_model_data()
 
         Gtk.Settings.get_default().connect("notify::gtk-decoration-layout",
-                                          self._update_decorations);
+                                           self._update_decorations)
 
         self.connect("key-press-event", self._on_key_press)
         self.connect_after("key-press-event", self._after_key_press)
@@ -57,15 +54,15 @@ class Window(Gtk.ApplicationWindow):
         right_header = Gtk.HeaderBar()
         right_header.props.show_close_button = True
 
-        self._left_header = left_header;
-        self._right_header = right_header;
+        self._left_header = left_header
+        self._right_header = right_header
 
         left_header.get_style_context().add_class("titlebar")
         left_header.get_style_context().add_class("tweak-titlebar-left")
         right_header.get_style_context().add_class("titlebar")
         right_header.get_style_context().add_class("tweak-titlebar-right")
 
-        self._update_decorations (Gtk.Settings.get_default(), None)
+        self._update_decorations(Gtk.Settings.get_default(), None)
 
         self._group_titlebar_widget = None
 
@@ -74,7 +71,7 @@ class Window(Gtk.ApplicationWindow):
         right_header.set_custom_title(self.title)
 
         icon = Gtk.Image()
-        icon.set_from_icon_name("edit-find-symbolic",Gtk.IconSize.MENU)
+        icon.set_from_icon_name("edit-find-symbolic", Gtk.IconSize.MENU)
         self.button = Gtk.ToggleButton()
         self.button.add(icon)
         self.button.connect("toggled", self._on_find_toggled)
@@ -99,7 +96,7 @@ class Window(Gtk.ApplicationWindow):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
         self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks…"))
-        if (Gtk.check_version(3, 22, 20) == None):
+        if (Gtk.check_version(3, 22, 20) is None):
             self.entry.set_input_hints(Gtk.InputHints.NO_EMOJI)
         self.entry.connect("search-changed", self._on_search)
 
@@ -109,7 +106,7 @@ class Window(Gtk.ApplicationWindow):
 
         self.listbox = Gtk.ListBox()
         self.listbox.get_style_context().add_class("tweak-categories")
-        self.listbox.set_size_request(200,-1)
+        self.listbox.set_size_request(200, -1)
         self.listbox.connect("row-selected", self._on_select_row)
         self.listbox.set_header_func(self._list_header_func, None)
         scroll = Gtk.ScrolledWindow()
@@ -137,11 +134,11 @@ class Window(Gtk.ApplicationWindow):
     def load_css(self):
         css_provider = Gtk.CssProvider()
         css_provider.load_from_path(
-                        os.path.join(gtweak.PKG_DATA_DIR, 'shell.css'))
+            os.path.join(gtweak.PKG_DATA_DIR, 'shell.css'))
         screen = Gdk.Screen.get_default()
         context = Gtk.StyleContext()
         context.add_provider_for_screen(screen, css_provider,
-                                Gtk.STYLE_PROVIDER_PRIORITY_USER)
+                                        Gtk.STYLE_PROVIDER_PRIORITY_USER)
 
     def load_model_data(self):
 
@@ -162,14 +159,14 @@ class Window(Gtk.ApplicationWindow):
             row = _make_items_listbox(g)
             self.listbox.add(row)
             tweakgroup = self._model.get_value(
-                                self._model.get_tweakgroup_iter(g),
-                                self._model.COLUMN_TWEAK)
+                self._model.get_tweakgroup_iter(g),
+                self._model.COLUMN_TWEAK)
             scroll = Gtk.ScrolledWindow()
             scroll.add(tweakgroup)
             self.stack.add_named(scroll, g)
 
         widget = self.listbox.get_row_at_index(0)
-        self.listbox.select_row (widget)
+        self.listbox.select_row(widget)
 
     def _list_filter_func(self, row, user_data):
         lbl = row.get_child()
@@ -178,10 +175,10 @@ class Window(Gtk.ApplicationWindow):
 
     def _list_header_func(self, row, before, user_data):
         if before and not row.get_header():
-            row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
+            row.set_header(Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
 
     def _update_decorations(self, settings, pspec):
-        layout_desc = settings.props.gtk_decoration_layout;
+        layout_desc = settings.props.gtk_decoration_layout
         tokens = layout_desc.split(":", 1)
         if len(tokens) > 1:
             self._right_header.props.decoration_layout = ":" + tokens[1]
@@ -193,7 +190,7 @@ class Window(Gtk.ApplicationWindow):
         if not self.button.get_active() or not self.entry.is_focus():
             if self.entry.im_context_filter_keypress(event):
                 self.button.set_active(True)
-                self.entry.grab_focus ()
+                self.entry.grab_focus()
 
                 # Text in entry is selected, deselect it
                 l = self.entry.get_text_length()
@@ -224,7 +221,7 @@ class Window(Gtk.ApplicationWindow):
         self.listbox.set_filter_func(self._list_filter_func, group)
         selected = self.listbox.get_selected_row().get_child().get_text()
         if group and not selected in group:
-            index =  sorted(self._model._tweak_group_names.keys()).index(group[0])
+            index = sorted(self._model._tweak_group_names.keys()).index(group[0])
             row = self.listbox.get_row_at_index(index)
             self.listbox.select_row(row)
 
@@ -240,8 +237,8 @@ class Window(Gtk.ApplicationWindow):
             self.stack.set_visible_child_name(group)
             self.title.set_text(group)
             tweakgroup = self._model.get_value(
-                                self._model.get_tweakgroup_iter(group),
-                                self._model.COLUMN_TWEAK)
+                self._model.get_tweakgroup_iter(group),
+                self._model.COLUMN_TWEAK)
             if self._group_titlebar_widget:
                 self._right_header.remove(self._group_titlebar_widget)
             self._group_titlebar_widget = tweakgroup.titlebar_widget
