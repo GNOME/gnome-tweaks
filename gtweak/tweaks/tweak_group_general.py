@@ -11,7 +11,7 @@ from gtweak.widgets import ListBoxTweakGroup, GetterSetterSwitchTweak, GSettings
 from gtweak.utils import AutostartFile
 
 _shell = GnomeShellFactory().get_shell()
-_shell_not_ubuntu = _shell.mode != 'ubuntu'
+_shell_not_ubuntu = _shell.mode != 'ubuntu' and _shell.mode != 'pop'
 
 class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
     def __init__(self, **options):
@@ -50,7 +50,11 @@ TWEAK_GROUPS = [
     ListBoxTweakGroup(_("General"),
         GSettingsSwitchTweak(_("Animations"), "org.gnome.desktop.interface", "enable-animations"),
         IgnoreLidSwitchTweak(),
-        # Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+        # Don't show this setting in the Ubuntu session since this setting is
+        # in gnome-control-center there. Don't show in the Pop session either
+        # since Pop is based on Ubuntu. If a 3rd party distro offers a Pop or
+        # Ubuntu session, the distro should patch this out unless they take
+        # Ubuntu's 70_allow_sound_above_100.patch for gnome-control-center.
         GSettingsSwitchTweak(_("Over-Amplification"), "org.gnome.desktop.sound", "allow-volume-above-100-percent",
             desc=_("Allows raising the volume above 100%. This can result in a loss of audio quality; it is better to increase application volume settings, if possible."), loaded=_shell_not_ubuntu),
     ),
