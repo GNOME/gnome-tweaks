@@ -17,15 +17,15 @@ RUNTIME DEPENDENCIES
 * gnome-settings-daemon
 
 * GIR files and libraries from:
-  - GLib (>= 2.57.2)
+  - GLib (>= 2.58)
   - GTK+ 3 (>= 3.12)
-  - gnome-desktop (>= 3.29.90.1)
+  - gnome-desktop (>= 3.30)
   - libsoup
   - libnotify
   - Pango
 
 * GSettings Schemas from:
-  - gsettings-desktop-schemas (>= 3.27.90)
+  - gsettings-desktop-schemas (>= 3.28)
   - gnome-shell (>= 3.24)
   - mutter
 
