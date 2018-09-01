@@ -6,9 +6,12 @@ BUILD
 -----
 The only build-time dependency is [meson](https://mesonbuild.com/).
 
-    meson builddir
-    ninja -C builddir
-    ninja -C builddir install
+```sh
+$ meson gtweak
+$ ninja -C gtweak
+$ ninja -C gtweak install
+$ ./gnome-tweaks
+```
 
 RUNTIME DEPENDENCIES
 --------------------
