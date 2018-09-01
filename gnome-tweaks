@@ -2,19 +2,20 @@
 # SPDX-License-Identifier: GPL-3.0+
 # License-Filename: LICENSES/GPL-3.0
 
-import os.path
-import optparse
+import gettext
 import logging
 import locale
-import gettext
+import os.path
+import optparse
 import signal
 import sys
+
+import gtweak
+from gtweak.defs import VERSION
 
 import gi
 gi.require_version("Gtk", "3.0")
 
-import gtweak
-from gtweak.defs import VERSION
 
 if __name__ == '__main__':
     parser = optparse.OptionParser(version=VERSION)
