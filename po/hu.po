@@ -3,30 +3,30 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # n0m4dm4n <n0m4dm4n at gmail dot com>, 2011.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012, 2013, 2014, 2016, 2017.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012, 2013, 2014, 2016, 2017, 2018.
 # Attila Hammer <hammera at pickup dot hu>, 2012.
 # Balázs Úr <urbalazs at gmail dot com>, 2012, 2013, 2014, 2015, 2017, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-01-30 19:20+0000\n"
-"PO-Revision-Date: 2018-02-04 13:03+0100\n"
-"Last-Translator: Meskó Balázs <mesko.balazs@fsf.hu>\n"
+"POT-Creation-Date: 2018-08-29 22:58+0000\n"
+"PO-Revision-Date: 2018-09-01 11:55+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "A GNOME projekt"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:315
-#: gtweak/utils.py:331
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
+#: gtweak/utils.py:330
 msgid "GNOME Tweaks"
 msgstr "GNOME Finomhangoló"
 
@@ -48,7 +48,7 @@ msgstr ""
 "módosítására, az indítópult alkalmazásainak kezelésére és egyéb beállítások "
 "közt az asztali ikonok bekapcsolására."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
 msgid "Tweaks"
 msgstr "Hangolások"
 
@@ -114,113 +114,122 @@ msgstr "Honlap"
 msgid "Miscellaneous"
 msgstr "Egyebek"
 
-#: gtweak/tweakview.py:105
+#: gtweak/tweakview.py:98
 msgid "Search Tweaks…"
 msgstr "Hangolások keresése…"
 
-#: gtweak/tweaks/tweak_group_appearance.py:29
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+msgid "General"
+msgstr "Általános"
+
+#: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "Alkalmazások"
 
-#: gtweak/tweaks/tweak_group_appearance.py:63
+#: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
 msgstr "Hiba a beállítás írásakor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:69
+#: gtweak/tweaks/tweak_group_appearance.py:94
 msgid "Icons"
 msgstr "Ikonok"
 
-#: gtweak/tweaks/tweak_group_appearance.py:84
+#: gtweak/tweaks/tweak_group_appearance.py:109
 msgid "Cursor"
 msgstr "Kurzor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:108
+#: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Shell"
 msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:108
+#: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Egyéni vagy felhasználói témák telepítése a Gnome Shellhez"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:111
+#: gtweak/tweaks/tweak_group_appearance.py:136
 msgid "Unknown error"
 msgstr "Ismeretlen hiba"
 
-#: gtweak/tweaks/tweak_group_appearance.py:116
+#: gtweak/tweaks/tweak_group_appearance.py:141
 msgid "Shell not running"
 msgstr "A Gnome Shell nem fut"
 
-#: gtweak/tweaks/tweak_group_appearance.py:138
+#: gtweak/tweaks/tweak_group_appearance.py:163
 msgid "Shell user-theme extension incorrectly installed"
 msgstr ""
 "A Gnome Shell felhasználóitéma-bővítménye nem megfelelően lett telepítve"
 
-#: gtweak/tweaks/tweak_group_appearance.py:141
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Shell user-theme extension not enabled"
 msgstr "A Gnome Shell felhasználóitéma-bővítménye nincs engedélyezve"
 
-#: gtweak/tweaks/tweak_group_appearance.py:144
+#: gtweak/tweaks/tweak_group_appearance.py:169
 msgid "Could not list shell extensions"
 msgstr "A bővítmények nem sorolhatók fel"
 
-#: gtweak/tweaks/tweak_group_appearance.py:174
+#: gtweak/tweaks/tweak_group_appearance.py:199
 msgid "<i>Default</i>"
 msgstr "<i>Alapértelmezett</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:180
+#: gtweak/tweaks/tweak_group_appearance.py:205
 msgid "Select a theme"
 msgstr "Válasszon témát"
 
-#: gtweak/tweaks/tweak_group_appearance.py:229
+#: gtweak/tweaks/tweak_group_appearance.py:254
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s téma sikeresen frissítve"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:256
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s téma telepítése sikerült"
 
-#: gtweak/tweaks/tweak_group_appearance.py:239
+#: gtweak/tweaks/tweak_group_appearance.py:264
 msgid "Error installing theme"
 msgstr "Hiba a téma telepítése közben"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:244
+#: gtweak/tweaks/tweak_group_appearance.py:269
 msgid "Invalid theme"
 msgstr "Nem megfelelő téma"
 
-#: gtweak/tweaks/tweak_group_appearance.py:256
+#: gtweak/tweaks/tweak_group_appearance.py:281
 msgid "Appearance"
 msgstr "Megjelenés"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:259
-msgid "Animations"
-msgstr "Animációk"
-
-#: gtweak/tweaks/tweak_group_appearance.py:260
+#: gtweak/tweaks/tweak_group_appearance.py:284
 msgid "Themes"
 msgstr "Témák"
 
-#: gtweak/tweaks/tweak_group_appearance.py:266
+#: gtweak/tweaks/tweak_group_appearance.py:289
+msgid "Sound"
+msgstr "Hang"
+
+#: gtweak/tweaks/tweak_group_appearance.py:290
+msgid "Specifies which sound theme to use for sound events."
+msgstr "Megadja a hangeseményekhez használt hangtémát."
+
+#: gtweak/tweaks/tweak_group_appearance.py:292
 msgid "Background"
 msgstr "Háttér"
 
-#: gtweak/tweaks/tweak_group_appearance.py:267
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:293
+#: gtweak/tweaks/tweak_group_appearance.py:298
 msgid "Image"
 msgstr "Kép"
 
-#: gtweak/tweaks/tweak_group_appearance.py:269
-#: gtweak/tweaks/tweak_group_appearance.py:274
+#: gtweak/tweaks/tweak_group_appearance.py:295
+#: gtweak/tweaks/tweak_group_appearance.py:300
 msgid "Adjustment"
 msgstr "Igazítás"
 
-#: gtweak/tweaks/tweak_group_appearance.py:271
+#: gtweak/tweaks/tweak_group_appearance.py:297
 msgid "Lock Screen"
 msgstr "Képernyő zárolása"
 
@@ -228,27 +237,31 @@ msgstr "Képernyő zárolása"
 msgid "Show Icons"
 msgstr "Ikonok megjelenítése"
 
-#: gtweak/tweaks/tweak_group_desktop.py:10
-msgid "Desktop"
-msgstr "Asztal"
-
-#: gtweak/tweaks/tweak_group_desktop.py:11
-msgid "Icons on Desktop"
-msgstr "Ikonok az Asztalon"
-
+#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
+#. *work* unless we have a version of Nautilus that still has the ability to
+#. draw the desktop; use one of the settings that was present in that version
+#. to probe for it.
 #: gtweak/tweaks/tweak_group_desktop.py:13
 msgid "Home"
 msgstr "Saját mappa"
 
-#: gtweak/tweaks/tweak_group_desktop.py:14
+#: gtweak/tweaks/tweak_group_desktop.py:20
+msgid "Desktop"
+msgstr "Asztal"
+
+#: gtweak/tweaks/tweak_group_desktop.py:21
+msgid "Icons on Desktop"
+msgstr "Ikonok az Asztalon"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
 msgid "Network Servers"
 msgstr "Hálózati kiszolgálók"
 
-#: gtweak/tweaks/tweak_group_desktop.py:15
+#: gtweak/tweaks/tweak_group_desktop.py:25
 msgid "Trash"
 msgstr "Kuka"
 
-#: gtweak/tweaks/tweak_group_desktop.py:16
+#: gtweak/tweaks/tweak_group_desktop.py:26
 msgid "Mounted Volumes"
 msgstr "Csatolt kötetek"
 
@@ -289,43 +302,227 @@ msgid "Fonts"
 msgstr "Betűkészletek"
 
 #: gtweak/tweaks/tweak_group_font.py:100
-msgid "Window Title"
-msgstr "Ablakcím"
+msgid "Interface Text"
+msgstr "Felhasználói felület"
 
 #: gtweak/tweaks/tweak_group_font.py:101
-msgid "Interface"
-msgstr "Felület"
+msgid "Document Text"
+msgstr "Dokumentumszöveg"
 
 #: gtweak/tweaks/tweak_group_font.py:102
-msgid "Document"
-msgstr "Dokumentum"
+msgid "Monospace Text"
+msgstr "Rögzített szélességű szöveg"
 
 #: gtweak/tweaks/tweak_group_font.py:103
-msgid "Monospace"
-msgstr "Rögzített szélességű"
+msgid "Legacy Window Titles"
+msgstr "Örökölt ablakcímek"
 
 #: gtweak/tweaks/tweak_group_font.py:105
 msgid "Scaling Factor"
 msgstr "Méretezési faktor"
 
-#: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
-#: gtweak/tweaks/tweak_group_keymouse.py:48
-#: gtweak/tweaks/tweak_group_keymouse.py:184
-#: gtweak/tweaks/tweak_group_keymouse.py:324
+#: gtweak/tweaks/tweak_group_general.py:25
+msgid "Suspend when laptop lid is closed"
+msgstr "Felfüggesztés, ha a noteszgép fedele le van hajtva"
+
+#: gtweak/tweaks/tweak_group_general.py:51
+msgid "Animations"
+msgstr "Animációk"
+
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:54
+msgid "Over-Amplification"
+msgstr "További erősítés"
+
+#: gtweak/tweaks/tweak_group_general.py:55
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio "
+"quality; it is better to increase application volume settings, if possible."
+msgstr ""
+"Engedélyezi a hangerő 100% fölé emelését. Ez hangminőségromláshoz vezethet; "
+"jobb az alkalmazás hangerejét növelni, ha az lehetséges."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:21
+msgid "Emacs Input"
+msgstr "Emacs bevitel"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:24
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
+msgstr ""
+"Felülbírálja a gyorsbillentyűket, az Emacs szerkesztőben megszokott "
+"társítások használatához."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:40
+#: gtweak/tweaks/tweak_group_keymouse.py:108
+msgid "Compose Key"
+msgstr "Kombináló billentyű"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:96
+#: gtweak/tweaks/tweak_group_keymouse.py:178
+msgid "Scroll Lock"
+msgstr "Scroll Lock"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:97
+msgid "PrtScn"
+msgstr "Print Screen"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+msgid "Menu"
+msgstr "Menü"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:99
+msgid "Right Alt"
+msgstr "Jobb Alt"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:100
+msgid "Right Ctrl"
+msgstr "Jobb Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:101
+#: gtweak/tweaks/tweak_group_keymouse.py:200
+msgid "Right Super"
+msgstr "Jobb startgomb"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:102
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:103
+msgid "Left Ctrl"
+msgstr "Bal Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:47
+#: gtweak/tweaks/tweak_group_keymouse.py:183
+#: gtweak/tweaks/tweak_group_keymouse.py:323
+#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
 msgid "Disabled"
 msgstr "Letiltva"
 
-#: gtweak/tweaks/tweak_group_xkb.py:166
-msgid "Typing"
-msgstr "Gépelés"
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Allows entering additional characters."
+msgstr "Lehetővé teszi további karakterek bevitelét."
 
-#: gtweak/tweaks/tweak_group_power.py:22
-msgid "Suspend when laptop lid is closed"
-msgstr "Felfüggesztés ha a noteszgép fedele le van hajtva"
+#: gtweak/tweaks/tweak_group_keymouse.py:126
+msgid ""
+"The compose key allows a wide variety of characters to be entered. To use "
+"it, press the compose key and then a sequence of characters.\n"
+"\n"
+"Many unusual characters can be entered by combining standard ones. For "
+"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
+"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+msgstr ""
+"A kombináló billentyű lehetővé teszi karakterek széles körének bevitelét. "
+"Használatához nyomja le a kombináló billentyűt, majd karakterek sorozatát.\n"
+"\n"
+"Számos ritka karakter bevihető az általánosak kombinálásával. Például a "
+"kombináló billentyűt, majd a <b>C</b> és <b>o</b> megnyomása a <b>©</b> "
+"karaktert eredményezi.\n"
 
-#: gtweak/tweaks/tweak_group_power.py:46
-msgid "Power"
-msgstr "Energia"
+#: gtweak/tweaks/tweak_group_keymouse.py:189
+msgid "Overview Shortcut"
+msgstr "Áttekintés gyorsbillentyűje"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:196
+msgid "Left Super"
+msgstr "Bal startgomb"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:223
+#: gtweak/tweaks/tweak_group_keymouse.py:231
+msgid "Additional Layout Options"
+msgstr "További kiosztásbeállítások"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:253
+#: gtweak/tweaks/tweak_group_keymouse.py:392
+msgid "Mouse Click Emulation"
+msgstr "Egérkattintás utánzása"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:271
+msgid "Fingers"
+msgstr "Ujjak"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:273
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+"Érintse meg két ujjal az érintőtáblát a jobb kattintáshoz, és három ujjal a "
+"középső kattintáshoz."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:297
+msgid "Area"
+msgstr "Terület"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:299
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+"Érintse meg az érintőtábla jobb alsó részét a jobb kattintáshoz, és középen "
+"alul a középső kattintáshoz."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:325
+msgid "Don’t use mouse click emulation."
+msgstr "Ne használjon egérkattintás utánzást."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:362
+msgid "Keyboard & Mouse"
+msgstr "Billentyűzet és egér"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:363
+msgid "Keyboard"
+msgstr "Billentyűzet"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:364
+msgid "Show Extended Input Sources"
+msgstr "Bővített beviteli források megjelenítése"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:367
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "Növeli a beviteli források választékát a Beállítások alkalmazásban."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:373
+msgid "Mouse"
+msgstr "Egér"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:374
+msgid "Acceleration Profile"
+msgstr "Gyorsítási profil"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:378
+msgid "Pointer Location"
+msgstr "Mutató helye"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:382
+msgid "Press the Ctrl key to highlight the pointer."
+msgstr "Nyomja meg a Ctrl billentyűt a mutató kiemeléséhez."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:383
+msgid "Middle Click Paste"
+msgstr "Középső gombos beillesztés"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:387
+msgid "Touchpad"
+msgstr "Érintőtábla"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:388
+msgid "Disable While Typing"
+msgstr "Letiltás gépelés közben"
 
 #: gtweak/tweaks/tweak_group_shell_extensions.py:49
 msgid "No Extensions Installed"
@@ -409,80 +606,116 @@ msgstr "Új bejelentkezési alkalmazás"
 msgid "Add a new application to be run at startup"
 msgstr "Új, bejelentkezéskor futtatandó alkalmazás hozzáadása"
 
-#: gtweak/tweaks/tweak_group_sound.py:12
-msgid "Sound"
-msgstr "Hang"
+#: gtweak/tweaks/tweak_group_title_bar.py:57
+msgid "Placement"
+msgstr "Elhelyezés"
 
-#: gtweak/tweaks/tweak_group_sound.py:13
-msgid "Over-Amplification"
-msgstr "További erősítés"
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_title_bar.py:71
+msgid "Left"
+msgstr "Balra"
 
-#: gtweak/tweaks/tweak_group_sound.py:14
-msgid ""
-"Allows raising the volume above 100%. This can result in a loss of audio "
-"quality; it is better to increase application volume settings, if possible."
-msgstr ""
-"Engedélyezi a hangerő 100% fölé emelését. Ez hangminőségromláshoz vezethet; "
-"jobb az alkalmazás hangerejét növelni, ha az lehetséges."
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_title_bar.py:77
+msgid "Right"
+msgstr "Jobbra"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:13
-msgid "Activities Overview Hot Corner"
-msgstr "Tevékenységek áttekintés forró sarok"
+#: gtweak/tweaks/tweak_group_title_bar.py:108
+msgid "Window Titlebars"
+msgstr "Ablak címsávok"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_title_bar.py:109
+msgid "Titlebar Actions"
+msgstr "Címsor műveletei"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:110
+msgid "Double-Click"
+msgstr "Dupla kattintás"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:111
+msgid "Middle-Click"
+msgstr "Középső kattintás"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:112
+#: gtweak/tweaks/tweak_group_windows.py:88
+msgid "Secondary-Click"
+msgstr "Másodlagos kattintás"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:113
+msgid "Titlebar Buttons"
+msgstr "Címsor gombok"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:114
+msgid "Maximize"
+msgstr "Maximalizálás"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:115
+msgid "Minimize"
+msgstr "Minimalizálás"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Application Menu"
 msgstr "Alkalmazásmenü"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:59
 msgid "Top Bar"
 msgstr "Felső sáv"
+
+#. Requires patch from https://bugzilla.gnome.org/688320
+#: gtweak/tweaks/tweak_group_top_bar.py:61
+msgid "Activities Overview Hot Corner"
+msgstr "Tevékenységek áttekintés forró sarok"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:63
 msgid "Battery Percentage"
 msgstr "Töltöttség százalékosan"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Óra"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:65
+msgid "Weekday"
+msgstr "Hétköznap"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Date"
 msgstr "Dátum"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Seconds"
 msgstr "Másodperc"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:68
 msgid "Calendar"
 msgstr "Naptár"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:70
+#: gtweak/tweaks/tweak_group_top_bar.py:69
 msgid "Week Numbers"
 msgstr "Hetek száma"
 
-#: gtweak/tweaks/tweak_group_windows.py:19
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:215
 msgid "Window Focus"
 msgstr "Ablakfókusz"
 
-#: gtweak/tweaks/tweak_group_windows.py:19
-#: gtweak/tweaks/tweak_group_windows.py:37
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:36
+#: gtweak/tweaks/tweak_group_windows.py:215
 msgid "Click to Focus"
 msgstr "Kattintás a fókuszhoz"
 
-#: gtweak/tweaks/tweak_group_windows.py:39
+#: gtweak/tweaks/tweak_group_windows.py:38
 msgid "Windows are focused when they are clicked."
 msgstr "Az ablakok kattintáskor kerülnek fókuszba."
 
-#: gtweak/tweaks/tweak_group_windows.py:63
-msgid "Sloppy"
-msgstr "Lusta"
+#: gtweak/tweaks/tweak_group_windows.py:62
+msgid "Focus on Hover"
+msgstr "Fókuszálás rámutatáskor"
 
-#: gtweak/tweaks/tweak_group_windows.py:65
+#: gtweak/tweaks/tweak_group_windows.py:64
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -490,12 +723,7 @@ msgstr ""
 "Az ablak a mutató rávitelekor kerül fókuszba. Az ablak fókuszban marad, "
 "amikor az egérmutató az asztalra kerül."
 
-#: gtweak/tweaks/tweak_group_windows.py:89
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Secondary-Click"
-msgstr "Másodlagos kattintás"
-
-#: gtweak/tweaks/tweak_group_windows.py:91
+#: gtweak/tweaks/tweak_group_windows.py:90
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -503,62 +731,46 @@ msgstr ""
 "Az ablak a mutató rávitelekor kerül fókuszba. Az ablak elveszti a fókuszt, "
 "amikor az egérmutató az asztalra kerül."
 
-#: gtweak/tweaks/tweak_group_windows.py:172
-msgid "Placement"
-msgstr "Elhelyezés"
-
-#. Translators: For RTL languages, this is the "Right" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:186
-msgid "Left"
-msgstr "Balra"
-
-#. Translators: For RTL languages, this is the "Left" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:192
-msgid "Right"
-msgstr "Jobbra"
-
-#: gtweak/tweaks/tweak_group_windows.py:224
+#: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Window scaling"
 msgstr "Ablakok méretezése"
 
-#: gtweak/tweaks/tweak_group_windows.py:224
+#: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Adjust GDK window scaling factor for HiDPI"
 msgstr "A GDK ablakméretezési tényező módosítása HiDPI-hez"
 
-#: gtweak/tweaks/tweak_group_windows.py:252
+#: gtweak/tweaks/tweak_group_windows.py:157
 #, python-brace-format
 msgid "Settings will be reverted in {0} second"
 msgid_plural "Settings will be reverted in {0} seconds"
 msgstr[0] "A beállítások {0} másodperc múlva visszaállításra kerülnek"
 msgstr[1] "A beállítások {0} másodperc múlva visszaállításra kerülnek"
 
-#: gtweak/tweaks/tweak_group_windows.py:268
+#: gtweak/tweaks/tweak_group_windows.py:173
 msgid "Do you want to keep these HiDPI settings?"
 msgstr "Meg szeretné tartani ezeket a HiDPI beállításokat?"
 
-#: gtweak/tweaks/tweak_group_windows.py:275
+#: gtweak/tweaks/tweak_group_windows.py:180
 msgid "Revert Settings"
 msgstr "Beállítások visszaállítása"
 
-#: gtweak/tweaks/tweak_group_windows.py:276
+#: gtweak/tweaks/tweak_group_windows.py:181
 msgid "Keep Changes"
 msgstr "Változtatások megtartása"
 
-#: gtweak/tweaks/tweak_group_windows.py:292
+#: gtweak/tweaks/tweak_group_windows.py:197
 msgid "HiDPI"
 msgstr "HiDPI"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
+#: gtweak/tweaks/tweak_group_windows.py:203
 msgid "Windows"
 msgstr "Ablakok"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:204
 msgid "Attach Modal Dialogs"
 msgstr "Kizárólagos párbeszédablakok csatolása"
 
-#: gtweak/tweaks/tweak_group_windows.py:300
+#: gtweak/tweaks/tweak_group_windows.py:205
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -566,41 +778,32 @@ msgstr ""
 "Bekapcsolva a kizárólagos párbeszédablakok a szülőablakhoz lesznek csatolva, "
 "és nem mozgathatók."
 
-#: gtweak/tweaks/tweak_group_windows.py:301
+#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
+#: gtweak/tweaks/tweak_group_windows.py:207
+msgid "Edge Tiling"
+msgstr "Ablakok szélekhez illesztése"
+
+#: gtweak/tweaks/tweak_group_windows.py:208
+msgid "When on, windows are tiled when dragged to screen edges."
+msgstr ""
+"Bekapcsolva az ablakok a képernyőszélekre húzáskor a szélekhez lesznek"
+" illesztve."
+
+#: gtweak/tweaks/tweak_group_windows.py:209
+msgid "Center New Windows"
+msgstr "Új ablakok középre helyezése"
+
+#: gtweak/tweaks/tweak_group_windows.py:210
 msgid "Resize with Secondary-Click"
 msgstr "Átméretezés másodlagos kattintással"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:211
 msgid "Window Action Key"
 msgstr "Ablak műveletgombja"
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:217
 msgid "Raise Windows When Focused"
 msgstr "Ablakok előtérbe hozása, amikor fókuszba kerülnek"
-
-#: gtweak/tweaks/tweak_group_windows.py:309
-msgid "Titlebar Actions"
-msgstr "Címsor műveletei"
-
-#: gtweak/tweaks/tweak_group_windows.py:310
-msgid "Double-Click"
-msgstr "Dupla kattintás"
-
-#: gtweak/tweaks/tweak_group_windows.py:311
-msgid "Middle-Click"
-msgstr "Középső kattintás"
-
-#: gtweak/tweaks/tweak_group_windows.py:313
-msgid "Titlebar Buttons"
-msgstr "Címsor gombok"
-
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Maximize"
-msgstr "Maximalizálás"
-
-#: gtweak/tweaks/tweak_group_windows.py:315
-msgid "Minimize"
-msgstr "Minimalizálás"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:19
 msgid "Dynamic Workspaces"
@@ -653,180 +856,9 @@ msgstr "Az aktuális munkaterület további kijelzőket tartalmaz."
 msgid "Number of Workspaces"
 msgstr "Munkaterületek száma"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:22
-msgid "Emacs Input"
-msgstr "Emacs bevitel"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:25
-msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr ""
-"Felülbírálja a gyorsbillentyűket, az Emacs szerkesztőben megszokott "
-"társítások használatához."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:41
-#: gtweak/tweaks/tweak_group_keymouse.py:109
-msgid "Compose Key"
-msgstr "Kombináló billentyű"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-#: gtweak/tweaks/tweak_group_keymouse.py:179
-msgid "Scroll Lock"
-msgstr "Scroll Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "PrtScn"
-msgstr "Print Screen"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Menu"
-msgstr "Menü"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Alt"
-msgstr "Jobb Alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-msgid "Right Ctrl"
-msgstr "Jobb Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-#: gtweak/tweaks/tweak_group_keymouse.py:201
-msgid "Right Super"
-msgstr "Jobb startgomb"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Caps Lock"
-msgstr "Caps Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:104
-msgid "Left Ctrl"
-msgstr "Bal Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:52
-msgid "Allows entering additional characters."
-msgstr "Lehetővé teszi további karakterek bevitelét."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:127
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"A kombináló billentyű lehetővé teszi karakterek széles körének bevitelét. "
-"Használatához nyomja le a kombináló billentyűt, majd karakterek sorozatát.\n"
-"\n"
-"Számos ritka karakter bevihető az általánosak kombinálásával. Például a "
-"kombináló billentyűt, majd a <b>C</b> és <b>o</b> megnyomása a <b>©</b> "
-"karaktert eredményezi.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:190
-msgid "Overview Shortcut"
-msgstr "Áttekintés gyorsbillentyűje"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:197
-msgid "Left Super"
-msgstr "Bal startgomb"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:224
-#: gtweak/tweaks/tweak_group_keymouse.py:232
-msgid "Additional Layout Options"
-msgstr "További kiosztásbeállítások"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:254
-#: gtweak/tweaks/tweak_group_keymouse.py:393
-msgid "Mouse Click Emulation"
-msgstr "Egérkattintás utánzása"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:272
-msgid "Fingers"
-msgstr "Ujjak"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:274
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"Érintse meg két ujjal az érintőtáblát a jobb kattintáshoz, és három ujjal a "
-"középső kattintáshoz."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:298
-msgid "Area"
-msgstr "Terület"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:300
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Érintse meg az érintőtábla jobb alsó részét a jobb kattintáshoz, és középen "
-"alul a középső kattintáshoz."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:326
-msgid "Don’t use mouse click emulation."
-msgstr "Ne használjon egérkattintás utánzást."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:363
-msgid "Keyboard & Mouse"
-msgstr "Billentyűzet és egér"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:364
-msgid "Keyboard"
-msgstr "Billentyűzet"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:365
-msgid "Show Extended Input Sources"
-msgstr "Bővített beviteli források megjelenítése"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:368
-msgid "Increases the choice of input sources in the Settings application."
-msgstr "Növeli a beviteli források választékát a Beállítások alkalmazásban."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:374
-msgid "Mouse"
-msgstr "Egér"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:375
-msgid "Acceleration Profile"
-msgstr "Gyorsítási profil"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:379
-msgid "Pointer Location"
-msgstr "Mutató helye"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:383
-msgid "Press the Ctrl key to highlight the pointer."
-msgstr "Nyomja meg a Ctrl billentyűt a mutató kiemeléséhez."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:384
-msgid "Middle Click Paste"
-msgstr "Középső gombos beillesztés"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:388
-msgid "Touchpad"
-msgstr "Érintőtábla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:389
-msgid "Disable While Typing"
-msgstr "Letiltás gépelés közben"
+#: gtweak/tweaks/tweak_group_xkb.py:166
+msgid "Typing"
+msgstr "Gépelés"
 
 #: gtweak/tweaks/tweak_wacom.py:16
 msgid "Device"
@@ -837,22 +869,28 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:60
+#: gtweak/utils.py:59
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(alapértelmezett)</i>"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:332
 msgid "Configuration changes require restart"
 msgstr "A beállítások változásai újraindítást igényelnek"
 
-#: gtweak/utils.py:334
+#: gtweak/utils.py:333
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "A beállítások életbe lépéséhez újra kell indítani az alkalmazásokat"
 
-#: gtweak/utils.py:338
+#: gtweak/utils.py:337
 msgid "Restart Session"
 msgstr "Munkamenet újraindítása"
+
+#~ msgid "Power"
+#~ msgstr "Energia"
+
+#~ msgid "Sloppy"
+#~ msgstr "Lusta"
 
 #~ msgid "Click Method"
 #~ msgstr "Kattintás metódus"
