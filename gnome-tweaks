@@ -38,7 +38,7 @@ if __name__ == '__main__':
         _defs_present = True
     except ImportError:
         GSETTINGS_SCHEMA_DIR = TWEAK_DIR = DATA_DIR = PKG_DATA_DIR = \
-                               LOCALE_DIR  = LIBEXEC_DIR = ""
+                               LOCALE_DIR = LIBEXEC_DIR = ""
         _defs_present = False
 
     # the supplied prefix always beats the contents of defs
