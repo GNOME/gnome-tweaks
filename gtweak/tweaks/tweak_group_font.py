@@ -14,7 +14,7 @@ class FontXSettingsTweak(Gtk.Box, Tweak):
         Gtk.Box.__init__(self)
         Tweak.__init__(self, _("Hinting"), _("Antialiasing"))
 
-        self.settings = Gio.Settings("org.gnome.settings-daemon.plugins.xsettings")
+        self.settings = Gio.Settings(schema="org.gnome.settings-daemon.plugins.xsettings")
 
         self.set_spacing(12)
         self.props.margin_top = 12
