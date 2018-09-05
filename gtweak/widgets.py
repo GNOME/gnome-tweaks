@@ -178,6 +178,10 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
     def __init__(self, name, *tweaks, **options):
         if 'uid' not in options:
             options['uid'] = self.__class__.__name__
+        if 'activatable' not in options:
+            activatable = False
+        else:
+            activatable = options['activatable']
         Gtk.ListBox.__init__(self,
                         selection_mode=Gtk.SelectionMode.NONE,
                         name=options['uid'])
@@ -193,12 +197,12 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
         TweakGroup.__init__(self, name, **options)
 
         for t in tweaks:
-            self.add_tweak_row(t)
+            self.add_tweak_row(t, activatable)
 
     #FIXME: need to add remove_tweak_row and remove_tweak (which clears
     #the search cache etc)
 
-    def add_tweak_row(self, t, position=None):
+    def add_tweak_row(self, t, activatable=False, position=None):
         if self.add_tweak(t):
             if isinstance(t, Gtk.ListBoxRow):
                 row = t
@@ -208,6 +212,7 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
                 if isinstance(t, Title):
                     row.get_style_context().add_class("title")
                 row.add(t)
+            row.set_activatable(activatable)
             if position is None:
                 self.add(row)
             else:
