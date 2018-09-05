@@ -239,8 +239,8 @@ class GSettingsSwitchTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         _GSettingsTweak.__init__(self, name, schema_name, key_name, **options)
 
-        w = Gtk.Switch()
-        self.settings.bind(key_name, w, "active", Gio.SettingsBindFlags.DEFAULT)
+        self.switch = Gtk.Switch()
+        self.settings.bind(key_name, self.switch, "active", Gio.SettingsBindFlags.DEFAULT)
 
         self.add_dependency_on_tweak(
                 options.get("depends_on"),
@@ -267,7 +267,7 @@ class GSettingsSwitchTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         vbox2_upper = Gtk.Box()
         vbox2_lower = Gtk.Box()
         vbox2.pack_start(vbox2_upper, True, True, 0)
-        vbox2.pack_start(w, False, False, 0)
+        vbox2.pack_start(self.switch, False, False, 0)
         vbox2.pack_start(vbox2_lower, True, True, 0)
 
         self.pack_start(vbox1, True, True, 0)

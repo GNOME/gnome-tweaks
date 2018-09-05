@@ -3,8 +3,15 @@
 # License-Filename: LICENSES/GPL-3.0
 
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, Title
+from gtweak.gshellwrapper import GnomeShellFactory
 
 dicons = GSettingsSwitchTweak(_("Show Icons"),"org.gnome.desktop.background","show-desktop-icons")
+_shell = GnomeShellFactory().get_shell()
+if (_shell.mode == 'classic'):
+    dicons.switch.set_active(True)
+    dicons.switch.set_sensitive(False)
+else:
+    dicons.switch.set_sensitive(True)
 
 # show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
 # *work* unless we have a version of Nautilus that still has the ability to
