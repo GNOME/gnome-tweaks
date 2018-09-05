@@ -236,7 +236,8 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
 
         ListBoxTweakGroup.__init__(self,
                                    _("Extensions"),
-                                   *extension_tweaks)
+                                   *extension_tweaks,
+                                   activatable=True)
 
         if shell is None:
             return # we're done
