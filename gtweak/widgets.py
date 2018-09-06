@@ -8,7 +8,8 @@ import os.path
 from gi.repository import GLib, Gtk, Gdk, Gio, Pango
 
 from gtweak.tweakmodel import Tweak, TweakGroup
-from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
+from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, \
+                             GSettingsMissingError, GSettingsKeyMissingError
 from gtweak.gtksettings import GtkSettingsManager
 from gtweak.gshellwrapper import GnomeShellFactory
 
@@ -135,7 +136,7 @@ class _GSettingsTweak(Tweak):
             Tweak.__init__(self,"","")
             self.loaded = False
             logging.info("GSetting missing %s", e)
-        except KeyError:
+        except GSettingsKeyMissingError:
             self.settings = GSettingsFakeSetting()
             Tweak.__init__(self,"","")
             self.loaded = False

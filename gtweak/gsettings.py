@@ -19,6 +19,8 @@ _GSETTINGS_RELOCATABLE_SCHEMAS = set(Gio.Settings.list_relocatable_schemas())
 class GSettingsMissingError(Exception):
     pass
 
+class GSettingsKeyMissingError(Exception):
+    pass
 
 class _GSettingsSchema:
     def __init__(self, schema_name, schema_dir=None, schema_filename=None, **options):
@@ -150,13 +152,25 @@ class GSettingsSetting(Gio.Settings):
         return variant.get_type_string() == "as"
 
     def schema_get_summary(self, key):
-        return self._schema._schema[key]["summary"]
+        try:
+            res = self._schema._schema[key]["summary"]
+        except KeyError:
+            raise GSettingsKeyMissingError
+        return res
 
     def schema_get_description(self, key):
-        return self._schema._schema[key]["description"]
+        try:
+            res = self._schema._schema[key]["description"]
+        except KeyError:
+            raise GSettingsKeyMissingError
+        return res
 
     def schema_get_all(self, key):
-        return self._schema._schema[key]
+        try:
+            res = self._schema._schema[key]
+        except KeyError:
+            raise GSettingsKeyMissingError
+        return res
 
     def setting_add_to_list(self, key, value):
         """ helper function, ensures value is present in the GSettingsList at key """
