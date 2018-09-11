@@ -4,10 +4,11 @@
 
 import os.path
 
-from gi.repository import Gtk, Gdk, GObject
+from gi.repository import Gtk, Gdk
 
 import gtweak.tweakmodel
 from gtweak.tweakmodel import string_for_search
+
 
 class Window(Gtk.ApplicationWindow):
 
@@ -90,7 +91,6 @@ class Window(Gtk.ApplicationWindow):
         self.hsize_group.add_widget(left_header)
 
         return header
-
 
     def sidebar(self):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
@@ -220,7 +220,7 @@ class Window(Gtk.ApplicationWindow):
     def _on_list_changed(self, group):
         self.listbox.set_filter_func(self._list_filter_func, group)
         selected = self.listbox.get_selected_row().get_child().get_text()
-        if group and not selected in group:
+        if group and selected not in group:
             index = sorted(self._model._tweak_group_names.keys()).index(group[0])
             row = self.listbox.get_row_at_index(index)
             self.listbox.select_row(row)
@@ -246,10 +246,10 @@ class Window(Gtk.ApplicationWindow):
                 self._right_header.pack_end(self._group_titlebar_widget)
 
     def _on_find_toggled(self, btn):
-         if self.searchbar.get_search_mode():
-             self.searchbar.set_search_mode(False)
-             self.entry.set_text("")
-         else:
+        if self.searchbar.get_search_mode():
+            self.searchbar.set_search_mode(False)
+            self.entry.set_text("")
+        else:
             self.searchbar.set_search_mode(True)
             self.entry.grab_focus()
 
