@@ -185,6 +185,7 @@ class GSettingsSetting(Gio.Settings):
         assert self._setting_check_is_list(key)
         return value in self[key]
 
+
 if __name__ == "__main__":
     gtweak.GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas/"
 
