@@ -7,11 +7,10 @@ import logging
 
 from gi.repository import GLib
 
-import gtweak.utils
-
 SETTINGS_GROUP_NAME = "Settings"
 
 LOG = logging.getLogger(__name__)
+
 
 class GtkSettingsManager:
     def __init__(self, version):
