@@ -113,6 +113,7 @@ class GnomeShell:
     def version(self):
         return self._proxy.version
 
+
 class GnomeShell32(GnomeShell):
 
     EXTENSION_ENABLED_KEY = "enabled-extensions"
@@ -130,6 +131,7 @@ class GnomeShell32(GnomeShell):
 
     def disable_extension(self, uuid):
         self._settings.setting_remove_from_list(self.EXTENSION_ENABLED_KEY, uuid)
+
 
 class GnomeShell34(GnomeShell32):
 
@@ -168,9 +170,9 @@ class GnomeShellFactory:
 
             if v >= [3, 5, 0]:
                 self.shell = GnomeShell36(proxy, settings)
-            elif v >= [3,3,2]:
+            elif v >= [3, 3, 2]:
                 self.shell = GnomeShell34(proxy, settings)
-            elif v >= [3,1,4]:
+            elif v >= [3, 1, 4]:
                 self.shell = GnomeShell32(proxy, settings)
 
             else:
@@ -184,6 +186,7 @@ class GnomeShellFactory:
 
     def get_shell(self):
         return self.shell
+
 
 if __name__ == "__main__":
     gtweak.GSETTINGS_SCHEMA_DIR = "/usr/share/glib-2.0/schemas/"
