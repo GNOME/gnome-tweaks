@@ -81,7 +81,7 @@ class ExtensionsDotGnomeDotOrg(GObject.GObject):
 
 if __name__ == "__main__":
     import pprint
-    from gi.repository import Gtk, GLib
+    from gi.repository import Gtk
 
     def _got_ext(ego, extensions):
         print("="*80)
