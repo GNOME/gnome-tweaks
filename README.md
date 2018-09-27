@@ -15,6 +15,7 @@ RUNTIME DEPENDENCIES
 * Python3
 * pygobject (>= 3.10)
 * gnome-settings-daemon
+* sound-theme-freedesktop
 
 * GIR files and libraries from:
   - GLib (>= 2.58)
