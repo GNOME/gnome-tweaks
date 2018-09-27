@@ -1,5 +1,3 @@
-subdir('icons')
-
 gui_data = [
   'shell.ui',
   'shell.css'
@@ -24,3 +22,8 @@ i18n.merge_file(appdata_file,
   install: true,
   install_dir: appdatadir
 )
+
+install_data ('org.gnome.tweaks.svg',
+  install_dir: join_paths(datadir, 'icons', 'hicolor', 'scalable', 'apps'))
+install_data ('org.gnome.tweaks-symbolic.svg',
+  install_dir: join_paths(datadir, 'icons', 'hicolor', 'symbolic', 'apps'))
