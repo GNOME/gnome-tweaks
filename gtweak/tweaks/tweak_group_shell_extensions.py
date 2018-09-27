@@ -99,7 +99,8 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         lbl_name.set_markup("<span size='medium'><b>"+name_markup+"</b></span>")
         lbl_desc = _ExtensionDescriptionLabel(xalign=0.0, yalign=0.0, wrap=True, lines=2)
         desc = GLib.markup_escape_text(ext["description"].lower().capitalize().split('\n')[0])
-        lbl_desc.set_markup("<span foreground='#A19C9C' size='small'>"+desc+"</span>")
+        lbl_desc.set_markup("<span size='small'>"+desc+"</span>")
+        lbl_desc.get_style_context().add_class("dim-label")
         lbl_desc.props.ellipsize = Pango.EllipsizeMode.END
 
         vbox.pack_start(lbl_name, False, False, 0)
