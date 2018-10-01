@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-02 03:05+0000\n"
-"PO-Revision-Date: 2018-09-05 11:13+0200\n"
+"POT-Creation-Date: 2018-09-27 19:52+0000\n"
+"PO-Revision-Date: 2018-09-30 20:24+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -46,7 +46,7 @@ msgstr ""
 "la energía, gestionar las aplicaciones al inicio y activar iconos del "
 "escritorio, entre otras opciones."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
 msgid "Tweaks"
 msgstr "Retoques"
 
@@ -114,9 +114,14 @@ msgstr "Página principal"
 msgid "Miscellaneous"
 msgstr "Miscelánea"
 
-#: gtweak/tweakview.py:105
+#: gtweak/tweakview.py:98
 msgid "Search Tweaks…"
 msgstr "Buscar retoques…"
+
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+msgid "General"
+msgstr "General"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
@@ -316,23 +321,20 @@ msgstr "Títulos de ventanas heredadas"
 msgid "Scaling Factor"
 msgstr "Factor de escalado"
 
-#: gtweak/tweaks/tweak_group_general.py:22
+#: gtweak/tweaks/tweak_group_general.py:25
 msgid "Suspend when laptop lid is closed"
 msgstr "Suspender al cerrar la tapa del portátil"
 
-#: gtweak/tweaks/tweak_group_general.py:46
-msgid "General"
-msgstr "General"
-
-#: gtweak/tweaks/tweak_group_general.py:47
+#: gtweak/tweaks/tweak_group_general.py:51
 msgid "Animations"
 msgstr "Animaciones"
 
-#: gtweak/tweaks/tweak_group_general.py:49
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Over-Amplification"
 msgstr "Sobre-amplificación"
 
-#: gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweaks/tweak_group_general.py:55
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -429,9 +431,9 @@ msgstr ""
 "caracteres. Para usarla, pulse la tecla de composición y luego una secuencia "
 "de caracteres.\n"
 "\n"
-"Se pueden introducir muchos caracteres poro habituales combinando los "
+"Se pueden introducir muchos caracteres poco habituales combinando los "
 "estándar. Por ejemplo, la tecla de composición seguida de <b>C</b> y <b>o</"
-"b> escribirá <b>©</b><b>a</b> seguida de <b>'</b> escribirá <b>á</b>.\n"
+"b> escribirá <b>©</b>, <b>a</b> seguida de <b>'</b> escribirá <b>á</b>.\n"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
@@ -532,35 +534,35 @@ msgstr "No hay extensiones instaladas"
 msgid "Browse in Software"
 msgstr "Buscar en Software"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "Descarga de extensiones"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "Error al cargar la extensión"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "La extensión no soporta la versión de GNOME Shell"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "Error de la extensión desconocido"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "Actualizando"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "Error"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "Actualizar"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "Extensiones"
 
@@ -664,26 +666,26 @@ msgstr "Menú de aplicaciones"
 msgid "Top Bar"
 msgstr "Barra superior"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Battery Percentage"
-msgstr "Porcentaje de la batería"
-
 #. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Activities Overview Hot Corner"
 msgstr "Esquina activa de la vista de actividades"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Battery Percentage"
+msgstr "Porcentaje de la batería"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Reloj"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:65
-msgid "Date"
-msgstr "Fecha"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Weekday"
 msgstr "Día de la semana"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:66
+msgid "Date"
+msgstr "Fecha"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Seconds"
@@ -786,7 +788,7 @@ msgstr "Ajustar los bordes"
 
 #: gtweak/tweaks/tweak_group_windows.py:208
 msgid "When on, windows are tiled when dragged to screen edges."
-msgstr "Cuando está activada las ventanas se acercan al borde al acercarlas."
+msgstr "Cuando está activa, las ventanas se acercan al borde al acercarlas."
 
 #: gtweak/tweaks/tweak_group_windows.py:209
 msgid "Center New Windows"
@@ -837,7 +839,7 @@ msgstr "Manejo de las pantallas"
 #: gtweak/tweaks/tweak_group_workspaces.py:97
 #: gtweak/tweaks/tweak_group_workspaces.py:139
 msgid "Workspaces span displays"
-msgstr "Visualizaciones de areas de trabajo expandidas"
+msgstr "Visualizaciones de áreas de trabajo expandidas"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:113
 msgid "Workspaces on primary display only"
