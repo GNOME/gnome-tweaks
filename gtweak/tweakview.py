@@ -4,10 +4,11 @@
 
 import os.path
 
-from gi.repository import Gtk, Gdk, GObject
+from gi.repository import Gtk, Gdk
 
 import gtweak.tweakmodel
 from gtweak.tweakmodel import string_for_search
+
 
 class Window(Gtk.ApplicationWindow):
 

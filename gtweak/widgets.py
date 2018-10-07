@@ -3,13 +3,11 @@
 # License-Filename: LICENSES/GPL-3.0
 
 import logging
-import os.path
 
-from gi.repository import GLib, Gtk, Gdk, Gio, Pango
+from gi.repository import GLib, Gtk, Gio, Pango
 
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
-from gtweak.gtksettings import GtkSettingsManager
 from gtweak.gshellwrapper import GnomeShellFactory
 
 UI_BOX_SPACING = 4
