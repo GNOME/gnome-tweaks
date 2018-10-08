@@ -220,7 +220,7 @@ class Window(Gtk.ApplicationWindow):
     def _on_list_changed(self, group):
         self.listbox.set_filter_func(self._list_filter_func, group)
         selected = self.listbox.get_selected_row().get_child().get_text()
-        if group and not selected in group:
+        if group and selected not in group:
             index = sorted(self._model._tweak_group_names.keys()).index(group[0])
             row = self.listbox.get_row_at_index(index)
             self.listbox.select_row(row)

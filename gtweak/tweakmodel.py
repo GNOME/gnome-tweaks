@@ -138,7 +138,7 @@ class TweakModel(Gtk.ListStore):
             for t in g.tweaks:
                 if t.search_matches(txt):
                     tweaks.append(t)
-                    if not g.name in groups:
+                    if g.name not in groups:
                         groups.append(g.name)
         return tweaks, groups
 
