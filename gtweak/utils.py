@@ -236,7 +236,7 @@ class SchemaList:
 
     def __init__(self):
 
-        if SchemaList.__list == None:
+        if SchemaList.__list is None:
             SchemaList.__list = []
 
     def get(self):

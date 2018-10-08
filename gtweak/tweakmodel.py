@@ -35,7 +35,7 @@ class Tweak(object):
         self._search_cache = None
 
     def search_matches(self, txt):
-        if self._search_cache == None:
+        if self._search_cache is None:
             self._search_cache = string_for_search(self.name) + " " + \
 				 string_for_search(self.description)
             try:
