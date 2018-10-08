@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool 3.1.90\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-12 09:21+0000\n"
-"PO-Revision-Date: 2018-08-22 00:02+0800\n"
+"POT-Creation-Date: 2018-09-27 14:13+0000\n"
+"PO-Revision-Date: 2018-10-08 20:35+0800\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@lists.linux.org.tw>\n"
 "Language: zh_TW\n"
@@ -45,7 +45,7 @@ msgstr ""
 "它可以安裝、管理主題與擴充套件、改變電源設定、管理初始啟動應用程式、啟用桌面"
 "圖示及其他設定等。"
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
 msgid "Tweaks"
 msgstr "調校"
 
@@ -111,9 +111,14 @@ msgstr "首頁"
 msgid "Miscellaneous"
 msgstr "雜項"
 
-#: gtweak/tweakview.py:105
+#: gtweak/tweakview.py:98
 msgid "Search Tweaks…"
 msgstr "搜尋調校..."
+
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+msgid "General"
+msgstr "一般"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
@@ -312,23 +317,20 @@ msgstr "傳統視窗標題"
 msgid "Scaling Factor"
 msgstr "縮放係數"
 
-#: gtweak/tweaks/tweak_group_general.py:22
+#: gtweak/tweaks/tweak_group_general.py:25
 msgid "Suspend when laptop lid is closed"
 msgstr "當闔上筆電上蓋時暫停電腦"
 
-#: gtweak/tweaks/tweak_group_general.py:46
-msgid "General"
-msgstr "一般"
-
-#: gtweak/tweaks/tweak_group_general.py:47
+#: gtweak/tweaks/tweak_group_general.py:51
 msgid "Animations"
 msgstr "動畫"
 
-#: gtweak/tweaks/tweak_group_general.py:49
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Over-Amplification"
 msgstr "過度擴音"
 
-#: gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweaks/tweak_group_general.py:55
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -520,35 +522,35 @@ msgstr "未安裝擴充套件"
 msgid "Browse in Software"
 msgstr "開啟《軟體》瀏覽"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "擴充套件下載中"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "載入擴充套件時發生錯誤"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "擴充套件不支援 Shell 版本"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "未知的擴充套件錯誤"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "更新中"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "錯誤"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "更新"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "擴充套件"
 
@@ -651,26 +653,26 @@ msgstr "應用程式選單"
 msgid "Top Bar"
 msgstr "頂端列"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Battery Percentage"
-msgstr "電池百分比"
-
 #. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Activities Overview Hot Corner"
 msgstr "活動概覽熱角"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Battery Percentage"
+msgstr "電池百分比"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "時鐘"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:65
-msgid "Date"
-msgstr "日期"
+msgid "Weekday"
+msgstr "週之日"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:66
-msgid "Weekday"
-msgstr "平日"
+msgid "Date"
+msgstr "日期"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Seconds"
