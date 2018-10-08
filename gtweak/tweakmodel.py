@@ -17,6 +17,7 @@ LOG = logging.getLogger(__name__)
 def string_for_search(s):
     return GLib.utf8_casefold(GLib.utf8_normalize(s, -1, GLib.NormalizeMode.ALL), -1)
 
+
 class Tweak(object):
 
     main_window = None
@@ -27,7 +28,7 @@ class Tweak(object):
         self.name = name or ""
         self.description = description or ""
         self.uid = options.get("uid", self.__class__.__name__)
-        self.group_name = options.get("group_name",_("Miscellaneous"))
+        self.group_name = options.get("group_name", _("Miscellaneous"))
         self.loaded = options.get("loaded", True)
         self.widget_sort_hint = None
 
@@ -41,13 +42,14 @@ class Tweak(object):
                 self._search_cache += " " + string_for_search(self.extra_info)
             except:
                 LOG.warning("Error adding search info", exc_info=True)
-        return  txt in self._search_cache
+        return txt in self._search_cache
 
     def notify_logout(self):
         self._logoutnotification = LogoutNotification()
 
     def notify_information(self, summary, desc=""):
         self._notification = Notification(summary, desc)
+
 
 class TweakGroup(object):
 
@@ -63,6 +65,7 @@ class TweakGroup(object):
         if tweak.loaded:
             self.tweaks.append(tweak)
             return True
+
 
 class TweakModel(Gtk.ListStore):
     (COLUMN_NAME,
@@ -103,7 +106,7 @@ class TweakModel(Gtk.ListStore):
 
         mods = __import__("gtweak.tweaks", globals(), locals(), tweak_files, 0)
         for mod in [getattr(mods, file_name) for file_name in tweak_files]:
-            groups.extend( getattr(mod, "TWEAK_GROUPS", []) )
+            groups.extend( getattr(mod, "TWEAK_GROUPS", []))
 
         schemas = SchemaList()
 
@@ -132,7 +135,7 @@ class TweakModel(Gtk.ListStore):
         groups = []
 
         for g in self.tweak_groups:
-            for t in  g.tweaks:
+            for t in g.tweaks:
                 if t.search_matches(txt):
                     tweaks.append(t)
                     if not g.name in groups:

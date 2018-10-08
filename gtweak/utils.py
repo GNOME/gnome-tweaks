@@ -19,6 +19,7 @@ from gi.repository import Notify
 
 import gtweak
 
+
 def singleton(cls):
     """
     Singleton decorator that works with GObject derived types. The 'recommended'
@@ -26,11 +27,13 @@ def singleton(cls):
     does not (interacts badly with GObjectMeta
     """
     instances = {}
+
     def getinstance():
         if cls not in instances:
             instances[cls] = cls()
         return instances[cls]
     return getinstance
+
 
 def make_combo_list_with_default(opts, default, title=True, default_text=None):
     """
@@ -45,8 +48,8 @@ def make_combo_list_with_default(opts, default, title=True, default_text=None):
     themes = []
     for t in opts:
         if t.lower() == "default" and t != default:
-            #some themes etc are actually called default. Ick. Dont show them if they
-            #are not the actual default value
+            # some themes etc are actually called default. Ick. Dont show them if they
+            # are not the actual default value
             continue
 
         if title and len(t):
@@ -55,11 +58,12 @@ def make_combo_list_with_default(opts, default, title=True, default_text=None):
             name = t
 
         if t == default:
-            #indicates the default theme, e.g Adwaita (default)
+            # indicates the default theme, e.g Adwaita (default)
             name = default_text or _("%s <i>(default)</i>") % name
 
         themes.append((t, name))
     return themes
+
 
 def walk_directories(dirs, filter_func):
     valid = []
@@ -68,10 +72,11 @@ def walk_directories(dirs, filter_func):
             if os.path.isdir(thdir):
                 for t in os.listdir(thdir):
                     if filter_func(os.path.join(thdir, t)):
-                         valid.append(t)
+                        valid.append(t)
     except:
         logging.critical("Error parsing directories", exc_info=True)
     return valid
+
 
 def extract_zip_file(z, members_path, dest):
     """ returns (true_if_extracted_ok, true_if_updated) """
@@ -95,6 +100,7 @@ def extract_zip_file(z, members_path, dest):
 
     return ok, updated
 
+
 def execute_subprocess(cmd_then_args, block=True):
     p = subprocess.Popen(
             cmd_then_args,
@@ -103,6 +109,7 @@ def execute_subprocess(cmd_then_args, block=True):
     if block:
         stdout, stderr = p.communicate()
         return stdout, stderr, p.returncode
+
 
 def get_resource_dirs(resource):
     """Returns a list of all known resource dirs for a given resource.
@@ -119,6 +126,7 @@ def get_resource_dirs(resource):
     dirs += [os.path.join(os.path.expanduser("~"), ".{}".format(resource))]
 
     return [dir for dir in dirs if os.path.isdir(dir)]
+
 
 @singleton
 class AutostartManager:
@@ -137,8 +145,9 @@ class AutostartManager:
     def get_system_autostart_files():
         f = []
         for d in GLib.get_system_config_dirs():
-            f.extend( glob.glob(os.path.join(d, "autostart", "*.desktop")) )
+            f.extend(glob.glob(os.path.join(d, "autostart", "*.desktop")))
         return f
+
 
 class AutostartFile:
     def __init__(self, appinfo, autostart_desktop_filename="", exec_cmd="", extra_exec_args=""):
@@ -176,13 +185,13 @@ class AutostartFile:
 
     def is_start_at_login_enabled(self):
         if os.path.exists(self._user_autostart_file):
-            #prefer user directories first
-            #if it contains X-GNOME-Autostart-enabled=false then it has
-            #has been disabled by the user in the session applet, otherwise
-            #it is enabled
+            # prefer user directories first
+            # if it contains X-GNOME-Autostart-enabled=false then it has
+            # has been disabled by the user in the session applet, otherwise
+            # it is enabled
             return open(self._user_autostart_file).read().find("X-GNOME-Autostart-enabled=false") == -1
         else:
-            #check the system directories
+            # check the system directories
             for f in AutostartManager().get_system_autostart_files():
                 if os.path.basename(f) == self._autostart_desktop_filename:
                     return True
@@ -220,6 +229,7 @@ class AutostartFile:
             old.close()
             new.close()
 
+
 class SchemaList:
 
     __list = None
@@ -240,6 +250,7 @@ class SchemaList:
         for i in SchemaList.__list:
             s = Gio.Settings(i[1])
             s.reset(i[0])
+
 @singleton
 class DisableExtension(GObject.GObject):
 
@@ -252,6 +263,7 @@ class DisableExtension(GObject.GObject):
 
     def disable(self):
         self.emit("disable-extension")
+
 
 @singleton
 class XSettingsOverrides:
@@ -270,7 +282,7 @@ class XSettingsOverrides:
         items = {}
         for k in list(self._variant.keys()):
             try:
-                #variant override doesnt support .items()
+                # variant override doesnt support .items()
                 v = self._variant[k]
                 items[k] = self.VARIANT_TYPES[k](v)
             except KeyError:
@@ -293,21 +305,27 @@ class XSettingsOverrides:
         except KeyError:
             return default
 
-    #while I could store meta type information in the VARIANT_TYPES
-    #dict, its easiest to do default value handling and missing value
-    #checks in dedicated functions
+    # while I could store meta type information in the VARIANT_TYPES
+    # dict, its easiest to do default value handling and missing value
+    # checks in dedicated functions
     def set_shell_shows_app_menu(self, v):
         self._set_override('Gtk/ShellShowsAppMenu', int(v))
+
     def get_shell_shows_app_menu(self):
         return self._get_override('Gtk/ShellShowsAppMenu', True)
+
     def set_enable_primary_paste(self, v):
         self._set_override('Gtk/EnablePrimaryPaste', int(v))
+
     def get_enable_primary_paste(self):
         return self._get_override('Gtk/EnablePrimaryPaste', True)
+
     def set_window_scaling_factor(self, v):
         self._set_override('Gdk/WindowScalingFactor', int(v))
+
     def get_window_scaling_factor(self):
         return self._get_override('Gdk/WindowScalingFactor', 1)
+
 
 class Notification:
     def __init__(self, summary, body):
@@ -323,6 +341,7 @@ class Notification:
             self.notification.show()
         else:
             raise Exception("Not Supported")
+
 
 @singleton
 class LogoutNotification:
@@ -346,7 +365,7 @@ class LogoutNotification:
     def _logout(self, btn, action, user_data, unknown):
         d = Gio.bus_get_sync(Gio.BusType.SESSION, None)
         proxy = Gio.DBusProxy.new_sync(
-                       d,Gio.DBusProxyFlags.NONE, None,
+                       d, Gio.DBusProxyFlags.NONE, None,
                        'org.gnome.SessionManager',
                        '/org/gnome/SessionManager',
                        'org.gnome.SessionManager',

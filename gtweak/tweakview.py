@@ -92,7 +92,6 @@ class Window(Gtk.ApplicationWindow):
 
         return header
 
-
     def sidebar(self):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
@@ -247,10 +246,10 @@ class Window(Gtk.ApplicationWindow):
                 self._right_header.pack_end(self._group_titlebar_widget)
 
     def _on_find_toggled(self, btn):
-         if self.searchbar.get_search_mode():
-             self.searchbar.set_search_mode(False)
-             self.entry.set_text("")
-         else:
+        if self.searchbar.get_search_mode():
+            self.searchbar.set_search_mode(False)
+            self.entry.set_text("")
+        else:
             self.searchbar.set_search_mode(True)
             self.entry.grab_focus()
 

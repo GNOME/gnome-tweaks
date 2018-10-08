@@ -16,6 +16,7 @@ gi.require_version("Gtk", "3.0")
 import gtweak
 from gtweak.defs import VERSION
 
+
 if __name__ == '__main__':
     parser = optparse.OptionParser(version=VERSION)
     parser.add_option("-t", "--test", action="store_true",
@@ -37,7 +38,7 @@ if __name__ == '__main__':
         _defs_present = True
     except ImportError:
         GSETTINGS_SCHEMA_DIR = TWEAK_DIR = DATA_DIR = PKG_DATA_DIR = \
-                               LOCALE_DIR  = LIBEXEC_DIR = ""
+                               LOCALE_DIR = LIBEXEC_DIR = ""
         _defs_present = False
 
     # the supplied prefix always beats the contents of defs
