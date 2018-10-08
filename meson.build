@@ -1,5 +1,5 @@
 project('gnome-tweaks',
-  version: '3.31.0',
+  version: '3.31.1',
   meson_version: '>= 0.40.0'
 )
 
