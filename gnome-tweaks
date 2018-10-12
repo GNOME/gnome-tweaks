@@ -15,7 +15,9 @@ gi.require_version("Gtk", "3.0")
 
 import gtweak
 from gtweak.defs import VERSION
+from setproctitle import setproctitle
 
+setproctitle('gnome-tweaks')
 
 if __name__ == '__main__':
     parser = optparse.OptionParser(version=VERSION)
