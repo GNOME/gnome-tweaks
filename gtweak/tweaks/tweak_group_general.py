@@ -11,7 +11,10 @@ from gtweak.widgets import ListBoxTweakGroup, GetterSetterSwitchTweak, GSettings
 from gtweak.utils import AutostartFile
 
 _shell = GnomeShellFactory().get_shell()
-_shell_not_ubuntu = _shell.mode != 'ubuntu'
+_shell_not_ubuntu = True
+
+if _shell:
+  _shell_not_ubuntu = _shell.mode != 'ubuntu'
 
 class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
     def __init__(self, **options):
