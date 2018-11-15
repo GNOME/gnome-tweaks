@@ -34,14 +34,6 @@ class GnomeTweaks(Gtk.Application):
     def do_startup(self):
         Gtk.Application.do_startup(self)
 
-        self.builder = Gtk.Builder()
-        assert(os.path.exists(gtweak.PKG_DATA_DIR))
-        filename = os.path.join(gtweak.PKG_DATA_DIR, 'shell.ui')
-        self.builder.add_from_file(filename)
-
-        appmenu = self.builder.get_object('appmenu')
-        self.set_app_menu(appmenu)
-
         reset_action = Gio.SimpleAction.new("reset", None)
         reset_action.connect("activate", self.reset_cb)
         self.add_action(reset_action)

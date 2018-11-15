@@ -4,8 +4,8 @@
 
 import os.path
 
-from gi.repository import Gtk, Gdk
-
+from gi.repository import Gtk, Gdk, Gio
+import gtweak
 import gtweak.tweakmodel
 from gtweak.tweakmodel import string_for_search
 
@@ -83,6 +83,23 @@ class Window(Gtk.ApplicationWindow):
         lbl = Gtk.Label(label=_("Tweaks"))
         lbl.get_style_context().add_class("title")
         left_header.set_custom_title(lbl)
+
+        self.builder = Gtk.Builder()
+        assert(os.path.exists(gtweak.PKG_DATA_DIR))
+        filename = os.path.join(gtweak.PKG_DATA_DIR, 'shell.ui')
+        self.builder.add_from_file(filename)
+
+        appmenu = self.builder.get_object('appmenu')
+        settings_btn = Gtk.Button()
+        icon = Gio.ThemedIcon(name="open-menu-symbolic")
+        image = Gtk.Image.new_from_gicon(icon,
+                                         Gtk.IconSize.BUTTON)
+        settings_btn.set_tooltip_text(_("Settings"))
+        settings_btn.set_image(image)
+
+        popover = Gtk.Popover.new_from_model(settings_btn, appmenu)
+        right_header.pack_end(settings_btn)
+        settings_btn.connect("clicked", self.__on_toggle_popover, popover)
 
         header.pack_start(left_header, False, False, 0)
         header.pack_start(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL), False, False, 0)
@@ -259,3 +276,9 @@ class Window(Gtk.ApplicationWindow):
                 t.show_all()
             else:
                 t.hide()
+    
+    def __on_toggle_popover(self, settings_btn, popover):
+        if popover.get_visible():
+            popover.hide()
+        else:
+            popover.show_all()
