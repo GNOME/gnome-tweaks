@@ -4,8 +4,8 @@
 
 import os.path
 
-from gi.repository import Gtk, Gdk
-
+from gi.repository import Gtk, Gdk, Gio
+import gtweak
 import gtweak.tweakmodel
 from gtweak.tweakmodel import string_for_search
 
@@ -83,6 +83,19 @@ class Window(Gtk.ApplicationWindow):
         lbl = Gtk.Label(label=_("Tweaks"))
         lbl.get_style_context().add_class("title")
         left_header.set_custom_title(lbl)
+
+        self.builder = Gtk.Builder()
+        assert(os.path.exists(gtweak.PKG_DATA_DIR))
+        filename = os.path.join(gtweak.PKG_DATA_DIR, 'shell.ui')
+        self.builder.add_from_file(filename)
+
+        appmenu = self.builder.get_object('appmenu')
+        menu_btn = Gtk.MenuButton()
+        icon = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="open-menu-symbolic"),
+                                        Gtk.IconSize.BUTTON)
+        menu_btn.set_image(icon)
+        menu_btn.set_menu_model(appmenu)
+        right_header.pack_end(menu_btn)
 
         header.pack_start(left_header, False, False, 0)
         header.pack_start(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL), False, False, 0)
