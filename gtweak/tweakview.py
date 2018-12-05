@@ -95,7 +95,7 @@ class Window(Gtk.ApplicationWindow):
                                         Gtk.IconSize.BUTTON)
         menu_btn.set_image(icon)
         menu_btn.set_menu_model(appmenu)
-        right_header.pack_end(menu_btn)
+        left_header.pack_end(menu_btn)
 
         header.pack_start(left_header, False, False, 0)
         header.pack_start(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL), False, False, 0)
