@@ -50,10 +50,6 @@ class GnomeTweaks(Gtk.Application):
         about_action.connect("activate", self.about_cb)
         self.add_action(about_action)
 
-        quit_action = Gio.SimpleAction.new("quit", None)
-        quit_action.connect("activate", self.quit_cb)
-        self.add_action(quit_action)
-
     def reset_cb(self, action, parameter):
         dialog = Gtk.MessageDialog(self.win, 0, Gtk.MessageType.QUESTION,
                                    Gtk.ButtonsType.OK_CANCEL, _("Reset to Defaults"))
