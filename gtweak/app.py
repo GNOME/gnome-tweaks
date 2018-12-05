@@ -21,7 +21,7 @@ class GnomeTweaks(Gtk.Application):
 
     def __init__(self):
         GLib.set_application_name(_("GNOME Tweaks"))
-        Gtk.Application.__init__(self, application_id="org.gnome.Tweaks")
+        Gtk.Application.__init__(self, application_id="org.gnome.tweaks")
         self.win = None
 
     def do_activate(self):
