@@ -98,7 +98,7 @@ class Window(Gtk.ApplicationWindow):
         settings_btn.set_image(image)
 
         popover = Gtk.Popover.new_from_model(settings_btn, appmenu)
-        right_header.pack_end(settings_btn)
+        left_header.pack_end(settings_btn)
         settings_btn.connect("clicked", self.__on_toggle_popover, popover)
 
         header.pack_start(left_header, False, False, 0)
@@ -276,7 +276,7 @@ class Window(Gtk.ApplicationWindow):
                 t.show_all()
             else:
                 t.hide()
-    
+
     def __on_toggle_popover(self, settings_btn, popover):
         if popover.get_visible():
             popover.hide()
