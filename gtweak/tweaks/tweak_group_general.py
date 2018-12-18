@@ -13,7 +13,7 @@ from gtweak.utils import AutostartFile
 _shell = GnomeShellFactory().get_shell()
 _shell_not_ubuntu = True
 
-if _shell:
+if _shell is not None and hasattr(_shell, 'mode'):
   _shell_not_ubuntu = _shell.mode != 'ubuntu'
 
 class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
