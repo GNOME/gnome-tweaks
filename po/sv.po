@@ -9,23 +9,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-09-02 23:22+0000\n"
-"PO-Revision-Date: 2018-09-03 16:33+0800\n"
-"Last-Translator: Sebastian Rasmussen <sebras@gmail.com>\n"
+"POT-Creation-Date: 2018-12-06 00:03+0000\n"
+"PO-Revision-Date: 2018-12-28 12:16+0100\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "GNOME Justering"
 
@@ -46,7 +46,7 @@ msgstr ""
 "strömsparinställningar, hantera autostartande program, och aktivera "
 "skrivbordsikoner bland annat."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
 msgid "Tweaks"
 msgstr "Justeringar"
 
@@ -71,52 +71,48 @@ msgid "Disable All Shell Extensions"
 msgstr "Inaktivera alla skaltillägg"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "_Om"
+msgid "_About Tweaks"
+msgstr "_Om Justeringar"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Avsluta"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:55
 msgid "Reset to Defaults"
 msgstr "Återställ till standard"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Återställ alla justeringsinställningar till deras standardläge?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:79
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s-läge)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:82
 msgid "GNOME Shell is not running"
 msgstr "GNOME-skalet kör inte"
 
-#: gtweak/app.py:96
+#: gtweak/app.py:84
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:91
 msgid "Homepage"
 msgstr "Hemsida"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: gtweak/tweakview.py:98
+#: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
 msgstr "Sök justeringar…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Allmänt"
 
@@ -317,20 +313,20 @@ msgstr "Föråldrade fönstertitlar"
 msgid "Scaling Factor"
 msgstr "Skalningsfaktor"
 
-#: gtweak/tweaks/tweak_group_general.py:25
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Gå in i vänteläge när locket på den bärbara datorn stängs"
 
-#: gtweak/tweaks/tweak_group_general.py:51
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animeringar"
 
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:54
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Överamplifikation"
 
-#: gtweak/tweaks/tweak_group_general.py:55
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -529,35 +525,35 @@ msgstr "Inga tillägg installerade"
 msgid "Browse in Software"
 msgstr "Bläddra i Programvara"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "Tillägget hämtas"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "Fel vid inläsning av tillägget"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "Tillägget saknar stöd för skalversionen"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "Okänt tilläggsfel"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "Uppdaterar"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "Fel"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "Uppdatera"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "Tillägg"
 
@@ -864,22 +860,28 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standard)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "Konfigurationsändringar kräver omstart"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Din session måste startas om för att inställningar ska få effekt"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Starta om session"
+
+#~ msgid "_About"
+#~ msgstr "_Om"
+
+#~ msgid "_Quit"
+#~ msgstr "_Avsluta"
 
 #~ msgid "Power"
 #~ msgstr "Ström"
