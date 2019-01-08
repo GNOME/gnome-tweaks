@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Jorge González <jorgegonz@svn.gnome.org>, 2011.
 # Álex Puchades <alex94puchades@gmail.com>, 2015.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-09-27 19:52+0000\n"
-"PO-Revision-Date: 2018-09-30 20:24+0200\n"
+"POT-Creation-Date: 2018-12-10 12:26+0000\n"
+"PO-Revision-Date: 2019-01-08 15:59+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -24,8 +24,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "El Proyecto GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "Retoques de GNOME"
 
@@ -46,7 +46,7 @@ msgstr ""
 "la energía, gestionar las aplicaciones al inicio y activar iconos del "
 "escritorio, entre otras opciones."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
 msgid "Tweaks"
 msgstr "Retoques"
 
@@ -72,54 +72,51 @@ msgid "Disable All Shell Extensions"
 msgstr "Desactivar todas las extensiones de GNOME Shell"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "_Acerca de"
+#| msgid "_About Tweak Tool"
+msgid "_About Tweaks"
+msgstr "_Acerca de la herramienta de retoques"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Salir"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:55
 msgid "Reset to Defaults"
 msgstr "Restablecer los valores predeterminados"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "¿Restablecer la configuración de todos los retoques a su estado "
 "predeterminado?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:79
 #, python-format
 msgid "(%s mode)"
 msgstr "(modo %s)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:82
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell no está en ejecución"
 
-#: gtweak/app.py:96
+#: gtweak/app.py:84
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:91
 msgid "Homepage"
 msgstr "Página principal"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Miscelánea"
 
-#: gtweak/tweakview.py:98
+#: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
 msgstr "Buscar retoques…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "General"
 
@@ -321,20 +318,20 @@ msgstr "Títulos de ventanas heredadas"
 msgid "Scaling Factor"
 msgstr "Factor de escalado"
 
-#: gtweak/tweaks/tweak_group_general.py:25
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Suspender al cerrar la tapa del portátil"
 
-#: gtweak/tweaks/tweak_group_general.py:51
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animaciones"
 
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:54
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Sobre-amplificación"
 
-#: gtweak/tweaks/tweak_group_general.py:55
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -871,22 +868,28 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predeterminado)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "Los cambios en la configuración requieren reiniciar"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Se debe reiniciar la sesión para que los cambios tengan efecto"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Reiniciar la sesión"
+
+#~ msgid "_About"
+#~ msgstr "_Acerca de"
+
+#~ msgid "_Quit"
+#~ msgstr "_Salir"
 
 #~ msgid "Power"
 #~ msgstr "Energía"
@@ -1026,9 +1029,6 @@ msgstr "Reiniciar la sesión"
 
 #~ msgid "_Help"
 #~ msgstr "_Ayuda"
-
-#~ msgid "_About Tweak Tool"
-#~ msgstr "_Acerca de la herramienta de retoques"
 
 #~ msgid "The shell must be restarted for changes to take effect"
 #~ msgstr "Se debe reiniciar GNOME Shell para que los cambios tengan efecto"
