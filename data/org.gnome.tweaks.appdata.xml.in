@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
-  <id>org.gnome.tweaks.desktop</id>
+<component type="desktop-application">
+  <id>org.gnome.tweaks</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <project_group>GNOME</project_group>
@@ -18,8 +18,12 @@
   </p>
   </description>
   <provides>
-    <id>gnome-tweak-tool.desktop</id>
+    <binary>gnome-tweaks</binary>
   </provides>
+  <releases>
+    <release version="3.31.3" date="2018-12-18" />
+    <release version="3.30.2" date="2018-12-10" />
+  </releases>
   <kudos>
     <kudo>HiDpiIcon</kudo>
     <kudo>ModernToolkit</kudo>
@@ -29,6 +33,7 @@
       <image>https://wiki.gnome.org/Apps/Tweaks?action=AttachFile&amp;do=get&amp;target=UI.png</image>
     </screenshot>
   </screenshots>
+  <launchable type="desktop-id">org.gnome.tweaks.desktop</launchable>
   <translation type="gettext">gnome-tweaks</translation>
   <url type="homepage">https://wiki.gnome.org/Apps/Tweaks</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-tweaks/issues</url>
