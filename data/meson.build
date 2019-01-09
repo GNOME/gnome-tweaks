@@ -6,6 +6,15 @@ i18n.merge_file(appdata_file,
   install: true,
   install_dir: appdatadir
 )
+appstream_util = find_program('appstream-util', required: false)
+if appstream_util.found()
+  test(
+    'validate-appdata', appstream_util,
+    args: [
+      'validate-relax', appdata_file.full_path()
+    ]
+  )
+endif
 
 desktop_file = 'org.gnome.tweaks.desktop'
 i18n.merge_file(desktop_file,
@@ -16,6 +25,16 @@ i18n.merge_file(desktop_file,
   install_dir: desktopdir,
   type: 'desktop'
 )
+desktop_file_validate = find_program('desktop-file-validate', required: false)
+if desktop_file_validate.found()
+  test(
+    'validate-desktop',
+    desktop_file_validate,
+    args: [
+      desktop_file.full_path()
+    ]
+  )
+endif
 
 gui_data = [
   'shell.ui',
