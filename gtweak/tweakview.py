@@ -27,6 +27,7 @@ class Window(Gtk.ApplicationWindow):
         right_box = self.main_content()
         separator = Gtk.Separator(orientation=Gtk.Orientation.VERTICAL)
 
+        self.menu_btn = Gtk.MenuButton()
         titlebar = self.titlebar()
         self.set_titlebar(titlebar)
 
@@ -90,12 +91,11 @@ class Window(Gtk.ApplicationWindow):
         self.builder.add_from_file(filename)
 
         appmenu = self.builder.get_object('appmenu')
-        menu_btn = Gtk.MenuButton()
         icon = Gtk.Image.new_from_gicon(Gio.ThemedIcon(name="open-menu-symbolic"),
                                         Gtk.IconSize.BUTTON)
-        menu_btn.set_image(icon)
-        menu_btn.set_menu_model(appmenu)
-        left_header.pack_end(menu_btn)
+        self.menu_btn.set_image(icon)
+        self.menu_btn.set_menu_model(appmenu)
+        left_header.pack_end(self.menu_btn)
 
         header.pack_start(left_header, False, False, 0)
         header.pack_start(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL), False, False, 0)
@@ -227,6 +227,10 @@ class Window(Gtk.ApplicationWindow):
             if keyname == 'f':
                 self.button.set_active(True)
                 return True
+
+        if keyname == 'F10':
+            self.menu_btn.activate()
+            return True
 
         return False
 
