@@ -147,7 +147,7 @@ class TypingTweakGroup(Gtk.Box):
         ok = False
         try:
             self._kbdsettings = GSettingsSetting(self.XKB_GSETTINGS_SCHEMA)
-            self._kbdsettings.connect("changed::"+self.XKB_GSETTINGS_NAME, self._on_changed)
+            self._kdb_settings_id = self._kbdsettings.connect("changed::"+self.XKB_GSETTINGS_NAME, self._on_changed)
             self._xkb_info = GnomeDesktop.XkbInfo()
             ok = True
             self.loaded = True
@@ -165,6 +165,12 @@ class TypingTweakGroup(Gtk.Box):
                     self.pack_start(obj, False, False, 0)
         TweakGroup.__init__(self, _("Typing"), *self._option_objects)
 
+        self.connect("destroy", self._on_destroy)
+
     def _on_changed(self, *args):
         for obj in self._option_objects:
             obj.reload()
+
+    def _on_destroy(self, event):
+        if (self._kdb_settings_id):
+            self._kbdsettings.disconnect(self._kdb_settings_id)
