@@ -1,7 +1,9 @@
 project('gnome-tweaks',
   version: '3.31.3',
-  meson_version: '>= 0.40.0'
+  meson_version: '>= 0.48.0'
 )
+
+project_id = 'org.gnome.tweaks'
 
 gnome = import('gnome')
 i18n = import('i18n')
