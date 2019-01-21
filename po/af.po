@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-26\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
 "POT-Creation-Date: 2018-12-06 00:03+0000\n"
-"PO-Revision-Date: 2019-01-21 00:20+0200\n"
+"PO-Revision-Date: 2019-01-21 16:22+0200\n"
 "Last-Translator: Pieter Schalk Schoeman <pieter@sonbesie.co.za>\n"
 "Language-Team: Afrikaans <pieter@sonbesie.co.za>\n"
 "Language: af\n"
@@ -44,7 +44,7 @@ msgid ""
 "manage startup applications, and enable desktop icons among other settings."
 msgstr ""
 "Dit kan temas en ander uitbreidings bestuur en installeer, kraginstellings "
-"verander, werkskerm ikone wys en bepaal watter toepassings met die "
+"verander, werkskerm ikone wys en selfs bepaal watter toepassings met die "
 "bedryfstelsel gelaai moet word."
 
 #: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
@@ -70,7 +70,7 @@ msgstr "_Stel terug na verstekwaardes"
 
 #: data/shell.ui:11
 msgid "Disable All Shell Extensions"
-msgstr "Skakel alle shell-uitbreidings af"
+msgstr "Skakel alle koppelvlak-uitbreidings af"
 
 #: data/shell.ui:17
 msgid "_About Tweaks"
@@ -82,11 +82,11 @@ msgstr "Stel terug na verstekwaardes"
 
 #: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
-msgstr "Stel alle gevorderde instellings terug na verstek waardes?"
+msgstr "Stel alle gevorderde instellings terug na hul verstek waardes?"
 
 #: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
-msgstr "GNOME Shell"
+msgstr "GNOME-koppelvlak"
 
 #: gtweak/app.py:79
 #, python-format
@@ -95,7 +95,7 @@ msgstr "(%s modus)"
 
 #: gtweak/app.py:82
 msgid "GNOME Shell is not running"
-msgstr "GNOME Shell voer nie tans uit nie"
+msgstr "GNOME-koppelvlak voer nie tans uit nie"
 
 #: gtweak/app.py:84
 msgid "GTK+"
@@ -137,11 +137,11 @@ msgstr "Wyser"
 
 #: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Shell"
-msgstr "Shell"
+msgstr "Koppelvlak"
 
 #: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Install custom or user themes for gnome-shell"
-msgstr "Installeer persoonlike of gebruikers temas vir gnome-shell"
+msgstr "Installeer persoonlike of gebruikers temas vir gnome-koppelvlak"
 
 #. check the shell is running and the usertheme extension is present
 #: gtweak/tweaks/tweak_group_appearance.py:136
@@ -162,7 +162,7 @@ msgstr "Shell gebruiker-tema uitbreiding nie aangeskakel nie"
 
 #: gtweak/tweaks/tweak_group_appearance.py:169
 msgid "Could not list shell extensions"
-msgstr "Kon nie shell uitbreidings toon nie"
+msgstr "Kon nie koppelvlak-uitbreidings toon nie"
 
 #: gtweak/tweaks/tweak_group_appearance.py:199
 msgid "<i>Default</i>"
@@ -207,7 +207,7 @@ msgstr "Klank"
 
 #: gtweak/tweaks/tweak_group_appearance.py:290
 msgid "Specifies which sound theme to use for sound events."
-msgstr "Spesifiseer watter klank tema vir klanke gebruik moet word."
+msgstr "Spesifiseer watter klank-tema vir klanke gebruik moet word."
 
 #: gtweak/tweaks/tweak_group_appearance.py:292
 msgid "Background"
@@ -445,7 +445,7 @@ msgstr "Addisionele uitleg opsies"
 #: gtweak/tweaks/tweak_group_keymouse.py:253
 #: gtweak/tweaks/tweak_group_keymouse.py:392
 msgid "Mouse Click Emulation"
-msgstr ""
+msgstr "Muis klik emulasie"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:271
 msgid "Fingers"
@@ -456,6 +456,8 @@ msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
 msgstr ""
+"Raak aan die raakblad met twee vingers vir 'n regsklik en drie vingers vir "
+"'n middelklik."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:297
 msgid "Area"
@@ -466,10 +468,12 @@ msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
 msgstr ""
+"Raak aan die onderste regterhoek van die raakblad vir 'n regsklik en die "
+"onderste middel vir 'n middelklik."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:325
 msgid "Don’t use mouse click emulation."
-msgstr ""
+msgstr "Moet nie muis klik emulasie gebruik nie."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:362
 msgid "Keyboard & Mouse"
@@ -633,7 +637,7 @@ msgstr "Middelklik"
 #: gtweak/tweaks/tweak_group_title_bar.py:112
 #: gtweak/tweaks/tweak_group_windows.py:88
 msgid "Secondary-Click"
-msgstr "Sekondêre Klik"
+msgstr "Sekondêre-klik"
 
 #: gtweak/tweaks/tweak_group_title_bar.py:113
 msgid "Titlebar Buttons"
@@ -705,7 +709,7 @@ msgstr "Vensters word gefokus nadat hulle geklik word."
 
 #: gtweak/tweaks/tweak_group_windows.py:62
 msgid "Focus on Hover"
-msgstr ""
+msgstr "Fokus as muis oor beweeg"
 
 #: gtweak/tweaks/tweak_group_windows.py:64
 msgid ""
@@ -735,12 +739,12 @@ msgstr "Pas GDK vensterskaleringfaktor vir HiDPI aan"
 #, python-brace-format
 msgid "Settings will be reverted in {0} second"
 msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Instellings sal na {0}  sekonde herstel word"
-msgstr[1] "Instellings sal na {0}  sekondes herstel word"
+msgstr[0] "Instellings sal na {0} sekonde herstel word"
+msgstr[1] "Instellings sal na {0} sekondes herstel word"
 
 #: gtweak/tweaks/tweak_group_windows.py:173
 msgid "Do you want to keep these HiDPI settings?"
-msgstr "Wil u hierdie HiDPI instellings behou?"
+msgstr "Wil jy hierdie HiDPI instellings behou?"
 
 #: gtweak/tweaks/tweak_group_windows.py:180
 msgid "Revert Settings"
@@ -773,11 +777,13 @@ msgstr ""
 #. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
 #: gtweak/tweaks/tweak_group_windows.py:207
 msgid "Edge Tiling"
-msgstr ""
+msgstr "Rand teël"
 
 #: gtweak/tweaks/tweak_group_windows.py:208
 msgid "When on, windows are tiled when dragged to screen edges."
 msgstr ""
+"As aan sal vensters geteël word wanneer hulle na die kant van die skerm "
+"getrek word."
 
 #: gtweak/tweaks/tweak_group_windows.py:209
 msgid "Center New Windows"
@@ -803,9 +809,7 @@ msgstr "Dinamiese werkspasies"
 msgid ""
 "Workspaces can be created on demand, and are automatically removed when "
 "empty."
-msgstr ""
-"Werkspasies kan geskep word soos benodig, en word outomaties verwyder soos "
-"dit leeg word."
+msgstr "Werkspasies word geskep asook verwyder soos benodig."
 
 #: gtweak/tweaks/tweak_group_workspaces.py:62
 msgid "Static Workspaces"
@@ -866,7 +870,7 @@ msgstr "%s <i>(verstek)</i>"
 
 #: gtweak/utils.py:351
 msgid "Configuration changes require restart"
-msgstr "Konfigurasie veranderings benodig dat die bedryfstelsel herbegin"
+msgstr "Konfigurasie veranderings benodig dat die bedryfstelsel herlaai"
 
 #: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
