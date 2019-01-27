@@ -1,38 +1,38 @@
-# Hungarian translation for gnome-tweak-tool.
-# Copyright (C) 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-tweak-tool package.
+# Hungarian translation for gnome-tweaks.
+# Copyright (C) 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 Free Software Foundation, Inc.
+# This file is distributed under the same license as the gnome-tweaks package.
 #
 # n0m4dm4n <n0m4dm4n at gmail dot com>, 2011.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2011, 2012, 2013, 2014, 2016, 2017, 2018.
 # Attila Hammer <hammera at pickup dot hu>, 2012.
-# Balázs Úr <urbalazs at gmail dot com>, 2012, 2013, 2014, 2015, 2017, 2018.
+# Balázs Úr <urbalazs at gmail dot com>, 2012, 2013, 2014, 2015, 2017, 2018, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool master\n"
+"Project-Id-Version: gnome-tweaks master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-29 22:58+0000\n"
-"PO-Revision-Date: 2018-09-01 11:55+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
-"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"POT-Creation-Date: 2018-12-06 00:03+0000\n"
+"PO-Revision-Date: 2019-01-27 15:07+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "A GNOME projekt"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "GNOME Finomhangoló"
 
 #: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
-msgstr "A GNOME 3 speciális beállításainak módosítása"
+msgstr "A GNOME 3 speciális beállításainak finomhangolása"
 
 #: data/org.gnome.tweaks.appdata.xml.in:12
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
@@ -48,9 +48,9 @@ msgstr ""
 "módosítására, az indítópult alkalmazásainak kezelésére és egyéb beállítások "
 "közt az asztali ikonok bekapcsolására."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
 msgid "Tweaks"
-msgstr "Hangolások"
+msgstr "Finomhangoló"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.tweaks.desktop.in:6
@@ -74,52 +74,49 @@ msgid "Disable All Shell Extensions"
 msgstr "Minden Shell-bővítmény letiltása"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "_Névjegy"
+msgid "_About Tweaks"
+msgstr "A Finomhangoló _névjegye"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Kilépés"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:55
 msgid "Reset to Defaults"
 msgstr "Alapértelmezések visszaállítása"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
-msgstr "Visszaállít minden beállítást az alapértékre?"
+msgstr ""
+"Visszaállít minden finomhangolást az eredeti alapértelmezett állapotra?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:79
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s mód)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:82
 msgid "GNOME Shell is not running"
 msgstr "A GNOME Shell nem fut"
 
-#: gtweak/app.py:96
+#: gtweak/app.py:84
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:91
 msgid "Homepage"
 msgstr "Honlap"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Egyebek"
 
-#: gtweak/tweakview.py:98
+#: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
-msgstr "Hangolások keresése…"
+msgstr "Finomhangolások keresése…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Általános"
 
@@ -321,20 +318,20 @@ msgstr "Örökölt ablakcímek"
 msgid "Scaling Factor"
 msgstr "Méretezési faktor"
 
-#: gtweak/tweaks/tweak_group_general.py:25
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Felfüggesztés, ha a noteszgép fedele le van hajtva"
 
-#: gtweak/tweaks/tweak_group_general.py:51
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animációk"
 
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:54
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "További erősítés"
 
-#: gtweak/tweaks/tweak_group_general.py:55
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -532,35 +529,35 @@ msgstr "Nincsenek kiterjesztések telepítve"
 msgid "Browse in Software"
 msgstr "Tallózás a Szoftverben"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "Kiterjesztések letöltése"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "Hiba a bővítmény betöltésekor"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "A bővítmény nem támogatja a Gnome Shell ezen verzióját"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "Ismeretlen bővítményhiba"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "Frissítés"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "Hiba"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "Frissítés"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "Kiterjesztések"
 
@@ -786,8 +783,8 @@ msgstr "Ablakok szélekhez illesztése"
 #: gtweak/tweaks/tweak_group_windows.py:208
 msgid "When on, windows are tiled when dragged to screen edges."
 msgstr ""
-"Bekapcsolva az ablakok a képernyőszélekre húzáskor a szélekhez lesznek"
-" illesztve."
+"Bekapcsolva az ablakok a képernyőszélekre húzáskor a szélekhez lesznek "
+"illesztve."
 
 #: gtweak/tweaks/tweak_group_windows.py:209
 msgid "Center New Windows"
@@ -869,28 +866,20 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(alapértelmezett)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "A beállítások változásai újraindítást igényelnek"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "A beállítások életbe lépéséhez újra kell indítani az alkalmazásokat"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Munkamenet újraindítása"
 
-#~ msgid "Power"
-#~ msgstr "Energia"
-
-#~ msgid "Sloppy"
-#~ msgstr "Lusta"
-
-#~ msgid "Click Method"
-#~ msgstr "Kattintás metódus"
