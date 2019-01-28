@@ -3,29 +3,30 @@
 # This file is distributed under the same license as the PACKAGE package.
 # fran <frandieguez@gnome.org>, 2011.
 # Fran Diéguez <frandieguez@gnome.org>, 2011.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
+# Fran Dieguez <frandieguez@gnome.org>, 2011-2019.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-02 03:05+0000\n"
-"PO-Revision-Date: 2018-08-30 00:41+0200\n"
+"POT-Creation-Date: 2018-12-06 00:03+0000\n"
+"PO-Revision-Date: 2019-01-28 23:22+0100\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
-"Language-Team: Proxecto Trasno <proxecto@trasno.gal>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: Gtranslator 3.30.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "O Proxecto GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "Axustes de GNOME"
 
@@ -47,7 +48,7 @@ msgstr ""
 "enerxía, xestionar os aplicativos de inicio e activar as iconas do "
 "escritorio entre outras preferencias."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
 msgid "Tweaks"
 msgstr "Axustes"
 
@@ -73,50 +74,52 @@ msgid "Disable All Shell Extensions"
 msgstr "Desactivar todas as extensións do Shell"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "_Sobre"
+#| msgid "_About Tweak Tool"
+msgid "_About Tweaks"
+msgstr "_Sobre Axustes"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Saír"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:55
 msgid "Reset to Defaults"
 msgstr "Restabelecer aos predeterminados"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Restabelecer todas as configuracións de axustes ao seu estado orixinal?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:79
 #, python-format
 msgid "(%s mode)"
 msgstr "(modo %s)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:82
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell non está executándose"
 
-#: gtweak/app.py:96
+#: gtweak/app.py:84
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:91
 msgid "Homepage"
 msgstr "Páxina web"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Miscelánea"
 
-#: gtweak/tweakview.py:105
+#: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
 msgstr "Buscar axustes…"
+
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+msgid "General"
+msgstr "Xeral"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
@@ -298,22 +301,18 @@ msgid "Fonts"
 msgstr "Tipos de letra"
 
 #: gtweak/tweaks/tweak_group_font.py:100
-#| msgid "Interface"
 msgid "Interface Text"
 msgstr "Texto da interface"
 
 #: gtweak/tweaks/tweak_group_font.py:101
-#| msgid "Document"
 msgid "Document Text"
 msgstr "Texto do documento"
 
 #: gtweak/tweaks/tweak_group_font.py:102
-#| msgid "Monospace"
 msgid "Monospace Text"
 msgstr "Texto do monoespaciado"
 
 #: gtweak/tweaks/tweak_group_font.py:103
-#| msgid "Window Title"
 msgid "Legacy Window Titles"
 msgstr "Títulos da xanela herdada"
 
@@ -321,23 +320,20 @@ msgstr "Títulos da xanela herdada"
 msgid "Scaling Factor"
 msgstr "Factor de escala"
 
-#: gtweak/tweaks/tweak_group_general.py:22
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Suspender cando se peche a tapa do portátil"
 
-#: gtweak/tweaks/tweak_group_general.py:46
-msgid "General"
-msgstr "Xeral"
-
-#: gtweak/tweaks/tweak_group_general.py:47
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animacións"
 
-#: gtweak/tweaks/tweak_group_general.py:49
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Sobreamplificación"
 
-#: gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -533,35 +529,35 @@ msgstr "Non hai extensións instaladas"
 msgid "Browse in Software"
 msgstr "Explorar en Software"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "Descarga de extensións"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "Produciuse un erro ao cargar a extensión"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "A extensión non é compatíbel con esta versión do Shell"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "Produciuse un erro descoñecido na extensión"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "Actualizando"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "Erro"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "Actualizar"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "Extensións"
 
@@ -664,26 +660,26 @@ msgstr "Menú de aplicativos"
 msgid "Top Bar"
 msgstr "Barra superior"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Battery Percentage"
-msgstr "Porcentaxe da batería"
-
 #. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Activities Overview Hot Corner"
 msgstr "Esquina quente da vista previa de actividades"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Battery Percentage"
+msgstr "Porcentaxe da batería"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Reloxo"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:65
-msgid "Date"
-msgstr "Data"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Weekday"
 msgstr "Día da semana"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:66
+msgid "Date"
+msgstr "Data"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Seconds"
@@ -713,7 +709,6 @@ msgid "Windows are focused when they are clicked."
 msgstr "A xanela enfócase cando se preme."
 
 #: gtweak/tweaks/tweak_group_windows.py:62
-#| msgid "Focus Mode"
 msgid "Focus on Hover"
 msgstr "Enfocar ao pasar por enriba"
 
@@ -872,22 +867,28 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predeterminado)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "Os cambios de configuración requiren reiniciar"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Debe reiniciar a sesión para que se apliquen os cambios"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Reiniciar sesión"
+
+#~ msgid "_About"
+#~ msgstr "_Sobre"
+
+#~ msgid "_Quit"
+#~ msgstr "_Saír"
 
 #~ msgid "Power"
 #~ msgstr "Enerxía"
@@ -1030,9 +1031,6 @@ msgstr "Reiniciar sesión"
 
 #~ msgid "_Help"
 #~ msgstr "_Axuda"
-
-#~ msgid "_About Tweak Tool"
-#~ msgstr "_Sobre Ferramenta de axustes"
 
 #~ msgid "The shell must be restarted for changes to take effect"
 #~ msgstr "Debe reiniciar o shell para que se apliquen os cambios"
