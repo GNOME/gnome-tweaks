@@ -4,13 +4,13 @@
 # Kris Thomsen <mail@kristhomsen.dk>, 2011-2015.
 # Ask Hjorth Larsen <asklarsen@gmail.com>, 2014-2016.
 # scootergrisen, 2016.
-# Alan Mortensen <alanmortensen.am@gmail.com>, 2017, 2018.
+# Alan Mortensen <alanmortensen.am@gmail.com>, 2017-19.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-02 03:05+0000\n"
-"PO-Revision-Date: 2018-08-30 20:52+0200\n"
+"POT-Creation-Date: 2018-12-06 00:03+0000\n"
+"PO-Revision-Date: 2019-02-11 19:49+0100\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "GNOME Tilpasninger"
 
@@ -49,7 +49,7 @@ msgstr ""
 "strømindstillinger, håndtere opstartsprogrammer samt aktivere "
 "skrivebordsikoner med mere."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
 msgid "Tweaks"
 msgstr "Tilpasninger"
 
@@ -75,49 +75,50 @@ msgid "Disable All Shell Extensions"
 msgstr "Deaktivér alle Shell-udvidelser"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "_Om"
+msgid "_About Tweaks"
+msgstr "_Om Tilpasninger"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Afslut"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:55
 msgid "Reset to Defaults"
 msgstr "Nulstil til standarder"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Nulstil alle tilpasningsindstillinger til original standardtilstand?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:79
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s-tilstand)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:82
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell kører ikke"
 
-#: gtweak/app.py:96
+#: gtweak/app.py:84
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:91
 msgid "Homepage"
 msgstr "Hjemmeside"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: gtweak/tweakview.py:105
+#: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
 msgstr "Søg tilpasninger …"
+
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+msgid "General"
+msgstr "Generelt"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
@@ -316,23 +317,20 @@ msgstr "Forældede vinduestitler"
 msgid "Scaling Factor"
 msgstr "Skaleringsfaktor"
 
-#: gtweak/tweaks/tweak_group_general.py:22
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Sæt i hviletilstand, når låget lukkes på den bærbare lukkes"
 
-#: gtweak/tweaks/tweak_group_general.py:46
-msgid "General"
-msgstr "Generelt"
-
-#: gtweak/tweaks/tweak_group_general.py:47
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animationer"
 
-#: gtweak/tweaks/tweak_group_general.py:49
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Overstyring"
 
-#: gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -528,35 +526,35 @@ msgstr "Ingen udvidelser installeret"
 msgid "Browse in Software"
 msgstr "Gennemse i Software"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "Henter udvidelse"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "Fejl under indlæsning af udvidelse"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "Udvidelse understøtter ikke shell-version"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "Ukendt udvidelsesfejl"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "Opdaterer"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "Fejl"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "Opdatér"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "Udvidelser"
 
@@ -659,28 +657,28 @@ msgstr "Programmenu"
 msgid "Top Bar"
 msgstr "Toppanel"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Battery Percentage"
-msgstr "Batteriprocent"
-
 # Aktivt hjørne er oversættelsen i Cinnamon.
 # Den engelske tekst er uklar.
 #. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Activities Overview Hot Corner"
 msgstr "Aktivitetsoversigt — Aktivt hjørne"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Battery Percentage"
+msgstr "Batteriprocent"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Ur"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:65
-msgid "Date"
-msgstr "Dato"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Weekday"
 msgstr "Ugedag"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:66
+msgid "Date"
+msgstr "Dato"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Seconds"
@@ -866,22 +864,28 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(standard)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "Konfigurationsændringer kræver genstart"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Din session skal genstartes for at ændringerne træder i kraft"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Genstart session"
+
+#~ msgid "_About"
+#~ msgstr "_Om"
+
+#~ msgid "_Quit"
+#~ msgstr "_Afslut"
 
 #~ msgid "Power"
 #~ msgstr "Strøm"
