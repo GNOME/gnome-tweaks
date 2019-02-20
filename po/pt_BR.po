@@ -1,34 +1,35 @@
 # Brazilian Portuguese translation for gnome-tweak-tool.
-# Copyright (C) 2018 gnome-tweak-tool's COPYRIGHT HOLDER
+# Copyright (C) 2019 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Rodrigo Padula <contato@rodrigopadula.com>, 2011.
 # Guilherme Barbosa Ferreira <eu@guilhermeferreira.info>, 2011.
 # Juan Diego Martins da Costa Cruz <juan.martins@ifrn.edu.br>, 2013.
 # Felipe Braga <fbobraga@gmail.com>, 2015.
 # Enrico Nicoletto <liverig@gmail.com>, 2013-2016.
-# Rafael Fontenelle <rafaelff@gnome.org>, 2012-2018.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2012-2019.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-02 03:05+0000\n"
-"PO-Revision-Date: 2018-08-22 08:50-0200\n"
+"POT-Creation-Date: 2018-12-06 00:03+0000\n"
+"PO-Revision-Date: 2019-02-20 06:49-0300\n"
 "Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"Language-Team: Portuguese - Brazil <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Virtaal 1.0.0-beta1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 3.31.90\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "O Projeto GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "Ajustes do GNOME"
 
@@ -49,7 +50,7 @@ msgstr ""
 "energia, gerenciar aplicativos de inicialização, habilitar ícones na área de "
 "trabalho, entre outros ajustes."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
 msgid "Tweaks"
 msgstr "Ajustes"
 
@@ -75,50 +76,52 @@ msgid "Disable All Shell Extensions"
 msgstr "Desabilitar todas as extensões do Shell"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "_Sobre"
+#| msgid "_About Tweak Tool"
+msgid "_About Tweaks"
+msgstr "_Sobre o Ajustes"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Sair"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:55
 msgid "Reset to Defaults"
 msgstr "Restaurar padrões"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Restaurar todos os ajustes de configurações para o estado original padrão?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:79
 #, python-format
 msgid "(%s mode)"
 msgstr "(modo %s)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:82
 msgid "GNOME Shell is not running"
 msgstr "O GNOME Shell não está em execução"
 
-#: gtweak/app.py:96
+#: gtweak/app.py:84
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:91
 msgid "Homepage"
 msgstr "Página inicial"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Miscelânea"
 
-#: gtweak/tweakview.py:105
+#: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
 msgstr "Pesquisar ajustes…"
+
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+msgid "General"
+msgstr "Geral"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
@@ -302,22 +305,18 @@ msgid "Fonts"
 msgstr "Fontes"
 
 #: gtweak/tweaks/tweak_group_font.py:100
-#| msgid "Interface"
 msgid "Interface Text"
 msgstr "Texto da interface"
 
 #: gtweak/tweaks/tweak_group_font.py:101
-#| msgid "Document"
 msgid "Document Text"
 msgstr "Texto de documento"
 
 #: gtweak/tweaks/tweak_group_font.py:102
-#| msgid "Monospace"
 msgid "Monospace Text"
 msgstr "Texto monoespaçado"
 
 #: gtweak/tweaks/tweak_group_font.py:103
-#| msgid "Window Title"
 msgid "Legacy Window Titles"
 msgstr "Títulos da janelas legadas"
 
@@ -325,23 +324,20 @@ msgstr "Títulos da janelas legadas"
 msgid "Scaling Factor"
 msgstr "Fator de escala"
 
-#: gtweak/tweaks/tweak_group_general.py:22
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Suspender quando a tampa do notebook é fechada"
 
-#: gtweak/tweaks/tweak_group_general.py:46
-msgid "General"
-msgstr "Geral"
-
-#: gtweak/tweaks/tweak_group_general.py:47
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animações"
 
-#: gtweak/tweaks/tweak_group_general.py:49
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Amplificação extra"
 
-#: gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -539,35 +535,35 @@ msgstr "Nenhuma extensão instalada"
 msgid "Browse in Software"
 msgstr "Navegar no Software"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "Baixando extensões"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "Erro ao carregar extensão"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "A extensão não oferece suporte a esta versão do shell"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "Erro de extensão desconhecida"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "Atualizando"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "Erro"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "Atualizar"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "Extensões"
 
@@ -632,7 +628,6 @@ msgid "Right"
 msgstr "Direita"
 
 #: gtweak/tweaks/tweak_group_title_bar.py:108
-#| msgid "Window Title"
 msgid "Window Titlebars"
 msgstr "Barras de título da janela"
 
@@ -673,26 +668,26 @@ msgstr "Menu de aplicativos"
 msgid "Top Bar"
 msgstr "Barra superior"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Battery Percentage"
-msgstr "Percentagem da bateria"
-
 #. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Activities Overview Hot Corner"
 msgstr "Canto ativo do panorama de atividades"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Battery Percentage"
+msgstr "Percentagem da bateria"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Relógio"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:65
-msgid "Date"
-msgstr "Data"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Weekday"
 msgstr "Dia de semana"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:66
+msgid "Date"
+msgstr "Data"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Seconds"
@@ -722,7 +717,6 @@ msgid "Windows are focused when they are clicked."
 msgstr "Janelas obtêm foco quando elas são clicadas."
 
 #: gtweak/tweaks/tweak_group_windows.py:62
-#| msgid "Focus Mode"
 msgid "Focus on Hover"
 msgstr "Foco ao flutuar sobre"
 
@@ -879,23 +873,29 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(padrão)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "Alterações de configuração requerem reinício"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Sua sessão precisa ser reiniciada para que as configurações tenham efeito"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Reiniciar sessão"
+
+#~ msgid "_About"
+#~ msgstr "_Sobre"
+
+#~ msgid "_Quit"
+#~ msgstr "_Sair"
 
 #~ msgid "Power"
 #~ msgstr "Energia"
@@ -1023,9 +1023,6 @@ msgstr "Reiniciar sessão"
 
 #~ msgid "_Help"
 #~ msgstr "_Ajuda"
-
-#~ msgid "_About Tweak Tool"
-#~ msgstr "_Sobre a ferramenta de ajustes"
 
 #~ msgid "The shell must be restarted for changes to take effect"
 #~ msgstr "O shell deve ser reiniciado para que as modificações tenham efeito"
