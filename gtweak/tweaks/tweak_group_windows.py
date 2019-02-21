@@ -206,6 +206,8 @@ TWEAK_GROUPS = [
         # https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
         GSettingsSwitchTweak(_("Edge Tiling"),"org.gnome.mutter", "edge-tiling",
                         desc=_("When on, windows are tiled when dragged to screen edges.")),
+        GSettingsSwitchTweak(_("Edge Resistance"),"org.gnome.mutter", "edge-resistance",
+                        desc=_("When on, windows snap to edges of other windows and the screen.")),
         GSettingsSwitchTweak(_("Center New Windows"),"org.gnome.mutter", "center-new-windows"),
         GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
         GSettingsComboTweak(_("Window Action Key"),
