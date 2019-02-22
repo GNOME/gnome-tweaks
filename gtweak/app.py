@@ -81,7 +81,7 @@ class GnomeTweaks(Gtk.Application):
         else:
             about_comment = _("GNOME Shell is not running")
 
-        about_comment += "\n" + _("GTK+") + " %d.%d.%d" % \
+        about_comment += "\n" + _("GTK") + " %d.%d.%d" % \
             (Gtk.get_major_version(), Gtk.get_minor_version(), Gtk.get_micro_version())
         aboutdialog.set_comments(about_comment)
 
