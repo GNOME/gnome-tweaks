@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-02 03:05+0000\n"
-"PO-Revision-Date: 2018-09-07 00:03+0300\n"
+"POT-Creation-Date: 2018-12-06 00:03+0000\n"
+"PO-Revision-Date: 2019-02-25 21:55+0300\n"
 "Last-Translator: Stas Solovey <whats_up@tut.by>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -22,14 +22,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+# сокращение, потому как не влазит в под названием значка в меню Обзор и тогда не ясно что это вообще
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "Доп. настройки GNOME"
 
@@ -54,7 +55,7 @@ msgstr ""
 "включать отображение значков на рабочем столе, а также изменять другие "
 "параметры."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
 msgid "Tweaks"
 msgstr "Доп. настройки GNOME"
 
@@ -80,49 +81,50 @@ msgid "Disable All Shell Extensions"
 msgstr "Отключить все расширения"
 
 #: data/shell.ui:17
-msgid "_About"
+msgid "_About Tweaks"
 msgstr "_О приложении"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Завершить"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:55
 msgid "Reset to Defaults"
 msgstr "Сбросить на настройки по умолчанию"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Сбросить все параметры на настройки по умолчанию?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:79
 #, python-format
 msgid "(%s mode)"
 msgstr "(режим %s)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:82
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell не запущен"
 
-#: gtweak/app.py:96
+#: gtweak/app.py:84
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:91
 msgid "Homepage"
 msgstr "Домашняя страница"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Разное"
 
-#: gtweak/tweakview.py:105
+#: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
 msgstr "Поиск настроек…"
+
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+msgid "General"
+msgstr "Основное"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
@@ -321,23 +323,20 @@ msgstr "Устаревшие заголовки окна"
 msgid "Scaling Factor"
 msgstr "Коэффициент масштабирования"
 
-#: gtweak/tweaks/tweak_group_general.py:22
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Режим ожидания при закрытии ноутбука"
 
-#: gtweak/tweaks/tweak_group_general.py:46
-msgid "General"
-msgstr "Основное"
-
-#: gtweak/tweaks/tweak_group_general.py:47
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Анимации"
 
-#: gtweak/tweaks/tweak_group_general.py:49
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Сверх усиление"
 
-#: gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -538,35 +537,35 @@ msgstr "Расширения не установлены"
 msgid "Browse in Software"
 msgstr "Показать в центре приложений"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "Загрузка расширения"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "Ошибка загрузки расширения"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "Расширение не поддерживает данную версию Shell"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "Неизвестная ошибка расширения"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "Обновление"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "Ошибка"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "Обновить"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "Расширения"
 
@@ -669,26 +668,26 @@ msgstr "Меню приложения"
 msgid "Top Bar"
 msgstr "Верхняя панель"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Battery Percentage"
-msgstr "Заряд батареи в процентах"
-
 #. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:61
 msgid "Activities Overview Hot Corner"
 msgstr "Активный угол меню Обзор"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:63
+msgid "Battery Percentage"
+msgstr "Заряд батареи в процентах"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:64
 msgid "Clock"
 msgstr "Часы"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:65
-msgid "Date"
-msgstr "Дата"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:66
 msgid "Weekday"
 msgstr "Будний день"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:66
+msgid "Date"
+msgstr "Дата"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:67
 msgid "Seconds"
@@ -794,7 +793,7 @@ msgstr "Активные края экрана"
 msgid "When on, windows are tiled when dragged to screen edges."
 msgstr ""
 "Включить автоматическое изменение размеров окон при перемещении окон к краям "
-"экрана"
+"экрана."
 
 #: gtweak/tweaks/tweak_group_windows.py:209
 msgid "Center New Windows"
@@ -876,23 +875,29 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(по умолчанию)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "Изменения конфигурации требуют перезагрузки"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Сеанс пользователя необходимо перезапустить, чтобы изменения вступили в силу"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Перезапустить сеанс пользователя"
+
+#~ msgid "_About"
+#~ msgstr "_О приложении"
+
+#~ msgid "_Quit"
+#~ msgstr "_Завершить"
 
 #~ msgid "Power"
 #~ msgstr "Электропитание"
