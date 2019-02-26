@@ -1,11 +1,12 @@
 project('gnome-tweaks',
   version: '3.31.90',
-  meson_version: '>= 0.40.0'
+  meson_version: '>= 0.46.0'
 )
 
 gnome = import('gnome')
 i18n = import('i18n')
-python3 = import('python3')
+python = import('python')
+py_installation = python.find_installation('python3')
 
 prefix = get_option('prefix')
 
@@ -13,7 +14,7 @@ bindir = join_paths(prefix, get_option('bindir'))
 datadir = join_paths(prefix, get_option('datadir'))
 libexecdir = join_paths(prefix, get_option('libexecdir'))
 localedir = join_paths(prefix, get_option('localedir'))
-pythondir = join_paths(prefix, python3.sysconfig_path('purelib'))
+pythondir = join_paths(prefix, py_installation.get_path('purelib'))
 
 pkgdatadir = join_paths(datadir, meson.project_name())
 
