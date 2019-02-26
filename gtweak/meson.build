@@ -11,7 +11,6 @@ configure_file(
   input: 'defs.py.in',
   output: 'defs.py',
   configuration: defs_conf,
-  install: true,
   install_dir: gtweakdir
 )
 
@@ -44,5 +43,5 @@ tweak_sources = [
   'tweaks/tweak_wacom.py',
 ]
 
-install_data(shell_sources, install_dir: gtweakdir)
-install_data(tweak_sources, install_dir: gtweakdir + '/tweaks')
+python3.install_sources(shell_sources, subdir: 'gtweak')
+python3.install_sources(tweak_sources, subdir: join_paths('gtweak', 'tweaks'))
