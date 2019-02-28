@@ -1,14 +1,14 @@
 # Italian translation for gnome-tweak-tool.
-# Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
+# Copyright (C) 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Gianvito Cavasoli <gianvito@gmx.it>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
+# Gianvito Cavasoli <gianvito@gmx.it>, 2011-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-29 22:58+0000\n"
-"PO-Revision-Date: 2018-09-03 12:39+0200\n"
+"POT-Creation-Date: 2019-02-13 17:49+0000\n"
+"PO-Revision-Date: 2019-02-15 11:06+0100\n"
 "Last-Translator: Gianvito Cavasoli <gianvito@gmx.it>\n"
 "Language-Team: Italiano <gnome-it-list@gnome.org>\n"
 "Language: it\n"
@@ -16,14 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 3.30.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Il progetto GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "Personalizzazioni di GNOME"
 
@@ -46,7 +46,7 @@ msgstr ""
 "impostazioni di alimentazione, gestire le applicazioni d'avvio, e abilitare "
 "le icone della scrivania tra le altre impostazioni."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
 msgid "Tweaks"
 msgstr "Personalizzazioni"
 
@@ -72,53 +72,49 @@ msgid "Disable All Shell Extensions"
 msgstr "Disabilita tutte le estensioni della Shell"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "I_nformazioni"
+msgid "_About Tweaks"
+msgstr "I_nformazioni su Personalizzazioni"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Esci"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:55
 msgid "Reset to Defaults"
 msgstr "Ripristina predefinite"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:56
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Ripristinare tutte le personalizzazioni allo stato originale predefinito?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:77 gtweak/app.py:79
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:79
 #, python-format
 msgid "(%s mode)"
 msgstr "(modalità %s)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:82
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell non è in esecuzione"
 
-#: gtweak/app.py:96
+#: gtweak/app.py:84
 msgid "GTK+"
 msgstr "GTK+"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:91
 msgid "Homepage"
 msgstr "Sito web"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Varie"
 
-#: gtweak/tweakview.py:98
+#: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
 msgstr "Cerca personalizzazioni…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Generale"
 
@@ -319,20 +315,20 @@ msgstr "Titoli delle finestre obsolete"
 msgid "Scaling Factor"
 msgstr "Fattore di scala"
 
-#: gtweak/tweaks/tweak_group_general.py:25
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Sospendi quando il coperchio del portatile è chiuso"
 
-#: gtweak/tweaks/tweak_group_general.py:51
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animazioni"
 
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:54
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Ultra amplificazione"
 
-#: gtweak/tweaks/tweak_group_general.py:55
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -533,35 +529,35 @@ msgstr "Nessuna estensione installata"
 msgid "Browse in Software"
 msgstr "Sfoglia in Software"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "Scaricamento estensione"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "Errore nel caricamento dell'estensione"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "L'estensione non supporta la versione della shell"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "Errore sconosciuto dell'estensione"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "Aggiornamento"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "Errore"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "Aggiorna"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "Estensioni"
 
@@ -872,19 +868,19 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predefinito)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "Le modifiche di configurazione richiedono il riavvio"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "La sessione richiede di essere riavviata per applicare le impostazioni"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Riavvia sessione"
