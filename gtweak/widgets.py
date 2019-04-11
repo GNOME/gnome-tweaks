@@ -158,7 +158,7 @@ class _GSettingsTweak(Tweak):
         self._extra_info = None
 
         if resettable_to_default:
-            SchemaList.insert(key_name, schema_name)
+            SchemaList.insert(key_name, schema_id or schema_name)
 
         if 'uid' not in options:
             options['uid'] = key_name
@@ -496,8 +496,8 @@ def build_gsettings_list_store(values):
 
 
 class GSettingsTweakComboRow(Adw.ComboRow, _GSettingsTweak, _DependableMixin):
-    def __init__(self, title, schema_name, key_name, key_options=None, **options):
-        _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
+    def __init__(self, title, schema_name, key_name, key_options=None, schema_id=None, **options):
+        _GSettingsTweak.__init__(self, title, schema_name, key_name, schema_id=schema_id, **options)
         Adw.ComboRow.__init__(self, title=title)
 
         if key_options is not None:
@@ -516,9 +516,6 @@ class GSettingsTweakComboRow(Adw.ComboRow, _GSettingsTweak, _DependableMixin):
 
         self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
         self._update_combo_for_setting()
-
-        self.set_expression(Gtk.PropertyExpression.new(TweakListStoreItem, None, "title"))
-        self.connect('notify::selected-item', self._on_combo_changed)
 
         self.set_expression(Gtk.PropertyExpression.new(TweakListStoreItem, None, "title"))
         self.connect('notify::selected-item', self._on_combo_changed)

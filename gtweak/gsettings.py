@@ -155,9 +155,15 @@ class GSettingsSetting(Gio.Settings):
         return variant.get_type_string() == "as"
 
     def schema_get_summary(self, key):
+        if key not in self._schema._schema:
+            return None
+
         return self._schema._schema[key]["summary"]
 
     def schema_get_description(self, key):
+        if key not in self._schema._schema:
+            return None
+
         return self._schema._schema[key]["description"]
 
     def schema_get_all(self, key):

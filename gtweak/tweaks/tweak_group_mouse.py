@@ -51,17 +51,14 @@ class ClickMethod(GSettingsSwitchTweakValue):
 
 class PointerAccelProfile(GSettingsSwitchTweakValue):
 
-    def __init__(self, **options):
-        title = _("Touchpad Acceleration")
-        desc = _("Turning acceleration off can allow faster and more precise movements, but can also make the touchpad more difficult to use.")
-
+    def __init__(self, title, description, peripheral_type, **options):
         GSettingsSwitchTweakValue.__init__(self,
                                            title=title,
                                            schema_name="org.gnome.desktop.peripherals",
-                                           schema_child_name="touchpad",
-                                           schema_id="org.gnome.desktop.peripherals.touchpad",
+                                           schema_id=f"org.gnome.desktop.peripherals.{peripheral_type}",
+                                           schema_child_name=peripheral_type,
                                            key_name="accel-profile",
-                                           desc=desc,
+                                           desc=description,
                                            **options)
 
     def get_active(self):
@@ -74,14 +71,34 @@ class PointerAccelProfile(GSettingsSwitchTweakValue):
           self.settings.reset(self.key_name)
 
 
-TWEAK_GROUP = TweakPreferencesPage("mouse", _("Mouse & Touchpad"),
+_tweaks = [
   TweakPreferencesGroup(_("Mouse"), "mouse",
     GSettingsTweakSwitchRow(_("Middle Click Paste"),
                          "org.gnome.desktop.interface",
                          "gtk-enable-primary-paste"),
   ),
   TweakPreferencesGroup(_("Touchpad"), "touchpad",
-    PointerAccelProfile(),
+    PointerAccelProfile(
+      title=_("Touchpad Acceleration"),
+      description=_("Turning acceleration off can allow faster and more precise movements, but can also make the touchpad more difficult to use."),
+      peripheral_type="touchpad",
+    ),
     ClickMethod(),
   ),
-)
+  TweakPreferencesGroup(_("Pointing Stick"), "pointing-stick",
+    PointerAccelProfile(
+        title=_("Pointing Stick Acceleration"),
+        description=_("Turning acceleration off can allow faster and more precise movements, but can also make the pointing stick more difficult to use."),
+        peripheral_type="pointingstick",
+    ),
+    GSettingsTweakComboRow(
+        title=_("Scrolling Method"),
+        schema_name="org.gnome.desktop.peripherals",
+        schema_child_name="pointingstick",
+        schema_id="org.gnome.desktop.peripherals.pointingstick",
+        key_name="scroll-method",
+    ),
+  ),
+]
+
+TWEAK_GROUP = TweakPreferencesPage("mouse", _("Mouse & Touchpad"), *_tweaks)
