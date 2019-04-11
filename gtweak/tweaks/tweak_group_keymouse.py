@@ -391,5 +391,10 @@ TWEAK_GROUPS = [
                              schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
         Title(_("Mouse Click Emulation"), _("Mouse Click Emulation"), top=True),
         ClickMethod(),
+        Title(_("Pointing stick"), ""),
+        GSettingsComboEnumTweak(_("Acceleration Profile"),
+                                "org.gnome.desktop.peripherals.pointingstick",
+                                "accel-profile",
+                                schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
         ),
 ]
