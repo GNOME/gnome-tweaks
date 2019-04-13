@@ -396,5 +396,9 @@ TWEAK_GROUPS = [
                                 "org.gnome.desktop.peripherals.pointingstick",
                                 "accel-profile",
                                 schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
+        GSettingsComboEnumTweak(_("Scrolling Method"),
+                                "org.gnome.desktop.peripherals.pointingstick",
+                                "scroll-method",
+                                schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
         ),
 ]
