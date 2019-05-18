@@ -29,6 +29,7 @@ class GnomeTweaks(Gtk.Application):
             model = TweakModel()
             self.win = Window(self, model)
             self.win.show_all()
+            self.win.back_button.props.visible = False
         self.win.present()
 
     def do_startup(self):
