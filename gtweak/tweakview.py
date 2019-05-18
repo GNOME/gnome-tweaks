@@ -4,7 +4,7 @@
 
 import os.path
 
-from gi.repository import Gtk, Gdk, Gio
+from gi.repository import Gtk, Gdk, Gio, Handy, GObject
 import gtweak
 import gtweak.tweakmodel
 from gtweak.tweakmodel import string_for_search
@@ -16,24 +16,40 @@ class Window(Gtk.ApplicationWindow):
         Gtk.ApplicationWindow.__init__(self,
                                        application=app,
                                        show_menubar=False)
-        self.set_size_request(950, 700)
+        self.set_size_request(-1, 700)
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_icon_name("org.gnome.tweaks")
 
         self.hsize_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
 
-        main_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL)
+        self.main_box = Handy.Leaflet()
+        self.main_box.set_mode_transition_type(Handy.LeafletModeTransitionType.SLIDE)
+        self.main_box.set_child_transition_type(Handy.LeafletChildTransitionType.SLIDE)
+
         left_box = self.sidebar()
         right_box = self.main_content()
+        right_box.props.hexpand = True
         separator = Gtk.Separator(orientation=Gtk.Orientation.VERTICAL)
 
         self.menu_btn = Gtk.MenuButton()
         titlebar = self.titlebar()
+        self.main_box.bind_property("visible-child-name", titlebar, "visible-child-name", GObject.BindingFlags.SYNC_CREATE)
         self.set_titlebar(titlebar)
+        self._update_decorations()
 
-        main_box.pack_start(left_box, False, False, 0)
-        main_box.pack_start(separator, False, False, 0)
-        main_box.pack_start(right_box, True, True, 0)
+        self.main_box.add(left_box)
+        self.main_box.child_set(left_box, name="sidebar")
+        self.main_box.add(separator)
+        self.main_box.add(right_box)
+        self.main_box.child_set(right_box, name="content")
+
+        start_pane_size_group = Gtk.SizeGroup(Gtk.SizeGroupMode.HORIZONTAL)
+        start_pane_size_group.add_widget(left_box)
+        start_pane_size_group.add_widget(self._left_header)
+
+        end_pane_size_group = Gtk.SizeGroup(Gtk.SizeGroupMode.HORIZONTAL)
+        end_pane_size_group.add_widget(right_box)
+        end_pane_size_group.add_widget(self._right_header)
 
         self.load_css()
         self._model = model
@@ -45,16 +61,21 @@ class Window(Gtk.ApplicationWindow):
 
         self.connect("key-press-event", self._on_key_press)
         self.connect_after("key-press-event", self._after_key_press)
-        self.add(main_box)
+        self.add(self.main_box)
 
     def titlebar(self):
 
-        header = Gtk.Box()
+        header = Handy.Leaflet()
+        header.set_mode_transition_type(Handy.LeafletModeTransitionType.SLIDE)
+        header.set_child_transition_type(Handy.LeafletChildTransitionType.SLIDE)
+        header.connect("notify::visible-child", self._update_decorations)
+        header.connect("notify::fold", self._update_decorations)
 
         left_header = Gtk.HeaderBar()
         left_header.props.show_close_button = True
         right_header = Gtk.HeaderBar()
         right_header.props.show_close_button = True
+        right_header.props.hexpand = True
 
         self._left_header = left_header
         self._right_header = right_header
@@ -64,13 +85,16 @@ class Window(Gtk.ApplicationWindow):
         right_header.get_style_context().add_class("titlebar")
         right_header.get_style_context().add_class("tweak-titlebar-right")
 
-        self._update_decorations(Gtk.Settings.get_default(), None)
-
         self._group_titlebar_widget = None
 
         self.title = Gtk.Label(label="")
         self.title.get_style_context().add_class("title")
         right_header.set_custom_title(self.title)
+
+        self.back_button = Gtk.Button.new_from_icon_name("go-previous-symbolic", 1)
+        self.back_button.connect("clicked", self._on_back_clicked)
+        header.bind_property("folded", self.back_button, "visible")
+        right_header.pack_start(self.back_button)
 
         icon = Gtk.Image()
         icon.set_from_icon_name("edit-find-symbolic", Gtk.IconSize.MENU)
@@ -97,9 +121,15 @@ class Window(Gtk.ApplicationWindow):
         self.menu_btn.set_menu_model(appmenu)
         left_header.pack_end(self.menu_btn)
 
-        header.pack_start(left_header, False, False, 0)
-        header.pack_start(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL), False, False, 0)
-        header.pack_start(right_header, True, True, 0)
+        header.add(left_header)
+        header.child_set(left_header, name="sidebar")
+        header.add(Gtk.Separator(orientation=Gtk.Orientation.VERTICAL))
+        header.add(right_header)
+        header.child_set(right_header, name="content")
+
+        self.header_group = Handy.HeaderGroup()
+        self.header_group.add_header_bar(left_header)
+        self.header_group.add_header_bar(right_header)
 
         self.hsize_group.add_widget(left_header)
 
@@ -136,6 +166,7 @@ class Window(Gtk.ApplicationWindow):
 
     def main_content(self):
         right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        right_box.set_size_request(750, -1)
 
         self.stack = Gtk.Stack()
         self.stack.get_style_context().add_class("main-container")
@@ -190,14 +221,12 @@ class Window(Gtk.ApplicationWindow):
         if before and not row.get_header():
             row.set_header(Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
 
-    def _update_decorations(self, settings, pspec):
-        layout_desc = settings.props.gtk_decoration_layout
-        tokens = layout_desc.split(":", 1)
-        if len(tokens) > 1:
-            self._right_header.props.decoration_layout = ":" + tokens[1]
+    def _update_decorations(self, *_):
+        header = self.get_titlebar()
+        if header.props.folded:
+            self.header_group.set_focus(header.get_visible_child())
         else:
-            self._right_header.props.decoration_layout = ""
-        self._left_header.props.decoration_layout = tokens[0]
+            self.header_group.set_focus(None)
 
     def _after_key_press(self, widget, event):
         if not self.button.get_active() or not self.entry.is_focus():
@@ -261,6 +290,7 @@ class Window(Gtk.ApplicationWindow):
             self._group_titlebar_widget = tweakgroup.titlebar_widget
             if self._group_titlebar_widget:
                 self._right_header.pack_end(self._group_titlebar_widget)
+            self.main_box.set_visible_child_name("content")
 
     def _on_find_toggled(self, btn):
         if self.searchbar.get_search_mode():
@@ -269,6 +299,9 @@ class Window(Gtk.ApplicationWindow):
         else:
             self.searchbar.set_search_mode(True)
             self.entry.grab_focus()
+
+    def _on_back_clicked(self, *_):
+        self.main_box.set_visible_child_name("sidebar")
 
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
