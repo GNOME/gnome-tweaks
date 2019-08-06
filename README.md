@@ -21,12 +21,13 @@ RUNTIME DEPENDENCIES
   - GLib (>= 2.58)
   - GTK+ 3 (>= 3.12)
   - gnome-desktop (>= 3.30)
+  - libhandy
   - libsoup
   - libnotify
   - Pango
 
 * GSettings Schemas from:
-  - gsettings-desktop-schemas (>= 3.28)
+  - gsettings-desktop-schemas (>= 3.33.0)
   - gnome-shell (>= 3.24)
   - mutter
 
