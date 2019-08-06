@@ -12,7 +12,6 @@ _shell_loaded = _shell is not None
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Top Bar"),
-        # Requires patch from https://bugzilla.gnome.org/688320
         GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Battery Percentage"),"org.gnome.desktop.interface", "show-battery-percentage", loaded=_shell_loaded),
         Title(_("Clock"),"", loaded=_shell_loaded),
