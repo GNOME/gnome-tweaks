@@ -33,7 +33,6 @@ class Window(Gtk.ApplicationWindow):
 
         self.menu_btn = Gtk.MenuButton()
         titlebar = self.titlebar()
-        self.main_box.bind_property("visible-child-name", titlebar, "visible-child-name", GObject.BindingFlags.SYNC_CREATE)
         self.set_titlebar(titlebar)
         self._update_decorations()
 
@@ -42,6 +41,9 @@ class Window(Gtk.ApplicationWindow):
         self.main_box.add(separator)
         self.main_box.add(right_box)
         self.main_box.child_set(right_box, name="content")
+
+        self.main_box.set_visible_child_name("sidebar")
+        self.main_box.bind_property("visible-child-name", titlebar, "visible-child-name", GObject.BindingFlags.SYNC_CREATE)
 
         start_pane_size_group = Gtk.SizeGroup(Gtk.SizeGroupMode.HORIZONTAL)
         start_pane_size_group.add_widget(left_box)
