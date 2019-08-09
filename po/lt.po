@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lithuanian-gnome tweak tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-12-06 00:03+0000\n"
-"PO-Revision-Date: 2019-02-09 17:32+0200\n"
+"POT-Creation-Date: 2019-08-04 22:40+0000\n"
+"PO-Revision-Date: 2019-08-09 13:27+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -19,8 +19,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Gtranslator 3.30.1\n"
+"%100<10 || n%100>=20) ? 1 : 2)\n"
+"X-Generator: Gtranslator 3.32.1\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
@@ -51,14 +51,9 @@ msgstr ""
 "valdymo nustatymus, tvarkyti paleidžiamas programas, įjungti darbalaukio "
 "piktogramas ir kt."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
 msgid "Tweaks"
 msgstr "Reguliavimai"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
@@ -77,7 +72,6 @@ msgid "Disable All Shell Extensions"
 msgstr "Išjungti visus apvalkalo plėtinius"
 
 #: data/shell.ui:17
-#| msgid "Tweaks"
 msgid "_About Tweaks"
 msgstr "_Apie reguliavimus"
 
@@ -103,8 +97,9 @@ msgid "GNOME Shell is not running"
 msgstr "GNOME apvalkalas nepaleistas"
 
 #: gtweak/app.py:84
-msgid "GTK+"
-msgstr "GTK+"
+#| msgid "GTK+"
+msgid "GTK"
+msgstr "GTK"
 
 #: gtweak/app.py:91
 msgid "Homepage"
@@ -447,7 +442,7 @@ msgid "Additional Layout Options"
 msgstr "Papildomos išdėstymo parinktys"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "Pelės paspaudimo emuliavimas"
 
@@ -507,19 +502,19 @@ msgstr "Spartinimo profilis"
 msgid "Pointer Location"
 msgstr "Žymiklio vieta"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Paspauskite Vald klavišą žymikliui paryškinti."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Įdėjimas viduriniuoju paspaudimu"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Jutiklinis kilimėlis"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Išjungti rašant"
 
@@ -654,44 +649,40 @@ msgstr "Išdidinti"
 msgid "Minimize"
 msgstr "Sumažinti"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Programos meniu"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Viršutinė juosta"
 
 #. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Activities Overview Hot Corner"
 msgstr "Veiklų apžvalgos karštasis kampas"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Battery Percentage"
 msgstr "Baterijos procentas"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Clock"
 msgstr "Laikrodis"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Weekday"
 msgstr "Savaitės diena"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Date"
 msgstr "Data"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Seconds"
 msgstr "Sekundes"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Calendar"
 msgstr "Kalendorius"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:23
 msgid "Week Numbers"
 msgstr "Savaičių numeriai"
 
@@ -883,6 +874,12 @@ msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti seansą"
 #: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Paleisti seansą iš naujo"
+
+#~ msgid "org.gnome.tweaks"
+#~ msgstr "org.gnome.tweaks"
+
+#~ msgid "Application Menu"
+#~ msgstr "Programos meniu"
 
 #~ msgid "_About"
 #~ msgstr "_Apie"
