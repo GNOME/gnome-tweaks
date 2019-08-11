@@ -8,8 +8,8 @@
 msgid ""
 msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-02-21 16:46+0000\n"
-"PO-Revision-Date: 2019-02-21 19:00+0100\n"
+"POT-Creation-Date: 2019-08-04 22:40+0000\n"
+"PO-Revision-Date: 2019-08-11 10:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -17,7 +17,6 @@ msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: OmegaT 4.1.5\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
@@ -46,11 +45,6 @@ msgstr "Beste ezarpen batzuen artean gaiak eta hedapenak instala eta kudea ditza
 #: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
 msgid "Tweaks"
 msgstr "Doikuntzak"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
@@ -92,8 +86,8 @@ msgid "GNOME Shell is not running"
 msgstr "GNOME Shell ez da exekutatzen ari"
 
 #: gtweak/app.py:84
-msgid "GTK+"
-msgstr "GTK+"
+msgid "GTK"
+msgstr "GTK"
 
 #: gtweak/app.py:91
 msgid "Homepage"
@@ -105,7 +99,7 @@ msgstr "Bestelakoak"
 
 #: gtweak/tweakview.py:111
 msgid "Search Tweaks…"
-msgstr "Bilatu doikuntzak..."
+msgstr "Bilatu doikuntzak…"
 
 #. "General" needs to be first item in sidebar
 #: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
@@ -131,7 +125,7 @@ msgstr "Kurtsorea"
 
 #: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Shell"
-msgstr "Shell-a"
+msgstr "Shell"
 
 #: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Install custom or user themes for gnome-shell"
@@ -428,7 +422,7 @@ msgid "Additional Layout Options"
 msgstr "Diseinu-aukera gehiago"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "Saguaren klikaren emulazioa"
 
@@ -484,19 +478,19 @@ msgstr "Azelerazio-profila"
 msgid "Pointer Location"
 msgstr "Erakuslearen kokalekua"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Sakatu Ctrl tekla erakuslea nabarmentzeko."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Erdiko klikaren bidezko itsastea"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Ukipen-teklatua"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Desgaitu idaztean"
 
@@ -551,7 +545,7 @@ msgstr "Abioko aplikazioak"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
-msgstr "Bilatu aplikazioak..."
+msgstr "Bilatu aplikazioak…"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
 #: gtweak/tweaks/tweak_group_startup.py:58
@@ -564,7 +558,7 @@ msgstr "exekutatzen"
 
 #: gtweak/tweaks/tweak_group_startup.py:87
 msgid "_Close"
-msgstr "_Itxi"
+msgstr "It_xi"
 
 #: gtweak/tweaks/tweak_group_startup.py:88
 msgid "_Add"
@@ -590,13 +584,13 @@ msgstr "Kokapena"
 #. interface is flipped
 #: gtweak/tweaks/tweak_group_title_bar.py:71
 msgid "Left"
-msgstr "Ezkerrean"
+msgstr "Ezkerrera"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
 #: gtweak/tweaks/tweak_group_title_bar.py:77
 msgid "Right"
-msgstr "Eskuinean"
+msgstr "Eskuinera"
 
 #: gtweak/tweaks/tweak_group_title_bar.py:108
 msgid "Window Titlebars"
@@ -631,44 +625,40 @@ msgstr "Maximizatu"
 msgid "Minimize"
 msgstr "Minimizatu"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Aplikazioen menua"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Goiko barra"
 
 #. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Activities Overview Hot Corner"
 msgstr "Jardueren ikuspegi orokorraren izkina beroa"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Battery Percentage"
 msgstr "Bateriaren ehunekoa"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Clock"
 msgstr "Ordularia"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Weekday"
 msgstr "Asteguna"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Date"
 msgstr "Data"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Seconds"
 msgstr "Segundoak"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Calendar"
 msgstr "Egutegia"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:23
 msgid "Week Numbers"
 msgstr "Asteko zenbakiak"
 
@@ -851,3 +841,9 @@ msgstr "Zure saioa berrabiarazi behar da ezarpenek eragina jasotzeko"
 #: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Berrabiarazi saioa"
+
+#~ msgid "org.gnome.tweaks"
+#~ msgstr "org.gnome.tweaks"
+
+#~ msgid "Application Menu"
+#~ msgstr "Aplikazioen menua"
