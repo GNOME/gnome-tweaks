@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-12-06 00:03+0000\n"
+"POT-Creation-Date: 2019-08-16 07:52+0000\n"
 "PO-Revision-Date: 2019-02-18 19:32+0100\n"
 "Last-Translator: Gil Forcada Codinachs <gil.gnome@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -52,14 +52,9 @@ msgstr ""
 "gestionar les aplicacions d'inici i habilitar les icones d'escriptori entre "
 "d'altres."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
 msgid "Tweaks"
 msgstr "Ajustaments"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
@@ -81,32 +76,32 @@ msgstr "Inhabilita totes les extensions del Shell"
 msgid "_About Tweaks"
 msgstr "_Quant a l'Ajustaments"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:56
 msgid "Reset to Defaults"
 msgstr "Reinicialitza als valors per defecte"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:57
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Voleu reiniciar tots els paràmetres d'ajustament a l'estat original?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:78 gtweak/app.py:80
 msgid "GNOME Shell"
 msgstr "El GNOME Shell"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:80
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s mode)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:83
 msgid "GNOME Shell is not running"
 msgstr "El GNOME Shell no s'està executant"
 
-#: gtweak/app.py:84
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:85
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:92
 msgid "Homepage"
 msgstr "Pàgina d'inici"
 
@@ -114,12 +109,12 @@ msgstr "Pàgina d'inici"
 msgid "Miscellaneous"
 msgstr "Miscel·lània"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:141
 msgid "Search Tweaks…"
 msgstr "Cerca d'ajustaments..."
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "General"
 
@@ -447,7 +442,7 @@ msgid "Additional Layout Options"
 msgstr "Opcions de disposició addicionals"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "Emulació de clic del ratolí"
 
@@ -460,8 +455,8 @@ msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
 msgstr ""
-"Feu clic al ratolí tàctil amb dos dits per fer clic dret i amb tres dits "
-"per fer clic al mig."
+"Feu clic al ratolí tàctil amb dos dits per fer clic dret i amb tres dits per "
+"fer clic al mig."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:297
 msgid "Area"
@@ -472,8 +467,8 @@ msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
 msgstr ""
-"Feu clic a la part inferior dreta ratolí tàctil per fer clic dret i al mig de la part "
-"inferior per fer clic al mig."
+"Feu clic a la part inferior dreta ratolí tàctil per fer clic dret i al mig "
+"de la part inferior per fer clic al mig."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:325
 msgid "Don’t use mouse click emulation."
@@ -508,19 +503,19 @@ msgstr "Perfil d'acceleració"
 msgid "Pointer Location"
 msgstr "Ubicació del punter"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Prem la tecla Ctrl per ressaltar el punter. "
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Enganxa amb el botó del mig"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Ratolí tàctil"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Desactiva en escriure"
 
@@ -656,44 +651,39 @@ msgstr "Maximitza"
 msgid "Minimize"
 msgstr "Minimitza"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Menú d'aplicacions"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Barra superior"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Corner actiu de la vista general d'activitats"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Percentatge de la bateria"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Rellotge"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Dia feiner"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Data"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Segons"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Calendari"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Número de la setmana"
 
@@ -787,7 +777,9 @@ msgstr "Mosaic a les vores"
 
 #: gtweak/tweaks/tweak_group_windows.py:208
 msgid "When on, windows are tiled when dragged to screen edges."
-msgstr "Quan està activat, les finestres es posen en mosaic a l'arrossegar-les a les vores de la pantalla."
+msgstr ""
+"Quan està activat, les finestres es posen en mosaic a l'arrossegar-les a les "
+"vores de la pantalla."
 
 #: gtweak/tweaks/tweak_group_windows.py:209
 msgid "Center New Windows"
@@ -887,3 +879,8 @@ msgstr "S'ha de reiniciar la sessió perquè els canvis tinguin efecte"
 msgid "Restart Session"
 msgstr "Reinicia la sessió"
 
+#~ msgid "org.gnome.tweaks"
+#~ msgstr "org.gnome.tweaks"
+
+#~ msgid "Application Menu"
+#~ msgstr "Menú d'aplicacions"
