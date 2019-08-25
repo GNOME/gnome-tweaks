@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-02-24 21:51+0000\n"
-"PO-Revision-Date: 2019-03-25 18:13+0100\n"
+"POT-Creation-Date: 2019-08-22 11:33+0000\n"
+"PO-Revision-Date: 2019-08-25 10:32+0200\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -51,14 +51,9 @@ msgstr ""
 "paramètres d’alimentation, gérer les applications au démarrage et activer "
 "les icônes du bureau entre autres."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
 msgid "Tweaks"
 msgstr "Ajustements"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
@@ -79,32 +74,32 @@ msgstr "Désactiver toutes les extensions du shell"
 msgid "_About Tweaks"
 msgstr "À _propos d’Ajustements"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:56
 msgid "Reset to Defaults"
 msgstr "Réinitialiser aux valeurs par défaut"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:57
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Réinitialiser tous les ajustements aux valeurs par défaut ?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:78 gtweak/app.py:80
 msgid "GNOME Shell"
 msgstr "Shell de GNOME"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:80
 #, python-format
 msgid "(%s mode)"
 msgstr "(mode %s)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:83
 msgid "GNOME Shell is not running"
 msgstr "Le shell de GNOME n’est pas actif"
 
-#: gtweak/app.py:84
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:85
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:92
 msgid "Homepage"
 msgstr "Page d’accueil"
 
@@ -112,12 +107,12 @@ msgstr "Page d’accueil"
 msgid "Miscellaneous"
 msgstr "Divers"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:141
 msgid "Search Tweaks…"
 msgstr "Recherche d’ajustements…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Général"
 
@@ -442,7 +437,7 @@ msgid "Additional Layout Options"
 msgstr "Options supplémentaires d’agencement"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "Émulation du clic de souris"
 
@@ -503,19 +498,19 @@ msgstr "Profil d’accélération"
 msgid "Pointer Location"
 msgstr "Emplacement du pointeur"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Appuyez sur la touche Ctrl pour mettre en évidence le pointeur."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Coller avec le clic du milieu"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Pavé tactile"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Désactiver pendant la saisie"
 
@@ -652,44 +647,39 @@ msgstr "Maximiser"
 msgid "Minimize"
 msgstr "Minimiser"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Menu de l’application"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Barre supérieure"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Coin actif pour la vue d’ensemble des activités"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Pourcentage de la batterie"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Horloge"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Jour de semaine"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Date"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Secondes"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Calendrier"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Numéro des semaines"
 
@@ -887,9 +877,3 @@ msgstr ""
 #: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Redémarrer la session"
-
-#~ msgid "_About"
-#~ msgstr "À _propos"
-
-#~ msgid "_Quit"
-#~ msgstr "_Quitter"
