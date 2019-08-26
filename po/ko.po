@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-12-06 00:03+0000\n"
-"PO-Revision-Date: 2019-02-23 17:06+0900\n"
+"POT-Creation-Date: 2019-08-22 11:33+0000\n"
+"PO-Revision-Date: 2019-08-26 15:58+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: 한국어 <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.2.3\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
@@ -43,14 +43,9 @@ msgstr ""
 "여러가지 설정 항목 중 테마와 확장자 설치 및 관리, 전원 설정 관리, 시작 프로그"
 "램 관리, 데스크톱 아이콘 활성화 관리를 다룰 수 있습니다."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
 msgid "Tweaks"
 msgstr "기능 개선"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
@@ -72,32 +67,32 @@ msgstr "모든 쉘 확장 비활성화"
 msgid "_About Tweaks"
 msgstr "기능 개선 정보(_A)"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:56
 msgid "Reset to Defaults"
 msgstr "기본값으로 재설정"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:57
 msgid "Reset all tweak settings to the original default state?"
 msgstr "모든 기능 개선 설정을 초기 기본 상태로 되돌리시겠습니까?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:78 gtweak/app.py:80
 msgid "GNOME Shell"
 msgstr "그놈 쉘"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:80
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s 모드)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:83
 msgid "GNOME Shell is not running"
 msgstr "그놈 쉘 실행 중이 아닙니다"
 
-#: gtweak/app.py:84
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:85
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:92
 msgid "Homepage"
 msgstr "홈페이지"
 
@@ -105,12 +100,12 @@ msgstr "홈페이지"
 msgid "Miscellaneous"
 msgstr "기타"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:141
 msgid "Search Tweaks…"
 msgstr "기능 개선 항목 검색…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "일반"
 
@@ -439,7 +434,7 @@ msgid "Additional Layout Options"
 msgstr "추가 배치 옵션"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "마우스 클릭 흉내"
 
@@ -499,19 +494,19 @@ msgstr "가속 프로파일"
 msgid "Pointer Location"
 msgstr "포인터 위치"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "포인터를 강조 표시하려면 Ctrl 키를 누릅니다."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "가운데 단추를 눌러 붙여넣기"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "터치패드"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "입력 도중 비 활성화"
 
@@ -646,44 +641,39 @@ msgstr "최대화"
 msgid "Minimize"
 msgstr "최소화"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "프로그램 메뉴"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "최상위 표시줄"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "활동 개요 핫 코너"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "배터리 잔량 백분율"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "시계"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "평일"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "날짜"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "초"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "달력"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "주 차 번호"
 
@@ -871,6 +861,12 @@ msgstr "바뀐 설정대로 프로그램이 동작하려면 세션을 다시 시
 #: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "세션 다시 시작"
+
+#~ msgid "org.gnome.tweaks"
+#~ msgstr "org.gnome.tweaks"
+
+#~ msgid "Application Menu"
+#~ msgstr "프로그램 메뉴"
 
 #~ msgid "_About"
 #~ msgstr "정보(_A)"
