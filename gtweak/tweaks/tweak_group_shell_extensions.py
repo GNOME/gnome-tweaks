@@ -88,7 +88,8 @@ class _ShellExtensionTweak(Gtk.ListBoxRow, Tweak):
         self._shell = shell
         state = ext.get("state")
         uuid = ext["uuid"]
-        self._app_id = "user/*/extensions-web/shell-extension/" + uuid.replace('@', '_') + "/*"
+        scope = "user" if ext.get("type") == GnomeShell.EXTENSION_TYPE["PER_USER"] else "system"
+        self._app_id = scope + "/*/*/shell-extension/" + uuid.replace('@', '_') + "/*"
 
         shell._settings.bind("disable-user-extensions", self,
                              "sensitive", Gio.SettingsBindFlags.INVERT_BOOLEAN)
