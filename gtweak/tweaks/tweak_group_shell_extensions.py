@@ -6,6 +6,7 @@ import zipfile
 import tempfile
 import logging
 import json
+from time import sleep
 
 from gi.repository import Gtk
 from gi.repository import GLib
@@ -279,6 +280,32 @@ class ShellExtensionTweakGroup(ListBoxTweakGroup):
 
     def _on_row_activated(self, list, row, user_data):
         row.activate()
+
+def _on_extension_installed(monitor, file, unknown, event):
+    if event.value_nick != 'created' and event.value_nick != 'deleted':
+        return
+    if event.value_nick == 'created': sleep(0.1)
+    # XXX DRY this up
+    shell = GnomeShellFactory().get_shell()
+    sg = build_horizontal_sizegroup()
+    extension_tweaks = []
+    extensions = sorted(list(shell.list_extensions().values()), key=itemgetter("name"))
+    for extension in extensions:
+        try:
+            extension_widget = _ShellExtensionTweak(shell, extension, size_group=sg)
+            extension_tweaks.append(extension_widget)
+        except:
+            logging.warning("Invalid extension", exc_info=True)
+
+    tg = TWEAK_GROUPS[0]
+    for i in tg.get_children(): i.destroy()
+    for i in extension_tweaks: tg.add_tweak_row(i, activatable=True)
+    tg.show_all()
+
+# XXX move this to a better place
+extdir = Gio.file_new_for_path(GnomeShell.EXTENSION_DIR)
+monitor = extdir.monitor_directory(Gio.FileMonitorFlags.NONE)
+con = monitor.connect('changed', _on_extension_installed)
 
 TWEAK_GROUPS = [
         ShellExtensionTweakGroup(),
