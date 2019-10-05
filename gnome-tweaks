@@ -16,7 +16,9 @@ gi.require_version("Handy", "0.0")
 
 import gtweak
 from gtweak.defs import VERSION
+from setproctitle import setproctitle
 
+setproctitle('gnome-tweaks')
 
 if __name__ == '__main__':
     parser = optparse.OptionParser(version=VERSION)
