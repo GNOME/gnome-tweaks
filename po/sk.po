@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-10-08 12:36+0000\n"
-"PO-Revision-Date: 2018-10-27 21:16+0200\n"
+"POT-Creation-Date: 2019-09-25 11:38+0000\n"
+"PO-Revision-Date: 2020-01-20 10:03+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -16,14 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.4\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "Vyladenia prostredia GNOME"
 
@@ -46,14 +46,9 @@ msgstr ""
 "napájania, spravovať aplikácie spúšťané pri štarte systému, povoliť ikony na "
 "pracovnej ploche a mnoho iných nastavení."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
 msgid "Tweaks"
 msgstr "Vyladenia"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 # JK: Preferences prekladame ako nastavenia
 # DK: viem.dal som tam predvolby kvoli tomu ze to su keywords, takze to neuskodi, skor pomoze.vela ludi ma zauzivane slovo predvolby.
@@ -73,55 +68,52 @@ msgid "Disable All Shell Extensions"
 msgstr "Zakázať všetky rozšírenia shellu"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "_O programe"
-
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Ukončiť"
+msgid "_About Tweaks"
+msgstr "_O aplikácii Vyladenia"
 
 # dialog title
-#: gtweak/app.py:67
+#: gtweak/app.py:56
 msgid "Reset to Defaults"
 msgstr "Znovunastavenie predvolených hodnôt"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:57
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Znovunastaviť všetky vylaďovacie nastavenia na pôvodný predvolený stav?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:78 gtweak/app.py:80
 msgid "GNOME Shell"
 msgstr "Shell prostredia GNOME"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:80
 #, python-format
 msgid "(%s mode)"
 msgstr "(režim %s)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:83
 msgid "GNOME Shell is not running"
 msgstr "Shell prostredia GNOME nie je spustený"
 
-#: gtweak/app.py:96
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:85
+#| msgid "GTK+"
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:92
 msgid "Homepage"
 msgstr "Domovská stránka"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
 # placeholder text
-#: gtweak/tweakview.py:98
+#: gtweak/tweakview.py:141
 msgid "Search Tweaks…"
 msgstr "Vyhľadajte vyladenia…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Všeobecné"
 
@@ -321,30 +313,28 @@ msgid "Monospace Text"
 msgstr "Text s pevnou šírkou"
 
 #: gtweak/tweaks/tweak_group_font.py:103
-#, fuzzy
-#| msgid "Window Title"
 msgid "Legacy Window Titles"
-msgstr "Titulok okna"
+msgstr "Pôvodné titulky okien"
 
 # PM: nestačilo by tu jednoducho mierka?
 #: gtweak/tweaks/tweak_group_font.py:105
 msgid "Scaling Factor"
 msgstr "Faktor nastavenia mierky"
 
-#: gtweak/tweaks/tweak_group_general.py:25
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Uspať po zavretí krytu notebooku"
 
-#: gtweak/tweaks/tweak_group_general.py:51
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animácie"
 
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:54
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Nadmerné zosilnenie"
 
-#: gtweak/tweaks/tweak_group_general.py:55
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -451,7 +441,7 @@ msgid "Additional Layout Options"
 msgstr "Dodatočné voľby rozloženia"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "Emulácia kliknutia myšou"
 
@@ -511,19 +501,19 @@ msgstr "Profil zrýchlenia"
 msgid "Pointer Location"
 msgstr "Umiestnenie ukazovateľa"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Stlačením klávesu Ctrl zvýrazníte ukazovateľ."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Prilepenie kliknutím stredného tlačidla"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Zakázať počas písania"
 
@@ -663,44 +653,39 @@ msgstr "Maximalizovať"
 msgid "Minimize"
 msgstr "Minimalizovať"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Ponuka aplikácií"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Horná lišta"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Aktívny roh prehľadu aktivít"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Percento batérie"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Hodiny"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Deň v týždni"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Dátum"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Sekundy"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Kalendár"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Čísla týždňov"
 
@@ -847,9 +832,8 @@ msgstr "Ovládanie displejov"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:97
 #: gtweak/tweaks/tweak_group_workspaces.py:139
-#, fuzzy
 msgid "Workspaces span displays"
-msgstr "Pracovné priestory iba na hlavnom displeji"
+msgstr "Rozsah pracovných priestorov a displejov"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:113
 msgid "Workspaces on primary display only"
@@ -880,22 +864,34 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predvolená)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "Zmeny konfigurácie vyžadujú reštart"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Aby sa prejavili zmeny, musíte reštartovať vašu reláciu"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Reštartovať reláciu"
+
+#~ msgid "org.gnome.tweaks"
+#~ msgstr "org.gnome.tweaks"
+
+#~ msgid "_About"
+#~ msgstr "_O programe"
+
+#~ msgid "_Quit"
+#~ msgstr "_Ukončiť"
+
+#~ msgid "Application Menu"
+#~ msgstr "Ponuka aplikácií"
 
 #~ msgid "Power"
 #~ msgstr "Napájanie"
