@@ -17,7 +17,6 @@ configure_file(
 
 shell_sources = [
   'app.py',
-  'egowrapper.py',
   'gsettings.py',
   'gshellwrapper.py',
   'gtksettings.py',
@@ -35,7 +34,6 @@ tweak_sources = [
   'tweaks/tweak_group_font.py',
   'tweaks/tweak_group_general.py',
   'tweaks/tweak_group_keymouse.py',
-  'tweaks/tweak_group_shell_extensions.py',
   'tweaks/tweak_group_startup.py',
   'tweaks/tweak_group_test.py',
   'tweaks/tweak_group_title_bar.py',
