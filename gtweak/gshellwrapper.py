@@ -56,25 +56,6 @@ class _ShellProxy:
 
 class GnomeShell:
 
-    EXTENSION_STATE = {
-        "ENABLED"       :   1,
-        "DISABLED"      :   2,
-        "ERROR"         :   3,
-        "OUT_OF_DATE"   :   4,
-        "DOWNLOADING"   :   5,
-        "INITIALIZED"   :   6,
-    }
-
-    EXTENSION_TYPE = {
-        "SYSTEM"        :   1,
-        "PER_USER"      :   2
-    }
-
-    DATA_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell")
-    EXTENSION_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions")
-    EXTENSION_ENABLED_KEY = "enabled-extensions"
-    SUPPORTS_EXTENSION_PREFS = True
-
     def __init__(self, shellproxy, shellsettings):
         self._proxy = shellproxy
         self._settings = shellsettings
@@ -91,25 +72,8 @@ class GnomeShell:
     def reload_theme(self):
         self._execute_js('const Main = imports.ui.main; Main.loadTheme();')
 
-    def extension_is_active(self, state, uuid):
-        return state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
-                self._settings.setting_is_in_list(self.EXTENSION_ENABLED_KEY, uuid)
-
-    def enable_extension(self, uuid):
-        self._settings.setting_add_to_list(self.EXTENSION_ENABLED_KEY, uuid)
-
-    def disable_extension(self, uuid):
-        self._settings.setting_remove_from_list(self.EXTENSION_ENABLED_KEY, uuid)
-
     def list_extensions(self):
         return self._proxy.proxy_extensions.ListExtensions()
-
-    def uninstall_extension(self, uuid):
-        return self._proxy.proxy_extensions.UninstallExtension('(s)', uuid)
-
-    def install_remote_extension(self, uuid, reply_handler, error_handler, user_data):
-        self._proxy.proxy_extensions.InstallRemoteExtension('(s)', uuid,
-            result_handler=reply_handler, error_handler=error_handler, user_data=user_data)
 
     @property
     def mode(self):

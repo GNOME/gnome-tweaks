@@ -252,20 +252,6 @@ class SchemaList:
             s.reset(i[0])
 
 @singleton
-class DisableExtension(GObject.GObject):
-
-    __gsignals__ = {
-        "disable-extension": (GObject.SignalFlags.RUN_FIRST, GObject.TYPE_NONE,()),
-    }
-
-    def __init__(self):
-        GObject.GObject.__init__(self)
-
-    def disable(self):
-        self.emit("disable-extension")
-
-
-@singleton
 class XSettingsOverrides:
 
     VARIANT_TYPES = {
