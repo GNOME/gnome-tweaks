@@ -24,7 +24,6 @@ class _ShellProxy:
                             'org.gnome.Shell',
                             None)
 
-        # GNOME Shell > 3.5 added a separate extension interface
         self.proxy_extensions = Gio.DBusProxy.new_sync(
                             d, 0, None,
                             'org.gnome.Shell',
@@ -32,31 +31,19 @@ class _ShellProxy:
                             'org.gnome.Shell.Extensions',
                             None)
 
-        # GNOME Shell > 3.7.2 added the Mode to the DBus API
         val = self.proxy.get_cached_property("Mode")
         if val is not None:
             self._mode = val.unpack()
         else:
-            js = 'global.session_mode'
-            result, output = self.proxy.Eval('(s)', js)
-            if result and output:
-                self._mode = json.loads(output)
-            else:
-                logging.warning("Error getting shell mode via Eval JS")
-                self._mode = "user"
+            logging.warning("Error getting shell mode")
+            self._mode = "user"
 
-        # GNOME Shell > 3.3 added the Version to the DBus API and disabled execute_js
         val = self.proxy.get_cached_property("ShellVersion")
         if val is not None:
             self._version = val.unpack()
         else:
-            js = 'const Config = imports.misc.config; Config.PACKAGE_VERSION'
-            result, output = self.proxy.Eval('(s)', js)
-            if result and output:
-                self._version = json.loads(output)
-            else:
-                logging.critical("Error getting shell version via Eval JS")
-                self._version = "0.0.0"
+            logging.critical("Error getting shell version")
+            self._version = "0.0.0"
 
     @property
     def mode(self):
@@ -85,6 +72,8 @@ class GnomeShell:
 
     DATA_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell")
     EXTENSION_DIR = os.path.join(GLib.get_user_data_dir(), "gnome-shell", "extensions")
+    EXTENSION_ENABLED_KEY = "enabled-extensions"
+    SUPPORTS_EXTENSION_PREFS = True
 
     def __init__(self, shellproxy, shellsettings):
         self._proxy = shellproxy
@@ -102,26 +91,6 @@ class GnomeShell:
     def reload_theme(self):
         self._execute_js('const Main = imports.ui.main; Main.loadTheme();')
 
-    def uninstall_extension(self, uuid):
-        pass
-
-    @property
-    def mode(self):
-        return self._proxy.mode
-
-    @property
-    def version(self):
-        return self._proxy.version
-
-
-class GnomeShell32(GnomeShell):
-
-    EXTENSION_ENABLED_KEY = "enabled-extensions"
-    SUPPORTS_EXTENSION_PREFS = False
-
-    def list_extensions(self):
-        return self._proxy.proxy.ListExtensions()
-
     def extension_is_active(self, state, uuid):
         return state == GnomeShell.EXTENSION_STATE["ENABLED"] and \
                 self._settings.setting_is_in_list(self.EXTENSION_ENABLED_KEY, uuid)
@@ -131,23 +100,6 @@ class GnomeShell32(GnomeShell):
 
     def disable_extension(self, uuid):
         self._settings.setting_remove_from_list(self.EXTENSION_ENABLED_KEY, uuid)
-
-
-class GnomeShell34(GnomeShell32):
-
-    SUPPORTS_EXTENSION_PREFS = True
-
-    def restart(self):
-        logging.warning("Restarting Shell Not Supported")
-
-    def reload_theme(self):
-        logging.warning("Reloading Theme Not Supported")
-
-    def uninstall_extension(self, uuid):
-        return self._proxy.proxy.UninstallExtension('(s)', uuid)
-
-
-class GnomeShell36(GnomeShell34):
 
     def list_extensions(self):
         return self._proxy.proxy_extensions.ListExtensions()
@@ -159,6 +111,14 @@ class GnomeShell36(GnomeShell34):
         self._proxy.proxy_extensions.InstallRemoteExtension('(s)', uuid,
             result_handler=reply_handler, error_handler=error_handler, user_data=user_data)
 
+    @property
+    def mode(self):
+        return self._proxy.mode
+
+    @property
+    def version(self):
+        return self._proxy.version
+
 
 @gtweak.utils.singleton
 class GnomeShellFactory:
@@ -168,16 +128,7 @@ class GnomeShellFactory:
             settings = GSettingsSetting("org.gnome.shell")
             v = list(map(int, proxy.version.split(".")))
 
-            if v >= [3, 5, 0]:
-                self.shell = GnomeShell36(proxy, settings)
-            elif v >= [3, 3, 2]:
-                self.shell = GnomeShell34(proxy, settings)
-            elif v >= [3, 1, 4]:
-                self.shell = GnomeShell32(proxy, settings)
-
-            else:
-                logging.warn("Shell version not supported")
-                self.shell = None
+            self.shell = GnomeShell(proxy, settings)
 
             logging.debug("Shell version: %s", str(v))
         except:
