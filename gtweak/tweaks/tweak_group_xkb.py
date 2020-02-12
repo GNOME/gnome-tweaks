@@ -162,7 +162,8 @@ class TypingTweakGroup(Gtk.Box):
                 for opt in set(self._xkb_info.get_all_option_groups()) - self.XKB_OPTIONS_BLACKLIST:
                     obj = _XkbOption(opt, self._kbdsettings, self._xkb_info)
                     self._option_objects.append(obj)
-                    self.pack_start(obj, False, False, 0)
+                self._option_objects.sort(key=lambda item_desc: item_desc.name)
+                for item in self._option_objects: self.pack_start(item, False, False, 0)
         TweakGroup.__init__(self, _("Typing"), *self._option_objects)
 
         self.connect("destroy", self._on_destroy)
