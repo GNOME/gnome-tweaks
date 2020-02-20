@@ -1,18 +1,18 @@
 # gnome-tweak-tool ja.po.
-# Copyright (C) 2011-2019 Free Software Foundation, Inc.
+# Copyright (C) 2011-2020 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
 # Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011-2017.
 # Hajime Taira <htaira@redhat.com>, 2014.
 # Shinichirou Yamada <yamada_strong_yamada_nice_64bit@yahoo.co.jp>, 2018."
-# sicklylife <translation@sicklylife.jp>, 2019.
+# sicklylife <translation@sicklylife.jp>, 2019-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-09-25 11:38+0000\n"
-"PO-Revision-Date: 2019-09-26 22:00+0900\n"
+"POT-Creation-Date: 2019-12-25 15:36+0000\n"
+"PO-Revision-Date: 2020-02-20 23:00+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -47,7 +47,7 @@ msgstr ""
 "や、スタートアップアプリケーションの管理、デスクトップアイコンの設定、その他"
 "さまざまな設定を行うことができます。"
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:110
 msgid "Tweaks"
 msgstr "Tweaks"
 
@@ -105,12 +105,12 @@ msgstr "ウェブサイト"
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "設定項目を検索…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:202 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "全般"
 
@@ -121,7 +121,7 @@ msgstr "アプリケーション"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
-msgstr "設定変更時にエラー"
+msgstr "設定変更エラー"
 
 #: gtweak/tweaks/tweak_group_appearance.py:94
 msgid "Icons"
@@ -171,16 +171,16 @@ msgstr "テーマを選択"
 #: gtweak/tweaks/tweak_group_appearance.py:254
 #, python-format
 msgid "%s theme updated successfully"
-msgstr "%s のテーマの更新に成功"
+msgstr "%s のテーマを更新しました"
 
 #: gtweak/tweaks/tweak_group_appearance.py:256
 #, python-format
 msgid "%s theme installed successfully"
-msgstr "%s のテーマのインストールに成功"
+msgstr "%s のテーマをインストールしました"
 
 #: gtweak/tweaks/tweak_group_appearance.py:264
 msgid "Error installing theme"
-msgstr "テーマのインストールに失敗"
+msgstr "テーマのインストールに失敗しました"
 
 #. does not look like a valid theme
 #: gtweak/tweaks/tweak_group_appearance.py:269
@@ -526,7 +526,7 @@ msgstr "拡張機能をダウンロードしています"
 
 #: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
-msgstr "拡張機能のロードに失敗しました"
+msgstr "拡張機能の読み込みに失敗しました"
 
 #: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
@@ -868,21 +868,6 @@ msgstr "設定内容を反映させるにはセッションを再起動する必
 msgid "Restart Session"
 msgstr "セッションを再起動"
 
-#~ msgid "org.gnome.tweaks"
-#~ msgstr "org.gnome.tweaks"
-
-#~ msgid "Application Menu"
-#~ msgstr "アプリケーションメニュー"
-
-#~ msgid "_About"
-#~ msgstr "このアプリケーションについて(_A)"
-
-#~ msgid "_Quit"
-#~ msgstr "終了(_Q)"
-
-#~ msgid "Power"
-#~ msgstr "電源"
-
 #~ msgid "Click Method"
 #~ msgstr "クリックメソッド"
 
@@ -900,57 +885,6 @@ msgstr "セッションを再起動"
 #~ "アプリケーション上に変更を反映させるには、そのアプリケーションを再起動する"
 #~ "必要があります"
 
-#~ msgid "Tweak Tool"
-#~ msgstr "Tweak Tool"
-
-#~ msgid "About GNOME Tweak Tool"
-#~ msgstr "このアプリケーションについて"
-
-#~ msgid "GNOME Shell v%s (%s mode)"
-#~ msgstr "GNOME Shell v%s (%s モード)"
-
-#~ msgid "Files"
-#~ msgstr "ファイル"
-
-#~ msgid "Computer"
-#~ msgstr "コンピューター"
-
-#~ msgid "Mode"
-#~ msgstr "モード"
-
-#~ msgid "Lock Screen Location"
-#~ msgstr "ロック画面の画像"
-
-#~ msgid "Enable animations"
-#~ msgstr "アニメーションを有効にする"
-
-#~ msgid "Uninstall Extension"
-#~ msgstr "拡張機能のアンインストール"
-
-#~ msgid "Do you want to uninstall the '%s' extension?"
-#~ msgstr "拡張機能 '%s' をアンインストールしますか。"
-
-#~ msgid "Install Shell Extension"
-#~ msgstr "GNOME Shell 拡張機能をインストール"
-
-#~ msgid "Select an extension"
-#~ msgstr "拡張機能の選択"
-
-#~ msgid "Get more extensions"
-#~ msgstr "他の拡張機能をインストールする"
-
-#~ msgid "%s extension updated successfully"
-#~ msgstr "%s の拡張機能の更新に成功"
-
-#~ msgid "Error installing extension"
-#~ msgstr "拡張機能のインストールに失敗"
-
-#~ msgid "Invalid extension"
-#~ msgstr "無効な拡張機能"
-
-#~ msgid "Workspace Creation"
-#~ msgstr "ワークスペースの作成"
-
 #~ msgid "Dynamic"
 #~ msgstr "自動"
 
@@ -959,9 +893,6 @@ msgstr "セッションを再起動"
 
 #~ msgid "Don't suspend on lid close"
 #~ msgstr "蓋を閉じたときにサスペンドしない"
-
-#~ msgid "Show date"
-#~ msgstr "日付を表示する"
 
 #~ msgid "When Power Button is Pressed"
 #~ msgstr "電源ボタンを押したときの動作"
@@ -978,32 +909,8 @@ msgstr "セッションを再起動"
 #~ msgid "Automatically Raise Windows"
 #~ msgstr "ウィンドウを操作すると自動的にウィンドウを最前面に配置する"
 
-#~ msgid "Key theme"
-#~ msgstr "キーテーマ"
-
-#~ msgid "Switch between overview and desktop"
-#~ msgstr "アクティビティ画面とデスクトップ画面を切り替える"
-
 #~ msgid "Show location of pointer"
 #~ msgstr "ポインターの位置をハイライト表示する"
 
 #~ msgid "Power Button Action"
 #~ msgstr "電源ボタンの挙動"
-
-#~ msgid "Add Application"
-#~ msgstr "アプリケーションを追加"
-
-#~ msgid "Super left"
-#~ msgstr "左 Super"
-
-#~ msgid "Super right"
-#~ msgstr "右 Super"
-
-#~ msgid "Window"
-#~ msgstr "ウィンドウ"
-
-#~ msgid "_Help"
-#~ msgstr "ヘルプ(_H)"
-
-#~ msgid "The shell must be restarted for changes to take effect"
-#~ msgstr "変更を有効にするには、GNOME Shell を再起動する必要があります"
