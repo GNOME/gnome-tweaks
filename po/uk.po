@@ -3,26 +3,27 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Sergiy Gavrylov <sergiovana@bigmir.net>, 2011.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2014, 2015, 2016.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-03-25 19:53+0000\n"
-"PO-Revision-Date: 2019-05-04 17:49+0300\n"
-"Last-Translator: Ducker <lytvyn349@ukr.net>\n"
-"Language-Team: linux.org.ua\n"
+"POT-Creation-Date: 2019-09-25 11:38+0000\n"
+"PO-Revision-Date: 2020-03-12 18:50+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.2.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.03.70\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
-msgstr "The GNOME Project"
+msgstr "Проєкт GNOME"
 
 #: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
 #: gtweak/utils.py:349
@@ -46,7 +47,7 @@ msgstr ""
 "параметри живлення, керувати автозавантаженням програм та вмикати піктограми "
 "робочого столу серед інших параметрів."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
 msgid "Tweaks"
 msgstr "Налаштування"
 
@@ -60,7 +61,7 @@ msgstr ""
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
-msgstr "_Відновити значення за замовчуванням"
+msgstr "_Відновити типові значення"
 
 #: data/shell.ui:11
 msgid "Disable All Shell Extensions"
@@ -70,32 +71,33 @@ msgstr "Вимкнути всі розширення оболонки"
 msgid "_About Tweaks"
 msgstr "_Про програму"
 
-#: gtweak/app.py:55
-msgid "Reset to Defaults"
-msgstr "Відновити значення за замовчуванням"
-
 #: gtweak/app.py:56
+msgid "Reset to Defaults"
+msgstr "Відновити типові значення"
+
+#: gtweak/app.py:57
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Скинути всі налаштування до початкових?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:78 gtweak/app.py:80
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:80
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s mode)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:83
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell не запущено"
 
-#: gtweak/app.py:84
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:85
+#| msgid "GTK+"
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:92
 msgid "Homepage"
 msgstr "Домашня сторінка"
 
@@ -103,12 +105,12 @@ msgstr "Домашня сторінка"
 msgid "Miscellaneous"
 msgstr "Інше"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:141
 msgid "Search Tweaks…"
 msgstr "Пошук налаштувань…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Загальні"
 
@@ -162,7 +164,7 @@ msgstr "Не вдалося перелічити розширення для о�
 
 #: gtweak/tweaks/tweak_group_appearance.py:199
 msgid "<i>Default</i>"
-msgstr "<i>За замовчуванням</i>"
+msgstr "<i>Типове</i>"
 
 #: gtweak/tweaks/tweak_group_appearance.py:205
 msgid "Select a theme"
@@ -185,7 +187,7 @@ msgstr "Помилка встановлення теми"
 #. does not look like a valid theme
 #: gtweak/tweaks/tweak_group_appearance.py:269
 msgid "Invalid theme"
-msgstr "Неправильна тема"
+msgstr "Некоректна тема"
 
 #: gtweak/tweaks/tweak_group_appearance.py:281
 msgid "Appearance"
@@ -217,7 +219,7 @@ msgstr "Зображення"
 #: gtweak/tweaks/tweak_group_appearance.py:295
 #: gtweak/tweaks/tweak_group_appearance.py:300
 msgid "Adjustment"
-msgstr "Припасування"
+msgstr "Коригування"
 
 #: gtweak/tweaks/tweak_group_appearance.py:297
 msgid "Lock Screen"
@@ -249,7 +251,7 @@ msgstr "Мережеві сервери"
 
 #: gtweak/tweaks/tweak_group_desktop.py:25
 msgid "Trash"
-msgstr "Кошик"
+msgstr "Смітник"
 
 #: gtweak/tweaks/tweak_group_desktop.py:26
 msgid "Mounted Volumes"
@@ -285,7 +287,7 @@ msgstr "Субпіксельне (для LCD екранів)"
 
 #: gtweak/tweaks/tweak_group_font.py:68
 msgid "Standard (grayscale)"
-msgstr "Стандартне (градація сірого)"
+msgstr "Стандартне (градації сірого)"
 
 #: gtweak/tweaks/tweak_group_font.py:99
 msgid "Fonts"
@@ -305,7 +307,7 @@ msgstr "Моноширинний текст"
 
 #: gtweak/tweaks/tweak_group_font.py:103
 msgid "Legacy Window Titles"
-msgstr "Заголовки наслідуючих вікон"
+msgstr "Заголовки вікон застарілих програм"
 
 #: gtweak/tweaks/tweak_group_font.py:105
 msgid "Scaling Factor"
@@ -423,7 +425,7 @@ msgstr ""
 "\n"
 "Багато незвичайних символів можна ввести, поєднуючи стандартні. Наприклад, "
 "якщо за клавішею складання йтиме <b>C</b> і <b>o</b> буде виведено <b>©</b>, "
-"натиснувши <b>a</b>, за яким слідує<b>'</b> – <b>á</b>.\n"
+"натиснувши <b>a</b>, за яким слідує <b>'</b> – <b>á</b>.\n"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
@@ -439,7 +441,7 @@ msgid "Additional Layout Options"
 msgstr "Додаткові параметри розкладки"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "Емуляція кнопок миші"
 
@@ -499,19 +501,19 @@ msgstr "Профіль прискорення"
 msgid "Pointer Location"
 msgstr "Розташування курсора"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Натисніть клавішу Ctrl, щоб підсвітити вказівник."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Вставлення за допомогою середньої кнопки миші"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Сенсорна панель"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Вимкнути під час введення тексту"
 
@@ -616,7 +618,7 @@ msgstr "Праворуч"
 
 #: gtweak/tweaks/tweak_group_title_bar.py:108
 msgid "Window Titlebars"
-msgstr "Віконні заголовки"
+msgstr "Заголовки вікон"
 
 #: gtweak/tweaks/tweak_group_title_bar.py:109
 msgid "Titlebar Actions"
@@ -647,44 +649,39 @@ msgstr "Розгорнути"
 msgid "Minimize"
 msgstr "Згорнути"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Меню програм"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Верхня панель"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Гарячий кут огляд діяльності"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Відсоток батареї"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Годинник"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "День тижня"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Дата"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Секунди"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Календар"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Номери тижнів"
 
@@ -865,7 +862,7 @@ msgstr "Wacom"
 #: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
-msgstr "%s <i>(за замовчуванням)</i>"
+msgstr "%s <i>(типове)</i>"
 
 #: gtweak/utils.py:351
 msgid "Configuration changes require restart"
@@ -873,149 +870,8 @@ msgstr "Зміна параметрів потребує перезаванта�
 
 #: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
-msgstr "Необхідно перезапустити сеанс, щоб зміни вступили в силу"
+msgstr "Слід перезапустити сеанс, щоб зміни набули чинності"
 
 #: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "Перезапустити сеанс"
-
-#~ msgid "Tweak Tool"
-#~ msgstr "Засіб налаштування"
-
-#~ msgid "_Quit"
-#~ msgstr "Ви_йти"
-
-#~ msgid "GNOME Shell v%s (%s mode)"
-#~ msgstr "GNOME Shell v%s (режим %s)"
-
-#~ msgid "Power"
-#~ msgstr "Живлення"
-
-#~ msgid "Files"
-#~ msgstr "Файли"
-
-#~ msgid "Computer"
-#~ msgstr "Комп'ютер"
-
-#~ msgid "Mode"
-#~ msgstr "Режим"
-
-#~ msgid "Lock Screen Location"
-#~ msgstr "Адреса блокування екрана"
-
-#~ msgid "Shell theme"
-#~ msgstr "Тема оболонки"
-
-#~ msgid "Enable animations"
-#~ msgstr "Увімкнути анімацію"
-
-#~ msgid "Uninstall Extension"
-#~ msgstr "Вилучити розширення"
-
-#~ msgid "Do you want to uninstall the '%s' extension?"
-#~ msgstr "Бажаєте вилучити розширення «%s»?"
-
-#~ msgid "Install Shell Extension"
-#~ msgstr "Встановити розширення оболонки"
-
-#~ msgid "Select an extension"
-#~ msgstr "Вибрати розширення"
-
-#~ msgid "Get more extensions"
-#~ msgstr "Ще розширення"
-
-#~ msgid "%s extension updated successfully"
-#~ msgstr "Розширення %s успішно оновлено"
-
-#~ msgid "Error installing extension"
-#~ msgstr "Помилка встановлення розширення"
-
-#~ msgid "Invalid extension"
-#~ msgstr "Неправильне розширення"
-
-#~ msgid "Workspace Creation"
-#~ msgstr "Створення робочих просторів"
-
-#~ msgid "Dynamic"
-#~ msgstr "Динамічне"
-
-#~ msgid "Static"
-#~ msgstr "Статичне"
-
-#~ msgid "Don't suspend on lid close"
-#~ msgstr "Не призупиняти систему, коли закрито кришку"
-
-#~ msgid "Show date"
-#~ msgstr "Показати дату"
-
-#~ msgid "When Power Button is Pressed"
-#~ msgstr "Коли натиснено кнопку живлення "
-
-#~ msgid "Action"
-#~ msgstr "Дія"
-
-#~ msgid "When plugged in"
-#~ msgstr "Коли під'єднано"
-
-#~ msgid "Suspend even if an external monitor is plugged in"
-#~ msgstr "Призупиняє роботу, навіть якщо зовнішній монітор під'єднано"
-
-#~ msgid "Automatically Raise Windows"
-#~ msgstr "Автоматично розгортати вікна"
-
-#~ msgid "Key theme"
-#~ msgstr "Ключова тема"
-
-#~ msgid "Switch between overview and desktop"
-#~ msgstr "Перемикання між оглядом і стільницею"
-
-#~ msgid "Show location of pointer"
-#~ msgstr "Показувати місце перебування вказівника"
-
-#~ msgid "Enable dark theme for all applications"
-#~ msgstr "Увімкнути темну тему для всіх програм"
-
-#~ msgid "Enable the dark theme hint for all the applications in the session"
-#~ msgstr "Увімкнути темну тему для всіх програм у цьому сеансі"
-
-#~ msgid "Global Dark Theme"
-#~ msgstr "Загальна темна тема"
-
-#~ msgid "Applications need to be restarted for change to take effect"
-#~ msgstr "Програми потрібно перезапустити, щоб зміни набрали чинності"
-
-#~ msgid "About GNOME Tweak Tool"
-#~ msgstr "Про засіб налаштування GNOME"
-
-#~ msgid "Power Button Action"
-#~ msgstr "Дія кнопки керування живленням"
-
-#~ msgid "Add Application"
-#~ msgstr "Додати програму"
-
-#~ msgid "Window"
-#~ msgstr "Вікно"
-
-#~ msgid "Super left"
-#~ msgstr "Лівий Super"
-
-#~ msgid "Super right"
-#~ msgstr "Правий Super"
-
-#~ msgid "welcome"
-#~ msgstr "ласкаво просимо!"
-
-#~ msgid "Icon theme"
-#~ msgstr "Тема піктограм"
-
-#~ msgid "Keybinding theme"
-#~ msgstr "Тема скорочень"
-
-#~ msgid "The shell may need to be restarted to apply the theme"
-#~ msgstr "Можливо, щоб застосувати тему, потрібно перезавантажити Shell"
-
-#~ msgid "Shell Extensions"
-#~ msgstr "Розширення оболонки"
-
-#~ msgid "File Manager"
-#~ msgstr "Файловий менеджер"
