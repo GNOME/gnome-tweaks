@@ -160,10 +160,15 @@ class ShellThemeTweak(Gtk.Box, Tweak):
             dirs = [os.path.join(d, "themes") for d in GLib.get_system_data_dirs()]
             dirs += [ShellThemeTweak.THEME_DIR]
             dirs += [ShellThemeTweak.LEGACY_THEME_DIR]
+            # add default theme directory since some alternative themes are installed here
+            dirs += [os.path.join(d, "gnome-shell", "theme") for d in GLib.get_system_data_dirs()]
 
             valid = walk_directories(dirs, lambda d:
+                    os.path.exists(os.path.join(d, "gnome-shell.css")) or \
+                    (
                         os.path.exists(os.path.join(d, "gnome-shell")) and \
-                        os.path.exists(os.path.join(d, "gnome-shell", "gnome-shell.css")))
+                        os.path.exists(os.path.join(d, "gnome-shell", "gnome-shell.css"))
+                    ))
             #the default value to reset the shell is an empty string
             valid.extend( ("",) )
             valid = set(valid)
