@@ -42,7 +42,7 @@ class _TestButtonTweak(Gtk.Box, Tweak):
             self.notify_logout()
 
 css_provider = Gtk.CssProvider()
-css_provider.load_from_data("""
+css_provider.load_from_data(b"""
 .list-row.tweak#tweak-test-foo {
         background-color: red;
 }
