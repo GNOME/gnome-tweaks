@@ -2,14 +2,14 @@
 # Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
-# asiersar <asiersar@yahoo.com>, 2011, 2019.
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2014, 2015, 2016.
+# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2011, 2019, 2020.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-04 22:40+0000\n"
-"PO-Revision-Date: 2019-08-11 10:00+0100\n"
+"POT-Creation-Date: 2020-03-28 21:11+0000\n"
+"PO-Revision-Date: 2020-04-07 10:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -42,7 +42,7 @@ msgid ""
 "manage startup applications, and enable desktop icons among other settings."
 msgstr "Beste ezarpen batzuen artean gaiak eta hedapenak instala eta kudea ditzake, energiaren ezarpenak aldatu, abioko aplikazioak kudeatu eta mahaigaineko ikonoak gaitu ditzake."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:110
 msgid "Tweaks"
 msgstr "Doikuntzak"
 
@@ -64,32 +64,32 @@ msgstr "Desgaitu shell-aren hedapen guztiak"
 msgid "_About Tweaks"
 msgstr "Doikuntzak aplikazioari _buruz"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:56
 msgid "Reset to Defaults"
 msgstr "Berrezarri lehenespenera"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:57
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Berrezarri doikuntzaren ezarpen guztiak jatorrizko egoera lehenetsira?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:78 gtweak/app.py:80
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:80
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s modua)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:83
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell ez da exekutatzen ari"
 
-#: gtweak/app.py:84
+#: gtweak/app.py:85
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:92
 msgid "Homepage"
 msgstr "Webgune nagusia"
 
@@ -97,12 +97,12 @@ msgstr "Webgune nagusia"
 msgid "Miscellaneous"
 msgstr "Bestelakoak"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Bilatu doikuntzak…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:202 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Orokorra"
 
@@ -434,7 +434,7 @@ msgstr "Finger"
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
-msgstr "Egin klik ukipen-teklatuan bi hatzekin eskuineko klik egiteko, eta hiru hatzekin erdiko klik egiteko. "
+msgstr "Egin klik ukipen-panelean bi hatzekin eskuineko klik egiteko, eta hiru hatzekin erdiko klik egiteko."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:297
 msgid "Area"
@@ -444,7 +444,7 @@ msgstr "Area"
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
-msgstr "Egin klik ukipen-teklatuaren beheko eskuineko aldean eskuineko klik egiteko, eta beheko erdiko aldean erdiko klik egiteko."
+msgstr "Egin klik ukipen-panelaren beheko eskuineko aldean eskuineko klik egiteko, eta beheko erdiko aldean erdiko klik egiteko."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:325
 msgid "Don’t use mouse click emulation."
@@ -488,7 +488,7 @@ msgstr "Erdiko klikaren bidezko itsastea"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
-msgstr "Ukipen-teklatua"
+msgstr "Ukipen-panela"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
@@ -629,36 +629,35 @@ msgstr "Minimizatu"
 msgid "Top Bar"
 msgstr "Goiko barra"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:16
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Jardueren ikuspegi orokorraren izkina beroa"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:17
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Bateriaren ehunekoa"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Ordularia"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Asteguna"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Data"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Segundoak"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Egutegia"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:23
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Asteko zenbakiak"
 
