@@ -50,6 +50,7 @@ class GnomeTweaks(Gtk.Application):
             model = TweakModel()
             self.win = Window(self, model)
             self.win.show_all()
+        if not self.win.get_titlebar().props.folded:
             self.win.back_button.props.visible = False
         self.win.present()
 
