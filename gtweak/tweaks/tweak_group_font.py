@@ -17,10 +17,10 @@ class FontXSettingsTweak(Gtk.Box, Tweak):
         Tweak.__init__(self, _("Hinting"), _("Antialiasing"))
         
         try:
-            self.settings = GSettingsSetting("org.gnome.settings-daemon.plugins.xsettings")
+            self.settings = GSettingsSetting("org.gnome.desktop.interface")
         except:
             self.settings = None
-            logging.warn("org.gnome.settings-daemon.plugins.xsettings not installed or running")
+            logging.warn("org.gnome.desktop.interface not installed or running")
         
         if not self.settings:
             return
@@ -38,25 +38,25 @@ class FontXSettingsTweak(Gtk.Box, Tweak):
 
         self.btn_full = Gtk.RadioButton.new_from_widget(None)
         self.btn_full.set_label(_("Full"))
-        self.btn_full.set_active(self.settings["hinting"] == "full")
+        self.btn_full.set_active(self.settings["font-hinting"] == "full")
         self.btn_full.connect("toggled", self.on_hint_button_toggled)
         hint_box.pack_start(self.btn_full, False, False, 0)
 
         self.btn_med = Gtk.RadioButton.new_from_widget(self.btn_full)
         self.btn_med.set_label(_("Medium"))
-        self.btn_med.set_active(self.settings["hinting"] == "medium")
+        self.btn_med.set_active(self.settings["font-hinting"] == "medium")
         self.btn_med.connect("toggled", self.on_hint_button_toggled)
         hint_box.pack_start(self.btn_med, False, False, 0)
 
         self.btn_slight = Gtk.RadioButton.new_from_widget(self.btn_full)
         self.btn_slight.set_label(_("Slight"))
-        self.btn_slight.set_active(self.settings["hinting"] == "slight")
+        self.btn_slight.set_active(self.settings["font-hinting"] == "slight")
         self.btn_slight.connect("toggled", self.on_hint_button_toggled)
         hint_box.pack_start(self.btn_slight, False, False, 0)
 
         self.btn_hnone = Gtk.RadioButton.new_from_widget(self.btn_full)
         self.btn_hnone.set_label(_("None"))
-        self.btn_hnone.set_active(self.settings["hinting"] == "none")
+        self.btn_hnone.set_active(self.settings["font-hinting"] == "none")
         self.btn_hnone.connect("toggled", self.on_hint_button_toggled)
         hint_box.pack_start(self.btn_hnone, False, False, 0)
 
@@ -69,40 +69,40 @@ class FontXSettingsTweak(Gtk.Box, Tweak):
 
         self.btn_rgba = Gtk.RadioButton.new_from_widget(None)
         self.btn_rgba.set_label(_("Subpixel (for LCD screens)"))
-        self.btn_rgba.set_active(self.settings["antialiasing"] == "rgba")
+        self.btn_rgba.set_active(self.settings["font-antialiasing"] == "rgba")
         self.btn_rgba.connect("toggled", self.on_aa_button_toggled)
         aa_box.pack_start(self.btn_rgba, False, False, 0)
 
         self.btn_gray = Gtk.RadioButton.new_from_widget(self.btn_rgba)
         self.btn_gray.set_label(_("Standard (grayscale)"))
-        self.btn_gray.set_active(self.settings["antialiasing"] == "grayscale")
+        self.btn_gray.set_active(self.settings["font-antialiasing"] == "grayscale")
         self.btn_gray.connect("toggled", self.on_aa_button_toggled)
         aa_box.pack_start(self.btn_gray, False, False, 0)
 
         self.btn_anone = Gtk.RadioButton.new_from_widget(self.btn_rgba)
         self.btn_anone.set_label(_("None"))
-        self.btn_anone.set_active(self.settings["antialiasing"] == "none")
+        self.btn_anone.set_active(self.settings["font-antialiasing"] == "none")
         self.btn_anone.connect("toggled", self.on_aa_button_toggled)
         aa_box.pack_start(self.btn_anone, False, False, 0)
 
     def on_hint_button_toggled(self, button):
         if self.btn_full.get_active():
-            self.settings["hinting"] ="full"
+            self.settings["font-hinting"] ="full"
         elif self.btn_med.get_active():
-            self.settings["hinting"] = "medium"
+            self.settings["font-hinting"] = "medium"
         elif self.btn_slight.get_active():
-            self.settings["hinting"] = "slight"
+            self.settings["font-hinting"] = "slight"
         else:
             print("none")
-            self.settings["hinting"] = "none"
+            self.settings["font-hinting"] = "none"
 
     def on_aa_button_toggled(self, button):
         if self.btn_rgba.get_active():
-            self.settings["antialiasing"] = "rgba"
+            self.settings["font-antialiasing"] = "rgba"
         elif self.btn_gray.get_active():
-            self.settings["antialiasing"] = "grayscale"
+            self.settings["font-antialiasing"] = "grayscale"
         else:
-            self.settings["antialiasing"] = "none"
+            self.settings["font-antialiasing"] = "none"
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Fonts"),
