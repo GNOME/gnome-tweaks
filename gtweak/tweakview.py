@@ -16,7 +16,8 @@ class Window(Gtk.ApplicationWindow):
         Gtk.ApplicationWindow.__init__(self,
                                        application=app,
                                        show_menubar=False)
-        self.set_size_request(-1, 700)
+        self.set_default_size(980, 640)
+        self.set_size_request(-1, 300)
         self.set_position(Gtk.WindowPosition.CENTER)
         self.set_icon_name("org.gnome.tweaks")
 
@@ -137,6 +138,7 @@ class Window(Gtk.ApplicationWindow):
 
     def sidebar(self):
         left_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        left_box.set_size_request(200, -1)
 
         self.entry = Gtk.SearchEntry(placeholder_text=_("Search Tweaks…"))
         if (Gtk.check_version(3, 22, 20) is None):
@@ -149,7 +151,6 @@ class Window(Gtk.ApplicationWindow):
 
         self.listbox = Gtk.ListBox()
         self.listbox.get_style_context().add_class("tweak-categories")
-        self.listbox.set_size_request(200, -1)
         self.listbox.connect("row-selected", self._on_select_row)
         self.listbox.set_header_func(self._list_header_func, None)
         scroll = Gtk.ScrolledWindow()
@@ -166,7 +167,7 @@ class Window(Gtk.ApplicationWindow):
 
     def main_content(self):
         right_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        right_box.set_size_request(750, -1)
+        right_box.set_size_request(540, -1)
 
         self.stack = Gtk.Stack()
         self.stack.get_style_context().add_class("main-container")
