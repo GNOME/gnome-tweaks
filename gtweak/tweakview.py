@@ -71,9 +71,9 @@ class Window(Gtk.ApplicationWindow):
         header.connect("notify::visible-child", self._update_decorations)
         header.connect("notify::fold", self._update_decorations)
 
-        left_header = Handy.HeaderBar()
+        left_header = Gtk.HeaderBar()
         left_header.props.show_close_button = True
-        right_header = Handy.HeaderBar()
+        right_header = Gtk.HeaderBar()
         right_header.props.show_close_button = True
         right_header.props.hexpand = True
 
@@ -128,8 +128,8 @@ class Window(Gtk.ApplicationWindow):
         header.child_set(right_header, name="content")
 
         self.header_group = Handy.HeaderGroup()
-        self.header_group.add_header_bar(left_header)
-        self.header_group.add_header_bar(right_header)
+        self.header_group.add_gtk_header_bar(left_header)
+        self.header_group.add_gtk_header_bar(right_header)
 
         self.hsize_group.add_widget(left_header)
 
