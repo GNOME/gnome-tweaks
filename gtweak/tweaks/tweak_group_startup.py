@@ -58,7 +58,6 @@ class _AppChooser(Gtk.Dialog):
         self._search_key, self._search_mods = Gtk.accelerator_parse(_("<primary>f"))
 
         lb = Gtk.ListBox()
-        lb.props.margin = 5
         lb.props.activate_on_single_click = False
         lb.set_sort_func(self._sort_apps, None)
         lb.set_header_func(_list_header_func, None)
@@ -81,6 +80,7 @@ class _AppChooser(Gtk.Dialog):
                         lb.add(w)
 
         sw = Gtk.ScrolledWindow()
+        sw.props.margin = 2
         sw.props.hscrollbar_policy = Gtk.PolicyType.NEVER
         sw.add(lb)
 
@@ -131,6 +131,8 @@ class _AppChooser(Gtk.Dialog):
     def _build_widget(self, a, extra):
         row = Gtk.ListBoxRow()
         g = Gtk.Grid()
+        g.props.margin = 5
+
         if not a.get_name():
             return None
         icn = a.get_icon()
