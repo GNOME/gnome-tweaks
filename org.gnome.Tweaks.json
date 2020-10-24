@@ -9,6 +9,8 @@
     ],
     "desktop-file-name-prefix" : "(Nightly) ",
     "finish-args" : [
+        "--socket=session-bus",
+        "--socket=system-bus",
         "--share=ipc",
         "--socket=x11",
         "--socket=wayland",
@@ -34,6 +36,25 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gnome-desktop.git"
+                }
+            ]
+        },
+        {
+            "name" : "libhandy",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dprofiling=false",
+                "-Dintrospection=enabled",
+                "-Dgtk_doc=false",
+                "-Dtests=false",
+                "-Dexamples=false",
+                "-Dvapi=false",
+                "-Dglade_catalog=disabled"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/libhandy.git"
                 }
             ]
         },
