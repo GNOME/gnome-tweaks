@@ -102,6 +102,9 @@ class GSettingsFakeSetting:
     def get_string(self, *args, **kwargs):
         return ""
 
+    def __getitem__(self, key):
+        return ""
+
     def __getattr__(self, name):
         def noop(*args, **kwargs):
             pass
