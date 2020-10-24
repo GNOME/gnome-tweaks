@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import glob
 import itertools
+import logging
 
 import gi
 gi.require_version("Notify", "0.7")
@@ -19,6 +20,7 @@ from gi.repository import Notify
 
 import gtweak
 
+from gtweak.gsettings import GSettingsSetting
 
 def singleton(cls):
     """
@@ -261,8 +263,15 @@ class XSettingsOverrides:
     }
 
     def __init__(self):
-        self._settings = Gio.Settings(schema='org.gnome.settings-daemon.plugins.xsettings')
-        self._variant = self._settings.get_value("overrides")
+        # Ensure we don't error out
+        try:
+            self._settings = GSettingsSetting(schema='org.gnome.settings-daemon.plugins.xsettings')
+        except:
+            self._settings = None
+            logging.warn("org.gnome.settings-daemon.plugins.xsettings not installed or running")
+        
+        if self._settings:
+            self._variant = self._settings.get_value("overrides")
 
     def _dup_variant_as_dict(self):
         items = {}
