@@ -11,6 +11,8 @@ destdir = environ.get('DESTDIR', '')
 
 # Package managers set this so we don't need to run
 if not destdir:
+    print("Installing new Schemas")
+    call(['glib-compile-schemas', path.join(datadir, 'glib-2.0/schemas')])
     print('Updating icon cache...')
     call(['gtk-update-icon-cache', '-qtf', path.join(datadir, 'icons', 'hicolor')])
 

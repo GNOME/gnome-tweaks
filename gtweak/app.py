@@ -15,6 +15,24 @@ from gtweak.tweakview import Window
 from gtweak.utils import SchemaList
 from gtweak.gshellwrapper import GnomeShellFactory
 
+class ExtensionNotice(Gtk.MessageDialog):
+    def __init__(self, modal, transient_for):
+        Gtk.Dialog.__init__(self, modal=modal, transient_for=transient_for)
+
+        self.add_button(_("_Continue"), Gtk.ResponseType.NONE)
+
+        self.set_markup("<b>{0}</b>".format(_("Extensions Has Moved")))
+
+        self.format_secondary_markup(
+            "{0}\n\n{1}".format(
+                _("Extensions management has been moved to {0}.").format(
+                    '<a href="https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/master/subprojects/extensions-app/README.md">GNOME Extensions</a>',
+                ),
+                _("We recommend downloading GNOME Extensions from {0} if your distribution does not include it.").format(
+                    '<a href="https://flathub.org/apps/details/org.gnome.Extensions">Flathub</a>'
+                )
+            )
+        )
 
 class GnomeTweaks(Gtk.Application):
 
@@ -23,6 +41,8 @@ class GnomeTweaks(Gtk.Application):
         Gtk.Application.__init__(self, application_id="org.gnome.tweaks")
         self.win = None
 
+        self._settings = Gio.Settings.new('org.gnome.tweaks')
+
     def do_activate(self):
         if not self.win:
             model = TweakModel()
@@ -30,6 +50,10 @@ class GnomeTweaks(Gtk.Application):
             self.win.show_all()
             self.win.back_button.props.visible = False
         self.win.present()
+
+        if self._settings.get_boolean('show-extensions-notice'):
+            self.show_extensions_notice()
+            self._settings.set_boolean('show-extensions-notice', False)
 
     def do_startup(self):
         Gtk.Application.do_startup(self)
@@ -93,3 +117,12 @@ class GnomeTweaks(Gtk.Application):
 
     def quit_cb(self, action, parameter):
         self.quit()
+
+    def show_extensions_notice(self):
+        extensionsdialog = ExtensionNotice(
+            modal=True,
+            transient_for=self.win
+        )
+
+        extensionsdialog.run()
+        extensionsdialog.destroy()

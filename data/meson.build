@@ -23,6 +23,12 @@ gui_data = [
 ]
 install_data(gui_data, install_dir: pkgdatadir)
 
+# Install the settings schema file
+install_data(
+  'org.gnome.tweaks.gschema.xml',
+  install_dir: 'share/glib-2.0/schemas'
+)
+
 install_data ('org.gnome.tweaks.svg',
   install_dir: join_paths(datadir, 'icons', 'hicolor', 'scalable', 'apps'))
 install_data ('org.gnome.tweaks-symbolic.svg',
