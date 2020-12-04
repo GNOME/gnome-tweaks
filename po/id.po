@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-04 22:40+0000\n"
-"PO-Revision-Date: 2019-08-06 17:20+0700\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2020-12-04 16:30+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -17,14 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural= n!=1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Proyek GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "GNOME Oprek"
 
@@ -45,7 +45,7 @@ msgstr ""
 "mengelola aplikasi awal mula, dan memfungsikan ikon desktop selain "
 "pengaturan-pengaturan lain."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Oprekan"
 
@@ -61,40 +61,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Reset ke Baku"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Matikan Semua Ekstensi Shell"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "Tent_ang Oprekan"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Lanjutkan"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Ekstensi Telah Dipindahkan"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Manajemen ekstensi telah dipindahkan ke {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Sebaiknya unduh Ekstensi GNOME dari {0} jika distribusi Anda tidak "
+"menyertakannya."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Reset ke Baku"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Reset semua pengaturan oprekan ke keadaan baku asli?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "Shell GNOME"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(mode %s)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "Shell GNOME tidak berjalan"
 
-#: gtweak/app.py:84
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Beranda"
 
@@ -102,12 +120,12 @@ msgstr "Beranda"
 msgid "Miscellaneous"
 msgstr "Rupa-rupa"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Oprekan Pencarian…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Umum"
 
@@ -512,46 +530,6 @@ msgstr "Touchpad"
 msgid "Disable While Typing"
 msgstr "Nonaktifkan Ketika Mengetik"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Tak Ada Ekstensi Terpasang"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Ramban di Perangkat Lunak"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Pengunduhan ekstensi"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Galat saat memuat ekstensi"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Ekstensi tak mendukung versi shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Galat ekstensi yang tak dikenal"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Memutakhirkan"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Galat"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Mutakhirkan"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Ekstensi"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Aplikasi awal mula secara otomatis dimulai saat Anda masuk."
@@ -647,36 +625,35 @@ msgstr "Minimalkan"
 msgid "Top Bar"
 msgstr "Bilah Puncak"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:16
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Pojok Panas Ringkasan Aktivitas"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:17
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Persentase Baterai"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Jam"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Hari kerja"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Tanggal"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Detik"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Kalender"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:23
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Nomor Minggu"
 
@@ -856,143 +833,14 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(bawaan)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Perubahan konfigurasi memerlukan start ulang"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Sesi Anda mesti dimulai ulang agar perubahan berdampak"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Mulai Ulang Sesi"
-
-#~ msgid "org.gnome.tweaks"
-#~ msgstr "org.gnome.tweaks"
-
-#~ msgid "Application Menu"
-#~ msgstr "Menu Aplikasi"
-
-#~ msgid "_About"
-#~ msgstr "Tent_ang"
-
-#~ msgid "_Quit"
-#~ msgstr "_Keluar"
-
-#~ msgid "Power"
-#~ msgstr "Daya"
-
-#~ msgid "Sloppy"
-#~ msgstr "Tidak Rapi"
-
-#~ msgid "Click Method"
-#~ msgstr "Metode Klik"
-
-#~ msgid "Enable dark theme for all applications"
-#~ msgstr "Fungsikan tema gelap bagi semua aplikasi"
-
-#~ msgid "Enable the dark theme hint for all the applications in the session"
-#~ msgstr "Fungsikan petunjuk tema gelap bagi semua aplikasi dalam sesi"
-
-#~ msgid "Global Dark Theme"
-#~ msgstr "Tema Gelap Global"
-
-#~ msgid "Applications need to be restarted for this change to take place."
-#~ msgstr "Aplikasi mesti dimulai ulang agar perubahan berdampak."
-
-#~ msgid "Power Button Behavior"
-#~ msgstr "Perilaku Tombol Daya"
-
-#~ msgid "Suspend"
-#~ msgstr "Suspensi"
-
-#~ msgid "Hibernate"
-#~ msgstr "Hibernasi"
-
-#~ msgid "Power Off"
-#~ msgstr "Matikan Daya"
-
-#~ msgid "No Action"
-#~ msgstr "Tidak Ada Aksi"
-
-#~ msgid "Tweak Tool"
-#~ msgstr "Alat Oprek"
-
-#~ msgid "Workspace Creation"
-#~ msgstr "Pembuatan Ruang Kerja"
-
-#~ msgid "Dynamic"
-#~ msgstr "Dinamis"
-
-#~ msgid "Static"
-#~ msgstr "Statik"
-
-#~ msgid "Files"
-#~ msgstr "Berkas"
-
-#~ msgid "GNOME Shell v%s (%s mode)"
-#~ msgstr "Shell GNOME v%s (mode %s)"
-
-#~ msgid "Computer"
-#~ msgstr "Komputer"
-
-#~ msgid "Mode"
-#~ msgstr "Mode"
-
-#~ msgid "Lock Screen Location"
-#~ msgstr "Lokasi Kunci Layar"
-
-#~ msgid "Enable animations"
-#~ msgstr "Fungsikan animasi"
-
-#~ msgid "Don't suspend on lid close"
-#~ msgstr "Jangan suspensi saat lid ditutup"
-
-#~ msgid "Show date"
-#~ msgstr "Tampilkan tanggal"
-
-#~ msgid "When plugged in"
-#~ msgstr "Ketika ditancapkan"
-
-#~ msgid "Suspend even if an external monitor is plugged in"
-#~ msgstr "Suspensi bahkan bila monitor eksternal ditancapkan"
-
-#~ msgid "Automatically Raise Windows"
-#~ msgstr "Secara Otomatis Naikkan Jendela"
-
-#~ msgid "Key theme"
-#~ msgstr "Tema kunci"
-
-#~ msgid "Switch between overview and desktop"
-#~ msgstr "Bertukar antara ringkasan dan desktop"
-
-#~ msgid "Show location of pointer"
-#~ msgstr "Tampilkan lokasi pointer"
-
-#~ msgid "Uninstall Extension"
-#~ msgstr "Bongkar Ekstensi"
-
-#~ msgid "Do you want to uninstall the '%s' extension?"
-#~ msgstr "Apakah Anda ingin membongkar ekstensi '%s'?"
-
-#~ msgid "Install Shell Extension"
-#~ msgstr "Pasang Ekstensi Shell"
-
-#~ msgid "Select an extension"
-#~ msgstr "Pilih ekstensi"
-
-#~ msgid "Get more extensions"
-#~ msgstr "Dapatkan lebih banyak ekstensi"
-
-#~ msgid "%s extension updated successfully"
-#~ msgstr "Ekstensi %s sukses dimutakhirkan"
-
-#~ msgid "Error installing extension"
-#~ msgstr "Galat saat memasang ekstensi"
-
-#~ msgid "Invalid extension"
-#~ msgstr "Ekstensi tak valid"
-
-#~ msgid "About GNOME Tweak Tool"
-#~ msgstr "Tengan Alat Oprek GNOME"
