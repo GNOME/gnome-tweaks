@@ -14,23 +14,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-09-25 11:38+0000\n"
-"PO-Revision-Date: 2019-10-13 10:15+0200\n"
-"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2020-12-02 14:10+0100\n"
+"Last-Translator: Guillaume Bernard <associations@guillaume-bernard.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 3.32.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Le projet GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "Ajustements de GNOME"
 
@@ -51,7 +51,7 @@ msgstr ""
 "paramètres d’alimentation, gérer les applications au démarrage et activer "
 "les icônes du bureau entre autres."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Ajustements"
 
@@ -66,40 +66,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Réinitialiser aux valeurs par défaut"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Désactiver toutes les extensions du shell"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "À _propos d’Ajustements"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Continuer"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Les extensions ont été déplacées"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "La gestion des extensions a été déplacée vers {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Il est recommandé de télécharger Extensions de GNOME depuis {0} si votre "
+"distribution ne l’inclut pas."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Réinitialiser aux valeurs par défaut"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Réinitialiser tous les ajustements aux valeurs par défaut ?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "Shell de GNOME"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(mode %s)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "Le shell de GNOME n’est pas actif"
 
-#: gtweak/app.py:85
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Page d’accueil"
 
@@ -107,12 +125,12 @@ msgstr "Page d’accueil"
 msgid "Miscellaneous"
 msgstr "Divers"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Recherche d’ajustements…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Général"
 
@@ -514,46 +532,6 @@ msgstr "Pavé tactile"
 msgid "Disable While Typing"
 msgstr "Désactiver pendant la saisie"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Aucune extension installée"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Parcourir dans Logiciels"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Téléchargement de l’extension"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Erreur de chargement de l’extension"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "L’extension ne prend pas en charge cette version du shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Erreur inconnue de l’extension"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Mise à jour"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Erreur"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Mettre à jour"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Extensions"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
@@ -865,15 +843,45 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(par défaut)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Les modifications de configuration nécessitent un redémarrage"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Votre session doit être redémarrée pour que les paramètres prennent effet"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Redémarrer la session"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Désactiver toutes les extensions du shell"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Aucune extension installée"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Parcourir dans Logiciels"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Téléchargement de l’extension"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Erreur de chargement de l’extension"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "L’extension ne prend pas en charge cette version du shell"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Erreur inconnue de l’extension"
+
+#~ msgid "Updating"
+#~ msgstr "Mise à jour"
+
+#~ msgid "Error"
+#~ msgstr "Erreur"
+
+#~ msgid "Update"
+#~ msgstr "Mettre à jour"
