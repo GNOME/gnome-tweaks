@@ -4,7 +4,7 @@
 #
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2011-2012, 2016-2018.
 # Christian Kirbach <christian.kirbach@gmail.com>, 2011-2013.
-# Wolfgang Stöggl <c72578@yahoo.de>, 2013, 2016-2017.
+# Wolfgang Stöggl <c72578@yahoo.de>, 2013, 2016-2017, 2020.
 # Benjamin Steinwender <b@stbe.at>, 2014.
 # Paul Seyfert <pseyfert@mathphys.fsk.uni-heidelberg.de>, 2015.
 # Bernd Homuth <dev@hmt.im>, 2015.
@@ -14,23 +14,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-10-08 11:32+0000\n"
-"PO-Revision-Date: 2019-11-17 20:40+0100\n"
-"Last-Translator: Tim Sabsch <tim@sabsch.com>\n"
+"POT-Creation-Date: 2020-12-02 21:22+0000\n"
+"PO-Revision-Date: 2020-12-06 07:20+0100\n"
+"Last-Translator: Wolfgang Stoeggl <c72578@yahoo.de>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Das GNOME-Projekt"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "GNOME-Optimierung"
 
@@ -53,7 +53,7 @@ msgstr ""
 "Energieeinstellungen verändern, Startanwendungen verwalten und neben "
 "weiteren Einstellungen auch Schreibtischsymbole aktivieren."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:110
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Optimierungen"
 
@@ -69,42 +69,60 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "Auf Voreinstellungen _zurücksetzen"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Alle Shell-Erweiterungen deaktivieren"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_Info zu Optimierungen"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Fortfahren"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Erweiterungen ist verschoben worden"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Die Verwaltung von Erweiterungen ist nach {0} verschoben worden."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Wir empfehlen, GNOME Erweiterungen von {0} herunterzuladen, wenn Ihre "
+"Distribution sie nicht enthält."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Auf Voreinstellungen zurücksetzen"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Sollen alle Optimierungs-Einstellungen in den ursprünglichen "
 "voreingestellten Zustand zurückgesetzt werden?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s-Modus)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell wird nicht ausgeführt"
 
-#: gtweak/app.py:85
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Homepage"
 
@@ -117,7 +135,7 @@ msgid "Search Tweaks…"
 msgstr "Einstellungen suchen …"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:202 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Allgemein"
 
@@ -524,52 +542,12 @@ msgstr "Tastfeld"
 msgid "Disable While Typing"
 msgstr "Bei Tastatureingabe deaktivieren"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Keine Erweiterungen installiert"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Softwarekatalog durchstöbern"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Herunterladen einer Erweiterung"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Fehler beim Laden der Erweiterung"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Erweiterung wird von dieser Shell-Version nicht unterstützt"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Unbekannter Fehler in der Erweiterung"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Aktualisieren"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Fehler"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Aktualisieren"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Erweiterungen"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Startanwendungen werden automatisch gestartet, wenn Sie sich anmelden."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Startprogramme"
 
@@ -582,7 +560,7 @@ msgstr "Anwendungen suchen …"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "läuft"
 
@@ -594,15 +572,15 @@ msgstr "_Schließen"
 msgid "_Add"
 msgstr "_Hinzufügen"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "Entfernen"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "Neue Start-Anwendung"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "Eine neue Anwendung hinzufügen, die beim Start ausgeführt werden soll"
 
@@ -870,18 +848,48 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(Vorgabe)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Änderungen der Konfiguration erfordern Neustart"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Die Sitzung muss neu gestartet werden, damit die Änderungen wirksam werden"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Sitzung neu starten"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Alle Shell-Erweiterungen deaktivieren"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Keine Erweiterungen installiert"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Softwarekatalog durchstöbern"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Herunterladen einer Erweiterung"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Fehler beim Laden der Erweiterung"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Erweiterung wird von dieser Shell-Version nicht unterstützt"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Unbekannter Fehler in der Erweiterung"
+
+#~ msgid "Updating"
+#~ msgstr "Aktualisieren"
+
+#~ msgid "Error"
+#~ msgstr "Fehler"
+
+#~ msgid "Update"
+#~ msgstr "Aktualisieren"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
