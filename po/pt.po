@@ -11,24 +11,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2020-09-08 20:02+0000\n"
-"PO-Revision-Date: 2020-09-11 21:23+0100\n"
-"Last-Translator: José Vieira <jvieira33@sapo.pt>\n"
-"Language-Team: Português <@>\n"
+"POT-Creation-Date: 2020-12-02 21:22+0000\n"
+"PO-Revision-Date: 2020-12-06 17:19+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: https://l10n.gnome.org/teams/pt/\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.30.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
-msgstr "Projeto GNOME"
+msgstr "O Projeto GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "Ajustes do GNOME"
 
@@ -46,10 +46,10 @@ msgid ""
 "manage startup applications, and enable desktop icons among other settings."
 msgstr ""
 "Pode instalar e gerir temas e extensões, alterar as definições de energia, "
-"gerir aplicações do arranque e ativar ícones da área de trabalho, entre "
+"gerir aplicações do arranque e ativar ícones no ambiente de trabalho, entre "
 "outras opções."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:110
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Ajustes"
 
@@ -58,47 +58,64 @@ msgstr "Ajustes"
 msgid ""
 "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Definições;Avançadas;Preferências;Extensões;Letras;Tema;XKB;Teclado;"
-"Digitação;"
+"Definições;Avançadas;Preferências;Extensões;Letras;Tema;XKB;Teclado;Escrita;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
 msgstr "_Repor predefinições"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Desativar todas as extensões da shell"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_Acerca do Ajustes"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Continuar"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "As extensões foram movidas"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "A gestão das extensões foi movida para {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Recomendamos que transfira Extensões GNOME a partir de {0} se a sua "
+"distribuição não o incluir."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Repor predefinições"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Repor todas as definições para o seu estado original predefinido?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "A shell do GNOME não está em execução"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(modo %s)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "A shell do GNOME não está em execução"
 
-#: gtweak/app.py:85
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Página principal"
 
@@ -111,7 +128,7 @@ msgid "Search Tweaks…"
 msgstr "Procurar ajustes…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:202 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Geral"
 
@@ -294,15 +311,15 @@ msgstr "Fontes"
 
 #: gtweak/tweaks/tweak_group_font.py:100
 msgid "Interface Text"
-msgstr "Interface"
+msgstr "Texto da Interface"
 
 #: gtweak/tweaks/tweak_group_font.py:101
 msgid "Document Text"
-msgstr "Documentos"
+msgstr "Texto do documento"
 
 #: gtweak/tweaks/tweak_group_font.py:102
 msgid "Monospace Text"
-msgstr "Mono-espaço"
+msgstr "Texto mono-espaçado"
 
 #: gtweak/tweaks/tweak_group_font.py:103
 msgid "Legacy Window Titles"
@@ -436,7 +453,7 @@ msgstr "Tecla Super Esquerda"
 #: gtweak/tweaks/tweak_group_keymouse.py:223
 #: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Additional Layout Options"
-msgstr "Opções de Disposição Adicionais"
+msgstr "Opções de disposição adicionais"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
 #: gtweak/tweaks/tweak_group_keymouse.py:391
@@ -469,7 +486,7 @@ msgstr ""
 
 #: gtweak/tweaks/tweak_group_keymouse.py:325
 msgid "Don’t use mouse click emulation."
-msgstr "Não usar a emulação do clique do rato"
+msgstr "Não usar a emulação do clique do rato."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:362
 msgid "Keyboard & Mouse"
@@ -485,7 +502,7 @@ msgstr "Mostrar todas as fontes de entrada"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:367
 msgid "Increases the choice of input sources in the Settings application."
-msgstr "Aumenta as fontes de entrada disponíveis "
+msgstr "Aumenta a escolha de fontes de entrada na aplicação Definições."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:373
 msgid "Mouse"
@@ -515,53 +532,13 @@ msgstr "Touchpad"
 msgid "Disable While Typing"
 msgstr "Desativar enquanto escreve"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Não há extensões instaladas"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Mostrar no Software"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Transferência de extensões"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Erro ao carregar a extensão"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "A extensão não suporta a versão da shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Erro de extensão desconhecido"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "A atualizar"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Erro"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Atualização"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Extensões"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
 "As aplicações de arranque iniciam automaticamente quando inicia sessão."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Aplicações de arranque"
 
@@ -574,7 +551,7 @@ msgstr "Procurar aplicações…"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "em execução"
 
@@ -586,15 +563,15 @@ msgstr "Fe_char"
 msgid "_Add"
 msgstr "_Adicionar"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "Remover"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "Nova aplicação de arranque"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "Adicionar uma nova aplicação a ser iniciada no arranque"
 
@@ -720,11 +697,11 @@ msgstr ""
 
 #: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Window scaling"
-msgstr "Escalonamento de janelas"
+msgstr "Escala de janelas"
 
 #: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Ajustar o fator de escalonamento das janelas GTK para ecrãs HiDPI"
+msgstr "Ajustar o fator de escala das janelas GTK para ecrãs HiDPI"
 
 #: gtweak/tweaks/tweak_group_windows.py:157
 #, python-brace-format
@@ -794,28 +771,28 @@ msgstr "Colocar as janelas focadas no topo"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:19
 msgid "Dynamic Workspaces"
-msgstr "Espaços de trabalho dinâmicos"
+msgstr "Áreas de trabalho dinâmicas"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:38
 msgid ""
 "Workspaces can be created on demand, and are automatically removed when "
 "empty."
 msgstr ""
-"Os espaços de trabalho podem ser criados à vontade, e são removidos "
-"automaticamente quando esvaziados."
+"As áreas de trabalho podem ser criadas à vontade, e são removidas "
+"automaticamente quando esvaziadas."
 
 #: gtweak/tweaks/tweak_group_workspaces.py:62
 msgid "Static Workspaces"
-msgstr "Espaços de trabalho estáticos"
+msgstr "Áreas de trabalho estáticas"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:64
 msgid "Number of workspaces is fixed."
-msgstr "O número de espaços de trabalho é fixo."
+msgstr "O número de áreas de trabalho é fixo."
 
 #: gtweak/tweaks/tweak_group_workspaces.py:95
 #: gtweak/tweaks/tweak_group_workspaces.py:174
 msgid "Workspaces"
-msgstr "Espaços de trabalho"
+msgstr "Áreas de trabalho"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:97
 #: gtweak/tweaks/tweak_group_workspaces.py:177
@@ -825,27 +802,27 @@ msgstr "Gestão do Ecrã"
 #: gtweak/tweaks/tweak_group_workspaces.py:97
 #: gtweak/tweaks/tweak_group_workspaces.py:139
 msgid "Workspaces span displays"
-msgstr "Os espaços de trabalho extendem-se por todos os ecrãs"
+msgstr "As áreas de trabalho estendem-se por todos os ecrãs"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:113
 msgid "Workspaces on primary display only"
-msgstr "Espaços de trabalho só no ecrã principal"
+msgstr "Áreas de trabalho só no ecrã principal"
 
 #: gtweak/tweaks/tweak_group_workspaces.py:115
 msgid "Additional displays are treated as independent workspaces."
-msgstr "Ecrãs adicionais são tratados como espaços independentes."
+msgstr "Ecrãs adicionais são tratados como áreas de trabalho independentes."
 
 #: gtweak/tweaks/tweak_group_workspaces.py:141
 msgid "The current workspace includes additional displays."
-msgstr "O espaço de trabalho atual contém os monitores adicionais."
+msgstr "A área de trabalho atual contém os monitores adicionais."
 
 #: gtweak/tweaks/tweak_group_workspaces.py:176
 msgid "Number of Workspaces"
-msgstr "Número de espaçoss de trabalho"
+msgstr "Número de áreas de trabalho"
 
 #: gtweak/tweaks/tweak_group_xkb.py:166
 msgid "Typing"
-msgstr "Digitação"
+msgstr "Escrita"
 
 #: gtweak/tweaks/tweak_wacom.py:16
 msgid "Device"
@@ -861,17 +838,47 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predefinido)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Mudanças de configuração requerem reinício"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "A sessão tem de ser reiniciada para as alterações terem efeito"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Reiniciar sessão"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Desativar todas as extensões da shell"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Não há extensões instaladas"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Mostrar no Software"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Transferência de extensões"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Erro ao carregar a extensão"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "A extensão não suporta a versão da shell"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Erro de extensão desconhecido"
+
+#~ msgid "Updating"
+#~ msgstr "A atualizar"
+
+#~ msgid "Error"
+#~ msgstr "Erro"
+
+#~ msgid "Update"
+#~ msgstr "Atualização"
 
 #~ msgid "Tweak Tool"
 #~ msgstr "Ferramenta de ajustes"
