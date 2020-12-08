@@ -9,10 +9,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-04 22:40+0000\n"
-"PO-Revision-Date: 2019-08-05 13:30+0300\n"
-"Last-Translator: Florentina Mușat <florentina.musat.28 [at] gmail [dot] "
-"com>\n"
+"POT-Creation-Date: 2020-12-02 21:22+0000\n"
+"PO-Revision-Date: 2020-12-08 20:56+0200\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "Language-Team: Gnome Romanian Translation Team\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-Poedit-SourceCharset: windows-1256\n"
 "X-Project-Style: gnome\n"
 
@@ -28,8 +27,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "Proiectul GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "Instrument de ajustare GNOME"
 
@@ -51,7 +50,7 @@ msgstr ""
 "Poate instala și administra teme și extensii, schimba configurări de consum, "
 "administra aplicațiile de pornire și activa iconițele pentru desktop."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Ajustări"
 
@@ -68,40 +67,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Restabilește la valorile implicite"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Dezactivează toate extensiile pentru shell"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_Despre Ajustări"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Continuă"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Extensii s-a mutat"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Gestionarea extensiilor a fost mutată la {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Recomandăm descărcarea Extensii GNOME de la {0} dacă distribuția nu o "
+"include."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Restabilește la valorile implicite"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Restabiliți toate configurările la valorile originale?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "Shell GNOME"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(mod %s)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "Shell GNOME nu rulează"
 
-#: gtweak/app.py:84
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Acasă"
 
@@ -109,12 +126,12 @@ msgstr "Acasă"
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Caută ajustări…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Generale"
 
@@ -520,46 +537,6 @@ msgstr "Touchpad"
 msgid "Disable While Typing"
 msgstr "Dezactivează în timpul tastării"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Nu sunt extensii instalate"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Navighează în software"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Descărcare extensie"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Eroare la încărcarea extensiei"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Extensia nu este compatibilă cu versiunea de shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Eroare de extensie necunoscută"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Se actualizează"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Eroare"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Actualizare"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Extensii"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
@@ -567,7 +544,7 @@ msgstr ""
 "autentificați."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Aplicații de pornire"
 
@@ -580,7 +557,7 @@ msgstr "Caută aplicații…"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "rulează"
 
@@ -592,15 +569,15 @@ msgstr "În_chide"
 msgid "_Add"
 msgstr "_Adaugă"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "Elimină"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "Noi aplicații de pornire"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "Adaugă o nouă aplicație care să fie rulată la pornire"
 
@@ -657,36 +634,35 @@ msgstr "Minimizează"
 msgid "Top Bar"
 msgstr "Bara de sus"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:16
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Colțul important al prezentării generale a activităților"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:17
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Procentaj baterie"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Ceas"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Zi lucrătoare"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Dată"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Secunde"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Calendar"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:23
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Numerele săptămânii"
 
@@ -869,17 +845,47 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(implicit)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Modificările configurației necesită o repornire"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Sesiunea trebuie să fie repornită pentru a lua efect configurările"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Repornește sesiunea"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Dezactivează toate extensiile pentru shell"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Nu sunt extensii instalate"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Navighează în software"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Descărcare extensie"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Eroare la încărcarea extensiei"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Extensia nu este compatibilă cu versiunea de shell"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Eroare de extensie necunoscută"
+
+#~ msgid "Updating"
+#~ msgstr "Se actualizează"
+
+#~ msgid "Error"
+#~ msgstr "Eroare"
+
+#~ msgid "Update"
+#~ msgstr "Actualizare"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
