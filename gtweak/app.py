@@ -25,9 +25,11 @@ class ExtensionNotice(Gtk.MessageDialog):
 
         self.format_secondary_markup(
             "{0}\n\n{1}".format(
+                # Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
                 _("Extensions management has been moved to {0}.").format(
                     '<a href="https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/master/subprojects/extensions-app/README.md">GNOME Extensions</a>',
                 ),
+                # Translators: Placeholder will be replaced with "Flathub" in active link form
                 _("We recommend downloading GNOME Extensions from {0} if your distribution does not include it.").format(
                     '<a href="https://flathub.org/apps/details/org.gnome.Extensions">Flathub</a>'
                 )
