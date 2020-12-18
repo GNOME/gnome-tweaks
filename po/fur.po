@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-22 11:33+0000\n"
-"PO-Revision-Date: 2019-08-28 07:20+0200\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2020-12-18 06:49+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -16,14 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Il progjet GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "Personalizazions di GNOME"
 
@@ -45,7 +45,7 @@ msgstr ""
 "alimentazion, gjestî lis aplicazions al inviament di sisteme e abilitâ lis "
 "iconis tal scritori e cun di plui altris impostazions."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Personalizazions"
 
@@ -61,43 +61,60 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Torne met ai valôrs predefinîts"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Disabilite dutis lis estension de Shel"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_Informazions su Personalizazions"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Continue"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Estensions al è stât spostât"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "La gjestion des estensions e je stade spostade su {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Si consee di discjariâ GNOME Estensions di {0} se la tô distribuzion no lu "
+"inclût."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Torne met ai valôrs predefinîts"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Anulâ dutis lis personalizazions des impostazions tornant al stât origjinâl "
 "predefinît?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(modalitât %s)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell nol è in esecuzion"
 
-#: gtweak/app.py:85
-#| msgid "GTK+"
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Sît web"
 
@@ -105,12 +122,12 @@ msgstr "Sît web"
 msgid "Miscellaneous"
 msgstr "Variis"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Cîr personalizazions…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Gjenerâl"
 
@@ -518,46 +535,6 @@ msgstr "Touchpad"
 msgid "Disable While Typing"
 msgstr "Disabilite cuant che si scrîf"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Nissune estension instalade"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Esplore in Software"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Discjariament estension"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Erôr tal cjariâ la estension"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "La estension no supuarte la version de shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Erôr de estension no cognossût"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Daûr a inzornâ"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Erôr"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Inzorne"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Estensions"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
@@ -866,18 +843,48 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(predefinît)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr ""
 "Lis modifichis ae configurazion a necessitin il tornâ a inviâ la session"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Al è necessari tornâ a inviâ la session par aplicâ lis impostazions"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Torne invie session"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Disabilite dutis lis estension de Shel"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Nissune estension instalade"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Esplore in Software"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Discjariament estension"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Erôr tal cjariâ la estension"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "La estension no supuarte la version de shell"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Erôr de estension no cognossût"
+
+#~ msgid "Updating"
+#~ msgstr "Daûr a inzornâ"
+
+#~ msgid "Error"
+#~ msgstr "Erôr"
+
+#~ msgid "Update"
+#~ msgstr "Inzorne"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
