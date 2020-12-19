@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2020-02-20 18:04+0000\n"
-"PO-Revision-Date: 2020-03-05 20:21+0900\n"
-"Last-Translator: Andre Klapper <ak-47@gmx.net>\n"
+"POT-Creation-Date: 2020-12-09 21:53+0000\n"
+"PO-Revision-Date: 2020-12-19 16:05+0900\n"
+"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -65,13 +65,33 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "デフォルト設定に戻す(_R)"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "GNOME Shell 拡張機能をすべて無効にする"
-
 #: data/shell.ui:17
 msgid "_About Tweaks"
 msgstr "Tweaks について(_A)"
+
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "続行(_C)"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "拡張機能は移行しました"
+
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "拡張機能の管理は {0} で行うようになりました。"
+
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"お使いのディストリビューションが GNOME Extensions を同梱していない場合は {0} "
+"からダウンロードすることをお勧めします。"
 
 #: gtweak/app.py:56
 msgid "Reset to Defaults"
@@ -513,46 +533,6 @@ msgstr "タッチパッド"
 msgid "Disable While Typing"
 msgstr "タイピング中は無効化する"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "拡張機能がインストールされていません"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "“ソフトウェア”で表示する"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "拡張機能をダウンロードしています"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "拡張機能の読み込みに失敗しました"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "拡張機能が GNOME Shell のバージョンに対応していません"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "原因不明の拡張機能エラー"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "更新中"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "エラー"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "更新"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "拡張機能"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "スタートアップアプリケーションは、ログイン時に自動で起動されます。"
@@ -868,6 +848,39 @@ msgstr "設定内容を反映させるにはセッションを再起動する必
 #: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "セッションを再起動"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "GNOME Shell 拡張機能をすべて無効にする"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "拡張機能がインストールされていません"
+
+#~ msgid "Browse in Software"
+#~ msgstr "“ソフトウェア”で表示する"
+
+#~ msgid "Extension downloading"
+#~ msgstr "拡張機能をダウンロードしています"
+
+#~ msgid "Error loading extension"
+#~ msgstr "拡張機能の読み込みに失敗しました"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "拡張機能が GNOME Shell のバージョンに対応していません"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "原因不明の拡張機能エラー"
+
+#~ msgid "Updating"
+#~ msgstr "更新中"
+
+#~ msgid "Error"
+#~ msgstr "エラー"
+
+#~ msgid "Update"
+#~ msgstr "更新"
+
+#~ msgid "Extensions"
+#~ msgstr "拡張機能"
 
 #~ msgid "Click Method"
 #~ msgstr "クリックメソッド"
