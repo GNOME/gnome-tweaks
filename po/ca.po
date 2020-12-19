@@ -14,23 +14,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-16 07:52+0000\n"
-"PO-Revision-Date: 2019-02-18 19:32+0100\n"
-"Last-Translator: Gil Forcada Codinachs <gil.gnome@gmail.com>\n"
+"POT-Creation-Date: 2020-12-09 21:53+0000\n"
+"PO-Revision-Date: 2020-12-19 15:41+0100\n"
+"Last-Translator: Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail."
+"com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "El projecte GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "Eina d'ajustaments del GNOME"
 
@@ -52,7 +53,7 @@ msgstr ""
 "gestionar les aplicacions d'inici i habilitar les icones d'escriptori entre "
 "d'altres."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Ajustaments"
 
@@ -68,40 +69,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Reinicialitza als valors per defecte"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Inhabilita totes les extensions del Shell"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_Quant a l'Ajustaments"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Continua"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "L'Extensions s'ha mogut"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "La gestió de les extensions s'ha mogut a {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Us recomanem descarregar el GNOME Extensions de {0} si la vostra distribució "
+"no l'inclou."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Reinicialitza als valors per defecte"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Voleu reiniciar tots els paràmetres d'ajustament a l'estat original?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "El GNOME Shell"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s mode)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "El GNOME Shell no s'està executant"
 
-#: gtweak/app.py:85
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Pàgina d'inici"
 
@@ -109,12 +128,12 @@ msgstr "Pàgina d'inici"
 msgid "Miscellaneous"
 msgstr "Miscel·lània"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
-msgstr "Cerca d'ajustaments..."
+msgstr "Cerca ajustaments..."
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "General"
 
@@ -519,53 +538,13 @@ msgstr "Ratolí tàctil"
 msgid "Disable While Typing"
 msgstr "Desactiva en escriure"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "No hi ha extensions instal·lades"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Explora en el Programari"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "S'està baixant l'extensió"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "S'ha produït un error en carregar l'extensió"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "L'extensió no és compatible amb la versió del Shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "S'ha produït un error desconegut de l'extensió"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "S'està actualitzant"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Error"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Actualització"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Extensions"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
 "Les aplicacions d'inici s'executen automàticament en començar la sessió."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Aplicacions d'inici"
 
@@ -578,7 +557,7 @@ msgstr "Cerca aplicacions..."
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "s'està executant"
 
@@ -590,15 +569,15 @@ msgstr "_Tanca"
 msgid "_Add"
 msgstr "_Afegeix"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "Suprimeix"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "Nova aplicació d'inici"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "Afegeix una aplicació nova per executar-se a l'inici"
 
@@ -867,17 +846,47 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(per defecte)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Els canvis de la configuració requereixen el reinici"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "S'ha de reiniciar la sessió perquè els canvis tinguin efecte"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Reinicia la sessió"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Inhabilita totes les extensions del Shell"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "No hi ha extensions instal·lades"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Explora en el Programari"
+
+#~ msgid "Extension downloading"
+#~ msgstr "S'està baixant l'extensió"
+
+#~ msgid "Error loading extension"
+#~ msgstr "S'ha produït un error en carregar l'extensió"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "L'extensió no és compatible amb la versió del Shell"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "S'ha produït un error desconegut de l'extensió"
+
+#~ msgid "Updating"
+#~ msgstr "S'està actualitzant"
+
+#~ msgid "Error"
+#~ msgstr "Error"
+
+#~ msgid "Update"
+#~ msgstr "Actualització"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
