@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-22 11:33+0000\n"
-"PO-Revision-Date: 2019-08-30 14:31+0300\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2021-01-04 21:35+0200\n"
 "Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Ελληνικά <>\n"
 "Language: el\n"
@@ -19,15 +19,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 2.3\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Το έργο GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "Εργαλείο μικρορυθμίσεων GNOME"
 
@@ -50,7 +50,7 @@ msgstr ""
 "τις ρυθμίσεις ενέργειας, να διαχειριστεί τις εφαρμογές εκκίνησης και να "
 "ενεργοποιήσει τα εικονίδια επιφάνειας εργασίας μεταξύ άλλων ρυθμίσεων."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Μικρορυθμίσεις"
 
@@ -67,41 +67,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "Επανα_φορά στις προεπιλογές"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Εγκατάσταση επεκτάσεων όλων των κελύφων"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_Περί του Μικρορυθμίσεις"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Συνέχεια"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Οι επεκτάσεις μετακινήθηκαν"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Η διαχείριση επεκτάσεων μετακινήθηκε στο {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Συνιστούμε τη λήψη των επεκτάσεων GNOME από το {0} εάν η διανομή σας δεν το "
+"περιλαμβάνει."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Επαναφορά προεπιλογών"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Επαναφορά όλων των μικρορυθμίσεων στην αρχική προεπιλεγμένη κατάσταση;"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s λειτουργία)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "Δεν εκτελείται το GNOME Shell"
 
-#: gtweak/app.py:85
-#| msgid "GTK+"
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Αρχική σελίδα"
 
@@ -109,12 +126,12 @@ msgstr "Αρχική σελίδα"
 msgid "Miscellaneous"
 msgstr "Διάφορα"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Αναζήτηση μικρορυθμίσεων…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Γενικά"
 
@@ -521,46 +538,6 @@ msgstr "Πινακίδα αφής"
 msgid "Disable While Typing"
 msgstr "Απενεργοποίηση κατά την πληκτρολόγηση"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Καμία εγκατεστημένη επέκταση"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Αναζήτηση στο Λογισμικό"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Λήψη επέκτασης"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Σφάλμα κατά το άνοιγμα της επέκτασης"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Η επέκταση δεν υποστηρίζεται από την έκδοση του κελύφους"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Άγνωστο σφάλμα επέκτασης"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Ενημέρωση"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Σφάλμα"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Ενημέρωση"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Επεκτάσεις"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Οι εφαρμογές εκκίνησης εκτελούνται αυτόματα κατά τη σύνδεση."
@@ -866,17 +843,47 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(προεπιλογή)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Οι αλλαγές απαιτούν επανεκκίνηση"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Η συνεδρία σας πρέπει να επανεκκινηθεί για να εφαρμοστούν οι αλλαγές"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Επανεκκίνηση συνεδρίας"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Εγκατάσταση επεκτάσεων όλων των κελύφων"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Καμία εγκατεστημένη επέκταση"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Αναζήτηση στο Λογισμικό"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Λήψη επέκτασης"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Σφάλμα κατά το άνοιγμα της επέκτασης"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Η επέκταση δεν υποστηρίζεται από την έκδοση του κελύφους"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Άγνωστο σφάλμα επέκτασης"
+
+#~ msgid "Updating"
+#~ msgstr "Ενημέρωση"
+
+#~ msgid "Error"
+#~ msgstr "Σφάλμα"
+
+#~ msgid "Update"
+#~ msgstr "Ενημέρωση"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
