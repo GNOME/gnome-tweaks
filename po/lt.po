@@ -4,14 +4,14 @@
 # FIRST AUTHOR <gymka@mail.ru>, 2011.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
 # Žygimantas Beručka <zygis@gnome.org>, 2012.
-# Aurimas Černius <aurisc4@gmail.com>, 2013-2019.
+# Aurimas Černius <aurisc4@gmail.com>, 2013-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lithuanian-gnome tweak tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-04 22:40+0000\n"
-"PO-Revision-Date: 2019-08-09 13:27+0300\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2021-01-04 13:18+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -20,15 +20,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 3.32.1\n"
+"X-Generator: Gtranslator 3.38.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME projektas"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "GNOME papildomų nustatymai"
 
@@ -51,7 +51,7 @@ msgstr ""
 "valdymo nustatymus, tvarkyti paleidžiamas programas, įjungti darbalaukio "
 "piktogramas ir kt."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Reguliavimai"
 
@@ -67,41 +67,59 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Atstatyti numatytuosius"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Išjungti visus apvalkalo plėtinius"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_Apie reguliavimus"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Tęsti"
+
+#: gtweak/app.py:24
+#| msgid "Extensions"
+msgid "Extensions Has Moved"
+msgstr "Plėtiniai buvo perkelti"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Plėtinių valdymas buvo perkeltas į {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Rekomenduojame atsisiųsti GNOME plėtinius iš {0}, jei jūsų distribucija jų "
+"neįtraukia."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Atstatyti numatytuosius"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Atstatyti visus tobulinimo nustatymus į jų pradines būsenas?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME apvalkalas"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s veiksena)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "GNOME apvalkalas nepaleistas"
 
-#: gtweak/app.py:84
-#| msgid "GTK+"
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Namų tinklalapis"
 
@@ -109,12 +127,12 @@ msgstr "Namų tinklalapis"
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Ieškoti reguliavimų…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Bendra"
 
@@ -518,46 +536,6 @@ msgstr "Jutiklinis kilimėlis"
 msgid "Disable While Typing"
 msgstr "Išjungti rašant"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Nėra įdiegtų plėtinių"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Naršyti programinėje įrangoje"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Plėtinių atsiuntimas"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Klaida įkeliant plėtinį"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Plėtinys nepalaiko apvalkalo versijos"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Nežinoma plėtinio klaida"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Atnaujinama"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Klaida"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Atnaujinti"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Plėtiniai"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Paleidžiamos programos bus automatiškai paleistos prisijungus."
@@ -653,36 +631,35 @@ msgstr "Sumažinti"
 msgid "Top Bar"
 msgstr "Viršutinė juosta"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:16
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Veiklų apžvalgos karštasis kampas"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:17
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Baterijos procentas"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Laikrodis"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Savaitės diena"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Data"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Sekundes"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Kalendorius"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:23
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Savaičių numeriai"
 
@@ -863,17 +840,47 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(numatytoji)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Konfigūracijos pakeitimai reikalauja perleidimo"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti seansą"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Paleisti seansą iš naujo"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Išjungti visus apvalkalo plėtinius"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Nėra įdiegtų plėtinių"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Naršyti programinėje įrangoje"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Plėtinių atsiuntimas"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Klaida įkeliant plėtinį"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Plėtinys nepalaiko apvalkalo versijos"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Nežinoma plėtinio klaida"
+
+#~ msgid "Updating"
+#~ msgstr "Atnaujinama"
+
+#~ msgid "Error"
+#~ msgstr "Klaida"
+
+#~ msgid "Update"
+#~ msgstr "Atnaujinti"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
