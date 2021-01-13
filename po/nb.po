@@ -2,14 +2,14 @@
 # Copyright (C) 2015 John Stowers <john.stowers@gmail.com>
 #
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2011-2018.
+# Kjartan Maraas <kmaraas@gnome.org>, 2011-2020.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-tweak-tool 3.30.x\n"
+"Project-Id-Version: gnome-tweak-tool 3.38.x\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-10-08 12:36+0000\n"
-"PO-Revision-Date: 2018-10-15 10:40+0200\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2021-01-13 14:52+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -22,8 +22,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "GNOME prosjektet"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "GNOME Tweaks"
 
@@ -44,14 +44,9 @@ msgstr ""
 "strømstyring, håndtere oppstartsprogrammer og slå på skrivebordsikoner blant "
 "andre innstillinger."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:82
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Konfigurasjonsendringer"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
@@ -65,57 +60,69 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Sett tilbake til utgangsverdier"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Slå av alle utvidelser for skallet"
+#: data/shell.ui:13
+msgid "_About Tweaks"
+msgstr "_Om konfigurasjonsendringer"
 
-#: data/shell.ui:17
-msgid "_About"
-msgstr "_Om"
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Fortsett"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "A_vslutt"
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Utvidelser har flyttet"
 
-#: gtweak/app.py:67
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Håndtering av utvidelser er flyttet til {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr "Vi anbefaler å laste ned GNOME utvidelser fra {0} hvis ikke distribusjonen din har dem."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Sett tilbake til utgangsverdier"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Tilbakestill alle innstillinger til utgangsverdiene?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME-shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s modus)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "GNOME-shell kjører ikke"
 
-#: gtweak/app.py:96
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:100
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Nettside"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "Forskjellig"
 
-#: gtweak/tweakview.py:98
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Søk konfigurasjon …"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:156 gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Generelt"
 
@@ -316,20 +323,20 @@ msgstr "Gammeldagse vindustitler"
 msgid "Scaling Factor"
 msgstr "Skaleringsfaktor"
 
-#: gtweak/tweaks/tweak_group_general.py:25
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "Hvilemodus når lokket lukkes"
 
-#: gtweak/tweaks/tweak_group_general.py:51
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "Animasjoner"
 
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:54
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "Overforsterking"
 
-#: gtweak/tweaks/tweak_group_general.py:55
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -341,7 +348,9 @@ msgstr "Emacs inndata"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:24
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr "Overstyrer snarveier til å bruke tastaturbindinger fra Emacs redigeringsprogrammet."
+msgstr ""
+"Overstyrer snarveier til å bruke tastaturbindinger fra Emacs "
+"redigeringsprogrammet."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
 #: gtweak/tweaks/tweak_group_keymouse.py:108
@@ -430,16 +439,16 @@ msgstr "Venstre Super"
 #: gtweak/tweaks/tweak_group_keymouse.py:223
 #: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Additional Layout Options"
-msgstr ""
+msgstr "Flere alternativer for utforming"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
-msgstr ""
+msgstr "Emulering av musklikk"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:271
 msgid "Fingers"
-msgstr ""
+msgstr "Fingre"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:273
 msgid ""
@@ -459,7 +468,7 @@ msgstr ""
 
 #: gtweak/tweaks/tweak_group_keymouse.py:325
 msgid "Don’t use mouse click emulation."
-msgstr ""
+msgstr "Ikke bruk emulering av musklikk"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:362
 msgid "Keyboard & Mouse"
@@ -489,61 +498,21 @@ msgstr "Aksellerasjonsprofil"
 msgid "Pointer Location"
 msgstr "Pekerlokasjon"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
-msgstr ""
+msgstr "Trykk Ctrl-tasten for å utheve pekeren."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Lim inn med midt-klikk"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Pekeplate"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Slå av når man skriver"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Ingen utvidelser installert"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Bla gjennom i Programvare"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Laster ned utvidelse"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Feil under lasting av utvidelse"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Utvidelsen støtter ikke denne versjonen av skallet"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Ukjent feil med utvidelse"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Oppdaterer"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Feil"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Oppdater"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Utvidelser"
 
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
@@ -636,44 +605,39 @@ msgstr "Maksimer"
 msgid "Minimize"
 msgstr "Minimer"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Programmeny"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Topplinje"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Hjørne for aktivitetsoversikt"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Batteriprosent"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Klokke"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Ukedag"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Dato"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Sekunder"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Kalender"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Ukenumre"
 
@@ -700,13 +664,17 @@ msgstr "Fokus når du henger over et punkt"
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
-msgstr "Vinduet fokuseres når pekeren henger over det. Vinduer beholder fokus når pekeren henger over skrivebordet."
+msgstr ""
+"Vinduet fokuseres når pekeren henger over det. Vinduer beholder fokus når "
+"pekeren henger over skrivebordet."
 
 #: gtweak/tweaks/tweak_group_windows.py:90
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
-msgstr "Vinduet fokuseres når peker henger over det. Fokus fjernes fra forrige vindu når peker henger over skrivebordet."
+msgstr ""
+"Vinduet fokuseres når peker henger over det. Fokus fjernes fra forrige vindu "
+"når peker henger over skrivebordet."
 
 #: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Window scaling"
@@ -841,19 +809,19 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(forvalg)</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Konfigurasjonsendringer krever omstart"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Økten må startes på nytt for at endringene skal tre i kraft"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Start økt på nytt"
