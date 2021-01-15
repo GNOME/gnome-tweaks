@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-04 22:40+0000\n"
-"PO-Revision-Date: 2019-08-21 21:24+0200\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2021-01-15 02:00+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
@@ -19,14 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Пројекат Гном"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "Гномов алат за лицкање"
 
@@ -47,7 +47,7 @@ msgstr ""
 "напајања, да управља почетним програмима, и да укључи иконице радне површи "
 "поред дргуих подешавања."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Лицкања"
 
@@ -65,40 +65,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Врати на подразумевано"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Искључи сва проширења шкољке"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_О Лицкањима"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Настави"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Проширења су премештена"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Управљање проширењима је премештено у програм „{0}“."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Препоручујемо преузимање програма „Проширења“ са места {0} уколико га ваша "
+"дистрибуција нија испоручила."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Врати на подразумевано"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Да вратим сва подешавања лицкања на изворно задато стање?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "Гномова шкољка"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s мод)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "Гномова шкољка није покренута"
 
-#: gtweak/app.py:84
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "ГТК"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Веб страница"
 
@@ -106,12 +124,12 @@ msgstr "Веб страница"
 msgid "Miscellaneous"
 msgstr "Остало"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Тражи лицкања…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Опште"
 
@@ -510,46 +528,6 @@ msgstr "Додирна табла"
 msgid "Disable While Typing"
 msgstr "Онемогући за време куцања"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Нема инсталираних проширења"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Претражи међу Програмима"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Преузимање проширења"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Не могу да учитам проширење"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Проширење не подржава ово издање шкољке"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Непозната грешка проширења"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Ажурирам"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Грeшкa"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Ажурирај"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Проширења"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Почетни програми се покрећу аутоматски када се пријавите."
@@ -561,7 +539,7 @@ msgstr "Почетни програми"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
-msgstr "Тражи програме..."
+msgstr "Тражи програме…"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
 #: gtweak/tweaks/tweak_group_startup.py:58
@@ -645,36 +623,35 @@ msgstr "Умањи"
 msgid "Top Bar"
 msgstr "Горња трака"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:16
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Приказ активности у врућем углу"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:17
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Проценат напуњености батерије"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Сат"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Дан викенда"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Датум"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Секунде"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Календар"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:23
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Бројеви недеља"
 
@@ -859,17 +836,47 @@ msgstr "Ваком"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(подразумевана)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Промене подешавања захтевају поновно покретање"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Морате поново покренути сесију да би измене ступиле на снагу"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Поново покрени сесију"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Искључи сва проширења шкољке"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Нема инсталираних проширења"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Претражи међу Програмима"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Преузимање проширења"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Не могу да учитам проширење"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Проширење не подржава ово издање шкољке"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Непозната грешка проширења"
+
+#~ msgid "Updating"
+#~ msgstr "Ажурирам"
+
+#~ msgid "Error"
+#~ msgstr "Грeшкa"
+
+#~ msgid "Update"
+#~ msgstr "Ажурирај"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
