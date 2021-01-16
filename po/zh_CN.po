@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-22 11:33+0000\n"
-"PO-Revision-Date: 2019-09-13 01:05+0800\n"
+"POT-Creation-Date: 2020-12-09 21:53+0000\n"
+"PO-Revision-Date: 2021-01-16 10:16-0500\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -23,14 +23,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 3.32.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "GNOME Tweaks"
 
@@ -50,7 +50,7 @@ msgstr ""
 "可以安装和管理主题和扩展，更改电源选项，管理自启动程序，以及启用桌面图标和其"
 "它设置。"
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "优化"
 
@@ -66,40 +66,56 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "重置为默认值(_R)"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "禁用全部 Shell 扩展"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "关于 Tweaks(_A)"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "继续(_C)"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "扩展已移动"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "扩展管理已移动至 {0}。"
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr "如果您的发行版没有提供相应扩展的话，我们推荐您从 {0} 下载 GNOME 扩展。"
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "重置为默认值"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "重置所有设置到默认状态？"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "（%s 模式）"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell 未在运行"
 
-#: gtweak/app.py:85
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "主页"
 
@@ -107,12 +123,12 @@ msgstr "主页"
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "搜索设置…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "通用"
 
@@ -509,52 +525,12 @@ msgstr "触摸板"
 msgid "Disable While Typing"
 msgstr "打字时禁用"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "未安装扩展"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "在“软件”中浏览"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "正在下载扩展"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "载入扩展出错"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "扩展不支持当前 Shell 版本"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "未知扩展错误"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "正在更新"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "错误"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "更新"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "扩展"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "“开机启动程序”在您登录系统时自动启动。"
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "开机启动程序"
 
@@ -567,7 +543,7 @@ msgstr "搜索应用程序…"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "正在运行"
 
@@ -579,15 +555,15 @@ msgstr "关闭(_C)"
 msgid "_Add"
 msgstr "添加(_A)"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "移除"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "新建开机启动程序"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "添加新程序到开机启动"
 
@@ -843,17 +819,47 @@ msgstr "Wacom 手写板"
 msgid "%s <i>(default)</i>"
 msgstr "%s<i>（默认）</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "配置更改需要重新启动"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "需要重启会话以使设置生效"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "重启会话"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "禁用全部 Shell 扩展"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "未安装扩展"
+
+#~ msgid "Browse in Software"
+#~ msgstr "在“软件”中浏览"
+
+#~ msgid "Extension downloading"
+#~ msgstr "正在下载扩展"
+
+#~ msgid "Error loading extension"
+#~ msgstr "载入扩展出错"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "扩展不支持当前 Shell 版本"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "未知扩展错误"
+
+#~ msgid "Updating"
+#~ msgstr "正在更新"
+
+#~ msgid "Error"
+#~ msgstr "错误"
+
+#~ msgid "Update"
+#~ msgstr "更新"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
