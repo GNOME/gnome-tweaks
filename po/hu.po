@@ -10,23 +10,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-22 11:33+0000\n"
-"PO-Revision-Date: 2019-08-24 22:12+0200\n"
-"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2021-01-11 10:27+0100\n"
+"Last-Translator: Meskó Balázs <mesko.balazs@fsf.hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "A GNOME projekt"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "GNOME Finomhangoló"
 
@@ -48,7 +48,7 @@ msgstr ""
 "módosítására, az indítópult alkalmazásainak kezelésére és egyéb beállítások "
 "közt az asztali ikonok bekapcsolására."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Finomhangoló"
 
@@ -64,42 +64,59 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Alapértelmezések visszaállítása"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Minden Shell-bővítmény letiltása"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "A Finomhangoló _névjegye"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Folytatás"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "A kiterjesztések elköltöztek"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "A kiterjesztéskezelés elköltözött ide: {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Javasoljuk, hogy a GNOME Kiterjesztéseket innen töltse le, ha a "
+"disztribúciója nem tartalmazza: {0}."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Alapértelmezések visszaállítása"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr ""
 "Visszaállít minden finomhangolást az eredeti alapértelmezett állapotra?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s mód)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "A GNOME Shell nem fut"
 
-#: gtweak/app.py:85
-#| msgid "GTK+"
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Honlap"
 
@@ -107,12 +124,12 @@ msgstr "Honlap"
 msgid "Miscellaneous"
 msgstr "Egyebek"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Finomhangolások keresése…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Általános"
 
@@ -517,46 +534,6 @@ msgstr "Érintőtábla"
 msgid "Disable While Typing"
 msgstr "Letiltás gépelés közben"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Nincsenek kiterjesztések telepítve"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Tallózás a Szoftverben"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Kiterjesztések letöltése"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Hiba a bővítmény betöltésekor"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "A bővítmény nem támogatja a Gnome Shell ezen verzióját"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Ismeretlen bővítményhiba"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Frissítés"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Hiba"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Frissítés"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Kiterjesztések"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Az indítópult alkalmazásai automatikusan elindulnak belépéskor."
@@ -862,14 +839,44 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(alapértelmezett)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "A beállítások változásai újraindítást igényelnek"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "A beállítások életbe lépéséhez újra kell indítani az alkalmazásokat"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Munkamenet újraindítása"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Minden Shell-bővítmény letiltása"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Nincsenek kiterjesztések telepítve"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Tallózás a Szoftverben"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Kiterjesztések letöltése"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Hiba a bővítmény betöltésekor"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "A bővítmény nem támogatja a Gnome Shell ezen verzióját"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Ismeretlen bővítményhiba"
+
+#~ msgid "Updating"
+#~ msgstr "Frissítés"
+
+#~ msgid "Error"
+#~ msgstr "Hiba"
+
+#~ msgid "Update"
+#~ msgstr "Frissítés"
