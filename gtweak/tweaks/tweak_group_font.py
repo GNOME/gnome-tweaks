@@ -2,19 +2,28 @@
 # SPDX-License-Identifier: GPL-3.0+
 # License-Filename: LICENSES/GPL-3.0
 
+import logging
+
 from gi.repository import Gio, Gtk
 
 from gtweak.tweakmodel import Tweak
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSpinButtonTweak, GSettingsFontButtonTweak
-
+from gtweak.gsettings import GSettingsSetting
 
 class FontXSettingsTweak(Gtk.Box, Tweak):
 
     def __init__(self, **options):
         Gtk.Box.__init__(self)
         Tweak.__init__(self, _("Hinting"), _("Antialiasing"))
-
-        self.settings = Gio.Settings("org.gnome.settings-daemon.plugins.xsettings")
+        
+        try:
+            self.settings = GSettingsSetting("org.gnome.settings-daemon.plugins.xsettings")
+        except:
+            self.settings = None
+            logging.warn("org.gnome.settings-daemon.plugins.xsettings not installed or running")
+        
+        if not self.settings:
+            return
 
         self.set_spacing(12)
         self.props.margin_top = 12
