@@ -21,12 +21,12 @@ class FontXSettingsTweak(Gtk.Box, Tweak):
         except:
             self.settings = None
             logging.warn("org.gnome.desktop.interface not installed or running")
-        
-        if not self.settings:
-            return
 
         self.set_spacing(12)
         self.props.margin_top = 12
+
+        if not self.settings:
+            return
 
         label = Gtk.Label(_("Hinting"))
         label.props.yalign = 0.0
