@@ -1,53 +1,77 @@
 {
-    "app-id" : "org.gnome.Tweaks",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "master",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "gnome-tweaks",
-    "tags" : [
-        "nightly"
+    "app-id": "org.gnome.Tweaks",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "command": "gnome-tweaks",
+    "tags": [
+        "devel"
     ],
-    "desktop-file-name-prefix" : "(Nightly) ",
-    "finish-args" : [
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=wayland",
-        "--talk-name=org.gnome.Shell",
-        "--filesystem=/usr/share/glib-2.0/schemas:ro",
+    "desktop-file-name-prefix": "(Development) ",
+    "finish-args": [
+        "--device=dri",
         "--filesystem=xdg-run/dconf",
         "--filesystem=~/.config/dconf:rw",
         "--talk-name=ca.desrt.dconf",
-        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
+        "--filesystem=host",
+        "--own-name=org.gnome.tweaks",
+        "--socket=session-bus",
+        "--socket=system-bus",
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=system-bus",
+        "--talk-name=org.gnome.Shell"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/*.la",
         "/lib/*.a",
         "/lib/pkgconfig",
         "/share/gir-1.0"
     ],
-    "modules" : [
+    "modules": [
         {
-            "name" : "gnome-desktop",
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "gnome-desktop",
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/gnome-desktop.git"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/gnome-desktop.git"
                 }
             ]
         },
         {
-            "name" : "gnome-tweaks",
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "libhandy",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dprofiling=false",
+                "-Dintrospection=enabled",
+                "-Dgtk_doc=false",
+                "-Dtests=false",
+                "-Dexamples=false",
+                "-Dvapi=false",
+                "-Dglade_catalog=disabled"
+            ],
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/gnome-tweaks.git"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libhandy.git"
+                }
+            ]
+        },
+        {
+            "name": "gnome-tweaks",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/gnome-tweaks.git"
                 },
                 {
-                    "type" : "patch",
-                    "path" : "gtweak-hardcode-system-dirs.patch"
+                    "type": "patch",
+                    "path": "gtweak-hardcode-system-dirs.patch"
                 }
             ]
         }
