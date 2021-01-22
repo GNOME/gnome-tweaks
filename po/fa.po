@@ -2,15 +2,15 @@
 # Copyright (C) 2011 Iranian Free Software Users Group (IFSUG.org)translation team.
 # Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
-# Danial Behzadi <dani.behzi@ubuntu.com>, 2018, 2019.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2011-2017.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2018-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-22 11:08+0000\n"
-"PO-Revision-Date: 2019-08-22 11:30+0000\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2021-01-22 13:47+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <translate@ifsug.org>\n"
 "Language: fa\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "پروژهٔ گنوم"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "سیخونک‌های گنوم"
 
@@ -47,7 +47,7 @@ msgstr ""
 "تغییر داده،برنامه‌های راه‌انداز را مدیریت و نقشک‌های میزکار را در کنار دیگر "
 "تنظیمات فعّال کند."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "سیخونک‌ها"
 
@@ -62,40 +62,56 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_بازنشانی به پیش‌گزیده‌ها"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "غیرفعّال کردن تمام افزونه‌های پوسته"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "دربارهٔ سیخونک‌ها"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_ادامه"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "افزونه‌ها منتقل شده"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "مدیریت افزونه‌ها به {0} منتقل شد."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr "پیشنهاد می‌کنیم اگر توزیعتان افزونهٔ گنومی را ندارد، از {0} بارگیریش کنید."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "بازنشانی به پیش‌گزیده‌ها"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "بازنشاندن تمام تغییرات به وضعیت اولیه؟"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "پوستهٔ گنوم"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(حالت %s)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "پوسته گنوم درحال اجرا نیست"
 
-#: gtweak/app.py:85
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "صفحهٔ خانگی"
 
@@ -103,12 +119,12 @@ msgstr "صفحهٔ خانگی"
 msgid "Miscellaneous"
 msgstr "متفرقه"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "جست‌وجوی سیخونک‌ها…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "عمومی"
 
@@ -508,46 +524,6 @@ msgstr "صفحهٔ لمسی"
 msgid "Disable While Typing"
 msgstr "غیرفعّال هنگام نوشتن"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "هیچ افزونه‌ای نصب نشده است"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "مرور در نرم‌افزارها"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "درحال بارگیری افزونه"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "خطا در بارکردن افزونه"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "افزونه از این نگارش پوسته پشتیبانی نمی‌کند"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "خطای افزونهٔ ناشناس"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "درحال به‌روز رسانی"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "خطا"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "به‌روز رسانی"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "افزونه‌ها"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "برنامه‌های راه‌انداز، در هنگام ورود به طور خودکار اجرا می‌شوند."
@@ -848,17 +824,47 @@ msgstr "وکوم"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(پیش‌گزیده)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "تغییرات پیکربندی نیاز به شروع دوباره دارد"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "برای اعمال تغییرات نیاز است نشستتان دوباره شروع شود"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "شروع دوبارهٔ نشست"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "غیرفعّال کردن تمام افزونه‌های پوسته"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "هیچ افزونه‌ای نصب نشده است"
+
+#~ msgid "Browse in Software"
+#~ msgstr "مرور در نرم‌افزارها"
+
+#~ msgid "Extension downloading"
+#~ msgstr "درحال بارگیری افزونه"
+
+#~ msgid "Error loading extension"
+#~ msgstr "خطا در بارکردن افزونه"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "افزونه از این نگارش پوسته پشتیبانی نمی‌کند"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "خطای افزونهٔ ناشناس"
+
+#~ msgid "Updating"
+#~ msgstr "درحال به‌روز رسانی"
+
+#~ msgid "Error"
+#~ msgstr "خطا"
+
+#~ msgid "Update"
+#~ msgstr "به‌روز رسانی"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
