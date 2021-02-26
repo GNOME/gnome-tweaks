@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-24\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-08-22 11:33+0000\n"
-"PO-Revision-Date: 2019-09-03 15:26+0200\n"
-"Last-Translator: gogo <linux.hr@protonmail.com>\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2021-02-26 09:58+0100\n"
+"Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -17,14 +17,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME projekt"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "GNOME prilagoditelj"
 
@@ -45,7 +45,7 @@ msgstr ""
 "energije, upravljati pokretanjem aplikacijama i omogućiti ikone radne "
 "površine i još mnogo drugih postavki."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Prilagodbe"
 
@@ -60,40 +60,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Vrati na izvorno"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Onemogući sva proširenja ljuske"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_O Prilagodbama"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Nastavi"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Proširenja su premještena"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Upravljanje proširenjima je premješteno u {0}."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Preporučljivo je preuzimanje GNOME proširenja s {0} ako ih vaša distribucija "
+"ne uključuje."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Vrati na izvorno"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Želite li vratiti sve prilagođene postavke na izvorno stanje?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME ljuska"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s način)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "GNOME ljuska nije pokrenuta"
 
-#: gtweak/app.py:85
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Naslovnica"
 
@@ -101,12 +119,12 @@ msgstr "Naslovnica"
 msgid "Miscellaneous"
 msgstr "Ostalo"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Pretraži prilagodbe…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Općenito"
 
@@ -508,46 +526,6 @@ msgstr "Touchpad"
 msgid "Disable While Typing"
 msgstr "Onemogući pri tipkanju"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Nema instaliranih proširenja"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Pregledaj u Softveru"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Preuzimanje proširenja"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Greška učitavanja proširenja"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Proširenje ne podržava inačicu ljuske"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Nepoznata greška proširenja"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Nadopuna"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Greška"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Nadopuni"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Proširenja"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Pokrenute aplikacije se automatski pokrenu kada se prijavite."
@@ -852,17 +830,47 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(zadana)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Promjene postavki zahtijevaju ponovno pokretanje"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Vaša sesija se mora ponovno pokrenuti za primjenu promjena"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Ponovno pokreni sesiju"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Onemogući sva proširenja ljuske"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Nema instaliranih proširenja"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Pregledaj u Softveru"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Preuzimanje proširenja"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Greška učitavanja proširenja"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Proširenje ne podržava inačicu ljuske"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Nepoznata greška proširenja"
+
+#~ msgid "Updating"
+#~ msgstr "Nadopuna"
+
+#~ msgid "Error"
+#~ msgstr "Greška"
+
+#~ msgid "Update"
+#~ msgstr "Nadopuni"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
