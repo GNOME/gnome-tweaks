@@ -7,23 +7,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2020-03-28 21:11+0000\n"
-"PO-Revision-Date: 2020-06-26 09:07+0500\n"
+"POT-Creation-Date: 2020-12-09 21:53+0000\n"
+"PO-Revision-Date: 2021-03-03 08:35+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME жобасы"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "GNOME қосымша баптаулары"
 
@@ -45,7 +45,7 @@ msgstr ""
 "өзгерту, жүйеге кірген кезде автожөнелтілетін қолданбаларды басқару, жұмыс "
 "үстел таңбашаларын іске қосу және т.б. баптауларды өзгерте алады."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:110
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Қосымша баптаулар"
 
@@ -60,41 +60,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "Бастапқы түріне та_стау"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Барлық Shell кеңейтулерін сөндіру"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "Қосымша баптаулар қолданбасы тур_алы"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "Жалға_стыру"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "Кеңейтулер жылжытылды"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Кеңейтулерді басқару мүмкіндігі {0} ішіне ауысты."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Егер дистрибутивіңізде жоқ болса, GNOME Кеңейтулер қолданбасын {0} ішінен "
+"жүктеп алуды ұсынамыз."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "Бастапқы түріне тастау"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Барлық қосымша баптауларды бастапқы мәндеріне тастау керек пе?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s режимі)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell орындалып тұрған жоқ"
 
-#: gtweak/app.py:85
-#| msgid "GTK+"
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "Үй парағы"
 
@@ -107,7 +124,7 @@ msgid "Search Tweaks…"
 msgstr "Қосымша баптауларды іздеу…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:202 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Жалпы"
 
@@ -512,53 +529,13 @@ msgstr "Тачпад"
 msgid "Disable While Typing"
 msgstr "Теру кезінде сөндіру"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Кеңейтулер орнатылмаған"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "БҚ қолданбасында шолу"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Кеңейтуді жүктеп алу"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Кеңейтуді жүктеп алу қатесі"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Кеңейту бұл shell нұсқасын қолдамайды"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Кеңейтудің белгісіз қатесі"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Жаңарту"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Қате"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Жаңарту"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Кеңейтулер"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
 "Іске автоқосылатын қолданбалар сіз жүйеге кірген кезде, автожөнелтіледі."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Автожөнелтілетін қолданбалар"
 
@@ -571,7 +548,7 @@ msgstr "Қолданбалардан іздеу…"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "орындалуда"
 
@@ -583,15 +560,15 @@ msgstr "_Жабу"
 msgid "_Add"
 msgstr "Қо_су"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "Өшіру"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "Жаңа автожөнелтілетін қолданбасы"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "Жүйеге кірген кезде автожөнелтілетін қолданбаны қосу"
 
@@ -856,17 +833,47 @@ msgstr "Wacom"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(бастапқы)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "Жасалған өзгерістер сессияны жаңадан бастауды талап етеді"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Өзгерістер іске асуы үшін сессияны қайта іске қосу керек"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "Сессияны қайта қосу"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Барлық Shell кеңейтулерін сөндіру"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Кеңейтулер орнатылмаған"
+
+#~ msgid "Browse in Software"
+#~ msgstr "БҚ қолданбасында шолу"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Кеңейтуді жүктеп алу"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Кеңейтуді жүктеп алу қатесі"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Кеңейту бұл shell нұсқасын қолдамайды"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Кеңейтудің белгісіз қатесі"
+
+#~ msgid "Updating"
+#~ msgstr "Жаңарту"
+
+#~ msgid "Error"
+#~ msgstr "Қате"
+
+#~ msgid "Update"
+#~ msgstr "Жаңарту"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
