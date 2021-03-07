@@ -1,14 +1,14 @@
 # Korean translation for gnome-tweak-tool.
 # Copyright (C) 2012 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Seong-ho Cho <shcho@gnome.org>, 2012-2020.
+# Seong-ho Cho <shcho@gnome.org>, 2012-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-09-25 11:38+0000\n"
-"PO-Revision-Date: 2020-03-03 12:44+0900\n"
+"POT-Creation-Date: 2020-12-09 21:53+0000\n"
+"PO-Revision-Date: 2021-03-06 10:32+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: 한국어 <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -16,14 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "그놈 프로젝트"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "그놈 기능 개선"
 
@@ -43,7 +43,7 @@ msgstr ""
 "여러가지 설정 항목 중 테마와 확장자 설치 및 관리, 전원 설정 관리, 시작 프로그"
 "램 관리, 데스크톱 아이콘 활성화 관리를 다룰 수 있습니다."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "기능 개선"
 
@@ -59,40 +59,58 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "기본값으로 초기화(_R)"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "모든 쉘 확장 비활성화"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "기능 개선 정보(_A)"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "계속(_C)"
+
+#: gtweak/app.py:24
+msgid "Extensions Has Moved"
+msgstr "확장 기능을 옮겼습니다"
+
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "확장 관리 프로그램을 {0}(으)로 옮겼습니다."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"배포판에서 그놈 확장 기능을 제공하지 않는다면 {0}에서 그놈 확장을 다운로드하"
+"시는게 좋습니다."
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
 msgstr "기본값으로 재설정"
 
-#: gtweak/app.py:57
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
 msgstr "모든 기능 개선 설정을 초기 기본 상태로 되돌리시겠습니까?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "그놈 쉘"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:95
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s 모드)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:98
 msgid "GNOME Shell is not running"
 msgstr "그놈 쉘 실행 중이 아닙니다"
 
-#: gtweak/app.py:85
+#: gtweak/app.py:100
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:92
+#: gtweak/app.py:107
 msgid "Homepage"
 msgstr "홈페이지"
 
@@ -100,12 +118,12 @@ msgstr "홈페이지"
 msgid "Miscellaneous"
 msgstr "기타"
 
-#: gtweak/tweakview.py:141
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "기능 개선 항목 검색…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "일반"
 
@@ -510,52 +528,12 @@ msgstr "터치패드"
 msgid "Disable While Typing"
 msgstr "입력 도중 비 활성화"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "설치한 확장이 없습니다"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "소프트웨어에서 탐색"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "확장 다운로드 중"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "확장을 불러오는 중 오류"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "확장은 쉘 버전을 지원하지 않습니다"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "알 수 없는 확장 오류"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "업데이트 중"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "오류"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "업데이트"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "확장"
-
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "시작 프로그램은 로그인할 때 자동으로 시작하는 프로그램입니다."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "시작 프로그램"
 
@@ -568,7 +546,7 @@ msgstr "프로그램 검색…"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "실행 중"
 
@@ -580,15 +558,15 @@ msgstr "닫기(_C)"
 msgid "_Add"
 msgstr "추가(_A)"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "제거"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "새로운 시작 프로그램"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "시동시 실행할 새 프로그램 추가"
 
@@ -850,17 +828,47 @@ msgstr "와콤"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(기본)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:337
 msgid "Configuration changes require restart"
 msgstr "설정을 바꾸면 다시 시작해야 함"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "바뀐 설정대로 프로그램이 동작하려면 세션을 다시 시작해야합니다"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:342
 msgid "Restart Session"
 msgstr "세션 다시 시작"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "모든 쉘 확장 비활성화"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "설치한 확장이 없습니다"
+
+#~ msgid "Browse in Software"
+#~ msgstr "소프트웨어에서 탐색"
+
+#~ msgid "Extension downloading"
+#~ msgstr "확장 다운로드 중"
+
+#~ msgid "Error loading extension"
+#~ msgstr "확장을 불러오는 중 오류"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "확장은 쉘 버전을 지원하지 않습니다"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "알 수 없는 확장 오류"
+
+#~ msgid "Updating"
+#~ msgstr "업데이트 중"
+
+#~ msgid "Error"
+#~ msgstr "오류"
+
+#~ msgid "Update"
+#~ msgstr "업데이트"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
