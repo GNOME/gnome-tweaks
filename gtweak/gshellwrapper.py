@@ -90,11 +90,10 @@ class GnomeShellFactory:
         try:
             proxy = _ShellProxy()
             settings = GSettingsSetting("org.gnome.shell")
-            v = list(map(int, proxy.version.split(".")))
 
             self.shell = GnomeShell(proxy, settings)
 
-            logging.debug("Shell version: %s", str(v))
+            logging.debug("Shell version: %s", str(proxy.version))
         except:
             self.shell = None
             logging.warn("Shell not installed or running")
