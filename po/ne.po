@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome Nepali Translation Project\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-08-10 23:06+0000\n"
-"PO-Revision-Date: 2017-08-13 20:42+0545\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
+"POT-Creation-Date: 2020-12-02 01:12+0000\n"
+"PO-Revision-Date: 2021-04-19 20:09+0545\n"
 "Last-Translator: Pawan Chitrakar <chautari@gmail.com>\n"
 "Language-Team: Nepali Translation Team <chautari@gmail.com>\n"
 "Language: ne\n"
@@ -17,840 +16,889 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2;plural=(n!=1);\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.4.2\n"
 
-#: data/gnome-tweak-tool.appdata.xml.in:6 gtweak/app.py:36 gtweak/utils.py:311
-#: gtweak/utils.py:327
+#: data/org.gnome.tweaks.appdata.xml.in:7
+msgid "The GNOME Project"
+msgstr "जिनोम परियोजना"
+
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
+#: gtweak/utils.py:335
 msgid "GNOME Tweaks"
 msgstr "जिनोम ट्विकस्"
 
-#: data/gnome-tweak-tool.appdata.xml.in:7 data/gnome-tweak-tool.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME 3 settings"
-msgstr "जिनोम ३उन्नत ट्वीक सेटिङ "
+msgstr "जिनोम ३उन्नत ट्वीक सेटिङ"
 
-#: data/gnome-tweak-tool.appdata.xml.in:9
+#: data/org.gnome.tweaks.appdata.xml.in:12
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
-msgstr ""
+msgstr "जिनोम ट्वीकले उन्नत जिनोम विकल्प समायोजन गर्न अनुमति दिन्छ ।."
 
-#: data/gnome-tweak-tool.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:15
 msgid ""
-"It can install and manage themes and extensions, change power settings, "
-"manage startup applications, and enable desktop icons among other settings."
+"It can install and manage themes and extensions, change power settings, manage startup "
+"applications, and enable desktop icons among other settings."
 msgstr ""
+"यसले विषयवस्तु हरू र विस्तारहरू स्थापना र व्यवस्थापन गर्न सक्छ, पावर सेटिङहरू परिवर्तन गर्न सक्छ, सुरुआत "
+"अनुप्रयोगहरू प्रबन्ध गर्न सक्छ, र अन्य सेटिङहरूको बीचमा डेस्कटप प्रतिमाहरू सक्षम पार्न सक्दछ।."
 
-#: data/gnome-tweak-tool.desktop.in:3 gtweak/tweakview.py:103
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "ट्विकस्"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-tweak-tool.desktop.in:6
-msgid "gnome-tweak-tool"
-msgstr "gnome-tweak-tool"
-
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-tweak-tool.desktop.in:13
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr ""
+#: data/org.gnome.tweaks.desktop.in:14
+msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr "सेटिङ; उन्नत; प्राथमिकता; विस्तारहरू; फन्ट; विषयवस्तु; XKB; कुञ्जीपाटी; टाइपिङ्ग;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
-msgstr "पूर्वनिर्देशित फेरि मिलाउनुहोला "
+msgstr "पूर्वनिर्देशित फेरि मिलाउनुहोला"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "सबै सेल विस्तारहरू असक्षम पार्नुहोस्"
+#: data/shell.ui:13
+msgid "_About Tweaks"
+msgstr "ट्विकस् बारेमा"
 
-#: data/shell.ui:17
-msgid "_About"
-msgstr "बारेमा"
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "जारी राख्नुहोस्"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "अन्त्य गर्नुहोस्"
+#: gtweak/app.py:24
+#, fuzzy
+#| msgid "Extensions"
+msgid "Extensions Has Moved"
+msgstr "विस्तारहरू"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "विस्तार व्यवस्थापन {0} सारिएको छ ।."
+
+#: gtweak/app.py:31
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does not include "
+"it."
+msgstr "यदि तपाईँको वितरणमा यो समावेश छैन भने {0} जिनोम विस्तारहरू डाउनलोड गर्ने सुझाव दिन्छौं।"
+
+#: gtweak/app.py:75
 msgid "Reset to Defaults"
-msgstr "पूर्वनिर्देशित फेरि मिलाउनुहोला "
+msgstr "पूर्वनिर्देशित फेरि मिलाउनुहोला"
 
-#: gtweak/app.py:81
+#: gtweak/app.py:76
 msgid "Reset all tweak settings to the original default state?"
-msgstr ""
+msgstr "सबै ट्वीक सेटिङलाई मौलिक पूर्वनिर्धारित स्थितिमा रिसेट गर्नुहुन्छ?"
 
-#: gtweak/app.py:102 gtweak/app.py:104
+#: gtweak/app.py:93 gtweak/app.py:95
 msgid "GNOME Shell"
 msgstr "जिनोम शेल"
 
-#: gtweak/app.py:104
-#, fuzzy, python-format
+#: gtweak/app.py:95
+#, python-format
 msgid "(%s mode)"
-msgstr "तह(s) मोड सेट गर्नुहोस्: %s"
+msgstr "(%s शैली)"
+
+#: gtweak/app.py:98
+msgid "GNOME Shell is not running"
+msgstr "जिनोम सेल संचालन भइरहेको छैन"
+
+#: gtweak/app.py:100
+msgid "GTK"
+msgstr "GTK"
 
 #: gtweak/app.py:107
-#, fuzzy
-#| msgid "GNOME Shell not running"
-msgid "GNOME Shell is not running"
-msgstr "जिनोम शेल"
-
-#: gtweak/app.py:109
-#, fuzzy
-msgid "GTK+"
-msgstr "थप GTK+ मोड्युलहरू लोड गर्नुहोस्"
-
-#: gtweak/app.py:116
 msgid "Homepage"
 msgstr "गृहपृष्ठ"
 
-#: gtweak/tweakmodel.py:43
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "विविध"
 
-#: gtweak/tweakview.py:119
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
-msgstr "ट्विकस् खोज"
+msgstr "ट्विकस् खोज…"
 
-#: gtweak/tweaks/tweak_group_appearance.py:41
-#: gtweak/tweaks/tweak_group_startup.py:57
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+msgid "General"
+msgstr "साधारण"
+
+#: gtweak/tweaks/tweak_group_appearance.py:54 gtweak/tweaks/tweak_group_startup.py:42
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: gtweak/tweaks/tweak_group_appearance.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:88
+#, fuzzy
+msgid "Error writing setting"
+msgstr "लेबल सेट गर्दा त्रुटि"
+
+#: gtweak/tweaks/tweak_group_appearance.py:94
 msgid "Icons"
 msgstr "प्रतिमाहरू"
 
-#: gtweak/tweaks/tweak_group_appearance.py:83
+#: gtweak/tweaks/tweak_group_appearance.py:109
 msgid "Cursor"
 msgstr "कर्सरको स्थिति"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Shell"
 msgstr "सेल"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:133
 msgid "Install custom or user themes for gnome-shell"
-msgstr ""
+msgstr "जिनोम-सेलका लागि अनुकूल वा प्रयोगकर्ता विषयवस्तु स्थापना गर्नुहोस्"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:136
 msgid "Unknown error"
 msgstr "अज्ञात त्रुटि"
 
-#: gtweak/tweaks/tweak_group_appearance.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:141
 msgid "Shell not running"
-msgstr "सेल संचालन भइरहेको छैन ।"
+msgstr "सेल संचालन भइरहेको छैन"
 
-#: gtweak/tweaks/tweak_group_appearance.py:140
+#: gtweak/tweaks/tweak_group_appearance.py:163
 msgid "Shell user-theme extension incorrectly installed"
-msgstr ""
+msgstr "शेल प्रयोगकर्ता-विषयवस्तु विस्तार गलत तरिकाले स्थापना भयो"
 
-#: gtweak/tweaks/tweak_group_appearance.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Shell user-theme extension not enabled"
-msgstr ""
+msgstr "शेल प्रयोगकर्ता विषयवस्तु विस्तार सक्षम पारिएको छैन"
 
-#: gtweak/tweaks/tweak_group_appearance.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:169
 #, fuzzy
 msgid "Could not list shell extensions"
 msgstr "जिनोम सेल  विस्तारहरू कन्फिगर"
 
-#: gtweak/tweaks/tweak_group_appearance.py:175
+#: gtweak/tweaks/tweak_group_appearance.py:199
 msgid "<i>Default</i>"
 msgstr "<i>पूर्वनिर्धारित</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:181
+#: gtweak/tweaks/tweak_group_appearance.py:205
 msgid "Select a theme"
-msgstr "विषयवस्तु चयन गर्नुहोस्:"
+msgstr "विषयवस्तु चयन गर्नुहोस्"
 
-#: gtweak/tweaks/tweak_group_appearance.py:230
+#: gtweak/tweaks/tweak_group_appearance.py:254
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s विषयवस्तु  अध्याबधीक सफल"
 
-#: gtweak/tweaks/tweak_group_appearance.py:232
+#: gtweak/tweaks/tweak_group_appearance.py:256
 #, python-format
 msgid "%s theme installed successfully"
-msgstr "%s विषयवस्तु  स्थापना सफल"
+msgstr "%s विषयवस्तु स्थापना सफल"
 
-#: gtweak/tweaks/tweak_group_appearance.py:240
+#: gtweak/tweaks/tweak_group_appearance.py:264
 msgid "Error installing theme"
 msgstr "विषयवस्तु  स्थापना गर्दा त्रुटि"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:245
+#: gtweak/tweaks/tweak_group_appearance.py:269
 msgid "Invalid theme"
-msgstr "अवैध विषयवस्तु "
+msgstr "अवैध विषयवस्तु"
 
-#: gtweak/tweaks/tweak_group_appearance.py:257
+#: gtweak/tweaks/tweak_group_appearance.py:281
 msgid "Appearance"
 msgstr "मोहडा"
 
 #. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
 #. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:261
-msgid "Animations"
-msgstr "एनिमेसनहरू"
-
-#: gtweak/tweaks/tweak_group_appearance.py:262
+#: gtweak/tweaks/tweak_group_appearance.py:284
 msgid "Themes"
 msgstr "विषयवस्तु"
 
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Show Icons"
-msgstr "प्रतिमा मात्र देखउनुहोस्"
+#: gtweak/tweaks/tweak_group_appearance.py:289
+msgid "Sound"
+msgstr "ध्वनि"
 
-#: gtweak/tweaks/tweak_group_desktop.py:23
-msgid "Desktop"
-msgstr "डेस्कटप"
+#: gtweak/tweaks/tweak_group_appearance.py:290
+msgid "Specifies which sound theme to use for sound events."
+msgstr "ध्वनि घटनाहरूका लागि कुन ध्वनि विषयवस्तु प्रयोग गर्ने निर्दिष्ट गर्दछ ।."
 
-#: gtweak/tweaks/tweak_group_desktop.py:24
-msgid "Icons on Desktop"
-msgstr "डेक्सटपमा प्रतिमाहरू"
-
-#: gtweak/tweaks/tweak_group_desktop.py:26
-msgid "Home"
-msgstr "गृह"
-
-#: gtweak/tweaks/tweak_group_desktop.py:27
-msgid "Network Servers"
-msgstr "सञ्जाल सर्भरहरू"
-
-#: gtweak/tweaks/tweak_group_desktop.py:28
-msgid "Trash"
-msgstr "रद्दीटोकरी"
-
-#: gtweak/tweaks/tweak_group_desktop.py:29
-#, fuzzy
-msgid "Mounted Volumes"
-msgstr "डेस्कटपमा माउन्ट गरिएका भोल्युमहरू देखाउनुहोस्"
-
-#: gtweak/tweaks/tweak_group_desktop.py:30
+#: gtweak/tweaks/tweak_group_appearance.py:292
 msgid "Background"
 msgstr "पृष्ठभूमि"
 
-#: gtweak/tweaks/tweak_group_desktop.py:31
-#: gtweak/tweaks/tweak_group_desktop.py:34
+#: gtweak/tweaks/tweak_group_appearance.py:293 gtweak/tweaks/tweak_group_appearance.py:298
 msgid "Image"
 msgstr "चित्र"
 
-#: gtweak/tweaks/tweak_group_desktop.py:32
-#: gtweak/tweaks/tweak_group_desktop.py:35
+#: gtweak/tweaks/tweak_group_appearance.py:295 gtweak/tweaks/tweak_group_appearance.py:300
 msgid "Adjustment"
 msgstr "मिलान"
 
-#: gtweak/tweaks/tweak_group_desktop.py:33
+#: gtweak/tweaks/tweak_group_appearance.py:297
 msgid "Lock Screen"
 msgstr "पर्दा ताल्चा लगाउनुहोस्"
 
-#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:35
+#: gtweak/tweaks/tweak_group_desktop.py:7
+msgid "Show Icons"
+msgstr "प्रतिमा मात्र देखउनुहोस्"
+
+#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
+#. *work* unless we have a version of Nautilus that still has the ability to
+#. draw the desktop; use one of the settings that was present in that version
+#. to probe for it.
+#: gtweak/tweaks/tweak_group_desktop.py:13
+msgid "Home"
+msgstr "गृह"
+
+#: gtweak/tweaks/tweak_group_desktop.py:20
+msgid "Desktop"
+msgstr "डेस्कटप"
+
+#: gtweak/tweaks/tweak_group_desktop.py:21
+msgid "Icons on Desktop"
+msgstr "डेक्सटपमा प्रतिमाहरू"
+
+#: gtweak/tweaks/tweak_group_desktop.py:24
+msgid "Network Servers"
+msgstr "सञ्जाल सर्भरहरू"
+
+#: gtweak/tweaks/tweak_group_desktop.py:25
+msgid "Trash"
+msgstr "रद्दीटोकरी"
+
+#: gtweak/tweaks/tweak_group_desktop.py:26
+#, fuzzy
+msgid "Mounted Volumes"
+msgstr "माउन्ट गरिएको छैन"
+
+#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
 msgid "Hinting"
 msgstr "ईसारा"
 
-#: gtweak/tweaks/tweak_group_font.py:28 gtweak/tweaks/tweak_group_font.py:67
+#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
 msgid "Antialiasing"
 msgstr "एन्टि-एलाइजिङ्"
 
-#: gtweak/tweaks/tweak_group_font.py:44
+#: gtweak/tweaks/tweak_group_font.py:31
 msgid "Full"
 msgstr "पूरा"
 
-#: gtweak/tweaks/tweak_group_font.py:50
+#: gtweak/tweaks/tweak_group_font.py:37
 msgid "Medium"
 msgstr "मध्यम"
 
-#: gtweak/tweaks/tweak_group_font.py:56
+#: gtweak/tweaks/tweak_group_font.py:43
 msgid "Slight"
-msgstr ""
+msgstr "अलि"
 
-#: gtweak/tweaks/tweak_group_font.py:62 gtweak/tweaks/tweak_group_font.py:87
+#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
 msgid "None"
 msgstr "कुनै पनि होइन"
 
-#: gtweak/tweaks/tweak_group_font.py:75
+#: gtweak/tweaks/tweak_group_font.py:62
 #, fuzzy
 msgid "Subpixel (for LCD screens)"
 msgstr "एलसिडि"
 
-#: gtweak/tweaks/tweak_group_font.py:81
+#: gtweak/tweaks/tweak_group_font.py:68
 #, fuzzy
 msgid "Standard (grayscale)"
-msgstr "ग्रेस्केलमा रुपान्तरण गर्नुहोस्"
+msgstr "मानक"
 
-#: gtweak/tweaks/tweak_group_font.py:112
+#: gtweak/tweaks/tweak_group_font.py:99
 msgid "Fonts"
 msgstr "फन्टहरू"
 
-#: gtweak/tweaks/tweak_group_font.py:113
-msgid "Window Title"
-msgstr "विण्डो शीर्षक"
+#: gtweak/tweaks/tweak_group_font.py:100
+#, fuzzy
+#| msgid "Interface"
+msgid "Interface Text"
+msgstr "इन्टरफेस:"
 
-#: gtweak/tweaks/tweak_group_font.py:114
-msgid "Interface"
-msgstr "इन्टरफेस"
+#: gtweak/tweaks/tweak_group_font.py:101
+msgid "Document Text"
+msgstr "पाठ कागजात"
 
-#: gtweak/tweaks/tweak_group_font.py:115
-msgid "Document"
-msgstr "कागजातहरू"
-
-#: gtweak/tweaks/tweak_group_font.py:116
-msgid "Monospace"
+#: gtweak/tweaks/tweak_group_font.py:102
+#, fuzzy
+#| msgid "Monospace"
+msgid "Monospace Text"
 msgstr "मोनोस्पेस"
 
-#: gtweak/tweaks/tweak_group_font.py:118
+#: gtweak/tweaks/tweak_group_font.py:103
+#, fuzzy
+#| msgid "Window Title"
+msgid "Legacy Window Titles"
+msgstr "शीर्षक"
+
+#: gtweak/tweaks/tweak_group_font.py:105
 msgid "Scaling Factor"
 msgstr "वर्ण नाप्ने आधार"
 
-#: gtweak/tweaks/tweak_group_xkb.py:52 gtweak/tweaks/tweak_group_windows.py:318
-#: gtweak/tweaks/tweak_group_keymouse.py:61
-#: gtweak/tweaks/tweak_group_keymouse.py:197
-msgid "Disabled"
-msgstr "अक्षम पारियो"
-
-#: gtweak/tweaks/tweak_group_xkb.py:179
-msgid "Typing"
-msgstr "टाइप गर्दै"
-
-#: gtweak/tweaks/tweak_group_power.py:36
+#: gtweak/tweaks/tweak_group_general.py:28
 #, fuzzy
 #| msgid "When Laptop Lid is Closed"
 msgid "Suspend when laptop lid is closed"
 msgstr "ल्यापटप ढकनि बन्द गर्दा"
 
-#: gtweak/tweaks/tweak_group_power.py:60
-msgid "Power"
-msgstr "पावर"
+#: gtweak/tweaks/tweak_group_general.py:54
+msgid "Animations"
+msgstr "एनिमेसनहरू"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:46
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:57
 #, fuzzy
-msgid "No Extensions Installed"
-msgstr "स्थापित भयो"
+#| msgid "Applications"
+msgid "Over-Amplification"
+msgstr "छायाँ लगाइएको बाकस माथि मुद्रण गर्नुहोस्:"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:53
+#: gtweak/tweaks/tweak_group_general.py:58
+msgid ""
+"Allows raising the volume above 100%. This can result in a loss of audio quality; it is "
+"better to increase application volume settings, if possible."
+msgstr ""
+"भोल्युम १००% भन्दा माथि बढाउन अनुमति दिन्छ । यसले गर्दा अडियो गुणस्तर हराउन सक्छ; यदि सम्भव भएमा, "
+"अनुप्रयोग भोल्युम सेटिङ बढाउनु उत्तम हुन्छ ।."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:21
 #, fuzzy
-msgid "Browse in Software"
-msgstr "सफ्टवेयर"
+msgid "Emacs Input"
+msgstr "(निर्गत) "
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:116
-msgid "Extension downloading"
-msgstr "विस्तार डाउनलोड गर्दैछ"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
-msgid "Error loading extension"
-msgstr "विस्तार लोडिङ गर्दा त्रुटि"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
-msgid "Extension does not support shell version"
+#: gtweak/tweaks/tweak_group_keymouse.py:24
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr ""
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
-msgid "Unknown extension error"
-msgstr "अज्ञात विस्तर त्रुटि"
+#: gtweak/tweaks/tweak_group_keymouse.py:40 gtweak/tweaks/tweak_group_keymouse.py:108
+msgid "Compose Key"
+msgstr "कम्पोज​ कि"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:170
-msgid "Updating"
-msgstr "अद्यावधिक गर्दै..."
+#: gtweak/tweaks/tweak_group_keymouse.py:45 gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:96 gtweak/tweaks/tweak_group_keymouse.py:178
+msgid "Scroll Lock"
+msgstr "स्क्रोल लक"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:190
-msgid "Error"
-msgstr "त्रुटि"
+#: gtweak/tweaks/tweak_group_keymouse.py:45 gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:97
+msgid "PrtScn"
+msgstr "प्रिन्टसक्रिन"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:194
-msgid "Update"
-msgstr "अद्यावधिक गर्नुहोस्"
+#: gtweak/tweaks/tweak_group_keymouse.py:45 gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:98
+msgid "Menu"
+msgstr "सूची"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:236
-msgid "Extensions"
-msgstr "विस्तारहरू"
+#: gtweak/tweaks/tweak_group_keymouse.py:45 gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:99
+msgid "Right Alt"
+msgstr "दाहिने alt"
 
-#: gtweak/tweaks/tweak_group_startup.py:45
+#: gtweak/tweaks/tweak_group_keymouse.py:45 gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:100
+msgid "Right Ctrl"
+msgstr "दाया Ctrl"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45 gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:101 gtweak/tweaks/tweak_group_keymouse.py:200
+msgid "Right Super"
+msgstr "दाहिने super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45 gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:102
+msgid "Caps Lock"
+msgstr "क्यप्स लक"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:45 gtweak/tweaks/tweak_group_keymouse.py:84
+#: gtweak/tweaks/tweak_group_keymouse.py:103
+#, fuzzy
+msgid "Left Ctrl"
+msgstr "कुञ्जिपाटि निस्कासन गर्न (बाँया) Ctrl + Alt थिचेर छोड्नुहोस्."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:47 gtweak/tweaks/tweak_group_keymouse.py:183
+#: gtweak/tweaks/tweak_group_keymouse.py:323 gtweak/tweaks/tweak_group_windows.py:214
+#: gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "अक्षम पारियो"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Allows entering additional characters."
+msgstr "अतिरिक्त वर्ण प्रविष्ट गर्न अनुमति दिन्छ ।."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:126
+msgid ""
+"The compose key allows a wide variety of characters to be entered. To use it, press the "
+"compose key and then a sequence of characters.\n"
+"\n"
+"Many unusual characters can be entered by combining standard ones. For example, compose "
+"key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, <b>a</b> followed by <b>'</b> "
+"will enter <b>á</b>.\n"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:189
+#, fuzzy
+msgid "Overview Shortcut"
+msgstr "सर्टकट"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:196
+msgid "Left Super"
+msgstr "देब्रे super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:223 gtweak/tweaks/tweak_group_keymouse.py:231
+msgid "Additional Layout Options"
+msgstr "थप ढाँचा विकल्पहरू"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:253 gtweak/tweaks/tweak_group_keymouse.py:391
+#, fuzzy
+msgid "Mouse Click Emulation"
+msgstr "दाया बटनमा क्लिक गर्नुहोस्"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:271
+msgid "Fingers"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:273
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for middle-click."
+msgstr "दायाँ-क्लिकका लागि दुई औँला र मध्य-क्लिकका लागि तीन औंलाले टचप्याडमा क्लिक गर्नुहोस्।."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:297
+msgid "Area"
+msgstr "क्षेत्र"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:299
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle for middle-"
+"click."
+msgstr ""
+"दायाँ-क्लिकका लागि टचप्याडको तल दायाँ क्लिक गर्नुहोस् र बीचको-क्लिकका लागि तलको बीचमा क्लिक गर्नुहोस्।."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:325
+msgid "Don’t use mouse click emulation."
+msgstr "माउस क्लिक इमुलेसन प्रयोग नगर्नुहोस् ।."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:362
+msgid "Keyboard & Mouse"
+msgstr "कुञ्जिपाटि र माउस"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:363
+msgid "Keyboard"
+msgstr "कुञ्जीपाटी"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:364
+#, fuzzy
+#| msgid "Show All Input Sources"
+msgid "Show Extended Input Sources"
+msgstr "कुनै पनि निर्गत श्रोत फेला परेन ।"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:367
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "सेटिङ अनुप्रयोगमा आगत स्रोतको छनौट बढाउँदछ ।."
+
+#: gtweak/tweaks/tweak_group_keymouse.py:373
+msgid "Mouse"
+msgstr "माउस"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:374
+msgid "Acceleration Profile"
+msgstr "गतिवर्धक प्रोफाइल"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:378
+#, fuzzy
+#| msgid "Background Location"
+msgid "Pointer Location"
+msgstr "स्थान:"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:381
+msgid "Press the Ctrl key to highlight the pointer."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_keymouse.py:382
+#, fuzzy
+#| msgid "Middle-click Paste"
+msgid "Middle Click Paste"
+msgstr "बीचकोक्लिक गर्नुहोस्"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:386
+msgid "Touchpad"
+msgstr "ट्चप्याड"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:387
+#, fuzzy
+msgid "Disable While Typing"
+msgstr "टाइप गर्दै"
+
+#: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
-msgstr ""
+msgstr "तपाईँले लगइन गर्दा सुरुआत अनुप्रयोग स्वचालित रूपले सुरु हुन्छ ।."
 
-#: gtweak/tweaks/tweak_group_startup.py:46
-#: gtweak/tweaks/tweak_group_startup.py:318
+#: gtweak/tweaks/tweak_group_startup.py:31 gtweak/tweaks/tweak_group_startup.py:305
 msgid "Startup Applications"
 msgstr "सुरुका अनुप्रयोगहरू"
 
-#: gtweak/tweaks/tweak_group_startup.py:63
+#: gtweak/tweaks/tweak_group_startup.py:48
 #, fuzzy
 #| msgid "Startup Applications"
 msgid "Search Applications…"
 msgstr "अनुप्रयोगहरु खोज्नुहोस्"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:71
+#: gtweak/tweaks/tweak_group_startup.py:58
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:90
+#: gtweak/tweaks/tweak_group_startup.py:77
 msgid "running"
-msgstr "सञ्चालन भइरहेछ..."
+msgstr "सञ्चालन भइरहेछ"
 
-#: gtweak/tweaks/tweak_group_startup.py:100
+#: gtweak/tweaks/tweak_group_startup.py:87
 msgid "_Close"
 msgstr "बन्द गर्नुहोस्"
 
-#: gtweak/tweaks/tweak_group_startup.py:101
+#: gtweak/tweaks/tweak_group_startup.py:88
 msgid "_Add"
 msgstr "थप्नुहोस्"
 
-#: gtweak/tweaks/tweak_group_startup.py:244
+#: gtweak/tweaks/tweak_group_startup.py:231
 msgid "Remove"
 msgstr "हटाउनुहोस्"
 
-#: gtweak/tweaks/tweak_group_startup.py:268
+#: gtweak/tweaks/tweak_group_startup.py:255
 msgid "New startup application"
-msgstr "सुरुको नया अनुप्रयोग "
+msgstr "सुरुको नया अनुप्रयोग"
 
-#: gtweak/tweaks/tweak_group_startup.py:269
+#: gtweak/tweaks/tweak_group_startup.py:256
 msgid "Add a new application to be run at startup"
 msgstr "सुरुआतमा नया अनुप्रयोग थप्नुहोस्"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:30
-msgid "Application Menu"
-msgstr "अनुप्रयोग मेनु"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:67
-msgid "Top Bar"
-msgstr "माथिल्लोपट्टी"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:69
-msgid "Battery Percentage"
-msgstr "ब्याटरि प्रतिशत"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:70
-msgid "Clock"
-msgstr "घडी"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:71
-msgid "Date"
-msgstr "मिती"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:72
-msgid "Seconds"
-msgstr "सेकेन्ड"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:73
-msgid "Calendar"
-msgstr "पात्रो"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:74
-#, fuzzy
-#| msgid "Show week numbers"
-msgid "Week Numbers"
-msgstr "ठीक भएमा, क्यालेन्डरमा हप्ता नम्बर देखाउनुहोस् ।"
-
-#: gtweak/tweaks/tweak_group_windows.py:32
-#: gtweak/tweaks/tweak_group_windows.py:319
-#, fuzzy
-#| msgid "Windows"
-msgid "Window Focus"
-msgstr "संकेन्द्रविन्दु हो"
-
-#: gtweak/tweaks/tweak_group_windows.py:32
-#: gtweak/tweaks/tweak_group_windows.py:50
-#: gtweak/tweaks/tweak_group_windows.py:319
-#, fuzzy
-msgid "Click to Focus"
-msgstr ""
-"जब सक्षम पारिन्छ, छवि चाहिँ एउटा सक्रिय छविमा परिवर्तन हुन्छ, जब त्यसको छवि सञ्झ्यालले "
-"केन्द्र प्राप्त गर्दछ। यो \"फोकसमा क्लिक गर्नुहोस्\" प्रयोग गर्ने सञ्झ्याल प्रबन्धकका लागि "
-"महत्त्वपूर्ण हुन्छ।"
-
-#: gtweak/tweaks/tweak_group_windows.py:52
-#, fuzzy
-msgid "Windows are focused when they are clicked."
-msgstr "जब प्रविष्टिको विषयवस्तु चयन गर्नुछ यसलाई विशेष ध्यान दिइन्छ"
-
-#: gtweak/tweaks/tweak_group_windows.py:76
-msgid "Sloppy"
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_windows.py:78
-msgid ""
-"Window is focused when hovered with the pointer. Windows remain focused when "
-"the desktop is hovered."
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_windows.py:102
-#: gtweak/tweaks/tweak_group_windows.py:325
-msgid "Secondary-Click"
-msgstr "दोस्रो क्लिक"
-
-#: gtweak/tweaks/tweak_group_windows.py:104
-msgid ""
-"Window is focused when hovered with the pointer. Hovering the desktop "
-"removes focus from the previous window."
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_windows.py:185
+#: gtweak/tweaks/tweak_group_title_bar.py:57
 msgid "Placement"
 msgstr "राख्नुहोस्"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:199
+#: gtweak/tweaks/tweak_group_title_bar.py:71
 msgid "Left"
-msgstr "_बायाँ:"
+msgstr "बायाँ"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:205
+#: gtweak/tweaks/tweak_group_title_bar.py:77
 msgid "Right"
-msgstr "_दायाँ:"
+msgstr "दायाँ"
 
-#: gtweak/tweaks/tweak_group_windows.py:237
+#: gtweak/tweaks/tweak_group_title_bar.py:108
+#, fuzzy
+#| msgid "Window Title"
+msgid "Window Titlebars"
+msgstr "विण्डो शीर्षक"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:109
+msgid "Titlebar Actions"
+msgstr "शीर्षकपट्टी कार्यहरू"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:110
+msgid "Double-Click"
+msgstr "दुई पटक किटिक्क"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:111
+msgid "Middle-Click"
+msgstr "बीचकोक्लिक गर्नुहोस्"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:112 gtweak/tweaks/tweak_group_windows.py:88
+msgid "Secondary-Click"
+msgstr "दोस्रो क्लिक"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:113
+msgid "Titlebar Buttons"
+msgstr "शीर्षकपट्टीमा बटन"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:114
+msgid "Maximize"
+msgstr "बढाउनुहोस्"
+
+#: gtweak/tweaks/tweak_group_title_bar.py:115
+msgid "Minimize"
+msgstr "घटाउनुहोस्"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:14
+msgid "Top Bar"
+msgstr "माथिल्लोपट्टी"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:15
+msgid "Activities Overview Hot Corner"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_top_bar.py:16
+msgid "Battery Percentage"
+msgstr "ब्याटरि प्रतिशत"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:17
+msgid "Clock"
+msgstr "घडी"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:18
+msgid "Weekday"
+msgstr "हप्तादिन"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:19
+msgid "Date"
+msgstr "मिती"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:20
+msgid "Seconds"
+msgstr "सेकेन्ड"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:21
+msgid "Calendar"
+msgstr "पात्रो"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:22
+msgid "Week Numbers"
+msgstr "हप्ता सङ्ख्या"
+
+#: gtweak/tweaks/tweak_group_windows.py:18 gtweak/tweaks/tweak_group_windows.py:215
+#, fuzzy
+#| msgid "Windows"
+msgid "Window Focus"
+msgstr "संकेन्द्रविन्दु हो"
+
+#: gtweak/tweaks/tweak_group_windows.py:18 gtweak/tweaks/tweak_group_windows.py:36
+#: gtweak/tweaks/tweak_group_windows.py:215
+msgid "Click to Focus"
+msgstr "फोकस गर"
+
+#: gtweak/tweaks/tweak_group_windows.py:38
+#, fuzzy
+msgid "Windows are focused when they are clicked."
+msgstr "जब प्रविष्टिको विषयवस्तु चयन गर्नुछ यसलाई विशेष ध्यान दिइन्छ"
+
+#: gtweak/tweaks/tweak_group_windows.py:62
+#, fuzzy
+#| msgid "Focus Mode"
+msgid "Focus on Hover"
+msgstr "होभर क्लिक"
+
+#: gtweak/tweaks/tweak_group_windows.py:64
+msgid ""
+"Window is focused when hovered with the pointer. Windows remain focused when the desktop "
+"is hovered."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_windows.py:90
+msgid ""
+"Window is focused when hovered with the pointer. Hovering the desktop removes focus from "
+"the previous window."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_windows.py:129
 #, fuzzy
 msgid "Window scaling"
 msgstr "_मापन:"
 
-#: gtweak/tweaks/tweak_group_windows.py:237
+#: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr ""
+msgstr "HiDPI का लागि GDK सञ्झ्याल स्केलिङ तत्व समायोजन गर्नुहोस्"
 
-#: gtweak/tweaks/tweak_group_windows.py:265
-#, python-format
-msgid "Settings will be reverted in %d second"
-msgid_plural "Settings will be reverted in %d seconds"
-msgstr[0] ""
-msgstr[1] ""
+#: gtweak/tweaks/tweak_group_windows.py:157
+#, python-brace-format
+msgid "Settings will be reverted in {0} second"
+msgid_plural "Settings will be reverted in {0} seconds"
+msgstr[0] "{0} सेकेन्डमा सेटिङ पहिलेकै स्थितिमा फर्किन्छ"
+msgstr[1] "{0} सेकेन्डमा सेटिङ पहिलेकै स्थितिमा फर्किन्छ"
 
-#: gtweak/tweaks/tweak_group_windows.py:281
+#: gtweak/tweaks/tweak_group_windows.py:173
 #, fuzzy
 msgid "Do you want to keep these HiDPI settings?"
-msgstr "के तपाई यी डिस्प्ले सेटिङ्ग राख्न चाहनुहुन्छ?"
+msgstr "के तपाई %s को फाईलहरु राख्न चाहानुहुन्छ?"
 
-#: gtweak/tweaks/tweak_group_windows.py:288
+#: gtweak/tweaks/tweak_group_windows.py:180
 msgid "Revert Settings"
 msgstr "सेटिङ्ग उल्टाउनुहोस्"
 
-#: gtweak/tweaks/tweak_group_windows.py:289
+#: gtweak/tweaks/tweak_group_windows.py:181
 msgid "Keep Changes"
 msgstr "परिवर्तनहरू राख्नुहोस्"
 
-#: gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_windows.py:197
 msgid "HiDPI"
 msgstr "हाई-डिपिआई"
 
-#: gtweak/tweaks/tweak_group_windows.py:311
+#: gtweak/tweaks/tweak_group_windows.py:203
 msgid "Windows"
 msgstr "सञ्झ्यालहरू"
 
-#: gtweak/tweaks/tweak_group_windows.py:312
+#: gtweak/tweaks/tweak_group_windows.py:204
 #, fuzzy
 msgid "Attach Modal Dialogs"
 msgstr "संवादहरू"
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: gtweak/tweaks/tweak_group_windows.py:205
 msgid ""
-"When on, modal dialog windows are attached to their parent windows, and "
-"cannot be moved."
-msgstr ""
+"When on, modal dialog windows are attached to their parent windows, and cannot be moved."
+msgstr "जब खुला हुन्छ, तिनीहरूको प्यारेन्ट सञ्झ्यालहरूमा मोडल संवाद सञ्झ्यालहरू संलग्न हुन्छन्, र सार्न सकिँदैन।."
 
-#: gtweak/tweaks/tweak_group_windows.py:314
+#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
+#: gtweak/tweaks/tweak_group_windows.py:207
+#, fuzzy
+msgid "Edge Tiling"
+msgstr "स्क्रिन किनाराहरूमा सञ्झ्याल छोड्दा किनारा टायल सक्षम गर्नुहोस्"
+
+#: gtweak/tweaks/tweak_group_windows.py:208
+#, fuzzy
+msgid "When on, windows are tiled when dragged to screen edges."
+msgstr "स्क्रिन किनाराहरूमा सञ्झ्याल छोड्दा किनारा टायल सक्षम गर्नुहोस्"
+
+#: gtweak/tweaks/tweak_group_windows.py:209
+#, fuzzy
+msgid "Center New Windows"
+msgstr "नयाँ सञ्झ्यालहरू"
+
+#: gtweak/tweaks/tweak_group_windows.py:210
 #, fuzzy
 msgid "Resize with Secondary-Click"
-msgstr "दोस्रो क्लिक विलम्ब गर्नुहोस्"
+msgstr "दोस्रो क्लिक"
 
-#: gtweak/tweaks/tweak_group_windows.py:315
+#: gtweak/tweaks/tweak_group_windows.py:211
 #, fuzzy
 msgid "Window Action Key"
-msgstr "कुनै पनि क्रिया बिना सञ्झ्याल बन्द गर्नुहोस्"
+msgstr "कार्य छैन"
 
-#: gtweak/tweaks/tweak_group_windows.py:321
+#: gtweak/tweaks/tweak_group_windows.py:217
 #, fuzzy
 msgid "Raise Windows When Focused"
 msgstr "सञ्झ्याललाई अन्य सञ्झ्याल माथि बढाउनुहोस्"
 
-#: gtweak/tweaks/tweak_group_windows.py:322
-msgid "Titlebar Actions"
-msgstr "शीर्षकपट्टी कार्यहरू"
-
-#: gtweak/tweaks/tweak_group_windows.py:323
-msgid "Double-Click"
-msgstr "दुई पटक किटिक्क"
-
-#: gtweak/tweaks/tweak_group_windows.py:324
-msgid "Middle-Click"
-msgstr "बीचकोक्लिक गर्नुहोस्"
-
-#: gtweak/tweaks/tweak_group_windows.py:326
-msgid "Titlebar Buttons"
-msgstr "शीर्षकपट्टीमा बटन"
-
-#: gtweak/tweaks/tweak_group_windows.py:327
-msgid "Maximize"
-msgstr "बढाउनुहोस्"
-
-#: gtweak/tweaks/tweak_group_windows.py:328
-msgid "Minimize"
-msgstr "घटाउनुहोस्"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:34
-#: gtweak/tweaks/tweak_group_workspaces.py:52
+#: gtweak/tweaks/tweak_group_workspaces.py:19
 #, fuzzy
 #| msgid "Workspaces"
 msgid "Dynamic Workspaces"
 msgstr "कार्यस्थान"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:54
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
+#: gtweak/tweaks/tweak_group_workspaces.py:38
+msgid "Workspaces can be created on demand, and are automatically removed when empty."
 msgstr ""
 
-#: gtweak/tweaks/tweak_group_workspaces.py:78
+#: gtweak/tweaks/tweak_group_workspaces.py:62
 #, fuzzy
 #| msgid "Workspaces"
 msgid "Static Workspaces"
 msgstr "स्थायी"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:80
+#: gtweak/tweaks/tweak_group_workspaces.py:64
 #, fuzzy
 #| msgid "Number of Workspaces"
 msgid "Number of workspaces is fixed."
 msgstr "कार्यस्थानको सङ्ख्या:"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:112
-#: gtweak/tweaks/tweak_group_workspaces.py:195
-#, fuzzy
-msgid "Display Handling"
-msgstr "चयन ह्याण्डलिङ्ग"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:112
-#: gtweak/tweaks/tweak_group_workspaces.py:157
-#, fuzzy
-msgid "Workspaces span displays"
-msgstr "विस्तार"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-#: gtweak/tweaks/tweak_group_workspaces.py:192
+#: gtweak/tweaks/tweak_group_workspaces.py:95 gtweak/tweaks/tweak_group_workspaces.py:174
 msgid "Workspaces"
 msgstr "कार्यस्थान"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:131
+#: gtweak/tweaks/tweak_group_workspaces.py:97 gtweak/tweaks/tweak_group_workspaces.py:177
+#, fuzzy
+msgid "Display Handling"
+msgstr "पृष्ठ ह्यान्डलिङ्"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:97 gtweak/tweaks/tweak_group_workspaces.py:139
+#, fuzzy
+msgid "Workspaces span displays"
+msgstr "कार्यस्थान"
+
+#: gtweak/tweaks/tweak_group_workspaces.py:113
 #, fuzzy
 msgid "Workspaces on primary display only"
-msgstr "सबै कार्यस्थान प्रदर्शन गर्नुहोस्"
+msgstr "प्रमुख डिस्प्ले"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:133
+#: gtweak/tweaks/tweak_group_workspaces.py:115
 msgid "Additional displays are treated as independent workspaces."
-msgstr ""
+msgstr "थप प्रदर्शनलाई स्वतन्त्र कार्यस्थानको रूपमा व्यवहार गरिन्छ ।."
 
-#: gtweak/tweaks/tweak_group_workspaces.py:159
+#: gtweak/tweaks/tweak_group_workspaces.py:141
 msgid "The current workspace includes additional displays."
-msgstr ""
+msgstr "हालको कार्यस्थानले अतिरिक्त प्रदर्शन समावेश गर्दछ ।."
 
-#: gtweak/tweaks/tweak_group_workspaces.py:194
+#: gtweak/tweaks/tweak_group_workspaces.py:176
 msgid "Number of Workspaces"
 msgstr "कार्यस्थानको नम्बर"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:35
-#, fuzzy
-msgid "Emacs Input"
-msgstr "(निर्गत) "
+#: gtweak/tweaks/tweak_group_xkb.py:166
+msgid "Typing"
+msgstr "टाइप गर्दै"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:38
-msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_keymouse.py:54
-#: gtweak/tweaks/tweak_group_keymouse.py:122
-msgid "Compose Key"
-msgstr "कम्पोज​ कि"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:110
-#: gtweak/tweaks/tweak_group_keymouse.py:192
-#, fuzzy
-msgid "Scroll Lock"
-msgstr "scroll lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:111
-msgid "PrtScn"
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:112
-msgid "Menu"
-msgstr "सूची"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:113
-#, fuzzy
-msgid "Right Alt"
-msgstr "दाहिने alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:114
-#, fuzzy
-msgid "Right Ctrl"
-msgstr "Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:115
-#: gtweak/tweaks/tweak_group_keymouse.py:214
-#, fuzzy
-msgid "Right Super"
-msgstr "दाहिने super"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:116
-#, fuzzy
-msgid "Caps Lock"
-msgstr "caps lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:59
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-#: gtweak/tweaks/tweak_group_keymouse.py:117
-#, fuzzy
-msgid "Left Ctrl"
-msgstr "Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:65
-msgid "Allows entering additional characters."
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_keymouse.py:140
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_keymouse.py:203
-#, fuzzy
-msgid "Overview Shortcut"
-msgstr "सर्टकट"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:210
-#, fuzzy
-msgid "Left Super"
-msgstr "देब्रे super"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:237
-#: gtweak/tweaks/tweak_group_keymouse.py:245
-#, fuzzy
-msgid "Additional Layout Options"
-msgstr "सजावट विकल्पहरू:"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:265
-#, fuzzy
-#| msgid "Keyboard and Mouse"
-msgid "Keyboard & Mouse"
-msgstr "यन्त्र ,कुञ्जिपाटि वा माउस फेर्नुहोस्"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:266
-msgid "Keyboard"
-msgstr "कुञ्जीपाटी"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:267
-#, fuzzy
-#| msgid "Show All Input Sources"
-msgid "Show Extended Input Sources"
-msgstr "कुनै पनि निर्गत श्रोत फेला परेन ।"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:270
-msgid "Increases the choice of input sources in the Settings application."
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_keymouse.py:276
-msgid "Mouse"
-msgstr "माउस"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:277
-#, fuzzy
-msgid "Acceleration Profile"
-msgstr "प्रोफाइल"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:281
-#, fuzzy
-#| msgid "Background Location"
-msgid "Pointer Location"
-msgstr "सूचक"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:285
-msgid "Press the Ctrl key to highlight the pointer."
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_keymouse.py:286
-#, fuzzy
-#| msgid "Middle-click Paste"
-msgid "Middle Click Paste"
-msgstr "बिच बटनमा क्लिक गर्नुहोस्"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:290
-msgid "Touchpad"
-msgstr "ट्चप्याड"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:291
-#, fuzzy
-msgid "Click Method"
-msgstr "विधि"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:295
-#, fuzzy
-msgid "Disable While Typing"
-msgstr "टाइप गर्दा हिज्जेजाँच गर्नुहोस्"
-
-#: gtweak/tweaks/tweak_wacom.py:29
+#: gtweak/tweaks/tweak_wacom.py:16
 msgid "Device"
 msgstr "यन्त्र"
 
-#: gtweak/tweaks/tweak_wacom.py:38
+#: gtweak/tweaks/tweak_wacom.py:25
 msgid "Wacom"
 msgstr "वाक्म"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:72
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(पूर्वनिर्धारित)</i>"
 
-#: gtweak/utils.py:329
+#: gtweak/utils.py:337
+#, fuzzy
 msgid "Configuration changes require restart"
-msgstr ""
+msgstr "असर गर्न “%s” पुन: सुरुआत गर्नुहोस्."
 
-#: gtweak/utils.py:330
+#: gtweak/utils.py:338
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 
-#: gtweak/utils.py:334
+#: gtweak/utils.py:342
 #, fuzzy
 #| msgid "Restart"
 msgid "Restart Session"
 msgstr "द्ष्व्परिवर्तनहरूले असर गर्न पुन: सुरुआत गर्नुहोस्"
 
-#: gtweak/widgets.py:501
-msgid "Enable dark theme for all applications"
-msgstr ""
+#~ msgid "gnome-tweak-tool"
+#~ msgstr "gnome-tweak-tool"
 
-#: gtweak/widgets.py:502
-msgid "Enable the dark theme hint for all the applications in the session"
-msgstr ""
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "सबै सेल विस्तारहरू असक्षम पार्नुहोस्"
 
-#: gtweak/widgets.py:511
+#~ msgid "_About"
+#~ msgstr "बारेमा"
+
+#~ msgid "_Quit"
+#~ msgstr "अन्त्य गर्नुहोस्"
+
+#~ msgid "Power"
+#~ msgstr "पावर"
+
 #, fuzzy
-msgid "Global Dark Theme"
-msgstr "विषयवस्तु"
+#~ msgid "No Extensions Installed"
+#~ msgstr "स्थापित भयो"
 
-#: gtweak/widgets.py:512
-msgid "Applications need to be restarted for this change to take place."
-msgstr ""
-
-#: gtweak/widgets.py:541
 #, fuzzy
-msgid "Error writing setting"
-msgstr "लेबल सेट गर्दा त्रुटि"
+#~ msgid "Browse in Software"
+#~ msgstr "सफ्टवेयर"
+
+#~ msgid "Extension downloading"
+#~ msgstr "विस्तार डाउनलोड गर्दैछ"
+
+#~ msgid "Error loading extension"
+#~ msgstr "विस्तार लोडिङ गर्दा त्रुटि"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "अज्ञात विस्तर त्रुटि"
+
+#~ msgid "Updating"
+#~ msgstr "अद्यावधिक गर्दै..."
+
+#~ msgid "Error"
+#~ msgstr "त्रुटि"
+
+#~ msgid "Update"
+#~ msgstr "अद्यावधिक गर्नुहोस्"
+
+#~ msgid "Application Menu"
+#~ msgstr "अनुप्रयोग मेनु"
+
+#, fuzzy
+#~ msgid "Click Method"
+#~ msgstr "विधि"
+
+#, fuzzy
+#~ msgid "Global Dark Theme"
+#~ msgstr "विषयवस्तु"
 
 #~ msgid "Tweak Tool"
 #~ msgstr "ट्वीक उपकरण पट्टी"
@@ -918,9 +966,6 @@ msgstr "लेबल सेट गर्दा त्रुटि"
 
 #~ msgid "Automatically Raise Windows"
 #~ msgstr "सञ्झ्याललाई अन्य सञ्झ्याल माथि बढाउनुहोस्"
-
-#~ msgid "Focus Mode"
-#~ msgstr "फोकस मोड"
 
 #, fuzzy
 #~ msgid "Key theme"
