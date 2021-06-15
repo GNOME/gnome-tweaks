@@ -294,11 +294,6 @@ TWEAK_GROUPS = [
             local_only=True, mimetypes=["application/xml","image/png","image/jpeg"]),
         GSettingsComboEnumTweak(_("Adjustment"),"org.gnome.desktop.background", "picture-options"),
 
-        Title(_("Lock Screen"), "", uid="title-theme"),
-        GSettingsFileChooserButtonTweak(_("Image"),"org.gnome.desktop.screensaver", "picture-uri",
-            local_only=True, mimetypes=["application/xml","image/png","image/jpeg"]),
-        GSettingsComboEnumTweak(_("Adjustment"),"org.gnome.desktop.screensaver", "picture-options"),
-
         # Title(_("Files"), ""),
         # GSettingsSwitchTweak(_("Use location entry"), "org.gnome.nautilus.preferences",
         # "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml"),
