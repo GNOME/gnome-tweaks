@@ -70,7 +70,7 @@ class Window(Gtk.ApplicationWindow):
         header = Handy.Leaflet()
         header.set_transition_type(Handy.LeafletTransitionType.SLIDE)
         header.connect("notify::visible-child", self._update_decorations)
-        header.connect("notify::fold", self._update_decorations)
+        header.connect("notify::folded", self._update_decorations)
 
         left_header = Gtk.HeaderBar()
         left_header.props.show_close_button = True
