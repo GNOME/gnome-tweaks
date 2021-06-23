@@ -4,17 +4,17 @@
 #
 # Yuri Kozlov <yuray@komyakino.ru>, 2011.
 # Andrey Inishev <inish777@gmail.com>, 2013.
-# Ivan Komaritsyn <vantu5z@mail.ru>, 2015.
 # Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012, 2015.
 # Stas Solovey <whats_up@tut.by>, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
+# Ivan Komaritsyn <vantu5z@mail.ru>, 2015-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-12-06 00:03+0000\n"
-"PO-Revision-Date: 2019-02-25 21:55+0300\n"
-"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"POT-Creation-Date: 2021-02-13 06:24+0000\n"
+"PO-Revision-Date: 2021-06-23 16:20+0300\n"
+"Last-Translator: Ivan Komaritsyn <vantu5z@mail.ru>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -22,15 +22,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
 # сокращение, потому как не влазит в под названием значка в меню Обзор и тогда не ясно что это вообще
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:42 gtweak/utils.py:326
+#: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "Доп. настройки GNOME"
 
@@ -55,14 +55,9 @@ msgstr ""
 "включать отображение значков на рабочем столе, а также изменять другие "
 "параметры."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:83
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Доп. настройки GNOME"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
@@ -76,40 +71,61 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Сбросить на настройки по умолчанию"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Отключить все расширения"
-
-#: data/shell.ui:17
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_О приложении"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Продолжить"
+
+#: gtweak/app.py:24
+#| msgid "Extensions"
+msgid "Extensions Has Moved"
+msgstr "Расширения были перенесены"
+
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:29
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Управление расширениями перенесено в {0}."
+
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:33
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Рекомендуется загрузить Расширения GNOME {0}, если оно не включено в Ваш "
+"дистрибутив."
+
+#: gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Сбросить на настройки по умолчанию"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Сбросить все параметры на настройки по умолчанию?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:96 gtweak/app.py:98
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:98
 #, python-format
 msgid "(%s mode)"
 msgstr "(режим %s)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:101
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell не запущен"
 
-#: gtweak/app.py:84
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:103
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:110
 msgid "Homepage"
 msgstr "Домашняя страница"
 
@@ -117,12 +133,12 @@ msgstr "Домашняя страница"
 msgid "Miscellaneous"
 msgstr "Разное"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Поиск настроек…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Основное"
 
@@ -267,59 +283,59 @@ msgstr "Корзина"
 msgid "Mounted Volumes"
 msgstr "Устройства"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
 msgid "Hinting"
 msgstr "Хинтинг"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
 msgid "Antialiasing"
 msgstr "Сглаживание"
 
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Full"
 msgstr "Полный"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:46
 msgid "Medium"
 msgstr "Средний"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:52
 msgid "Slight"
 msgstr "Незначительный"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
 msgid "None"
 msgstr "Нет"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:71
 msgid "Subpixel (for LCD screens)"
 msgstr "Субпиксельное (для ЖК-экранов)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:77
 msgid "Standard (grayscale)"
 msgstr "Стандартное (оттенки серого)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
+#: gtweak/tweaks/tweak_group_font.py:108
 msgid "Fonts"
 msgstr "Шрифты"
 
-#: gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:109
 msgid "Interface Text"
 msgstr "Текст интерфейса"
 
-#: gtweak/tweaks/tweak_group_font.py:101
+#: gtweak/tweaks/tweak_group_font.py:110
 msgid "Document Text"
 msgstr "Текст документа"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:111
 msgid "Monospace Text"
 msgstr "Моноширинный текст"
 
-#: gtweak/tweaks/tweak_group_font.py:103
+#: gtweak/tweaks/tweak_group_font.py:112
 msgid "Legacy Window Titles"
 msgstr "Устаревшие заголовки окна"
 
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:114
 msgid "Scaling Factor"
 msgstr "Коэффициент масштабирования"
 
@@ -452,7 +468,7 @@ msgid "Additional Layout Options"
 msgstr "Дополнительные параметры раскладки"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "Эмуляция нажатия мышкой"
 
@@ -513,68 +529,28 @@ msgstr "Профиль ускорения"
 msgid "Pointer Location"
 msgstr "Положение курсора"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Нажмите клавишу Ctrl, чтобы подсветить указатель."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Вставка при нажатии средней кнопки мыши"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Сенсорная панель"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Отключить при вводе"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Расширения не установлены"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Показать в центре приложений"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Загрузка расширения"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Ошибка загрузки расширения"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Расширение не поддерживает данную версию Shell"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Неизвестная ошибка расширения"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Обновление"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Ошибка"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Обновить"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Расширения"
 
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Приложения будут автоматически запускаться при входе в систему."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Автозапуск"
 
@@ -587,7 +563,7 @@ msgstr "Поиск приложений…"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "запущено"
 
@@ -599,15 +575,15 @@ msgstr "_Закрыть"
 msgid "_Add"
 msgstr "_Добавить"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "Удалить"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "Добавить приложение в автозапуск"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "Добавить новое приложение для запуска при загрузке"
 
@@ -660,44 +636,39 @@ msgstr "Развернуть"
 msgid "Minimize"
 msgstr "Свернуть"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Меню приложения"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Верхняя панель"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "Активный угол меню Обзор"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Battery Percentage"
 msgstr "Заряд батареи в процентах"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Часы"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "Будний день"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Date"
 msgstr "Дата"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "Секунды"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "Календарь"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "Номера недель"
 
@@ -862,7 +833,7 @@ msgstr "Текущее рабочее место включает дополни
 msgid "Number of Workspaces"
 msgstr "Количество рабочих мест"
 
-#: gtweak/tweaks/tweak_group_xkb.py:166
+#: gtweak/tweaks/tweak_group_xkb.py:167
 msgid "Typing"
 msgstr "Клавиатура"
 
@@ -875,23 +846,59 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:62
+#: gtweak/utils.py:63
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(по умолчанию)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:345
 msgid "Configuration changes require restart"
 msgstr "Изменения конфигурации требуют перезагрузки"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:346
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Сеанс пользователя необходимо перезапустить, чтобы изменения вступили в силу"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Перезапустить сеанс пользователя"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Отключить все расширения"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Расширения не установлены"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Показать в центре приложений"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Загрузка расширения"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Ошибка загрузки расширения"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Расширение не поддерживает данную версию Shell"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Неизвестная ошибка расширения"
+
+#~ msgid "Updating"
+#~ msgstr "Обновление"
+
+#~ msgid "Error"
+#~ msgstr "Ошибка"
+
+#~ msgid "Update"
+#~ msgstr "Обновить"
+
+#~ msgid "org.gnome.tweaks"
+#~ msgstr "org.gnome.tweaks"
+
+#~ msgid "Application Menu"
+#~ msgstr "Меню приложения"
 
 #~ msgid "_About"
 #~ msgstr "_О приложении"
