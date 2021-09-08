@@ -12,7 +12,6 @@ _shell_loaded = _shell is not None
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Top Bar"),
-        GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.desktop.interface", "enable-hot-corners", loaded=_shell_loaded),
         Title(_("Clock"),"", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Weekday"),"org.gnome.desktop.interface", "clock-show-weekday", loaded=_shell_loaded),
         GSettingsSwitchTweak(_("Date"),"org.gnome.desktop.interface", "clock-show-date", loaded=_shell_loaded),

@@ -203,9 +203,6 @@ TWEAK_GROUPS = [
     ListBoxTweakGroup(_("Windows"),
         GSettingsSwitchTweak(_("Attach Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs",
                         desc=_("When on, modal dialog windows are attached to their parent windows, and cannot be moved.")),
-        # https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-        GSettingsSwitchTweak(_("Edge Tiling"),"org.gnome.mutter", "edge-tiling",
-                        desc=_("When on, windows are tiled when dragged to screen edges.")),
         GSettingsSwitchTweak(_("Center New Windows"),"org.gnome.mutter", "center-new-windows"),
         GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
         GSettingsComboTweak(_("Window Action Key"),
