@@ -7,6 +7,7 @@ import os.path
 from gi.repository import Gtk
 from gi.repository import Gio
 from gi.repository import GLib
+from gi.repository import Handy
 
 import gtweak
 from gtweak.defs import VERSION
@@ -72,6 +73,10 @@ class GnomeTweaks(Gtk.Application):
         about_action = Gio.SimpleAction.new("about", None)
         about_action.connect("activate", self.about_cb)
         self.add_action(about_action)
+
+        # Opt in to dark mode.
+        style_manager = Handy.StyleManager.get_default()
+        style_manager.set_color_scheme(Handy.ColorScheme.PREFER_LIGHT)
 
     def reset_cb(self, action, parameter):
         dialog = Gtk.MessageDialog(self.win, 0, Gtk.MessageType.QUESTION,
