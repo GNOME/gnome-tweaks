@@ -1,28 +1,28 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2016, 2017, 2019.
+# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2016, 2017, 2019, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-03-25 19:53+0000\n"
-"PO-Revision-Date: 2019-07-06 07:07+0000\n"
+"POT-Creation-Date: 2021-09-08 05:55+0000\n"
+"PO-Revision-Date: 2021-10-19 13:36+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 19.12.3\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME verkefnið"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:42 gtweak/utils.py:326
+#: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "GNOME sérbreytingar"
 
@@ -44,7 +44,7 @@ msgstr ""
 "Tólið nýtist til að setja upp þemu og viðbætur, breyta orkustillingum, sýsla "
 "með ræsiforrit og táknmyndir á skjáborði, auk annarra stillinga."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:84
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
 msgid "Tweaks"
 msgstr "Sérbreytingar"
 
@@ -60,41 +60,60 @@ msgstr ""
 msgid "_Reset to Defaults"
 msgstr "_Frumstilla á sjálfgefið"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Óvirkja allar skeljaviðbætur"
-
-#: data/shell.ui:17
-#| msgid "Tweaks"
+#: data/shell.ui:13
 msgid "_About Tweaks"
 msgstr "_Um Tweaks sérbreytingatólið"
 
-#: gtweak/app.py:55
+#: gtweak/app.py:22
+msgid "_Continue"
+msgstr "_Halda áfram"
+
+#: gtweak/app.py:24
+#| msgid "Extensions"
+msgid "Extensions Has Moved"
+msgstr "Viðbætur hafa verið færðar"
+
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:29
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Viðbætur hafa verið færðar í {0}."
+
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:33
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+
+#: gtweak/app.py:78
 msgid "Reset to Defaults"
 msgstr "Upprunalegar stillingar"
 
-#: gtweak/app.py:56
+#: gtweak/app.py:79
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Viltu breyta öllum stillingum í sín upprunalegu gildi?"
 
-#: gtweak/app.py:77 gtweak/app.py:79
+#: gtweak/app.py:96 gtweak/app.py:98
 msgid "GNOME Shell"
 msgstr "GNOME-skel"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:98
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s hamur)"
 
-#: gtweak/app.py:82
+#: gtweak/app.py:101
 msgid "GNOME Shell is not running"
 msgstr "GNOME-skelin er ekki í gangi"
 
-#: gtweak/app.py:84
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:103
+#| msgid "GTK+"
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:110
 msgid "Homepage"
 msgstr "Heimasíða"
 
@@ -102,12 +121,12 @@ msgstr "Heimasíða"
 msgid "Miscellaneous"
 msgstr "Ýmislegt"
 
-#: gtweak/tweakview.py:111
+#: gtweak/tweakview.py:143
 msgid "Search Tweaks…"
 msgstr "Leita að sérbreytingum…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:169 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Almennt"
 
@@ -252,59 +271,59 @@ msgstr "Ruslafata"
 msgid "Mounted Volumes"
 msgstr "Tengdar gagnahirslur"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
 msgid "Hinting"
 msgstr "Hnikun"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
 msgid "Antialiasing"
 msgstr "Afstöllun"
 
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Full"
 msgstr "Full"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:46
 msgid "Medium"
 msgstr "Miðlungs"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:52
 msgid "Slight"
 msgstr "Örlítil"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
 msgid "None"
 msgstr "Engin"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:71
 msgid "Subpixel (for LCD screens)"
 msgstr "Undirdílar (fyrir LCD-skjái)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:77
 msgid "Standard (grayscale)"
 msgstr "Staðlað (grátóna)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
+#: gtweak/tweaks/tweak_group_font.py:108
 msgid "Fonts"
 msgstr "Letur"
 
-#: gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:109
 msgid "Interface Text"
 msgstr "Texti viðmóts"
 
-#: gtweak/tweaks/tweak_group_font.py:101
+#: gtweak/tweaks/tweak_group_font.py:110
 msgid "Document Text"
 msgstr "Texti skjals"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:111
 msgid "Monospace Text"
 msgstr "Jafnbreitt letur"
 
-#: gtweak/tweaks/tweak_group_font.py:103
+#: gtweak/tweaks/tweak_group_font.py:112
 msgid "Legacy Window Titles"
 msgstr "Eldri gluggatitlar"
 
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:114
 msgid "Scaling Factor"
 msgstr "Kvörðunargildi"
 
@@ -393,7 +412,7 @@ msgstr "Vinstri Ctrl-lykill"
 #: gtweak/tweaks/tweak_group_keymouse.py:47
 #: gtweak/tweaks/tweak_group_keymouse.py:183
 #: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
 msgid "Disabled"
 msgstr "Óvirkt"
 
@@ -425,7 +444,7 @@ msgid "Additional Layout Options"
 msgstr "Fleiri valkostir uppsetningar"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "Herma eftir músarsmellum"
 
@@ -481,68 +500,28 @@ msgstr "Hröðunarsnið"
 msgid "Pointer Location"
 msgstr "Staðsetning bendils"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "ýttu á Ctrl-lykilinn til að ljóma bendilinn."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "Líma með miðjusmelli"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "Snertiplatti"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "Gera óvirkan á meðan skrifað er"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Uppfærslur mistókust á %s viðbótum"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Skoða í hugbúnaði"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Sæki viðbótina"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Villa við að hlaða inn viðbót"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Viðbótin styður ekki útgáfu skeljarinnar"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Óþekkt villa í viðbót"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Uppfæri"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Villa"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Uppfæra"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Viðbætur"
 
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "Ræsiforrit eru sjálfvirkt sett í gang þegar þú skráir þig inn."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Ræsiforrit"
 
@@ -555,7 +534,7 @@ msgstr "Leita að forritum…"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "í gangi"
 
@@ -567,15 +546,15 @@ msgstr "_Loka"
 msgid "_Add"
 msgstr "Bæt_a við"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "Fjarlægja"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "Nýtt ræsiforrit"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "Bæta við nýju forriti til að keyra í ræsingu"
 
@@ -628,55 +607,42 @@ msgstr "Hámarka"
 msgid "Minimize"
 msgstr "Lágmarka"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "Forritavalmynd"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "Yfirlitsstika"
 
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Activities Overview Hot Corner"
-msgstr "Virknihorn fyrir aðgerðayfirlit"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:63
-msgid "Battery Percentage"
-msgstr "Hleðsla rafhlöðu í prósentum"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Clock"
 msgstr "Klukka"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Weekday"
 msgstr "Vikudagur"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Date"
 msgstr "Dagsetning"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Seconds"
 msgstr "Sekúndur"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Calendar"
 msgstr "Dagatal"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Week Numbers"
 msgstr "Vikunúmer"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Window Focus"
 msgstr "Virkni glugga"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
 #: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Click to Focus"
 msgstr "Smella til að virkja"
 
@@ -747,83 +713,23 @@ msgstr ""
 "Þegar þetta er virkt, eru samskiptagluggar festir við aðalglugga forrits og "
 "er ekki hægt að hreyfa þá."
 
-#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Edge Tiling"
-msgstr "Flísalagning á jöðrum"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
-msgid "When on, windows are tiled when dragged to screen edges."
-msgstr ""
-"Þegar þetta er virkt, eru gluggar flísalagðir þegar þeim er sleppt á "
-"skjájaðra."
-
-#: gtweak/tweaks/tweak_group_windows.py:209
+#: gtweak/tweaks/tweak_group_windows.py:206
 msgid "Center New Windows"
 msgstr "Miðjusetja nýja glugga"
 
-#: gtweak/tweaks/tweak_group_windows.py:210
+#: gtweak/tweaks/tweak_group_windows.py:207
 msgid "Resize with Secondary-Click"
 msgstr "Breyta stærð með aukasmelli"
 
-#: gtweak/tweaks/tweak_group_windows.py:211
+#: gtweak/tweaks/tweak_group_windows.py:208
 msgid "Window Action Key"
 msgstr "Lykill fyrir gluggaaðgerð"
 
-#: gtweak/tweaks/tweak_group_windows.py:217
+#: gtweak/tweaks/tweak_group_windows.py:214
 msgid "Raise Windows When Focused"
 msgstr "Lyfta gluggum þegar þeir fá virkni"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Breytilegur földi vinnusvæða"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr "Vinnusvæði eru útbúin eftir þörfum og eru fjarlægð þegar þau eru tóm."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Föst vinnusvæði"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Fjöldi vinnusvæða er fastur."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Vinnusvæði"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Meðhöndlun skjáa"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Vinnusvæði spanna yfir skjái"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Vinnusvæði eingöngu á aðalskjá"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Viðbótarskjáir eru meðhöndlaðir sem sjálfstæð vinnusvæði."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Fyrirliggjandi vinnusvæði inniheldur viðbótarskjái."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Fjöldi vinnusvæða"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
+#: gtweak/tweaks/tweak_group_xkb.py:167
 msgid "Typing"
 msgstr "Innsláttur"
 
@@ -836,22 +742,105 @@ msgid "Wacom"
 msgstr "Wacom teiknitafla"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:62
+#: gtweak/utils.py:63
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(sjálfgefið)</i>"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:345
 msgid "Configuration changes require restart"
 msgstr "Breytingar á stillingum krefjast endurræsingar"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:346
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Endurræsa þarf setuna svo breytingarnar taki gildi"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Endurræsa setu"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Óvirkja allar skeljaviðbætur"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Uppfærslur mistókust á %s viðbótum"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Skoða í hugbúnaði"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Sæki viðbótina"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Villa við að hlaða inn viðbót"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Viðbótin styður ekki útgáfu skeljarinnar"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Óþekkt villa í viðbót"
+
+#~ msgid "Updating"
+#~ msgstr "Uppfæri"
+
+#~ msgid "Error"
+#~ msgstr "Villa"
+
+#~ msgid "Update"
+#~ msgstr "Uppfæra"
+
+#~ msgid "Application Menu"
+#~ msgstr "Forritavalmynd"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "Virknihorn fyrir aðgerðayfirlit"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "Hleðsla rafhlöðu í prósentum"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "Flísalagning á jöðrum"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr ""
+#~ "Þegar þetta er virkt, eru gluggar flísalagðir þegar þeim er sleppt á "
+#~ "skjájaðra."
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "Breytilegur földi vinnusvæða"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "Vinnusvæði eru útbúin eftir þörfum og eru fjarlægð þegar þau eru tóm."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "Föst vinnusvæði"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "Fjöldi vinnusvæða er fastur."
+
+#~ msgid "Workspaces"
+#~ msgstr "Vinnusvæði"
+
+#~ msgid "Display Handling"
+#~ msgstr "Meðhöndlun skjáa"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "Vinnusvæði spanna yfir skjái"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "Vinnusvæði eingöngu á aðalskjá"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "Viðbótarskjáir eru meðhöndlaðir sem sjálfstæð vinnusvæði."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "Fyrirliggjandi vinnusvæði inniheldur viðbótarskjái."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Fjöldi vinnusvæða"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
