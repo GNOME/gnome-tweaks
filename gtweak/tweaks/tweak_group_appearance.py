@@ -51,7 +51,7 @@ def get_sound_themes():
 class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
         GSettingsComboTweak.__init__(self,
-			_("Applications"),
+			_("Legacy Applications"),
             "org.gnome.desktop.interface",
             "gtk-theme",
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
@@ -282,12 +282,12 @@ TWEAK_GROUPS = [
         #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
         #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
         Title(_("Themes"), "", uid="title-theme"),
-        GtkThemeSwitcher(),
         CursorThemeSwitcher(),
         IconThemeSwitcher(),
         ShellThemeTweak(loaded=_shell_loaded),
         GSettingsComboTweak(_("Sound"), "org.gnome.desktop.sound", "theme-name", get_sound_themes(),
                         desc=_("Specifies which sound theme to use for sound events.")),
+        GtkThemeSwitcher(),
 
         Title(_("Background"), "", uid="title-theme"),
         GSettingsFileChooserButtonTweak(_("Image"),"org.gnome.desktop.background", "picture-uri",
