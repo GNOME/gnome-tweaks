@@ -7,10 +7,14 @@ i18n.merge_file(
   install_dir: appdatadir
 )
 
-desktop_file = 'org.gnome.tweaks.desktop'
 i18n.merge_file(
-  input: desktop_file + '.in',
-  output: desktop_file,
+  input: configure_file(
+    input: default_pkgappid + '.desktop.in',
+    output: pkgappid + '.desktop.temp',
+    configuration: defs_conf,
+    install: false
+  ),
+  output: pkgappid + '.desktop',
   po_dir: '../po',
   install: true,
   install_dir: desktopdir,
@@ -29,7 +33,7 @@ install_data(
   install_dir: 'share/glib-2.0/schemas'
 )
 
-install_data ('org.gnome.tweaks.svg',
+install_data (pkgappid + '.svg',
   install_dir: join_paths(datadir, 'icons', 'hicolor', 'scalable', 'apps'))
-install_data ('org.gnome.tweaks-symbolic.svg',
+install_data (default_pkgappid + '-symbolic.svg', rename: pkgappid + '-symbolic.svg',
   install_dir: join_paths(datadir, 'icons', 'hicolor', 'symbolic', 'apps'))

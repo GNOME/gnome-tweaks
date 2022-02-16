@@ -19,7 +19,7 @@ class Window(Gtk.ApplicationWindow):
         self.set_default_size(980, 640)
         self.set_size_request(-1, 300)
         self.set_position(Gtk.WindowPosition.CENTER)
-        self.set_icon_name("org.gnome.tweaks")
+        self.set_icon_name(gtweak.APP_ID)
 
         self.hsize_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
 
@@ -177,6 +177,9 @@ class Window(Gtk.ApplicationWindow):
         return right_box
 
     def load_css(self):
+        window_context = self.get_style_context()
+        if gtweak.APP_ID.endswith('Devel'):
+            window_context.add_class('devel')
         css_provider = Gtk.CssProvider()
         css_provider.load_from_path(
             os.path.join(gtweak.PKG_DATA_DIR, 'shell.css'))

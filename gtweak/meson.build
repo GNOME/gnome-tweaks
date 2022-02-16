@@ -4,6 +4,7 @@ defs_conf.set('GSETTINGSSCHEMADIR', schemadir)
 defs_conf.set('LIBEXECDIR', libexecdir)
 defs_conf.set('LOCALEDIR', localedir)
 defs_conf.set('PKGDATADIR', pkgdatadir)
+defs_conf.set('APPID', pkgappid)
 defs_conf.set('TWEAKDIR', join_paths(gtweakdir, 'tweaks'))
 defs_conf.set('VERSION', meson.project_version())
 

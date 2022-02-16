@@ -1,6 +1,6 @@
 project('gnome-tweaks',
   version: '40.0',
-  meson_version: '>= 0.46.0'
+  meson_version: '>= 0.50.0'
 )
 
 gnome = import('gnome')
@@ -21,6 +21,13 @@ localedir = join_paths(prefix, get_option('localedir'))
 pythondir = join_paths(prefix, python3.get_path('purelib'))
 
 pkgdatadir = join_paths(datadir, meson.project_name())
+
+default_pkgappid = 'org.gnome.tweaks'
+pkgappid = default_pkgappid
+
+if get_option('profile') == 'development'
+  pkgappid = 'org.gnome.TweaksDevel'
+endif
 
 appdatadir = join_paths(datadir, 'metainfo')
 desktopdir = join_paths(datadir, 'applications')

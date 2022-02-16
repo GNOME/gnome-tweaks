@@ -331,7 +331,7 @@ class Notification:
             )
             self.notification.set_hint(
                                 "desktop-entry",
-                                GLib.Variant('s', 'org.gnome.tweaks'))
+                                GLib.Variant('s', gtweak.APP_ID))
             self.notification.show()
         else:
             raise Exception("Not Supported")
@@ -351,7 +351,7 @@ class LogoutNotification:
                                 self._logout, None, None)
             self.notification.set_hint(
                                 "desktop-entry",
-                                GLib.Variant('s', 'org.gnome.tweaks'))
+                                GLib.Variant('s', gtweak.APP_ID))
             self.notification.show()
         else:
             raise Exception("Not Supported")

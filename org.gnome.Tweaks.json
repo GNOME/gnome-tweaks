@@ -1,5 +1,5 @@
 {
-    "app-id": "org.gnome.Tweaks",
+    "app-id": "org.gnome.TweaksDevel",
     "runtime": "org.gnome.Platform",
     "runtime-version": "master",
     "sdk": "org.gnome.Sdk",
@@ -57,6 +57,7 @@
             "sources": [
                 {
                     "type": "git",
+                    "branch": "main",
                     "url": "https://gitlab.gnome.org/GNOME/libhandy.git"
                 }
             ]
@@ -64,6 +65,9 @@
         {
             "name": "gnome-tweaks",
             "buildsystem": "meson",
+            "config-opts": [
+                "-Dprofile=development"
+            ],
             "sources": [
                 {
                     "type": "git",

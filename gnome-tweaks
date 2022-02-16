@@ -15,7 +15,7 @@ gi.require_version("Gtk", "3.0")
 gi.require_version("Handy", "1")
 
 import gtweak
-from gtweak.defs import VERSION
+from gtweak.defs import VERSION, APP_ID
 
 
 if __name__ == '__main__':
@@ -60,6 +60,7 @@ if __name__ == '__main__':
     gtweak.LIBEXEC_DIR = LIBEXEC_DIR
     gtweak.ENABLE_TEST = options.test
     gtweak.ALL_TWEAKS = options.load
+    gtweak.APP_ID = APP_ID
     gtweak.APP_NAME = "gnome-tweaks"
     gtweak.VERBOSE = options.verbose
 

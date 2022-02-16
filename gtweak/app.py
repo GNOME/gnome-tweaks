@@ -40,7 +40,7 @@ class GnomeTweaks(Gtk.Application):
 
     def __init__(self):
         GLib.set_application_name(_("GNOME Tweaks"))
-        Gtk.Application.__init__(self, application_id="org.gnome.tweaks")
+        Gtk.Application.__init__(self, application_id=gtweak.APP_ID)
         self.win = None
 
         self._settings = Gio.Settings.new('org.gnome.tweaks')
@@ -105,7 +105,7 @@ class GnomeTweaks(Gtk.Application):
         aboutdialog.set_comments(about_comment)
 
         aboutdialog.set_copyright("Copyright © 2011 - 2013 John Stowers.")
-        aboutdialog.set_logo_icon_name("org.gnome.tweaks")
+        aboutdialog.set_logo_icon_name(gtweak.APP_ID)
         aboutdialog.set_website("https://wiki.gnome.org/Apps/Tweaks")
         aboutdialog.set_website_label(_("Homepage"))
         aboutdialog.set_license_type(Gtk.License.GPL_3_0)
