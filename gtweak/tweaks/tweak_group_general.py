@@ -51,7 +51,6 @@ class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
 
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("General"),
-        GSettingsSwitchTweak(_("Animations"), "org.gnome.desktop.interface", "enable-animations"),
         IgnoreLidSwitchTweak(),
         # Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
         GSettingsSwitchTweak(_("Over-Amplification"), "org.gnome.desktop.sound", "allow-volume-above-100-percent",
