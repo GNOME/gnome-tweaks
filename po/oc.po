@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2021-10-19 13:45+0000\n"
-"PO-Revision-Date: 2021-11-09 11:12+0100\n"
+"POT-Creation-Date: 2022-02-16 10:31+0000\n"
+"PO-Revision-Date: 2022-02-19 10:34+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "Lo projècte GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:42 gtweak/utils.py:326
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
 #: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "Ajustaments de GNOME"
@@ -51,10 +51,8 @@ msgstr "Reglatges"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr ""
-"Paramètres;Avançats;Preferéncias;Extensions;Poliças;Tèma;XKB;Clavièr;Picada;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr "Paramètres;Avançats;Preferéncias;Poliças;Tèma;XKB;Clavièr;Picada;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -64,22 +62,22 @@ msgstr "_Reïnicializar"
 msgid "_About Tweaks"
 msgstr "_A prepaus d’Ajustaments"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "_Contunhar"
 
-#: gtweak/app.py:24
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
 msgstr "Las extensions mudèron"
 
 #. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
-#: gtweak/app.py:29
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "La gestion de las extensions es ara a {0}."
 
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
-#: gtweak/app.py:33
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
@@ -88,32 +86,32 @@ msgstr ""
 "Vos recomandam de telecargar las extensions GNOME a partir de {0} se vòstra "
 "distribucion las inclutz pas."
 
-#: gtweak/app.py:78
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "Reïnicializar"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Reïnicializar totes los reglatges a lor valor d'origina ?"
 
-#: gtweak/app.py:96 gtweak/app.py:98
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "Shell de GNOME"
 
-#: gtweak/app.py:98
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(mòde %s)"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "Lo shell de GNOME es pas actu"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:110
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "Site Web de l'aisina de personalizacion"
 
@@ -126,14 +124,13 @@ msgid "Search Tweaks…"
 msgstr "Recèrca d’ajustaments…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "General"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Aplicacions"
+msgid "Legacy Applications"
+msgstr "Aplicacions existentas"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -215,11 +212,11 @@ msgstr "Aparéncia"
 msgid "Themes"
 msgstr "Tèmas"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "Son"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Indica quin tèma sonòr utilizar pels eveniments sonòrs."
 
@@ -333,16 +330,12 @@ msgstr "Factor d'escala"
 msgid "Suspend when laptop lid is closed"
 msgstr "Metre en velha quand l’ecran del portable es rabatut"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Animacions"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "Subre-amplificacion"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -361,107 +354,32 @@ msgstr ""
 "Otrapassa los acorchis al profièit de las tòcas de clavièr de l’editor Emacs."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Tòca compose"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Verrolhatge del desfilament"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "Impr. ecran"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Menú"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Alt dreit"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Ctrl dreit"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Super dreit"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Verrolhatge majusculas"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Ctrl esquèrra"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Desactivat"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Autoriza la sasida de caractèrs suplementaris."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"La tòca compose permet la sasida d’una granda varietat de caractèrs.\n"
-"Per l’utilizar, tenètz-la quichada e quichatz sus <b>C</b> e <b>o</b> per "
-"sasir <b>©</b>, o <b>a</b> e <b>'</b> per sasir <b>á</b>.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "Acorchi d’apercebut"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
 msgstr "Super esquèrra"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "Super dreit"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "Opcions suplementàrias d’agençament"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "Emulacion del clic mirga"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "Dets"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
@@ -469,11 +387,11 @@ msgstr ""
 "Clicatz lo pavat tactil amb dos dets per clic-drech e tres dets pel clic del "
 "mitan.touchpad."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "Zòna"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -481,53 +399,58 @@ msgstr ""
 "Clicatz lo boton drech del pavat tactil pel clic-drech e lo boton del mitan "
 "pel clic del mitan."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Desactivat"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "Utilizar pas l’emulacion del clic mirga."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "Clavièr & Mirga"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "Clavièr"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "Afichar las fonts de sasida espandidas"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr ""
 "Aumenta la causida de las fonts de sasida dins los paramètres de "
 "l’aplicacion."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "Mirga"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "Perfil d’acceleracion"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "Emplaçament del puntador"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Quichatz sus la tòca Ctrl per metre en evidéncia lo puntador."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "Pegar amb lo clic del mitan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "Pavat tactil"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "Desactivar pendent la sasida"
 
@@ -540,6 +463,10 @@ msgstr ""
 #: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Aplicacions a l'aviada"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Aplicacions"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -780,6 +707,48 @@ msgstr "Vòstra session deu èsser reaviada per que los paramètres prenga efiè
 #: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Reaviar la session"
+
+#~ msgid "Animations"
+#~ msgstr "Animacions"
+
+#~ msgid "Compose Key"
+#~ msgstr "Tòca compose"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Verrolhatge del desfilament"
+
+#~ msgid "PrtScn"
+#~ msgstr "Impr. ecran"
+
+#~ msgid "Menu"
+#~ msgstr "Menú"
+
+#~ msgid "Right Alt"
+#~ msgstr "Alt dreit"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Ctrl dreit"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Verrolhatge majusculas"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Ctrl esquèrra"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Autoriza la sasida de caractèrs suplementaris."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "La tòca compose permet la sasida d’una granda varietat de caractèrs.\n"
+#~ "Per l’utilizar, tenètz-la quichada e quichatz sus <b>C</b> e <b>o</b> per "
+#~ "sasir <b>©</b>, o <b>a</b> e <b>'</b> per sasir <b>á</b>.\n"
 
 #~ msgid "Battery Percentage"
 #~ msgstr "Percentatge de la batariá"
