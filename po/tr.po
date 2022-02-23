@@ -16,14 +16,14 @@
 # Furkan Tokaç <developmentft@gmail.com>, 2017.
 # Nurperi Utlu <utlunurperi@gmail.com>, 2017.
 # Muhammet Kara <muhammetk@gmail.com>, 2013, 2014, 2015, 2016, 2017.
-# Emin Tufan Çetin <etcetin@gmail.com>, 2018-2021.
+# Emin Tufan Çetin <etcetin@gmail.com>, 2018-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2020-12-09 21:53+0000\n"
-"PO-Revision-Date: 2021-02-21 12:04+0300\n"
+"POT-Creation-Date: 2022-02-19 19:57+0000\n"
+"PO-Revision-Date: 2022-02-23 13:25+0300\n"
 "Last-Translator: Emin Tufan Çetin <etcetin@gmail.com>\n"
 "Language-Team: Turkish <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -31,15 +31,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-POOTLE-MTIME: 1420705374.000000\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME Projesi"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
-#: gtweak/utils.py:335
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
+#: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "GNOME İnce Ayarlar"
 
@@ -66,11 +66,10 @@ msgstr "İnce Ayarlar"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Ayarlar;Gelişmiş;Tercihler;Yeğler;Eklentiler;Uzantılar;Yazı Tipleri;Tema;"
-"Gövde;XKB;Klavye;Yazım;Yazma;Yazış;"
+"Ayarlar;Gelişmiş;Tercihler;Yeğler;Yazı Tipleri;Yazıtipleri;Gövde;Tema;XKB;"
+"Klavye;Yazım;Yazma;Yazış;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -80,20 +79,22 @@ msgstr "Öntanımlı Değerlere _Sıfırla"
 msgid "_About Tweaks"
 msgstr "İnce Ayarlar _Hakkında"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "_Sürdür"
 
-#: gtweak/app.py:24
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
 msgstr "Eklentiler Taşındı"
 
-#: gtweak/app.py:28
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "Eklenti yönetimi, {0} uygulamasına taşındı."
 
-#: gtweak/app.py:31
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
@@ -101,32 +102,32 @@ msgid ""
 msgstr ""
 "Dağıtımınızda GNOME Eklentiler yoksa, {0} mağazasından indirmenizi öneririz."
 
-#: gtweak/app.py:75
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "Öntanımlı Değerlere Sıfırla"
 
-#: gtweak/app.py:76
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Tüm ince ayarlar öntanımlı hallerine getirilsin mi?"
 
-#: gtweak/app.py:93 gtweak/app.py:95
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:95
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s kipi)"
 
-#: gtweak/app.py:98
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell çalışmıyor"
 
-#: gtweak/app.py:100
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:107
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "Ana Sayfa"
 
@@ -139,14 +140,13 @@ msgid "Search Tweaks…"
 msgstr "İnce Ayar Ara…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Genel"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Uygulamalar"
+msgid "Legacy Applications"
+msgstr "Eski Uygulamalar"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -226,11 +226,11 @@ msgstr "Görünüm"
 msgid "Themes"
 msgstr "Temalar"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "Ses"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Ses etkinlikleri için hangi ses temasının kullanılacağını belirtir."
 
@@ -284,59 +284,59 @@ msgstr "Çöp"
 msgid "Mounted Volumes"
 msgstr "Bağlı Birimler"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
 msgid "Hinting"
 msgstr "Düzeltme"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
 msgid "Antialiasing"
 msgstr "Yumuşatma"
 
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Full"
 msgstr "Tam"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:46
 msgid "Medium"
 msgstr "Orta"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:52
 msgid "Slight"
 msgstr "Düşük"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
 msgid "None"
 msgstr "Hiçbiri"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:71
 msgid "Subpixel (for LCD screens)"
 msgstr "Subpixel (LCD ekranlar için)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:77
 msgid "Standard (grayscale)"
 msgstr "Standart (gri tonlama)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
+#: gtweak/tweaks/tweak_group_font.py:108
 msgid "Fonts"
 msgstr "Yazı Tipleri"
 
-#: gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:109
 msgid "Interface Text"
 msgstr "Arayüz Metni"
 
-#: gtweak/tweaks/tweak_group_font.py:101
+#: gtweak/tweaks/tweak_group_font.py:110
 msgid "Document Text"
 msgstr "Belge Metni"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:111
 msgid "Monospace Text"
 msgstr "Eşaralıklı Metin"
 
-#: gtweak/tweaks/tweak_group_font.py:103
+#: gtweak/tweaks/tweak_group_font.py:112
 msgid "Legacy Window Titles"
 msgstr "Eski Pencere Başlıkları"
 
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:114
 msgid "Scaling Factor"
 msgstr "Ölçekleme Oranı"
 
@@ -344,16 +344,12 @@ msgstr "Ölçekleme Oranı"
 msgid "Suspend when laptop lid is closed"
 msgstr "Dizüstü kapağı kapatıldığında askıya al"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Animasyonlar"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "Aşırı Yükseltme"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -372,112 +368,32 @@ msgstr ""
 "Emacs düzenleyicide, Emacs kısayollarını diğer kısayolların üzerine yaz."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Birleştirme Tuşu"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Scroll Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Menü"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Sağ Alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Sağ Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Sağ Süper"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Caps Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Sol Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Devre Dışı"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Ek karakter girilmesini sağlar."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"Birleştirme tuşu, standart olmayan karakterlerin tek tuş ile girilmesini "
-"sağlar. Kullanmak için birleştirme tuşuna ve ardından ilgili karakterlere "
-"basın.\n"
-"\n"
-"Standart olmayan birçok karakter, standart karakterlerin birleşimi ile "
-"girilebilir. Örneğin, birleştirme tuşu ile birlikte <b>C</b> ve <b>o</b>, "
-"<b>©</b> karakterini verecek, <b>a</b> ve <b>'</b>, <b>á</b> karakterini "
-"verecek.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "Kısayollara Genel Bakış"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
 msgstr "Sol Süper"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "Sağ Süper"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "Ek Düzen Seçenekleri"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "Fare Tıkı Öykünme"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "Parmaklar"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
@@ -485,11 +401,11 @@ msgstr ""
 "Sağ tık için dokunmatik düzeye iki parmakla ve orta tık için üç parmakla "
 "tıkla."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "Alan"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -497,51 +413,56 @@ msgstr ""
 "Sağ tık için dokunmatik yüzeyin sağ alt köşesine ve orta tık için alt "
 "ortasına tıkla."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Devre Dışı"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "Fare tıkı öykünmeyi kullanma."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "Klavye ve Fare"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "Klavye"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "Genişletilmiş Giriş Kaynaklarını Göster"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Ayarlar uygulamasındaki girdi kaynakları seçeneğini arttır."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "Fare"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "Hızlandırma Profili"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "İmleç Konumu"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "İmleci vurgulamak için Ctrl tuşuna bas."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "Orta Tuşa Tıklayarak Yapıştır"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "Dokunmatik Yüzey"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "Yazarken Devre Dışı Bırak"
 
@@ -553,6 +474,10 @@ msgstr "Başlangıç uygulamaları, oturum açtığınızda kendiliğinden başl
 #: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Başlangıç Uygulamaları"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Uygulamalar"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -641,46 +566,38 @@ msgid "Top Bar"
 msgstr "Tepe Çubuğu"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Activities Overview Hot Corner"
-msgstr "Etkinlikler Genel Görünümü Etkin Köşesi"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Battery Percentage"
-msgstr "Pil Yüzdesi"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Saat"
 
 # Haftanın günlerinin kabukta gösterilmemesi için seçenek
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Weekday"
 msgstr "Haftanın Günleri"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Date"
 msgstr "Tarih"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Seconds"
 msgstr "Saniye"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Calendar"
 msgstr "Takvim"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Week Numbers"
 msgstr "Hafta Numaraları"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Window Focus"
 msgstr "Pencere Odağı"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
 #: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Click to Focus"
 msgstr "Tıklayarak Odakla"
 
@@ -754,83 +671,23 @@ msgstr ""
 "Açıkken, yardımcı iletişim pencereleri ana pencereye tutturulur ve pencere "
 "oynatılamaz."
 
-#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Edge Tiling"
-msgstr "Köşe Döşeme"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
-msgid "When on, windows are tiled when dragged to screen edges."
-msgstr "Açıkken, pencereler ekran köşelerine sürüklendiğinde döşenir."
-
-#: gtweak/tweaks/tweak_group_windows.py:209
+#: gtweak/tweaks/tweak_group_windows.py:206
 msgid "Center New Windows"
 msgstr "Yeni Pencereleri Ortala"
 
-#: gtweak/tweaks/tweak_group_windows.py:210
+#: gtweak/tweaks/tweak_group_windows.py:207
 msgid "Resize with Secondary-Click"
 msgstr "İkincil Tıklama ile Yeniden Boyutlandır"
 
-#: gtweak/tweaks/tweak_group_windows.py:211
+#: gtweak/tweaks/tweak_group_windows.py:208
 msgid "Window Action Key"
 msgstr "Pencere Eylem Tuşu"
 
-#: gtweak/tweaks/tweak_group_windows.py:217
+#: gtweak/tweaks/tweak_group_windows.py:214
 msgid "Raise Windows When Focused"
 msgstr "Odaklandığında Pencereyi Öne Çıkar"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Dinamik Çalışma Alanları"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr ""
-"İstendiğinde çalışma alanları oluşturulabilir ve boşaldıklarında "
-"kendiliğinden kaldırılır."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Sabit Çalışma Alanları"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Çalışma alanı sayısı sabittir."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Çalışma Alanları"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Ekran Kullanımı"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Çalışma alanlarını ekranlara yay"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Çalışma alanları yalnızca birincil ekranda"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Ek ekranlara, bağımsız çalışma alanları gibi davran."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Geçerli çalışma alanı ek ekranlar içerir."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Çalışma Alanı Sayısı"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
+#: gtweak/tweaks/tweak_group_xkb.py:167
 msgid "Typing"
 msgstr "Yazma"
 
@@ -843,22 +700,118 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:62
+#: gtweak/utils.py:63
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(öntanımlı)</i>"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:345
 msgid "Configuration changes require restart"
 msgstr "Yapılandırma değişiklikleri yeniden başlatmayı gerektirir"
 
-#: gtweak/utils.py:338
+#: gtweak/utils.py:346
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Ayarların etkili olması için oturumunuz yeniden başlatılmalı"
 
-#: gtweak/utils.py:342
+#: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Oturumu Yeniden Başlat"
+
+#~ msgid "Animations"
+#~ msgstr "Animasyonlar"
+
+#~ msgid "Compose Key"
+#~ msgstr "Birleştirme Tuşu"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Scroll Lock"
+
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "Menü"
+
+#~ msgid "Right Alt"
+#~ msgstr "Sağ Alt"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Sağ Ctrl"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Caps Lock"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Sol Ctrl"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Ek karakter girilmesini sağlar."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "Birleştirme tuşu, standart olmayan karakterlerin tek tuş ile girilmesini "
+#~ "sağlar. Kullanmak için birleştirme tuşuna ve ardından ilgili karakterlere "
+#~ "basın.\n"
+#~ "\n"
+#~ "Standart olmayan birçok karakter, standart karakterlerin birleşimi ile "
+#~ "girilebilir. Örneğin, birleştirme tuşu ile birlikte <b>C</b> ve <b>o</b>, "
+#~ "<b>©</b> karakterini verecek, <b>a</b> ve <b>'</b>, <b>á</b> karakterini "
+#~ "verecek.\n"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "Etkinlikler Genel Görünümü Etkin Köşesi"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "Pil Yüzdesi"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "Köşe Döşeme"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr "Açıkken, pencereler ekran köşelerine sürüklendiğinde döşenir."
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "Dinamik Çalışma Alanları"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "İstendiğinde çalışma alanları oluşturulabilir ve boşaldıklarında "
+#~ "kendiliğinden kaldırılır."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "Sabit Çalışma Alanları"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "Çalışma alanı sayısı sabittir."
+
+#~ msgid "Workspaces"
+#~ msgstr "Çalışma Alanları"
+
+#~ msgid "Display Handling"
+#~ msgstr "Ekran Kullanımı"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "Çalışma alanlarını ekranlara yay"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "Çalışma alanları yalnızca birincil ekranda"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "Ek ekranlara, bağımsız çalışma alanları gibi davran."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "Geçerli çalışma alanı ek ekranlar içerir."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Çalışma Alanı Sayısı"
 
 #~ msgid "Disable All Shell Extensions"
 #~ msgstr "Tüm Kabuk Eklentilerini Devre Dışı Bırak"
