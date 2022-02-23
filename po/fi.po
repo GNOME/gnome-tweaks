@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-2\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2021-09-08 05:55+0000\n"
-"PO-Revision-Date: 2021-09-14 13:24+0300\n"
+"POT-Creation-Date: 2022-02-19 19:57+0000\n"
+"PO-Revision-Date: 2022-02-23 19:34+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Gnome-projekti"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:42 gtweak/utils.py:326
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
 #: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "Gnomen lisäasetukset"
@@ -53,12 +53,10 @@ msgstr "Lisäasetukset"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-"asetukset;ominaisuudet;laajennukset;kirjasimet;fontit;teema;näppäimistö;"
-"kirjoittaminen;"
+"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;asetukset;"
+"ominaisuudet;kirjasimet;fontit;teema;näppäimistö;kirjoittaminen;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -68,22 +66,22 @@ msgstr "_Palauta oletukset"
 msgid "_About Tweaks"
 msgstr "_Tietoja - Lisäasetukset"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "_Jatka"
 
-#: gtweak/app.py:24
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
 msgstr "Laajennukset ovat muuttaneet"
 
 #. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
-#: gtweak/app.py:29
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "Laajennusten hallinta on siirretty sovellukseen {0}."
 
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
-#: gtweak/app.py:33
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
@@ -92,32 +90,32 @@ msgstr ""
 "Suosittelemme lataamaan Gnomen laajennukset -sovelluksen {0}-sivustolta, jos "
 "se ei sisälly käyttämääsi jakeluun."
 
-#: gtweak/app.py:78
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "Palauta oletukset"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Palautetaanko kaikki lisäasetukset alkuperäisiin arvoihin?"
 
-#: gtweak/app.py:96 gtweak/app.py:98
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:98
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s tila)"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "Gnome Shell ei ole käynnissä"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:110
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "Verkkosivusto"
 
@@ -130,14 +128,13 @@ msgid "Search Tweaks…"
 msgstr "Etsi lisäasetuksia…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Yleiset"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Sovellukset"
+msgid "Legacy Applications"
+msgstr "Vanhentuneet legacy-sovellukset"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -217,11 +214,11 @@ msgstr "Ulkoasu"
 msgid "Themes"
 msgstr "Teemat"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "Ääni"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Määrittää mitä ääniteemaa käytetään äänitapahtumien yhteydessä."
 
@@ -335,16 +332,12 @@ msgstr "Skaalauskerroin"
 msgid "Suspend when laptop lid is closed"
 msgstr "Aseta valmiustilaan kun kansi suljetaan"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Animaatiot"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "Ylivahvistus"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -362,111 +355,32 @@ msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Korvaa pikanäppäimet Emacs-editorin näppäinsidonnaisuuksilla."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Compose-näppäin"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Scroll Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Menu"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Oikea Alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Oikea Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Oikea Super"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Caps Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Vasen Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Pois käytöstä"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Mahdollistaa lisämerkkien syöttämisen."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"Compose-näppäin mahdollistaa lukuisten eri merkkien syöttämisen. Paina ensin "
-"Compose-näppäintä ja sen jälkeen merkkisarjaa.\n"
-"\n"
-"Useita epätavallisia merkkejä on mahdollista syöttää yhdistämällä tavallisia "
-"merkkejä. Esimerkiksi Compose-näppäimen painallus ja sen jälkeen näppäinten "
-"<b>C</b> ja <b>o</b> painallus tuottaa merkin <b>©</b>, <b>a</b> ja sen "
-"jälkeen <b>'</b> tuottaa merkin <b>á</b>.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "Yleisnäkymän pikanäppäin"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
 msgstr "Vasen Super"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "Oikea Super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "Asettelun lisävalinnat"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "Hiirinapsautuksen jäljittely"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "Sormet"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
@@ -474,11 +388,11 @@ msgstr ""
 "Napsauta kosketuslevyä kahdella sormella hiiren oikean painikkeen "
 "napsauttamiseksi. Kolmella sormella keskipainikkeen napsautus."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "Alue"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -486,51 +400,56 @@ msgstr ""
 "Napsauta kosketuslevyn oikeaa alakulmaa hiiren oikean painikkeen "
 "napsauttamiseksi. Alhaalta keskeltä keskipainikkeen napsautus."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Pois käytöstä"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "Älä käytä hiirinapsautuksen jäljittelyä."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "Näppäimistö ja hiiri"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "Näppäimistö"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "Näytä laajennetut syötelähteet"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Nostaa syötelähteiden valintojen määrää järjestelmän asetuksissa."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "Hiiri"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "Kiihtyvyysprofiili"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "Osoittimen sijainti"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Paina Ctrl-näppäintä korostaaksesi osoittimen sijainnin."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "Keskipainike liittää"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "Kosketuslevy"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "Poista käytöstä kirjoittaessa"
 
@@ -544,6 +463,10 @@ msgstr ""
 #: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Käynnistettävät sovellukset"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Sovellukset"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -782,6 +705,52 @@ msgstr "Istunto tulee käynnistää uudelleen, jotta asetukset tulevat voimaan"
 #: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Käynnistä istunto uudelleen"
+
+#~ msgid "Animations"
+#~ msgstr "Animaatiot"
+
+#~ msgid "Compose Key"
+#~ msgstr "Compose-näppäin"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Scroll Lock"
+
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Right Alt"
+#~ msgstr "Oikea Alt"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Oikea Ctrl"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Caps Lock"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Vasen Ctrl"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Mahdollistaa lisämerkkien syöttämisen."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "Compose-näppäin mahdollistaa lukuisten eri merkkien syöttämisen. Paina "
+#~ "ensin Compose-näppäintä ja sen jälkeen merkkisarjaa.\n"
+#~ "\n"
+#~ "Useita epätavallisia merkkejä on mahdollista syöttää yhdistämällä "
+#~ "tavallisia merkkejä. Esimerkiksi Compose-näppäimen painallus ja sen "
+#~ "jälkeen näppäinten <b>C</b> ja <b>o</b> painallus tuottaa merkin <b>©</"
+#~ "b>, <b>a</b> ja sen jälkeen <b>'</b> tuottaa merkin <b>á</b>.\n"
 
 #~ msgid "Activities Overview Hot Corner"
 #~ msgstr "Toiminnot-yleisnäkymän aktivointikulma"
