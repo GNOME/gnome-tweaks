@@ -3,15 +3,15 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Martin Srebotnjak  <miles@filmsi.net>, 2011.
-# Matej Urbančič <mateju@svn.gnome.org>, + 2011–2020.
+# Matej Urbančič <mateju@src.gnome.org>, + 2011–2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2020-12-19 18:28+0000\n"
-"PO-Revision-Date: 2020-12-20 20:22+0100\n"
-"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"POT-Creation-Date: 2022-02-25 00:11+0000\n"
+"PO-Revision-Date: 2022-02-25 19:54+0100\n"
+"Last-Translator: Matej Urbančič <mateju@src.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
 "MIME-Version: 1.0\n"
@@ -20,14 +20,14 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:42 gtweak/utils.py:318
-#: gtweak/utils.py:335
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
+#: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "GNOME Tweaks"
 
@@ -54,11 +54,10 @@ msgstr "Prilagoditve okolja"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
 "nastavitve;napredno;lastnosti;razširitve;pisave;teme;tipkovnica;prilagajanje;"
-"tipkanje;tweak;"
+"tipkanje;tweak;XKB;tipkanje;vnos;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -68,56 +67,56 @@ msgstr "_Ponastavi na privzeto"
 msgid "_About Tweaks"
 msgstr "_O programu"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "_Nadaljuj"
 
-#: gtweak/app.py:24
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
 msgstr "Razširitev je premaknjena"
 
 #. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
-#: gtweak/app.py:29
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
-msgstr "Upravljalnik razširitev je premaknjena na {0}."
+msgstr "Upravljalnik razširitev je premaknjen v razdelek {0}."
 
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
-#: gtweak/app.py:33
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
 "not include it."
 msgstr ""
 "Priporočeno je prejeti program Razširitve GNOME prek {0}, če ta že ni "
-"vključena v programski nabor distribucije."
+"vključen v nabor programov distribucije."
 
-#: gtweak/app.py:77
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "Ponastavi na privzeto"
 
-#: gtweak/app.py:78
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Ali naj se vse nastavitve ponastavijo na osnovno privzeto stanje?"
 
-#: gtweak/app.py:95 gtweak/app.py:97
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "Lupina GNOME"
 
-#: gtweak/app.py:97
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(način %s)"
 
-#: gtweak/app.py:100
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "Lupina GNOME ni zagnana …"
 
-#: gtweak/app.py:102
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:109
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "Domača stran"
 
@@ -130,14 +129,13 @@ msgid "Search Tweaks…"
 msgstr "Iskanje prilagoditev …"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Splošno"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Programi"
+msgid "Legacy Applications"
+msgstr "Opuščeni programi"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -200,7 +198,7 @@ msgstr "Tema %s je uspešno nameščena"
 
 #: gtweak/tweaks/tweak_group_appearance.py:264
 msgid "Error installing theme"
-msgstr "Napaka nameščanja teme"
+msgstr "Prišlo je do napake med nameščanjem teme"
 
 #. does not look like a valid theme
 #: gtweak/tweaks/tweak_group_appearance.py:269
@@ -217,11 +215,11 @@ msgstr "Videz"
 msgid "Themes"
 msgstr "Tema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "Zvok"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Določa, katera zvokovna shema naj se uporabi za zvoke dogodkov."
 
@@ -275,59 +273,59 @@ msgstr "Smeti"
 msgid "Mounted Volumes"
 msgstr "Priklopljeni nosilci"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
 msgid "Hinting"
 msgstr "Prilagajanje pisave"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
 msgid "Antialiasing"
 msgstr "Glajenje"
 
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Full"
 msgstr "Polno"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:46
 msgid "Medium"
 msgstr "Srednje"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:52
 msgid "Slight"
 msgstr "Malo"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
 msgid "None"
 msgstr "Brez"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:71
 msgid "Subpixel (for LCD screens)"
 msgstr "Podtočkovno (za zaslone LCD)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:77
 msgid "Standard (grayscale)"
 msgstr "Standardno (sivinsko)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
+#: gtweak/tweaks/tweak_group_font.py:108
 msgid "Fonts"
 msgstr "Pisave"
 
-#: gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:109
 msgid "Interface Text"
 msgstr "Pisava vmesnika"
 
-#: gtweak/tweaks/tweak_group_font.py:101
+#: gtweak/tweaks/tweak_group_font.py:110
 msgid "Document Text"
 msgstr "Besedila dokumentov"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:111
 msgid "Monospace Text"
 msgstr "Besedilo s stalno širino"
 
-#: gtweak/tweaks/tweak_group_font.py:103
+#: gtweak/tweaks/tweak_group_font.py:112
 msgid "Legacy Window Titles"
 msgstr "Opuščeni nazivi oken"
 
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:114
 msgid "Scaling Factor"
 msgstr "Faktor povečave"
 
@@ -335,16 +333,12 @@ msgstr "Faktor povečave"
 msgid "Suspend when laptop lid is closed"
 msgstr "Ob poklopu pokrova postavi prenosnik v pripravljenost"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Animiraj dejanja"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "Prekoračitev glasnosti"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -362,111 +356,32 @@ msgstr ""
 "Prepiše tipkovne bližnjice za uporabo nastavljenih v urejevalniku Emacs."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Sestavljalna tipka"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Gumb zaklepa drsnika"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "Gumb tiskanja"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Meni"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Desna tipka Alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Desna tipka Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Desna tipka pop"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Gumb zaklepa velikosti črk"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Leva tipka Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Onemogočeno"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Dovoli vpisovanje dodatnih znakov."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"Sestavljalna tipka omogoča vnos širokega nabora znakov. Za uporabo, "
-"pritisnite sestavljalno tipko in nato zaporedje tipk, ki določajo znak.\n"
-"\n"
-"Kar nekaj nenavadnih znakov je mogoče vpisati s kombiniranjem običajnih. Na "
-"primer: s sestavljalno tipko in nato zaporedjem <b>C</b> in <b>o</b> se "
-"izpiše znak <b>©</b>, sestavljalna tipka in nato znaka <b>a</b> in <b>'</b> "
-"pa izpišeta črko s preglasom <b>á</b>.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "Pregledna tipkovna bližnjica"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
-msgstr "Leva tipka pop"
+msgstr "Leva tipka Super"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "Desna tipka Super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "Dodatne možnosti razporeditve"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "Posnemanje klika miške"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "Upravljanje s sledilno ploščico"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
@@ -474,11 +389,11 @@ msgstr ""
 "Pritisk na sledilno ploščico z dvema prstoma posnema klik desnega in s tremi "
 "prsti klik srednjega gumba miške."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "Območje"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -486,51 +401,56 @@ msgstr ""
 "Pritisk na desni spodnji rob sledilne ploščice posnema klik desnega, pritisk "
 "na sredino spodnjega roba pa klik srednjega gumba miške."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Onemogočeno"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "Ne uporabljaj posnemanja klikov miške."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "Tipkovnica in miška"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "Tipkovnica"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "Pokaži razširjene vhodne vire"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Povečaj izbor vhodnih virov v programu nastavitev."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "Miška"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "Profil pospeševanja"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "Mesto kazalke"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Pritisnite tipko CTRL za poudarjanje kazalnika."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "Srednji klik miške prilepi"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "Sledilna ploščica"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "Onemogoči delovanje ploščice med tipkanjem"
 
@@ -542,6 +462,10 @@ msgstr "Programi, zagnani samodejno ob prijavi uporabnika v sistem."
 #: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Začetni programi"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Programi"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -630,45 +554,37 @@ msgid "Top Bar"
 msgstr "Vrhnja vrstica"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Activities Overview Hot Corner"
-msgstr "Omogoči vroči kot predogleda dejavnosti"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Battery Percentage"
-msgstr "Pokaži odstotek polnosti baterije"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Ura"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Weekday"
 msgstr "Pokaži dan v tednu"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Date"
 msgstr "Izpiši datum"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Seconds"
 msgstr "Pokaži sekunde"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Calendar"
 msgstr "Koledar"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Week Numbers"
 msgstr "Izpiši številke tednov"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Window Focus"
 msgstr "Žariščenje okna"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
 #: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Click to Focus"
 msgstr "Klik postavi v žarišče"
 
@@ -745,85 +661,23 @@ msgstr ""
 "Izbrana možnost določa, da bodo modalna okna pripeta k nadrejenemu oknu in "
 "jih ni mogoče premikati."
 
-#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Edge Tiling"
-msgstr "Razpostavljanje na robovih"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
-msgid "When on, windows are tiled when dragged to screen edges."
-msgstr ""
-"Možnost omogoča, da se okna samodejno razpostavijo, ko so potisnjena ob "
-"robove zaslona."
-
-#: gtweak/tweaks/tweak_group_windows.py:209
+#: gtweak/tweaks/tweak_group_windows.py:206
 msgid "Center New Windows"
 msgstr "Nova okna postavi v središče"
 
-#: gtweak/tweaks/tweak_group_windows.py:210
+#: gtweak/tweaks/tweak_group_windows.py:207
 msgid "Resize with Secondary-Click"
 msgstr "Spreminjaj velikost z drugim klikom"
 
-#: gtweak/tweaks/tweak_group_windows.py:211
+#: gtweak/tweaks/tweak_group_windows.py:208
 msgid "Window Action Key"
 msgstr "Tipka dejanj okna"
 
-#: gtweak/tweaks/tweak_group_windows.py:217
+#: gtweak/tweaks/tweak_group_windows.py:214
 msgid "Raise Windows When Focused"
 msgstr "Dvigni okna v žarišču"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Dinamične delovne površine"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr ""
-"Delovne površine se lahko ustvarjajo na zahtevo in se samodejno odstranijo, "
-"ko so prazne."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Statične delovne površine"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Število delovnih površin je določeno."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Delovne površine"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Upravljanje z zaslonom"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Delovne površine se lahko širijo izven zaslona"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Delovne površine naj bodo le na osnovnem zaslonu"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Dodatni zasloni so obravnavani kot neodvisne delovne površine."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Trenutna delovna površina vključuje tudi dodatne zaslone."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Število delovnih površin"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
+#: gtweak/tweaks/tweak_group_xkb.py:167
 msgid "Typing"
 msgstr "Tipkanje"
 
@@ -836,22 +690,119 @@ msgid "Wacom"
 msgstr "Tablica Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:62
+#: gtweak/utils.py:63
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(privzeto)</i>"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:345
 msgid "Configuration changes require restart"
 msgstr "Spreminjanje teh nastavitev zahteva ponovni zagon sistema."
 
-#: gtweak/utils.py:338
+#: gtweak/utils.py:346
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Za uveljavitev spremenjenih nastavitev je treba sejo ponovno zagnati."
 
-#: gtweak/utils.py:342
+#: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Ponovno zaženi sejo"
+
+#~ msgid "Animations"
+#~ msgstr "Animiraj dejanja"
+
+#~ msgid "Compose Key"
+#~ msgstr "Sestavljalna tipka"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Gumb zaklepa drsnika"
+
+#~ msgid "PrtScn"
+#~ msgstr "Gumb tiskanja"
+
+#~ msgid "Menu"
+#~ msgstr "Meni"
+
+#~ msgid "Right Alt"
+#~ msgstr "Desna tipka Alt"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Desna tipka Ctrl"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Gumb zaklepa velikosti črk"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Leva tipka Ctrl"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Dovoli vpisovanje dodatnih znakov."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "Sestavljalna tipka omogoča vnos širokega nabora znakov. Za uporabo "
+#~ "pritisnite sestavljalno tipko in nato zaporedje tipk, ki določajo znak.\n"
+#~ "\n"
+#~ "Kar nekaj nenavadnih znakov je mogoče vpisati s kombiniranjem običajnih. "
+#~ "Na primer: s sestavljalno tipko in zaporedjem znakov <b>C</b> in <b>o</b> "
+#~ "se izpiše znak <b>©</b>, sestavljalna tipka in znaka <b>a</b> in <b>'</b> "
+#~ "pa izpišeta črko a s preglasom <b>á</b>.\n"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "Omogoči vroči kot predogleda dejavnosti"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "Pokaži odstotek polnosti baterije"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "Razpostavljanje na robovih"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr ""
+#~ "Možnost omogoča, da se okna, ko so potisnjena ob robove zaslona, "
+#~ "samodejno razpostavijo."
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "Dinamične delovne površine"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "Delovne površine se lahko ustvarjajo na zahtevo in se samodejno "
+#~ "odstranijo, ko so prazne."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "Statične delovne površine"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "Število delovnih površin je določeno."
+
+#~ msgid "Workspaces"
+#~ msgstr "Delovne površine"
+
+#~ msgid "Display Handling"
+#~ msgstr "Upravljanje z zaslonom"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "Delovne površine se lahko širijo izven zaslona"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "Delovne površine naj bodo le na osnovnem zaslonu"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "Dodatni zasloni so obravnavani kot neodvisne delovne površine."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "Trenutna delovna površina vključuje tudi dodatne zaslone."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Število delovnih površin"
 
 #~ msgid "Disable All Shell Extensions"
 #~ msgstr "Onemogoči vse razširitve lupine"
