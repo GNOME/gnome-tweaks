@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2014, 2015, 2016.
-# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2011, 2019, 2020, 2021.
+# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2011, 2019, 2020, 2021, 2022.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2020-12-09 21:53+0000\n"
-"PO-Revision-Date: 2021-02-27 10:00+0100\n"
+"POT-Creation-Date: 2022-02-19 19:57+0000\n"
+"PO-Revision-Date: 2022-27-27 10:00+0100\n"
 "Last-Translator: Asier Sarasua Garmendia <asier.sarasua@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
 "Language: eu\n"
@@ -23,8 +23,8 @@ msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
-#: gtweak/utils.py:335
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
+#: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "GNOME Doikuntzak"
 
@@ -48,9 +48,8 @@ msgstr "Doikuntzak"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "Ezarpenak;Aurreratua;Hobespenak;Hedapenak;Letra-tipoak;Gaia;XKB;Teklatua;Idazketa;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr "Ezarpenak;Aurreratua;Hobespenak;Letra-tipoak;Gaia;XKB;Teklatua;Idazketa;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -60,52 +59,54 @@ msgstr "_Berrezarri lehenespenera"
 msgid "_About Tweaks"
 msgstr "Doikuntzak aplikazioari _buruz"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "_Jarraitu"
 
-#: gtweak/app.py:24
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
 msgstr "Hedapenak lekuz aldatu dira"
 
-#: gtweak/app.py:28
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "Hedapenen kudeaketa lekuz aldatu da hona: {0}."
 
-#: gtweak/app.py:31
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
 "not include it."
 msgstr "GNOME Hedapenak aplikazioa {0} gunetik deskargatzea gomendatzen dizugu, zure banaketak ez badauka."
 
-#: gtweak/app.py:75
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "Berrezarri lehenespenera"
 
-#: gtweak/app.py:76
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Berrezarri doikuntzaren ezarpen guztiak jatorrizko egoera lehenetsira?"
 
-#: gtweak/app.py:93 gtweak/app.py:95
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:95
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s modua)"
 
-#: gtweak/app.py:98
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell ez da exekutatzen ari"
 
-#: gtweak/app.py:100
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:107
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "Webgune nagusia"
 
@@ -118,14 +119,13 @@ msgid "Search Tweaks…"
 msgstr "Bilatu doikuntzak…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Orokorra"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Aplikazioak"
+msgid "Legacy Applications"
+msgstr "Aplikazio zaharrak"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -205,11 +205,11 @@ msgstr "Itxura"
 msgid "Themes"
 msgstr "Gaiak"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "Soinua"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Soinu-gertaeretarako zein soinu-gai erabiliko den zehazten du."
 
@@ -263,59 +263,59 @@ msgstr "Zakarrontzia"
 msgid "Mounted Volumes"
 msgstr "Muntatutako bolumenak"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
 msgid "Hinting"
 msgstr "Atxikitzea"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
 msgid "Antialiasing"
 msgstr "Antialiasing-a"
 
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Full"
 msgstr "Osoa"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:46
 msgid "Medium"
 msgstr "Tartekoa"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:52
 msgid "Slight"
 msgstr "Arina"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
 msgid "None"
 msgstr "Bat ere ez"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:71
 msgid "Subpixel (for LCD screens)"
 msgstr "Azpipixela (LCD pantailetarako)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:77
 msgid "Standard (grayscale)"
 msgstr "Estandarra (gris-eskala)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
+#: gtweak/tweaks/tweak_group_font.py:108
 msgid "Fonts"
 msgstr "Letra-tipoak"
 
-#: gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:109
 msgid "Interface Text"
 msgstr "Interfazearen testua"
 
-#: gtweak/tweaks/tweak_group_font.py:101
+#: gtweak/tweaks/tweak_group_font.py:110
 msgid "Document Text"
 msgstr "Dokumentuen testua"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:111
 msgid "Monospace Text"
 msgstr "Tarte bakarreko testua"
 
-#: gtweak/tweaks/tweak_group_font.py:103
+#: gtweak/tweaks/tweak_group_font.py:112
 msgid "Legacy Window Titles"
 msgstr "Leihoen titulu zaharrak"
 
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:114
 msgid "Scaling Factor"
 msgstr "Eskala-faktorea"
 
@@ -323,16 +323,12 @@ msgstr "Eskala-faktorea"
 msgid "Suspend when laptop lid is closed"
 msgstr "Eseki eramangarriaren tapa ixtean"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Animazioak"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "Anplifikazio gehigarria"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -347,166 +343,97 @@ msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Lasterbideak gainidazten ditu Emacs editorearen tekla-loturak erabiltzeko."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Compose tekla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Scroll Lock tekla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "PrtScn tekla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Menua"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Eskuineko Alt tekla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Eskuineko Ctrl tekla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Eskuineko Super tekla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Caps Lock tekla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Ezkerreko Ctrl tekla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Desgaituta"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Karaktere gehiago sartzea ahalbidetzen du."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr "Compose teklak mota askotako karaktereak sartzea ahalbidetzen du. Hura erabiltzeko, sakatu Compose tekla eta, ondoren, karaktereen sekuentzia bat.\n"
-"\n"
-"Ohikoak ez diren hainbat karaktere tekla estandarrak konbinatuta sar daitezke. Adibidez, Compose tekla sakatuta, eta ondoren <b>C</b> eta <b>o</b> erabilita, <b>©</b> sartuko du; <b>a</b> eta ondoren <b>'</b> erabilita, <b>á</b> sartuko du.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "Ikuspegi orokorraren laster-tekla"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
 msgstr "Ezker Super"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "Eskuineko Super tekla"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "Diseinu-aukera gehiago"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "Saguaren klikaren emulazioa"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "Finger"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
 msgstr "Egin klik ukipen-panelean bi hatzekin eskuineko klik egiteko, eta hiru hatzekin erdiko klik egiteko."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "Area"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
 msgstr "Egin klik ukipen-panelaren beheko eskuineko aldean eskuineko klik egiteko, eta beheko erdiko aldean erdiko klik egiteko."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Desgaituta"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "Ez erabili saguaren klikaren emulazioa."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "Teklatu eta sagua"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "Teklatua"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "Erakutsi sarrera-iturburu hedatuak"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Sarrera-iturburuen multzoa handitzen du ezarpenen aplikazioan."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "Sagua"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "Azelerazio-profila"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "Erakuslearen kokalekua"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Sakatu Ctrl tekla erakuslea nabarmentzeko."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "Erdiko klikaren bidezko itsastea"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "Ukipen-panela"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "Desgaitu idaztean"
 
@@ -518,6 +445,10 @@ msgstr "Abioko aplikazioak automatikoki abiatzen dira saioa hasten denean."
 #: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Abioko aplikazioak"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Aplikazioak"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -606,45 +537,37 @@ msgid "Top Bar"
 msgstr "Goiko barra"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Activities Overview Hot Corner"
-msgstr "Jardueren ikuspegi orokorraren izkina beroa"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Battery Percentage"
-msgstr "Bateriaren ehunekoa"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Ordularia"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Weekday"
 msgstr "Asteguna"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Date"
 msgstr "Data"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Seconds"
 msgstr "Segundoak"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Calendar"
 msgstr "Egutegia"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Week Numbers"
 msgstr "Asteko zenbakiak"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Window Focus"
 msgstr "Leiho-fokua"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
 #: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Click to Focus"
 msgstr "Klik fokatzeko"
 
@@ -713,81 +636,23 @@ msgid ""
 "cannot be moved."
 msgstr "Aktibatuta dagoenean, elkarrizketa-koadro modalak leiho gurasoei eransten zaizkie, eta ezin dira mugitu."
 
-#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Edge Tiling"
-msgstr "Ertzen bidezko lauzatzea"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
-msgid "When on, windows are tiled when dragged to screen edges."
-msgstr "Aktibatuta dagoenean, leihoak lauzatu egiten dira pantailaren ertzetara arrastatzen direnean."
-
-#: gtweak/tweaks/tweak_group_windows.py:209
+#: gtweak/tweaks/tweak_group_windows.py:206
 msgid "Center New Windows"
 msgstr "Zentratu leiho berriak"
 
-#: gtweak/tweaks/tweak_group_windows.py:210
+#: gtweak/tweaks/tweak_group_windows.py:207
 msgid "Resize with Secondary-Click"
 msgstr "Aldatu tamaina bigarren mailako klikarekin"
 
-#: gtweak/tweaks/tweak_group_windows.py:211
+#: gtweak/tweaks/tweak_group_windows.py:208
 msgid "Window Action Key"
 msgstr "Leihoen ekintzaren gakoa"
 
-#: gtweak/tweaks/tweak_group_windows.py:217
+#: gtweak/tweaks/tweak_group_windows.py:214
 msgid "Raise Windows When Focused"
 msgstr "Goratu leihoak fokatzen direnean"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Laneko area dinamikoak"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr "Laneko areak dinamikoki sortzen dira, eta automatikoki kentzen dira hutsik daudenean."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Laneko area estatikoak"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Laneko areen kopurua finkoa da."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Laneko areak"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Monitoreen kudeaketa"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Laneko areak monitore guztietara hedatzen dira"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Laneko areak monitore nagusian soilik"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Monitore gehigarriak laneko area independentetzat hartzen dira."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Uneko laneko areak monitore gehigarriak hartzen ditu."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Laneko areen kopurua"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
+#: gtweak/tweaks/tweak_group_xkb.py:167
 msgid "Typing"
 msgstr "Idazketa"
 
@@ -800,22 +665,120 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:62
+#: gtweak/utils.py:63
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(lehenetsia)</i>"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:345
 msgid "Configuration changes require restart"
 msgstr "Konfigurazioaren aldaketak berrabiaraztea eskatzen du"
 
-#: gtweak/utils.py:338
+#: gtweak/utils.py:346
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Zure saioa berrabiarazi behar da ezarpenek eragina jasotzeko"
 
-#: gtweak/utils.py:342
+#: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Berrabiarazi saioa"
+
+#~ msgid "Animations"
+#~ msgstr "Animazioak"
+
+#~ msgid "Compose Key"
+#~ msgstr "Compose tekla"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Scroll Lock tekla"
+
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn tekla"
+
+#~ msgid "Menu"
+#~ msgstr "Menua"
+
+#~ msgid "Right Alt"
+#~ msgstr "Eskuineko Alt tekla"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Eskuineko Ctrl tekla"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Caps Lock tekla"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Ezkerreko Ctrl tekla"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Karaktere gehiago sartzea ahalbidetzen du."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "Compose teklak mota askotako karaktereak sartzea ahalbidetzen du. Hura "
+#~ "erabiltzeko, sakatu Compose tekla eta, ondoren, karaktereen sekuentzia "
+#~ "bat.\n"
+#~ "\n"
+#~ "Ohikoak ez diren hainbat karaktere tekla estandarrak konbinatuta sar "
+#~ "daitezke. Adibidez, Compose tekla sakatuta, eta ondoren <b>C</b> eta "
+#~ "<b>o</b> erabilita, <b>©</b> sartuko du; <b>a</b> eta ondoren <b>'</b> "
+#~ "erabilita, <b>á</b> sartuko du.\n"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "Jardueren ikuspegi orokorraren izkina beroa"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "Bateriaren ehunekoa"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "Ertzen bidezko lauzatzea"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr ""
+#~ "Aktibatuta dagoenean, leihoak lauzatu egiten dira pantailaren ertzetara "
+#~ "arrastatzen direnean."
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "Laneko area dinamikoak"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "Laneko areak dinamikoki sortzen dira, eta automatikoki kentzen dira "
+#~ "hutsik daudenean."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "Laneko area estatikoak"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "Laneko areen kopurua finkoa da."
+
+#~ msgid "Workspaces"
+#~ msgstr "Laneko areak"
+
+#~ msgid "Display Handling"
+#~ msgstr "Monitoreen kudeaketa"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "Laneko areak monitore guztietara hedatzen dira"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "Laneko areak monitore nagusian soilik"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "Monitore gehigarriak laneko area independentetzat hartzen dira."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "Uneko laneko areak monitore gehigarriak hartzen ditu."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Laneko areen kopurua"
 
 #~ msgid "Disable All Shell Extensions"
 #~ msgstr "Desgaitu shell-aren hedapen guztiak"
