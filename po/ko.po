@@ -1,14 +1,14 @@
 # Korean translation for gnome-tweak-tool.
 # Copyright (C) 2012 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
-# Seong-ho Cho <shcho@gnome.org>, 2012-2021.
+# Seong-ho Cho <shcho@gnome.org>, 2012-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2021-03-07 08:27+0000\n"
-"PO-Revision-Date: 2021-03-10 10:28+0900\n"
+"POT-Creation-Date: 2022-02-19 19:57+0000\n"
+"PO-Revision-Date: 2022-03-01 16:12+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: 한국어 <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -16,13 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "그놈 프로젝트"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:42 gtweak/utils.py:326
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
 #: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "그놈 기능 개선"
@@ -49,11 +49,10 @@ msgstr "기능 개선"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Settings;설정;Advanced;고급;Preferences;기본 설정;Extensions;확장;Fonts;글꼴;"
-"Theme;테마;XKB;Keyboard;키보드;Typing;입력;"
+"Settings;설정;Advanced;고급;Preferences;기본 설정;Fonts;글꼴;Theme;테마;XKB;"
+"Keyboard;키보드;Typing;입력;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -63,22 +62,22 @@ msgstr "기본값으로 초기화(_R)"
 msgid "_About Tweaks"
 msgstr "기능 개선 정보(_A)"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "계속(_C)"
 
-#: gtweak/app.py:24
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
 msgstr "확장 기능을 옮겼습니다"
 
 #. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
-#: gtweak/app.py:29
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "확장 관리 프로그램을 {0}(으)로 옮겼습니다."
 
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
-#: gtweak/app.py:33
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
@@ -87,32 +86,32 @@ msgstr ""
 "배포판에서 그놈 확장 기능을 제공하지 않는다면 {0}에서 그놈 확장을 다운로드하"
 "시는게 좋습니다."
 
-#: gtweak/app.py:78
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "기본값으로 재설정"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "모든 기능 개선 설정을 초기 기본 상태로 되돌리시겠습니까?"
 
-#: gtweak/app.py:96 gtweak/app.py:98
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "그놈 쉘"
 
-#: gtweak/app.py:98
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s 모드)"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "그놈 쉘 실행 중이 아닙니다"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:110
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "홈페이지"
 
@@ -125,14 +124,13 @@ msgid "Search Tweaks…"
 msgstr "기능 개선 항목 검색…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "일반"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "프로그램"
+msgid "Legacy Applications"
+msgstr "오래된 프로그램"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -212,11 +210,11 @@ msgstr "모양새"
 msgid "Themes"
 msgstr "테마"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "소리"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "소리 재생시 어떤 소리 테마를 사용할 지 지정합니다."
 
@@ -330,16 +328,12 @@ msgstr "스케일 상수"
 msgid "Suspend when laptop lid is closed"
 msgstr "노트북 덮개를 닫을 때 대기 상태 전환"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "애니메이션"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "초과 증폭"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -356,113 +350,32 @@ msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "바로 가기 키 방식을 이맥스 편집기 방식으로 설정합니다."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "조합 키"
-
-# Note: 키 이름이므로 번역 금지
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Scroll Lock"
-
-# Note: 키 이름이므로 번역 금지
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "메뉴"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "오른쪽 Alt 키"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "오른쪽 Ctrl 키"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "오른쪽 Super 키"
-
-# Note: 키 이름이므로 번역 금지
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Caps Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "왼쪽 Ctrl 키"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "사용 안함"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "추가 문자 입력을 허용합니다."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"조합 키를 활용하여 상당히 다양한 문자를 입력할 수 있습니다. 활용하려면 조합 "
-"키를 누른 후 문자를 순서대로 입력하십시오.\n"
-"\n"
-"대부분 흔히 사용하지 않는 문자는 표준 방식을 결합하여 입력합니다. 예를 들면 "
-"조합키와 <b>C</b>를 누른 후 <b>o</b>를 입력하면 <b>©</b> 기호가 나타나고 "
-"<b>a</b> 다음에 <b>'</b> 를 입력하면 <b>á</b> 문자가 나타납니다.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "바로 가기 키 개요"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
 msgstr "왼쪽 Super 키"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "오른쪽 Super 키"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "추가 배치 옵션"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "마우스 클릭 흉내"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "손가락"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
@@ -470,11 +383,11 @@ msgstr ""
 "터치패드에 두 손가락으로 오른쪽 단추 누르기 동작을, 세 손가락으로 가운데 단추"
 "를 누르기 동작을 수행합니다."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "영역"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -482,51 +395,56 @@ msgstr ""
 "터치패드 우측 하단을 오른쪽 단추 누르기 동작을, 가운데 하단을 가운데 단추 누"
 "르기 동작을 하도록 활용합니다."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "사용 안함"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "마우스 누르기 동작 흉내를 사용하지 않습니다."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "키보드와 마우스"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "키보드"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "확장 입력기 표시"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "설정 프로그램의 입력기 선택 갯수를 늘립니다."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "마우스"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "가속 프로파일"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "포인터 위치"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "포인터를 강조 표시하려면 Ctrl 키를 누릅니다."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "가운데 단추를 눌러 붙여넣기"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "터치패드"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "입력 도중 비 활성화"
 
@@ -538,6 +456,10 @@ msgstr "시작 프로그램은 로그인할 때 자동으로 시작하는 프로
 #: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "시작 프로그램"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "프로그램"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -626,45 +548,37 @@ msgid "Top Bar"
 msgstr "최상위 표시줄"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Activities Overview Hot Corner"
-msgstr "현재 활동 핫 코너"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Battery Percentage"
-msgstr "배터리 잔량 백분율"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "시계"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Weekday"
 msgstr "요일"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Date"
 msgstr "날짜"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Seconds"
 msgstr "초"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Calendar"
 msgstr "달력"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Week Numbers"
 msgstr "주 차 번호"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Window Focus"
 msgstr "창 활성화"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
 #: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Click to Focus"
 msgstr "마우스 단추를 눌러서 활성화"
 
@@ -738,79 +652,21 @@ msgstr ""
 "이 옵션을 켜면, 모달 대화상자 창을 상위 창에 붙여둔 상태로 두고 움직일 수 없"
 "습니다."
 
-#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Edge Tiling"
-msgstr "가장자리 바둑판 정렬"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
-msgid "When on, windows are tiled when dragged to screen edges."
-msgstr "활성화하면 화면 가장자리로 끌었을 때 창을 바둑판 식으로 정렬합니다."
-
-#: gtweak/tweaks/tweak_group_windows.py:209
+#: gtweak/tweaks/tweak_group_windows.py:206
 msgid "Center New Windows"
 msgstr "새 창 가운데로"
 
-#: gtweak/tweaks/tweak_group_windows.py:210
+#: gtweak/tweaks/tweak_group_windows.py:207
 msgid "Resize with Secondary-Click"
 msgstr "두번째 누름 동작에 크기 조절"
 
-#: gtweak/tweaks/tweak_group_windows.py:211
+#: gtweak/tweaks/tweak_group_windows.py:208
 msgid "Window Action Key"
 msgstr "창 동작 키"
 
-#: gtweak/tweaks/tweak_group_windows.py:217
+#: gtweak/tweaks/tweak_group_windows.py:214
 msgid "Raise Windows When Focused"
 msgstr "선택한 창을 맨 위로"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "동적 작업 공간 배치"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr "작업 공간을 필요할 때 만들 수 있으며, 비어있으면 자동으로 제거됩니다."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "정적 작업 공간 배치"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "작업 공간 수를 고정합니다."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "작업 공간"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "화면 조정"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "여러 디스플레이로 작업 공간 확장"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "주 디스플레이에만 작업 공간 배치"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "추가 디스플레이를 독립 작업 공간으로 처리합니다."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "현재 워크스페이스에 추가 디스플레이를 둡니다."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "작업 공간 수"
 
 #: gtweak/tweaks/tweak_group_xkb.py:167
 msgid "Typing"
@@ -841,6 +697,102 @@ msgstr "바뀐 설정대로 프로그램이 동작하려면 세션을 다시 시
 #: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "세션 다시 시작"
+
+#~ msgid "Animations"
+#~ msgstr "애니메이션"
+
+#~ msgid "Compose Key"
+#~ msgstr "조합 키"
+
+# Note: 키 이름이므로 번역 금지
+#~ msgid "Scroll Lock"
+#~ msgstr "Scroll Lock"
+
+# Note: 키 이름이므로 번역 금지
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "메뉴"
+
+#~ msgid "Right Alt"
+#~ msgstr "오른쪽 Alt 키"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "오른쪽 Ctrl 키"
+
+# Note: 키 이름이므로 번역 금지
+#~ msgid "Caps Lock"
+#~ msgstr "Caps Lock"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "왼쪽 Ctrl 키"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "추가 문자 입력을 허용합니다."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "조합 키를 활용하여 상당히 다양한 문자를 입력할 수 있습니다. 활용하려면 조"
+#~ "합 키를 누른 후 문자를 순서대로 입력하십시오.\n"
+#~ "\n"
+#~ "대부분 흔히 사용하지 않는 문자는 표준 방식을 결합하여 입력합니다. 예를 들"
+#~ "면 조합키와 <b>C</b>를 누른 후 <b>o</b>를 입력하면 <b>©</b> 기호가 나타나"
+#~ "고 <b>a</b> 다음에 <b>'</b> 를 입력하면 <b>á</b> 문자가 나타납니다.\n"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "현재 활동 핫 코너"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "배터리 잔량 백분율"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "가장자리 바둑판 정렬"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr "활성화하면 화면 가장자리로 끌었을 때 창을 바둑판 식으로 정렬합니다."
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "동적 작업 공간 배치"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "작업 공간을 필요할 때 만들 수 있으며, 비어있으면 자동으로 제거됩니다."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "정적 작업 공간 배치"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "작업 공간 수를 고정합니다."
+
+#~ msgid "Workspaces"
+#~ msgstr "작업 공간"
+
+#~ msgid "Display Handling"
+#~ msgstr "화면 조정"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "여러 디스플레이로 작업 공간 확장"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "주 디스플레이에만 작업 공간 배치"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "추가 디스플레이를 독립 작업 공간으로 처리합니다."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "현재 워크스페이스에 추가 디스플레이를 둡니다."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "작업 공간 수"
 
 #~ msgid "Disable All Shell Extensions"
 #~ msgstr "모든 쉘 확장 비활성화"
