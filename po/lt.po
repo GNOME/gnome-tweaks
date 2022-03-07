@@ -4,14 +4,14 @@
 # FIRST AUTHOR <gymka@mail.ru>, 2011.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
 # Žygimantas Beručka <zygis@gnome.org>, 2012.
-# Aurimas Černius <aurisc4@gmail.com>, 2013-2021.
+# Aurimas Černius <aurisc4@gmail.com>, 2013-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lithuanian-gnome tweak tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2020-12-02 01:12+0000\n"
-"PO-Revision-Date: 2021-01-04 13:18+0200\n"
+"POT-Creation-Date: 2022-02-16 08:27+0000\n"
+"PO-Revision-Date: 2022-03-07 18:20+0200\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -20,15 +20,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 40.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME projektas"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
-#: gtweak/utils.py:335
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
+#: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "GNOME papildomų nustatymai"
 
@@ -57,11 +57,10 @@ msgstr "Reguliavimai"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr ""
-"Nustatymai;Sudėtingesni;Nuostatos;Plėtiniai;Šriftai;Tema;XKB;Klaviatūra;"
-"Rašymas;"
+#| msgid ""
+#| "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr "Nustatymai;Sudėtingesni;Nuostatos;Šriftai;Tema;XKB;Klaviatūra;Rašymas;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -71,21 +70,22 @@ msgstr "_Atstatyti numatytuosius"
 msgid "_About Tweaks"
 msgstr "_Apie reguliavimus"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "_Tęsti"
 
-#: gtweak/app.py:24
-#| msgid "Extensions"
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
 msgstr "Plėtiniai buvo perkelti"
 
-#: gtweak/app.py:28
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "Plėtinių valdymas buvo perkeltas į {0}."
 
-#: gtweak/app.py:31
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
@@ -94,32 +94,32 @@ msgstr ""
 "Rekomenduojame atsisiųsti GNOME plėtinius iš {0}, jei jūsų distribucija jų "
 "neįtraukia."
 
-#: gtweak/app.py:75
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "Atstatyti numatytuosius"
 
-#: gtweak/app.py:76
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Atstatyti visus tobulinimo nustatymus į jų pradines būsenas?"
 
-#: gtweak/app.py:93 gtweak/app.py:95
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "GNOME apvalkalas"
 
-#: gtweak/app.py:95
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s veiksena)"
 
-#: gtweak/app.py:98
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "GNOME apvalkalas nepaleistas"
 
-#: gtweak/app.py:100
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:107
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "Namų tinklalapis"
 
@@ -132,14 +132,14 @@ msgid "Search Tweaks…"
 msgstr "Ieškoti reguliavimų…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Bendra"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Programos"
+#| msgid "Search Applications…"
+msgid "Legacy Applications"
+msgstr "Pasenusios programos"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -219,11 +219,11 @@ msgstr "Išvaizda"
 msgid "Themes"
 msgstr "Temos"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "Garsas"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Nurodo, kurią garsų temą naudoti gariniams įvykiams."
 
@@ -277,59 +277,59 @@ msgstr "Šiukšlinė"
 msgid "Mounted Volumes"
 msgstr "Prijungti tomai"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
 msgid "Hinting"
 msgstr "Patarimai"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
 msgid "Antialiasing"
 msgstr "Glotninimas"
 
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Full"
 msgstr "Pilnas"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:46
 msgid "Medium"
 msgstr "Vidutinis"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:52
 msgid "Slight"
 msgstr "Nedidelis"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
 msgid "None"
 msgstr "Jokio"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:71
 msgid "Subpixel (for LCD screens)"
 msgstr "Sub-pikseliai (LCD ekranams)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:77
 msgid "Standard (grayscale)"
 msgstr "Standartinis (pilka skalė)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
+#: gtweak/tweaks/tweak_group_font.py:108
 msgid "Fonts"
 msgstr "Šriftai"
 
-#: gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:109
 msgid "Interface Text"
 msgstr "Sąsajos tekstas"
 
-#: gtweak/tweaks/tweak_group_font.py:101
+#: gtweak/tweaks/tweak_group_font.py:110
 msgid "Document Text"
 msgstr "Dokumento tekstas"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:111
 msgid "Monospace Text"
 msgstr "Lygiaplotis tekstas"
 
-#: gtweak/tweaks/tweak_group_font.py:103
+#: gtweak/tweaks/tweak_group_font.py:112
 msgid "Legacy Window Titles"
 msgstr "Seni langų pavadinimai"
 
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:114
 msgid "Scaling Factor"
 msgstr "Didinimo laipsnis"
 
@@ -337,16 +337,12 @@ msgstr "Didinimo laipsnis"
 msgid "Suspend when laptop lid is closed"
 msgstr "Užmigdyti, kai nešiojamas kompiuteris užveriamas"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Animacijos"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "Viršijamas stiprinimas"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -365,110 +361,32 @@ msgstr ""
 "redaktoriaus."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Komponavimo klavišas"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Scroll Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Meniu"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Dešinysis Alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Dešinysis Vald"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Dešinysis super"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Didžiųjų raidžiu klavišas"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Kairysis Vald"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Išjungta"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Leidžia įvesti papildomus simbolius."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"Komponavimo simbolis leidžia įvesti daug įvairių simbolių. Jam naudoti, "
-"paspauskite komponavimo klavišą, o po jo įveskite simbolių seką.\n"
-"\n"
-"Daug neįprastų simbolių galima įvesti apjungiant standartinius. Pavyzdžiui, "
-"įvedus komponavimo klavišą, po to <b>C</b> ir <b>o</b> įves <b>©</b>, o "
-"<b>a</b> ir <b>'</b> įves <b>á</b>.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "Apžvalgos trumpinys"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
 msgstr "Kairysis super"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "Dešinysis super"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "Papildomos išdėstymo parinktys"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "Pelės paspaudimo emuliavimas"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "Pirštai"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
@@ -476,11 +394,11 @@ msgstr ""
 "Paspauskite jutiklinį kilimėlį dviem pirštais dešiniajam paspaudimui ir "
 "trimis pirštais viduriniajam paspaudimui."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "Plotas"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -488,51 +406,56 @@ msgstr ""
 "Paspauskite jutiklinio kilimėlio apačioje dešinėje dešiniajam paspaudimui ir "
 "apačioje viduryje viduriniajam paspaudimui."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Išjungta"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "Nenaudoti pelės paspaudimų emuliavimo."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "Klaviatūra ir pelė"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "Klaviatūra"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "Rodyti išplėstinius įvesties šaltinius"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Padidina įvesties šaltinių pasirinkimą Nustatymų programoje."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "Pelė"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "Spartinimo profilis"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "Žymiklio vieta"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Paspauskite Vald klavišą žymikliui paryškinti."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "Įdėjimas viduriniuoju paspaudimu"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "Jutiklinis kilimėlis"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "Išjungti rašant"
 
@@ -541,9 +464,13 @@ msgid "Startup applications are automatically started when you log in."
 msgstr "Paleidžiamos programos bus automatiškai paleistos prisijungus."
 
 #: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
+#: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Paleidžiamos programos"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Programos"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -554,7 +481,7 @@ msgstr "Ieškoti programų…"
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:76
 msgid "running"
 msgstr "veikia"
 
@@ -566,15 +493,15 @@ msgstr "_Užverti"
 msgid "_Add"
 msgstr "_Pridėti"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:233
 msgid "Remove"
 msgstr "Pašalinti"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "New startup application"
 msgstr "Nauja paleidžiama programa"
 
-#: gtweak/tweaks/tweak_group_startup.py:256
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "Add a new application to be run at startup"
 msgstr "Pridėti naują programą paleidimui kartu su aplinka"
 
@@ -632,45 +559,37 @@ msgid "Top Bar"
 msgstr "Viršutinė juosta"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Activities Overview Hot Corner"
-msgstr "Veiklų apžvalgos karštasis kampas"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Battery Percentage"
-msgstr "Baterijos procentas"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Laikrodis"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Weekday"
 msgstr "Savaitės diena"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Date"
 msgstr "Data"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Seconds"
 msgstr "Sekundes"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Calendar"
 msgstr "Kalendorius"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Week Numbers"
 msgstr "Savaičių numeriai"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Window Focus"
 msgstr "Lango fokusavimas"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
 #: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Click to Focus"
 msgstr "Paspauskite suaktyvinimui"
 
@@ -746,83 +665,23 @@ msgstr ""
 "Kai įjungta, modalinių dialogų langai yra prikabinami prie tėvinių langų ir "
 "negali būti perkelti."
 
-#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Edge Tiling"
-msgstr "Išdidinimas kraštuose"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
-msgid "When on, windows are tiled when dragged to screen edges."
-msgstr "Kai įjungta, langai yra išdidinami nutempus į ekrano pakraščius."
-
-#: gtweak/tweaks/tweak_group_windows.py:209
+#: gtweak/tweaks/tweak_group_windows.py:206
 msgid "Center New Windows"
 msgstr "Centruoti naujus langus"
 
-#: gtweak/tweaks/tweak_group_windows.py:210
+#: gtweak/tweaks/tweak_group_windows.py:207
 msgid "Resize with Secondary-Click"
 msgstr "Keisti dydį antriniu paspaudimu"
 
-#: gtweak/tweaks/tweak_group_windows.py:211
+#: gtweak/tweaks/tweak_group_windows.py:208
 msgid "Window Action Key"
 msgstr "Lango veiksmo klavišas"
 
-#: gtweak/tweaks/tweak_group_windows.py:217
+#: gtweak/tweaks/tweak_group_windows.py:214
 msgid "Raise Windows When Focused"
 msgstr "Iškelti langus, kai suaktyvinami"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Dinaminės darbo sritys"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr ""
-"Darbo sritys gali būti sukurtos prireikus ir yra automatiškai pašalinamos, "
-"kai tuščios."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Statinės darbo sritys"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Darbo sričių skaičius yra fiksuotas."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Darbo sritys"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Vaizduoklio apdorojimas"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Darbo sritys apima vaizduoklius"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Darbo sritys tik pirminiame vaizduoklyje"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Papildomi vaizduokliai yra laikomi nepriklausomomis darbo sritimis."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Dabartinėje darbo srityje yra papildomi vaizduokliai."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Darbo sričių skaičius"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
+#: gtweak/tweaks/tweak_group_xkb.py:167
 msgid "Typing"
 msgstr "Rašymas"
 
@@ -835,22 +694,116 @@ msgid "Wacom"
 msgstr "Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:62
+#: gtweak/utils.py:63
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(numatytoji)</i>"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:345
 msgid "Configuration changes require restart"
 msgstr "Konfigūracijos pakeitimai reikalauja perleidimo"
 
-#: gtweak/utils.py:338
+#: gtweak/utils.py:346
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Norint, jog keitimai įsigaliotų, reikia iš naujo paleisti seansą"
 
-#: gtweak/utils.py:342
+#: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Paleisti seansą iš naujo"
+
+#~ msgid "Animations"
+#~ msgstr "Animacijos"
+
+#~ msgid "Compose Key"
+#~ msgstr "Komponavimo klavišas"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Scroll Lock"
+
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "Meniu"
+
+#~ msgid "Right Alt"
+#~ msgstr "Dešinysis Alt"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Dešinysis Vald"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Didžiųjų raidžiu klavišas"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Kairysis Vald"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Leidžia įvesti papildomus simbolius."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "Komponavimo simbolis leidžia įvesti daug įvairių simbolių. Jam naudoti, "
+#~ "paspauskite komponavimo klavišą, o po jo įveskite simbolių seką.\n"
+#~ "\n"
+#~ "Daug neįprastų simbolių galima įvesti apjungiant standartinius. "
+#~ "Pavyzdžiui, įvedus komponavimo klavišą, po to <b>C</b> ir <b>o</b> įves "
+#~ "<b>©</b>, o <b>a</b> ir <b>'</b> įves <b>á</b>.\n"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "Veiklų apžvalgos karštasis kampas"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "Baterijos procentas"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "Išdidinimas kraštuose"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr "Kai įjungta, langai yra išdidinami nutempus į ekrano pakraščius."
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "Dinaminės darbo sritys"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "Darbo sritys gali būti sukurtos prireikus ir yra automatiškai "
+#~ "pašalinamos, kai tuščios."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "Statinės darbo sritys"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "Darbo sričių skaičius yra fiksuotas."
+
+#~ msgid "Workspaces"
+#~ msgstr "Darbo sritys"
+
+#~ msgid "Display Handling"
+#~ msgstr "Vaizduoklio apdorojimas"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "Darbo sritys apima vaizduoklius"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "Darbo sritys tik pirminiame vaizduoklyje"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "Papildomi vaizduokliai yra laikomi nepriklausomomis darbo sritimis."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "Dabartinėje darbo srityje yra papildomi vaizduokliai."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Darbo sričių skaičius"
 
 #~ msgid "Disable All Shell Extensions"
 #~ msgstr "Išjungti visus apvalkalo plėtinius"
