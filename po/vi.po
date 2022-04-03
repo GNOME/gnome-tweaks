@@ -3,14 +3,14 @@
 # Copyright (C) 2016 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Lê Trường An <xinemdungkhoc1@gmail.com>, 2011.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2016, 2017, 2020.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2016-2017, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2020-12-02 06:08+0000\n"
-"PO-Revision-Date: 2020-12-02 14:09+0700\n"
+"POT-Creation-Date: 2022-03-25 09:56+0000\n"
+"PO-Revision-Date: 2022-04-03 08:12+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 3.38.0\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "Dự án GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:40 gtweak/utils.py:318
-#: gtweak/utils.py:335
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
+#: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "Tinh chỉnh GNOME"
 
@@ -52,12 +52,11 @@ msgstr "Tinh chỉnh"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr ""
-"Settings;Cài đặt;Cai dat;Advanced;Nâng cao;Nang cao;Preferences;Extensions;"
-"Mở rộng;Mo rong;Fonts;Phông chữ;Phong chu;Theme;Chủ đề;Chu de;XKB;Keyboard;"
-"Bàn phím;Ban phim;Typing;Nhập liệu;Nhap lieu;"
+"Settings;Cài đặt;Cai dat;Advanced;Nâng cao;Nang cao;Preferences;Fonts;Phông "
+"chữ;Phong chu;Theme;Chủ đề;Chu de;XKB;Keyboard;Bàn phím;Ban phim;Typing;Nhập "
+"liệu;Nhap lieu;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -67,20 +66,22 @@ msgstr "Đặt thành _mặc định"
 msgid "_About Tweaks"
 msgstr "_Giới thiệu về Tinh chỉnh"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "_Tiếp tục"
 
-#: gtweak/app.py:24
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
-msgstr "Phần mở rộng đã bị di chuyển"
+msgstr "Phần mở rộng đã bị gỡ bỏ"
 
-#: gtweak/app.py:28
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "Quản lý tiện ích mở rộng đã được chuyển sang {0}."
 
-#: gtweak/app.py:31
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
@@ -89,32 +90,32 @@ msgstr ""
 "Chúng tôi khuyên bạn nên tải xuống Phần mở rộng GNOME từ {0} nếu bản phân "
 "phối của bạn không bao gồm nó."
 
-#: gtweak/app.py:75
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "Đặt lại thành mặc định"
 
-#: gtweak/app.py:76
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Đặt lại mọi cài đặt tinh chỉnh thành trạng thái mặc định gốc?"
 
-#: gtweak/app.py:93 gtweak/app.py:95
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "Hệ vỏ GNOME"
 
-#: gtweak/app.py:95
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(chế độ %s)"
 
-#: gtweak/app.py:98
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "Hệ vỏ GNOME không hoạt động"
 
-#: gtweak/app.py:100
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:107
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "Trang chủ"
 
@@ -127,14 +128,13 @@ msgid "Search Tweaks…"
 msgstr "Tìm các tinh chỉnh…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Chung"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Ứng dụng"
+msgid "Legacy Applications"
+msgstr "Các ứng dụng cũ"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -214,11 +214,11 @@ msgstr "Diện mạo"
 msgid "Themes"
 msgstr "Kiểu dáng"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "Âm thanh"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Xác định chủ đề âm thanh nào sẽ sử dụng cho sự kiện âm thanh."
 
@@ -272,59 +272,59 @@ msgstr "Thùng rác"
 msgid "Mounted Volumes"
 msgstr "Các phân vùng đã gắn"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
 msgid "Hinting"
 msgstr "Gợi ý"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
+#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
 msgid "Antialiasing"
 msgstr "Khử răng cưa"
 
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Full"
 msgstr "Đầy"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:46
 msgid "Medium"
 msgstr "Trung bình"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:52
 msgid "Slight"
 msgstr "Nhẹ"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
 msgid "None"
 msgstr "Không"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:71
 msgid "Subpixel (for LCD screens)"
 msgstr "Subpixel (cho màn hình LCD)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:77
 msgid "Standard (grayscale)"
 msgstr "Chuẩn(đen trắng)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
+#: gtweak/tweaks/tweak_group_font.py:108
 msgid "Fonts"
 msgstr "Phông chữ"
 
-#: gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:109
 msgid "Interface Text"
 msgstr "Chữ phần giao diện"
 
-#: gtweak/tweaks/tweak_group_font.py:101
+#: gtweak/tweaks/tweak_group_font.py:110
 msgid "Document Text"
 msgstr "Chữ phần nội dung"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:111
 msgid "Monospace Text"
 msgstr "Chữ Monospace"
 
-#: gtweak/tweaks/tweak_group_font.py:103
+#: gtweak/tweaks/tweak_group_font.py:112
 msgid "Legacy Window Titles"
 msgstr "Tiêu đề cửa sổ kiểu cũ"
 
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:114
 msgid "Scaling Factor"
 msgstr "Hệ số co giãn"
 
@@ -332,22 +332,18 @@ msgstr "Hệ số co giãn"
 msgid "Suspend when laptop lid is closed"
 msgstr "Ngủ đông khi lid máy tính xách tay bị đóng"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Hoạt ảnh"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "Khếch đại quá lên"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
 msgstr ""
-"Cho phép tăng volume lên trên 100%. Điều này có thể dẫn đến giảm chất lượng "
-"âm thanh; tăng âm lượng tốt hơn là tăng nó trong cài đặt, nếu được."
+"Cho phép tăng âm lượng lên trên 100%. Điều này có thể dẫn đến giảm chất "
+"lượng âm thanh; tăng âm lượng tốt hơn là tăng nó trong cài đặt, nếu được."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:21
 msgid "Emacs Input"
@@ -359,110 +355,32 @@ msgstr ""
 "Đè lên các phím tắt để sử dụng ràng buộc phím từ trình soạn thảo Emacs."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Phím tổ hợp"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Phím Scroll Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "Phím PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Trình đơn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Phím Alt phải"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Phím Ctrl phải"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Phím Win phải"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Phím Caps Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Phím Ctrl trái"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Tắt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Cho phép nhập vào các ký tự bổ sung."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"Phím tổ hợp cho phép nhập các ký tự rộng. Để dùng nó nhấn phím tổ hợp và sau "
-"đó là một chuỗi các ký tự.\n"
-"\n"
-"Nhiều ký tự đặc biệt có thể nhập bằng tổ hợp các ký tự tiêu chuẩn. Ví dụ, "
-"phím tổ hợp theo sau bởi <b>C</b> và <b>o</b> sẽ nhập vào <b>©</b>, <b>a</b> "
-"theo sau bởi <b>'</b> sẽ nhập vào <b>á</b>\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "Toàn cảnh phím tắt"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
 msgstr "Phím Win trái"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "Phím Win phải"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "Các tùy chọn bố cục bổ sung"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "Mô phỏng Nhấp chuột"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "Ngón tay"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
@@ -470,11 +388,11 @@ msgstr ""
 "Bấm vào bàn di chuột bằng hai ngón tay để bấm chuột phải và ba ngón tay để "
 "bấm chuột giữa."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "Vùng"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -482,51 +400,56 @@ msgstr ""
 "Bấm vào dưới cùng bên phải của bàn di chuột để bấm chuột phải và giữa dưới "
 "cùng để bấm chuột giữa."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Tắt"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "Không mô phỏng kích chuột."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "Bàn phím & Chuột"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "Bàm phím"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "Hiển thị nguồn nhập liệu mở rộng"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Gia tăng số lựa chọn nguồn nhập liệu trong ứng dụng Cài đặt."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "Chuột"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "Hồ sơ phím tăng tốc"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "Vị trí con trỏ"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "Nhấn phím Ctrl để tô sáng con trỏ."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "Dán bằng nút giữa"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "Tắt khi đang gõ nội dung"
 
@@ -538,6 +461,10 @@ msgstr "Các ứng dụng tự chạy được tự động khởi chạy khi b�
 #: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Ứng dụng khởi động tự động"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Ứng dụng"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -626,45 +553,37 @@ msgid "Top Bar"
 msgstr "Thanh đỉnh"
 
 #: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Activities Overview Hot Corner"
-msgstr "Góc nóng Tổng quan hoạt động"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Battery Percentage"
-msgstr "Phần trăm pin"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "Đồng hồ"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:18
+#: gtweak/tweaks/tweak_group_top_bar.py:16
 msgid "Weekday"
 msgstr "Ngày thường"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:19
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Date"
 msgstr "Ngày"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:20
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Seconds"
 msgstr "Giây"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:21
+#: gtweak/tweaks/tweak_group_top_bar.py:19
 msgid "Calendar"
 msgstr "Lịch"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:22
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Week Numbers"
 msgstr "Số tuần"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Window Focus"
 msgstr "Kích hoạt cửa sổ"
 
 #: gtweak/tweaks/tweak_group_windows.py:18
 #: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:215
+#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Click to Focus"
 msgstr "Bấm để kích hoạt"
 
@@ -738,83 +657,23 @@ msgstr ""
 "Khi được chọn cửa sổ hộp thoại modal được tách rời khỏi các cửa sổ cha mẹ, "
 "và không thể di chuyển."
 
-#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Edge Tiling"
-msgstr "Dính cạnh màn hình"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
-msgid "When on, windows are tiled when dragged to screen edges."
-msgstr "Khi bật, cửa sổ được lát gạch khi được kéo đến các cạnh màn hình."
-
-#: gtweak/tweaks/tweak_group_windows.py:209
+#: gtweak/tweaks/tweak_group_windows.py:206
 msgid "Center New Windows"
 msgstr "Đặt cửa sổ mới ở chính giữa"
 
-#: gtweak/tweaks/tweak_group_windows.py:210
+#: gtweak/tweaks/tweak_group_windows.py:207
 msgid "Resize with Secondary-Click"
 msgstr "Đổi cỡ với cú bấm chuột phải"
 
-#: gtweak/tweaks/tweak_group_windows.py:211
+#: gtweak/tweaks/tweak_group_windows.py:208
 msgid "Window Action Key"
 msgstr "Phím thao tác cửa sổ"
 
-#: gtweak/tweaks/tweak_group_windows.py:217
+#: gtweak/tweaks/tweak_group_windows.py:214
 msgid "Raise Windows When Focused"
 msgstr "Nâng cửa sổ lên khi được kích hoạt"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Không gian làm việc động"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr ""
-"Các không gian làm việc sẽ được tạo theo yêu cầu, và tự động xóa bỏ khi "
-"trống rỗng."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Không gian làm việc cố định"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Số không gian làm việc sẽ bị cố định."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Không gian làm việc"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Hiển thị điều khiển"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Hiển thị dải không gian làm việc"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Không gian làm việc chỉ ở trên màn hình chính"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Các màn hình bổ sung được coi như là một không gian làm việc độc lập."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Không gian làm việc hiện tại bao gồm các màn hình bổ sung."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Số không gian làm việc"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
+#: gtweak/tweaks/tweak_group_xkb.py:167
 msgid "Typing"
 msgstr "Nhập liệu"
 
@@ -827,37 +686,70 @@ msgid "Wacom"
 msgstr "Bảng vẽ Wacom"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:62
+#: gtweak/utils.py:63
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(mặc định)</i>"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:345
 msgid "Configuration changes require restart"
 msgstr "Các thay đổi cấu hình cần khởi động lại"
 
-#: gtweak/utils.py:338
+#: gtweak/utils.py:346
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Phiên làm việc của bạn cần khởi động lại để các cài đặt có hiệu lực"
 
-#: gtweak/utils.py:342
+#: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Khởi động lại phiên làm việc"
-
-#~ msgid "gnome-tweak-tool"
-#~ msgstr "gnome-tweak-tool"
 
 #~ msgid "Disable All Shell Extensions"
 #~ msgstr "Tắt mọi thành phần mở rộng hệ vỏ"
 
-#~ msgid "_About"
-#~ msgstr "G_iới thiệu"
+#~ msgid "Animations"
+#~ msgstr "Hoạt ảnh"
 
-#~ msgid "_Quit"
-#~ msgstr "T_hoát"
+#~ msgid "Compose Key"
+#~ msgstr "Phím tổ hợp"
 
-#~ msgid "Power"
-#~ msgstr "Nguồn điện"
+#~ msgid "Scroll Lock"
+#~ msgstr "Phím Scroll Lock"
+
+#~ msgid "PrtScn"
+#~ msgstr "Phím PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "Trình đơn"
+
+#~ msgid "Right Alt"
+#~ msgstr "Phím Alt phải"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Phím Ctrl phải"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Phím Caps Lock"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Phím Ctrl trái"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Cho phép nhập vào các ký tự bổ sung."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "Phím tổ hợp cho phép nhập các ký tự rộng. Để dùng nó nhấn phím tổ hợp và "
+#~ "sau đó là một chuỗi các ký tự.\n"
+#~ "\n"
+#~ "Nhiều ký tự đặc biệt có thể nhập bằng tổ hợp các ký tự tiêu chuẩn. Ví dụ, "
+#~ "phím tổ hợp theo sau bởi <b>C</b> và <b>o</b> sẽ nhập vào <b>©</b>, <b>a</"
+#~ "b> theo sau bởi <b>'</b> sẽ nhập vào <b>á</b>\n"
 
 #~ msgid "No Extensions Installed"
 #~ msgstr "Không có phần mở rộng nào đã được cài đặt"
@@ -885,6 +777,68 @@ msgstr "Khởi động lại phiên làm việc"
 
 #~ msgid "Update"
 #~ msgstr "Cập nhật"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "Góc nóng Tổng quan hoạt động"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "Phần trăm pin"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "Dính cạnh màn hình"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr "Khi bật, cửa sổ được lát gạch khi được kéo đến các cạnh màn hình."
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "Không gian làm việc động"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "Các không gian làm việc sẽ được tạo theo yêu cầu, và tự động xóa bỏ khi "
+#~ "trống rỗng."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "Không gian làm việc cố định"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "Số không gian làm việc sẽ bị cố định."
+
+#~ msgid "Workspaces"
+#~ msgstr "Không gian làm việc"
+
+#~ msgid "Display Handling"
+#~ msgstr "Hiển thị điều khiển"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "Hiển thị dải không gian làm việc"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "Không gian làm việc chỉ ở trên màn hình chính"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr ""
+#~ "Các màn hình bổ sung được coi như là một không gian làm việc độc lập."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "Không gian làm việc hiện tại bao gồm các màn hình bổ sung."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Số không gian làm việc"
+
+#~ msgid "gnome-tweak-tool"
+#~ msgstr "gnome-tweak-tool"
+
+#~ msgid "_About"
+#~ msgstr "G_iới thiệu"
+
+#~ msgid "_Quit"
+#~ msgstr "T_hoát"
+
+#~ msgid "Power"
+#~ msgstr "Nguồn điện"
 
 #~ msgid "Application Menu"
 #~ msgstr "Trình đơn ứng dụng"
