@@ -1,15 +1,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2016, 2017, 2019, 2021.
+# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2016, 2017, 2019, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2021-10-19 13:45+0000\n"
-"PO-Revision-Date: 2021-12-16 17:33+0000\n"
+"POT-Creation-Date: 2022-03-07 16:20+0000\n"
+"PO-Revision-Date: 2022-04-06 10:42+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.org>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "GNOME verkefnið"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:42 gtweak/utils.py:326
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
 #: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "GNOME sérbreytingar"
@@ -50,11 +50,10 @@ msgstr "Sérbreytingar"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr ""
-"Stillingar;Ítarlegt;Kjörstillingar;Skráarendingar;Letur;Þemu;XKB;Lyklaborð;"
-"Ritun;"
+#| msgid ""
+#| "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr "Stillingar;Ítarlegt;Kjörstillingar;Letur;Þemu;XKB;Lyklaborð;Ritun;"
 
 #: data/shell.ui:7
 msgid "_Reset to Defaults"
@@ -64,56 +63,56 @@ msgstr "_Frumstilla á sjálfgefið"
 msgid "_About Tweaks"
 msgstr "_Um Tweaks sérbreytingatólið"
 
-#: gtweak/app.py:22
+#: gtweak/app.py:23
 msgid "_Continue"
 msgstr "_Halda áfram"
 
-#: gtweak/app.py:24
+#: gtweak/app.py:25
 msgid "Extensions Has Moved"
 msgstr "Viðbætur hafa verið færðar"
 
 #. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
-#: gtweak/app.py:29
+#: gtweak/app.py:30
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "Viðbætur hafa verið færðar í {0}."
 
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
-#: gtweak/app.py:33
+#: gtweak/app.py:34
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
 "not include it."
 msgstr ""
-"Við mælum með að sækja GNOME-viðbætur frá {0} ef dreifingin þín kemur ekki"
-" með þær innifaldar."
+"Við mælum með að sækja GNOME-viðbætur frá {0} ef dreifingin þín kemur ekki "
+"með þær innifaldar."
 
-#: gtweak/app.py:78
+#: gtweak/app.py:83
 msgid "Reset to Defaults"
 msgstr "Upprunalegar stillingar"
 
-#: gtweak/app.py:79
+#: gtweak/app.py:84
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Viltu breyta öllum stillingum í sín upprunalegu gildi?"
 
-#: gtweak/app.py:96 gtweak/app.py:98
+#: gtweak/app.py:101 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "GNOME-skel"
 
-#: gtweak/app.py:98
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s hamur)"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "GNOME-skelin er ekki í gangi"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:108
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:110
+#: gtweak/app.py:115
 msgid "Homepage"
 msgstr "Heimasíða"
 
@@ -126,14 +125,14 @@ msgid "Search Tweaks…"
 msgstr "Leita að sérbreytingum…"
 
 #. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:201 gtweak/tweaks/tweak_group_general.py:53
+#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
 msgid "General"
 msgstr "Almennt"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Forrit"
+#| msgid "Search Applications…"
+msgid "Legacy Applications"
+msgstr "Eldri forrit"
 
 #: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Error writing setting"
@@ -213,11 +212,11 @@ msgstr "Útlit"
 msgid "Themes"
 msgstr "Þemu"
 
-#: gtweak/tweaks/tweak_group_appearance.py:289
+#: gtweak/tweaks/tweak_group_appearance.py:288
 msgid "Sound"
 msgstr "Hljóð"
 
-#: gtweak/tweaks/tweak_group_appearance.py:290
+#: gtweak/tweaks/tweak_group_appearance.py:289
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Tiltekur hvaða hljóðþema eigi að nota fyrir hljóðatvik."
 
@@ -331,23 +330,19 @@ msgstr "Kvörðunargildi"
 msgid "Suspend when laptop lid is closed"
 msgstr "Setja í bið þegar fartölvu er lokað"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Hreyfingar"
-
 #. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
+#: gtweak/tweaks/tweak_group_general.py:56
 msgid "Over-Amplification"
 msgstr "Yfirmögnun"
 
-#: gtweak/tweaks/tweak_group_general.py:58
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
 msgstr ""
-"Gerir kleift að stilla hljóðstyrk yfir 100%. Þetta getur þýtt verri"
-" hljómgæði; venjulega er betra að auka hljóðstyrksstillingu forritsins, ef"
-" mögulegt er."
+"Gerir kleift að stilla hljóðstyrk yfir 100%. Þetta getur þýtt verri "
+"hljómgæði; venjulega er betra að auka hljóðstyrksstillingu forritsins, ef "
+"mögulegt er."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:21
 msgid "Emacs Input"
@@ -358,175 +353,101 @@ msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Endurstilla flýtilykla á að nota Emacs-lyklabindingar."
 
 #: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Samsetningarlykill"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "ScrollLock-skrunlæsing"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Valmynd"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Hægri Alt-lykill"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Hægri Ctrl-lykill"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Hægri breytilykill"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "CapsLock-hástafalás"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Vinstri Ctrl-lykill"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Óvirkt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Gerir kleift að setja inn viðbótarstafi."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"Samsetningarlykill gerir kleift að setja inn ýmsa sérstafi. Til að nota hann"
-" er ýtt á samsetningarlykilinn og síðan á runu af öðrum stöfum.\n"
-"\n"
-"Mörg óvenjuleg staftákn er hægt að setja saman úr öðrum staðaltáknum. Til"
-" dæmis, sé ýtt á samsetningarlykil og síðan <b>C</b> og <b>o</b> mun setja"
-" inn <b>©</b>, "
-"<b>a</b> með <b>'</b> á eftir mun setja inn <b>á</b>.\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
 msgid "Overview Shortcut"
 msgstr "Yfirlitsflýtilykill"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keymouse.py:47
 msgid "Left Super"
 msgstr "Vinstri breytilykill"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keymouse.py:51
+msgid "Right Super"
+msgstr "Hægri breytilykill"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:74
+#: gtweak/tweaks/tweak_group_keymouse.py:82
 msgid "Additional Layout Options"
 msgstr "Fleiri valkostir uppsetningar"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
+#: gtweak/tweaks/tweak_group_keymouse.py:104
+#: gtweak/tweaks/tweak_group_keymouse.py:241
 msgid "Mouse Click Emulation"
 msgstr "Herma eftir músarsmellum"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:271
+#: gtweak/tweaks/tweak_group_keymouse.py:122
 msgid "Fingers"
 msgstr "Fingur"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:273
+#: gtweak/tweaks/tweak_group_keymouse.py:124
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
 msgstr ""
-"Ýttu á snertiplattann með tveimur fingrum til að hægri-smella og þremur"
-" fingrum til að miðju-smella."
+"Ýttu á snertiplattann með tveimur fingrum til að hægri-smella og þremur "
+"fingrum til að miðju-smella."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:297
+#: gtweak/tweaks/tweak_group_keymouse.py:148
 msgid "Area"
 msgstr "Flötur"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:299
+#: gtweak/tweaks/tweak_group_keymouse.py:150
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
 msgstr ""
-"Ýttu á snertiplattann neðst til hægri til að hægri-smella og neðst á miðjunni"
-" til að miðju-smella."
+"Ýttu á snertiplattann neðst til hægri til að hægri-smella og neðst á "
+"miðjunni til að miðju-smella."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:325
+#: gtweak/tweaks/tweak_group_keymouse.py:174
+#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+msgid "Disabled"
+msgstr "Óvirkt"
+
+#: gtweak/tweaks/tweak_group_keymouse.py:176
 msgid "Don’t use mouse click emulation."
 msgstr "Ekki herma eftir músarsmellum."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:362
+#: gtweak/tweaks/tweak_group_keymouse.py:213
 msgid "Keyboard & Mouse"
 msgstr "Lyklaborð og mús"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:363
+#: gtweak/tweaks/tweak_group_keymouse.py:214
 msgid "Keyboard"
 msgstr "Lyklaborð"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keymouse.py:215
 msgid "Show Extended Input Sources"
 msgstr "Birta alla inntaksgjafa"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keymouse.py:218
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Fjölgar valkostum inntaksgjafa í stillingaforritinu."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keymouse.py:223
 msgid "Mouse"
 msgstr "Mús"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
+#: gtweak/tweaks/tweak_group_keymouse.py:224
 msgid "Acceleration Profile"
 msgstr "Hröðunarsnið"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:378
+#: gtweak/tweaks/tweak_group_keymouse.py:228
 msgid "Pointer Location"
 msgstr "Staðsetning bendils"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:381
+#: gtweak/tweaks/tweak_group_keymouse.py:231
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "ýttu á Ctrl-lykilinn til að ljóma bendilinn."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:232
 msgid "Middle Click Paste"
 msgstr "Líma með miðjusmelli"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_keymouse.py:236
 msgid "Touchpad"
 msgstr "Snertiplatti"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:237
 msgid "Disable While Typing"
 msgstr "Gera óvirkan á meðan skrifað er"
 
@@ -538,6 +459,10 @@ msgstr "Ræsiforrit eru sjálfvirkt sett í gang þegar þú skráir þig inn."
 #: gtweak/tweaks/tweak_group_startup.py:307
 msgid "Startup Applications"
 msgstr "Ræsiforrit"
+
+#: gtweak/tweaks/tweak_group_startup.py:42
+msgid "Applications"
+msgstr "Forrit"
 
 #: gtweak/tweaks/tweak_group_startup.py:48
 msgid "Search Applications…"
@@ -673,16 +598,16 @@ msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
 msgstr ""
-"Gluggi verður virkur þegar bendillinn svífur yfir hann. Gluggi helst virkur"
-" þótt bendillinn svífi yfir skjáborðinu."
+"Gluggi verður virkur þegar bendillinn svífur yfir hann. Gluggi helst virkur "
+"þótt bendillinn svífi yfir skjáborðinu."
 
 #: gtweak/tweaks/tweak_group_windows.py:90
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
 msgstr ""
-"Gluggi verður virkur þegar bendillinn svífur yfir hann. Svífi bendillinn yfir"
-" skjáborðinu verður fyrri gluggi óvirkur."
+"Gluggi verður virkur þegar bendillinn svífur yfir hann. Svífi bendillinn "
+"yfir skjáborðinu verður fyrri gluggi óvirkur."
 
 #: gtweak/tweaks/tweak_group_windows.py:129
 msgid "Window scaling"
@@ -776,6 +701,51 @@ msgstr "Endurræsa þarf setuna svo breytingarnar taki gildi"
 #: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Endurræsa setu"
+
+#~ msgid "Animations"
+#~ msgstr "Hreyfingar"
+
+#~ msgid "Compose Key"
+#~ msgstr "Samsetningarlykill"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "ScrollLock-skrunlæsing"
+
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "Valmynd"
+
+#~ msgid "Right Alt"
+#~ msgstr "Hægri Alt-lykill"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Hægri Ctrl-lykill"
+
+#~ msgid "Caps Lock"
+#~ msgstr "CapsLock-hástafalás"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Vinstri Ctrl-lykill"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Gerir kleift að setja inn viðbótarstafi."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "Samsetningarlykill gerir kleift að setja inn ýmsa sérstafi. Til að nota "
+#~ "hann er ýtt á samsetningarlykilinn og síðan á runu af öðrum stöfum.\n"
+#~ "\n"
+#~ "Mörg óvenjuleg staftákn er hægt að setja saman úr öðrum staðaltáknum. Til "
+#~ "dæmis, sé ýtt á samsetningarlykil og síðan <b>C</b> og <b>o</b> mun setja "
+#~ "inn <b>©</b>, <b>a</b> með <b>'</b> á eftir mun setja inn <b>á</b>.\n"
 
 #~ msgid "Disable All Shell Extensions"
 #~ msgstr "Óvirkja allar skeljaviðbætur"
