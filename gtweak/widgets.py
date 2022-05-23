@@ -650,6 +650,8 @@ class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
                          margin_top = UI_BOX_SPACING, margin_bottom = UI_BOX_SPACING)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
 
+        self.props.spacing = UI_BOX_HORIZONTAL_SPACING
+
         sw = Gtk.Switch(halign=Gtk.Align.CENTER,
                         valign=Gtk.Align.CENTER)
         sw.set_active(self.get_active())

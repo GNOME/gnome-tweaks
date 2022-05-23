@@ -4,7 +4,7 @@
 
 from gi.repository import GDesktopEnums
 
-from gtweak.widgets import (TweakPreferencesPage, GSettingsTweakSwitchRow, GSettingsSwitchTweakValue, TweakPreferencesGroup)
+from gtweak.widgets import (GSettingsTweakComboRow, TweakPreferencesPage, GSettingsTweakSwitchRow, GSettingsSwitchTweakValue, TweakPreferencesGroup)
 
 class KeyThemeSwitcher(GSettingsSwitchTweakValue):
     def __init__(self, **options):
@@ -49,6 +49,31 @@ class ClickMethod(GSettingsSwitchTweakValue):
           self.settings.reset(self.key_name)
 
 
+class PointerAccelProfile(GSettingsSwitchTweakValue):
+
+    def __init__(self, **options):
+        title = _("Touchpad Acceleration")
+        desc = _("Turning acceleration off can allow faster and more precise movements, but can also make the touchpad more difficult to use.")
+
+        GSettingsSwitchTweakValue.__init__(self,
+                                           title=title,
+                                           schema_name="org.gnome.desktop.peripherals",
+                                           schema_child_name="touchpad",
+                                           schema_id="org.gnome.desktop.peripherals.touchpad",
+                                           key_name="accel-profile",
+                                           desc=desc,
+                                           **options)
+
+    def get_active(self):
+        return self.settings.get_enum(self.key_name) != GDesktopEnums.PointerAccelProfile.FLAT
+    
+    def set_active(self, v):
+        if not v:
+          self.settings.set_enum(self.key_name, GDesktopEnums.PointerAccelProfile.FLAT)
+        else:
+          self.settings.reset(self.key_name)
+
+
 TWEAK_GROUP = TweakPreferencesPage("mouse", _("Mouse & Touchpad"),
   TweakPreferencesGroup(_("Mouse"), "mouse",
     GSettingsTweakSwitchRow(_("Middle Click Paste"),
@@ -56,6 +81,7 @@ TWEAK_GROUP = TweakPreferencesPage("mouse", _("Mouse & Touchpad"),
                          "gtk-enable-primary-paste"),
   ),
   TweakPreferencesGroup(_("Touchpad"), "touchpad",
+    PointerAccelProfile(),
     ClickMethod(),
   ),
 )
