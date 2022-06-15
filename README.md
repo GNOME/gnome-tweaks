@@ -22,7 +22,6 @@ RUNTIME DEPENDENCIES
   - GTK+ 3 (>= 3.12)
   - gnome-desktop (>= 3.30)
   - libhandy (>= 1.0)
-  - libsoup
   - libnotify
   - Pango
 
