@@ -12,7 +12,10 @@ import itertools
 import logging
 
 import gi
-gi.require_version("Notify", "0.7")
+try:
+    gi.require_version("Notify", "0.7")
+except ValueError:
+    gi.require_version("Notify", "0.8")
 from gi.repository import GObject
 from gi.repository import GLib
 from gi.repository import Gio
