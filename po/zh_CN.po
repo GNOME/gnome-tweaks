@@ -14,23 +14,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-08-11 20:16+0000\n"
-"PO-Revision-Date: 2018-08-11 15:35-0500\n"
-"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
+"POT-Creation-Date: 2020-12-01 22:55+0000\n"
+"PO-Revision-Date: 2020-10-26 23:11+0800\n"
+"Last-Translator: mars <gzhqyz@gmail.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.9\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:314
-#: gtweak/utils.py:330
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
+#: gtweak/utils.py:349
 msgid "GNOME Tweaks"
 msgstr "GNOME Tweaks"
 
@@ -50,14 +50,9 @@ msgstr ""
 "可以安装和管理主题和扩展，更改电源选项，管理自启动程序，以及启用桌面图标和其"
 "它设置。"
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:111
 msgid "Tweaks"
 msgstr "优化"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
@@ -76,49 +71,50 @@ msgid "Disable All Shell Extensions"
 msgstr "禁用全部 Shell 扩展"
 
 #: data/shell.ui:17
-msgid "_About"
-msgstr "关于(_A)"
+msgid "_About Tweaks"
+msgstr "关于优化(_A)"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "退出(_Q)"
-
-#: gtweak/app.py:67
+#: gtweak/app.py:56
 msgid "Reset to Defaults"
 msgstr "重置为默认值"
 
-#: gtweak/app.py:68
+#: gtweak/app.py:57
 msgid "Reset all tweak settings to the original default state?"
 msgstr "重置所有设置到默认状态？"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:78 gtweak/app.py:80
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:80
 #, python-format
 msgid "(%s mode)"
 msgstr "（%s 模式）"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:83
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell 未在运行"
 
-#: gtweak/app.py:96
-msgid "GTK+"
-msgstr "GTK+"
+#: gtweak/app.py:85
+msgid "GTK"
+msgstr "GTK"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:92
 msgid "Homepage"
 msgstr "主页"
 
-#: gtweak/tweakmodel.py:30
+#: gtweak/tweakmodel.py:31
 msgid "Miscellaneous"
 msgstr "杂项"
 
-#: gtweak/tweakview.py:105
+#: gtweak/tweakview.py:145
 msgid "Search Tweaks…"
 msgstr "搜索设置…"
+
+#. "General" needs to be first item in sidebar
+#: gtweak/tweakview.py:203 gtweak/tweaks/tweak_group_general.py:53
+msgid "General"
+msgstr "通用"
 
 #: gtweak/tweaks/tweak_group_appearance.py:54
 #: gtweak/tweaks/tweak_group_startup.py:42
@@ -317,23 +313,20 @@ msgstr "旧式窗口标题"
 msgid "Scaling Factor"
 msgstr "缩放比例"
 
-#: gtweak/tweaks/tweak_group_general.py:22
+#: gtweak/tweaks/tweak_group_general.py:28
 msgid "Suspend when laptop lid is closed"
 msgstr "笔记本电脑盖子关闭时挂起"
 
-#: gtweak/tweaks/tweak_group_general.py:46
-msgid "General"
-msgstr "通用"
-
-#: gtweak/tweaks/tweak_group_general.py:47
+#: gtweak/tweaks/tweak_group_general.py:54
 msgid "Animations"
 msgstr "动画"
 
-#: gtweak/tweaks/tweak_group_general.py:49
+#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+#: gtweak/tweaks/tweak_group_general.py:57
 msgid "Over-Amplification"
 msgstr "过度增益"
 
-#: gtweak/tweaks/tweak_group_general.py:50
+#: gtweak/tweaks/tweak_group_general.py:58
 msgid ""
 "Allows raising the volume above 100%. This can result in a loss of audio "
 "quality; it is better to increase application volume settings, if possible."
@@ -444,7 +437,7 @@ msgid "Additional Layout Options"
 msgstr "其他布局选项"
 
 #: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:392
+#: gtweak/tweaks/tweak_group_keymouse.py:391
 msgid "Mouse Click Emulation"
 msgstr "模拟鼠标点击"
 
@@ -500,19 +493,19 @@ msgstr "加速配置"
 msgid "Pointer Location"
 msgstr "指针位置"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_keymouse.py:381
 msgid "Press the Ctrl key to highlight the pointer."
 msgstr "按下 Ctrl 键以突出显示指针。"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:383
+#: gtweak/tweaks/tweak_group_keymouse.py:382
 msgid "Middle Click Paste"
 msgstr "中键点击粘贴"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
+#: gtweak/tweaks/tweak_group_keymouse.py:386
 msgid "Touchpad"
 msgstr "触摸板"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:388
+#: gtweak/tweaks/tweak_group_keymouse.py:387
 msgid "Disable While Typing"
 msgstr "打字时禁用"
 
@@ -524,35 +517,35 @@ msgstr "未安装扩展"
 msgid "Browse in Software"
 msgstr "在“软件”中浏览"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
+#: gtweak/tweaks/tweak_group_shell_extensions.py:119
 msgid "Extension downloading"
 msgstr "正在下载扩展"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
+#: gtweak/tweaks/tweak_group_shell_extensions.py:121
 msgid "Error loading extension"
 msgstr "载入扩展出错"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
+#: gtweak/tweaks/tweak_group_shell_extensions.py:123
 msgid "Extension does not support shell version"
 msgstr "扩展不支持当前 Shell 版本"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
+#: gtweak/tweaks/tweak_group_shell_extensions.py:125
 msgid "Unknown extension error"
 msgstr "未知扩展错误"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
+#: gtweak/tweaks/tweak_group_shell_extensions.py:173
 msgid "Updating"
 msgstr "正在更新"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
+#: gtweak/tweaks/tweak_group_shell_extensions.py:193
 msgid "Error"
 msgstr "错误"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
+#: gtweak/tweaks/tweak_group_shell_extensions.py:197
 msgid "Update"
 msgstr "更新"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
+#: gtweak/tweaks/tweak_group_shell_extensions.py:239
 msgid "Extensions"
 msgstr "扩展"
 
@@ -647,44 +640,39 @@ msgstr "最大化"
 msgid "Minimize"
 msgstr "最小化"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Application Menu"
-msgstr "应用程序菜单"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:59
+#: gtweak/tweaks/tweak_group_top_bar.py:14
 msgid "Top Bar"
 msgstr "顶栏"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Battery Percentage"
-msgstr "电池百分比"
-
-#. Requires patch from https://bugzilla.gnome.org/688320
-#: gtweak/tweaks/tweak_group_top_bar.py:63
+#: gtweak/tweaks/tweak_group_top_bar.py:15
 msgid "Activities Overview Hot Corner"
 msgstr "活动预览热区"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:64
+#: gtweak/tweaks/tweak_group_top_bar.py:16
+msgid "Battery Percentage"
+msgstr "电池百分比"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:17
 msgid "Clock"
 msgstr "时钟"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:65
-msgid "Date"
-msgstr "日期"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:66
+#: gtweak/tweaks/tweak_group_top_bar.py:18
 msgid "Weekday"
 msgstr "工作日"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:67
+#: gtweak/tweaks/tweak_group_top_bar.py:19
+msgid "Date"
+msgstr "日期"
+
+#: gtweak/tweaks/tweak_group_top_bar.py:20
 msgid "Seconds"
 msgstr "秒"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:68
+#: gtweak/tweaks/tweak_group_top_bar.py:21
 msgid "Calendar"
 msgstr "日历"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:69
+#: gtweak/tweaks/tweak_group_top_bar.py:22
 msgid "Week Numbers"
 msgstr "周数"
 
@@ -850,22 +838,34 @@ msgid "Wacom"
 msgstr "Wacom 手写板"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:59
+#: gtweak/utils.py:62
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s<i>（默认）</i>"
 
-#: gtweak/utils.py:332
+#: gtweak/utils.py:351
 msgid "Configuration changes require restart"
 msgstr "配置更改需要重新启动"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:352
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "需要重启会话以使设置生效"
 
-#: gtweak/utils.py:337
+#: gtweak/utils.py:356
 msgid "Restart Session"
 msgstr "重启会话"
+
+#~ msgid "org.gnome.tweaks"
+#~ msgstr "org.gnome.tweaks"
+
+#~ msgid "_About"
+#~ msgstr "关于(_A)"
+
+#~ msgid "_Quit"
+#~ msgstr "退出(_Q)"
+
+#~ msgid "Application Menu"
+#~ msgstr "应用程序菜单"
 
 #~ msgid "Power"
 #~ msgstr "电源"
