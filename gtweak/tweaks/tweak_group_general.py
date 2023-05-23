@@ -52,5 +52,8 @@ class IgnoreLidSwitchTweak(GetterSetterSwitchTweak):
 TWEAK_GROUPS = [
     ListBoxTweakGroup(_("General"),
         IgnoreLidSwitchTweak(),
+        # Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
+        GSettingsSwitchTweak(_("Over-Amplification"), "org.gnome.desktop.sound", "allow-volume-above-100-percent",
+            desc=_("Allows raising the volume above 100%. This can result in a loss of audio quality; it is better to increase application volume settings, if possible."), loaded=_shell_not_ubuntu),
     ),
 ]
