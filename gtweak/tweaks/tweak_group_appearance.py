@@ -182,9 +182,8 @@ class ShellThemeTweak(Gtk.Box, Tweak):
 
             chooser = FileChooserButton(
                         _("Select a theme"),
-                        True,
                         ["application/zip"])
-            chooser.connect("file-set", self._on_file_set)
+            chooser.connect("notify::file-uri", self._on_file_set)
 
             build_label_beside_widget(self.title, chooser, cb, hbox=self)
             self.widget_for_size_group = cb
@@ -267,7 +266,6 @@ TWEAK_GROUP = ListBoxTweakGroup("appearance", _("Appearance"),
         _("Image"),
         "org.gnome.desktop.background",
         "picture-uri",
-        local_only=True,
         mimetypes=["application/xml", "image/png", "image/jpeg"],
     ),
     GSettingsComboEnumTweak(

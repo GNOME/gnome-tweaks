@@ -450,59 +450,64 @@ class GSettingsComboTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 
 
 class FileChooserButton(Gtk.Button, GObject.Object):
-    """ An Implementation of the deprecated filechooser button for GTK4
     """
-    def __init__(self, title, local_type: bool, mimetypes: List[str]):
+    An Implementation of the deprecated filechooser button for GTK4
+    """
+
+    def __init__(self, title, mimetypes: List[str]):
         super().__init__()
         self._btn_content = Adw.ButtonContent(label=_("None"),
                                               icon_name="document-open-symbolic")
         self.set_child(self._btn_content)
 
-        self.connect("clicked", self._on_clicked)
         self._mimetypes = mimetypes
-        self._local_type = local_type
         self._title = title
+        self._file = None
 
-        
+        self.connect("clicked", self._on_clicked)
+        self.connect("realize", self._on_realize)
 
-    def set_uri(self, uri: str):
-        file_from_uri: Gio.File = Gio.File.new_for_uri(uri)
-        # self._file_chooser.set_file(file_from_uri)
-        self._btn_content.set_label(file_from_uri.get_basename())
+    def _on_realize(self, _user_data):
+        if self._file:
+            self._btn_content.set_label(self._file.get_basename())
 
-    def get_uri(self) -> str:
-        return self._file_chooser.get_file().get_uri()
+    @GObject.Property(str)
+    def file_uri(self) -> str:
+        return self._file.get_uri()
 
-    def __init_connections(self):
-        
-        self._file_chooser.connect("response", self._on_response)
+    @file_uri.setter
+    def _set_file_uri(self, uri: str):
+        self._file = Gio.File.new_for_uri(uri)
+
+        if self.get_realized():
+            self._btn_content.set_label(self._file.get_basename())
 
     def _on_clicked(self, _: Gtk.Button):
         mimetypes = self._mimetypes
         title = self._title
-        local_type = self._local_type
 
-        self._main_app = Gtk.Application.get_default()
-        self._file_chooser = Gtk.FileChooserNative(title=title,
-                                                   transient_for=self._main_app.get_active_window(),
-                                                   action=Gtk.FileChooserAction.OPEN,
-                                                   modal=True,
-                                                   select_multiple=False
-                                                   )
+        file_chooser = Gtk.FileDialog(title=title)
+
         if mimetypes:
-            f = Gtk.FileFilter()
+            filter = Gtk.FileFilter()
             for mime in mimetypes:
-                f.add_mime_type(mime)
-            self._file_chooser.set_filter(f)
-        self.__init_connections()
+                filter.add_mime_type(mime)
+            store = Gio.ListStore(item_type=Gtk.FileFilter)
+            store.append(filter)
+            file_chooser.set_filters(store)
 
-        self._main_app.mark_busy()
-        self._file_chooser.show()
+        main_app = Gtk.Application.get_default()
+        main_app.mark_busy()
 
-    def _on_response(self, dialog: Gtk.NativeDialog, response_id: int):
-        self._main_app.unmark_busy()
-        if response_id == Gtk.ResponseType.ACCEPT:
-            self.emit("file-set")
+        file_chooser.open(main_app.get_active_window(), None, self._on_response, None)
+
+    def _on_response(self, file_dialog: Gtk.FileDialog, result, _user_data):
+        main_app = Gtk.Application.get_default()
+        file = file_dialog.open_finish(result)
+        if file:
+            self.props.file_uri = file.get_uri()
+
+        main_app.unmark_busy()
 
     @GObject.Signal()
     def file_set(self):
@@ -510,27 +515,27 @@ class FileChooserButton(Gtk.Button, GObject.Object):
 
 
 class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
-    def __init__(self, title, schema_name, key_name, local_only, mimetypes, **options):
+    def __init__(self, title, schema_name, key_name, mimetypes, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
 
         self.settings.connect('changed::' + self.key_name, self._on_setting_changed)
 
-        self.filechooser = FileChooserButton(title, local_only, mimetypes)
-        self.filechooser.set_uri(self.settings.get_string(self.key_name))
-        self.filechooser.connect("file-set", self._on_file_set)
+        self.filechooser = FileChooserButton(title, mimetypes)
+        self.filechooser.props.file_uri = self.settings.get_string(self.key_name)
+        self.filechooser.connect("notify::file-uri", self._on_file_set)
 
         build_label_beside_widget(title, self.filechooser, hbox=self)
         self.widget_for_size_group = self.filechooser
 
     def _values_are_different(self):
-        return self.settings.get_string(self.key_name) != self.filechooser.get_uri()
+        return self.settings.get_string(self.key_name) != self.filechooser.props.file_uri
 
     def _on_setting_changed(self, setting: GSettingsSetting, key):
-        self.filechooser.set_uri(setting.get_string(key))
+        self.filechooser.props.file_uri = setting.get_string(key)
 
-    def _on_file_set(self, btn: FileChooserButton):
-        uri = btn.get_uri()
+    def _on_file_set(self, filechooser: FileChooserButton, _):
+        uri = filechooser.props.file_uri
         if uri and self._values_are_different():
             self.settings.set_string(self.key_name, uri)
 
