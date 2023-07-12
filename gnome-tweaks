@@ -20,8 +20,6 @@ from gtweak.defs import VERSION, APP_ID
 
 if __name__ == '__main__':
     parser = optparse.OptionParser(version=VERSION)
-    parser.add_option("-t", "--test", action="store_true",
-                      help="Enable test and debug code")
     parser.add_option("-l", "--load", action="store_true",
                       help="Load all tweaks")
     parser.add_option("-p", "--prefix",
@@ -58,7 +56,6 @@ if __name__ == '__main__':
     gtweak.PKG_DATA_DIR = PKG_DATA_DIR
     gtweak.LOCALE_DIR = LOCALE_DIR
     gtweak.LIBEXEC_DIR = LIBEXEC_DIR
-    gtweak.ENABLE_TEST = options.test
     gtweak.ALL_TWEAKS = options.load
     gtweak.APP_ID = APP_ID
     gtweak.APP_NAME = "gnome-tweaks"

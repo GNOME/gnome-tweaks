@@ -95,12 +95,6 @@ class TweakModel(Gtk.ListStore):
                 os.path.splitext(os.path.split(f)[-1])[0]
                     for f in glob.glob(os.path.join(self._tweak_dir, "tweak_group_*.py"))]
 
-        if not gtweak.ENABLE_TEST:
-            try:
-                tweak_files.remove("tweak_group_test")
-            except ValueError:
-                pass
-
         groups = []
         tweaks = []
 
