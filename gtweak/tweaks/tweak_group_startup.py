@@ -305,6 +305,7 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
         tweaks.append(add)
 
         ListBoxTweakGroup.__init__(self,
+            "startup-applications",
             _("Startup Applications"),
             *tweaks,
             css_class='tweak-group-startup')
@@ -349,6 +350,4 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
 
         return exes
 
-TWEAK_GROUPS = [
-    AutostartListBoxTweakGroup(),
-]
+TWEAK_GROUP = AutostartListBoxTweakGroup()

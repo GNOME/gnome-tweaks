@@ -3,11 +3,10 @@
 # License-Filename: LICENSES/GPL-3.0
 
 import logging
-import glob
 import os.path
 
 import gtweak
-from gtweak.utils import SchemaList, LogoutNotification, Notification
+from gtweak.utils import LogoutNotification, Notification
 from gi.repository import Gtk, GLib
 
 def N_(x): return x
@@ -24,8 +23,8 @@ class Tweak(object):
     widget_for_size_group = None
     extra_info = ""
 
-    def __init__(self, name, description, **options):
-        self.name = name or ""
+    def __init__(self, title, description, **options):
+        self.title = title or ""
         self.description = description or ""
         self.uid = options.get("uid", self.__class__.__name__)
         self.group_name = options.get("group_name", _("Miscellaneous"))
@@ -36,7 +35,7 @@ class Tweak(object):
 
     def search_matches(self, txt):
         if self._search_cache is None:
-            self._search_cache = string_for_search(self.name) + " " + \
+            self._search_cache = string_for_search(self.title) + " " + \
 				 string_for_search(self.description)
             try:
                 self._search_cache += " " + string_for_search(self.extra_info)
@@ -55,8 +54,9 @@ class TweakGroup(object):
 
     main_window = None
 
-    def __init__(self, name, *tweaks, **options):
+    def __init__(self, name, title, *tweaks, **options):
         self.name = name
+        self.title = title
         self.titlebar_widget = None
         self.tweaks = [t for t in tweaks if t.loaded]
         self.uid = options.get('uid', self.__class__.__name__)
@@ -90,32 +90,7 @@ class TweakModel(Gtk.ListStore):
     def tweak_groups(self):
         return (row[TweakModel.COLUMN_TWEAK] for row in self)
 
-    def load_tweaks(self, main_window):
-        tweak_files = [
-                os.path.splitext(os.path.split(f)[-1])[0]
-                    for f in glob.glob(os.path.join(self._tweak_dir, "tweak_group_*.py"))]
-
-        groups = []
-        tweaks = []
-
-        mods = __import__("gtweak.tweaks", globals(), locals(), tweak_files, 0)
-        for mod in [getattr(mods, file_name) for file_name in tweak_files]:
-            groups.extend( getattr(mod, "TWEAK_GROUPS", []))
-
-        schemas = SchemaList()
-
-        for g in groups:
-            g.main_window = main_window
-            if g.tweaks:
-                self.add_tweak_group(g)
-                for i in g.tweaks:
-                    i.main_window = main_window
-                    try:
-                        schemas.insert(i.key_name, i.schema_name)
-                    except:
-                        pass
-
-    def add_tweak_group(self, tweakgroup):
+    def add_tweak_group(self, tweakgroup, main_window=None):
         if tweakgroup.name in self._tweak_group_names:
             LOG.critical("Tweak group named: %s already exists" % tweakgroup.name)
             return
@@ -123,18 +98,22 @@ class TweakModel(Gtk.ListStore):
         _iter = self.append([gettext(tweakgroup.name), tweakgroup])
         self._tweak_group_names[tweakgroup.name] = tweakgroup
         self._tweak_group_iters[tweakgroup.name] = _iter
+        if main_window:
+          tweakgroup.main_window = main_window
 
     def search_matches(self, txt):
-        tweaks = []
         groups = []
 
         for g in self.tweak_groups:
             for t in g.tweaks:
                 if t.search_matches(txt):
-                    tweaks.append(t)
                     if g.name not in groups:
                         groups.append(g.name)
-        return tweaks, groups
+
+            if string_for_search(txt) in string_for_search(g.name) and g.name not in groups:
+                groups.append(g.name)
+
+        return groups
 
     def get_tweakgroup_iter(self, name):
         return self._tweak_group_iters[name]

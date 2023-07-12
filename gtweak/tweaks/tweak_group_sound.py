@@ -37,18 +37,17 @@ sound_themes = get_sound_themes()
 
 show_sound_tweaks = len(sound_themes) > 0
 
-TWEAK_GROUPS = [
-    ListBoxTweakGroup(
-        _("Sound"),
-        GSettingsComboTweak(
-            _("System Sound Theme"),
-            "org.gnome.desktop.sound",
-            "theme-name",
-            sound_themes,
-            desc=_("Specifies which sound theme to use for sound events."),
-        ),
-    )
-]
+TWEAK_GROUP = ListBoxTweakGroup(
+    "sound",
+    _("Sound"),
+    GSettingsComboTweak(
+        _("System Sound Theme"),
+        "org.gnome.desktop.sound",
+        "theme-name",
+        sound_themes,
+        desc=_("Specifies which sound theme to use for sound events."),
+    ),
+)
 
 
 

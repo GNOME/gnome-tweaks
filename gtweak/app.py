@@ -2,8 +2,6 @@
 # SPDX-License-Identifier: GPL-3.0+
 # License-Filename: LICENSES/GPL-3.0
 
-import os.path
-
 from gi.repository import Gtk
 from gi.repository import Gio
 from gi.repository import GLib
