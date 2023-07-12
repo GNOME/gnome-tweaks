@@ -33,11 +33,11 @@ tweak_sources = [
   'tweaks/tweak_group_desktop.py',
   'tweaks/tweak_group_font.py',
   'tweaks/tweak_group_general.py',
-  'tweaks/tweak_group_keymouse.py',
+  'tweaks/tweak_group_mouse.py',
+  'tweaks/tweak_group_keyboard.py',
   'tweaks/tweak_group_startup.py',
   'tweaks/tweak_group_test.py',
-  'tweaks/tweak_group_windows.py',
-  'tweaks/tweak_group_xkb.py'
+  'tweaks/tweak_group_windows.py'
 ]
 
 python3.install_sources(shell_sources, subdir: 'gtweak')
