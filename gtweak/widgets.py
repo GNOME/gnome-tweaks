@@ -3,8 +3,9 @@
 # License-Filename: LICENSES/GPL-3.0
 
 import logging
+from typing import List
 
-from gi.repository import GLib, GObject, Gtk, Gio, Pango
+from gi.repository import Adw, GLib, GObject, Gtk, Gio, Pango
 
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
@@ -24,7 +25,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
         warning: Warning text to be shown after the label
     """
     def make_image(icon, tip):
-        image = Gtk.Image.new_from_icon_name(icon, Gtk.IconSize.MENU)
+        image = Gtk.Image.new_from_icon_name(icon)
         image.set_tooltip_text(tip)
         return image
 
@@ -42,24 +43,22 @@ def build_label_beside_widget(txt, *widget, **kwargs):
         hbox = Gtk.Box()
 
     hbox.props.spacing = UI_BOX_SPACING
-    lbl = Gtk.Label(label=txt)
+    lbl = Gtk.Label(label=txt, hexpand=True)
     lbl.props.ellipsize = Pango.EllipsizeMode.NONE
     lbl.props.xalign = 0.0
     lbl.set_has_tooltip(True)
     lbl.connect("query-tooltip", show_tooltip_when_ellipsized)
-    hbox.pack_start(lbl, True, True, 0)
+    hbox.append(lbl)
 
     if kwargs.get("info"):
-        hbox.pack_start(
-                make_image("dialog-information-symbolic", kwargs.get("info")),
-                False, False, 0)
+        hbox.append(
+                make_image("dialog-information-symbolic", kwargs.get("info")))
     if kwargs.get("warning"):
-        hbox.pack_start(
-                make_image("dialog-warning-symbolic", kwargs.get("warning")),
-                False, False, 0)
+        hbox.append(
+                make_image("dialog-warning-symbolic", kwargs.get("warning")))
 
     for w in widget:
-        hbox.pack_start(w, False, False, 0)
+        hbox.append(w)
 
     # For Atk, indicate that the rightmost widget, usually the switch relates to the
     # label. By convention this is true in the great majority of cases. Settings that
@@ -69,7 +68,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
     return hbox
 
 
-def build_combo_box_text(selected, *values):
+def build_combo_box_text(selected, *values) -> Gtk.ComboBox:
     """
     builds a GtkComboBox and model containing the supplied values.
     @values: a list of 2-tuples (value, name)
@@ -79,12 +78,12 @@ def build_combo_box_text(selected, *values):
 
     selected_iter = None
     for (val, name) in values:
-        _iter = store.append((val, name))
+        _iter = store.append([val, name])
         if val == selected:
             selected_iter = _iter
 
     combo = Gtk.ComboBox(model=store)
-    renderer = Gtk.CellRendererText()
+    renderer = Gtk.CellRendererCombo()
     combo.pack_start(renderer, True)
     combo.add_attribute(renderer, 'markup', 1)
     if selected_iter:
@@ -95,15 +94,14 @@ def build_combo_box_text(selected, *values):
 
 def build_horizontal_sizegroup():
     sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
-    sg.props.ignore_hidden = True
     return sg
 
 
 def build_tight_button(stock_id):
     button = Gtk.Button()
-    button.set_relief(Gtk.ReliefStyle.NONE)
+    button.set_has_frame(False)
     button.set_focus_on_click(False)
-    button.add(Gtk.Image.new_from_stock(stock_id, Gtk.IconSize.MENU))
+    button.set_child(Gtk.Image.new_from_stock(stock_id))
     data = ".button {\n" \
            "-GtkButton-default-border : 0px;\n" \
            "-GtkButton-default-outside-border : 0px;\n" \
@@ -117,6 +115,35 @@ def build_tight_button(stock_id):
     # 600 = GTK_STYLE_PROVIDER_PRIORITY_APPLICATION
     button.get_style_context().add_provider(provider, 600)
     return button
+
+
+def build_listrow_hbox(label: str, description: str) -> Gtk.Box:
+    """ Creates a Gtk.Box oriented vertical containing a label and
+    a description
+
+    :param label: the name of the row
+    :param description: the description
+    :return: Gtk.Box
+    """
+    hbox = Gtk.Box()
+    hbox.set_margin_top(10)
+    hbox.set_margin_bottom(10)
+    hbox.set_margin_start(10)
+    hbox.set_margin_end(10)
+
+    vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
+                   hexpand=True)
+    lbl = Gtk.Label(label=label, xalign=0.0)
+    lbl_desc = Gtk.Label(halign=Gtk.Align.START, xalign=0.0)
+    lbl_desc.set_wrap(True)
+    lbl_desc.add_css_class("dim-label")
+    lbl_desc.set_markup(
+        "<span size='small'>" + GLib.markup_escape_text(description) + "</span>")
+
+    vbox.append(lbl)
+    vbox.append(lbl_desc)
+    hbox.append(vbox)
+    return hbox
 
 
 class _GSettingsTweak(Tweak):
@@ -193,18 +220,17 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
         Gtk.ListBox.__init__(self,
                         selection_mode=Gtk.SelectionMode.NONE,
                         name=options['uid'])
-        
-        self.get_style_context().add_class(
-                        options.get('css_class', 'tweak-group'))
-
-        self.props.margin = 20
+        self.add_css_class(options.get('css_class', 'tweak-group'))
+        self.set_margin_top(20)
+        self.set_margin_bottom(20)
+        self.set_margin_start(20)
+        self.set_margin_end(20)
         self.props.vexpand = False
         self.props.valign = Gtk.Align.START
         self.props.hexpand = True
         self.props.halign = Gtk.Align.FILL
 
         self._sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
-        self._sg.props.ignore_hidden = True
 
         TweakGroup.__init__(self, name, title, **options)
 
@@ -220,13 +246,13 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
                 row = t
             else:
                 row = Gtk.ListBoxRow(name=t.uid)
-                row.get_style_context().add_class("tweak")
+                row.add_css_class("tweak")
                 if isinstance(t, Title):
-                    row.get_style_context().add_class("title")
-                row.add(t)
+                    row.add_css_class("title")
+                row.set_child(t)
             row.set_activatable(activatable)
             if position is None:
-                self.add(row)
+                self.append(row)
             else:
                 self.insert(row, position)
             if t.widget_for_size_group:
@@ -244,7 +270,7 @@ class GSettingsCheckTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
                 key_name,
                 widget,
                 "active", Gio.SettingsBindFlags.DEFAULT)
-        self.add(widget)
+        self.append(widget)
         self.widget_for_size_group = None
 
         self.add_dependency_on_tweak(
@@ -254,43 +280,39 @@ class GSettingsCheckTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 
 
 class GSettingsSwitchTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
-    def __init__(self, title, schema_name, key_name, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+    def __init__(self, title: str, schema_name: str, key_name: str, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL,
+                         margin_top=UI_BOX_SPACING, margin_bottom=UI_BOX_SPACING)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
 
-        w = Gtk.Switch()
-        self.settings.bind(key_name, w, "active", Gio.SettingsBindFlags.DEFAULT)
+        switch = Gtk.Switch(halign=Gtk.Align.CENTER,
+                            valign=Gtk.Align.CENTER)
+        self.settings.bind(key_name, switch, "active", Gio.SettingsBindFlags.DEFAULT)
 
         self.add_dependency_on_tweak(
-                options.get("depends_on"),
-                options.get("depends_how")
+            options.get("depends_on"),
+            options.get("depends_how")
         )
 
-        vbox1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        vbox1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
+                        hexpand=True,
+                        valign=Gtk.Align.CENTER)
         vbox1.props.spacing = UI_BOX_SPACING
-        lbl = Gtk.Label(label=title)
+        lbl = Gtk.Label(label=title, xalign=0.0)
         lbl.props.ellipsize = Pango.EllipsizeMode.NONE
         lbl.props.xalign = 0.0
-        vbox1.pack_start(lbl, True, True, 0)
+        vbox1.append(lbl)
 
         if options.get("desc"):
             description = options.get("desc")
-            lbl_desc = Gtk.Label()
-            lbl_desc.props.xalign = 0.0
-            lbl_desc.set_line_wrap(True)
-            lbl_desc.get_style_context().add_class("dim-label")
-            lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(description)+"</span>")
-            vbox1.pack_start(lbl_desc, True, True, 0)
+            lbl_desc = Gtk.Label(xalign=0.0, wrap=True)
+            lbl_desc.add_css_class("dim-label")
+            lbl_desc.set_markup(
+                "<span size='small'>" + GLib.markup_escape_text(description) + "</span>")
+            vbox1.append(lbl_desc)
 
-        vbox2 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        vbox2_upper = Gtk.Box()
-        vbox2_lower = Gtk.Box()
-        vbox2.pack_start(vbox2_upper, True, True, 0)
-        vbox2.pack_start(w, False, False, 0)
-        vbox2.pack_start(vbox2_lower, True, True, 0)
-
-        self.pack_start(vbox1, True, True, 0)
-        self.pack_start(vbox2, False, False, 0)
+        self.append(vbox1)
+        self.append(switch)
         self.widget_for_size_group = None
 
 
@@ -301,7 +323,7 @@ class GSettingsFontButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
 
         w = Gtk.FontButton()
         w.set_use_font(True)
-        self.settings.bind(key_name, w, "font-name", Gio.SettingsBindFlags.DEFAULT)
+        self.settings.bind(key_name, w, "font", Gio.SettingsBindFlags.DEFAULT)
         build_label_beside_widget(title, w, hbox=self)
         self.widget_for_size_group = w
 
@@ -427,19 +449,64 @@ class GSettingsComboTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
         return self._extra_info
 
 
-class FileChooserButton(Gtk.FileChooserButton):
-    def __init__(self, title, local_only, mimetypes):
-        Gtk.FileChooserButton.__init__(self, title=title)
+class FileChooserButton(Gtk.Button, GObject.Object):
+    """ An Implementation of the deprecated filechooser button for GTK4
+    """
+    def __init__(self, title, local_type: bool, mimetypes: List[str]):
+        super().__init__()
+        self._btn_content = Adw.ButtonContent(label=_("None"),
+                                              icon_name="document-open-symbolic")
+        self.set_child(self._btn_content)
 
+        self.connect("clicked", self._on_clicked)
+        self._mimetypes = mimetypes
+        self._local_type = local_type
+        self._title = title
+
+        
+
+    def set_uri(self, uri: str):
+        file_from_uri: Gio.File = Gio.File.new_for_uri(uri)
+        # self._file_chooser.set_file(file_from_uri)
+        self._btn_content.set_label(file_from_uri.get_basename())
+
+    def get_uri(self) -> str:
+        return self._file_chooser.get_file().get_uri()
+
+    def __init_connections(self):
+        
+        self._file_chooser.connect("response", self._on_response)
+
+    def _on_clicked(self, _: Gtk.Button):
+        mimetypes = self._mimetypes
+        title = self._title
+        local_type = self._local_type
+
+        self._main_app = Gtk.Application.get_default()
+        self._file_chooser = Gtk.FileChooserNative(title=title,
+                                                   transient_for=self._main_app.get_active_window(),
+                                                   action=Gtk.FileChooserAction.OPEN,
+                                                   modal=True,
+                                                   select_multiple=False
+                                                   )
         if mimetypes:
             f = Gtk.FileFilter()
-            for m in mimetypes:
-                f.add_mime_type(m)
-            self.set_filter(f)
+            for mime in mimetypes:
+                f.add_mime_type(mime)
+            self._file_chooser.set_filter(f)
+        self.__init_connections()
 
-        # self.set_width_chars(15)
-        self.set_local_only(local_only)
-        self.set_action(Gtk.FileChooserAction.OPEN)
+        self._main_app.mark_busy()
+        self._file_chooser.show()
+
+    def _on_response(self, dialog: Gtk.NativeDialog, response_id: int):
+        self._main_app.unmark_busy()
+        if response_id == Gtk.ResponseType.ACCEPT:
+            self.emit("file-set")
+
+    @GObject.Signal()
+    def file_set(self):
+        pass
 
 
 class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
@@ -447,7 +514,7 @@ class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
 
-        self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
+        self.settings.connect('changed::' + self.key_name, self._on_setting_changed)
 
         self.filechooser = FileChooserButton(title, local_only, mimetypes)
         self.filechooser.set_uri(self.settings.get_string(self.key_name))
@@ -459,11 +526,11 @@ class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin
     def _values_are_different(self):
         return self.settings.get_string(self.key_name) != self.filechooser.get_uri()
 
-    def _on_setting_changed(self, setting, key):
-        self.filechooser.set_uri(self.settings.get_string(key))
+    def _on_setting_changed(self, setting: GSettingsSetting, key):
+        self.filechooser.set_uri(setting.get_string(key))
 
-    def _on_file_set(self, chooser):
-        uri = self.filechooser.get_uri()
+    def _on_file_set(self, btn: FileChooserButton):
+        uri = btn.get_uri()
         if uri and self._values_are_different():
             self.settings.set_string(self.key_name, uri)
 
@@ -498,44 +565,42 @@ class Title(Gtk.Box, Tweak):
         widget.props.xalign = 0.0
         if not options.get("top"):
             widget.set_margin_top(10)
-        self.add(widget)
+        self.append(widget)
 
 
 class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
 
     def __init__(self, title, schema_name, key_name, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL,
+                         margin_top = UI_BOX_SPACING, margin_bottom = UI_BOX_SPACING)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
 
-        sw = Gtk.Switch()
+        sw = Gtk.Switch(halign=Gtk.Align.CENTER,
+                        valign=Gtk.Align.CENTER)
         sw.set_active(self.get_active())
         sw.connect("notify::active", self._on_toggled)
 
-        vbox1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        vbox1 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
+                        hexpand=True,
+                        valign=Gtk.Align.CENTER)
         vbox1.props.spacing = UI_BOX_SPACING
         lbl = Gtk.Label(label=title)
         lbl.props.ellipsize = Pango.EllipsizeMode.NONE
         lbl.props.xalign = 0.0
-        vbox1.pack_start(lbl, True, True, 0)
+        vbox1.append(lbl)
 
         if options.get("desc"):
             description = options.get("desc")
             lbl_desc = Gtk.Label()
             lbl_desc.props.xalign = 0.0
-            lbl_desc.set_line_wrap(True)
-            lbl_desc.get_style_context().add_class("dim-label")
-            lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(description)+"</span>")
-            vbox1.pack_start(lbl_desc, True, True, 0)
+            lbl_desc.set_wrap(True)
+            lbl_desc.add_css_class("dim-label")
+            lbl_desc.set_markup(
+                "<span size='small'>" + GLib.markup_escape_text(description) + "</span>")
+            vbox1.append(lbl_desc)
 
-        vbox2 = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-        vbox2_upper = Gtk.Box()
-        vbox2_lower = Gtk.Box()
-        vbox2.pack_start(vbox2_upper, True, True, 0)
-        vbox2.pack_start(sw, False, False, 0)
-        vbox2.pack_start(vbox2_lower, True, True, 0)
-
-        self.pack_start(vbox1, True, True, 0)
-        self.pack_start(vbox2, False, False, 0)
+        self.append(vbox1)
+        self.append(sw)
         self.widget_for_size_group = None
 
     def _on_toggled(self, sw, pspec):

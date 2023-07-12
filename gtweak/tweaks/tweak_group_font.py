@@ -3,8 +3,9 @@
 # License-Filename: LICENSES/GPL-3.0
 
 import logging
+from typing import Callable, Optional
 
-from gi.repository import Gio, Gtk
+from gi.repository import Gtk
 
 from gtweak.tweakmodel import Tweak
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSpinButtonTweak, GSettingsFontButtonTweak
@@ -22,19 +23,19 @@ class FontXSettingsTweak(Gtk.FlowBox, Tweak):
                              selection_mode=Gtk.SelectionMode.NONE,
         )
         Tweak.__init__(self, _("Hinting"), _("Antialiasing"))
-        
+
         try:
             self.settings = GSettingsSetting("org.gnome.desktop.interface")
         except:
             self.settings = None
             logging.warn("org.gnome.desktop.interface not installed or running")
-        
+
         if not self.settings:
             return
 
         self.props.margin_top = 12
 
-        label = Gtk.Label(_("Hinting"))
+        label = Gtk.Label(label=_("Hinting"))
         label.props.yalign = 0.0
         label.padding = 10
 
@@ -43,80 +44,94 @@ class FontXSettingsTweak(Gtk.FlowBox, Tweak):
 
         hint_options_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
        
-        hint_box.add(label)
-        hint_box.add(hint_options_box)
+        hint_box.append(label)
+        hint_box.append(hint_options_box)
 
-        self.add(hint_box)
+        self.prepend(hint_box)
 
-        self.btn_full = Gtk.RadioButton.new_from_widget(None)
-        self.btn_full.set_label(_("Full"))
+        self.btn_full = Gtk.CheckButton.new_with_label(_("Full"))
         self.btn_full.set_active(self.settings["font-hinting"] == "full")
         self.btn_full.connect("toggled", self.on_hint_button_toggled)
-        hint_options_box.pack_start(self.btn_full, False, False, 0)
+        hint_options_box.prepend(self.btn_full)
 
-        self.btn_med = Gtk.RadioButton.new_from_widget(self.btn_full)
-        self.btn_med.set_label(_("Medium"))
+        self.btn_med = Gtk.CheckButton.new_with_label(_("Medium"))
+        self.btn_med.set_group(self.btn_full)
         self.btn_med.set_active(self.settings["font-hinting"] == "medium")
         self.btn_med.connect("toggled", self.on_hint_button_toggled)
-        hint_options_box.pack_start(self.btn_med, False, False, 0)
+        hint_options_box.prepend(self.btn_med)
 
-        self.btn_slight = Gtk.RadioButton.new_from_widget(self.btn_full)
-        self.btn_slight.set_label(_("Slight"))
+        self.btn_slight = Gtk.CheckButton.new_with_label(_("Slight"))
+        self.btn_slight.set_group(self.btn_full)
         self.btn_slight.set_active(self.settings["font-hinting"] == "slight")
         self.btn_slight.connect("toggled", self.on_hint_button_toggled)
-        hint_options_box.pack_start(self.btn_slight, False, False, 0)
+        hint_options_box.prepend(self.btn_slight)
 
-        self.btn_hnone = Gtk.RadioButton.new_from_widget(self.btn_full)
-        self.btn_hnone.set_label(_("None"))
+        self.btn_hnone = Gtk.CheckButton.new_with_label(_("None"))
+        self.btn_hnone.set_group(self.btn_full)
         self.btn_hnone.set_active(self.settings["font-hinting"] == "none")
         self.btn_hnone.connect("toggled", self.on_hint_button_toggled)
-        hint_options_box.pack_start(self.btn_hnone, False, False, 0)
+        hint_options_box.prepend(self.btn_hnone)
 
-        label = Gtk.Label(_("Antialiasing"))
+        label = Gtk.Label(label=_("Antialiasing"))
         label.props.yalign = 0.0
 
         aa_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=6)
         aa_box.props.hexpand = True
 
         aa_options_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=6)
-        aa_box.add(label)
-        aa_box.add(aa_options_box)
+        aa_box.append(label)
+        aa_box.append(aa_options_box)
 
-        self.add(aa_box)
+        self.prepend(aa_box)
 
-        self.btn_rgba = Gtk.RadioButton.new_from_widget(None)
-        self.btn_rgba.set_label(_("Subpixel (for LCD screens)"))
+        self.btn_rgba = Gtk.CheckButton.new_with_label(_("Subpixel (for LCD screens)"))
         self.btn_rgba.set_active(self.settings["font-antialiasing"] == "rgba")
         self.btn_rgba.connect("toggled", self.on_aa_button_toggled)
-        aa_options_box.pack_start(self.btn_rgba, False, False, 0)
+        aa_options_box.prepend(self.btn_rgba)
 
-        self.btn_gray = Gtk.RadioButton.new_from_widget(self.btn_rgba)
-        self.btn_gray.set_label(_("Standard (grayscale)"))
+        self.btn_gray = Gtk.CheckButton.new_with_label(_("Standard (grayscale)"))
+        self.btn_gray.set_group(self.btn_rgba)
         self.btn_gray.set_active(self.settings["font-antialiasing"] == "grayscale")
         self.btn_gray.connect("toggled", self.on_aa_button_toggled)
-        aa_options_box.pack_start(self.btn_gray, False, False, 0)
+        aa_options_box.prepend(self.btn_gray)
 
-        self.btn_anone = Gtk.RadioButton.new_from_widget(self.btn_rgba)
-        self.btn_anone.set_label(_("None"))
+        self.btn_anone = Gtk.CheckButton.new_with_label(_("None"))
+        self.btn_anone.set_group(self.btn_rgba)
         self.btn_anone.set_active(self.settings["font-antialiasing"] == "none")
         self.btn_anone.connect("toggled", self.on_aa_button_toggled)
-        aa_options_box.pack_start(self.btn_anone, False, False, 0)
+        aa_options_box.prepend(self.btn_anone)
 
-    def on_hint_button_toggled(self, button):
-        if self.btn_full.get_active():
-            self.settings["font-hinting"] ="full"
-        elif self.btn_med.get_active():
+    @staticmethod
+    def _create_check_btn(
+        label: str,
+        is_active: bool,
+        connect_function: Callable,
+        btn_group: Optional[Gtk.CheckButton] = None
+    ) -> Gtk.CheckButton:
+
+        btn_check = Gtk.CheckButton.new_with_label(label)
+        btn_check.set_active(is_active)
+        if btn_group is not None:
+            btn_check.set_group(btn_group)
+        btn_check.connect("toggled", connect_function)
+
+        return btn_check
+
+    def on_hint_button_toggled(self, button: Gtk.CheckButton):
+        if button is self.btn_full:
+            self.settings["font-hinting"] = "full"
+        elif button is self.btn_med:
             self.settings["font-hinting"] = "medium"
-        elif self.btn_slight.get_active():
+        elif button is self.btn_slight:
             self.settings["font-hinting"] = "slight"
         else:
             print("none")
             self.settings["font-hinting"] = "none"
 
-    def on_aa_button_toggled(self, button):
-        if self.btn_rgba.get_active():
+    def on_aa_button_toggled(self, button: Gtk.CheckButton):
+        if button is self.btn_rgba:
             self.settings["font-antialiasing"] = "rgba"
-        elif self.btn_gray.get_active():
+        elif button is self.btn_gray:
             self.settings["font-antialiasing"] = "grayscale"
         else:
             self.settings["font-antialiasing"] = "none"

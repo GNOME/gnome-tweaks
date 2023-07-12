@@ -12,8 +12,6 @@ if not python3.found()
     error('No valid python3 installation found!')
 endif
 
-dependency('libhandy-1', version: '>=1.5')
-
 prefix = get_option('prefix')
 
 bindir = join_paths(prefix, get_option('bindir'))

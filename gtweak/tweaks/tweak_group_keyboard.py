@@ -3,8 +3,8 @@
 # License-Filename: LICENSES/GPL-3.0
 
 import gi
-gi.require_version("GnomeDesktop", "3.0")
-from gi.repository import Gio, GLib, Gtk, Gdk, GnomeDesktop, Gtk
+gi.require_version("GnomeDesktop", "4.0")
+from gi.repository import Gio, GLib, Gtk, GnomeDesktop, Gtk
 
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, Title, build_label_beside_widget, Tweak
@@ -27,9 +27,9 @@ class _XkbOption(Gtk.Expander, Tweak):
         Tweak.__init__(self, desc, desc, **options)
 
         self.set_label(self.title)
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=3)
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
         vbox.set_margin_start(15)
-        self.add(vbox)
+        self.set_child(vbox)
 
         self._multiple_selection = not group_id in { 'keypad', 'kpdl', 'caps', 'altwin', 'nbsp', 'esperanto' }
         self._group_id = group_id
@@ -78,16 +78,12 @@ class _XkbOption(Gtk.Expander, Tweak):
 
         self._widgets = dict()
         for (val, name) in model_values:
-            w = None
-            if self._multiple_selection:
-                w = Gtk.CheckButton.new()
-            else:
-                w = Gtk.RadioButton.new_from_widget(self._widgets.get(None))
-            self._widgets[val] = w;
-            vbox.add(w)
-            l = Gtk.Label(label=name)
-            l.set_line_wrap(True)
-            w.add(l)
+            w = Gtk.CheckButton.new_with_label(name)
+            if not self._multiple_selection:
+                w.set_group(self._widgets.get(None))
+
+            self._widgets[val] = w
+            vbox.append(w)
             w._changed_id = w.connect('toggled', self._on_toggled)
             w._val = val
 
@@ -166,7 +162,8 @@ class TypingTweakGroup(Gtk.Box):
                     obj = _XkbOption(opt, self._kbdsettings, self._xkb_info)
                     self._option_objects.append(obj)
                 self._option_objects.sort(key=lambda item_desc: item_desc.title)
-                for item in self._option_objects: self.pack_start(item, False, False, 0)
+                for item in self._option_objects:
+                    self.append(item)
         TweakGroup.__init__(self, _("Typing"), *self._option_objects)
 
         self.connect("destroy", self._on_destroy)
@@ -206,23 +203,21 @@ class OverviewShortcutTweak(Gtk.Box, _GSettingsTweak):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL, spacing=0)
         _GSettingsTweak.__init__(self, name, "org.gnome.mutter", "overlay-key", loaded=_shell_loaded, **options)
 
-        box_btn = Gtk.ButtonBox()
-        box_btn.set_layout(Gtk.ButtonBoxStyle.EXPAND)
+        box_btn = Gtk.Box()
+        box_btn.set_homogeneous(True)
+        box_btn.add_css_class("linked")
 
-        btn1 = Gtk.RadioButton.new_with_label_from_widget(None, _("Left Super"))
-        btn1.set_property("draw-indicator", False)
-
-        btn2 = Gtk.RadioButton.new_from_widget(btn1)
-        btn2.set_label(_("Right Super"))
-        btn2.set_property("draw-indicator", False)
+        btn1 = Gtk.CheckButton.new_with_label(_("Left Super"))
+        btn2 = Gtk.CheckButton.new_with_label(_("Right Super"))
+        btn2.set_group(btn1)
 
         if (self.settings.get_string(self.key_name) == "Super_R"):
             btn2.set_active(True)
         btn1.connect("toggled", self.on_button_toggled, "Super_L")
         btn2.connect("toggled", self.on_button_toggled, "Super_R")
 
-        box_btn.pack_start(btn1, True, True, 0)
-        box_btn.pack_start(btn2, True, True, 0)
+        box_btn.append(btn1)
+        box_btn.append(btn2)
         build_label_beside_widget(name, box_btn, hbox=self)
 
     def on_button_toggled(self, button, key):
@@ -236,31 +231,25 @@ class AdditionalLayoutButton(Gtk.Box, Tweak):
                                valign=Gtk.Align.CENTER)
         Tweak.__init__(self, "extensions", "")
 
-        btn = Gtk.Button(label=_("Additional Layout Options"),halign=Gtk.Align.END)
+        btn = Gtk.Button(label=_("Additional Layout Options"), halign=Gtk.Align.END)
         btn.connect("clicked", self._on_browse_clicked)
-        self.add(btn)
-
-        self.show_all()
+        self.append(btn)
 
     def _on_browse_clicked(self, btn):
-        dialog = Gtk.Window()
+        dialog = Gtk.Dialog()
         dialog.set_title(_("Additional Layout Options"))
-        dialog.set_type_hint(Gdk.WindowTypeHint.DIALOG)
         dialog.set_transient_for(self.main_window)
         dialog.set_modal(True)
-
-        dialog.set_size_request(500,500)
-        geometry = Gdk.Geometry()
-        geometry.max_height = 500
-        dialog.set_geometry_hints(None, geometry, Gdk.WindowHints.MAX_SIZE)
+        dialog.set_size_request(500, 500)
 
         scrolled_window = Gtk.ScrolledWindow()
-        scrolled_window.set_border_width(10)
+        scrolled_window.set_margin_top(10)
+        scrolled_window.set_margin_start(10)
         box = TypingTweakGroup()
-        scrolled_window.add_with_viewport(box)
+        scrolled_window.set_child(box)
 
-        dialog.add(scrolled_window)
-        dialog.show_all()
+        dialog.set_child(scrolled_window)
+        dialog.show()
 
 class ClickMethod(Gtk.ListBox, Tweak):
 
@@ -288,11 +277,12 @@ class ClickMethod(Gtk.ListBox, Tweak):
         lbl.props.xalign = 0.0
         desc = _("Click the touchpad with two fingers for right-click and three fingers for middle-click.")
         lbl_desc = Gtk.Label()
-        lbl_desc.set_line_wrap(True)
-        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_wrap(True)
+        lbl_desc.add_css_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check_fingers = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        self.check_fingers = Gtk.Image.new_from_icon_name("object-select-symbolic")
+        self.check_fingers.props.icon_size = Gtk.IconSize.NORMAL
         self.check_fingers.set_no_show_all(True)
         self.check_fingers.set_visible(self.settings[self.key_name] == "fingers")
 
@@ -314,11 +304,12 @@ class ClickMethod(Gtk.ListBox, Tweak):
         lbl.props.xalign = 0.0
         desc = _("Click the bottom right of the touchpad for right-click and the bottom middle for middle-click.")
         lbl_desc = Gtk.Label()
-        lbl_desc.set_line_wrap(True)
-        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_wrap(True)
+        lbl_desc.add_css_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check_area = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        self.check_area = Gtk.Image.new_from_icon_name("object-select-symbolic")
+        self.check_fingers.props.icon_size = Gtk.IconSize.NORMAL
         self.check_area.set_no_show_all(True)
         self.check_area.set_visible(self.settings[self.key_name] == "areas")
 
@@ -340,11 +331,12 @@ class ClickMethod(Gtk.ListBox, Tweak):
         lbl.props.xalign = 0.0
         desc = _("Don’t use mouse click emulation.")
         lbl_desc = Gtk.Label()
-        lbl_desc.set_line_wrap(True)
-        lbl_desc.get_style_context().add_class("dim-label")
+        lbl_desc.set_wrap(True)
+        lbl_desc.add_css_class("dim-label")
         lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
 
-        self.check_disabled = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+        self.check_disabled = Gtk.Image.new_from_icon_name("object-select-symbolic")
+        self.check_fingers.props.icon_size = Gtk.IconSize.NORMAL
         self.check_disabled.set_no_show_all(True)
         self.check_disabled.set_visible(self.settings[self.key_name] == "none")
 

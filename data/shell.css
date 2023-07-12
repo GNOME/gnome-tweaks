@@ -1,55 +1,59 @@
 /* the sidebar */
 .tweak-category {
-    padding: 10px;
+  padding: 10px;
 }
 
 /* the container and tweaks in a group */
 .tweak-group {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .tweak {
-    padding-top: 3px;
-    background-color: rgba(0, 0, 0, 0);
+  padding-top: 3px;
+  background-color: rgba(0, 0, 0, 0);
 }
 .tweak:hover {
-    background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 .tweak.title {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .tweak-titlebar-left:dir(ltr),
 .tweak-titlebar-right:dir(rtl) {
-    border-top-right-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .tweak-titlebar-right:dir(ltr),
 .tweak-titlebar-left:dir(rtl) {
-    border-top-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 /* individual tweak theme changes */
 .tweak.title#title-theme {
-    padding-top: 3px;
+  padding-top: 3px;
 }
 .tweak#hinting,
 .tweak#text-scaling-factor {
-    padding-top: 20px;
+  padding-top: 20px;
 }
 
 .tweak-group-white,
 .tweak-white,
 .tweak-white:hover {
-    background-color: white;
+  background-color: white;
 }
 
 .tweak-startup,
 .tweak-startup:hover {
-    background-color: lighter(shade(@theme_bg_color, 0.9));
+  background-color: lighter(shade(@theme_bg_color, 0.9));
 }
 
-.tweak-group-startup
-{
-    background-color: @view_separators;
+.tweak-group-startup {
+  background-color: @view_separators;
+}
+
+/* TODO: Figure out why GTK is adding separators to the navigation listbox */
+.navigation-sidebar > separator {
+  opacity: 0;
 }

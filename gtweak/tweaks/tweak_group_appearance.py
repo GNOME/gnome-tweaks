@@ -9,7 +9,6 @@ import zipfile
 import tempfile
 import json
 import pprint
-import configparser
 
 from gi.repository import Gtk
 from gi.repository import GLib
@@ -20,7 +19,11 @@ from gtweak.tweakmodel import Tweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gtksettings import GtkSettingsManager
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsComboTweak, GSettingsComboEnumTweak, Title, build_combo_box_text,build_label_beside_widget, FileChooserButton, GSettingsFileChooserButtonTweak
+from gtweak.widgets import (ListBoxTweakGroup, GSettingsComboTweak,
+                            GSettingsComboEnumTweak, Title, build_combo_box_text,
+                            build_label_beside_widget,
+                            GSettingsFileChooserButtonTweak, FileChooserButton)
+
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -177,7 +180,6 @@ class ShellThemeTweak(Gtk.Box, Tweak):
             cb.connect('changed', self._on_combo_changed)
             self._combo = cb
 
-            #a filechooser to install new themes
             chooser = FileChooserButton(
                         _("Select a theme"),
                         True,

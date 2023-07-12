@@ -4,7 +4,7 @@
 
 import gtweak
 from gtweak.tweakmodel import Tweak
-from gtweak.widgets import _GSettingsTweak, GSettingsComboEnumTweak, GSettingsSwitchTweakValue, ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, Title, build_label_beside_widget
+from gtweak.widgets import _GSettingsTweak, GSettingsComboEnumTweak, GSettingsSwitchTweakValue, ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, Title, build_label_beside_widget, build_listrow_hbox
 from gtweak.utils import XSettingsOverrides
 import gettext
 
@@ -16,93 +16,37 @@ class Focus(Gtk.ListBox, Tweak):
     def __init__(self, **options):
         Gtk.ListBox.__init__(self)
         Tweak.__init__(self, _("Window Focus"), _("Click to Focus"))
+        self.add_css_class("boxed-list")
 
         self.settings = Gio.Settings("org.gnome.desktop.wm.preferences")
         self.key_name = "focus-mode"
 
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        # Needs other page elements to get margins too
-        # self.props.margin_left = 50
-        # self.props.margin_right = 50
-
         row = Gtk.ListBoxRow()
-        hbox = Gtk.Box()
-        hbox.props.margin = 10
-        row.add(hbox)
-
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-
-        lbl = Gtk.Label(_("Click to Focus"), xalign=0)
-        lbl.props.xalign = 0.0
         desc = _("Windows are focused when they are clicked.")
-        lbl_desc = Gtk.Label()
-        lbl_desc.set_line_wrap(True)
-        lbl_desc.get_style_context().add_class("dim-label")
-        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
-
-        self.check_click = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        self.check_click.set_no_show_all(True)
-        self.check_click.set_visible(self.settings[self.key_name] == "click")
-
-        vbox.pack_start(lbl, False, False, 0)
-        vbox.pack_start(lbl_desc, False, False, 0)
-        hbox.pack_start(vbox, False, False, 0)
-        hbox.pack_end(self.check_click, False, False, 0)
-
-        self.add(row)
+        hbox = build_listrow_hbox(_("Click to Focus"), desc)
+        self.check_click = self._create_check_mark("click")
+        hbox.append(self.check_click)
+        row.set_child(hbox)
+        self.append(row)
 
         row = Gtk.ListBoxRow()
-        hbox = Gtk.Box()
-        hbox.props.margin = 10
-        row.add(hbox)
-
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-
-        lbl = Gtk.Label(_("Focus on Hover"), xalign=0)
-        lbl.props.xalign = 0.0
         desc = _("Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered.")
-        lbl_desc = Gtk.Label()
-        lbl_desc.set_line_wrap(True)
-        lbl_desc.get_style_context().add_class("dim-label")
-        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
-
-        self.check_sloppy = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        self.check_sloppy.set_no_show_all(True)
-        self.check_sloppy.set_visible(self.settings[self.key_name] == "sloppy")
-
-        vbox.pack_start(lbl, False, False, 0)
-        vbox.pack_start(lbl_desc, False, False, 0)
-        hbox.pack_start(vbox, False, False, 0)
-        hbox.pack_end(self.check_sloppy, False, False, 0)
-
-        self.add(row)
+        hbox = build_listrow_hbox(_("Focus on Hover"), desc)
+        self.check_sloppy = self._create_check_mark("sloppy")
+        hbox.append(self.check_sloppy)
+        row.set_child(hbox)
+        self.append(row)
 
         row = Gtk.ListBoxRow()
-        hbox = Gtk.Box()
-        hbox.props.margin = 10
-        row.add(hbox)
-
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-
-        lbl = Gtk.Label(_("Secondary-Click"), xalign=0)
-        lbl.props.xalign = 0.0
         desc = _("Window is focused when hovered with the pointer. Hovering the desktop removes focus from the previous window.")
-        lbl_desc = Gtk.Label()
-        lbl_desc.set_line_wrap(True)
-        lbl_desc.get_style_context().add_class("dim-label")
-        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
+        hbox = build_listrow_hbox(_("Secondary-Click"), desc)
+        self.check_mouse = self._create_check_mark("mouse")
+        hbox.append(self.check_mouse)
+        row.set_child(hbox)
+        self.append(row)
 
-        self.check_mouse = Gtk.Image.new_from_icon_name("object-select-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-        self.check_mouse.set_no_show_all(True)
-        self.check_mouse.set_visible(self.settings[self.key_name] == "mouse")
-
-        vbox.pack_start(lbl, False, False, 0)
-        vbox.pack_start(lbl_desc, False, False, 0)
-        hbox.pack_start(vbox, False, False, 0)
-        hbox.pack_end(self.check_mouse, False, False, 0)
-
-        self.add(row)
         self.connect('row-activated', self.on_row_clicked)
 
     def on_row_clicked(self, box, row):
@@ -121,6 +65,16 @@ class Focus(Gtk.ListBox, Tweak):
             self.check_click.hide()
             self.check_sloppy.hide()
             self.check_mouse.show()
+
+    def _create_check_mark(self, key_name: str) -> Gtk.Image:
+        """ Creates an Image check mark with the associated setting
+
+        :param key_name: The setting option to trigger when visible
+        :return: Gtk.Image
+        """
+        check_mark = Gtk.Image.new_from_icon_name("object-select-symbolic")
+        check_mark.set_visible(self.settings[self.key_name] == key_name)
+        return check_mark
 
 
 class WindowScalingFactorTweak(Gtk.Box, Tweak):
@@ -252,19 +206,17 @@ class PlaceWindowButtons(Gtk.Box, _GSettingsTweak):
                                  "button-layout",
                                  **options)
 
-        box_btn = Gtk.ButtonBox()
-        box_btn.set_layout(Gtk.ButtonBoxStyle.EXPAND)
+        box_btn = Gtk.Box()
+        box_btn.set_homogeneous(True)
+        box_btn.add_css_class("linked")
 
         # Translators: For RTL languages, this is the "Right" direction since the
         # interface is flipped
-        btn1 = Gtk.RadioButton.new_with_label_from_widget(None, _("Left"))
-        btn1.set_property("draw-indicator", False)
-
-        btn2 = Gtk.RadioButton.new_from_widget(btn1)
+        btn1 = Gtk.ToggleButton.new_with_label(_("Left"))
         # Translators: For RTL languages, this is the "Left" direction since the
         # interface is flipped
-        btn2.set_label(_("Right"))
-        btn2.set_property("draw-indicator", False)
+        btn2 = Gtk.ToggleButton.new_with_label(_("Right"))
+        btn2.set_group(btn1)
 
         val = self.settings.get_string(self.key_name)
         (left, colon, right) = val.partition(":")
@@ -272,8 +224,8 @@ class PlaceWindowButtons(Gtk.Box, _GSettingsTweak):
            btn2.set_active(True)
         btn2.connect("toggled", self.on_button_toggled)
 
-        box_btn.pack_start(btn1, True, True, 0)
-        box_btn.pack_start(btn2, True, True, 0)
+        box_btn.prepend(btn1)
+        box_btn.prepend(btn2)
 
         build_label_beside_widget(name, box_btn, hbox=self)
 
