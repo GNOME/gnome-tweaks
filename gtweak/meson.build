@@ -31,7 +31,6 @@ tweak_sources = [
   'tweaks/__init__.py',
   'tweaks/tweak_group_appearance.py',
   'tweaks/tweak_group_font.py',
-  'tweaks/tweak_group_general.py',
   'tweaks/tweak_group_mouse.py',
   'tweaks/tweak_group_keyboard.py',
   'tweaks/tweak_group_startup.py',

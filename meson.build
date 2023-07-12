@@ -38,9 +38,6 @@ icondir = join_paths(datadir, 'icons', 'hicolor')
 schemadir = join_paths(datadir, 'glib-2.0', 'schemas')
 
 install_data('gnome-tweaks', install_dir: bindir)
-# Intentionally keep lid-inhibitor with old name so that user autostart
-# files created by older versions of Tweaks will still work
-install_data('gnome-tweak-tool-lid-inhibitor', install_dir: libexecdir)
 
 subdir('gtweak')
 subdir('data')
