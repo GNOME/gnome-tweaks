@@ -36,7 +36,6 @@ tweak_sources = [
   'tweaks/tweak_group_keymouse.py',
   'tweaks/tweak_group_startup.py',
   'tweaks/tweak_group_test.py',
-  'tweaks/tweak_group_title_bar.py',
   'tweaks/tweak_group_windows.py',
   'tweaks/tweak_group_xkb.py'
 ]
