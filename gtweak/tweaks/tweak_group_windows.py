@@ -293,28 +293,27 @@ class PlaceWindowButtons(Gtk.Box, _GSettingsTweak):
             self.settings.set_string(self.key_name, ",".join(rsplit) + colon + left)
 
 
-TWEAK_GROUPS = [
-    ListBoxTweakGroup(_("Windows"),
-        Title(_("Titlebar Actions"), "", uid="title-titlebar-actions"),
-        GSettingsComboEnumTweak(_("Double-Click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
-        GSettingsComboEnumTweak(_("Middle-Click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
-        GSettingsComboEnumTweak(_("Secondary-Click"),"org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
-        Title(_("Titlebar Buttons"), "", uid="title-theme"),
-        ShowWindowButtons(_("Maximize"), "maximize"),
-        ShowWindowButtons(_("Minimize"), "minimize"),
-        PlaceWindowButtons(),
-          Title(_("Click Actions"), "", uid="title-window-behavior"),
-        GSettingsSwitchTweak(_("Attach Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs",
-                        desc=_("When on, modal dialog windows are attached to their parent windows, and cannot be moved.")),
-        GSettingsSwitchTweak(_("Center New Windows"),"org.gnome.mutter", "center-new-windows"),
-        GSettingsComboTweak(_("Window Action Key"),
-                        "org.gnome.desktop.wm.preferences",
-                        "mouse-button-modifier",
-                        [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
-        GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
-        Title(_("Focusing"), _("Click to Focus"), uid="title-theme"),
-        Focus(),
-        GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how),
-    )
-]
+TWEAK_GROUP = ListBoxTweakGroup("window-management", _("Windows"),
+    Title(_("Titlebar Actions"), "", uid="title-titlebar-actions"),
+    GSettingsComboEnumTweak(_("Double-Click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
+    GSettingsComboEnumTweak(_("Middle-Click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
+    GSettingsComboEnumTweak(_("Secondary-Click"),"org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
+    Title(_("Titlebar Buttons"), "", uid="title-theme"),
+    ShowWindowButtons(_("Maximize"), "maximize"),
+    ShowWindowButtons(_("Minimize"), "minimize"),
+    PlaceWindowButtons(),
+      Title(_("Click Actions"), "", uid="title-window-behavior"),
+    GSettingsSwitchTweak(_("Attach Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs",
+                    desc=_("When on, modal dialog windows are attached to their parent windows, and cannot be moved.")),
+    GSettingsSwitchTweak(_("Center New Windows"),"org.gnome.mutter", "center-new-windows"),
+    GSettingsComboTweak(_("Window Action Key"),
+                    "org.gnome.desktop.wm.preferences",
+                    "mouse-button-modifier",
+                    [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
+    GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
+    Title(_("Focusing"), _("Click to Focus"), uid="title-theme"),
+    Focus(),
+    GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how),
+)
+
 

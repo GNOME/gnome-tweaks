@@ -121,15 +121,14 @@ class FontXSettingsTweak(Gtk.FlowBox, Tweak):
         else:
             self.settings["font-antialiasing"] = "none"
 
-TWEAK_GROUPS = [
-    ListBoxTweakGroup(_("Fonts"),
-        GSettingsFontButtonTweak(_("Interface Text"),"org.gnome.desktop.interface", "font-name"),
-        GSettingsFontButtonTweak(_("Document Text"), "org.gnome.desktop.interface", "document-font-name"),
-        GSettingsFontButtonTweak(_("Monospace Text"), "org.gnome.desktop.interface", "monospace-font-name"),
-        GSettingsFontButtonTweak(_("Legacy Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
-        FontXSettingsTweak(),
-        GSettingsSpinButtonTweak(_("Scaling Factor"),
-          "org.gnome.desktop.interface", "text-scaling-factor",
-          adjustment_step=0.01, digits=2),
-    )
-]
+TWEAK_GROUP = ListBoxTweakGroup("fonts", _("Fonts"),
+    GSettingsFontButtonTweak(_("Interface Text"),"org.gnome.desktop.interface", "font-name"),
+    GSettingsFontButtonTweak(_("Document Text"), "org.gnome.desktop.interface", "document-font-name"),
+    GSettingsFontButtonTweak(_("Monospace Text"), "org.gnome.desktop.interface", "monospace-font-name"),
+    GSettingsFontButtonTweak(_("Legacy Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
+    FontXSettingsTweak(),
+    GSettingsSpinButtonTweak(_("Scaling Factor"),
+      "org.gnome.desktop.interface", "text-scaling-factor",
+      adjustment_step=0.01, digits=2),
+)
+

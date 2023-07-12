@@ -23,6 +23,7 @@ i18n.merge_file(
 
 gui_data = [
   'shell.ui',
+  'tweaks.ui',
   'shell.css'
 ]
 install_data(gui_data, install_dir: pkgdatadir)

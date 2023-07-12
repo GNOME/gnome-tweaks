@@ -147,7 +147,7 @@ class ShellThemeTweak(Gtk.Box, Tweak):
 
         if error:
             cb = build_combo_box_text(None)
-            build_label_beside_widget(self.name, cb,
+            build_label_beside_widget(self.title, cb,
                         warning=error,
                         hbox=self)
             self.widget_for_size_group = cb
@@ -184,7 +184,7 @@ class ShellThemeTweak(Gtk.Box, Tweak):
                         ["application/zip"])
             chooser.connect("file-set", self._on_file_set)
 
-            build_label_beside_widget(self.name, chooser, cb, hbox=self)
+            build_label_beside_widget(self.title, chooser, cb, hbox=self)
             self.widget_for_size_group = cb
 
     def _on_file_set(self, chooser):
@@ -254,23 +254,21 @@ class ShellThemeTweak(Gtk.Box, Tweak):
         self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, val)
 
 
-TWEAK_GROUPS = [
-    ListBoxTweakGroup(_("Appearance"),
-        #GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-        #GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-        Title(_("Themes"), "", uid="title-theme"),
-        CursorThemeSwitcher(),
-        IconThemeSwitcher(),
-        ShellThemeTweak(loaded=_shell_loaded),
-        GtkThemeSwitcher(),
-
-        Title(_("Background"), "", uid="title-theme"),
-        GSettingsFileChooserButtonTweak(_("Image"),"org.gnome.desktop.background", "picture-uri",
-            local_only=True, mimetypes=["application/xml","image/png","image/jpeg"]),
-        GSettingsComboEnumTweak(_("Adjustment"),"org.gnome.desktop.background", "picture-options"),
-
-        # Title(_("Files"), ""),
-        # GSettingsSwitchTweak(_("Use location entry"), "org.gnome.nautilus.preferences",
-        # "always-use-location-entry",schema_filename="org.gnome.nautilus.gschema.xml"),
+TWEAK_GROUP = ListBoxTweakGroup("appearance", _("Appearance"),
+    Title(_("Styles"), "", uid="title-styles"),
+    CursorThemeSwitcher(),
+    IconThemeSwitcher(),
+    ShellThemeTweak(loaded=_shell_loaded),
+    GtkThemeSwitcher(),
+    Title(_("Background"), "", uid="title-backgrounds"),
+    GSettingsFileChooserButtonTweak(
+        _("Image"),
+        "org.gnome.desktop.background",
+        "picture-uri",
+        local_only=True,
+        mimetypes=["application/xml", "image/png", "image/jpeg"],
     ),
-]
+    GSettingsComboEnumTweak(
+        _("Adjustment"), "org.gnome.desktop.background", "picture-options"
+    ),
+)

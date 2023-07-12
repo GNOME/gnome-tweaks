@@ -172,19 +172,16 @@ class ClickMethod(Gtk.ListBox, Tweak):
             self.check_disabled.show()
 
 
-TWEAK_GROUPS = [
-    ListBoxTweakGroup(_("Mouse"),
-        Title(_("Mouse"), ""),
-        GSettingsSwitchTweak(_("Middle Click Paste"),
-                             "org.gnome.desktop.interface",
-                             "gtk-enable-primary-paste"),
-
-        Title(_("Touchpad"), ""),
-        GSettingsSwitchTweak(_("Disable While Typing"),
-                             "org.gnome.desktop.peripherals.touchpad",
-                             "disable-while-typing",
-                             schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
-        Title(_("Mouse Click Emulation"), _("Mouse Click Emulation"), top=True),
-        ClickMethod(),
-        )
-]
+TWEAK_GROUP = ListBoxTweakGroup("mouse", _("Mouse"),
+    Title(_("Mouse"), ""),
+    GSettingsSwitchTweak(_("Middle Click Paste"),
+                         "org.gnome.desktop.interface",
+                         "gtk-enable-primary-paste"),
+    Title(_("Touchpad"), ""),
+    GSettingsSwitchTweak(_("Disable While Typing"),
+                         "org.gnome.desktop.peripherals.touchpad",
+                         "disable-while-typing",
+                         schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
+    Title(_("Mouse Click Emulation"), _("Mouse Click Emulation"), top=True),
+    ClickMethod(),
+)

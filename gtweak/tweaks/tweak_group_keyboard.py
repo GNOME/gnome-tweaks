@@ -374,7 +374,7 @@ class ClickMethod(Gtk.ListBox, Tweak):
             self.check_disabled.show()
 
 
-TWEAK_GROUPS = [ListBoxTweakGroup(_("Keyboard"),
+TWEAK_GROUP = ListBoxTweakGroup("keyboard", _("Keyboard"),
     Title(_("Keyboard"), "", top=True),
     GSettingsSwitchTweak(_("Show Extended Input Sources"),
                           "org.gnome.desktop.input-sources",
@@ -384,4 +384,4 @@ TWEAK_GROUPS = [ListBoxTweakGroup(_("Keyboard"),
     KeyThemeSwitcher(),
     OverviewShortcutTweak(),
     AdditionalLayoutButton(),
-)]
+)
