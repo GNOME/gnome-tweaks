@@ -31,6 +31,7 @@ class AutostartTitle(Gtk.Box, Tweak):
         Tweak.__init__(self, _("Startup Applications"), desc, **options)
 
         label = Gtk.Label(desc)
+        label.set_line_wrap(True)
         label.get_style_context().add_class("dim-label")
         self.props.margin_bottom = 10
         self.add(label)
@@ -103,7 +104,7 @@ class _AppChooser(Gtk.Dialog):
         self.get_content_area().pack_start(sw, True, True, 0)
         self.set_modal(True)
         self.set_transient_for(main_window)
-        self.set_size_request(400,300)
+        self.set_size_request(300, 300)
 
         self.listbox = lb
 
