@@ -17,7 +17,6 @@ from gtweak.tweaks.tweak_group_keyboard import TWEAK_GROUP as KeyboardTweaks
 from gtweak.tweaks.tweak_group_sound import TWEAK_GROUP as SoundTweaks, show_sound_tweaks
 from gtweak.tweaks.tweak_group_windows import TWEAK_GROUP as WindowTweaks
 from gtweak.tweaks.tweak_group_startup import TWEAK_GROUP as StartupApplicationTweaks
-from gtweak.tweaks.tweak_group_datetime import TWEAK_GROUP as DateTimeTweaks
 
 tweaks = [ 
     MouseTweaks,
@@ -26,7 +25,6 @@ tweaks = [
     AppearanceTweaks,
     WindowTweaks,
     StartupApplicationTweaks,
-    DateTimeTweaks,
     SoundTweaks
 ]
 
