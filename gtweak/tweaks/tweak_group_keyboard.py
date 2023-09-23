@@ -31,7 +31,7 @@ class _XkbOption(Gtk.Expander, Tweak):
         vbox.set_margin_start(15)
         self.set_child(vbox)
 
-        self._multiple_selection = not group_id in { 'keypad', 'kpdl', 'caps', 'altwin', 'nbsp', 'esperanto' }
+        self._multiple_selection = group_id not in { 'keypad', 'kpdl', 'caps', 'altwin', 'nbsp', 'esperanto' }
         self._group_id = group_id
         self._parent_settings = parent_settings
         self._xkb_info = xkb_info
@@ -207,13 +207,13 @@ class OverviewShortcutTweak(Gtk.Box, _GSettingsTweak):
         box_btn.set_homogeneous(True)
         box_btn.add_css_class("linked")
 
-        btn1 = Gtk.CheckButton.new_with_label(_("Left Super"))
-        btn2 = Gtk.CheckButton.new_with_label(_("Right Super"))
+        btn1 = Gtk.ToggleButton.new_with_label(_("Left Super"))
+        btn2 = Gtk.ToggleButton.new_with_label(_("Right Super"))
         btn2.set_group(btn1)
 
-        if (self.settings.get_string(self.key_name) == "Super_R"):
+        if self.settings.get_string(self.key_name) == "Super_R":
             btn2.set_active(True)
-        elif (self.settings.get_string(self.key_name) == "Super_L"):
+        elif self.settings.get_string(self.key_name) == "Super_L":
             btn1.set_active(True)
 
         btn1.connect("toggled", self.on_button_toggled, "Super_L")

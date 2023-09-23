@@ -3,11 +3,11 @@
 # License-Filename: LICENSES/GPL-3.0
 
 
-from gi.repository import Gio, Gtk
+from gi.repository import Adw, Gio
 
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.widgets import (ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue,
-                            Title, Tweak, build_listrow_hbox)
+                            Title, Tweak, TickActionRow)
 
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
@@ -31,71 +31,62 @@ class KeyThemeSwitcher(GSettingsSwitchTweakValue):
         else:
             self.settings.set_string(self.key_name, "Default")
 
-class ClickMethod(Gtk.ListBox, Tweak):
+class ClickMethod(Adw.PreferencesGroup, Tweak):
 
     def __init__(self, **options):
-        Gtk.ListBox.__init__(self)
-        Tweak.__init__(self, _("Mouse Click Emulation"), _("Mouse Click Emulation"))
+        name: str = _("Mouse Click Emulation")
+        desc: str = _("Mouse Click Emulation")
+        Adw.PreferencesGroup.__init__(self)
+        Tweak.__init__(self, name, desc, **options)
+        self.set_title(name)
         self.add_css_class("boxed-list")
 
         self.settings = Gio.Settings("org.gnome.desktop.peripherals.touchpad")
         self.key_name = "click-method"
 
-        self.set_selection_mode(Gtk.SelectionMode.NONE)
+        self.row_fingers = self._setup_action_row(
+            key_name="fingers", title=_("Fingers"),
+            subtitle=_(
+                "Click the touchpad with two fingers for right-click and three fingers for middle-click."))
 
-        row = Gtk.ListBoxRow()
-        desc = _("Click the touchpad with two fingers for right-click and three fingers for middle-click.")
-        hbox = build_listrow_hbox(_("Fingers"), desc)
-        self.check_fingers = self._create_check_mark("fingers")
-        hbox.append(self.check_fingers)
-        row.set_child(hbox)
-        self.append(row)
+        self.row_area = self._setup_action_row(
+            key_name="areas", title=_("Area"),
+            subtitle=_(
+                "Click the bottom right of the touchpad for right-click and the bottom middle for middle-click."))
 
-        row = Gtk.ListBoxRow()
-        desc = _("Click the bottom right of the touchpad for right-click and the bottom middle for middle-click.")
-        hbox = build_listrow_hbox(_("Area"), desc)
-        self.check_area = self._create_check_mark("areas")
-        hbox.append(self.check_area)
-        row.set_child(hbox)
-        self.append(row)
+        self.row_disabled= self._setup_action_row(
+            key_name="none", title=_("Disabled"),
+            subtitle=_(
+                "Don’t use mouse click emulation."))
 
-        row = Gtk.ListBoxRow()
-        desc = _("Don’t use mouse click emulation.")
-        hbox = build_listrow_hbox(_("Disabled"), desc)
-        self.check_disabled = self._create_check_mark("none")
-        hbox.append(self.check_disabled)
-        row.set_child(hbox)
-        self.append(row)
+        self.settings.connect("changed", self._on_settings_changed)
 
-        self.connect('row-activated', self.on_row_clicked)
+    def _setup_action_row(self, key_name: str, title: str, subtitle: str) -> TickActionRow:
 
-    def on_row_clicked(self, box, row):
-        if row.get_index() == 0:
-            self.settings[self.key_name] = "fingers"
-            self.check_fingers.show()
-            self.check_area.hide()
-            self.check_disabled.hide()
-        elif row.get_index() == 1:
-            self.settings[self.key_name] = "areas"
-            self.check_fingers.hide()
-            self.check_area.show()
-            self.check_disabled.hide()
-        else:
-            self.settings[self.key_name] = "none"
-            self.check_fingers.hide()
-            self.check_area.hide()
-            self.check_disabled.show()
+        action_row = TickActionRow(title, subtitle, key_name)
+        action_row.img.set_visible(self.settings[self.key_name] == key_name)
+        action_row.connect("activated", self._on_row_clicked)
 
-    def _create_check_mark(self, key_name: str) -> Gtk.Image:
-        """ Creates an Image check mark with the associated setting
+        self.add(action_row)
+        return action_row
 
-        :param key_name: The setting option to trigger when visible
-        :return: Gtk.Image
-        """
-        check_mark = Gtk.Image.new_from_icon_name("object-select-symbolic")
-        check_mark.set_visible(self.settings[self.key_name] == key_name)
-        return check_mark
+    def _on_settings_changed(self, settings, key: str):
+        keyvalue = settings[key]
+        if keyvalue == "fingers":
+            self.row_fingers.img.show()
+            self.row_area.img.hide()
+            self.row_disabled.img.hide()
+        elif keyvalue == "areas":
+            self.row_fingers.img.hide()
+            self.row_area.img.show()
+            self.row_disabled.img.hide()
+        else:  # none
+            self.row_fingers.img.hide()
+            self.row_area.img.hide()
+            self.row_disabled.img.show()
 
+    def _on_row_clicked(self, row: TickActionRow):
+        self.settings[self.key_name] = row.keyvalue
 
 TWEAK_GROUP = ListBoxTweakGroup("mouse", _("Mouse"),
     Title(_("Mouse"), ""),

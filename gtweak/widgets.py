@@ -5,7 +5,7 @@
 import logging
 from typing import List
 
-from gi.repository import Adw, GLib, GObject, Gtk, Gio, Pango
+from gi.repository import Adw, GLib, Gtk, Gio, GObject, Pango
 
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
@@ -44,7 +44,7 @@ def build_label_beside_widget(txt, *widget, **kwargs):
 
     hbox.props.spacing = UI_BOX_SPACING
     lbl = Gtk.Label(label=txt, hexpand=True)
-    lbl.props.ellipsize = Pango.EllipsizeMode.NONE
+    lbl.props.ellipsize = Pango.EllipsizeMode.END
     lbl.props.xalign = 0.0
     lbl.set_has_tooltip(True)
     lbl.connect("query-tooltip", show_tooltip_when_ellipsized)
@@ -117,33 +117,18 @@ def build_tight_button(stock_id):
     return button
 
 
-def build_listrow_hbox(label: str, description: str) -> Gtk.Box:
-    """ Creates a Gtk.Box oriented vertical containing a label and
-    a description
+class TickActionRow(Adw.ActionRow):
 
-    :param label: the name of the row
-    :param description: the description
-    :return: Gtk.Box
-    """
-    hbox = Gtk.Box()
-    hbox.set_margin_top(10)
-    hbox.set_margin_bottom(10)
-    hbox.set_margin_start(10)
-    hbox.set_margin_end(10)
+    def __init__(self, title: str, subtitle: str, keyvalue: str):
+        super().__init__()
+        self.set_title(title)
+        self.set_subtitle(subtitle)
 
-    vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL,
-                   hexpand=True)
-    lbl = Gtk.Label(label=label, xalign=0.0)
-    lbl_desc = Gtk.Label(halign=Gtk.Align.START, xalign=0.0)
-    lbl_desc.set_wrap(True)
-    lbl_desc.add_css_class("dim-label")
-    lbl_desc.set_markup(
-        "<span size='small'>" + GLib.markup_escape_text(description) + "</span>")
+        self.keyvalue = keyvalue
+        self.img = Gtk.Image.new_from_icon_name("object-select-symbolic")
 
-    vbox.append(lbl)
-    vbox.append(lbl_desc)
-    hbox.append(vbox)
-    return hbox
+        self.add_suffix(self.img)
+        self.set_activatable_widget(self.img)
 
 
 class _GSettingsTweak(Tweak):
