@@ -2,69 +2,70 @@
 # SPDX-License-Identifier: GPL-3.0+
 # License-Filename: LICENSES/GPL-3.0
 
-import gtweak
 from gtweak.tweakmodel import Tweak
-from gtweak.widgets import _GSettingsTweak, GSettingsComboEnumTweak, GSettingsSwitchTweakValue, ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, Title, build_label_beside_widget, build_listrow_hbox
+from gtweak.widgets import _GSettingsTweak, GSettingsComboEnumTweak, GSettingsSwitchTweakValue, ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, Title, build_label_beside_widget, TickActionRow
 from gtweak.utils import XSettingsOverrides
 import gettext
 
-from gi.repository import Gio, Gtk, GLib
+from gi.repository import Adw, Gio, Gtk, GLib
 
 
-class Focus(Gtk.ListBox, Tweak):
+class Focus(Adw.PreferencesGroup, Tweak):
 
     def __init__(self, **options):
-        Gtk.ListBox.__init__(self)
-        Tweak.__init__(self, _("Window Focus"), _("Click to Focus"))
+        name: str = _("Window Focus")
+        desc: str = _("Click to Focus")
+        Adw.PreferencesGroup.__init__(self)
+        Tweak.__init__(self, name, desc, **options)
+        self.set_title(name)
         self.add_css_class("boxed-list")
 
         self.settings = Gio.Settings("org.gnome.desktop.wm.preferences")
         self.key_name = "focus-mode"
 
-        self.set_selection_mode(Gtk.SelectionMode.NONE)
+        self.row_click = self._setup_action_row(
+            key_name="click", title=_("Click to Focus"),
+            subtitle=_(
+                "Windows are focused when they are clicked."))
 
-        row = Gtk.ListBoxRow()
-        desc = _("Windows are focused when they are clicked.")
-        hbox = build_listrow_hbox(_("Click to Focus"), desc)
-        self.check_click = self._create_check_mark("click")
-        hbox.append(self.check_click)
-        row.set_child(hbox)
-        self.append(row)
+        self.row_sloppy = self._setup_action_row(
+            key_name="sloppy", title=_("Focus on Hover"),
+            subtitle=_(
+                "Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered."))
 
-        row = Gtk.ListBoxRow()
-        desc = _("Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered.")
-        hbox = build_listrow_hbox(_("Focus on Hover"), desc)
-        self.check_sloppy = self._create_check_mark("sloppy")
-        hbox.append(self.check_sloppy)
-        row.set_child(hbox)
-        self.append(row)
+        self.row_mouse = self._setup_action_row(
+            key_name="mouse", title=_("Secondary-Click"),
+            subtitle=_(
+                "Window is focused when hovered with the pointer. Hovering the desktop removes focus "
+                "from the previous window."))
 
-        row = Gtk.ListBoxRow()
-        desc = _("Window is focused when hovered with the pointer. Hovering the desktop removes focus from the previous window.")
-        hbox = build_listrow_hbox(_("Secondary-Click"), desc)
-        self.check_mouse = self._create_check_mark("mouse")
-        hbox.append(self.check_mouse)
-        row.set_child(hbox)
-        self.append(row)
+        self.settings.connect("changed", self._settings_changed)
 
-        self.connect('row-activated', self.on_row_clicked)
+    def _setup_action_row(self, key_name: str, title: str, subtitle: str):
+        action_row = TickActionRow(title, subtitle, key_name)
+        action_row.img.set_visible(self.settings[self.key_name] == key_name)
+        action_row.connect("activated", self._on_row_clicked)
 
-    def on_row_clicked(self, box, row):
-        if row.get_index() == 0:
-            self.settings[self.key_name] = "click"
-            self.check_click.show()
-            self.check_sloppy.hide()
-            self.check_mouse.hide()
-        elif row.get_index() == 1:
-            self.settings[self.key_name] = "sloppy"
-            self.check_click.hide()
-            self.check_sloppy.show()
-            self.check_mouse.hide()
-        else:
-            self.settings[self.key_name] = "mouse"
-            self.check_click.hide()
-            self.check_sloppy.hide()
-            self.check_mouse.show()
+        self.add(action_row)
+        return action_row
+
+    def _settings_changed(self, settings, key: str):
+        keyvalue = settings[key]
+        if keyvalue == "click":
+            self.row_click.img.show()
+            self.row_sloppy.img.hide()
+            self.row_mouse.img.hide()
+        elif keyvalue == "sloppy":
+            self.row_click.img.hide()
+            self.row_sloppy.img.show()
+            self.row_mouse.img.hide()
+        else:  # mouse
+            self.row_click.img.hide()
+            self.row_sloppy.img.hide()
+            self.row_mouse.img.show()
+
+    def _on_row_clicked(self, row: TickActionRow):
+        self.settings[self.key_name] = row.keyvalue
 
     def _create_check_mark(self, key_name: str) -> Gtk.Image:
         """ Creates an Image check mark with the associated setting
@@ -80,7 +81,8 @@ class Focus(Gtk.ListBox, Tweak):
 class WindowScalingFactorTweak(Gtk.Box, Tweak):
     def __init__(self, **options):
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        Tweak.__init__(self, _("Window scaling"), _("Adjust GDK window scaling factor for HiDPI"), **options)
+        Tweak.__init__(self, _("Window scaling"), _("Adjust GDK window scaling factor for HiDPI"),
+                       **options)
 
         self._xsettings = XSettingsOverrides()
         self._original_factor = self._xsettings.get_window_scaling_factor()
@@ -95,7 +97,7 @@ class WindowScalingFactorTweak(Gtk.Box, Tweak):
         build_label_beside_widget(self.name, w, hbox=self)
         self.widget_for_size_group = w
 
-    def _timeout_func (self):
+    def _timeout_func(self):
         self._countdown -= 1
 
         if self._countdown == 0:
@@ -265,9 +267,7 @@ TWEAK_GROUP = ListBoxTweakGroup("window-management", _("Windows"),
                     "mouse-button-modifier",
                     [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
     GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
-    Title(_("Focusing"), _("Click to Focus"), uid="title-theme"),
-    Focus(),
+    Focus(uid="title-theme"),
     GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how),
 )
-
 
