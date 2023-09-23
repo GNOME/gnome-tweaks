@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-07-15 12:06+0000\n"
-"PO-Revision-Date: 2023-07-18 00:00+0300\n"
+"POT-Creation-Date: 2023-09-23 05:41+0000\n"
+"PO-Revision-Date: 2023-09-23 18:48+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -39,15 +39,18 @@ msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "Налаштування GNOME дозволяють коригувати додаткові параметри GNOME."
 
 #: data/org.gnome.tweaks.appdata.xml.in:15
+#| msgid ""
+#| "It can install and manage themes, change power settings, manage startup "
+#| "applications, and enable desktop icons among other settings."
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"Програма вміє встановлювати та керувати темами, змінювати параметри "
-"живлення, керувати автозавантаженням програм та вмикати піктограми робочого "
-"столу серед інших параметрів."
+"Може керувати, серед іншого, прив'язками дій до клавіатурних скорочень,"
+" додавати програми до списку автоматичного запуску і встановлювати нетипові"
+" засоби керування вікнами."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:127
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
 msgid "Tweaks"
 msgstr "Налаштування"
 
@@ -74,29 +77,24 @@ msgstr "Шрифти"
 msgid "Appearance"
 msgstr "Зовнішній вигляд"
 
-#: data/tweaks.ui:132 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Звук"
 
-#: data/tweaks.ui:166
-#| msgid "Touchpad"
+#: data/tweaks.ui:165
 msgid "Mouse & Touchpad"
 msgstr "Миша та сенсорний пристрій"
 
-#: data/tweaks.ui:200 gtweak/tweaks/tweak_group_keyboard.py:377
+#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
 #: gtweak/tweaks/tweak_group_keyboard.py:378
 msgid "Keyboard"
 msgstr "Клавіатура"
 
-#: data/tweaks.ui:234 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
 msgid "Windows"
 msgstr "Вікна"
 
-#: data/tweaks.ui:268 gtweak/tweaks/tweak_group_datetime.py:8
-msgid "Date & Time"
-msgstr "Дата і час"
-
-#: data/tweaks.ui:304 gtweak/tweaks/tweak_group_startup.py:31
+#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
 #: gtweak/tweaks/tweak_group_startup.py:309
 msgid "Startup Applications"
 msgstr "Програми у автозапуску"
@@ -247,34 +245,6 @@ msgstr "Зображення"
 #: gtweak/tweaks/tweak_group_appearance.py:272
 msgid "Adjustment"
 msgstr "Коригування"
-
-#: gtweak/tweaks/tweak_group_datetime.py:9
-msgid "Clock"
-msgstr "Годинник"
-
-#: gtweak/tweaks/tweak_group_datetime.py:10
-#| msgid "Weekday"
-msgid "Show Weekday"
-msgstr "Показувати день тижня"
-
-#: gtweak/tweaks/tweak_group_datetime.py:11
-#| msgid "Date"
-msgid "Show Date"
-msgstr "Показати дату"
-
-#: gtweak/tweaks/tweak_group_datetime.py:12
-#| msgid "Show Icons"
-msgid "Show Seconds"
-msgstr "Показувати секунди"
-
-#: gtweak/tweaks/tweak_group_datetime.py:13
-msgid "Calendar"
-msgstr "Календар"
-
-#: gtweak/tweaks/tweak_group_datetime.py:14
-#| msgid "Week Numbers"
-msgid "Show Week Numbers"
-msgstr "Показувати номери тижнів"
 
 #: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
 msgid "Hinting"
@@ -595,7 +565,6 @@ msgid "Minimize"
 msgstr "Згорнути"
 
 #: gtweak/tweaks/tweak_group_windows.py:305
-#| msgid "Click to Focus"
 msgid "Click Actions"
 msgstr "Дії на клацання"
 
@@ -631,7 +600,7 @@ msgstr "Фокусування"
 msgid "Raise Windows When Focused"
 msgstr "Показувати вікна під час фокусування"
 
-#: gtweak/tweakview.py:159
+#: gtweak/tweakview.py:157
 msgid "Search Tweaks…"
 msgstr "Пошук налаштувань…"
 
@@ -652,6 +621,31 @@ msgstr "Слід перезапустити сеанс, щоб зміни наб
 #: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "Перезапустити сеанс"
+
+#~ msgid "Date & Time"
+#~ msgstr "Дата і час"
+
+#~ msgid "Clock"
+#~ msgstr "Годинник"
+
+#~| msgid "Weekday"
+#~ msgid "Show Weekday"
+#~ msgstr "Показувати день тижня"
+
+#~| msgid "Date"
+#~ msgid "Show Date"
+#~ msgstr "Показати дату"
+
+#~| msgid "Show Icons"
+#~ msgid "Show Seconds"
+#~ msgstr "Показувати секунди"
+
+#~ msgid "Calendar"
+#~ msgstr "Календар"
+
+#~| msgid "Week Numbers"
+#~ msgid "Show Week Numbers"
+#~ msgstr "Показувати номери тижнів"
 
 #~ msgid "General"
 #~ msgstr "Загальні"
