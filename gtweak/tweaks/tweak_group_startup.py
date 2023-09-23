@@ -2,15 +2,14 @@
 # SPDX-License-Identifier: GPL-3.0+
 # License-Filename: LICENSES/GPL-3.0
 
+import logging
 import os.path
 import subprocess
-import logging
 from typing import Set, Optional
 
-from gi.repository import Gtk, Gdk, Gio, GObject
+from gi.repository import Adw, Gtk, Gdk, Gio, GObject, GLib
 
-from gtweak.tweakmodel import Tweak
-from gtweak.widgets import ListBoxTweakGroup
+from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.utils import AutostartManager, AutostartFile
 
 
@@ -18,20 +17,6 @@ def _image_from_gicon(gicon):
     image = Gtk.Image.new_from_gicon(gicon)
     image.set_icon_size(Gtk.IconSize.LARGE)
     return image
-
-
-class AutostartTitle(Gtk.Box, Tweak):
-
-    def __init__(self, **options):
-        Gtk.Box.__init__(self)
-        desc = _("Startup applications are automatically started when you log in.")
-        Tweak.__init__(self, _("Startup Applications"), desc, **options)
-
-        label = Gtk.Label(label=desc, margin_start=12, margin_top=12)
-        label.set_wrap(True)
-        label.add_css_class("dim-label")
-        self.set_margin_bottom(10)
-        self.append(label)
 
 
 class _AppChooserRow(Gtk.ListBoxRow):
@@ -73,7 +58,7 @@ class _AppChooser(Gtk.Dialog):
 
     def __init__(self, main_window, running_exes, startup_apps):
         uhb = Gtk.Settings.get_default().props.gtk_dialogs_use_header
-        Gtk.Dialog.__init__(self, title=_("Applications"), use_header_bar=uhb)
+        Gtk.Dialog.__init__(self, title=_("Select Application"), use_header_bar=uhb)
 
         self._running = {}
         self._all = {}
@@ -84,7 +69,7 @@ class _AppChooser(Gtk.Dialog):
         self.set_default_response(Gtk.ResponseType.OK)
 
         self.entry = Gtk.SearchEntry(
-                placeholder_text=_("Search Applications…"))
+            placeholder_text=_("Search Applications…"))
         self.entry.set_width_chars(30)
         self.entry.props.activates_default = True
         self.entry.connect("search-changed", self._on_search_entry_changed)
@@ -98,7 +83,8 @@ class _AppChooser(Gtk.Dialog):
         lb.set_activate_on_single_click(False)
         lb.set_sort_func(self._list_sort_func, None)
         lb.set_filter_func(self._list_filter_func, self.entry)
-        lb.connect("row-activated", lambda b, r: self.response(Gtk.ResponseType.OK) if r.get_mapped() else None)
+        lb.connect("row-activated",
+                   lambda b, r: self.response(Gtk.ResponseType.OK) if r.get_mapped() else None)
         lb.connect("row-selected", self._on_row_selected)
 
         apps = filter(lambda _app: _app.should_show() and _app.get_id() not in startup_apps,
@@ -113,7 +99,7 @@ class _AppChooser(Gtk.Dialog):
                 lb.append(w)
 
         sw = Gtk.ScrolledWindow(vexpand=True, margin_top=2, margin_bottom=2,
-                                margin_start=2,margin_end=2)
+                                margin_start=2, margin_end=2)
         sw.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         sw.set_child(lb)
 
@@ -130,7 +116,7 @@ class _AppChooser(Gtk.Dialog):
         self.get_content_area().append(sw)
         self.set_modal(True)
         self.set_transient_for(main_window)
-        self.set_size_request(300, 300)
+        self.set_size_request(320, 300)
 
         self.listbox = lb
         self._setup_shortcut()
@@ -193,41 +179,29 @@ class _AppChooser(Gtk.Dialog):
         return None
 
 
-class _StartupTweak(Gtk.ListBoxRow, Tweak):
-    def __init__(self, df, **options):
-        Gtk.ListBoxRow.__init__(self)
-        Tweak.__init__(self,
-                        df.get_name(),
-                        df.get_description(),
-                        **options)
+class _StartupAppRowTweak(Adw.ActionRow, Tweak):
 
-        grid = Gtk.Grid(column_spacing=10)
+    def __init__(self, desktop_info: Gio.AppInfo, **options):
+        Adw.PreferencesRow.__init__(self)
+        Tweak.__init__(self, desktop_info.get_name(), desktop_info.get_description(), **options)
 
-        icn = df.get_icon()
-        if icn:
-            img = _image_from_gicon(icn)
-            grid.attach(img, 0, 0, 1, 1)
+        icon = desktop_info.get_icon()
+        if icon:
+            app_icon = _image_from_gicon(icon)
         else:
-            img = None #attach_next_to treats this correctly
+            app_icon = Gtk.Image.new_from_icon_name("image-missing", Gtk.IconSize.LARGE)
 
-        lbl = Gtk.Label(label=df.get_name(), xalign=0.0)
-        grid.attach_next_to(lbl,img,Gtk.PositionType.RIGHT,1,1)
-        lbl.props.hexpand = True
-        lbl.props.halign = Gtk.Align.START
+        self.btn = Gtk.Button(icon_name="edit-delete-symbolic")
+        self.btn.set_tooltip_text(_("Remove"))
 
-        btn = Gtk.Button(label=_("Remove"))
-        grid.attach_next_to(btn,lbl,Gtk.PositionType.RIGHT,1,1)
-        btn.props.vexpand = False
-        btn.props.valign = Gtk.Align.CENTER
+        self.btn.add_css_class("flat")
+        self.btn.set_vexpand(False)
+        self.btn.set_valign(Gtk.Align.CENTER)
 
-        self.set_child(grid)
-
-        self.set_margin_start(1)
-        self.set_margin_end(1)
-        self.add_css_class('tweak-startup')
-
-        self.btn = btn
-        self.app_id = df.get_id()
+        self.set_title(desktop_info.get_name())
+        self.add_prefix(app_icon)
+        self.add_suffix(self.btn)
+        self.app_info = desktop_info
 
         controller_key = Gtk.EventControllerKey()
         self.add_controller(controller_key)
@@ -240,81 +214,121 @@ class _StartupTweak(Gtk.ListBoxRow, Tweak):
         return False
 
 
-class AddStartupTweak(Gtk.ListBoxRow, Tweak):
-    def __init__(self, **options):
-        Gtk.ListBoxRow.__init__(self)
-        Tweak.__init__(self, _("New startup application"),
-                       _("Add a new application to be run at startup"),
-                       **options)
+class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
 
-        self.btn = Gtk.Button.new_from_icon_name("list-add-symbolic")
-        self.btn.get_style_context().remove_class("button")
-        self.set_child(self.btn)
-        self.add_css_class('tweak-startup')
+    def __init__(self, *tweaks, **options):
+        name: str = _("Startup Applications")
+        desc: str = _("Startup applications are automatically started when you log in.")
+        Adw.PreferencesPage.__init__(self)
+        TweakGroup.__init__(self, "startup-applications", name, **options)
 
+        self.tweaks = [Tweak(name, desc, **options)]
 
-class AutostartListBoxTweakGroup(ListBoxTweakGroup):
-    def __init__(self):
-        tweaks = [AutostartTitle()]
+        pregroup = Adw.PreferencesGroup()
+        # Preferencee Group Header
+        pregroup.set_title(name)
+        pregroup.set_description(desc)
 
-        self.asm = AutostartManager()
-        files = self.asm.get_user_autostart_files()
-        self._startup_apps_id = set()
-        for f in files:
-            try:
-                df = Gio.DesktopAppInfo.new_from_filename(f)
-            except TypeError:
-                logging.warning("Error loading desktopfile: %s" % f)
-                continue
+        self.btn_add_startup = Gtk.Button(valign=Gtk.Align.CENTER)
+        self.btn_add_startup.set_icon_name("list-add-symbolic")
+        self.btn_add_startup.add_css_class("flat")
+        pregroup.set_header_suffix(self.btn_add_startup)
 
-            if not AutostartFile(df).is_start_at_login_enabled():
-                continue
+        # Body
+        self.stack = Gtk.Stack()
+        self.status_page = Adw.StatusPage()
+        self.pg_startup_apps = Adw.PreferencesGroup()
+        self._setup_stack_view()
 
-            sdf = _StartupTweak(df)
-            self._startup_apps_id.add(df.get_id())
-            sdf.btn.connect("clicked", self._on_remove_clicked, sdf, df)
-            tweaks.append(sdf)
+        self._startup_dapps = self._get_startup_desktop_files()
+        self._setup_startup_app_row()
 
-        add = AddStartupTweak()
-        add.btn.connect("clicked", self._on_add_clicked)
-        tweaks.append(add)
+        self.__init_connections()
+        pregroup.add(self.stack)
+        self.add(pregroup)
+        self._set_visible_page()
 
-        ListBoxTweakGroup.__init__(self,
-            "startup-applications",
-            _("Startup Applications"),
-            *tweaks,
-            css_class='tweak-group-startup')
+    def _setup_stack_view(self):
+        self.stack.set_vexpand(True)
+        self.stack.set_hhomogeneous(True)
+        self.stack.set_transition_type(Gtk.StackTransitionType.CROSSFADE)
 
-        self.add_css_class("boxed-list")
-        self.connect("row-activated", lambda b, row: add.btn.activate() if row == add else None)
+        # Empty Page
+        self.status_page.set_icon_name("application-x-executable-symbolic")
+        self.status_page.set_title(_("No Startup Applications"))
+        self.status_page.set_description(_("Add a statup application"))
+        self.status_page.add_css_class("dim-label")
 
-    def _on_remove_clicked(self, btn, widget, df):
-        self.remove(widget)
-        self._startup_apps_id.remove(df.get_id())
-        AutostartFile(df).update_start_at_login(False)
+        self.stack.add_child(self.status_page)
+        self.stack.add_child(self.pg_startup_apps)
 
-    def _on_add_clicked(self, btn):
+    def _setup_startup_app_row(self):
+        """ Add a row for each autostart applications existing"""
+
+        dfiles = self._startup_dapps
+        for dfile in dfiles:
+            app_row = _StartupAppRowTweak(dfile)
+            app_row.btn.connect("clicked", self._on_remove_clicked, app_row)
+            self.pg_startup_apps.add(app_row)
+            self.tweaks.append(app_row)
+
+    def _set_visible_page(self):
+        if len(self._startup_dapps) > 0:
+            self.stack.set_visible_child(self.pg_startup_apps)
+        else:
+            self.stack.set_visible_child(self.status_page)
+
+    def _on_add_clicked(self, _: Gtk.Button):
         def _on_response_appchooser(chooser: _AppChooser, response_id: int):
             if response_id == Gtk.ResponseType.OK:
                 appinfo = chooser.get_selected_appinfo()
+
                 if appinfo:
                     AutostartFile(appinfo).update_start_at_login(True)
-                    sdf = _StartupTweak(appinfo)
-                    # Hide the new startup tweak from the dialog list
-                    # TODO: Update the list based on the source file list
-                    self._startup_apps_id.add(appinfo.get_id())
-                    sdf.btn.connect("clicked", self._on_remove_clicked, sdf, appinfo)
-                    self.add_tweak_row(sdf, False, 1).show()
+                    arow_app_row = _StartupAppRowTweak(appinfo)
+                    arow_app_row.btn.connect("clicked", self._on_remove_clicked, arow_app_row)
+
+                    self.pg_startup_apps.add(arow_app_row)
+                    self._startup_dapps.add(appinfo)
+                    self._set_visible_page()
             chooser.destroy()
 
+        startup_app_ids = tuple(map(lambda x: x.get_id(), self._startup_dapps))
+
         Gio.Application.get_default().mark_busy()
-        a = _AppChooser(
-                self.main_window,
-                self._get_running_executables(),
-                self._startup_apps_id)
+        a = _AppChooser(self.main_window, self._get_running_executables(), startup_app_ids)
         a.connect("response", _on_response_appchooser)
         Gio.Application.get_default().unmark_busy()
         a.present()
+
+    def _on_remove_clicked(self, btn, app_row: _StartupAppRowTweak):
+        app_info = app_row.app_info
+        AutostartFile(app_info).update_start_at_login(False)
+
+        self.pg_startup_apps.remove(app_row)
+        self._startup_dapps.remove(app_info)
+        self._set_visible_page()
+
+    def __init_connections(self):
+        self.btn_add_startup.connect("clicked", self._on_add_clicked)
+
+    @staticmethod
+    def _get_startup_desktop_files():
+        asm = AutostartManager()
+        autostart_files = asm.get_user_autostart_files()
+        dfiles = set()
+
+        for file in autostart_files:
+            try:
+                dappinfo = Gio.DesktopAppInfo.new_from_filename(file)
+            except TypeError:
+                logging.warning(f"Error loading desktop file: {file}")
+            else:
+                if not AutostartFile(dappinfo).is_start_at_login_enabled():
+                    continue
+                dfiles.add(dappinfo)
+
+        return dfiles
 
     @staticmethod
     def _get_running_executables() -> Set[str]:
@@ -331,4 +345,4 @@ class AutostartListBoxTweakGroup(ListBoxTweakGroup):
 
         return exes
 
-TWEAK_GROUP = AutostartListBoxTweakGroup()
+TWEAK_GROUP = AutostartTweakGroup()
