@@ -5,7 +5,7 @@
 import os.path
 from typing import List
 
-from gi.repository import Adw, Gtk, Gdk, Gio, GObject
+from gi.repository import Adw, Gtk, Gdk, GObject
 import gtweak
 import gtweak.widgets 
 import gtweak.tweakmodel
@@ -40,12 +40,13 @@ class Window(Adw.ApplicationWindow):
     header = Gtk.Template.Child()
     main_content_scroll = Gtk.Template.Child()
     main_leaflet = Gtk.Template.Child()
+    main_stack = Gtk.Template.Child()
     left_box = Gtk.Template.Child()
     searchbar = Gtk.Template.Child()
     entry = Gtk.Template.Child()
     list_box_row_sound = Gtk.Template.Child()
 
-    def __init__(self, app, model: TweakModel):
+    def __init__(self, app: Adw.Application, model: TweakModel):
         super().__init__(application=app, show_menubar=False)
         self.set_default_size(980, 640)
         self.set_size_request(-1, 300)
@@ -53,32 +54,31 @@ class Window(Adw.ApplicationWindow):
 
         for tweak in tweaks:
             model.add_tweak_group(tweak, self)
+            if tweak.name:
+              self.main_stack.add_named(tweak, tweak.name)
 
-        self.hsize_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
 
-        self.sidebar()
+        self._setup_header()
+        self._setup_sidebar()
+        self._setup_mainbox()
+        self._setup_sizegroups()
 
-        self.menu_btn = Gtk.MenuButton()
-        titlebar = self.titlebar()
 
-        self.main_leaflet.bind_property("visible-child-name", titlebar, "visible-child-name", GObject.BindingFlags.SYNC_CREATE)
 
-        start_pane_size_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
-        start_pane_size_group.add_widget(self.left_box)
-        start_pane_size_group.add_widget(self._left_header)
 
-        end_pane_size_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
-        end_pane_size_group.add_widget(self.right_box)
-        end_pane_size_group.add_widget(self._right_header)
 
-        self.load_css()
+
+        self._load_css()
         self._model = model
 
         self._setup_shortcut()
         self.searchbar.set_key_capture_widget(self)
 
 
-    def titlebar(self):
+    def _setup_header(self):
+        self.hsize_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
+        self.menu_btn = Gtk.MenuButton()
+
         header = self.header
         header.set_transition_type(Adw.LeafletTransitionType.SLIDE)
 
@@ -127,7 +127,8 @@ class Window(Adw.ApplicationWindow):
         self.back_button.props.visible = header.props.folded
         right_header.pack_start(self.back_button)
 
-        header.bind_property("folded", self.back_button, "visible")
+        header.bind_property("folded", self.back_button, "visible",
+                                        GObject.BindingFlags.SYNC_CREATE)
         header.bind_property("folded", right_header, "show-start-title-buttons")
         header.bind_property("folded", left_header, "show-end-title-buttons")
 
@@ -149,7 +150,15 @@ class Window(Adw.ApplicationWindow):
 
         return header
 
-    def sidebar(self):
+    def _setup_mainbox(self):
+        # self.main_box.set_size_request(540, -1)
+
+        # self.main_stack.add_css_class("background")
+        self.main_stack.set_transition_type(Gtk.StackTransitionType.CROSSFADE)
+
+        self.main_leaflet.bind_property("visible-child-name", self.header, "visible-child-name", GObject.BindingFlags.SYNC_CREATE)
+
+    def _setup_sidebar(self):
         self.entry.placeholder_text=_("Search Tweaks…")
         if Gtk.check_version(3, 22, 20) is None:
             self.entry.set_input_hints(Gtk.InputHints.NO_EMOJI)
@@ -160,6 +169,15 @@ class Window(Adw.ApplicationWindow):
         if not show_sound_tweaks:
             self.listbox.remove(self.list_box_row_sound)
 
+    def _setup_sizegroups(self):
+        start_pane_size_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
+        start_pane_size_group.add_widget(self.left_box)
+        start_pane_size_group.add_widget(self._left_header)
+
+        end_pane_size_group = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
+        end_pane_size_group.add_widget(self.right_box)
+        end_pane_size_group.add_widget(self._right_header)
+
     def _setup_shortcut(self):
         s_trigger = Gtk.ShortcutTrigger.parse_string(_("<primary>f"))
         s_action = Gtk.CallbackAction.new(lambda w, a, s: s.set_search_mode(True), self.searchbar)
@@ -168,16 +186,15 @@ class Window(Adw.ApplicationWindow):
             shortcut = Gtk.Shortcut(trigger=s_trigger, action=s_action)
             self.add_shortcut(shortcut)
 
-    def load_css(self):
-        window_context = self.get_style_context()
-        if gtweak.APP_ID.endswith("Devel"):
-            window_context.add_class("devel")
+    def _load_css(self):
+        if gtweak.APP_ID.endswith('Devel'):
+            self.add_css_class('devel')
         css_provider = Gtk.CssProvider()
         css_provider.load_from_path(
             os.path.join(gtweak.PKG_DATA_DIR, 'shell.css'))
         display = Gdk.Display.get_default()
         self.get_style_context().add_provider_for_display(display, css_provider,
-                                        Gtk.STYLE_PROVIDER_PRIORITY_USER)
+                                            Gtk.STYLE_PROVIDER_PRIORITY_USER)
 
     @staticmethod
     def _list_filter_func(row, user_data: List[str]):
@@ -210,19 +227,19 @@ class Window(Adw.ApplicationWindow):
             self.listbox.select_row(row)
             self.entry.grab_focus()
 
-    def _on_search(self, entry):
+    def _on_search(self, entry: Gtk.SearchEntry):
         txt = string_for_search(entry.get_text())
         group = self._model.search_matches(txt)
         self._on_list_changed(group)
 
-    def _on_select_row(self, listbox, row):
+    def _on_select_row(self, _, row: Gtk.ListBoxRow):
         if row:
             group = row.props.tweakname
 
             for tweak in tweaks:
               if tweak.name == group:
 
-                self.main_content_scroll.set_child(tweak)
+                self.main_stack.set_visible_child_name(tweak.name)
                 self.title.set_title(tweak.title)
                 self.main_leaflet.set_visible_child_name("content")
 
@@ -238,6 +255,8 @@ class Window(Adw.ApplicationWindow):
 
     def show_only_tweaks(self, tweaks):
         for t in self._model.tweaks:
+            if not isinstance(t, Gtk.Widget):
+                continue
             if t in tweaks:
                 t.show()
             else:
