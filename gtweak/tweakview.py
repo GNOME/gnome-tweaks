@@ -29,7 +29,7 @@ tweaks = [
 ]
 
 
-@Gtk.Template(filename=os.path.join(gtweak.PKG_DATA_DIR, "tweaks.ui"))
+@Gtk.Template(filename=os.path.join(gtweak.PKG_DATA_DIR, "tweaks3.ui"))
 class Window(Gtk.ApplicationWindow):
     __gtype_name__ = "GTweakWindow"
 
