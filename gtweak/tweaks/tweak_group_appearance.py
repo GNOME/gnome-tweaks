@@ -267,9 +267,15 @@ TWEAK_GROUP = TweakPreferencesPage("appearance", _("Appearance"),
    TweakPreferencesGroup(
    _("Background"), "title-backgrounds",
     GSettingsFileChooserButtonTweak(
-        _("Image"),
+        _("Default Image"),
         "org.gnome.desktop.background",
         "picture-uri",
+        mimetypes=["application/xml", "image/png", "image/jpeg"],
+    ),
+    GSettingsFileChooserButtonTweak(
+        _("Dark Style Image"),
+        "org.gnome.desktop.background",
+        "picture-uri-dark",
         mimetypes=["application/xml", "image/png", "image/jpeg"],
     ),
     GSettingsTweakComboRow(
