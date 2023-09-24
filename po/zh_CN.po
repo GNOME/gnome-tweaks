@@ -9,23 +9,23 @@
 # Mingcong Bai <jeffbai@aosc.xyz>, 2015, 2016, 2018.
 # Aron Xu <aronxu@gnome.org>, 2011, 2017.
 # Dingzhong Chen <wsxy162@gmail.com>, 2015-2019.
-# lumingzh <lumingzh@qq.com>, 2022.
 # Boyuan Yang <073plan@gmail.com>, 2023.
+# lumingzh <lumingzh@qq.com>, 2022-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-07-22 13:23+0000\n"
-"PO-Revision-Date: 2023-08-10 22:32-0400\n"
+"POT-Creation-Date: 2023-09-23 05:41+0000\n"
+"PO-Revision-Date: 2023-09-24 19:53+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.3\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"X-Generator: Gtranslator 45.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
@@ -46,13 +46,13 @@ msgstr "GNOME Tweaks 可以调整 GNOME 的高级选项。"
 
 #: data/org.gnome.tweaks.appdata.xml.in:15
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"可以安装和管理主题，更改电源选项，管理自启动程序，以及启用桌面图标和其它设"
-"置。"
+"它可以管理自定义键盘映射，添加开机启动应用程序，并在其它设置中设定自定义窗口"
+"控制。"
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:127
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
 msgid "Tweaks"
 msgstr "优化"
 
@@ -79,28 +79,24 @@ msgstr "字体"
 msgid "Appearance"
 msgstr "外观"
 
-#: data/tweaks.ui:132 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "声音"
 
-#: data/tweaks.ui:166
+#: data/tweaks.ui:165
 msgid "Mouse & Touchpad"
 msgstr "鼠标和触摸板"
 
-#: data/tweaks.ui:200 gtweak/tweaks/tweak_group_keyboard.py:377
+#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
 #: gtweak/tweaks/tweak_group_keyboard.py:378
 msgid "Keyboard"
 msgstr "键盘"
 
-#: data/tweaks.ui:234 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
 msgid "Windows"
 msgstr "窗口"
 
-#: data/tweaks.ui:268 gtweak/tweaks/tweak_group_datetime.py:8
-msgid "Date & Time"
-msgstr "日期和时间"
-
-#: data/tweaks.ui:304 gtweak/tweaks/tweak_group_startup.py:31
+#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
 #: gtweak/tweaks/tweak_group_startup.py:309
 msgid "Startup Applications"
 msgstr "开机启动程序"
@@ -247,30 +243,6 @@ msgstr "图像"
 #: gtweak/tweaks/tweak_group_appearance.py:272
 msgid "Adjustment"
 msgstr "调整"
-
-#: gtweak/tweaks/tweak_group_datetime.py:9
-msgid "Clock"
-msgstr "时钟"
-
-#: gtweak/tweaks/tweak_group_datetime.py:10
-msgid "Show Weekday"
-msgstr "显示工作日"
-
-#: gtweak/tweaks/tweak_group_datetime.py:11
-msgid "Show Date"
-msgstr "显示日期"
-
-#: gtweak/tweaks/tweak_group_datetime.py:12
-msgid "Show Seconds"
-msgstr "显示秒"
-
-#: gtweak/tweaks/tweak_group_datetime.py:13
-msgid "Calendar"
-msgstr "日历"
-
-#: gtweak/tweaks/tweak_group_datetime.py:14
-msgid "Show Week Numbers"
-msgstr "显示周序号"
 
 #: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
 msgid "Hinting"
@@ -612,7 +584,7 @@ msgstr "聚焦"
 msgid "Raise Windows When Focused"
 msgstr "窗口聚焦时置顶"
 
-#: gtweak/tweakview.py:159
+#: gtweak/tweakview.py:157
 msgid "Search Tweaks…"
 msgstr "搜索设置…"
 
@@ -633,6 +605,27 @@ msgstr "需要重启会话以使设置生效"
 #: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "重启会话"
+
+#~ msgid "Date & Time"
+#~ msgstr "日期和时间"
+
+#~ msgid "Clock"
+#~ msgstr "时钟"
+
+#~ msgid "Show Weekday"
+#~ msgstr "显示工作日"
+
+#~ msgid "Show Date"
+#~ msgstr "显示日期"
+
+#~ msgid "Show Seconds"
+#~ msgstr "显示秒"
+
+#~ msgid "Calendar"
+#~ msgstr "日历"
+
+#~ msgid "Show Week Numbers"
+#~ msgstr "显示周序号"
 
 #~ msgid "General"
 #~ msgstr "通用"
