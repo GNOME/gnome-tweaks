@@ -40,7 +40,6 @@ TWEAK_GROUP = TweakPreferencesPage("fonts", _("Fonts"),
     GSettingsTweakFontRow(_("Interface Text"),"org.gnome.desktop.interface", "font-name"),
     GSettingsTweakFontRow(_("Document Text"), "org.gnome.desktop.interface", "document-font-name"),
     GSettingsTweakFontRow(_("Monospace Text"), "org.gnome.desktop.interface", "monospace-font-name"),
-    GSettingsTweakFontRow(_("Legacy Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
                                 ),
                                  TweakPreferencesGroup(
                                      _("Rendering"), "font-rendering",
