@@ -39,7 +39,7 @@ class _XkbOption(Gtk.Expander, Tweak):
 
         model_values = []
         if not self._multiple_selection:
-            model_values.append((None, _("Disabled")))
+            model_values.append((None, _("Default")))
 
         for option_id in self._xkb_info.get_options_for_group(group_id):
             desc = self._xkb_info.description_for_option(group_id, option_id)
