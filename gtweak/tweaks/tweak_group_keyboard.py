@@ -4,10 +4,10 @@
 
 import gi
 gi.require_version("GnomeDesktop", "4.0")
-from gi.repository import Gio, GLib, Gtk, GnomeDesktop, Gtk
+from gi.repository import Gtk, GnomeDesktop, Gtk
 
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, Title, build_label_beside_widget, Tweak
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, ListBoxTweakSubgroup, build_label_beside_widget, Tweak
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError
 
@@ -254,129 +254,19 @@ class AdditionalLayoutButton(Gtk.Box, Tweak):
         dialog.set_child(scrolled_window)
         dialog.show()
 
-class ClickMethod(Gtk.ListBox, Tweak):
-
-    def __init__(self, **options):
-        Gtk.ListBox.__init__(self)
-        Tweak.__init__(self, _("Mouse Click Emulation"), _("Mouse Click Emulation"))
-
-        self.settings = Gio.Settings("org.gnome.desktop.peripherals.touchpad")
-        self.key_name = "click-method"
-
-        self.set_selection_mode(Gtk.SelectionMode.NONE)
-
-        # Needs other page elements to get margins too
-        # self.props.margin_left = 50
-        # self.props.margin_right = 50
-
-        row = Gtk.ListBoxRow()
-        hbox = Gtk.Box()
-        hbox.props.margin = 10
-        row.add(hbox)
-
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-
-        lbl = Gtk.Label(_("Fingers"), xalign=0)
-        lbl.props.xalign = 0.0
-        desc = _("Click the touchpad with two fingers for right-click and three fingers for middle-click.")
-        lbl_desc = Gtk.Label()
-        lbl_desc.set_wrap(True)
-        lbl_desc.add_css_class("dim-label")
-        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
-
-        self.check_fingers = Gtk.Image.new_from_icon_name("object-select-symbolic")
-        self.check_fingers.props.icon_size = Gtk.IconSize.NORMAL
-        self.check_fingers.set_no_show_all(True)
-        self.check_fingers.set_visible(self.settings[self.key_name] == "fingers")
-
-        vbox.pack_start(lbl, False, False, 0)
-        vbox.pack_start(lbl_desc, False, False, 0)
-        hbox.pack_start(vbox, False, False, 0)
-        hbox.pack_end(self.check_fingers, False, False, 0)
-
-        self.add(row)
-
-        row = Gtk.ListBoxRow()
-        hbox = Gtk.Box()
-        hbox.props.margin = 10
-        row.add(hbox)
-
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-
-        lbl = Gtk.Label(_("Area"), xalign=0)
-        lbl.props.xalign = 0.0
-        desc = _("Click the bottom right of the touchpad for right-click and the bottom middle for middle-click.")
-        lbl_desc = Gtk.Label()
-        lbl_desc.set_wrap(True)
-        lbl_desc.add_css_class("dim-label")
-        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
-
-        self.check_area = Gtk.Image.new_from_icon_name("object-select-symbolic")
-        self.check_fingers.props.icon_size = Gtk.IconSize.NORMAL
-        self.check_area.set_no_show_all(True)
-        self.check_area.set_visible(self.settings[self.key_name] == "areas")
-
-        vbox.pack_start(lbl, False, False, 0)
-        vbox.pack_start(lbl_desc, False, False, 0)
-        hbox.pack_start(vbox, False, False, 0)
-        hbox.pack_end(self.check_area, False, False, 0)
-
-        self.add(row)
-
-        row = Gtk.ListBoxRow()
-        hbox = Gtk.Box()
-        hbox.props.margin = 10
-        row.add(hbox)
-
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
-
-        lbl = Gtk.Label(_("Disabled"), xalign=0)
-        lbl.props.xalign = 0.0
-        desc = _("Don’t use mouse click emulation.")
-        lbl_desc = Gtk.Label()
-        lbl_desc.set_wrap(True)
-        lbl_desc.add_css_class("dim-label")
-        lbl_desc.set_markup("<span size='small'>"+GLib.markup_escape_text(desc)+"</span>")
-
-        self.check_disabled = Gtk.Image.new_from_icon_name("object-select-symbolic")
-        self.check_fingers.props.icon_size = Gtk.IconSize.NORMAL
-        self.check_disabled.set_no_show_all(True)
-        self.check_disabled.set_visible(self.settings[self.key_name] == "none")
-
-        vbox.pack_start(lbl, False, False, 0)
-        vbox.pack_start(lbl_desc, False, False, 0)
-        hbox.pack_start(vbox, False, False, 0)
-        hbox.pack_end(self.check_disabled, False, False, 0)
-
-        self.add(row)
-        self.connect('row-activated', self.on_row_clicked)
-
-    def on_row_clicked(self, box, row):
-        if row.get_index() == 0:
-            self.settings[self.key_name] = "fingers"
-            self.check_fingers.show()
-            self.check_area.hide()
-            self.check_disabled.hide()
-        elif row.get_index() == 1:
-            self.settings[self.key_name] = "areas"
-            self.check_fingers.hide()
-            self.check_area.show()
-            self.check_disabled.hide()
-        else:
-            self.settings[self.key_name] = "none"
-            self.check_fingers.hide()
-            self.check_area.hide()
-            self.check_disabled.show()
-
 
 TWEAK_GROUP = ListBoxTweakGroup("keyboard", _("Keyboard"),
-    Title(_("Keyboard"), "", top=True),
-    GSettingsSwitchTweak(_("Show Extended Input Sources"),
+                                      GSettingsSwitchTweak(_("Show Extended Input Sources"),
                           "org.gnome.desktop.input-sources",
                           "show-all-sources",
                           desc=_("Increases the choice of input sources in the Settings application."),
-                          logout_required=True,),
+                          logout_required=True,),        
+                                ListBoxTweakSubgroup(
+                                _("Layout"),    "keyboard-layout", 
+                            
     KeyThemeSwitcher(),
     OverviewShortcutTweak(),
     AdditionalLayoutButton(),
+                                )
+  
 )

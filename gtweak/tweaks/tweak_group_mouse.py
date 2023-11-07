@@ -5,12 +5,8 @@
 
 from gi.repository import Adw, Gio
 
-from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.widgets import (ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue,
-                            Title, Tweak, TickActionRow)
-
-_shell = GnomeShellFactory().get_shell()
-_shell_loaded = _shell is not None
+from gtweak.widgets import (ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, ListBoxTweakSubgroup,
+                           Tweak, TickActionRow)
 
 
 class KeyThemeSwitcher(GSettingsSwitchTweakValue):
@@ -34,11 +30,9 @@ class KeyThemeSwitcher(GSettingsSwitchTweakValue):
 class ClickMethod(Adw.PreferencesGroup, Tweak):
 
     def __init__(self, **options):
-        name: str = _("Mouse Click Emulation")
-        desc: str = _("Mouse Click Emulation")
         Adw.PreferencesGroup.__init__(self)
-        Tweak.__init__(self, name, desc, **options)
-        self.set_title(name)
+        Tweak.__init__(self, _("Mouse Click Emulation"), "", **options)
+        self.set_title(_("Mouse Click Emulation"))
         self.add_css_class("boxed-list")
 
         self.settings = Gio.Settings("org.gnome.desktop.peripherals.touchpad")
@@ -88,16 +82,19 @@ class ClickMethod(Adw.PreferencesGroup, Tweak):
     def _on_row_clicked(self, row: TickActionRow):
         self.settings[self.key_name] = row.keyvalue
 
-TWEAK_GROUP = ListBoxTweakGroup("mouse", _("Mouse"),
-    Title(_("Mouse"), ""),
+TWEAK_GROUP = ListBoxTweakGroup("mouse", _("Mouse & Touchpad"),
+                                ListBoxTweakSubgroup(
+  _("Mouse"), "mouse",
     GSettingsSwitchTweak(_("Middle Click Paste"),
                          "org.gnome.desktop.interface",
                          "gtk-enable-primary-paste"),
-    Title(_("Touchpad"), ""),
+),
+ListBoxTweakSubgroup(
+  _("Touchpad"), "touchpad",
     GSettingsSwitchTweak(_("Disable While Typing"),
                          "org.gnome.desktop.peripherals.touchpad",
                          "disable-while-typing",
                          schema_filename="org.gnome.desktop.peripherals.gschema.xml"),
-    Title(_("Mouse Click Emulation"), _("Mouse Click Emulation"), top=True),
+),
     ClickMethod(),
 )

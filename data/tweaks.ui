@@ -104,7 +104,7 @@
                                     <property name="margin-end">12</property>
                                     <property name="margin-top">12</property>
                                     <property name="margin-bottom">12</property>
-                                    <property name="spacing">12</property>     
+                                    <property name="spacing">12</property>
                                     <child>
                                       <object class="GtkImage">
                                         <property name="icon-name">multimedia-volume-control-symbolic</property>
@@ -270,10 +270,13 @@
                       <object class="GtkScrolledWindow" id="main_content_scroll">
                         <property name="hexpand">1</property>
                         <property name="vexpand">1</property>
-                        <property name="child">    <object class="GtkStack" id="main_stack">
-                          <property name="css-classes">['background']</property>
-                        </object></property>
-                       
+                        <property name="child">
+                          <object class="GtkStack" id="main_stack">
+                            <style>
+                              <class name="background"></class>
+                            </style>
+                          </object>
+                        </property>
                       </object>
                     </child>
                   </object>

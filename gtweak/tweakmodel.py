@@ -54,17 +54,18 @@ class TweakGroup(object):
 
     main_window = None
 
-    def __init__(self, name, title, *tweaks, **options):
+    def __init__(self, name, title, *tweaks: Tweak, **options):
         self.name = name
         self.title = title
         self.titlebar_widget = None
         self.tweaks = [t for t in tweaks if t.loaded]
         self.uid = options.get('uid', self.__class__.__name__)
 
-    def add_tweak(self, tweak):
+    def add_tweak(self, tweak: Tweak):
         if tweak.loaded:
             self.tweaks.append(tweak)
             return True
+        return False
 
 
 class TweakModel(Gtk.ListStore):

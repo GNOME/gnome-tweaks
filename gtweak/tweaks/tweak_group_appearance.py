@@ -20,7 +20,7 @@ from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gtksettings import GtkSettingsManager
 from gtweak.widgets import (ListBoxTweakGroup, GSettingsComboTweak,
-                            GSettingsComboEnumTweak, Title, build_combo_box_text,
+                            GSettingsComboEnumTweak, ListBoxTweakSubgroup, build_combo_box_text,
                             build_label_beside_widget,
                             GSettingsFileChooserButtonTweak, FileChooserButton)
 
@@ -30,6 +30,9 @@ _shell_loaded = _shell is not None
 
 class GtkThemeSwitcher(GSettingsComboTweak):
     def __init__(self, **options):
+        self._gtksettings3 = GtkSettingsManager('3.0')
+        self._gtksettings4 = GtkSettingsManager('4.0')
+
         GSettingsComboTweak.__init__(self,
 			_("Legacy Applications"),
             "org.gnome.desktop.interface",
@@ -37,8 +40,6 @@ class GtkThemeSwitcher(GSettingsComboTweak):
             make_combo_list_with_default(self._get_valid_themes(), "Adwaita"),
             **options)
 
-        self._gtksettings3 = GtkSettingsManager('3.0')
-        self._gtksettings4 = GtkSettingsManager('4.0')
 
     def _get_valid_themes(self):
         """ Only shows themes that have variations for gtk3"""
@@ -52,10 +53,10 @@ class GtkThemeSwitcher(GSettingsComboTweak):
                          os.path.exists(os.path.join(d, "gtk-3.{}".format(gtk_ver))))
         return set(valid)
 
-    def _on_combo_changed(self, combo):
-        _iter = combo.get_active_iter()
-        if _iter:
-            value = combo.get_model().get_value(_iter, 0)
+    def _on_combo_changed(self, combo, _):
+        item = combo.get_selected_item()
+        if item:
+            value = item.value
             self.settings.set_string(self.key_name, value)
         # Turn off Global Dark Theme when theme is changed.
         # https://bugzilla.gnome.org/783666
@@ -250,18 +251,23 @@ class ShellThemeTweak(Gtk.Box, Tweak):
         #set button back to default state
         chooser.unselect_all()
 
-    def _on_combo_changed(self, combo):
-        val = combo.get_model().get_value(combo.get_active_iter(), 0)
-        self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, val)
+    def _on_combo_changed(self, combo, _):
+        item = combo.get_selected_item()
+        if item:
+            value = item.value
+
+            self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, value)
 
 
 TWEAK_GROUP = ListBoxTweakGroup("appearance", _("Appearance"),
-    Title(_("Styles"), "", uid="title-styles"),
+   ListBoxTweakSubgroup( _("Styles"), "title-styles",
     CursorThemeSwitcher(),
     IconThemeSwitcher(),
     ShellThemeTweak(loaded=_shell_loaded),
     GtkThemeSwitcher(),
-    Title(_("Background"), "", uid="title-backgrounds"),
+   ),
+   ListBoxTweakSubgroup(
+   _("Background"), "title-backgrounds",
     GSettingsFileChooserButtonTweak(
         _("Image"),
         "org.gnome.desktop.background",
@@ -271,4 +277,5 @@ TWEAK_GROUP = ListBoxTweakGroup("appearance", _("Appearance"),
     GSettingsComboEnumTweak(
         _("Adjustment"), "org.gnome.desktop.background", "picture-options"
     ),
+   ),
 )

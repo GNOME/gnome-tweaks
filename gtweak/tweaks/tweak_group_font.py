@@ -8,7 +8,7 @@ from typing import Callable, Optional
 from gi.repository import Gtk
 
 from gtweak.tweakmodel import Tweak
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSpinButtonTweak, GSettingsFontButtonTweak
+from gtweak.widgets import ListBoxTweakGroup, GSettingsSpinButtonTweak, GSettingsFontButtonTweak, ListBoxTweakSubgroup
 from gtweak.gsettings import GSettingsSetting
 
 class FontXSettingsTweak(Gtk.FlowBox, Tweak):
@@ -136,13 +136,21 @@ class FontXSettingsTweak(Gtk.FlowBox, Tweak):
             self.settings["font-antialiasing"] = "none"
 
 TWEAK_GROUP = ListBoxTweakGroup("fonts", _("Fonts"),
+                                ListBoxTweakSubgroup(
+                                    _("Preferred Fonts"), "preferred-fonts",
     GSettingsFontButtonTweak(_("Interface Text"),"org.gnome.desktop.interface", "font-name"),
     GSettingsFontButtonTweak(_("Document Text"), "org.gnome.desktop.interface", "document-font-name"),
     GSettingsFontButtonTweak(_("Monospace Text"), "org.gnome.desktop.interface", "monospace-font-name"),
     GSettingsFontButtonTweak(_("Legacy Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
+                                ),
+                                 ListBoxTweakSubgroup(
+                                     _("Rendering"), "font-rendering",
     FontXSettingsTweak(),
+                                 ),
+                                  ListBoxTweakSubgroup( _("Size"), "font-size",
     GSettingsSpinButtonTweak(_("Scaling Factor"),
       "org.gnome.desktop.interface", "text-scaling-factor",
       adjustment_step=0.01, digits=2),
+                                  ),
 )
 
