@@ -125,7 +125,6 @@ class FontXSettingsTweak(Gtk.FlowBox, Tweak):
         elif button is self.btn_slight:
             self.settings["font-hinting"] = "slight"
         else:
-            print("none")
             self.settings["font-hinting"] = "none"
 
     def on_aa_button_toggled(self, button: Gtk.CheckButton):
