@@ -19,10 +19,6 @@ def _image_from_gicon(gicon):
     image.set_icon_size(Gtk.IconSize.LARGE)
     return image
 
-def _list_header_func(row, before, user_data):
-    if before and not row.get_header():
-        row.set_header (Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
-
 
 class AutostartTitle(Gtk.Box, Tweak):
 
@@ -101,7 +97,6 @@ class _AppChooser(Gtk.Dialog):
         lb = Gtk.ListBox()
         lb.set_activate_on_single_click(False)
         lb.set_sort_func(self._list_sort_func, None)
-        lb.set_header_func(_list_header_func, None)
         lb.set_filter_func(self._list_filter_func, self.entry)
         lb.connect("row-activated", lambda b, r: self.response(Gtk.ResponseType.OK) if r.get_mapped() else None)
         lb.connect("row-selected", self._on_row_selected)
