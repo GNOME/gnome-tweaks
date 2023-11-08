@@ -156,7 +156,6 @@ class Window(Adw.ApplicationWindow):
         self.entry.connect("search-changed", self._on_search)
 
         self.listbox.connect("row-selected", self._on_select_row)
-        self.listbox.set_header_func(self._list_header_func, None)
 
         if not show_sound_tweaks:
             self.listbox.remove(self.list_box_row_sound)
@@ -185,10 +184,6 @@ class Window(Adw.ApplicationWindow):
         name = row.props.tweakname
         if name in user_data:
             return row
-
-    def _list_header_func(self, row, before, user_data):
-        if before and not row.get_header():
-            row.set_header(Gtk.Separator(orientation=Gtk.Orientation.HORIZONTAL))
 
     def _after_key_press(self, widget, event):
         if not self.search_btn.get_active() or not self.entry.is_focus():
