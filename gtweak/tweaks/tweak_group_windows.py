@@ -3,84 +3,35 @@
 # License-Filename: LICENSES/GPL-3.0
 
 from gtweak.tweakmodel import Tweak
-from gtweak.widgets import UI_BOX_HORIZONTAL_SPACING, UI_BOX_SPACING, _GSettingsTweak, GSettingsComboEnumTweak, GSettingsSwitchTweakValue, ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, ListBoxTweakSubgroup, build_label_beside_widget, TickActionRow
+from gtweak.widgets import UI_BOX_HORIZONTAL_SPACING, UI_BOX_SPACING, _GSettingsTweak, GSettingsComboEnumTweak, GSettingsSwitchTweakValue, ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, ListBoxTweakSubgroup, TweaksCheckGroupActionRow, build_label_beside_widget, TickActionRow
 from gtweak.utils import XSettingsOverrides
 import gettext
 
 from gi.repository import Gio, Gtk, GLib
 
 
-# TODO: Unify code for "check" group row
-class Focus(ListBoxTweakSubgroup, Tweak):
+class Focus(TweaksCheckGroupActionRow):
 
     def __init__(self, *tweaks, **options):
         name: str = _("Window Focus")
         desc: str = _("Click to Focus")
-        ListBoxTweakSubgroup.__init__(self, title=name, name="focus")
-        Tweak.__init__(self, name, desc, **options)
+        TweaksCheckGroupActionRow.__init__(self, title=name, subtitle=desc, setting="org.gnome.desktop.wm.preferences", key_name="focus-mode", name="focus")
 
-
-        self.settings = Gio.Settings("org.gnome.desktop.wm.preferences")
-        self.key_name = "focus-mode"
-
-        self.row_click = self._setup_action_row(
+        self.add_row(
             key_name="click", title=_("Click to Focus"),
             subtitle=_(
                 "Windows are focused when they are clicked."))
 
-        self.row_sloppy = self._setup_action_row(
+        self.add_row(
             key_name="sloppy", title=_("Focus on Hover"),
             subtitle=_(
                 "Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered."))
 
-        self.row_mouse = self._setup_action_row(
+        self.add_row(
             key_name="mouse", title=_("Secondary-Click"),
             subtitle=_(
                 "Window is focused when hovered with the pointer. Hovering the desktop removes focus "
                 "from the previous window."))
-            
-        self.settings.connect("changed", self._settings_changed)
-
-        for t in tweaks:
-            self.add_tweak_row(t)
-
-        
-
-    def _setup_action_row(self, key_name: str, title: str, subtitle: str):
-        action_row = TickActionRow(title, subtitle, key_name)
-        action_row.img.set_visible(self.settings[self.key_name] == key_name)
-        action_row.connect("activated", self._on_row_clicked)
-
-        self.add(action_row)
-        return action_row
-
-    def _settings_changed(self, settings, key: str):
-        keyvalue = settings[key]
-        if keyvalue == "click":
-            self.row_click.img.show()
-            self.row_sloppy.img.hide()
-            self.row_mouse.img.hide()
-        elif keyvalue == "sloppy":
-            self.row_click.img.hide()
-            self.row_sloppy.img.show()
-            self.row_mouse.img.hide()
-        else:  # mouse
-            self.row_click.img.hide()
-            self.row_sloppy.img.hide()
-            self.row_mouse.img.show()
-
-    def _on_row_clicked(self, row: TickActionRow):
-        self.settings[self.key_name] = row.keyvalue
-
-    def _create_check_mark(self, key_name: str) -> Gtk.Image:
-        """ Creates an Image check mark with the associated setting
-
-        :param key_name: The setting option to trigger when visible
-        :return: Gtk.Image
-        """
-        check_mark = Gtk.Image.new_from_icon_name("object-select-symbolic")
-        check_mark.set_visible(self.settings[self.key_name] == key_name)
-        return check_mark
 
 
 class WindowScalingFactorTweak(Gtk.Box, Tweak):
@@ -280,7 +231,10 @@ TWEAK_GROUP = ListBoxTweakGroup(
         GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
      ),
  
-    Focus(GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how)),
+ ListBoxTweakSubgroup(_("Window Focus"), "window-focus", 
+                       Focus(),
+                      GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how))
+   
       
 )    
 

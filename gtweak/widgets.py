@@ -151,9 +151,9 @@ class TickActionRow(Adw.ActionRow):
         self.add_suffix(self.img)
         self.set_activatable_widget(self.img)
 
-class CheckPreferencesRow(Adw.Bin):
+class CheckPreference(Adw.Bin):
 
-    def __init__(self, title: str, subtitle: str, keyvalue: str):
+    def __init__(self, title: str, keyvalue: str, subtitle: str | None = None):
         super().__init__()
 
         self.keyvalue = keyvalue
@@ -166,19 +166,32 @@ class CheckPreferencesRow(Adw.Bin):
         label = Gtk.Label(label=title, halign=Gtk.Align.START)
         label.add_css_class("title")
         self.title_box.append(label)
-
-        label = Gtk.Label(label=subtitle, halign=Gtk.Align.START)
-        label.add_css_class("subtitle")
-        self.title_box.append(label)
+        
+        if subtitle is not None:
+            label = Gtk.Label(label=subtitle, halign=Gtk.Align.START, wrap=True)
+            label.add_css_class("subtitle")
+            self.title_box.append(label)
 
         self.btn.set_child(self.title_box)
 
+        self.btn.connect("toggled", self._notify_toggled)
 
-    def set_group(self, group: "CheckPreferencesRow"):
+
+    def set_group(self, group: "CheckPreference"):
         self.btn.set_group(group.btn)
 
     def set_active(self, active: bool):
         self.btn.set_active(active)
+
+    def get_active(self):
+        return self.btn.get_active()
+
+    def _notify_toggled(self, _btn):
+        self.emit("toggled")
+
+    @GObject.Signal()
+    def toggled(self, *args):
+        pass
 
 
 class _GSettingsTweak(Tweak):
@@ -246,14 +259,20 @@ class TweakListBoxRow(Gtk.ListBoxRow):
 
 from typing import Union
 
-class ListBoxTweakGroup(Gtk.Box, TweakGroup):
+class ListBoxTweakGroup(Adw.Bin, TweakGroup):
     def __init__(self, name, title, *tweaks: Union[Tweak, "ListBoxTweakSubgroup"], **options):
         if 'uid' not in options:
             options['uid'] = self.__class__.__name__
-        Gtk.Box.__init__(self,
-                        name=options['uid'],
+        Adw.Bin.__init__(self,
+                        name=options['uid'],)
+        self.clamp = Adw.Clamp(maximum_size=800)
+        self.box = Gtk.Box(
                         spacing=10,
                         orientation=Gtk.Orientation.VERTICAL)
+
+        self.set_child(self.clamp)
+        self.clamp.set_child(self.box)
+
         self.add_css_class(options.get('css_class', 'tweak-group'))
         self.set_margin_top(20)
         self.set_margin_bottom(20)
@@ -272,7 +291,7 @@ class ListBoxTweakGroup(Gtk.Box, TweakGroup):
             if isinstance(t, ListBoxTweakSubgroup):
                 for st in t.tweaks:
                     self.add_tweak(st)
-                self.append(t)
+                self.box.append(t)
             else:
                 self.add_tweak_row(t)
 
@@ -284,11 +303,11 @@ class ListBoxTweakGroup(Gtk.Box, TweakGroup):
             row = t
 
             if isinstance(row, Adw.PreferencesGroup):
-              self.append(row)
+              self.box.append(row)
             else:
               group = Adw.PreferencesGroup()
               group.add(row)
-              self.append(group)
+              self.box.append(group)
 
             if t.widget_for_size_group:
                 self._sg.add_widget(t.widget_for_size_group)
@@ -370,7 +389,7 @@ class GSettingsFontButtonTweak(Adw.ActionRow, _GSettingsTweak, _DependableMixin)
         self.widget_for_size_group = self
 
         self.font_dialog = Gtk.FontDialog()
-        self.font_label = Gtk.Label()
+        self.font_label = Gtk.Label(margin_start=20, ellipsize=Pango.EllipsizeMode.END, hexpand=True, hexpand_set=False, halign=Gtk.Align.END)
 
         self._load_font_desc(self.settings)
         self._update_label()
@@ -737,3 +756,66 @@ class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
 
     def get_active(self):
         raise NotImplementedError()
+
+
+class TweaksCheckGroupActionRow(Adw.PreferencesRow, Tweak):
+
+    def __init__(self, title, setting, key_name, subtitle = None, **options):
+        Adw.PreferencesRow.__init__(self, title=title, activatable=False)
+        Tweak.__init__(self, title, "", **options)
+
+        self.settings = Gio.Settings(setting)
+        self.key_name = key_name
+
+        box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
+        box.add_css_class("split-row")
+
+        self.content_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
+        self.content_box.add_css_class("content")
+
+        label = Gtk.Label(halign=Gtk.Align.START, label=title)
+        label.add_css_class("title")
+
+        box.append(label)
+        
+        if subtitle is not None:
+          label = Gtk.Label(halign=Gtk.Align.START, label=subtitle, wrap=True)
+          label.add_css_class("subtitle")
+        
+          box.append(label)
+
+        box.append(self.content_box)
+
+        self.set_child(box)
+
+        self.group = None
+
+        self.settings.connect(f"changed::{self.key_name}", self._on_settings_changed)
+
+    def add_row(self, title: str, key_name: str, subtitle: str | None = None) -> CheckPreference:
+        row = CheckPreference(title=title, subtitle=subtitle, keyvalue=key_name)
+
+        if self.group is None:
+            self.group = row
+        else:
+            row.set_group(self.group)
+
+        row.set_active(self.settings[self.key_name] == key_name)
+        row.connect("toggled", self._on_row_clicked)
+
+        self.content_box.append(row)
+        return row
+
+    def _on_settings_changed(self, settings, key: str):
+        for row in self.content_box:
+            if isinstance(row, CheckPreference) and row.keyvalue == settings[key]:
+                row.set_active(True)
+
+    def _on_row_clicked(self, row: CheckPreference):
+        if not row.get_active():
+            return
+
+        if self.settings[self.key_name] == row.keyvalue:
+            return
+        
+        self.settings[self.key_name] = row.keyvalue
