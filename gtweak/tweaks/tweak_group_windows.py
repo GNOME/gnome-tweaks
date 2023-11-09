@@ -10,6 +10,7 @@ import gettext
 from gi.repository import Gio, Gtk, GLib
 
 
+# TODO: Unify code for "check" group row
 class Focus(ListBoxTweakSubgroup, Tweak):
 
     def __init__(self, *tweaks, **options):

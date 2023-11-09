@@ -57,7 +57,6 @@ class Window(Adw.ApplicationWindow):
             if tweak.name:
               self.main_stack.add_named(tweak, tweak.name)
 
-
         self._setup_header()
         self._setup_sidebar()
         self._setup_mainbox()

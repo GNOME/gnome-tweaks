@@ -34,10 +34,21 @@ class ExtensionNotice(Gtk.MessageDialog):
             )
         )
 
+_application = None
+
+def get_application():
+    return _application
+
+def get_window():
+    return _application.win
 
 class GnomeTweaks(Adw.Application):
 
     def __init__(self):
+        global _application
+
+        _application = self
+
         GLib.set_application_name(_("GNOME Tweaks"))
         super().__init__(application_id=gtweak.APP_ID)
         self.win = None

@@ -151,6 +151,35 @@ class TickActionRow(Adw.ActionRow):
         self.add_suffix(self.img)
         self.set_activatable_widget(self.img)
 
+class CheckPreferencesRow(Adw.Bin):
+
+    def __init__(self, title: str, subtitle: str, keyvalue: str):
+        super().__init__()
+
+        self.keyvalue = keyvalue
+
+        self.btn = Gtk.CheckButton()
+
+        self.set_child(self.btn)
+
+        self.title_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, margin_start=10)
+        label = Gtk.Label(label=title, halign=Gtk.Align.START)
+        label.add_css_class("title")
+        self.title_box.append(label)
+
+        label = Gtk.Label(label=subtitle, halign=Gtk.Align.START)
+        label.add_css_class("subtitle")
+        self.title_box.append(label)
+
+        self.btn.set_child(self.title_box)
+
+
+    def set_group(self, group: "CheckPreferencesRow"):
+        self.btn.set_group(group.btn)
+
+    def set_active(self, active: bool):
+        self.btn.set_active(active)
+
 
 class _GSettingsTweak(Tweak):
     def __init__(self, title, schema_name, key_name, **options):
@@ -254,13 +283,16 @@ class ListBoxTweakGroup(Gtk.Box, TweakGroup):
         if self.add_tweak(t):
             row = t
 
-            self.append(row)
+            if isinstance(row, Adw.PreferencesGroup):
+              self.append(row)
+            else:
+              group = Adw.PreferencesGroup()
+              group.add(row)
+              self.append(group)
 
             if t.widget_for_size_group:
                 self._sg.add_widget(t.widget_for_size_group)
             return row
-
-from typing import Tuple
 
 class ListBoxTweakSubgroup(Adw.PreferencesGroup, TweakGroup):
     def __init__(self, title, name, *tweaks: Tweak):
@@ -331,17 +363,69 @@ class GSettingsSwitchTweak(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
         self.set_activatable_widget(switch)
         self.widget_for_size_group = None
 
-
-class GSettingsFontButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
+class GSettingsFontButtonTweak(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
     def __init__(self, title, schema_name, key_name, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        Adw.ActionRow.__init__(self, title=title)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
+        self.widget_for_size_group = self
 
-        w = Gtk.FontButton()
-        w.set_use_font(True)
-        self.settings.bind(key_name, w, "font", Gio.SettingsBindFlags.DEFAULT)
-        build_label_beside_widget(title, w, hbox=self)
-        self.widget_for_size_group = w
+        self.font_dialog = Gtk.FontDialog()
+        self.font_label = Gtk.Label()
+
+        self._load_font_desc(self.settings)
+        self._update_label()
+
+        # Load the current font
+        self._font_changed(self.settings, {})
+
+        self.add_suffix(self.font_label)
+        self.set_activatable(True)
+        self.connect("activated", self._on_activate)
+
+    def _load_font_desc(self, settings):
+        self.font_desc = Pango.FontDescription.from_string(settings.get_string(self.key_name))
+
+    def _on_activate(self, row: "GSettingsFontButtonTweak"):
+        from gtweak.app import get_window
+
+        row.font_dialog.choose_font(get_window(), row.font_desc, None, row._on_choose_font)
+    
+    def _on_choose_font(self, font_dialog, result):
+        font_desc = font_dialog.choose_font_finish(result)
+
+        self.font_desc = font_desc.copy()
+        self._update_label()
+
+    def _font_changed(self, settings, _):
+        self._load_font_desc(settings)
+        self._update_label()
+
+    def _update_label(self):
+      desc: Pango.FontDescription
+      attrs: Pango.AttrList
+      language: Pango.Language
+
+      if not self.font_desc:
+          self.font_label.props.label = _("None")
+
+      desc = self.font_desc.copy()
+      desc.unset_fields (Pango.FontMask.SIZE)
+
+      attrs = Pango.AttrList()
+      attrs.insert(Pango.attr_fallback_new(False))
+      attrs.insert(Pango.attr_font_desc_new(desc))
+
+      if self.font_dialog:
+        language = self.font_dialog.get_language()
+      else:
+        language = None
+
+      if language:
+        attrs.insert (Pango.attr_language_new(language))
+
+      self.font_label.set_attributes (attrs)
+      self.font_label.props.label = f"{desc.to_string()}"
+
 
 
 class GSettingsRangeTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
