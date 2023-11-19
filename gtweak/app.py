@@ -113,6 +113,9 @@ class GnomeTweaks(Adw.Application):
             comments=about_comment,
             copyright="Copyright © 2011 - 2013 John Stowers.",
             developer_name="John Stowers",
+            # TRANSLATORS: Add your name/nickname here (one name per line),
+            # they will be displayed in the "about" dialog
+            translator_credits=_("translator-credits"),
             developers=AUTHORS,
             transient_for=self.win,
             version=VERSION,
