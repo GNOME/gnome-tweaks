@@ -3,15 +3,15 @@
 # Copyright (C) 2011 gnome-tweak-tool's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Arash Mousavi <mousavi.arash@gmail.com>, 2011-2017.
-# Danial Behzadi <dani.behzi@ubuntu.com>, 2018-2022.
+# Danial Behzadi <dani.behzi@ubuntu.com>, 2018-2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-03-03 11:48+0000\n"
-"PO-Revision-Date: 2023-03-06 15:18+0330\n"
-"Last-Translator: MohammadSaleh Kamyab <mskf1383@envs.net>\n"
+"POT-Creation-Date: 2023-09-23 05:14+0000\n"
+"PO-Revision-Date: 2023-11-25 15:09+0330\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian <translate@ifsug.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: data/org.gnome.tweaks.appdata.xml.in:7
 msgid "The GNOME Project"
 msgstr "پروژهٔ گنوم"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
 #: gtweak/utils.py:343
 msgid "GNOME Tweaks"
 msgstr "سیخونک‌های گنوم"
@@ -40,14 +40,14 @@ msgstr "سیخونک‌های گنوم اجازهٔ تنظیم گزینه‌ها
 
 #: data/org.gnome.tweaks.appdata.xml.in:15
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"این ابزار می‌تواند زمینه‌ها و افزونه‌ها را نصب و مدیریت کرده، تنظیمات انرژی را "
-"تغییر داده، برنامه‌های راه‌انداز را مدیریت و نقشک‌های میزکار را در کنار دیگر "
-"تنظیمات فعّال کند."
+"این ابزار می‌تواند در کنار دیگر تنظیمات، سفارشی‌سازی‌های نگاشت صفحه‌کلید را مدیریت "
+"کرده، برنامه‌ها را به راه‌اندازی افزوده و واپایش‌های پنجرهٔ سفارشی تنظیم کند. کنار "
+"دیگر تنظیمات فعّال کند."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
 msgid "Tweaks"
 msgstr "سیخونک‌ها"
 
@@ -66,509 +66,379 @@ msgstr "_بازنشانی به پیش‌گزیده‌ها"
 msgid "_About Tweaks"
 msgstr "دربارهٔ سیخونک‌ها"
 
-#: gtweak/app.py:23
+#: data/tweaks.ui:63 gtweak/tweaks/tweak_group_font.py:124
+msgid "Fonts"
+msgstr "قلم‌ها"
+
+#: data/tweaks.ui:97 gtweak/tweaks/tweak_group_appearance.py:257
+msgid "Appearance"
+msgstr "ظاهر"
+
+#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
+msgid "Sound"
+msgstr "صدا"
+
+#: data/tweaks.ui:165
+msgid "Mouse & Touchpad"
+msgstr "موشی و صفحه‌لمسی"
+
+#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
+#: gtweak/tweaks/tweak_group_keyboard.py:378
+msgid "Keyboard"
+msgstr "صفحه‌کلید"
+
+#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
+msgid "Windows"
+msgstr "پنجره‌ها"
+
+#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
+#: gtweak/tweaks/tweak_group_startup.py:309
+msgid "Startup Applications"
+msgstr "برنامه‌های راه‌انداز"
+
+#: gtweak/app.py:21
 msgid "_Continue"
 msgstr "_ادامه"
 
-#: gtweak/app.py:25
+#: gtweak/app.py:23
 msgid "Extensions Has Moved"
 msgstr "افزونه‌ها منتقل شده"
 
 #. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
-#: gtweak/app.py:30
+#: gtweak/app.py:28
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "مدیریت افزونه‌ها به {0} منتقل شد."
 
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
-#: gtweak/app.py:34
+#: gtweak/app.py:32
 #, python-brace-format
 msgid ""
-"We recommend downloading GNOME Extensions from {0} if your distribution does not "
-"include it."
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
 msgstr "پیشنهاد می‌کنیم اگر توزیعتان افزونهٔ گنومی را ندارد، از {0} بارگیریش کنید."
 
-#: gtweak/app.py:83
+#: gtweak/app.py:81
 msgid "Reset to Defaults"
 msgstr "بازنشانی به پیش‌گزیده‌ها"
 
-#: gtweak/app.py:84
+#: gtweak/app.py:82
 msgid "Reset all tweak settings to the original default state?"
 msgstr "بازنشاندن تمام تغییرات به وضعیت اولیه؟"
 
-#: gtweak/app.py:101 gtweak/app.py:103
+#: gtweak/app.py:99 gtweak/app.py:101
 msgid "GNOME Shell"
 msgstr "پوستهٔ گنوم"
 
-#: gtweak/app.py:103
+#: gtweak/app.py:101
 #, python-format
 msgid "(%s mode)"
 msgstr "(حالت %s)"
 
-#: gtweak/app.py:106
+#: gtweak/app.py:104
 msgid "GNOME Shell is not running"
 msgstr "پوسته گنوم درحال اجرا نیست"
 
-#: gtweak/app.py:108
+#: gtweak/app.py:106
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:115
+#: gtweak/app.py:113
 msgid "Homepage"
 msgstr "صفحهٔ خانگی"
 
-#: gtweak/tweakmodel.py:31
+#: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
 msgstr "متفرقه"
 
-#: gtweak/tweakview.py:143
-msgid "Search Tweaks…"
-msgstr "جست‌وجوی سیخونک‌ها…"
-
-#. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
-msgid "General"
-msgstr "عمومی"
-
-#: gtweak/tweaks/tweak_group_appearance.py:54
+#: gtweak/tweaks/tweak_group_appearance.py:31
 msgid "Legacy Applications"
 msgstr "برنامه‌های موروثی"
 
-#: gtweak/tweaks/tweak_group_appearance.py:88
+#: gtweak/tweaks/tweak_group_appearance.py:65
 msgid "Error writing setting"
 msgstr "خطا در نوشتن تنظیمات"
 
-#: gtweak/tweaks/tweak_group_appearance.py:94
+#: gtweak/tweaks/tweak_group_appearance.py:71
 msgid "Icons"
 msgstr "نقشک‌ها"
 
-#: gtweak/tweaks/tweak_group_appearance.py:109
+#: gtweak/tweaks/tweak_group_appearance.py:86
 msgid "Cursor"
 msgstr "مکان‌نما"
 
-#: gtweak/tweaks/tweak_group_appearance.py:133
+#: gtweak/tweaks/tweak_group_appearance.py:110
 msgid "Shell"
 msgstr "پوسته"
 
-#: gtweak/tweaks/tweak_group_appearance.py:133
+#: gtweak/tweaks/tweak_group_appearance.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "نصب زمینه‌های کاربری یا سفارشی برای پوستهٔ گنوم"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:136
+#: gtweak/tweaks/tweak_group_appearance.py:113
 msgid "Unknown error"
 msgstr "خطای ناشناخته"
 
-#: gtweak/tweaks/tweak_group_appearance.py:141
+#: gtweak/tweaks/tweak_group_appearance.py:118
 msgid "Shell not running"
 msgstr "پوسته درحال اجرا نیست"
 
-#: gtweak/tweaks/tweak_group_appearance.py:163
+#: gtweak/tweaks/tweak_group_appearance.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "افزونهٔ user-theme به درستی نصب نشده است"
 
-#: gtweak/tweaks/tweak_group_appearance.py:166
+#: gtweak/tweaks/tweak_group_appearance.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "افزونهٔ user-theme فعّال نشده است"
 
-#: gtweak/tweaks/tweak_group_appearance.py:169
+#: gtweak/tweaks/tweak_group_appearance.py:146
 msgid "Could not list shell extensions"
 msgstr "نمی‌توان افزونه‌های پوسته را فهرست کرد"
 
-#: gtweak/tweaks/tweak_group_appearance.py:199
+#: gtweak/tweaks/tweak_group_appearance.py:176
 msgid "<i>Default</i>"
 msgstr "<i>پیش‌گزیده</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:205
+#: gtweak/tweaks/tweak_group_appearance.py:182
 msgid "Select a theme"
 msgstr "زمینه‌ای برگزینید"
 
-#: gtweak/tweaks/tweak_group_appearance.py:254
+#: gtweak/tweaks/tweak_group_appearance.py:231
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "زمینهٔ %s با موفّقیت به‌روز شد"
 
-#: gtweak/tweaks/tweak_group_appearance.py:256
+#: gtweak/tweaks/tweak_group_appearance.py:233
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "زمینهٔ %s با موفّقیت نصب شد"
 
-#: gtweak/tweaks/tweak_group_appearance.py:264
+#: gtweak/tweaks/tweak_group_appearance.py:241
 msgid "Error installing theme"
 msgstr "خطا در نصب زمینه"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:246
 msgid "Invalid theme"
 msgstr "زمینهٔ نامعتبر"
 
-#: gtweak/tweaks/tweak_group_appearance.py:281
-msgid "Appearance"
-msgstr "ظاهر"
+#: gtweak/tweaks/tweak_group_appearance.py:258
+msgid "Styles"
+msgstr "سبک‌ها"
 
-#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:284
-msgid "Themes"
-msgstr "زمینه‌ها"
-
-#: gtweak/tweaks/tweak_group_appearance.py:288
-msgid "Sound"
-msgstr "صدا"
-
-#: gtweak/tweaks/tweak_group_appearance.py:289
-msgid "Specifies which sound theme to use for sound events."
-msgstr "تعیین این که کدام زمینهٔ صوتی برای رویدادهای صوتی استفاده شود."
-
-#: gtweak/tweaks/tweak_group_appearance.py:292
+#: gtweak/tweaks/tweak_group_appearance.py:263
 msgid "Background"
 msgstr "پس‌زمینه"
 
-#: gtweak/tweaks/tweak_group_appearance.py:293
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Image"
 msgstr "تصویر"
 
-#: gtweak/tweaks/tweak_group_appearance.py:295
+#: gtweak/tweaks/tweak_group_appearance.py:272
 msgid "Adjustment"
 msgstr "تنظیم"
 
-#: gtweak/tweaks/tweak_group_desktop.py:7
-msgid "Show Icons"
-msgstr "نمایش نقشک‌ها"
-
-#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
-#. *work* unless we have a version of Nautilus that still has the ability to
-#. draw the desktop; use one of the settings that was present in that version
-#. to probe for it.
-#: gtweak/tweaks/tweak_group_desktop.py:13
-msgid "Home"
-msgstr "خانه"
-
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Desktop"
-msgstr "میزکار"
-
-#: gtweak/tweaks/tweak_group_desktop.py:21
-msgid "Icons on Desktop"
-msgstr "شمایل‌های روی میزکار"
-
-#: gtweak/tweaks/tweak_group_desktop.py:24
-msgid "Network Servers"
-msgstr "کارسازهای شبکه"
-
-#: gtweak/tweaks/tweak_group_desktop.py:25
-msgid "Trash"
-msgstr "زباله‌دان"
-
-#: gtweak/tweaks/tweak_group_desktop.py:26
-msgid "Mounted Volumes"
-msgstr "حجم‌های سوار شده"
-
-#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
 msgid "Hinting"
 msgstr "سرنخ‌دهی"
 
-#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
+#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:75
 msgid "Antialiasing"
 msgstr "خوش‌نماسازی"
 
-#: gtweak/tweaks/tweak_group_font.py:40
+#: gtweak/tweaks/tweak_group_font.py:52
 msgid "Full"
 msgstr "کامل"
 
-#: gtweak/tweaks/tweak_group_font.py:46
+#: gtweak/tweaks/tweak_group_font.py:58
 msgid "Medium"
 msgstr "متوسّط"
 
-#: gtweak/tweaks/tweak_group_font.py:52
+#: gtweak/tweaks/tweak_group_font.py:64
 msgid "Slight"
 msgstr "خفیف"
 
-#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
+#: gtweak/tweaks/tweak_group_font.py:70 gtweak/tweaks/tweak_group_font.py:100
 msgid "None"
 msgstr "هیچکدام"
 
-#: gtweak/tweaks/tweak_group_font.py:71
+#: gtweak/tweaks/tweak_group_font.py:88
 msgid "Subpixel (for LCD screens)"
 msgstr "زیرپیکسل (برای نمایشگرهای ال‌سی‌دی)"
 
-#: gtweak/tweaks/tweak_group_font.py:77
+#: gtweak/tweaks/tweak_group_font.py:94
 msgid "Standard (grayscale)"
 msgstr "استاندارد (سیاه و سفید)"
 
-#: gtweak/tweaks/tweak_group_font.py:108
-msgid "Fonts"
-msgstr "قلم‌ها"
-
-#: gtweak/tweaks/tweak_group_font.py:109
+#: gtweak/tweaks/tweak_group_font.py:125
 msgid "Interface Text"
 msgstr "متن واسط"
 
-#: gtweak/tweaks/tweak_group_font.py:110
+#: gtweak/tweaks/tweak_group_font.py:126
 msgid "Document Text"
 msgstr "متن سند"
 
-#: gtweak/tweaks/tweak_group_font.py:111
+#: gtweak/tweaks/tweak_group_font.py:127
 msgid "Monospace Text"
 msgstr "متن هم‌عرض"
 
-#: gtweak/tweaks/tweak_group_font.py:112
+#: gtweak/tweaks/tweak_group_font.py:128
 msgid "Legacy Window Titles"
 msgstr "عنوان پنجره‌های قدیمی"
 
-#: gtweak/tweaks/tweak_group_font.py:114
+#: gtweak/tweaks/tweak_group_font.py:130
 msgid "Scaling Factor"
 msgstr "ضریب مقیاس"
 
-#: gtweak/tweaks/tweak_group_general.py:28
-msgid "Suspend when laptop lid is closed"
-msgstr "تعلیق هنگام بستن در لپ‌تاپ"
-
-#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:56
-msgid "Over-Amplification"
-msgstr "بیش‌تقویت"
-
-#: gtweak/tweaks/tweak_group_general.py:57
-msgid ""
-"Allows raising the volume above 100%. This can result in a loss of audio "
-"quality; it is better to increase application volume settings, if possible."
-msgstr ""
-"اجازه به افزایش حجم صدا بیش از ۱۰۰٪. این کار می‌تواند منجر به از دست رفتن کیفیت "
-"صدا شود. بهتر است در صورت امکان، تنظیمات صدای برنامه را افزایش دهید."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:21
-msgid "Emacs Input"
-msgstr "ورودی ای‌مکس"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:24
-msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr "انطباق میان‌برها با ویرایشگر ای‌مکس."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:40
-msgid "Overview Shortcut"
-msgstr "میان‌برِ نمای کلّی"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-msgid "Left Super"
-msgstr "سوپر چپ"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Right Super"
-msgstr "سوپر راست"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:74
-#: gtweak/tweaks/tweak_group_keymouse.py:82
-msgid "Additional Layout Options"
-msgstr "گزینه‌های چیدمان اضافی"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:104
-#: gtweak/tweaks/tweak_group_keymouse.py:241
-msgid "Mouse Click Emulation"
-msgstr "شبیه‌سازی کلیک موشی"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:122
-msgid "Fingers"
-msgstr "انگشت‌ها"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:124
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for middle-"
-"click."
-msgstr ""
-"برای کلیک‌راست، صفحهٔ لمسی را با دو انگشت و برای کلیک‌وسط، با سه انگشت لمس کنید."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:148
-msgid "Area"
-msgstr "ناحیه"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:150
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle for "
-"middle-click."
-msgstr "برای کلیک‌راست، پایین راست و برای کلیک‌وسط، پایین وسط صفحهٔ لمسی را لمس کنید."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:174
-#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
+#: gtweak/tweaks/tweak_group_keyboard.py:42
+#: gtweak/tweaks/tweak_group_keyboard.py:339
+#: gtweak/tweaks/tweak_group_mouse.py:137 gtweak/tweaks/tweak_group_windows.py:312
 msgid "Disabled"
 msgstr "غیرفعّال"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:176
+#: gtweak/tweaks/tweak_group_keyboard.py:170
+msgid "Typing"
+msgstr "نوشتن"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:186 gtweak/tweaks/tweak_group_mouse.py:18
+msgid "Emacs Input"
+msgstr "ورودی ای‌مکس"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:189 gtweak/tweaks/tweak_group_mouse.py:21
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
+msgstr "انطباق میان‌برها با ویرایشگر ای‌مکس."
+
+#: gtweak/tweaks/tweak_group_keyboard.py:205 gtweak/tweaks/tweak_group_mouse.py:37
+msgid "Overview Shortcut"
+msgstr "میان‌برِ نمای کلّی"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:212 gtweak/tweaks/tweak_group_mouse.py:44
+msgid "Left Super"
+msgstr "سوپر چپ"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:216 gtweak/tweaks/tweak_group_mouse.py:48
+msgid "Right Super"
+msgstr "سوپر راست"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:239
+#: gtweak/tweaks/tweak_group_keyboard.py:247
+msgid "Additional Layout Options"
+msgstr "گزینه‌های چیدمان اضافی"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:269 gtweak/tweaks/tweak_group_mouse.py:67
+#: gtweak/tweaks/tweak_group_mouse.py:185
+msgid "Mouse Click Emulation"
+msgstr "شبیه‌سازی کلیک موشی"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:287 gtweak/tweaks/tweak_group_mouse.py:85
+msgid "Fingers"
+msgstr "انگشت‌ها"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:289 gtweak/tweaks/tweak_group_mouse.py:87
+msgid ""
+"Click the touchpad with two fingers for right-click and three fingers for "
+"middle-click."
+msgstr ""
+"برای کلیک‌راست، صفحهٔ لمسی را با دو انگشت و برای کلیک‌وسط، با سه انگشت لمس کنید."
+
+#: gtweak/tweaks/tweak_group_keyboard.py:313
+#: gtweak/tweaks/tweak_group_mouse.py:111
+msgid "Area"
+msgstr "ناحیه"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:315
+#: gtweak/tweaks/tweak_group_mouse.py:113
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle "
+"for middle-click."
+msgstr ""
+"برای کلیک‌راست، پایین راست و برای کلیک‌وسط، پایین وسط صفحهٔ لمسی را لمس کنید."
+
+#: gtweak/tweaks/tweak_group_keyboard.py:341
+#: gtweak/tweaks/tweak_group_mouse.py:139
 msgid "Don’t use mouse click emulation."
 msgstr "استفاده نکردن از شبیه‌سازی کلیک موشی."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:213
-msgid "Keyboard & Mouse"
-msgstr "صفحه‌کلید و موشی"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:214
-msgid "Keyboard"
-msgstr "صفحه‌کلید"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:215
+#: gtweak/tweaks/tweak_group_keyboard.py:379
 msgid "Show Extended Input Sources"
 msgstr "نمایش منابع ورودی گسترش یافته"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:218
+#: gtweak/tweaks/tweak_group_keyboard.py:382
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "انتخاب‌های منابع ورودی را در برنامهٔ تنظیمات افزایش می‌دهد."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
+#: gtweak/tweaks/tweak_group_mouse.py:175 gtweak/tweaks/tweak_group_mouse.py:176
 msgid "Mouse"
 msgstr "موشی"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:224
-msgid "Acceleration Profile"
-msgstr "نمایهٔ شتاب"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:228
-msgid "Pointer Location"
-msgstr "مکانِ نشانگر"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:231
-msgid "Press the Ctrl key to highlight the pointer."
-msgstr "فشردن کلید مهار برای تشخیص نشانگر."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:232
+#: gtweak/tweaks/tweak_group_mouse.py:177
 msgid "Middle Click Paste"
 msgstr "جای‌گذاری با کلیک وسط"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:236
+#: gtweak/tweaks/tweak_group_mouse.py:180
 msgid "Touchpad"
 msgstr "صفحهٔ لمسی"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:237
+#: gtweak/tweaks/tweak_group_mouse.py:181
 msgid "Disable While Typing"
 msgstr "غیرفعّال هنگام نوشتن"
+
+#: gtweak/tweaks/tweak_group_sound.py:44
+msgid "System Sound Theme"
+msgstr "زمینهٔ صوتی سامانه"
+
+#: gtweak/tweaks/tweak_group_sound.py:48
+msgid "Specifies which sound theme to use for sound events."
+msgstr "تعیین این که کدام زمینهٔ صوتی برای رویدادهای صوتی استفاده شود."
 
 #: gtweak/tweaks/tweak_group_startup.py:30
 msgid "Startup applications are automatically started when you log in."
 msgstr "برنامه‌های راه‌انداز، در هنگام ورود به طور خودکار اجرا می‌شوند."
 
-#: gtweak/tweaks/tweak_group_startup.py:31 gtweak/tweaks/tweak_group_startup.py:307
-msgid "Startup Applications"
-msgstr "برنامه‌های راه‌انداز"
-
-#: gtweak/tweaks/tweak_group_startup.py:42
+#: gtweak/tweaks/tweak_group_startup.py:43
 msgid "Applications"
 msgstr "برنامه‌ها"
 
-#: gtweak/tweaks/tweak_group_startup.py:48
+#: gtweak/tweaks/tweak_group_startup.py:49
 msgid "Search Applications…"
 msgstr "جست‌وجوی برنامه‌ها…"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:58
+#: gtweak/tweaks/tweak_group_startup.py:59
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:76
+#: gtweak/tweaks/tweak_group_startup.py:77
 msgid "running"
 msgstr "درحال اجرا"
 
-#: gtweak/tweaks/tweak_group_startup.py:87
+#: gtweak/tweaks/tweak_group_startup.py:88
 msgid "_Close"
 msgstr "_بستن"
 
-#: gtweak/tweaks/tweak_group_startup.py:88
+#: gtweak/tweaks/tweak_group_startup.py:89
 msgid "_Add"
 msgstr "_افزودن"
 
-#: gtweak/tweaks/tweak_group_startup.py:233
+#: gtweak/tweaks/tweak_group_startup.py:234
 msgid "Remove"
 msgstr "حذف"
 
-#: gtweak/tweaks/tweak_group_startup.py:257
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "New startup application"
 msgstr "برنامهٔ راه‌انداز جدید"
 
-#: gtweak/tweaks/tweak_group_startup.py:258
+#: gtweak/tweaks/tweak_group_startup.py:259
 msgid "Add a new application to be run at startup"
 msgstr "افزودن برنامه‌ای جدید برای اجرا در هنگام شروع"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:57
-msgid "Placement"
-msgstr "قرارگیری"
-
-#. Translators: For RTL languages, this is the "Right" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_title_bar.py:71
-msgid "Left"
-msgstr "راست"
-
-#. Translators: For RTL languages, this is the "Left" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_title_bar.py:77
-msgid "Right"
-msgstr "چپ"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:108
-msgid "Window Titlebars"
-msgstr "نوارعنوان پنجره‌ها"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:109
-msgid "Titlebar Actions"
-msgstr "کنش‌های نوارعنوان"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:110
-msgid "Double-Click"
-msgstr "دوبار-کلیک"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:111
-msgid "Middle-Click"
-msgstr "کلیک-وسط"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:112
-#: gtweak/tweaks/tweak_group_windows.py:88
-msgid "Secondary-Click"
-msgstr "کلیک-دوم"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:113
-msgid "Titlebar Buttons"
-msgstr "کلیدهای نوارعنوان"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:114
-msgid "Maximize"
-msgstr "بیشینه"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:115
-msgid "Minimize"
-msgstr "کمینه"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:14
-msgid "Top Bar"
-msgstr "نوار بالا"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Clock"
-msgstr "ساعت"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Weekday"
-msgstr "روز هفته"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
-msgid "Date"
-msgstr "تاریخ"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:18
-msgid "Seconds"
-msgstr "ثانیه‌ها"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:19
-msgid "Calendar"
-msgstr "تقویم"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:20
-msgid "Week Numbers"
-msgstr "شمارهٔ هفته"
-
-#: gtweak/tweaks/tweak_group_windows.py:18 gtweak/tweaks/tweak_group_windows.py:212
+#: gtweak/tweaks/tweak_group_windows.py:18
 msgid "Window Focus"
 msgstr "تمرکز پنجره"
 
 #: gtweak/tweaks/tweak_group_windows.py:18 gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:212
+#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Click to Focus"
 msgstr "کلیک برای تمرکز"
 
@@ -582,11 +452,16 @@ msgstr "تمرکز با شناوری"
 
 #: gtweak/tweaks/tweak_group_windows.py:64
 msgid ""
-"Window is focused when hovered with the pointer. Windows remain focused when the "
-"desktop is hovered."
+"Window is focused when hovered with the pointer. Windows remain focused when "
+"the desktop is hovered."
 msgstr ""
 "تمرکز روی پنجره هنگامی که نشانگر روی آن می‌رود، قرار می‌گیرد. پنجره‌ها هنگامی که "
 "نشانگر روی میزکار است در حال متمرکز باقی می‌مانند."
+
+#: gtweak/tweaks/tweak_group_windows.py:88
+#: gtweak/tweaks/tweak_group_windows.py:300
+msgid "Secondary-Click"
+msgstr "کلیک-دوم"
 
 #: gtweak/tweaks/tweak_group_windows.py:90
 msgid ""
@@ -626,49 +501,85 @@ msgstr "نگه داشتن تغییرات"
 msgid "HiDPI"
 msgstr "تراکم بالا"
 
-#: gtweak/tweaks/tweak_group_windows.py:203
-msgid "Windows"
-msgstr "پنجره‌ها"
+#: gtweak/tweaks/tweak_group_windows.py:246
+msgid "Placement"
+msgstr "قرارگیری"
 
-#: gtweak/tweaks/tweak_group_windows.py:204
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:260
+msgid "Left"
+msgstr "راست"
+
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:266
+msgid "Right"
+msgstr "چپ"
+
+#: gtweak/tweaks/tweak_group_windows.py:297
+msgid "Titlebar Actions"
+msgstr "کنش‌های نوارعنوان"
+
+#: gtweak/tweaks/tweak_group_windows.py:298
+msgid "Double-Click"
+msgstr "دوبار-کلیک"
+
+#: gtweak/tweaks/tweak_group_windows.py:299
+msgid "Middle-Click"
+msgstr "کلیک-وسط"
+
+#: gtweak/tweaks/tweak_group_windows.py:301
+msgid "Titlebar Buttons"
+msgstr "کلیدهای نوارعنوان"
+
+#: gtweak/tweaks/tweak_group_windows.py:302
+msgid "Maximize"
+msgstr "بیشینه"
+
+#: gtweak/tweaks/tweak_group_windows.py:303
+msgid "Minimize"
+msgstr "کمینه"
+
+#: gtweak/tweaks/tweak_group_windows.py:305
+msgid "Click Actions"
+msgstr "کنش‌های کلیک"
+
+#: gtweak/tweaks/tweak_group_windows.py:306
 msgid "Attach Modal Dialogs"
 msgstr "پیوست محاوره‌های چسبان"
 
-#: gtweak/tweaks/tweak_group_windows.py:205
+#: gtweak/tweaks/tweak_group_windows.py:307
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and cannot "
 "be moved."
 msgstr ""
-"هنگام روشن بودن، محاوره‌های جسبان به پنجره‌های والدشان پوسته مانده و قابل جابه‌جایی "
-"نیستند."
+"هنگام روشن بودن، محاوره‌های جسبان به پنجره‌های والدشان پوسته مانده و قابل "
+"جابه‌جایی نیستند."
 
-#: gtweak/tweaks/tweak_group_windows.py:206
+#: gtweak/tweaks/tweak_group_windows.py:308
 msgid "Center New Windows"
 msgstr "در مرکز قرار دادن پنجره‌های جدید"
 
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Resize with Secondary-Click"
-msgstr "تغییر اندازه با کلیک-دوم"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
+#: gtweak/tweaks/tweak_group_windows.py:309
 msgid "Window Action Key"
 msgstr "کلید کنش پنجره"
 
-#: gtweak/tweaks/tweak_group_windows.py:214
+#: gtweak/tweaks/tweak_group_windows.py:313
+msgid "Resize with Secondary-Click"
+msgstr "تغییر اندازه با کلیک-دوم"
+
+#: gtweak/tweaks/tweak_group_windows.py:314
+msgid "Focusing"
+msgstr "تمرکز"
+
+#: gtweak/tweaks/tweak_group_windows.py:316
 msgid "Raise Windows When Focused"
 msgstr "بالا آوردن پنجره هنگام متمرکز شدن"
 
-#: gtweak/tweaks/tweak_group_xkb.py:167
-msgid "Typing"
-msgstr "نوشتن"
-
-#: gtweak/tweaks/tweak_wacom.py:16
-msgid "Device"
-msgstr "افزاره"
-
-#: gtweak/tweaks/tweak_wacom.py:25
-msgid "Wacom"
-msgstr "وکوم"
+#: gtweak/tweakview.py:157
+msgid "Search Tweaks…"
+msgstr "جست‌وجوی سیخونک‌ها…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
@@ -687,6 +598,88 @@ msgstr "برای اعمال تغییرات نیاز است نشستتان دوب
 #: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "شروع دوبارهٔ نشست"
+
+#~ msgid "General"
+#~ msgstr "عمومی"
+
+#~ msgid "Themes"
+#~ msgstr "زمینه‌ها"
+
+#~ msgid "Show Icons"
+#~ msgstr "نمایش نقشک‌ها"
+
+#~ msgid "Home"
+#~ msgstr "خانه"
+
+#~ msgid "Desktop"
+#~ msgstr "میزکار"
+
+#~ msgid "Icons on Desktop"
+#~ msgstr "شمایل‌های روی میزکار"
+
+#~ msgid "Network Servers"
+#~ msgstr "کارسازهای شبکه"
+
+#~ msgid "Trash"
+#~ msgstr "زباله‌دان"
+
+#~ msgid "Mounted Volumes"
+#~ msgstr "حجم‌های سوار شده"
+
+#~ msgid "Suspend when laptop lid is closed"
+#~ msgstr "تعلیق هنگام بستن در لپ‌تاپ"
+
+#~ msgid "Over-Amplification"
+#~ msgstr "بیش‌تقویت"
+
+#~ msgid ""
+#~ "Allows raising the volume above 100%. This can result in a loss of audio "
+#~ "quality; it is better to increase application volume settings, if possible."
+#~ msgstr ""
+#~ "اجازه به افزایش حجم صدا بیش از ۱۰۰٪. این کار می‌تواند منجر به از دست رفتن "
+#~ "کیفیت صدا شود. بهتر است در صورت امکان، تنظیمات صدای برنامه را افزایش دهید."
+
+#~ msgid "Keyboard & Mouse"
+#~ msgstr "صفحه‌کلید و موشی"
+
+#~ msgid "Acceleration Profile"
+#~ msgstr "نمایهٔ شتاب"
+
+#~ msgid "Pointer Location"
+#~ msgstr "مکانِ نشانگر"
+
+#~ msgid "Press the Ctrl key to highlight the pointer."
+#~ msgstr "فشردن کلید مهار برای تشخیص نشانگر."
+
+#~ msgid "Window Titlebars"
+#~ msgstr "نوارعنوان پنجره‌ها"
+
+#~ msgid "Top Bar"
+#~ msgstr "نوار بالا"
+
+#~ msgid "Clock"
+#~ msgstr "ساعت"
+
+#~ msgid "Weekday"
+#~ msgstr "روز هفته"
+
+#~ msgid "Date"
+#~ msgstr "تاریخ"
+
+#~ msgid "Seconds"
+#~ msgstr "ثانیه‌ها"
+
+#~ msgid "Calendar"
+#~ msgstr "تقویم"
+
+#~ msgid "Week Numbers"
+#~ msgstr "شمارهٔ هفته"
+
+#~ msgid "Device"
+#~ msgstr "افزاره"
+
+#~ msgid "Wacom"
+#~ msgstr "وکوم"
 
 #~ msgid "Animations"
 #~ msgstr "پویانمایی‌ها"
@@ -719,8 +712,8 @@ msgstr "شروع دوبارهٔ نشست"
 #~ msgstr "اجازهٔ ورود نویسه‌های اضافی."
 
 #~ msgid ""
-#~ "The compose key allows a wide variety of characters to be entered. To use it, "
-#~ "press the compose key and then a sequence of characters.\n"
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
 #~ "\n"
 #~ "Many unusual characters can be entered by combining standard ones. For "
 #~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
@@ -750,7 +743,8 @@ msgstr "شروع دوبارهٔ نشست"
 #~ msgstr "فضاهای کاری پویا"
 
 #~ msgid ""
-#~ "Workspaces can be created on demand, and are automatically removed when empty."
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
 #~ msgstr ""
 #~ "فضاهای کاری می‌توانند در لحظه ایجاد شده و هنگام خالی بودن، به طور خودکار حذف "
 #~ "شوند."
