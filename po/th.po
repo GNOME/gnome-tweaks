@@ -6,643 +6,918 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-10\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"tweak-tool&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-09-09 21:25+0000\n"
-"PO-Revision-Date: 2016-09-10 15:51+0700\n"
-"Last-Translator: Akom Chotiphantawanon <knight2000@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
+"POT-Creation-Date: 2023-09-23 05:14+0000\n"
+"PO-Revision-Date: 2023-12-13 03:56+0700\n"
+"Last-Translator: knight2000 <knight2000@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Poedit 3.4.1\n"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:1 ../gtweak/app.py:34
-#: ../gtweak/utils.py:327
-msgid "GNOME Tweak Tool"
-msgstr "เครื่องมือดัดแปลงของ GNOME"
+#: data/org.gnome.tweaks.appdata.xml.in:7
+msgid "The GNOME Project"
+msgstr "โครงการ GNOME"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:2
-#: ../data/gnome-tweak-tool.desktop.in.h:2
-msgid "Tweak advanced GNOME 3 settings"
+#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
+#: gtweak/utils.py:343
+msgid "GNOME Tweaks"
+msgstr "ดัดแปลง GNOME"
+
+#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#, fuzzy
+#| msgid "Tweak advanced GNOME 3 settings"
+msgid "Tweak advanced GNOME settings"
 msgstr "ดัดแปลงค่าตั้งขั้นสูงของ GNOME 3"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:3
-msgid "GNOME Tweak Tool allows adjusting advanced GNOME options."
-msgstr "เครื่องมือดัดแปลง GNOME ช่วยในการปรับตัวเลือกขั้นสูงของ GNOME"
+#: data/org.gnome.tweaks.appdata.xml.in:12
+msgid "GNOME Tweaks allows adjusting advanced GNOME options."
+msgstr "ดัดแปลง GNOME ช่วยในการปรับตัวเลือกขั้นสูงของ GNOME"
 
-#: ../data/gnome-tweak-tool.appdata.xml.in.h:4
+#: data/org.gnome.tweaks.appdata.xml.in:15
+#, fuzzy
+#| msgid ""
+#| "It can install and manage themes and extensions, change power settings, manage startup "
+#| "applications, and enable desktop icons among other settings."
 msgid ""
-"It can install and manage themes and extensions, change power settings, "
-"manage startup applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and set custom window "
+"controls among other settings."
 msgstr ""
-"สามารถติดตั้งและจัดการชุดตกแต่งและส่วนขยาย ตั้งค่าการใช้พลังงาน จัดการโปรแกรมเริ่มวาระ "
-"เปิดใช้ไอคอนเดสก์ท็อป และตั้งค่าอื่นๆ"
+"สามารถติดตั้งและจัดการชุดตกแต่งและส่วนขยาย ตั้งค่าการใช้พลังงาน จัดการโปรแกรมเริ่มวาระ เปิดใช้ไอคอนเดสก์ท็อป "
+"และตั้งค่าอื่นๆ"
 
-#: ../data/gnome-tweak-tool.desktop.in.h:1
-msgid "Tweak Tool"
-msgstr "เครื่องมือดัดแปลง"
-
-#: ../data/gnome-tweak-tool.desktop.in.h:3
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "ตั้งค่า;ขั้นสูง;ปรับแต่ง;ส่วนขยาย;แบบอักษร;ชุดตกแต่ง;XKB;แป้นพิมพ์;การพิมพ์;"
-
-#: ../data/shell.ui.h:1
-msgid "_Reset to Defaults"
-msgstr "_กลับเป็นค่าปริยาย"
-
-#: ../data/shell.ui.h:2
-msgid "Disable All Shell Extensions"
-msgstr "ปิดใช้ส่วนขยายของเชลล์ทั้งหมด"
-
-#: ../data/shell.ui.h:3
-msgid "_About"
-msgstr "เ_กี่ยวกับ"
-
-#: ../data/shell.ui.h:4
-msgid "_Quit"
-msgstr "_ออก"
-
-#: ../gtweak/app.py:78
-msgid "Reset to Defaults"
-msgstr "กลับเป็นค่าปริยาย"
-
-#: ../gtweak/app.py:79
-msgid "Reset all tweak settings to the original default state?"
-msgstr "กลับการตั้งค่าดัดแปลงทั้งหมดเป็นสถานะปริยายดั้งเดิมหรือไม่?"
-
-#: ../gtweak/app.py:98
-#, python-format
-msgid "GNOME Shell v%s (%s mode)"
-msgstr "เชลล์ GNOME v%s (โหมด %s)"
-
-#: ../gtweak/app.py:100
-msgid "GNOME Shell not running"
-msgstr "เชลล์ GNOME ไม่ได้ทำงานอยู่"
-
-#: ../gtweak/app.py:105
-msgid "Homepage"
-msgstr "โฮมเพจ"
-
-#: ../gtweak/tweakmodel.py:28
-msgid "Appearance"
-msgstr "รูปโฉม"
-
-#: ../gtweak/tweakmodel.py:29
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:301
-msgid "Extensions"
-msgstr "ส่วนขยาย"
-
-#: ../gtweak/tweakmodel.py:30
-msgid "Fonts"
-msgstr "แบบอักษร"
-
-#: ../gtweak/tweakmodel.py:31
-msgid "Power"
-msgstr "พลังงาน"
-
-#: ../gtweak/tweakmodel.py:32 ../gtweak/tweaks/tweak_group_startup.py:303
-msgid "Startup Applications"
-msgstr "โปรแกรมขณะเริ่มวาระ"
-
-#: ../gtweak/tweakmodel.py:33
-msgid "Top Bar"
-msgstr "แถบด้านบน"
-
-#: ../gtweak/tweakmodel.py:34
-msgid "Windows"
-msgstr "หน้าต่าง"
-
-#: ../gtweak/tweakmodel.py:35
-msgid "Workspaces"
-msgstr "พื้นที่ทำงาน"
-
-#: ../gtweak/tweakmodel.py:37 ../gtweak/tweaks/tweak_group_keymouse.py:71
-msgid "Mouse"
-msgstr "เมาส์"
-
-#: ../gtweak/tweakmodel.py:38
-msgid "Files"
-msgstr "แฟ้ม"
-
-#: ../gtweak/tweakmodel.py:52
-msgid "Miscellaneous"
-msgstr "เบ็ดเตล็ด"
-
-#: ../gtweak/tweakview.py:100
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
 msgid "Tweaks"
 msgstr "รายการดัดแปลง"
 
-#: ../gtweak/tweakview.py:116
-msgid "Search Tweaks..."
-msgstr "ค้นหารายการดัดแปลง..."
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.tweaks.desktop.in:14
+#, fuzzy
+#| msgid "Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgstr "ตั้งค่า;ขั้นสูง;ปรับแต่ง;ส่วนขยาย;แบบอักษร;ชุดตกแต่ง;XKB;แป้นพิมพ์;การพิมพ์;"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:22
-msgid "Icons on Desktop"
-msgstr "ไอคอนบนพื้นโต๊ะ"
+#: data/shell.ui:7
+msgid "_Reset to Defaults"
+msgstr "_กลับเป็นค่าปริยาย"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:25
-msgid "Desktop"
-msgstr "พื้นโต๊ะ"
+#: data/shell.ui:13
+msgid "_About Tweaks"
+msgstr "เ_กี่ยวกับดัดแปลง"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:27
-msgid "Computer"
-msgstr "คอมพิวเตอร์"
+#: data/tweaks.ui:63 gtweak/tweaks/tweak_group_font.py:124
+msgid "Fonts"
+msgstr "แบบอักษร"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:28
-msgid "Home"
-msgstr "บ้าน"
+#: data/tweaks.ui:97 gtweak/tweaks/tweak_group_appearance.py:257
+msgid "Appearance"
+msgstr "รูปโฉม"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:29
-msgid "Network Servers"
-msgstr "เซิร์ฟเวอร์ในเครือข่าย"
+#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
+msgid "Sound"
+msgstr "เสียง"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:30
-msgid "Trash"
-msgstr "ถังขยะ"
+#: data/tweaks.ui:165
+#, fuzzy
+#| msgid "Touchpad"
+msgid "Mouse & Touchpad"
+msgstr "ทัชแพด"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:31
-msgid "Mounted Volumes"
-msgstr "โวลุมที่เมานท์ไว้"
+#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
+#: gtweak/tweaks/tweak_group_keyboard.py:378
+msgid "Keyboard"
+msgstr "แป้นพิมพ์"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:32
-msgid "Background"
-msgstr "พื้นหลัง"
+#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
+msgid "Windows"
+msgstr "หน้าต่าง"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:33
-#: ../gtweak/tweaks/tweak_group_desktop.py:36
-msgid "Mode"
-msgstr "โหมด"
+#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
+#: gtweak/tweaks/tweak_group_startup.py:309
+msgid "Startup Applications"
+msgstr "แอปพลิเคชันขณะเริ่มวาระ"
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:34
-msgid "Background Location"
-msgstr "ตำแหน่งเก็บของภาพพื้นหลัง"
+#: gtweak/app.py:21
+msgid "_Continue"
+msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_desktop.py:37
-msgid "Lock Screen Location"
-msgstr "ตำแหน่งเก็บของภาพหน้าจอล็อค"
+#: gtweak/app.py:23
+#, fuzzy
+#| msgid "Extensions"
+msgid "Extensions Has Moved"
+msgstr "ส่วนขยาย"
 
-#: ../gtweak/tweaks/tweak_group_font.py:25
-msgid "Window Titles"
-msgstr "ชื่อหน้าต่าง"
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_font.py:26
-msgid "Interface"
-msgstr "ส่วนติดต่อผู้ใช้"
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:32
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does not include it."
+msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_font.py:27
-msgid "Documents"
-msgstr "เอกสาร"
+#: gtweak/app.py:81
+msgid "Reset to Defaults"
+msgstr "กลับเป็นค่าปริยาย"
 
-#: ../gtweak/tweaks/tweak_group_font.py:28
-msgid "Monospace"
-msgstr "ความกว้างคงที่"
+#: gtweak/app.py:82
+msgid "Reset all tweak settings to the original default state?"
+msgstr "กลับการตั้งค่าดัดแปลงทั้งหมดเป็นสถานะปริยายดั้งเดิมหรือไม่?"
 
-#: ../gtweak/tweaks/tweak_group_font.py:29
-msgid "Hinting"
-msgstr "การ hint"
+#: gtweak/app.py:99 gtweak/app.py:101
+msgid "GNOME Shell"
+msgstr "เชลล์ GNOME"
 
-#: ../gtweak/tweaks/tweak_group_font.py:31
-msgid "Antialiasing"
-msgstr "การลบรอยหยัก"
+#: gtweak/app.py:101
+#, python-format
+msgid "(%s mode)"
+msgstr "(%s โหมด)"
 
-#: ../gtweak/tweaks/tweak_group_font.py:33
-msgid "Scaling Factor"
-msgstr "ตัวคูณปรับขนาด"
+#: gtweak/app.py:104
+msgid "GNOME Shell is not running"
+msgstr "เชลล์ GNOME ไม่ได้ทำงานอยู่"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:65
+#: gtweak/app.py:106
+msgid "GTK"
+msgstr "GTK"
+
+#: gtweak/app.py:113
+msgid "Homepage"
+msgstr "โฮมเพจ"
+
+#: gtweak/tweakmodel.py:30
+msgid "Miscellaneous"
+msgstr "เบ็ดเตล็ด"
+
+#: gtweak/tweaks/tweak_group_appearance.py:31
+#, fuzzy
+#| msgid "Search Applications…"
+msgid "Legacy Applications"
+msgstr "ค้นหาโปรแกรม…"
+
+#: gtweak/tweaks/tweak_group_appearance.py:65
+msgid "Error writing setting"
+msgstr "เกิดข้อผิดพลาดขณะเขียนค่าตั้ง"
+
+#: gtweak/tweaks/tweak_group_appearance.py:71
 msgid "Icons"
 msgstr "ไอคอน"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:83
+#: gtweak/tweaks/tweak_group_appearance.py:86
 msgid "Cursor"
 msgstr "เคอร์เซอร์"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:110
-msgid "Shell theme"
-msgstr "ชุดตกแต่งของเชลล์"
+#: gtweak/tweaks/tweak_group_appearance.py:110
+msgid "Shell"
+msgstr "เชลล์"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:110
 msgid "Install custom or user themes for gnome-shell"
 msgstr "ติดตั้งชุดตกแต่งที่กำหนดเองหรือที่ผู้ใช้สร้างขึ้นสำหรับ gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: ../gtweak/tweaks/tweak_group_interface.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:113
 msgid "Unknown error"
 msgstr "ข้อผิดพลาดไม่ทราบสาเหตุ"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:118
 msgid "Shell not running"
 msgstr "เชลล์ไม่ได้ทำงานอยู่"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:140
+#: gtweak/tweaks/tweak_group_appearance.py:140
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "ส่วนขยาย user-theme ของเชลล์ติดตั้งไม่ถูกต้อง"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:143
 msgid "Shell user-theme extension not enabled"
 msgstr "ส่วนขยาย user-theme ของเชลล์ไม่ได้เปิดใช้"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:146
 msgid "Could not list shell extensions"
 msgstr "ไม่สามารถแสดงรายชื่อส่วนขยายของเชลล์"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:175
-#: ../gtweak/tweaks/tweak_group_keymouse.py:47
+#: gtweak/tweaks/tweak_group_appearance.py:176
 msgid "<i>Default</i>"
 msgstr "<i>ปริยาย</i>"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:181
+#: gtweak/tweaks/tweak_group_appearance.py:182
 msgid "Select a theme"
 msgstr "เลือกชุดตกแต่ง"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:230
+#: gtweak/tweaks/tweak_group_appearance.py:231
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "ปรับรุ่นชุดตกแต่ง %s เรียบร้อยแล้ว"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:232
+#: gtweak/tweaks/tweak_group_appearance.py:233
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "ติดตั้งชุดตกแต่ง %s เรียบร้อยแล้ว"
 
-#: ../gtweak/tweaks/tweak_group_interface.py:240
+#: gtweak/tweaks/tweak_group_appearance.py:241
 msgid "Error installing theme"
 msgstr "เกิดข้อผิดพลาดขณะติดตั้งชุดตกแต่ง"
 
 #. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_interface.py:245
+#: gtweak/tweaks/tweak_group_appearance.py:246
 msgid "Invalid theme"
 msgstr "ชุดตกแต่งไม่ถูกต้อง"
 
-#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: ../gtweak/tweaks/tweak_group_interface.py:261
-msgid "Theme"
-msgstr "ชุดตกแต่ง"
+#: gtweak/tweaks/tweak_group_appearance.py:258
+msgid "Styles"
+msgstr ""
 
-#: ../gtweak/tweaks/tweak_group_interface.py:266
-msgid "Enable animations"
-msgstr "เปิดใช้ภาพเคลื่อนไหว"
+#: gtweak/tweaks/tweak_group_appearance.py:263
+msgid "Background"
+msgstr "พื้นหลัง"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:55
-#: ../gtweak/tweaks/tweak_group_windows.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:265
+msgid "Image"
+msgstr "ภาพ"
+
+#: gtweak/tweaks/tweak_group_appearance.py:272
+msgid "Adjustment"
+msgstr "การปรับ"
+
+#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
+msgid "Hinting"
+msgstr "การ hint"
+
+#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:75
+msgid "Antialiasing"
+msgstr "การลบรอยหยัก"
+
+#: gtweak/tweaks/tweak_group_font.py:52
+msgid "Full"
+msgstr "เต็ม"
+
+#: gtweak/tweaks/tweak_group_font.py:58
+msgid "Medium"
+msgstr "กลาง"
+
+#: gtweak/tweaks/tweak_group_font.py:64
+msgid "Slight"
+msgstr "เบาบาง"
+
+#: gtweak/tweaks/tweak_group_font.py:70 gtweak/tweaks/tweak_group_font.py:100
+msgid "None"
+msgstr "ไม่มี"
+
+#: gtweak/tweaks/tweak_group_font.py:88
+msgid "Subpixel (for LCD screens)"
+msgstr "พิกเซลย่อย (สำหรับจอภาพ LCD)"
+
+#: gtweak/tweaks/tweak_group_font.py:94
+msgid "Standard (grayscale)"
+msgstr "มาตรฐาน (ขาวดำ)"
+
+#: gtweak/tweaks/tweak_group_font.py:125
+msgid "Interface Text"
+msgstr "ข้อความส่วนติดต่อ"
+
+#: gtweak/tweaks/tweak_group_font.py:126
+msgid "Document Text"
+msgstr "ข้อความเอกสาร"
+
+#: gtweak/tweaks/tweak_group_font.py:127
+msgid "Monospace Text"
+msgstr "ข้อความความกว้างคงที่"
+
+#: gtweak/tweaks/tweak_group_font.py:128
+msgid "Legacy Window Titles"
+msgstr "ชื่อหน้าต่างแบบเก่า"
+
+#: gtweak/tweaks/tweak_group_font.py:130
+msgid "Scaling Factor"
+msgstr "ตัวคูณปรับขนาด"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:42 gtweak/tweaks/tweak_group_keyboard.py:339
+#: gtweak/tweaks/tweak_group_mouse.py:137 gtweak/tweaks/tweak_group_windows.py:312
 msgid "Disabled"
 msgstr "ปิดใช้"
 
-#: ../gtweak/tweaks/tweak_group_xkb.py:161
+#: gtweak/tweaks/tweak_group_keyboard.py:170
 msgid "Typing"
 msgstr "การพิมพ์"
 
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:78
-msgid "Extension downloading"
-msgstr "ส่วนขยายกำลังดาวน์โหลด"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:80
-msgid "Error loading extension"
-msgstr "เกิดข้อผิดพลาดขณะโหลดส่วนขยาย"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:82
-msgid "Extension does not support shell version"
-msgstr "ส่วนขยายไม่รองรับเชลล์รุ่นนี้"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:84
-msgid "Unknown extension error"
-msgstr "เกิดข้อผิดพลาดไม่ทราบสาเหตุของส่วนขยาย"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:105
-#: ../gtweak/tweaks/tweak_group_startup.py:229
-msgid "Remove"
-msgstr "ลบออก"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:137
-msgid "Uninstall Extension"
-msgstr "ถอดถอนส่วนขยาย"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:138
-#, python-format
-msgid "Do you want to uninstall the '%s' extension?"
-msgstr "คุณต้องการถอดถอนส่วนขยาย '%s' หรือไม่?"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:155
-msgid "Updating"
-msgstr "กำลังปรับรุ่น"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:166
-msgid "Error"
-msgstr "ข้อผิดพลาด"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:171
-msgid "Update"
-msgstr "ปรับรุ่น"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:186
-msgid "Install Shell Extension"
-msgstr "ติดตั้งส่วนขยายของเชลล์"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:191
-msgid "Select an extension"
-msgstr "เลือกส่วนขยาย"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:198
-msgid "Get more extensions"
-msgstr "รับส่วนขยายเพิ่มเติม"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:248
-#, python-format
-msgid "%s extension updated successfully"
-msgstr "ปรับรุ่นส่วนขยาย %s เรียบร้อยแล้ว"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:250
-#, python-format
-msgid "%s extension installed successfully"
-msgstr "ติดตั้งส่วนขยาย %s เรียบร้อยแล้ว"
-
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:255
-msgid "Error installing extension"
-msgstr "เกิดข้อผิดพลาดขณะติดตั้งส่วนขยาย"
-
-#. does not look like a valid theme
-#: ../gtweak/tweaks/tweak_group_shell_extensions.py:260
-msgid "Invalid extension"
-msgstr "ส่วนขยายไม่ถูกต้อง"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:33
-msgid "Show Application Menu"
-msgstr "แสดงเมนูโปรแกรม"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:46
-msgid "Workspace Creation"
-msgstr "การสร้างพื้นที่ทำงาน"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Dynamic"
-msgstr "ไม่ตายตัว"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:51
-msgid "Static"
-msgstr "ตายตัว"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:74
-msgid "Don't suspend on lid close"
-msgstr "ไม่พักเครื่องเมื่อปิดฝาเครื่อง"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:104
-msgid "Clock"
-msgstr "นาฬิกา"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:105
-msgid "Show date"
-msgstr "แสดงวันที่"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:106
-msgid "Show seconds"
-msgstr "แสดงวินาที"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:107
-msgid "Calendar"
-msgstr "ปฎิทิน"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:108
-msgid "Show week numbers"
-msgstr "แสดงเลขสัปดาห์"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:111
-msgid "When Power Button is Pressed"
-msgstr "เมื่อกดปุ่มเปิด-ปิดเครื่อง"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:112
-msgid "Action"
-msgstr "การกระทำ"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:113
-msgid "When Laptop Lid is Closed"
-msgstr "เมื่อฝาแล็ปท็อปปิด"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:114
-msgid "On Battery Power"
-msgstr "ขณะใช้พลังงานจากแบตเตอรี่"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:115
-msgid "When plugged in"
-msgstr "เมื่อเสียบปลั๊กไฟ"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:116
-msgid "Suspend even if an external monitor is plugged in"
-msgstr "พักเครื่องแม้ว่าจอภาพภายนอกยังเสียบอยู่"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:121
-msgid "Number of Workspaces"
-msgstr "จำนวนพื้นที่ทำงาน"
-
-#: ../gtweak/tweaks/tweak_group_shell.py:122
-msgid "Workspaces only on primary display"
-msgstr "พื้นที่ทำงานอยู่บนจอภาพหลักเท่านั้น"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "โปรแกรม"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications..."
-msgstr "ค้นหาโปรแกรม..."
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: ../gtweak/tweaks/tweak_group_startup.py:56
-msgid "<primary>f"
-msgstr "<primary>f"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:75
-msgid "running"
-msgstr "ทำงานอยู่"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:85
-msgid "_Close"
-msgstr "ปิ_ด"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:86
-msgid "_Add"
-msgstr "เ_พิ่ม"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:253
-msgid "New startup application"
-msgstr "โปรแกรมขณะเริ่มวาระรายการใหม่"
-
-#: ../gtweak/tweaks/tweak_group_startup.py:254
-msgid "Add a new application to be run at startup"
-msgstr "เพิ่มโปรแกรมใหม่ที่จะให้ทำงานขณะเริ่มวาระ"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:67
-msgid "Window scaling"
-msgstr "การปรับขนาดหน้าต่าง"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:67
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "ปรับตัวคูณปรับขนาดหน้าต่างของ GDK สำหรับ HiDPI"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:95
-#, python-format
-msgid "Settings will be reverted in %d second"
-msgid_plural "Settings will be reverted in %d seconds"
-msgstr[0] "จะเรียกคืนค่าตั้งภายใน %d วินาที"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:111
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "คุณต้องการใช้ค่าตั้ง HiDPI นี้หรือไม่?"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:118
-msgid "Revert Settings"
-msgstr "เรียกคืนค่าตั้งเดิม"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:119
-msgid "Keep Changes"
-msgstr "ใช้ค่าตั้งนี้"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:137
-msgid "Attached Modal Dialogs"
-msgstr "แนบกล่องโต้ตอบแบบโมดัล"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:138
-msgid "Automatically Raise Windows"
-msgstr "ยกหน้าต่างขึ้นโดยอัตโนมัติ"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:139
-msgid "Resize with Secondary-click"
-msgstr "ปรับขนาดด้วยคลิกขวา"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:140
-msgid "Window Action Key"
-msgstr "ปุ่มสำหรับกระทำกับหน้าต่างด้วยเมาส์"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:144
-msgid "Focus Mode"
-msgstr "โหมดโฟกัส"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:145
-msgid "Titlebar Actions"
-msgstr "การกระทำที่แถบชื่อ"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:146
-msgid "Double-click"
-msgstr "ดับเบิลคลิก"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:147
-msgid "Middle-click"
-msgstr "คลิกปุ่มกลาง"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:148
-msgid "Secondary-click"
-msgstr "คลิกขวา"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:149
-msgid "Titlebar Buttons"
-msgstr "ปุ่มบนแถบชื่อ"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:150
-msgid "Maximize"
-msgstr "ขยายแผ่"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:151
-msgid "Minimize"
-msgstr "ย่อเก็บ"
-
-#: ../gtweak/tweaks/tweak_group_windows.py:152
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:29
-msgid "Middle-click Paste"
-msgstr "แปะด้วยการคลิกปุ่มกลาง"
-
-#. Translators: This setting refers to a set of pre-defined key bindings
-#: ../gtweak/tweaks/tweak_group_keymouse.py:41
-msgid "Key theme"
-msgstr "ชุดปุ่ม"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:60
-msgid "Keyboard and Mouse"
-msgstr "แป้นพิมพ์และเมาส์"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:61
-msgid "Show All Input Sources"
-msgstr "แสดงช่องทางป้อนข้อความเข้าทั้งหมด"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:66
-msgid "Switch between overview and desktop"
-msgstr "สลับระหว่างภาพรวมและพื้นโต๊ะ"
-
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Left super"
+#: gtweak/tweaks/tweak_group_keyboard.py:186 gtweak/tweaks/tweak_group_mouse.py:18
+msgid "Emacs Input"
+msgstr "อินพุตของ Emacs"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:189 gtweak/tweaks/tweak_group_mouse.py:21
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
+msgstr "ทับค่าปุ่มลัดเพื่อใช้ปุ่มลัดจากเครื่องมือแก้ไข Emacs"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:205 gtweak/tweaks/tweak_group_mouse.py:37
+msgid "Overview Shortcut"
+msgstr "ภาพรวมปุ่มลัด"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:212 gtweak/tweaks/tweak_group_mouse.py:44
+msgid "Left Super"
 msgstr "Super ซ้าย"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:69
-msgid "Right super"
+#: gtweak/tweaks/tweak_group_keyboard.py:216 gtweak/tweaks/tweak_group_mouse.py:48
+msgid "Right Super"
 msgstr "Super ขวา"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:72
-msgid "Acceleration profile"
-msgstr "โพร์ไฟล์การเร่งความเร็ว"
+#: gtweak/tweaks/tweak_group_keyboard.py:239 gtweak/tweaks/tweak_group_keyboard.py:247
+msgid "Additional Layout Options"
+msgstr "ตัวเลือกผังแป้นพิมพ์เพิ่มเติม"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:76
-msgid "Show location of pointer"
-msgstr "แสดงตำแหน่งตัวชี้"
+#: gtweak/tweaks/tweak_group_keyboard.py:269 gtweak/tweaks/tweak_group_mouse.py:67
+#: gtweak/tweaks/tweak_group_mouse.py:185
+msgid "Mouse Click Emulation"
+msgstr "จำลองการคลิกเมาส์"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:82
+#: gtweak/tweaks/tweak_group_keyboard.py:287 gtweak/tweaks/tweak_group_mouse.py:85
+msgid "Fingers"
+msgstr "นิ้วมือ"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:289 gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Click the touchpad with two fingers for right-click and three fingers for middle-click."
+msgstr "คลิกทัชแพดด้วยสองนิ้วสำหรับคลิกขวาและสามนิ้วสำหรับคลิกกลาง"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:313 gtweak/tweaks/tweak_group_mouse.py:111
+msgid "Area"
+msgstr "พื้นที่"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:315 gtweak/tweaks/tweak_group_mouse.py:113
+msgid ""
+"Click the bottom right of the touchpad for right-click and the bottom middle for middle-click."
+msgstr "คลิกล่างขวาของทัชแพดสำหรับคลิกเมาส์ขวาและล่างกลางสำหรับคลิกปุ่มกลาง"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:341 gtweak/tweaks/tweak_group_mouse.py:139
+msgid "Don’t use mouse click emulation."
+msgstr "ไม่ใช้การจำลองการคลิกเมาส์"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:379
+msgid "Show Extended Input Sources"
+msgstr "แสดงช่องทางป้อนข้อความเข้าที่ขยาย"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:382
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "เพิ่มทางเลือกของช่องทางป้อนข้อความเข้าในแอปพลิเคชันตั้งค่า"
+
+#: gtweak/tweaks/tweak_group_mouse.py:175 gtweak/tweaks/tweak_group_mouse.py:176
+msgid "Mouse"
+msgstr "เมาส์"
+
+#: gtweak/tweaks/tweak_group_mouse.py:177
+msgid "Middle Click Paste"
+msgstr "แปะด้วยการคลิกปุ่มกลาง"
+
+#: gtweak/tweaks/tweak_group_mouse.py:180
 msgid "Touchpad"
 msgstr "ทัชแพด"
 
-#: ../gtweak/tweaks/tweak_group_keymouse.py:83
-msgid "Click method"
-msgstr "วิธีการคลิก"
+#: gtweak/tweaks/tweak_group_mouse.py:181
+msgid "Disable While Typing"
+msgstr "ปิดใช้ขณะพิมพ์"
 
-#: ../gtweak/tweaks/tweak_wacom.py:29
-msgid "Device"
-msgstr "อุปกรณ์"
+#: gtweak/tweaks/tweak_group_sound.py:44
+msgid "System Sound Theme"
+msgstr ""
 
-#: ../gtweak/tweaks/tweak_wacom.py:38
-msgid "Wacom"
-msgstr "Wacom"
+#: gtweak/tweaks/tweak_group_sound.py:48
+msgid "Specifies which sound theme to use for sound events."
+msgstr "ระบุชุดเสียงที่ใช้สำหรับเสียงเหตุการณ์"
+
+#: gtweak/tweaks/tweak_group_startup.py:30
+msgid "Startup applications are automatically started when you log in."
+msgstr "แอปพลิเคชันขณะเริ่มวาระจะเริ่มทำงานโดยอัตโนมัติเมื่อคุณเข้าสู่ระบบ"
+
+#: gtweak/tweaks/tweak_group_startup.py:43
+msgid "Applications"
+msgstr "แอปพลิเคชัน"
+
+#: gtweak/tweaks/tweak_group_startup.py:49
+msgid "Search Applications…"
+msgstr "ค้นหาแอปพลิเคชัน…"
+
+#. Translators: This is the accelerator for opening the AppChooser search-bar
+#: gtweak/tweaks/tweak_group_startup.py:59
+msgid "<primary>f"
+msgstr "<primary>f"
+
+#: gtweak/tweaks/tweak_group_startup.py:77
+msgid "running"
+msgstr "ทำงานอยู่"
+
+#: gtweak/tweaks/tweak_group_startup.py:88
+msgid "_Close"
+msgstr "ปิ_ด"
+
+#: gtweak/tweaks/tweak_group_startup.py:89
+msgid "_Add"
+msgstr "เ_พิ่ม"
+
+#: gtweak/tweaks/tweak_group_startup.py:234
+msgid "Remove"
+msgstr "ลบออก"
+
+#: gtweak/tweaks/tweak_group_startup.py:258
+msgid "New startup application"
+msgstr "แอปพลิเคชันขณะเริ่มวาระรายการใหม่"
+
+#: gtweak/tweaks/tweak_group_startup.py:259
+msgid "Add a new application to be run at startup"
+msgstr "เพิ่มแอปพลิเคชันใหม่ที่จะให้ทำงานขณะเริ่มวาระ"
+
+#: gtweak/tweaks/tweak_group_windows.py:18
+msgid "Window Focus"
+msgstr "โฟกัสหน้าต่าง"
+
+#: gtweak/tweaks/tweak_group_windows.py:18 gtweak/tweaks/tweak_group_windows.py:36
+#: gtweak/tweaks/tweak_group_windows.py:314
+msgid "Click to Focus"
+msgstr "คลิกเพื่อโฟกัส"
+
+#: gtweak/tweaks/tweak_group_windows.py:38
+msgid "Windows are focused when they are clicked."
+msgstr "หน้าต่างถูกโฟกัสเมื่อถูกคลิก"
+
+#: gtweak/tweaks/tweak_group_windows.py:62
+msgid "Focus on Hover"
+msgstr "โฟกัสเมื่อวางแช่"
+
+#: gtweak/tweaks/tweak_group_windows.py:64
+msgid ""
+"Window is focused when hovered with the pointer. Windows remain focused when the desktop is "
+"hovered."
+msgstr "หน้าต่างถูกโฟกัสเมื่อวางแช่ตัวชี้ หน้าต่างยังคงถูกโฟกัสเมื่อเดสก์ท็อปถูกวางแช่"
+
+#: gtweak/tweaks/tweak_group_windows.py:88 gtweak/tweaks/tweak_group_windows.py:300
+msgid "Secondary-Click"
+msgstr "คลิกที่สอง"
+
+#: gtweak/tweaks/tweak_group_windows.py:90
+msgid ""
+"Window is focused when hovered with the pointer. Hovering the desktop removes focus from the "
+"previous window."
+msgstr "หน้าต่างถูกโฟกัสเมื่อวางแช่ตัวชี้ การวางแช่เดสก์ท็อปจะลบโฟกัสจากหน้าต่างก่อนหน้า"
+
+#: gtweak/tweaks/tweak_group_windows.py:129
+msgid "Window scaling"
+msgstr "การปรับขนาดหน้าต่าง"
+
+#: gtweak/tweaks/tweak_group_windows.py:129
+msgid "Adjust GDK window scaling factor for HiDPI"
+msgstr "ปรับตัวคูณปรับขนาดหน้าต่างของ GDK สำหรับ HiDPI"
+
+#: gtweak/tweaks/tweak_group_windows.py:157
+#, python-brace-format
+msgid "Settings will be reverted in {0} second"
+msgid_plural "Settings will be reverted in {0} seconds"
+msgstr[0] "จะเรียกคืนค่าตั้งภายใน {0} วินาที"
+
+#: gtweak/tweaks/tweak_group_windows.py:173
+msgid "Do you want to keep these HiDPI settings?"
+msgstr "คุณต้องการใช้ค่าตั้ง HiDPI นี้หรือไม่?"
+
+#: gtweak/tweaks/tweak_group_windows.py:180
+msgid "Revert Settings"
+msgstr "เรียกคืนค่าตั้งเดิม"
+
+#: gtweak/tweaks/tweak_group_windows.py:181
+msgid "Keep Changes"
+msgstr "ใช้ค่าตั้งนี้"
+
+#: gtweak/tweaks/tweak_group_windows.py:197
+msgid "HiDPI"
+msgstr "HiDPI"
+
+#: gtweak/tweaks/tweak_group_windows.py:246
+msgid "Placement"
+msgstr "การให้ตำแหน่ง"
+
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:260
+msgid "Left"
+msgstr "ซ้าย"
+
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:266
+msgid "Right"
+msgstr "ขวา"
+
+#: gtweak/tweaks/tweak_group_windows.py:297
+msgid "Titlebar Actions"
+msgstr "การกระทำที่แถบชื่อ"
+
+#: gtweak/tweaks/tweak_group_windows.py:298
+msgid "Double-Click"
+msgstr "ดับเบิลคลิก"
+
+#: gtweak/tweaks/tweak_group_windows.py:299
+msgid "Middle-Click"
+msgstr "คลิกปุ่มกลาง"
+
+#: gtweak/tweaks/tweak_group_windows.py:301
+msgid "Titlebar Buttons"
+msgstr "ปุ่มบนแถบชื่อ"
+
+#: gtweak/tweaks/tweak_group_windows.py:302
+msgid "Maximize"
+msgstr "ขยายแผ่"
+
+#: gtweak/tweaks/tweak_group_windows.py:303
+msgid "Minimize"
+msgstr "ย่อเก็บ"
+
+#: gtweak/tweaks/tweak_group_windows.py:305
+#, fuzzy
+#| msgid "Click to Focus"
+msgid "Click Actions"
+msgstr "คลิกเพื่อโฟกัส"
+
+#: gtweak/tweaks/tweak_group_windows.py:306
+msgid "Attach Modal Dialogs"
+msgstr "แนบกล่องโต้ตอบแบบโมดัล"
+
+#: gtweak/tweaks/tweak_group_windows.py:307
+msgid "When on, modal dialog windows are attached to their parent windows, and cannot be moved."
+msgstr "ขณะเปิด หน้าต่างกล่องโต้ตอบแบบโมดัลถูกแนบเข้ากับหน้าต่างแม่และไม่สามารถเคลื่อนที่ได้"
+
+#: gtweak/tweaks/tweak_group_windows.py:308
+msgid "Center New Windows"
+msgstr "หน้าต่างใหม่ตรงกลาง"
+
+#: gtweak/tweaks/tweak_group_windows.py:309
+msgid "Window Action Key"
+msgstr "ปุ่มสำหรับกระทำกับหน้าต่างด้วยเมาส์"
+
+#: gtweak/tweaks/tweak_group_windows.py:313
+msgid "Resize with Secondary-Click"
+msgstr "ปรับขนาดด้วยคลิกที่สอง"
+
+#: gtweak/tweaks/tweak_group_windows.py:314
+msgid "Focusing"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_windows.py:316
+msgid "Raise Windows When Focused"
+msgstr "ยกหน้าต่างเมื่อถูกโฟกัส"
+
+#: gtweak/tweakview.py:157
+msgid "Search Tweaks…"
+msgstr "ค้นหารายการดัดแปลง…"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: ../gtweak/utils.py:72
+#: gtweak/utils.py:63
 #, python-format
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(ปริยาย)</i>"
 
-#: ../gtweak/utils.py:329
+#: gtweak/utils.py:345
 msgid "Configuration changes require restart"
 msgstr "รายการเปลี่ยนแปลงค่าตั้งจำเป็นต้องเริ่มวาระใหม่"
 
-#: ../gtweak/utils.py:330
+#: gtweak/utils.py:346
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "จำเป็นต้องเริ่มต้นวาระของคุณใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
 
-#: ../gtweak/utils.py:334
+#: gtweak/utils.py:350
 msgid "Restart Session"
 msgstr "เริ่มวาระใหม่"
 
-#: ../gtweak/widgets.py:476
-msgid "Enable dark theme for all applications"
-msgstr "เปิดใช้ชุดตกแต่งแบบสีเข้มกับทุกโปรแกรม"
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "ปิดใช้ส่วนขยายของเชลล์ทั้งหมด"
 
-#: ../gtweak/widgets.py:477
-msgid "Enable the dark theme hint for all the applications in the session"
-msgstr "เปิดใช้ hint ของชุดตกแต่งแบบสีเข้มกับทุกโปรแกรมในวาระนี้"
+#~ msgid "General"
+#~ msgstr "ทั่วไป"
 
-#: ../gtweak/widgets.py:485
-msgid "Global Dark Theme"
-msgstr "ชุดตกแต่งแบบสีเข้มโดยรวม"
+#~| msgid "Theme"
+#~ msgid "Themes"
+#~ msgstr "ชุดตกแต่ง"
 
-#: ../gtweak/widgets.py:486
-msgid "Applications need to be restarted for change to take effect"
-msgstr "ต้องเริ่มต้นโปรแกรมต่างๆ ใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
+#~ msgid "Lock Screen"
+#~ msgstr "หน้าจอล็อค"
 
-#: ../gtweak/widgets.py:512
-msgid "Error writing setting"
-msgstr "เกิดข้อผิดพลาดขณะเขียนค่าตั้ง"
+#~| msgid "Show seconds"
+#~ msgid "Show Icons"
+#~ msgstr "แสดงไอคอน"
+
+#~ msgid "Home"
+#~ msgstr "บ้าน"
+
+#~ msgid "Desktop"
+#~ msgstr "พื้นโต๊ะ"
+
+#~ msgid "Icons on Desktop"
+#~ msgstr "ไอคอนบนพื้นโต๊ะ"
+
+#~ msgid "Network Servers"
+#~ msgstr "เซิร์ฟเวอร์ในเครือข่าย"
+
+#~ msgid "Trash"
+#~ msgstr "ถังขยะ"
+
+#~ msgid "Mounted Volumes"
+#~ msgstr "โวลุมที่เมานท์ไว้"
+
+#~| msgid "When Laptop Lid is Closed"
+#~ msgid "Suspend when laptop lid is closed"
+#~ msgstr "พักเครื่องเมื่อฝาแล็ปท็อปปิด"
+
+#~| msgid "Applications"
+#~ msgid "Animations"
+#~ msgstr "ภาพเคลื่อนไหว"
+
+#~| msgid "Applications"
+#~ msgid "Over-Amplification"
+#~ msgstr "การขยายที่มากเกิน"
+
+#~ msgid ""
+#~ "Allows raising the volume above 100%. This can result in a loss of audio quality; it is "
+#~ "better to increase application volume settings, if possible."
+#~ msgstr "ให้เพิ่มความดังเกิน 100% ทำให้สูญเสียคุณภาพเสียง เป็นการดีกว่าเพิ่มค่าตั้งความดังของโปรแกรม ถ้าเป็นไปได้"
+
+#~ msgid "Compose Key"
+#~ msgstr "ปุ่ม Compose"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Scroll Lock"
+
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "เมนู"
+
+#~| msgid "Right super"
+#~ msgid "Right Alt"
+#~ msgstr "Alt ขวา"
+
+#~| msgid "Right super"
+#~ msgid "Right Ctrl"
+#~ msgstr "Ctrl ขวา"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Caps Lock"
+
+#~| msgid "Left super"
+#~ msgid "Left Ctrl"
+#~ msgstr "Ctrl ซ้าย"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "ให้การป้อนมูลอักขระเพิ่มเติม"
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use it, press the "
+#~ "compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For example, compose key "
+#~ "followed by <b>C</b> and <b>o</b> will enter <b>©</b>, <b>a</b> followed by <b>'</b> will "
+#~ "enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "ปุ่ม compose ให้ป้อนอักขระได้หลากหลาย การใช้ปุ่มนี้ กดปุ่ม compose แล้วตามด้วยอักขระ\n"
+#~ "\n"
+#~ "อักขระไม่ธรรมดามากมายสามารถป้อนได้โดยการรวมปุ่มมาตรฐาน ตัวอย่างเช่น ปุ่ม compose key ตามด้วย <b>C</b> "
+#~ "และ <b>o</b> จะป้อน <b>©</b>, <b>a</b> ตามด้วย <b>'</b> จะป้อน <b>á</b>.\n"
+
+#~| msgid "Keyboard and Mouse"
+#~ msgid "Keyboard & Mouse"
+#~ msgstr "แป้นพิมพ์ & เมาส์"
+
+#~| msgid "Acceleration profile"
+#~ msgid "Acceleration Profile"
+#~ msgstr "โพร์ไฟล์การเร่งความเร็ว"
+
+#~| msgid "Background Location"
+#~ msgid "Pointer Location"
+#~ msgstr "ตำแหน่งตัวชี้"
+
+#~ msgid "Press the Ctrl key to highlight the pointer."
+#~ msgstr "กดปุ่ม Ctrl เพื่อเน้นตัวชี้"
+
+#~| msgid "%s extension installed successfully"
+#~ msgid "No Extensions Installed"
+#~ msgstr "ไม่ได้ติดตั้งส่วนขยาย"
+
+#~ msgid "Browse in Software"
+#~ msgstr "เรียกดูในซอฟต์แวร์"
+
+#~ msgid "Extension downloading"
+#~ msgstr "ส่วนขยายกำลังดาวน์โหลด"
+
+#~ msgid "Error loading extension"
+#~ msgstr "เกิดข้อผิดพลาดขณะโหลดส่วนขยาย"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "ส่วนขยายไม่รองรับเชลล์รุ่นนี้"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "เกิดข้อผิดพลาดไม่ทราบสาเหตุของส่วนขยาย"
+
+#~ msgid "Updating"
+#~ msgstr "กำลังปรับรุ่น"
+
+#~ msgid "Error"
+#~ msgstr "ข้อผิดพลาด"
+
+#~ msgid "Update"
+#~ msgstr "ปรับรุ่น"
+
+#~| msgid "Window Titles"
+#~ msgid "Window Titlebars"
+#~ msgstr "แถบชื่อหน้าต่าง"
+
+#~ msgid "Top Bar"
+#~ msgstr "แถบด้านบน"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "ภาพรวมกิจกรรมมุมร้อนแรง"
+
+#~| msgid "On Battery Power"
+#~ msgid "Battery Percentage"
+#~ msgstr "เปอร์เซ็นต์แบตเตอรี่"
+
+#~ msgid "Clock"
+#~ msgstr "นาฬิกา"
+
+#~ msgid "Weekday"
+#~ msgstr "วันธรรมดา"
+
+#~ msgid "Date"
+#~ msgstr "วันที่"
+
+#~| msgid "Show seconds"
+#~ msgid "Seconds"
+#~ msgstr "วินาที"
+
+#~ msgid "Calendar"
+#~ msgstr "ปฎิทิน"
+
+#~| msgid "Show week numbers"
+#~ msgid "Week Numbers"
+#~ msgstr "เลขสัปดาห์"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "การปูหน้าต่างชิดขอบ"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr "เมื่อเปิด หน้าต่างถูกปูเมื่อลากไปยังขอบจอภาพ"
+
+#~| msgid "Workspaces"
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "พื้นที่ทำงานไม่ตายตัว"
+
+#~ msgid "Workspaces can be created on demand, and are automatically removed when empty."
+#~ msgstr "พื้นที่ทำงานสามารถสร้างตามต้องการและถูกลบโดยอัตโนมัติเมื่อว่างเปล่า"
+
+#~| msgid "Workspaces"
+#~ msgid "Static Workspaces"
+#~ msgstr "พื้นที่ทำงานตายตัว"
+
+#~| msgid "Number of Workspaces"
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "จำนวนพื้นที่ทำงานคงที่"
+
+#~ msgid "Workspaces"
+#~ msgstr "พื้นที่ทำงาน"
+
+#~ msgid "Display Handling"
+#~ msgstr "การจัดการจอภาพ"
+
+#~| msgid "Workspaces only on primary display"
+#~ msgid "Workspaces span displays"
+#~ msgstr "พื้นที่ทำงานเกินจอภาพ"
+
+#~| msgid "Workspaces only on primary display"
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "พื้นที่ทำงานอยู่บนจอภาพหลักเท่านั้น"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "จอภาพเพิ่มเติมถือเป็นพื้นที่ทำงานอิสระ"
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "พื้นที่ทำงานปัจจุบันรวมถึงจอภาพเพิ่มเติม"
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "จำนวนพื้นที่ทำงาน"
+
+#~ msgid "Device"
+#~ msgstr "อุปกรณ์"
+
+#~ msgid "Wacom"
+#~ msgstr "Wacom"
+
+#~ msgid "Tweak Tool"
+#~ msgstr "เครื่องมือดัดแปลง"
+
+#~ msgid "_About"
+#~ msgstr "เ_กี่ยวกับ"
+
+#~ msgid "_Quit"
+#~ msgstr "_ออก"
+
+#~ msgid "GNOME Shell v%s (%s mode)"
+#~ msgstr "เชลล์ GNOME v%s (โหมด %s)"
+
+#~ msgid "Power"
+#~ msgstr "พลังงาน"
+
+#~ msgid "Files"
+#~ msgstr "แฟ้ม"
+
+#~ msgid "Computer"
+#~ msgstr "คอมพิวเตอร์"
+
+#~ msgid "Mode"
+#~ msgstr "โหมด"
+
+#~ msgid "Lock Screen Location"
+#~ msgstr "ตำแหน่งเก็บของภาพหน้าจอล็อค"
+
+#~ msgid "Enable animations"
+#~ msgstr "เปิดใช้ภาพเคลื่อนไหว"
+
+#~ msgid "Uninstall Extension"
+#~ msgstr "ถอดถอนส่วนขยาย"
+
+#~ msgid "Do you want to uninstall the '%s' extension?"
+#~ msgstr "คุณต้องการถอดถอนส่วนขยาย '%s' หรือไม่?"
+
+#~ msgid "Install Shell Extension"
+#~ msgstr "ติดตั้งส่วนขยายของเชลล์"
+
+#~ msgid "Select an extension"
+#~ msgstr "เลือกส่วนขยาย"
+
+#~ msgid "Get more extensions"
+#~ msgstr "รับส่วนขยายเพิ่มเติม"
+
+#~ msgid "%s extension updated successfully"
+#~ msgstr "ปรับรุ่นส่วนขยาย %s เรียบร้อยแล้ว"
+
+#~ msgid "Error installing extension"
+#~ msgstr "เกิดข้อผิดพลาดขณะติดตั้งส่วนขยาย"
+
+#~ msgid "Invalid extension"
+#~ msgstr "ส่วนขยายไม่ถูกต้อง"
+
+#~ msgid "Show Application Menu"
+#~ msgstr "แสดงเมนูโปรแกรม"
+
+#~ msgid "Workspace Creation"
+#~ msgstr "การสร้างพื้นที่ทำงาน"
+
+#~ msgid "Dynamic"
+#~ msgstr "ไม่ตายตัว"
+
+#~ msgid "Static"
+#~ msgstr "ตายตัว"
+
+#~ msgid "Don't suspend on lid close"
+#~ msgstr "ไม่พักเครื่องเมื่อปิดฝาเครื่อง"
+
+#~ msgid "Show date"
+#~ msgstr "แสดงวันที่"
+
+#~ msgid "When Power Button is Pressed"
+#~ msgstr "เมื่อกดปุ่มเปิด-ปิดเครื่อง"
+
+#~ msgid "Action"
+#~ msgstr "การกระทำ"
+
+#~ msgid "When plugged in"
+#~ msgstr "เมื่อเสียบปลั๊กไฟ"
+
+#~ msgid "Suspend even if an external monitor is plugged in"
+#~ msgstr "พักเครื่องแม้ว่าจอภาพภายนอกยังเสียบอยู่"
+
+#~ msgid "Automatically Raise Windows"
+#~ msgstr "ยกหน้าต่างขึ้นโดยอัตโนมัติ"
+
+#~ msgid "Key theme"
+#~ msgstr "ชุดปุ่ม"
+
+#~ msgid "Switch between overview and desktop"
+#~ msgstr "สลับระหว่างภาพรวมและพื้นโต๊ะ"
+
+#~ msgid "Show location of pointer"
+#~ msgstr "แสดงตำแหน่งตัวชี้"
+
+#~ msgid "Enable dark theme for all applications"
+#~ msgstr "เปิดใช้ชุดตกแต่งแบบสีเข้มกับทุกโปรแกรม"
+
+#~ msgid "Enable the dark theme hint for all the applications in the session"
+#~ msgstr "เปิดใช้ hint ของชุดตกแต่งแบบสีเข้มกับทุกโปรแกรมในวาระนี้"
+
+#~ msgid "Global Dark Theme"
+#~ msgstr "ชุดตกแต่งแบบสีเข้มโดยรวม"
+
+#~ msgid "Applications need to be restarted for change to take effect"
+#~ msgstr "ต้องเริ่มต้นโปรแกรมต่างๆ ใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
 
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "เกี่ยวกับเครื่องมือดัดแปลงของ GNOME"
@@ -664,9 +939,6 @@ msgstr "เกิดข้อผิดพลาดขณะเขียนค่
 
 #~ msgid "_Help"
 #~ msgstr "_วิธีใช้"
-
-#~ msgid "_About Tweak Tool"
-#~ msgstr "เ_กี่ยวกับเครื่องมือดัดแปลง"
 
 #~ msgid "The shell must be restarted for changes to take effect"
 #~ msgstr "เชลล์ต้องเริ่มต้นใหม่เพื่อให้การเปลี่ยนแปลงมีผล"
