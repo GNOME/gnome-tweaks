@@ -84,7 +84,7 @@ class GnomeTweaks(Adw.Application):
                                    message_type=Gtk.MessageType.QUESTION,
                                    buttons=Gtk.ButtonsType.OK_CANCEL,
                                    text=_("Reset to Defaults"),
-                                   secondary_text=_("Reset all tweaks settings to the originl default state?"))
+                                   secondary_text=_("Reset all tweaks settings to the original default state?"))
 
         dialog.connect("response", _on_dialog_response)
         dialog.present()
