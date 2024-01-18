@@ -3,42 +3,43 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Sergiy Gavrylov <sergiovana@bigmir.net>, 2011.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2014, 2015, 2016.
-# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022, 2023.
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-12-23 09:25+0000\n"
-"PO-Revision-Date: 2023-12-24 16:29+0200\n"
-"Last-Translator: Yevhen Popok <xalt7x.service@gmail.com>\n"
+"POT-Creation-Date: 2024-01-18 10:24+0000\n"
+"PO-Revision-Date: 2024-01-18 21:49+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.04.1\n"
 "X-Project-Style: gnome\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "Проєкт GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "Налаштування GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "Додаткові налаштування для GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "\"Налаштування GNOME\" дозволяє коригувати додаткові параметри GNOME."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
 "It can manage keyboard mapping customizations, add startup applications, and "
 "set custom window controls among other settings."
@@ -47,7 +48,8 @@ msgstr ""
 "додавати програми до списку автоматичного запуску і встановлювати нетипові "
 "засоби керування вікнами."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:98
+#: gtweak/tweakview.py:134
 msgid "Tweaks"
 msgstr "Налаштування"
 
@@ -56,41 +58,39 @@ msgstr "Налаштування"
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr "Параметри;Додаткові;Налаштування;Шрифти;Теми;XKB;Клавіатура;Введення;"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "_Відновити типові значення"
 
-#: data/shell.ui:13
+#: data/shell.ui:12
 msgid "_About Tweaks"
 msgstr "_Про програму"
 
-#: data/tweaks.ui:63 gtweak/tweaks/tweak_group_font.py:124
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
 msgid "Fonts"
 msgstr "Шрифти"
 
-#: data/tweaks.ui:97 gtweak/tweaks/tweak_group_appearance.py:257
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:260
 msgid "Appearance"
 msgstr "Зовнішній вигляд"
 
-#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Звук"
 
-#: data/tweaks.ui:165
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:52
 msgid "Mouse & Touchpad"
 msgstr "Миша та сенсорний пристрій"
 
-#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
-#: gtweak/tweaks/tweak_group_keyboard.py:378
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
 msgid "Keyboard"
 msgstr "Клавіатура"
 
-#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
 msgid "Windows"
 msgstr "Вікна"
 
-#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:309
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup Applications"
 msgstr "Програми у автозапуску"
 
@@ -118,89 +118,83 @@ msgstr ""
 "Ми рекомендуємо отримати «Розширення» GNOME з {0}, якщо їх не включено до "
 "вашого дистрибутиву."
 
-#: gtweak/app.py:81
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "Відновити типові значення"
 
-#: gtweak/app.py:82
-msgid "Reset all tweak settings to the original default state?"
+#: gtweak/app.py:87
+#| msgid "Reset all tweak settings to the original default state?"
+msgid "Reset all tweaks settings to the original default state?"
 msgstr "Скинути всі налаштування до початкових?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:101
-#, python-format
-msgid "(%s mode)"
-msgstr "(%s mode)"
-
-#: gtweak/app.py:104
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell не запущено"
 
-#: gtweak/app.py:106
-msgid "GTK"
-msgstr "GTK"
-
-#: gtweak/app.py:113
-msgid "Homepage"
-msgstr "Домашня сторінка"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2024"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
 msgstr "Інше"
 
-#: gtweak/tweaks/tweak_group_appearance.py:31
+#: gtweak/tweaks/tweak_group_appearance.py:35
 msgid "Legacy Applications"
 msgstr "Застарілі програми"
 
-#: gtweak/tweaks/tweak_group_appearance.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:67
 msgid "Error writing setting"
 msgstr "Помилка запису параметрів"
 
-#: gtweak/tweaks/tweak_group_appearance.py:71
+#: gtweak/tweaks/tweak_group_appearance.py:73
 msgid "Icons"
 msgstr "Піктограми"
 
-#: gtweak/tweaks/tweak_group_appearance.py:86
+#: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Cursor"
 msgstr "Курсор"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell"
 msgstr "Оболонка"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Install custom or user themes for gnome-shell"
 msgstr "Встановлювати власні або користувацькі теми для gnome-shell"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:115
 msgid "Unknown error"
 msgstr "Невідома помилка"
 
-#: gtweak/tweaks/tweak_group_appearance.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell not running"
 msgstr "Оболонку не запущено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:140
+#: gtweak/tweaks/tweak_group_appearance.py:142
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "Розширення користувацької теми для оболонки неправильно встановлено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:145
 msgid "Shell user-theme extension not enabled"
 msgstr "Розширення користувацької тема для оболонки не ввімкнено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:148
 msgid "Could not list shell extensions"
 msgstr "Не вдалося перелічити розширення для оболонки"
 
-#: gtweak/tweaks/tweak_group_appearance.py:176
+#: gtweak/tweaks/tweak_group_appearance.py:178
 msgid "<i>Default</i>"
 msgstr "<i>Типове</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:182
+#: gtweak/tweaks/tweak_group_appearance.py:183
 msgid "Select a theme"
 msgstr "Виберіть тему"
 
@@ -223,128 +217,146 @@ msgstr "Помилка встановлення теми"
 msgid "Invalid theme"
 msgstr "Некоректна тема"
 
-#: gtweak/tweaks/tweak_group_appearance.py:258
+#: gtweak/tweaks/tweak_group_appearance.py:261
 msgid "Styles"
 msgstr "Стилі"
 
-#: gtweak/tweaks/tweak_group_appearance.py:263
+#: gtweak/tweaks/tweak_group_appearance.py:268
 msgid "Background"
 msgstr "Тло"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
+#: gtweak/tweaks/tweak_group_appearance.py:270
 msgid "Image"
 msgstr "Зображення"
 
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:276
 msgid "Adjustment"
 msgstr "Коригування"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "Хінтінг"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:75
-msgid "Antialiasing"
-msgstr "Згладжування"
-
-#: gtweak/tweaks/tweak_group_font.py:52
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "Повний"
 
-#: gtweak/tweaks/tweak_group_font.py:58
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "Середній"
 
-#: gtweak/tweaks/tweak_group_font.py:64
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "Легкий"
 
-#: gtweak/tweaks/tweak_group_font.py:70 gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:413 gtweak/widgets.py:562
 msgid "None"
 msgstr "Відсутній"
 
-#: gtweak/tweaks/tweak_group_font.py:88
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "Згладжування"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "Субпіксельне (для LCD екранів)"
 
-#: gtweak/tweaks/tweak_group_font.py:94
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "Стандартне (градації сірого)"
 
-#: gtweak/tweaks/tweak_group_font.py:125
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "Бажані шрифти"
+
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
 msgstr "Текст інтерфейсу"
 
-#: gtweak/tweaks/tweak_group_font.py:126
+#: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
 msgstr "Текст документа"
 
-#: gtweak/tweaks/tweak_group_font.py:127
+#: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
 msgstr "Моноширинний текст"
 
-#: gtweak/tweaks/tweak_group_font.py:128
+#: gtweak/tweaks/tweak_group_font.py:43
 msgid "Legacy Window Titles"
 msgstr "Заголовки вікон застарілих програм"
 
-#: gtweak/tweaks/tweak_group_font.py:130
+#: gtweak/tweaks/tweak_group_font.py:46
+msgid "Rendering"
+msgstr "Обробка"
+
+#: gtweak/tweaks/tweak_group_font.py:50
+msgid "Size"
+msgstr "Розмір"
+
+#: gtweak/tweaks/tweak_group_font.py:51
 msgid "Scaling Factor"
 msgstr "Коефіцієнт масштабування"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_keyboard.py:339
-#: gtweak/tweaks/tweak_group_mouse.py:137
-#: gtweak/tweaks/tweak_group_windows.py:312
+#: gtweak/tweaks/tweak_group_mouse.py:47
+#: gtweak/tweaks/tweak_group_windows.py:153
 msgid "Disabled"
 msgstr "Вимкнено"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:170
+#: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "Введення тексту"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:18
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:14
 msgid "Emacs Input"
 msgstr "Введення Emacs"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:189
-#: gtweak/tweaks/tweak_group_mouse.py:21
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:17
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr ""
 "Перевизначає комбінації клавіш для використання комбінацій з редактора Emacs."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:205
-#: gtweak/tweaks/tweak_group_mouse.py:37
+#: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
 msgstr "Клавіша, щоб відкрити Огляд"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:212
-#: gtweak/tweaks/tweak_group_mouse.py:44
+#: gtweak/tweaks/tweak_group_keyboard.py:210
 msgid "Left Super"
 msgstr "Super ліворуч"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:216
-#: gtweak/tweaks/tweak_group_mouse.py:48
+#: gtweak/tweaks/tweak_group_keyboard.py:211
 msgid "Right Super"
 msgstr "Super праворуч"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:239
-#: gtweak/tweaks/tweak_group_keyboard.py:247
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Додаткові параметри розкладки"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:269
-#: gtweak/tweaks/tweak_group_mouse.py:67 gtweak/tweaks/tweak_group_mouse.py:185
+#: gtweak/tweaks/tweak_group_keyboard.py:259
+msgid "Show Extended Input Sources"
+msgstr "Показати всі джерела вводу"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:262
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "Збільшує вибір джерел вхідних даних у додатку Параметри."
+
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "Компонування"
+
+#: gtweak/tweaks/tweak_group_mouse.py:32
 msgid "Mouse Click Emulation"
 msgstr "Емуляція кнопок миші"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:287
-#: gtweak/tweaks/tweak_group_mouse.py:85
+#: gtweak/tweaks/tweak_group_mouse.py:37
 msgid "Fingers"
 msgstr "Пальці"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:289
-#: gtweak/tweaks/tweak_group_mouse.py:87
+#: gtweak/tweaks/tweak_group_mouse.py:39
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
@@ -352,13 +364,11 @@ msgstr ""
 "Натисніть на сенсорну панель двома пальцями для емуляції кліку правою кнопки "
 "миші та трьома пальцями для емуляції середньої."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:313
-#: gtweak/tweaks/tweak_group_mouse.py:111
+#: gtweak/tweaks/tweak_group_mouse.py:42
 msgid "Area"
 msgstr "Площа"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:315
-#: gtweak/tweaks/tweak_group_mouse.py:113
+#: gtweak/tweaks/tweak_group_mouse.py:44
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -366,33 +376,23 @@ msgstr ""
 "Клацніть праворуч у нижній частині сенсорної панелі для емуляції кліку "
 "правою кнопкою миші та нижньої частини для емуляції середньої."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:341
-#: gtweak/tweaks/tweak_group_mouse.py:139
+#: gtweak/tweaks/tweak_group_mouse.py:49
 msgid "Don’t use mouse click emulation."
 msgstr "Не використовувати емуляцію миші."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:379
-msgid "Show Extended Input Sources"
-msgstr "Показати всі джерела вводу"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:382
-msgid "Increases the choice of input sources in the Settings application."
-msgstr "Збільшує вибір джерел вхідних даних у додатку Параметри."
-
-#: gtweak/tweaks/tweak_group_mouse.py:175
-#: gtweak/tweaks/tweak_group_mouse.py:176
+#: gtweak/tweaks/tweak_group_mouse.py:53
 msgid "Mouse"
 msgstr "Миша"
 
-#: gtweak/tweaks/tweak_group_mouse.py:177
+#: gtweak/tweaks/tweak_group_mouse.py:54
 msgid "Middle Click Paste"
 msgstr "Вставлення за допомогою середньої кнопки миші"
 
-#: gtweak/tweaks/tweak_group_mouse.py:180
+#: gtweak/tweaks/tweak_group_mouse.py:58
 msgid "Touchpad"
 msgstr "Сенсорна панель"
 
-#: gtweak/tweaks/tweak_group_mouse.py:181
+#: gtweak/tweaks/tweak_group_mouse.py:59
 msgid "Disable While Typing"
 msgstr "Вимкнути під час введення тексту"
 
@@ -404,67 +404,71 @@ msgstr "Звукова тема системи"
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Вказує, яку звукову тему використовувати для звукових подій."
 
-#: gtweak/tweaks/tweak_group_startup.py:30
-msgid "Startup applications are automatically started when you log in."
-msgstr ""
-"Програми у автозапуску автоматично запускаються під час входу в систему."
+#: gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "запущено"
 
-#: gtweak/tweaks/tweak_group_startup.py:43
-msgid "Applications"
-msgstr "Програми"
+#: gtweak/tweaks/tweak_group_startup.py:61
+#| msgid "Legacy Applications"
+msgid "Select Application"
+msgstr "Виберіть програму"
 
-#: gtweak/tweaks/tweak_group_startup.py:49
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
+msgid "_Close"
+msgstr "_Закрити"
+
+#: gtweak/tweaks/tweak_group_startup.py:68
+msgid "_Add"
+msgstr "_Додати"
+
+#: gtweak/tweaks/tweak_group_startup.py:72
 msgid "Search Applications…"
 msgstr "Пошук програм…"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:59
+#: gtweak/tweaks/tweak_group_startup.py:126 gtweak/tweakview.py:181
 msgid "<primary>f"
 msgstr "<primary>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
-msgid "running"
-msgstr "запущено"
-
-#: gtweak/tweaks/tweak_group_startup.py:88
-msgid "_Close"
-msgstr "_Закрити"
-
-#: gtweak/tweaks/tweak_group_startup.py:89
-msgid "_Add"
-msgstr "_Додати"
-
-#: gtweak/tweaks/tweak_group_startup.py:234
+#: gtweak/tweaks/tweak_group_startup.py:195
 msgid "Remove"
 msgstr "Видалити"
 
+#: gtweak/tweaks/tweak_group_startup.py:221
+msgid "Startup applications are automatically started when you log in."
+msgstr ""
+"Програми у автозапуску автоматично запускаються під час входу в систему."
+
 #: gtweak/tweaks/tweak_group_startup.py:258
-msgid "New startup application"
-msgstr "Додати програму у автозапуск"
+#| msgid "Startup Applications"
+msgid "No Startup Applications"
+msgstr "Немає програм у автозапуску"
 
 #: gtweak/tweaks/tweak_group_startup.py:259
-msgid "Add a new application to be run at startup"
-msgstr "Додати нову програму, яка буде автоматично запускатись"
+#| msgid "New startup application"
+msgid "Add a statup application"
+msgstr "Додати програму у автозапуск"
 
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Фокусування вікна"
 
+#: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Click to Focus"
 msgstr "Натисніть, щоб сфокусуватися"
 
-#: gtweak/tweaks/tweak_group_windows.py:38
+#: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
 msgstr "Вікна фокусуються при кліку."
 
-#: gtweak/tweaks/tweak_group_windows.py:62
+#: gtweak/tweaks/tweak_group_windows.py:23
 msgid "Focus on Hover"
 msgstr "Фокусування наведенням"
 
-#: gtweak/tweaks/tweak_group_windows.py:64
+#: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -472,12 +476,12 @@ msgstr ""
 "Вікно фокусується при при наведенні. Вікно залишається у фокусі, коли курсор "
 "наведений на робочий стіл."
 
-#: gtweak/tweaks/tweak_group_windows.py:88
-#: gtweak/tweaks/tweak_group_windows.py:300
-msgid "Secondary-Click"
-msgstr "Правий клік"
+#: gtweak/tweaks/tweak_group_windows.py:28
+#| msgid "Focus on Hover"
+msgid "Focus Follows Mouse"
+msgstr "Фокус йде за мишкою"
 
-#: gtweak/tweaks/tweak_group_windows.py:90
+#: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -485,87 +489,59 @@ msgstr ""
 "Вікно фокусується при при наведенні. Наведення на робочий стіл знімає фокус "
 "з попереднього вікна."
 
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Window scaling"
-msgstr "Масштабування вікон"
-
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Налаштувати коефіцієнт масштабування вікна GDK для HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:157
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Параметри буде повернуто через {0} секунду"
-msgstr[1] "Параметри буде повернуто через {0} секунди"
-msgstr[2] "Параметри буде повернуто через {0} секунд"
-
-#: gtweak/tweaks/tweak_group_windows.py:173
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Ви хочете зберегти ці налаштування HiDPI?"
-
-#: gtweak/tweaks/tweak_group_windows.py:180
-msgid "Revert Settings"
-msgstr "Повернути налаштування"
-
-#: gtweak/tweaks/tweak_group_windows.py:181
-msgid "Keep Changes"
-msgstr "Зберегти зміни"
-
-#: gtweak/tweaks/tweak_group_windows.py:197
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:246
+#: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
 msgstr "Розміщення"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:260
+#: gtweak/tweaks/tweak_group_windows.py:97
 msgid "Left"
 msgstr "Ліворуч"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:266
+#: gtweak/tweaks/tweak_group_windows.py:100
 msgid "Right"
 msgstr "Праворуч"
 
-#: gtweak/tweaks/tweak_group_windows.py:297
+#: gtweak/tweaks/tweak_group_windows.py:135
 msgid "Titlebar Actions"
 msgstr "Дії з заголовком"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
+#: gtweak/tweaks/tweak_group_windows.py:136
 msgid "Double-Click"
 msgstr "Подвійний клік"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:137
 msgid "Middle-Click"
 msgstr "Клік середньою кнопкою"
 
-#: gtweak/tweaks/tweak_group_windows.py:301
+#: gtweak/tweaks/tweak_group_windows.py:138
+msgid "Secondary-Click"
+msgstr "Правий клік"
+
+#: gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "Кнопки у заголовку"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "Розгорнути"
 
-#: gtweak/tweaks/tweak_group_windows.py:303
+#: gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "Згорнути"
 
-#: gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_windows.py:146
 msgid "Click Actions"
 msgstr "Дії при натисканні"
 
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "Прикріпити модальні діалоги"
 
-#: gtweak/tweaks/tweak_group_windows.py:307
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -573,44 +549,85 @@ msgstr ""
 "Коли ввімкнено, модальні діалогові вікна прикріпляються до батьківських "
 "вікон і не можуть бути переміщені."
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
 msgstr "Центрувати нові вікна"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "Клавіша дії вікна"
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "Змінити розмір за допомогою правого кліку"
 
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Focusing"
-msgstr "Фокусування"
-
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "Показувати вікна під час фокусування"
 
-#: gtweak/tweakview.py:157
+#: gtweak/tweakview.py:161
 msgid "Search Tweaks…"
 msgstr "Пошук налаштувань…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(типове)</i>"
+#| msgid "%s <i>(default)</i>"
+msgid "%s (default)"
+msgstr "%s (типова)"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "Зміна параметрів потребує перезавантаження"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Слід перезапустити сеанс, щоб зміни набули чинності"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Перезапустити сеанс"
+
+#, python-format
+#~ msgid "(%s mode)"
+#~ msgstr "(%s mode)"
+
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Домашня сторінка"
+
+#~ msgid "Applications"
+#~ msgstr "Програми"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Додати нову програму, яка буде автоматично запускатись"
+
+#~ msgid "Window scaling"
+#~ msgstr "Масштабування вікон"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr "Налаштувати коефіцієнт масштабування вікна GDK для HiDPI"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "Параметри буде повернуто через {0} секунду"
+#~ msgstr[1] "Параметри буде повернуто через {0} секунди"
+#~ msgstr[2] "Параметри буде повернуто через {0} секунд"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "Ви хочете зберегти ці налаштування HiDPI?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "Повернути налаштування"
+
+#~ msgid "Keep Changes"
+#~ msgstr "Зберегти зміни"
+
+#~ msgid "HiDPI"
+#~ msgstr "HiDPI"
+
+#~ msgid "Focusing"
+#~ msgstr "Фокусування"
