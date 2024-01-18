@@ -25,7 +25,7 @@ class Focus(TweaksCheckGroupActionRow):
                 "Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered."))
 
         self.add_row(
-            key_name="mouse", title=_("Secondary-Click"),
+            key_name="mouse", title=_("Focus Follows Mouse"),
             subtitle=_(
                 "Window is focused when hovered with the pointer. Hovering the desktop removes focus "
                 "from the previous window."))
