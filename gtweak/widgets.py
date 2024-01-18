@@ -10,6 +10,7 @@ from gi.repository import Adw, GLib, GObject, Gtk, Gio, Pango
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
 from gtweak.gshellwrapper import GnomeShellFactory
+from gtweak.utils import SchemaList
 
 UI_BOX_SPACING = 4
 _shell = GnomeShellFactory().get_shell()
@@ -147,10 +148,14 @@ def build_listrow_hbox(label: str, description: str) -> Gtk.Box:
 
 
 class _GSettingsTweak(Tweak):
-    def __init__(self, title, schema_name, key_name, **options):
+    def __init__(self, title, schema_name, key_name, resettable_to_default=True, **options):
         self.schema_name = schema_name
         self.key_name = key_name
         self._extra_info = None
+
+        if resettable_to_default:
+            SchemaList.insert(key_name, schema_name)
+
         if 'uid' not in options:
             options['uid'] = key_name
         try:
@@ -240,7 +245,7 @@ class ListBoxTweakGroup(Gtk.ListBox, TweakGroup):
     # FIXME: need to add remove_tweak_row and remove_tweak (which clears
     # the search cache etc)
 
-    def add_tweak_row(self, t, activatable=False, position=None):
+    def add_tweak_row(self, t: Tweak, activatable=False, position=None):
         if self.add_tweak(t):
             if isinstance(t, Gtk.ListBoxRow):
                 row = t
