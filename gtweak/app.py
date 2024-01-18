@@ -82,8 +82,7 @@ class GnomeTweaks(Gtk.Application):
         dialog.format_secondary_text(_("Reset all tweak settings to the original default state?"))
         response = dialog.run()
         if response == Gtk.ResponseType.OK:
-            s = SchemaList()
-            s.reset()
+            SchemaList.reset()
         dialog.destroy()
 
     def help_cb(self, action, parameter):

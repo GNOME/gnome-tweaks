@@ -9,6 +9,7 @@ from gi.repository import GLib, GObject, Gtk, Gio, Pango
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
 from gtweak.gshellwrapper import GnomeShellFactory
+from gtweak.utils import SchemaList
 
 UI_BOX_SPACING = 4
 _shell = GnomeShellFactory().get_shell()
@@ -120,10 +121,14 @@ def build_tight_button(stock_id):
 
 
 class _GSettingsTweak(Tweak):
-    def __init__(self, title, schema_name, key_name, **options):
+    def __init__(self, title, schema_name, key_name, resettable_to_default=True, **options):
         self.schema_name = schema_name
         self.key_name = key_name
         self._extra_info = None
+
+        if resettable_to_default:
+            SchemaList.insert(key_name, schema_name)
+
         if 'uid' not in options:
             options['uid'] = key_name
         try:
