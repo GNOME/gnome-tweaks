@@ -75,8 +75,7 @@ class GnomeTweaks(Adw.Application):
     def reset_cb(self, action, parameter):
         def _on_dialog_response(_dialog, response_type):
             if response_type == Gtk.ResponseType.OK:
-                s = SchemaList()
-                s.reset()
+                SchemaList.reset()
 
             _dialog.destroy()
 

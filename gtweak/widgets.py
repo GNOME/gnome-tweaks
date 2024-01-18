@@ -9,6 +9,7 @@ from gi.repository import Adw, GLib, Gtk, Gio, GObject, Pango
 
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
+from gtweak.utils import SchemaList
 
 UI_BOX_SPACING = 4
 UI_BOX_HORIZONTAL_SPACING = 10
@@ -151,10 +152,14 @@ class TickActionRow(Adw.ActionRow):
 
 
 class _GSettingsTweak(Tweak):
-    def __init__(self, title, schema_name, key_name, **options):
+    def __init__(self, title, schema_name, key_name, resettable_to_default=True, **options):
         self.schema_name = schema_name
         self.key_name = key_name
         self._extra_info = None
+
+        if resettable_to_default:
+            SchemaList.insert(key_name, schema_name)
+
         if 'uid' not in options:
             options['uid'] = key_name
         try:
@@ -254,7 +259,7 @@ class TweakPreferencesPage(Adw.Bin, TweakGroup):
     # FIXME: need to add remove_tweak_row and remove_tweak (which clears
     # the search cache etc)
 
-    def add_tweak_row(self, t):
+    def add_tweak_row(self, t: Tweak):
         if self.add_tweak(t):
             row = t
 

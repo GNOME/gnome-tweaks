@@ -232,25 +232,26 @@ class AutostartFile:
 
 
 class SchemaList:
+    @classmethod
+    def setup(cls):
+        cls.__list = []
 
-    __list = None
+    @classmethod
+    def get(cls):
+        return cls.__list
 
-    def __init__(self):
-
-        if SchemaList.__list is None:
-            SchemaList.__list = []
-
-    def get(self):
-        return SchemaList.__list
-
-    def insert(self, key_name, schema_name):
+    @classmethod
+    def insert(cls, key_name, schema_name):
         v = [key_name, schema_name]
-        SchemaList.__list.append(v)
+        cls.__list.append(v)
 
-    def reset(self):
-        for i in SchemaList.__list:
+    @classmethod
+    def reset(cls):
+        for i in cls.__list:
             s = Gio.Settings(i[1])
             s.reset(i[0])
+
+SchemaList.setup()
 
 @singleton
 class XSettingsOverrides:
