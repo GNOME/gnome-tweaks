@@ -256,7 +256,7 @@ class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
         # Empty Page
         self.status_page.set_icon_name("application-x-executable-symbolic")
         self.status_page.set_title(_("No Startup Applications"))
-        self.status_page.set_description(_("Add a statup application"))
+        self.status_page.set_description(_("Add a startup application"))
         self.status_page.add_css_class("dim-label")
 
         self.stack.add_child(self.status_page)
