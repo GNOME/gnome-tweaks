@@ -13,14 +13,12 @@ import pprint
 from gi.repository import Gtk
 from gi.repository import GLib
 
-import gtweak
 from gtweak.utils import walk_directories, make_combo_list_with_default, extract_zip_file, get_resource_dirs
 from gtweak.tweakmodel import Tweak
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gsettings import GSettingsSetting
 from gtweak.gtksettings import GtkSettingsManager
-from gtweak.widgets import (ListBoxTweakGroup, GSettingsComboTweak,
-                            GSettingsComboEnumTweak, ListBoxTweakSubgroup, build_combo_box_text,
+from gtweak.widgets import (TweakPreferencesPage, GSettingsTweakComboRow,TweakPreferencesGroup, build_combo_box_text,
                             build_label_beside_widget,
                             GSettingsFileChooserButtonTweak, FileChooserButton)
 
@@ -28,12 +26,12 @@ from gtweak.widgets import (ListBoxTweakGroup, GSettingsComboTweak,
 _shell = GnomeShellFactory().get_shell()
 _shell_loaded = _shell is not None
 
-class GtkThemeSwitcher(GSettingsComboTweak):
+class GtkThemeSwitcher(GSettingsTweakComboRow):
     def __init__(self, **options):
         self._gtksettings3 = GtkSettingsManager('3.0')
         self._gtksettings4 = GtkSettingsManager('4.0')
 
-        GSettingsComboTweak.__init__(self,
+        GSettingsTweakComboRow.__init__(self,
 			_("Legacy Applications"),
             "org.gnome.desktop.interface",
             "gtk-theme",
@@ -69,9 +67,9 @@ class GtkThemeSwitcher(GSettingsComboTweak):
             self.notify_information(_("Error writing setting"))
 
 
-class IconThemeSwitcher(GSettingsComboTweak):
+class IconThemeSwitcher(GSettingsTweakComboRow):
     def __init__(self, **options):
-        GSettingsComboTweak.__init__(self,
+        GSettingsTweakComboRow.__init__(self,
 			_("Icons"),
 			"org.gnome.desktop.interface",
             "icon-theme",
@@ -84,9 +82,9 @@ class IconThemeSwitcher(GSettingsComboTweak):
 			os.path.exists(os.path.join(d, "index.theme")))
         return set(valid)
 
-class CursorThemeSwitcher(GSettingsComboTweak):
+class CursorThemeSwitcher(GSettingsTweakComboRow):
     def __init__(self, **options):
-        GSettingsComboTweak.__init__(self,
+        GSettingsTweakComboRow.__init__(self,
 			_("Cursor"),
             "org.gnome.desktop.interface",
             "cursor-theme",
@@ -259,14 +257,14 @@ class ShellThemeTweak(Gtk.Box, Tweak):
             self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, value)
 
 
-TWEAK_GROUP = ListBoxTweakGroup("appearance", _("Appearance"),
-   ListBoxTweakSubgroup( _("Styles"), "title-styles",
+TWEAK_GROUP = TweakPreferencesPage("appearance", _("Appearance"),
+   TweakPreferencesGroup( _("Styles"), "title-styles",
     CursorThemeSwitcher(),
     IconThemeSwitcher(),
     ShellThemeTweak(loaded=_shell_loaded),
     GtkThemeSwitcher(),
    ),
-   ListBoxTweakSubgroup(
+   TweakPreferencesGroup(
    _("Background"), "title-backgrounds",
     GSettingsFileChooserButtonTweak(
         _("Image"),
@@ -274,7 +272,7 @@ TWEAK_GROUP = ListBoxTweakGroup("appearance", _("Appearance"),
         "picture-uri",
         mimetypes=["application/xml", "image/png", "image/jpeg"],
     ),
-    GSettingsComboEnumTweak(
+    GSettingsTweakComboRow(
         _("Adjustment"), "org.gnome.desktop.background", "picture-options"
     ),
    ),

@@ -3,10 +3,9 @@
 # License-Filename: LICENSES/GPL-3.0
 
 
-from gi.repository import Adw, Gio, Gtk
 
-from gtweak.widgets import (CheckPreference, ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, ListBoxTweakSubgroup,
-                           Tweak, TweaksCheckGroupActionRow)
+from gtweak.widgets import (TweakPreferencesPage, GSettingsTweakSwitchRow, GSettingsSwitchTweakValue, TweakPreferencesGroup,
+                           TweaksCheckGroupActionRow)
 
 
 class KeyThemeSwitcher(GSettingsSwitchTweakValue):
@@ -50,14 +49,14 @@ class ClickMethod(TweaksCheckGroupActionRow):
                 "Don’t use mouse click emulation."))
 
 
-TWEAK_GROUP = ListBoxTweakGroup("mouse", _("Mouse & Touchpad"),
-  ListBoxTweakSubgroup(_("Mouse"), "mouse",
-    GSettingsSwitchTweak(_("Middle Click Paste"),
+TWEAK_GROUP = TweakPreferencesPage("mouse", _("Mouse & Touchpad"),
+  TweakPreferencesGroup(_("Mouse"), "mouse",
+    GSettingsTweakSwitchRow(_("Middle Click Paste"),
                          "org.gnome.desktop.interface",
                          "gtk-enable-primary-paste"),
   ),
-  ListBoxTweakSubgroup(_("Touchpad"), "touchpad",
-    GSettingsSwitchTweak(_("Disable While Typing"),
+  TweakPreferencesGroup(_("Touchpad"), "touchpad",
+    GSettingsTweakSwitchRow(_("Disable While Typing"),
                          "org.gnome.desktop.peripherals.touchpad",
                          "disable-while-typing",
                          schema_filename="org.gnome.desktop.peripherals.gschema.xml"),

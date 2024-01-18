@@ -2,17 +2,14 @@
 # SPDX-License-Identifier: GPL-3.0+
 # License-Filename: LICENSES/GPL-3.0
 
-from gtweak.tweakmodel import Tweak
-from gtweak.widgets import UI_BOX_HORIZONTAL_SPACING, UI_BOX_SPACING, _GSettingsTweak, GSettingsComboEnumTweak, GSettingsSwitchTweakValue, ListBoxTweakGroup, GSettingsComboTweak, GSettingsSwitchTweak, ListBoxTweakSubgroup, TweaksCheckGroupActionRow, build_label_beside_widget, TickActionRow
-from gtweak.utils import XSettingsOverrides
-import gettext
+from gtweak.widgets import UI_BOX_HORIZONTAL_SPACING, UI_BOX_SPACING, _GSettingsTweak, GSettingsSwitchTweakValue, TweakPreferencesPage, GSettingsTweakComboRow, GSettingsTweakSwitchRow, TweakPreferencesGroup, TweaksCheckGroupActionRow, build_label_beside_widget
 
-from gi.repository import Gio, Gtk, GLib
+from gi.repository import Gtk
 
 
 class Focus(TweaksCheckGroupActionRow):
 
-    def __init__(self, *tweaks, **options):
+    def __init__(self):
         name: str = _("Window Focus")
         desc: str = _("Click to Focus")
         TweaksCheckGroupActionRow.__init__(self, title=name, subtitle=desc, setting="org.gnome.desktop.wm.preferences", key_name="focus-mode", name="focus")
@@ -33,78 +30,6 @@ class Focus(TweaksCheckGroupActionRow):
                 "Window is focused when hovered with the pointer. Hovering the desktop removes focus "
                 "from the previous window."))
 
-
-class WindowScalingFactorTweak(Gtk.Box, Tweak):
-    def __init__(self, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        Tweak.__init__(self, _("Window scaling"), _("Adjust GDK window scaling factor for HiDPI"),
-                       **options)
-
-        self._xsettings = XSettingsOverrides()
-        self._original_factor = self._xsettings.get_window_scaling_factor()
-
-        w = Gtk.SpinButton.new_with_range(1, 2, 1)
-        w.set_numeric(True)
-        w.set_digits(0)
-        w.set_update_policy(Gtk.SpinButtonUpdatePolicy.IF_VALID)
-        w.set_value(self._xsettings.get_window_scaling_factor())
-        w.connect("value-changed", self._on_value_changed)
-
-        build_label_beside_widget(self.name, w, hbox=self)
-        self.widget_for_size_group = w
-
-    def _timeout_func(self):
-        self._countdown -= 1
-
-        if self._countdown == 0:
-            self._source = 0
-            self._dialog.response(Gtk.ResponseType.NO)
-            return False
-
-        self._update_countdown_message()
-        self._dialog.format_secondary_text(self._second_message.format(self._countdown))
-        return True
-
-    def _update_countdown_message(self):
-        self._second_message = gettext.ngettext("Settings will be reverted in {0} second",
-                                                "Settings will be reverted in {0} seconds",
-                                                self._countdown)
-
-    def _close(self):
-        if self._source > 0:
-            GLib.Source.remove(self._source)
-            self._source = 0
-
-    def _on_value_changed(self, adj):
-        if adj.get_value() == self._original_factor:
-            return
-
-        self._xsettings.set_window_scaling_factor(adj.get_value())
-        self._countdown = 20
-
-        first_message = _("Do you want to keep these HiDPI settings?")
-        self._update_countdown_message()
-
-        self._dialog = Gtk.MessageDialog(
-                               transient_for=self.main_window,
-                               message_type=Gtk.MessageType.QUESTION,
-                               text=first_message)
-        self._dialog.add_buttons(_("Revert Settings"), Gtk.ResponseType.NO,
-                                _("Keep Changes"), Gtk.ResponseType.YES)
-        self._dialog.format_secondary_text(self._second_message.format(self._countdown))
-
-        self._source = GLib.timeout_add_seconds(interval=1, function=self._timeout_func)
-
-        response = self._dialog.run()
-
-        if response == Gtk.ResponseType.YES:
-            self._original_factor = self._xsettings.get_window_scaling_factor()
-        else:
-            self._xsettings.set_window_scaling_factor(self._original_factor)
-            adj.set_value(self._original_factor)
-
-        self._close()
-        self._dialog.destroy()
 
 depends_how = lambda x,kn: x.get_string(kn) in ("mouse", "sloppy")
 
@@ -204,37 +129,35 @@ class PlaceWindowButtons(Gtk.Box, _GSettingsTweak):
             self.settings.set_string(self.key_name, ",".join(rsplit) + colon + left)
 
 
-TWEAK_GROUP = ListBoxTweakGroup(
+TWEAK_GROUP = TweakPreferencesPage(
     "window-management", _("Windows"),
-    ListBoxTweakSubgroup(
+    TweakPreferencesGroup(
         _("Titlebar Actions"), "title-titlebar-actions",
-        GSettingsComboEnumTweak(_("Double-Click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
-        GSettingsComboEnumTweak(_("Middle-Click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
-        GSettingsComboEnumTweak(_("Secondary-Click"),"org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
+        GSettingsTweakComboRow(_("Double-Click"),"org.gnome.desktop.wm.preferences", "action-double-click-titlebar"),
+        GSettingsTweakComboRow(_("Middle-Click"),"org.gnome.desktop.wm.preferences", "action-middle-click-titlebar"),
+        GSettingsTweakComboRow(_("Secondary-Click"),"org.gnome.desktop.wm.preferences", "action-right-click-titlebar"),
     ), 
-    ListBoxTweakSubgroup(_("Titlebar Buttons"), "title-theme",
+    TweakPreferencesGroup(_("Titlebar Buttons"), "title-theme",
         ShowWindowButtons(_("Maximize"), "maximize"),
         ShowWindowButtons(_("Minimize"), "minimize"),
         PlaceWindowButtons()
     ),
-    ListBoxTweakSubgroup(
+    TweakPreferencesGroup(
         _("Click Actions"), "title-window-behavior",
-        GSettingsSwitchTweak(_("Attach Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs",
+        GSettingsTweakSwitchRow(_("Attach Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs",
                         desc=_("When on, modal dialog windows are attached to their parent windows, and cannot be moved.")),
-        GSettingsSwitchTweak(_("Center New Windows"),"org.gnome.mutter", "center-new-windows"),
-        GSettingsComboTweak(_("Window Action Key"),
+        GSettingsTweakSwitchRow(_("Center New Windows"),"org.gnome.mutter", "center-new-windows"),
+        GSettingsTweakComboRow(_("Window Action Key"),
                         "org.gnome.desktop.wm.preferences",
                         "mouse-button-modifier",
                         [("disabled", _("Disabled")), ("<Alt>", "Alt"), ("<Super>", "Super")]),
   
     
-        GSettingsSwitchTweak(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
+        GSettingsTweakSwitchRow(_("Resize with Secondary-Click"),"org.gnome.desktop.wm.preferences", "resize-with-right-button"),
      ),
  
- ListBoxTweakSubgroup(_("Window Focus"), "window-focus", 
+ TweakPreferencesGroup(_("Window Focus"), "window-focus", 
                        Focus(),
-                      GSettingsSwitchTweak(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how))
-   
-      
+                      GSettingsTweakSwitchRow(_("Raise Windows When Focused"),"org.gnome.desktop.wm.preferences", "auto-raise", depends_on=Focus(), depends_how=depends_how))
 )    
 

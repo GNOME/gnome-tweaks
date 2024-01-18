@@ -2,14 +2,9 @@
 # SPDX-License-Identifier: GPL-3.0+
 # License-Filename: LICENSES/GPL-3.0
 
-import logging
-from typing import Callable, Optional
 
-from gi.repository import Gtk
 
-from gtweak.tweakmodel import Tweak
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSpinButtonTweak, GSettingsFontButtonTweak, ListBoxTweakSubgroup, TweaksCheckGroupActionRow
-from gtweak.gsettings import GSettingsSetting
+from gtweak.widgets import TweakPreferencesPage, GSettingsTweakSpinRow, GSettingsTweakFontRow, TweakPreferencesGroup, TweaksCheckGroupActionRow
 
 class FontHintingTweak(TweaksCheckGroupActionRow):
 
@@ -39,21 +34,21 @@ class FontAliasingTweak(TweaksCheckGroupActionRow):
         self.add_row(title=_("None"), key_name="none")
 
 
-TWEAK_GROUP = ListBoxTweakGroup("fonts", _("Fonts"),
-                                ListBoxTweakSubgroup(
+TWEAK_GROUP = TweakPreferencesPage("fonts", _("Fonts"),
+                                TweakPreferencesGroup(
                                     _("Preferred Fonts"), "preferred-fonts",
-    GSettingsFontButtonTweak(_("Interface Text"),"org.gnome.desktop.interface", "font-name"),
-    GSettingsFontButtonTweak(_("Document Text"), "org.gnome.desktop.interface", "document-font-name"),
-    GSettingsFontButtonTweak(_("Monospace Text"), "org.gnome.desktop.interface", "monospace-font-name"),
-    GSettingsFontButtonTweak(_("Legacy Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
+    GSettingsTweakFontRow(_("Interface Text"),"org.gnome.desktop.interface", "font-name"),
+    GSettingsTweakFontRow(_("Document Text"), "org.gnome.desktop.interface", "document-font-name"),
+    GSettingsTweakFontRow(_("Monospace Text"), "org.gnome.desktop.interface", "monospace-font-name"),
+    GSettingsTweakFontRow(_("Legacy Window Titles"),"org.gnome.desktop.wm.preferences", "titlebar-font"),
                                 ),
-                                 ListBoxTweakSubgroup(
+                                 TweakPreferencesGroup(
                                      _("Rendering"), "font-rendering",
     FontHintingTweak(),
     FontAliasingTweak(),
                                  ),
-                                  ListBoxTweakSubgroup( _("Size"), "font-size",
-    GSettingsSpinButtonTweak(_("Scaling Factor"),
+                                  TweakPreferencesGroup( _("Size"), "font-size",
+    GSettingsTweakSpinRow(_("Scaling Factor"),
       "org.gnome.desktop.interface", "text-scaling-factor",
       adjustment_step=0.01, digits=2),
                                   ),

@@ -7,7 +7,7 @@ gi.require_version("GnomeDesktop", "4.0")
 from gi.repository import Gtk, GnomeDesktop, Gtk
 
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.widgets import ListBoxTweakGroup, GSettingsSwitchTweak, GSettingsSwitchTweakValue, _GSettingsTweak, ListBoxTweakSubgroup, build_label_beside_widget, Tweak
+from gtweak.widgets import TweakPreferencesPage, GSettingsTweakSwitchRow, GSettingsSwitchTweakValue, _GSettingsTweak, TweakPreferencesGroup, build_label_beside_widget, Tweak
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsMissingError
 
@@ -255,13 +255,13 @@ class AdditionalLayoutButton(Gtk.Box, Tweak):
         dialog.show()
 
 
-TWEAK_GROUP = ListBoxTweakGroup("keyboard", _("Keyboard"),
-                                      GSettingsSwitchTweak(_("Show Extended Input Sources"),
+TWEAK_GROUP = TweakPreferencesPage("keyboard", _("Keyboard"),
+                                      GSettingsTweakSwitchRow(_("Show Extended Input Sources"),
                           "org.gnome.desktop.input-sources",
                           "show-all-sources",
                           desc=_("Increases the choice of input sources in the Settings application."),
                           logout_required=True,),        
-                                ListBoxTweakSubgroup(
+                                TweakPreferencesGroup(
                                 _("Layout"),    "keyboard-layout", 
                             
     KeyThemeSwitcher(),

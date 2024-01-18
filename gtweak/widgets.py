@@ -9,11 +9,9 @@ from gi.repository import Adw, GLib, Gtk, Gio, GObject, Pango
 
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.gsettings import GSettingsSetting, GSettingsFakeSetting, GSettingsMissingError
-from gtweak.gshellwrapper import GnomeShellFactory
 
 UI_BOX_SPACING = 4
 UI_BOX_HORIZONTAL_SPACING = 10
-_shell = GnomeShellFactory().get_shell()
 
 
 def build_label_beside_widget(txt, *widget, **kwargs):
@@ -151,48 +149,6 @@ class TickActionRow(Adw.ActionRow):
         self.add_suffix(self.img)
         self.set_activatable_widget(self.img)
 
-class CheckPreference(Adw.Bin):
-
-    def __init__(self, title: str, keyvalue: str, subtitle: str | None = None):
-        super().__init__()
-
-        self.keyvalue = keyvalue
-
-        self.btn = Gtk.CheckButton()
-
-        self.set_child(self.btn)
-
-        self.title_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, margin_start=10)
-        label = Gtk.Label(label=title, halign=Gtk.Align.START)
-        label.add_css_class("title")
-        self.title_box.append(label)
-        
-        if subtitle is not None:
-            label = Gtk.Label(label=subtitle, halign=Gtk.Align.START, wrap=True)
-            label.add_css_class("subtitle")
-            self.title_box.append(label)
-
-        self.btn.set_child(self.title_box)
-
-        self.btn.connect("toggled", self._notify_toggled)
-
-
-    def set_group(self, group: "CheckPreference"):
-        self.btn.set_group(group.btn)
-
-    def set_active(self, active: bool):
-        self.btn.set_active(active)
-
-    def get_active(self):
-        return self.btn.get_active()
-
-    def _notify_toggled(self, _btn):
-        self.emit("toggled")
-
-    @GObject.Signal()
-    def toggled(self, *args):
-        pass
-
 
 class _GSettingsTweak(Tweak):
     def __init__(self, title, schema_name, key_name, **options):
@@ -259,8 +215,8 @@ class TweakListBoxRow(Gtk.ListBoxRow):
 
 from typing import Union
 
-class ListBoxTweakGroup(Adw.Bin, TweakGroup):
-    def __init__(self, name, title, *tweaks: Union[Tweak, "ListBoxTweakSubgroup"], **options):
+class TweakPreferencesPage(Adw.Bin, TweakGroup):
+    def __init__(self, name, title, *tweaks: Union[Tweak, "TweakPreferencesGroup"], **options):
         if 'uid' not in options:
             options['uid'] = self.__class__.__name__
         Adw.Bin.__init__(self,
@@ -288,7 +244,7 @@ class ListBoxTweakGroup(Adw.Bin, TweakGroup):
         TweakGroup.__init__(self, name, title, **options)
 
         for t in tweaks:
-            if isinstance(t, ListBoxTweakSubgroup):
+            if isinstance(t, TweakPreferencesGroup):
                 for st in t.tweaks:
                     self.add_tweak(st)
                 self.box.append(t)
@@ -313,7 +269,7 @@ class ListBoxTweakGroup(Adw.Bin, TweakGroup):
                 self._sg.add_widget(t.widget_for_size_group)
             return row
 
-class ListBoxTweakSubgroup(Adw.PreferencesGroup, TweakGroup):
+class TweakPreferencesGroup(Adw.PreferencesGroup, TweakGroup):
     def __init__(self, title, name, *tweaks: Tweak):
         Adw.PreferencesGroup.__init__(self)
         TweakGroup.__init__(self, name, title)
@@ -341,26 +297,50 @@ class ListBoxTweakSubgroup(Adw.PreferencesGroup, TweakGroup):
             if t.widget_for_size_group:
                 self._sg.add_widget(t.widget_for_size_group)
 
-class GSettingsCheckTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
-    def __init__(self, name, title, schema_name, key_name, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL,  margin_start=UI_BOX_HORIZONTAL_SPACING, margin_end=UI_BOX_HORIZONTAL_SPACING, margin_top=UI_BOX_SPACING, margin_bottom=UI_BOX_SPACING)
-        _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
+class TweakCheckButton(Adw.Bin):
 
-        widget = Gtk.CheckButton.new_with_label(name)
-        self.settings.bind(
-                key_name,
-                widget,
-                "active", Gio.SettingsBindFlags.DEFAULT)
-        self.append(widget)
-        self.widget_for_size_group = None
+    def __init__(self, title: str, keyvalue: str, subtitle: str | None = None):
+        super().__init__()
 
-        self.add_dependency_on_tweak(
-                options.get("depends_on"),
-                options.get("depends_how")
-        )
+        self.keyvalue = keyvalue
+
+        self.btn = Gtk.CheckButton()
+
+        self.set_child(self.btn)
+
+        self.title_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, margin_start=10)
+        label = Gtk.Label(label=title, halign=Gtk.Align.START)
+        label.add_css_class("title")
+        self.title_box.append(label)
+        
+        if subtitle is not None:
+            label = Gtk.Label(label=subtitle, halign=Gtk.Align.START, wrap=True)
+            label.add_css_class("subtitle")
+            self.title_box.append(label)
+
+        self.btn.set_child(self.title_box)
+
+        self.btn.connect("toggled", self._notify_toggled)
 
 
-class GSettingsSwitchTweak(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
+    def set_group(self, group: "TweakCheckButton"):
+        self.btn.set_group(group.btn)
+
+    def set_active(self, active: bool):
+        self.btn.set_active(active)
+
+    def get_active(self):
+        return self.btn.get_active()
+
+    def _notify_toggled(self, _btn):
+        self.emit("toggled")
+
+    @GObject.Signal()
+    def toggled(self, *args):
+        pass
+
+
+class GSettingsTweakSwitchRow(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
     def __init__(self, title: str, schema_name: str, key_name: str, **options):
         Adw.ActionRow.__init__(self, title=title)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
@@ -382,7 +362,7 @@ class GSettingsSwitchTweak(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
         self.set_activatable_widget(switch)
         self.widget_for_size_group = None
 
-class GSettingsFontButtonTweak(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
+class GSettingsTweakFontRow(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
     def __init__(self, title, schema_name, key_name, **options):
         Adw.ActionRow.__init__(self, title=title)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
@@ -404,7 +384,7 @@ class GSettingsFontButtonTweak(Adw.ActionRow, _GSettingsTweak, _DependableMixin)
     def _load_font_desc(self, settings):
         self.font_desc = Pango.FontDescription.from_string(settings.get_string(self.key_name))
 
-    def _on_activate(self, row: "GSettingsFontButtonTweak"):
+    def _on_activate(self, row: "GSettingsTweakFontRow"):
         from gtweak.app import get_window
 
         row.font_dialog.choose_font(get_window(), row.font_desc, None, row._on_choose_font)
@@ -446,38 +426,25 @@ class GSettingsFontButtonTweak(Adw.ActionRow, _GSettingsTweak, _DependableMixin)
       self.font_label.props.label = f"{desc.to_string()}"
 
 
-
-class GSettingsRangeTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
-    def __init__(self, title, schema_name, key_name, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
-
-        # returned variant is range:(min, max)
-        _min, _max = self.settings.get_range(key_name)[1]
-
-        w = Gtk.HScale.new_with_range(_min, _max, options.get('adjustment_step', 1))
-        self.settings.bind(key_name, w.get_adjustment(), "value", Gio.SettingsBindFlags.DEFAULT)
-
-        build_label_beside_widget(self.title, w, hbox=self)
-        self.widget_for_size_group = w
-
 # TODO: Port to AdwSpinRow
-class GSettingsSpinButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin):
+class GSettingsTweakSpinRow(Adw.Bin, _GSettingsTweak, _DependableMixin):
     def __init__(self, title, schema_name, key_name, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL, margin_start=UI_BOX_HORIZONTAL_SPACING, margin_end=UI_BOX_HORIZONTAL_SPACING, margin_top=UI_BOX_SPACING, margin_bottom=UI_BOX_SPACING)
+        Adw.Bin.__init__(self, margin_start=UI_BOX_HORIZONTAL_SPACING, margin_end=UI_BOX_HORIZONTAL_SPACING, margin_top=UI_BOX_SPACING, margin_bottom=UI_BOX_SPACING)
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
+
+        self.row = Adw.SpinRow(title=title)
+
+        self.set_child(self.row)
 
         # returned variant is range:(min, max)
         _min, _max = self.settings.get_range(key_name)[1]
 
         adjustment = Gtk.Adjustment(value=0, lower=_min, upper=_max, step_increment=options.get('adjustment_step', 1))
-        w = Gtk.SpinButton()
-        w.set_adjustment(adjustment)
-        w.set_digits(options.get('digits', 0))
+        self.row.set_adjustment(adjustment)
+        self.row.set_digits(options.get('digits', 0))
         self.settings.bind(key_name, adjustment, "value", Gio.SettingsBindFlags.DEFAULT)
 
-        build_label_beside_widget(title, w, hbox=self)
-        self.widget_for_size_group = w
+        self.widget_for_size_group = self.row
 
         self.add_dependency_on_tweak(
                 options.get("depends_on"),
@@ -522,54 +489,31 @@ def build_gsettings_list_store(values):
     
     return store
 
-class GSettingsComboEnumTweak(Adw.ComboRow, _GSettingsTweak, _DependableMixin):
-    def __init__(self, title, schema_name, key_name, **options):
-        Adw.ComboRow.__init__(self, title=title)
-        _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
 
-        _, values = self.settings.get_range(key_name)
-
-        self.set_model(build_gsettings_list_store(values))
-        self.set_expression(Gtk.PropertyExpression.new(TweakListStoreItem, None, "title"))
-
-        self.connect('notify::selected-item', self._on_combo_changed)
-        self.settings.connect('changed::' + self.key_name, self._on_setting_changed)
-
-        self._on_setting_changed({}, self.key_name)
-
-        self.widget_for_size_group = self
-
-    def _on_setting_changed(self, setting, key):
-        assert key == self.key_name
-        val = self.settings.get_string(key)
-        model = self.get_model()
-        index = next((i for (i, item) in enumerate(model) if item.value == val), -1)
-        if index > 0 and self.get_selected() != index:
-            self.set_selected(index)
-
-    def _on_combo_changed(self, combo, _):
-        item = combo.get_selected_item()
-
-        if item:
-            self.settings.set_string(self.key_name, item.value)
-
-
-class GSettingsComboTweak(Adw.ComboRow, _GSettingsTweak, _DependableMixin):
-    def __init__(self, title, schema_name, key_name, key_options, **options):
+class GSettingsTweakComboRow(Adw.ComboRow, _GSettingsTweak, _DependableMixin):
+    def __init__(self, title, schema_name, key_name, key_options=None, **options):
         _GSettingsTweak.__init__(self, title, schema_name, key_name, **options)
         Adw.ComboRow.__init__(self, title=title)
 
-        # check key_options is iterable
-        # and if supplied, check it is a list of 2-tuples
-        assert len(key_options) >= 0
-        if len(key_options):
-            assert len(key_options[0]) == 2
-        self._key_options = key_options
-
-        self.set_model(build_list_store(key_options))
+        if key_options is not None:
+            # check key_options is iterable
+            # and if supplied, check it is a list of 2-tuples
+            assert len(key_options) >= 0
+            if len(key_options):
+                assert len(key_options[0]) == 2
+            self._key_options = key_options
+            self.set_model(build_list_store(key_options))
+        else:
+            _, values = self.settings.get_range(key_name)
+            
+            self._key_options = None
+            self.set_model(build_gsettings_list_store(values))
 
         self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
         self._update_combo_for_setting()
+
+        self.set_expression(Gtk.PropertyExpression.new(TweakListStoreItem, None, "title"))
+        self.connect('notify::selected-item', self._on_combo_changed)
 
         self.set_expression(Gtk.PropertyExpression.new(TweakListStoreItem, None, "title"))
         self.connect('notify::selected-item', self._on_combo_changed)
@@ -598,7 +542,8 @@ class GSettingsComboTweak(Adw.ComboRow, _GSettingsTweak, _DependableMixin):
     def extra_info(self):
         if self._extra_info is None:
             self._extra_info = self.settings.schema_get_summary(self.key_name)
-            self._extra_info += " " + " ".join(op[0] for op in self._key_options)
+            if self._key_options is not None:
+                self._extra_info += " " + " ".join(op[0] for op in self._key_options)
         return self._extra_info
 
 
@@ -693,26 +638,6 @@ class GSettingsFileChooserButtonTweak(Gtk.Box, _GSettingsTweak, _DependableMixin
             self.settings.set_string(self.key_name, uri)
 
 
-class GetterSetterSwitchTweak(Gtk.Box, Tweak):
-    def __init__(self, title, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        Tweak.__init__(self, title, options.get("description", ""), **options)
-
-        sw = Gtk.Switch()
-        sw.set_active(self.get_active())
-        sw.connect("notify::active", self._on_toggled)
-
-        build_label_beside_widget(title, sw, hbox=self)
-
-    def _on_toggled(self, sw, pspec):
-        self.set_active(sw.get_active())
-
-    def get_active(self):
-        raise NotImplementedError()
-
-    def set_active(self, v):
-        raise NotImplementedError()
-
 class GSettingsSwitchTweakValue(Gtk.Box, _GSettingsTweak):
 
     def __init__(self, title, schema_name, key_name, **options):
@@ -792,8 +717,8 @@ class TweaksCheckGroupActionRow(Adw.PreferencesRow, Tweak):
 
         self.settings.connect(f"changed::{self.key_name}", self._on_settings_changed)
 
-    def add_row(self, title: str, key_name: str, subtitle: str | None = None) -> CheckPreference:
-        row = CheckPreference(title=title, subtitle=subtitle, keyvalue=key_name)
+    def add_row(self, title: str, key_name: str, subtitle: str | None = None) -> TweakCheckButton:
+        row = TweakCheckButton(title=title, subtitle=subtitle, keyvalue=key_name)
 
         if self.group is None:
             self.group = row
@@ -808,10 +733,10 @@ class TweaksCheckGroupActionRow(Adw.PreferencesRow, Tweak):
 
     def _on_settings_changed(self, settings, key: str):
         for row in self.content_box:
-            if isinstance(row, CheckPreference) and row.keyvalue == settings[key]:
+            if isinstance(row, TweakCheckButton) and row.keyvalue == settings[key]:
                 row.set_active(True)
 
-    def _on_row_clicked(self, row: CheckPreference):
+    def _on_row_clicked(self, row: TweakCheckButton):
         if not row.get_active():
             return
 

@@ -8,7 +8,7 @@ import configparser
 
 
 from gtweak.utils import get_resource_dirs
-from gtweak.widgets import ListBoxTweakGroup, GSettingsComboTweak
+from gtweak.widgets import TweakPreferencesPage, GSettingsTweakComboRow
 
 
 def get_theme_name(index_path):
@@ -37,10 +37,10 @@ sound_themes = get_sound_themes()
 
 show_sound_tweaks = len(sound_themes) > 0
 
-TWEAK_GROUP = ListBoxTweakGroup(
+TWEAK_GROUP = TweakPreferencesPage(
     "sound",
     _("Sound"),
-    GSettingsComboTweak(
+    GSettingsTweakComboRow(
         _("System Sound Theme"),
         "org.gnome.desktop.sound",
         "theme-name",
