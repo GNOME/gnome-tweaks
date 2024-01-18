@@ -122,8 +122,7 @@ class _AppChooser(Gtk.Dialog):
         self._setup_shortcut()
 
     def _setup_shortcut(self):
-        # Translators: This is the accelerator for opening the AppChooser search-bar
-        s_trigger = Gtk.ShortcutTrigger.parse_string(_("<primary>f"))
+        s_trigger = Gtk.ShortcutTrigger.parse_string("<primary>f")
         s_action = Gtk.CallbackAction.new(lambda w, a, s: s.set_search_mode(True), self.searchbar)
 
         if s_trigger and s_action:
