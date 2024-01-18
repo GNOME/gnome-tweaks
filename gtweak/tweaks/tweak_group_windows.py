@@ -222,10 +222,12 @@ class PlaceWindowButtons(Gtk.Box, _GSettingsTweak):
         (left, colon, right) = val.partition(":")
         if "close" in right:
            btn2.set_active(True)
+        elif "close" in left:
+           btn1.set_active(True)
         btn2.connect("toggled", self.on_button_toggled)
 
-        box_btn.prepend(btn1)
-        box_btn.prepend(btn2)
+        box_btn.append(btn1)
+        box_btn.append(btn2)
 
         build_label_beside_widget(name, box_btn, hbox=self)
 

@@ -213,6 +213,9 @@ class OverviewShortcutTweak(Gtk.Box, _GSettingsTweak):
 
         if (self.settings.get_string(self.key_name) == "Super_R"):
             btn2.set_active(True)
+        elif (self.settings.get_string(self.key_name) == "Super_L"):
+            btn1.set_active(True)
+
         btn1.connect("toggled", self.on_button_toggled, "Super_L")
         btn2.connect("toggled", self.on_button_toggled, "Super_R")
 
