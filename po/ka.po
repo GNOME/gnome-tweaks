@@ -1,14 +1,14 @@
 # Georgian translation for gnome-tweaks.
 # Copyright (C) 2023 gnome-tweaks's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-tweaks package.
-# Ekaterine Papava <papava.e@gtu.ge>, 2023.
+# Ekaterine Papava <papava.e@gtu.ge>, 2023-2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-09-23 05:41+0000\n"
-"PO-Revision-Date: 2023-09-25 05:54+0200\n"
+"POT-Creation-Date: 2024-01-18 10:24+0000\n"
+"PO-Revision-Date: 2024-01-23 22:36+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: Georgian <ka@li.org>\n"
 "Language: ka\n"
@@ -18,25 +18,26 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "პროექტი \"GNOME\""
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "GNOME -ის მცირე ცვლილებები"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "შეცვალეთ GNOME-ის დამატებითი პარამეტრები"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
 "GNOME Tweaks -ი GNOME-ის დამატებითი პარამეტრების შეცვლის საშუალებას გაძლევთ."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
 "It can manage keyboard mapping customizations, add startup applications, and "
 "set custom window controls among other settings."
@@ -44,7 +45,8 @@ msgstr ""
 "მას შეუძლია მართოს კლავიატურის მორგება, დაამატოს ჩატვირთვისას გასაშვები "
 "აპლიკაციები, დაამატოს მომხმარებლის ფანჯრის კონტროლი და ა.შ."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:98
+#: gtweak/tweakview.py:134
 msgid "Tweaks"
 msgstr "მცირე ცვლილებები"
 
@@ -53,41 +55,39 @@ msgstr "მცირე ცვლილებები"
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgstr "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "ნაგულისხმები პარამეტრების დაყენება"
 
-#: data/shell.ui:13
+#: data/shell.ui:12
 msgid "_About Tweaks"
 msgstr "მცირე ცვლილებების _შესახებ"
 
-#: data/tweaks.ui:63 gtweak/tweaks/tweak_group_font.py:124
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
 msgid "Fonts"
 msgstr "ფონტები"
 
-#: data/tweaks.ui:97 gtweak/tweaks/tweak_group_appearance.py:257
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:260
 msgid "Appearance"
 msgstr "გარემოს იერსახე"
 
-#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "ხმა"
 
-#: data/tweaks.ui:165
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:52
 msgid "Mouse & Touchpad"
 msgstr "თაგუნა & თაჩპედი"
 
-#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
-#: gtweak/tweaks/tweak_group_keyboard.py:378
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
 msgid "Keyboard"
 msgstr "კლავიატურა"
 
-#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
 msgid "Windows"
 msgstr "Windows"
 
-#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:309
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup Applications"
 msgstr "გაშვებისას ჩასატვირთი აპლიკაციები"
 
@@ -115,89 +115,82 @@ msgstr ""
 "თუ თქვენს დისტრიბუტივს ის უკვე არ მოჰყვება, გირჩევთ, GNOME-ის გაფართოებები "
 "{0}-დან გადმოწეროთ."
 
-#: gtweak/app.py:81
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "ნაგულისხმები პარამეტრების დაყენება"
 
-#: gtweak/app.py:82
-msgid "Reset all tweak settings to the original default state?"
-msgstr "დავაბრუნო ყველა შეცვლილი დამატებითი პარამეტრი საწყის მნიშვნელობაზე?"
+#: gtweak/app.py:87
+msgid "Reset all tweaks settings to the original default state?"
+msgstr "ჩამოვყარო ყველა შეცვლილი დამატებითი პარამეტრი საწყის მნიშვნელობაზე?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME-ის გარსი"
 
-#: gtweak/app.py:101
-#, python-format
-msgid "(%s mode)"
-msgstr "(%s რეჟიმი)"
-
-#: gtweak/app.py:104
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "GNOME -ის გარსი გაშვებული არაა"
 
-#: gtweak/app.py:106
-msgid "GTK"
-msgstr "GTK"
-
-#: gtweak/app.py:113
-msgid "Homepage"
-msgstr "Homepage"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr "თემური დოღონაძე"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
 msgstr "სხვადასხვა"
 
-#: gtweak/tweaks/tweak_group_appearance.py:31
+#: gtweak/tweaks/tweak_group_appearance.py:35
 msgid "Legacy Applications"
 msgstr "მოძველებული აპლიკაციები"
 
-#: gtweak/tweaks/tweak_group_appearance.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:67
 msgid "Error writing setting"
 msgstr "პარამეტრის ჩაწერის შეცდომა"
 
-#: gtweak/tweaks/tweak_group_appearance.py:71
+#: gtweak/tweaks/tweak_group_appearance.py:73
 msgid "Icons"
 msgstr "ხატულები"
 
-#: gtweak/tweaks/tweak_group_appearance.py:86
+#: gtweak/tweaks/tweak_group_appearance.py:88
 msgid "Cursor"
 msgstr "კურსორი"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell"
 msgstr "გარსი"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Install custom or user themes for gnome-shell"
 msgstr "დააყენეთ თქვენი ან მომხმარებლის თემა gnome-shell-სთვის"
 
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:115
 msgid "Unknown error"
 msgstr "უცნობი შეცდომა"
 
-#: gtweak/tweaks/tweak_group_appearance.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell not running"
 msgstr "გარსი გაშვებული არაა"
 
-#: gtweak/tweaks/tweak_group_appearance.py:140
+#: gtweak/tweaks/tweak_group_appearance.py:142
 msgid "Shell user-theme extension incorrectly installed"
 msgstr "გარსის გაფართოება user-theme არასწორადაა დაყენებული"
 
-#: gtweak/tweaks/tweak_group_appearance.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:145
 msgid "Shell user-theme extension not enabled"
 msgstr "გარსის გაფართოება user-theme ჩართული არაა"
 
-#: gtweak/tweaks/tweak_group_appearance.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:148
 msgid "Could not list shell extensions"
 msgstr "გარსის გაფართოებების სიის ჩვენების შეცდომა"
 
-#: gtweak/tweaks/tweak_group_appearance.py:176
+#: gtweak/tweaks/tweak_group_appearance.py:178
 msgid "<i>Default</i>"
 msgstr "<i>ნაგულისხმები</i>"
 
-#: gtweak/tweaks/tweak_group_appearance.py:182
+#: gtweak/tweaks/tweak_group_appearance.py:183
 msgid "Select a theme"
 msgstr "აირჩიეთ თემა"
 
@@ -220,139 +213,156 @@ msgstr "თემის დაყენების შეცდომა"
 msgid "Invalid theme"
 msgstr "არასწორი თემა"
 
-#: gtweak/tweaks/tweak_group_appearance.py:258
+#: gtweak/tweaks/tweak_group_appearance.py:261
 msgid "Styles"
 msgstr "სტილები"
 
-#: gtweak/tweaks/tweak_group_appearance.py:263
+#: gtweak/tweaks/tweak_group_appearance.py:268
 msgid "Background"
 msgstr "ფონი"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
+#: gtweak/tweaks/tweak_group_appearance.py:270
 msgid "Image"
 msgstr "გამოსახულება"
 
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:276
 msgid "Adjustment"
 msgstr "დარეგულირება"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "მომრგვალება"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:75
-msgid "Antialiasing"
-msgstr "მომრგვალება"
-
-#: gtweak/tweaks/tweak_group_font.py:52
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "სრული"
 
-#: gtweak/tweaks/tweak_group_font.py:58
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "საშუალო"
 
-#: gtweak/tweaks/tweak_group_font.py:64
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "ოდნავ"
 
-#: gtweak/tweaks/tweak_group_font.py:70 gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:413 gtweak/widgets.py:562
 msgid "None"
 msgstr "არაფერი"
 
-#: gtweak/tweaks/tweak_group_font.py:88
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "მომრგვალება"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "ქვეპიქსელი (LDC ეკრანებისთვის)"
 
-#: gtweak/tweaks/tweak_group_font.py:94
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "სტანდარტული (ნაცრისფერი)"
 
-#: gtweak/tweaks/tweak_group_font.py:125
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "რჩეული ფონტები"
+
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
 msgstr "ინტერფეისის ტექსტი"
 
-#: gtweak/tweaks/tweak_group_font.py:126
+#: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
 msgstr "დოკუმენტის ტექსტი"
 
-#: gtweak/tweaks/tweak_group_font.py:127
+#: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
 msgstr "ერთსიგანიანი ტექსტი"
 
-#: gtweak/tweaks/tweak_group_font.py:128
+#: gtweak/tweaks/tweak_group_font.py:43
 msgid "Legacy Window Titles"
 msgstr "მოძველებული ფანჯრის სათაურები"
 
-#: gtweak/tweaks/tweak_group_font.py:130
+#: gtweak/tweaks/tweak_group_font.py:46
+msgid "Rendering"
+msgstr "რენდერი"
+
+#: gtweak/tweaks/tweak_group_font.py:50
+msgid "Size"
+msgstr "ზომა"
+
+#: gtweak/tweaks/tweak_group_font.py:51
 msgid "Scaling Factor"
 msgstr "გადიდების მასშტაბი"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_keyboard.py:339
-#: gtweak/tweaks/tweak_group_mouse.py:137
-#: gtweak/tweaks/tweak_group_windows.py:312
+#: gtweak/tweaks/tweak_group_mouse.py:47
+#: gtweak/tweaks/tweak_group_windows.py:153
 msgid "Disabled"
 msgstr "გამორთული"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:170
+#: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "აკრეფა"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:18
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:14
 msgid "Emacs Input"
 msgstr "Emacs -ის შეყვანა"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:189
-#: gtweak/tweaks/tweak_group_mouse.py:21
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:17
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "გადაფარავს Emacs-ის მალასხმობებს."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:205
-#: gtweak/tweaks/tweak_group_mouse.py:37
+#: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
 msgstr "მიმოხილვის მალსახმობი"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:212
-#: gtweak/tweaks/tweak_group_mouse.py:44
+#: gtweak/tweaks/tweak_group_keyboard.py:210
 msgid "Left Super"
 msgstr "მარცხენა Super"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:216
-#: gtweak/tweaks/tweak_group_mouse.py:48
+#: gtweak/tweaks/tweak_group_keyboard.py:211
 msgid "Right Super"
 msgstr "მარჯვენა Super"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:239
-#: gtweak/tweaks/tweak_group_keyboard.py:247
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "განლაგების დამატებითი პარამეტრები"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:269
-#: gtweak/tweaks/tweak_group_mouse.py:67 gtweak/tweaks/tweak_group_mouse.py:185
+#: gtweak/tweaks/tweak_group_keyboard.py:259
+msgid "Show Extended Input Sources"
+msgstr "გაფართოებული შემომტანი მოწყობილობების ჩვენება"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:262
+msgid "Increases the choice of input sources in the Settings application."
+msgstr ""
+"პარამეტრების აპლიკაციაში ხელმისაწვდომი შეყვანის წყაროების რაოდენობის გაზრდა."
+
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "განლაგება"
+
+#: gtweak/tweaks/tweak_group_mouse.py:32
 msgid "Mouse Click Emulation"
 msgstr "თაგუნას წკაპის ემულაცია"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:287
-#: gtweak/tweaks/tweak_group_mouse.py:85
+#: gtweak/tweaks/tweak_group_mouse.py:37
 msgid "Fingers"
 msgstr "თითები"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:289
-#: gtweak/tweaks/tweak_group_mouse.py:87
+#: gtweak/tweaks/tweak_group_mouse.py:39
 msgid ""
 "Click the touchpad with two fingers for right-click and three fingers for "
 "middle-click."
 msgstr "შუა-წკაპისთვის ორი თითით დაატყაპუნეთ, მარჯვენა-წკაპისთვის კი სამით."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:313
-#: gtweak/tweaks/tweak_group_mouse.py:111
+#: gtweak/tweaks/tweak_group_mouse.py:42
 msgid "Area"
 msgstr "ფართობი"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:315
-#: gtweak/tweaks/tweak_group_mouse.py:113
+#: gtweak/tweaks/tweak_group_mouse.py:44
 msgid ""
 "Click the bottom right of the touchpad for right-click and the bottom middle "
 "for middle-click."
@@ -360,34 +370,23 @@ msgstr ""
 "მარჯვენა-წკაპისთვის თაჩპედის ქვედა მარჯვენა კუთხეში დააწკაპუნეთ, შუა-"
 "კლიკისთვის კი ქვემოთ, შუაში."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:341
-#: gtweak/tweaks/tweak_group_mouse.py:139
+#: gtweak/tweaks/tweak_group_mouse.py:49
 msgid "Don’t use mouse click emulation."
 msgstr "თაგუნას წკაპის ემულაცია არ გამოიყენება."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:379
-msgid "Show Extended Input Sources"
-msgstr "გაფართოებული შემომტანი მოწყობილობების ჩვენება"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:382
-msgid "Increases the choice of input sources in the Settings application."
-msgstr ""
-"პარამეტრების აპლიკაციაში ხელმისაწვდომი შეყვანის წყაროების რაოდენობის გაზრდა."
-
-#: gtweak/tweaks/tweak_group_mouse.py:175
-#: gtweak/tweaks/tweak_group_mouse.py:176
+#: gtweak/tweaks/tweak_group_mouse.py:53
 msgid "Mouse"
 msgstr "თაგუნა"
 
-#: gtweak/tweaks/tweak_group_mouse.py:177
+#: gtweak/tweaks/tweak_group_mouse.py:54
 msgid "Middle Click Paste"
 msgstr "შუა-წკაპით ჩასმა"
 
-#: gtweak/tweaks/tweak_group_mouse.py:180
+#: gtweak/tweaks/tweak_group_mouse.py:58
 msgid "Touchpad"
 msgstr "თაჩპედი"
 
-#: gtweak/tweaks/tweak_group_mouse.py:181
+#: gtweak/tweaks/tweak_group_mouse.py:59
 msgid "Disable While Typing"
 msgstr "კრეფისას გამორთვა"
 
@@ -399,66 +398,67 @@ msgstr "სისტემის ხმის თემა"
 msgid "Specifies which sound theme to use for sound events."
 msgstr "ხმოვანი ეფექტებისათვის გამოყენებული თემის სახელი."
 
-#: gtweak/tweaks/tweak_group_startup.py:30
-msgid "Startup applications are automatically started when you log in."
-msgstr "გაშვებისას გაშვებადი აპლიკაციები სისტემაში შესვლისას გაეშვება."
+#: gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "გაშვებულია"
 
-#: gtweak/tweaks/tweak_group_startup.py:43
-msgid "Applications"
-msgstr "აპლიკაციები"
+#: gtweak/tweaks/tweak_group_startup.py:61
+msgid "Select Application"
+msgstr "აირჩიეთ აპლიკაცია"
 
-#: gtweak/tweaks/tweak_group_startup.py:49
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
+msgid "_Close"
+msgstr "და_კეტვა"
+
+#: gtweak/tweaks/tweak_group_startup.py:68
+msgid "_Add"
+msgstr "_დამატება"
+
+#: gtweak/tweaks/tweak_group_startup.py:72
 msgid "Search Applications…"
 msgstr "აპლიკაციების ძებნა…"
 
 #. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:59
+#: gtweak/tweaks/tweak_group_startup.py:126 gtweak/tweakview.py:181
 msgid "<primary>f"
 msgstr "<ძირითადი>f"
 
-#: gtweak/tweaks/tweak_group_startup.py:77
-msgid "running"
-msgstr "გაშვებულია"
-
-#: gtweak/tweaks/tweak_group_startup.py:88
-msgid "_Close"
-msgstr "და_კეტვა"
-
-#: gtweak/tweaks/tweak_group_startup.py:89
-msgid "_Add"
-msgstr "_დამატება"
-
-#: gtweak/tweaks/tweak_group_startup.py:234
+#: gtweak/tweaks/tweak_group_startup.py:195
 msgid "Remove"
 msgstr "წაშლა"
 
+#: gtweak/tweaks/tweak_group_startup.py:221
+msgid "Startup applications are automatically started when you log in."
+msgstr "გაშვებისას გაშვებადი აპლიკაციები სისტემაში შესვლისას გაეშვება."
+
 #: gtweak/tweaks/tweak_group_startup.py:258
-msgid "New startup application"
-msgstr "ახალი ჩატვირთვისას გასაშვები აპლიკაცია"
+msgid "No Startup Applications"
+msgstr "გაშვებისას ჩასატვირთი აპლიკაციების გარეშე"
 
 #: gtweak/tweaks/tweak_group_startup.py:259
-msgid "Add a new application to be run at startup"
-msgstr "ახალი ჩატვირთვისას გასაშვები აპლიკაციის დამატება"
+msgid "Add a statup application"
+msgstr "ჩატვირთვისას გასაშვები აპლიკაციის დამატება"
 
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "ფანჯრის ფოკუსი"
 
+#: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Click to Focus"
 msgstr "წკაპი ფოკუსისთვის"
 
-#: gtweak/tweaks/tweak_group_windows.py:38
+#: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
 msgstr "ფოკუსი გადადის ფანჯარაზე, როცა მასზე აწკაუნებენ."
 
-#: gtweak/tweaks/tweak_group_windows.py:62
+#: gtweak/tweaks/tweak_group_windows.py:23
 msgid "Focus on Hover"
 msgstr "ფოკუსი გადატარებსას"
 
-#: gtweak/tweaks/tweak_group_windows.py:64
+#: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -466,12 +466,11 @@ msgstr ""
 "ფანჯარაზე ფოკუსი მასზე კურსორის გადატარებისას გადავა. ფანჯარაზე ფოკუსი "
 "შენარჩუნდება კურსორის სამუშაო მაგიდაზე გადატანისას."
 
-#: gtweak/tweaks/tweak_group_windows.py:88
-#: gtweak/tweaks/tweak_group_windows.py:300
-msgid "Secondary-Click"
-msgstr "დამატებით-წკაპი"
+#: gtweak/tweaks/tweak_group_windows.py:28
+msgid "Focus Follows Mouse"
+msgstr "ფოკუსი მიყვება თაგუნას"
 
-#: gtweak/tweaks/tweak_group_windows.py:90
+#: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -479,85 +478,59 @@ msgstr ""
 "ფანჯარაზე ფოკუსი მათზე მაჩვენებლის გადატარებისას გადავა. სამუშაო მაგიდაზე "
 "გადატანისას ფანჯარა ფოკუსს დაკარგავს."
 
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Window scaling"
-msgstr "ფანჯრის გადიდება"
-
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "HiDPI-სთვის GDK-ის ფანჯრის მასშტაბის მორგება"
-
-#: gtweak/tweaks/tweak_group_windows.py:157
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "პარამეტრები {0} წამში დაბრუნდება"
-
-#: gtweak/tweaks/tweak_group_windows.py:173
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "გნებავთ შეინახოთ HiDPI-ის ეს პარამეტრები?"
-
-#: gtweak/tweaks/tweak_group_windows.py:180
-msgid "Revert Settings"
-msgstr "პარამეტრების დაბრუნება"
-
-#: gtweak/tweaks/tweak_group_windows.py:181
-msgid "Keep Changes"
-msgstr "ცვლილებების დატოვება"
-
-#: gtweak/tweaks/tweak_group_windows.py:197
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:246
+#: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
 msgstr "განლაგება"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:260
+#: gtweak/tweaks/tweak_group_windows.py:97
 msgid "Left"
 msgstr "მარცხენა"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:266
+#: gtweak/tweaks/tweak_group_windows.py:100
 msgid "Right"
 msgstr "მარჯვენა"
 
-#: gtweak/tweaks/tweak_group_windows.py:297
+#: gtweak/tweaks/tweak_group_windows.py:135
 msgid "Titlebar Actions"
 msgstr "ქუდის ქმედებები"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
+#: gtweak/tweaks/tweak_group_windows.py:136
 msgid "Double-Click"
 msgstr "ორმაგი წკაპი"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:137
 msgid "Middle-Click"
 msgstr "შუა-წკაპი"
 
-#: gtweak/tweaks/tweak_group_windows.py:301
+#: gtweak/tweaks/tweak_group_windows.py:138
+msgid "Secondary-Click"
+msgstr "დამატებით-წკაპი"
+
+#: gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "სათაურის ქუდის ღილაკები"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "გადიდება"
 
-#: gtweak/tweaks/tweak_group_windows.py:303
+#: gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "ჩაკეცვა"
 
-#: gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_windows.py:146
 msgid "Click Actions"
 msgstr "წკაპის ქმედებები"
 
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "მოდალური ფანჯრების მიბმა"
 
-#: gtweak/tweaks/tweak_group_windows.py:307
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -565,47 +538,85 @@ msgstr ""
 "თუ ჩართულია, მოდალური ფანჯრები მათ მშობელ ფანჯრებზეა მიბმული და გადატანადი "
 "არ იქნება."
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
 msgstr "ახალი ფანჯრის ცენტრში მოთავსება"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "ფანჯრის ქმედების ღილაკი"
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "ზომის შეცვლა მეორადი-წკაპით"
 
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Focusing"
-msgstr "ფოკუსი"
-
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "ფანჯრის ამოწევა, როცა ის აქტიურია"
 
-#: gtweak/tweakview.py:157
+#: gtweak/tweakview.py:161
 msgid "Search Tweaks…"
 msgstr "მცირე ცვლილებების ძებნა…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(ნაგულისხმები)</i>"
+msgid "%s (default)"
+msgstr "%s (ნაგულისხმევი)"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "ცვლილებების გადასატარებლად გადატვირთვა აუცილებელია"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "ცვლილებების ეფექტის სანახავად თქვენი სესიის გადატვირთვაა საჭირო"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "სესიის გადატვირთვა"
+
+#, python-format
+#~ msgid "(%s mode)"
+#~ msgstr "(%s რეჟიმი)"
+
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Homepage"
+
+#~ msgid "Applications"
+#~ msgstr "აპლიკაციები"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "ახალი ჩატვირთვისას გასაშვები აპლიკაციის დამატება"
+
+#~ msgid "Window scaling"
+#~ msgstr "ფანჯრის გადიდება"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr "HiDPI-სთვის GDK-ის ფანჯრის მასშტაბის მორგება"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "პარამეტრები {0} წამში დაბრუნდება"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "გნებავთ შეინახოთ HiDPI-ის ეს პარამეტრები?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "პარამეტრების დაბრუნება"
+
+#~ msgid "Keep Changes"
+#~ msgstr "ცვლილებების დატოვება"
+
+#~ msgid "HiDPI"
+#~ msgstr "HiDPI"
+
+#~ msgid "Focusing"
+#~ msgstr "ფოკუსი"
 
 #~ msgid "Date & Time"
 #~ msgstr "თარიღი & დრო"
