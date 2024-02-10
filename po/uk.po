@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-01-18 10:24+0000\n"
-"PO-Revision-Date: 2024-01-18 21:49+0200\n"
+"POT-Creation-Date: 2024-02-10 06:15+0000\n"
+"PO-Revision-Date: 2024-02-10 09:47+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -55,8 +55,10 @@ msgstr "Налаштування"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "Параметри;Додаткові;Налаштування;Шрифти;Теми;XKB;Клавіатура;Введення;"
+#| msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+msgstr ""
+"Параметри;Додаткові;Налаштування;Шрифти;Теми;XKB;Клавіатура;Введення;запуск;"
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -78,7 +80,7 @@ msgstr "Зовнішній вигляд"
 msgid "Sound"
 msgstr "Звук"
 
-#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:52
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
 msgid "Mouse & Touchpad"
 msgstr "Миша та сенсорний пристрій"
 
@@ -90,7 +92,7 @@ msgstr "Клавіатура"
 msgid "Windows"
 msgstr "Вікна"
 
-#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
 msgid "Startup Applications"
 msgstr "Програми у автозапуску"
 
@@ -123,7 +125,6 @@ msgid "Reset to Defaults"
 msgstr "Відновити типові значення"
 
 #: gtweak/app.py:87
-#| msgid "Reset all tweak settings to the original default state?"
 msgid "Reset all tweaks settings to the original default state?"
 msgstr "Скинути всі налаштування до початкових?"
 
@@ -226,10 +227,14 @@ msgid "Background"
 msgstr "Тло"
 
 #: gtweak/tweaks/tweak_group_appearance.py:270
-msgid "Image"
-msgstr "Зображення"
+msgid "Default Image"
+msgstr "Типове зображення"
 
 #: gtweak/tweaks/tweak_group_appearance.py:276
+msgid "Dark Style Image"
+msgstr "Зображення для темного стилю"
+
+#: gtweak/tweaks/tweak_group_appearance.py:282
 msgid "Adjustment"
 msgstr "Коригування"
 
@@ -250,7 +255,7 @@ msgid "Slight"
 msgstr "Легкий"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:413 gtweak/widgets.py:562
+#: gtweak/widgets.py:413 gtweak/widgets.py:559
 msgid "None"
 msgstr "Відсутній"
 
@@ -282,39 +287,34 @@ msgstr "Текст документа"
 msgid "Monospace Text"
 msgstr "Моноширинний текст"
 
-#: gtweak/tweaks/tweak_group_font.py:43
-msgid "Legacy Window Titles"
-msgstr "Заголовки вікон застарілих програм"
-
-#: gtweak/tweaks/tweak_group_font.py:46
+#: gtweak/tweaks/tweak_group_font.py:45
 msgid "Rendering"
 msgstr "Обробка"
 
-#: gtweak/tweaks/tweak_group_font.py:50
+#: gtweak/tweaks/tweak_group_font.py:49
 msgid "Size"
 msgstr "Розмір"
 
-#: gtweak/tweaks/tweak_group_font.py:51
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Коефіцієнт масштабування"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_mouse.py:47
-#: gtweak/tweaks/tweak_group_windows.py:153
-msgid "Disabled"
-msgstr "Вимкнено"
+#| msgid "<i>Default</i>"
+msgid "Default"
+msgstr "Типове"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "Введення тексту"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:183
-#: gtweak/tweaks/tweak_group_mouse.py:14
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Введення Emacs"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:17
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr ""
 "Перевизначає комбінації клавіш для використання комбінацій з редактора Emacs."
@@ -348,53 +348,63 @@ msgstr "Збільшує вибір джерел вхідних даних у д
 msgid "Layout"
 msgstr "Компонування"
 
+#: gtweak/tweaks/tweak_group_mouse.py:31
+#| msgid "Secondary-Click"
+msgid "Disable Secondary Click"
+msgstr "Вимкнути вторинне клацання"
+
 #: gtweak/tweaks/tweak_group_mouse.py:32
-msgid "Mouse Click Emulation"
-msgstr "Емуляція кнопок миші"
-
-#: gtweak/tweaks/tweak_group_mouse.py:37
-msgid "Fingers"
-msgstr "Пальці"
-
-#: gtweak/tweaks/tweak_group_mouse.py:39
 msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
 msgstr ""
-"Натисніть на сенсорну панель двома пальцями для емуляції кліку правою кнопки "
-"миші та трьома пальцями для емуляції середньої."
+"Вимикає вторинні клацання на сенсорних панелях, які не мають фізичної"
+" вторинної кнопки"
 
-#: gtweak/tweaks/tweak_group_mouse.py:42
-msgid "Area"
-msgstr "Площа"
-
-#: gtweak/tweaks/tweak_group_mouse.py:44
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Клацніть праворуч у нижній частині сенсорної панелі для емуляції кліку "
-"правою кнопкою миші та нижньої частини для емуляції середньої."
-
-#: gtweak/tweaks/tweak_group_mouse.py:49
-msgid "Don’t use mouse click emulation."
-msgstr "Не використовувати емуляцію миші."
-
-#: gtweak/tweaks/tweak_group_mouse.py:53
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "Миша"
 
-#: gtweak/tweaks/tweak_group_mouse.py:54
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
 msgstr "Вставлення за допомогою середньої кнопки миші"
 
-#: gtweak/tweaks/tweak_group_mouse.py:58
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "Сенсорна панель"
 
-#: gtweak/tweaks/tweak_group_mouse.py:59
-msgid "Disable While Typing"
-msgstr "Вимкнути під час введення тексту"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Прискорення сенсорної панелі"
+
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+"Вимикання прискорення може зробити рухи швидшими та точнішими, але "
+"також може ускладнити користування сенсорною панеллю."
+
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Тензометричний маніпулятор"
+
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Прискорення тензометричного маніпулятора"
+
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+"Вимикання прискорення може зробити рухи швидшими та точнішими, але "
+"також може ускладнити користування тензометричним маніпулятором."
+
+#: gtweak/tweaks/tweak_group_mouse.py:104
+#| msgid "Scaling Factor"
+msgid "Scrolling Method"
+msgstr "Спосіб гортання"
 
 #: gtweak/tweaks/tweak_group_sound.py:44
 msgid "System Sound Theme"
@@ -409,7 +419,6 @@ msgid "running"
 msgstr "запущено"
 
 #: gtweak/tweaks/tweak_group_startup.py:61
-#| msgid "Legacy Applications"
 msgid "Select Application"
 msgstr "Виберіть програму"
 
@@ -426,28 +435,22 @@ msgstr "_Додати"
 msgid "Search Applications…"
 msgstr "Пошук програм…"
 
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:126 gtweak/tweakview.py:181
-msgid "<primary>f"
-msgstr "<primary>f"
-
-#: gtweak/tweaks/tweak_group_startup.py:195
+#: gtweak/tweaks/tweak_group_startup.py:194
 msgid "Remove"
 msgstr "Видалити"
 
-#: gtweak/tweaks/tweak_group_startup.py:221
+#: gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
 "Програми у автозапуску автоматично запускаються під час входу в систему."
 
-#: gtweak/tweaks/tweak_group_startup.py:258
-#| msgid "Startup Applications"
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "No Startup Applications"
 msgstr "Немає програм у автозапуску"
 
-#: gtweak/tweaks/tweak_group_startup.py:259
-#| msgid "New startup application"
-msgid "Add a statup application"
+#: gtweak/tweaks/tweak_group_startup.py:258
+#| msgid "Add a statup application"
+msgid "Add a startup application"
 msgstr "Додати програму у автозапуск"
 
 #: gtweak/tweaks/tweak_group_windows.py:13
@@ -477,7 +480,6 @@ msgstr ""
 "наведений на робочий стіл."
 
 #: gtweak/tweaks/tweak_group_windows.py:28
-#| msgid "Focus on Hover"
 msgid "Focus Follows Mouse"
 msgstr "Фокус йде за мишкою"
 
@@ -557,6 +559,10 @@ msgstr "Центрувати нові вікна"
 msgid "Window Action Key"
 msgstr "Клавіша дії вікна"
 
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Вимкнено"
+
 #: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "Змінити розмір за допомогою правого кліку"
@@ -572,7 +578,6 @@ msgstr "Пошук налаштувань…"
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-#| msgid "%s <i>(default)</i>"
 msgid "%s (default)"
 msgstr "%s (типова)"
 
@@ -587,6 +592,44 @@ msgstr "Слід перезапустити сеанс, щоб зміни наб
 #: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Перезапустити сеанс"
+
+#~ msgid "Image"
+#~ msgstr "Зображення"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Заголовки вікон застарілих програм"
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Емуляція кнопок миші"
+
+#~ msgid "Fingers"
+#~ msgstr "Пальці"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Натисніть на сенсорну панель двома пальцями для емуляції кліку правою "
+#~ "кнопки миші та трьома пальцями для емуляції середньої."
+
+#~ msgid "Area"
+#~ msgstr "Площа"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Клацніть праворуч у нижній частині сенсорної панелі для емуляції кліку "
+#~ "правою кнопкою миші та нижньої частини для емуляції середньої."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Не використовувати емуляцію миші."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Вимкнути під час введення тексту"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>f"
 
 #, python-format
 #~ msgid "(%s mode)"
