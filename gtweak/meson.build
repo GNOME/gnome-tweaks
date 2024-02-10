@@ -17,6 +17,7 @@ configure_file(
 
 shell_sources = [
   'app.py',
+  'devicemanager.py',
   'gsettings.py',
   'gshellwrapper.py',
   'gtksettings.py',
