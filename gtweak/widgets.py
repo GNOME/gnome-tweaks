@@ -250,6 +250,10 @@ class TweakPreferencesPage(Adw.Bin, TweakGroup):
 
         for t in tweaks:
             if isinstance(t, TweakPreferencesGroup):
+                # Skip empty groups...
+                if len(t.tweaks) == 0:
+                    continue
+
                 for st in t.tweaks:
                     self.add_tweak(st)
                 self.box.append(t)
@@ -284,23 +288,24 @@ class TweakPreferencesGroup(Adw.PreferencesGroup, TweakGroup):
         self._sg = Gtk.SizeGroup(mode=Gtk.SizeGroupMode.HORIZONTAL)
 
         for t in tweaks:
+            self.add_tweak(t)
+
+        for t in self.tweaks:
             self.add_tweak_row(t)
 
-
     def add_tweak_row(self, t: Tweak):
-        if self.add_tweak(t):
-            if isinstance(t, Adw.PreferencesRow):
-                self.add(t)
-            else:
-                row = Adw.PreferencesRow()
-                row.add_css_class("tweak-row")
-                row.set_title(t.title)
-                row.set_child(t)
+        if isinstance(t, Adw.PreferencesRow):
+            self.add(t)
+        else:
+            row = Adw.PreferencesRow()
+            row.add_css_class("tweak-row")
+            row.set_title(t.title)
+            row.set_child(t)
 
-                self.add(row)
+            self.add(row)
 
-            if t.widget_for_size_group:
-                self._sg.add_widget(t.widget_for_size_group)
+        if t.widget_for_size_group:
+            self._sg.add_widget(t.widget_for_size_group)
 
 class TweakCheckButton(Adw.Bin):
 
@@ -496,9 +501,9 @@ def build_gsettings_list_store(values):
 
 
 class GSettingsTweakComboRow(Adw.ComboRow, _GSettingsTweak, _DependableMixin):
-    def __init__(self, title, schema_name, key_name, key_options=None, schema_id=None, **options):
+    def __init__(self, title, schema_name, key_name, key_options=None, schema_id=None, subtitle=None, **options):
         _GSettingsTweak.__init__(self, title, schema_name, key_name, schema_id=schema_id, **options)
-        Adw.ComboRow.__init__(self, title=title)
+        Adw.ComboRow.__init__(self, title=title, subtitle=subtitle)
 
         if key_options is not None:
             # check key_options is iterable
@@ -571,16 +576,21 @@ class FileChooserButton(Gtk.Button, GObject.Object):
         if self._file:
             self._btn_content.set_label(self._file.get_basename())
 
+    def get_absolute_path(self) -> str | None:
+        return self._file.get_path() if self._file else None
+
     @GObject.Property(str)
     def file_uri(self) -> str:
         return self._file.get_uri()
 
     @file_uri.setter
-    def _set_file_uri(self, uri: str):
-        self._file = Gio.File.new_for_uri(uri)
+    def _set_file_uri(self, uri: str | None):
+        self._file = Gio.File.new_for_uri(uri) if uri else None
 
-        if self.get_realized():
+        if self._file and self.get_realized():
             self._btn_content.set_label(self._file.get_basename())
+        else:
+            self._btn_content.set_label(_("None"))
 
     def _on_clicked(self, _: Gtk.Button):
         mimetypes = self._mimetypes
