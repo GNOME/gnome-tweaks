@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-01-22 18:49+0000\n"
-"PO-Revision-Date: 2024-02-07 15:30+0100\n"
+"POT-Creation-Date: 2024-02-10 08:18+0000\n"
+"PO-Revision-Date: 2024-02-10 23:24+0100\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -46,16 +46,17 @@ msgstr ""
 "Mimo jiné umí spravovat přizpůsobení mapování klávesnice, přidávat aplikace "
 "spouštěné při spuštění systému a nastavovat vlastní ovládací prvky oken."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:98
-#: gtweak/tweakview.py:134
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Vyladění"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
 "nastavení;pokročilé;předvolby;písma;písmo;fonty;motiv;XKB;klávesnice;psaní;"
+"spuštění;"
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -69,7 +70,7 @@ msgstr "O aplikaci Vyladění"
 msgid "Fonts"
 msgstr "Písma"
 
-#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:260
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
 msgid "Appearance"
 msgstr "Vzhled"
 
@@ -77,7 +78,7 @@ msgstr "Vzhled"
 msgid "Sound"
 msgstr "Zvuk"
 
-#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:52
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
 msgid "Mouse & Touchpad"
 msgstr "Myš a touchpad"
 
@@ -89,7 +90,7 @@ msgstr "Klávesnice"
 msgid "Windows"
 msgstr "Okna"
 
-#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
 msgid "Startup Applications"
 msgstr "Aplikace při spuštění"
 
@@ -143,91 +144,87 @@ msgstr "Marek Černocký <marek@manet.cz>"
 msgid "Miscellaneous"
 msgstr "Různé"
 
-#: gtweak/tweaks/tweak_group_appearance.py:35
+#: gtweak/tweaks/tweak_group_appearance.py:31
 msgid "Legacy Applications"
 msgstr "Zastaralé aplikace"
 
-#: gtweak/tweaks/tweak_group_appearance.py:67
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Chyba zápisu nastavení"
 
-#: gtweak/tweaks/tweak_group_appearance.py:73
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Ikony"
 
-#: gtweak/tweaks/tweak_group_appearance.py:88
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Kurzor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:112
-msgid "Shell"
-msgstr "Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:112
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Instalovat vlastní nebo uživatelský motiv pro gnome-shell"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:115
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Neznámá chyba"
 
-#: gtweak/tweaks/tweak_group_appearance.py:120
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Shell neběží"
 
-#: gtweak/tweaks/tweak_group_appearance.py:142
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Rozšíření s uživatelským motivem shellu je nesprávně nainstalováno"
-
-#: gtweak/tweaks/tweak_group_appearance.py:145
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Rozšíření s uživatelským motivem shellu není povoleno"
 
-#: gtweak/tweaks/tweak_group_appearance.py:148
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Nelze vypsat seznam rozšíření shellu"
 
-#: gtweak/tweaks/tweak_group_appearance.py:178
-msgid "<i>Default</i>"
-msgstr "<i>Výchozí</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:183
+#: gtweak/tweaks/tweak_group_appearance.py:156
+msgid "Adwaita (default)"
+msgstr "Adwaita (výchozí)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Select a theme"
 msgstr "Vybrat motiv"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:218
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Motiv %s úspěšně aktualizován"
 
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:220
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Motiv %s úspěšně nainstalován"
 
-#: gtweak/tweaks/tweak_group_appearance.py:241
+#: gtweak/tweaks/tweak_group_appearance.py:222
 msgid "Error installing theme"
 msgstr "Chyba instalace motivu"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:246
+#: gtweak/tweaks/tweak_group_appearance.py:227
 msgid "Invalid theme"
 msgstr "Neplatný motiv"
 
-#: gtweak/tweaks/tweak_group_appearance.py:261
+#: gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Styles"
 msgstr "Styly"
 
-#: gtweak/tweaks/tweak_group_appearance.py:268
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Pozadí"
 
-#: gtweak/tweaks/tweak_group_appearance.py:270
-msgid "Image"
-msgstr "Obrázek"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "Výchozí obrázek"
 
-#: gtweak/tweaks/tweak_group_appearance.py:276
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "Obrázek v tmavém stylu"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Přizpůsobení"
 
@@ -248,7 +245,7 @@ msgid "Slight"
 msgstr "lehká"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:413 gtweak/widgets.py:562
+#: gtweak/widgets.py:418 gtweak/widgets.py:564 gtweak/widgets.py:593
 msgid "None"
 msgstr "nic"
 
@@ -280,39 +277,33 @@ msgstr "Text dokumentů"
 msgid "Monospace Text"
 msgstr "Text s pevnou šířkou"
 
-#: gtweak/tweaks/tweak_group_font.py:43
-msgid "Legacy Window Titles"
-msgstr "Klasická záhlaví oken"
-
-#: gtweak/tweaks/tweak_group_font.py:46
+#: gtweak/tweaks/tweak_group_font.py:45
 msgid "Rendering"
 msgstr "Vykreslování"
 
-#: gtweak/tweaks/tweak_group_font.py:50
+#: gtweak/tweaks/tweak_group_font.py:49
 msgid "Size"
 msgstr "Velikost"
 
-#: gtweak/tweaks/tweak_group_font.py:51
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Měřítko"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_mouse.py:47
-#: gtweak/tweaks/tweak_group_windows.py:153
-msgid "Disabled"
-msgstr "Vypnuto"
+msgid "Default"
+msgstr "Výchozí"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "Psaní"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:183
-#: gtweak/tweaks/tweak_group_mouse.py:14
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Vstup ve stylu Emacs"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:17
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Přepíše klávesové zkratky tak, aby odpovídaly editoru Emacs."
 
@@ -346,53 +337,61 @@ msgstr ""
 msgid "Layout"
 msgstr "Rozložení"
 
+#: gtweak/tweaks/tweak_group_mouse.py:31
+msgid "Disable Secondary Click"
+msgstr "Zakázat kliknutí vedlejším tlačítkem"
+
 #: gtweak/tweaks/tweak_group_mouse.py:32
-msgid "Mouse Click Emulation"
-msgstr "Emulace kliknutí myší"
-
-#: gtweak/tweaks/tweak_group_mouse.py:37
-msgid "Fingers"
-msgstr "Prsty"
-
-#: gtweak/tweaks/tweak_group_mouse.py:39
 msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
 msgstr ""
-"Klepněte na touchpad dvěma prsty pro kliknutí pravým tlačítkem a třemi prsty "
-"pro kliknutí prostředním tlačítkem."
+"Zakáže kliknutí vedlejším tlačítkem na touchpadech, které nemají fyzické "
+"vedlejší tlačítko"
 
-#: gtweak/tweaks/tweak_group_mouse.py:42
-msgid "Area"
-msgstr "Oblast"
-
-#: gtweak/tweaks/tweak_group_mouse.py:44
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Klepněte do pravého dolního rohu touchpadu pro kliknutí pravým tlačítkem a "
-"na střed dolního okraje pro kliknutí prostředním tlačítkem."
-
-#: gtweak/tweaks/tweak_group_mouse.py:49
-msgid "Don’t use mouse click emulation."
-msgstr "Nepoužívat emulaci kliknutí myší."
-
-#: gtweak/tweaks/tweak_group_mouse.py:53
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "Myš"
 
-#: gtweak/tweaks/tweak_group_mouse.py:54
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
 msgstr "Vložení prostředním tlačítkem"
 
-#: gtweak/tweaks/tweak_group_mouse.py:58
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: gtweak/tweaks/tweak_group_mouse.py:59
-msgid "Disable While Typing"
-msgstr "Zablokovat během psaní"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Akcelerace touchpadu"
+
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+"Vypnutí akcelerace může umožnit rychlejší a přesnější pohyby, ale také může "
+"ztížit používání touchpadu."
+
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Ukazovací páka"
+
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Akcelerace ukazovací páky"
+
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+"Vypnutí akcelerace může umožnit rychlejší a přesnější pohyby, ale také může "
+"ztížit používání ukazovací páky."
+
+#: gtweak/tweaks/tweak_group_mouse.py:104
+msgid "Scrolling Method"
+msgstr "Způsob posouvání"
 
 #: gtweak/tweaks/tweak_group_sound.py:44
 msgid "System Sound Theme"
@@ -423,26 +422,21 @@ msgstr "Přid_at"
 msgid "Search Applications…"
 msgstr "Vyhledat aplikace…"
 
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:126 gtweak/tweakview.py:181
-msgid "<primary>f"
-msgstr "<primary>f"
-
-#: gtweak/tweaks/tweak_group_startup.py:195
+#: gtweak/tweaks/tweak_group_startup.py:194
 msgid "Remove"
 msgstr "Odstranit"
 
-#: gtweak/tweaks/tweak_group_startup.py:221
+#: gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
 "Aplikace při spuštění se automaticky spustí pokaždé, když se přihlásíte."
 
-#: gtweak/tweaks/tweak_group_startup.py:258
+#: gtweak/tweaks/tweak_group_startup.py:257
 msgid "No Startup Applications"
 msgstr "Žádné aplikace při spuštění"
 
-#: gtweak/tweaks/tweak_group_startup.py:259
-msgid "Add a statup application"
+#: gtweak/tweaks/tweak_group_startup.py:258
+msgid "Add a startup application"
 msgstr "Přidat aplikaci při spuštění"
 
 #: gtweak/tweaks/tweak_group_windows.py:13
@@ -551,6 +545,10 @@ msgstr "Nová okna na střed"
 msgid "Window Action Key"
 msgstr "Klávesa pro akci okna"
 
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Vypnuto"
+
 #: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "Měnit velikost vedlejším tlačítkem myši"
@@ -559,7 +557,7 @@ msgstr "Měnit velikost vedlejším tlačítkem myši"
 msgid "Raise Windows When Focused"
 msgstr "Zaměřené okno přenést do popředí"
 
-#: gtweak/tweakview.py:161
+#: gtweak/tweakview.py:156
 msgid "Search Tweaks…"
 msgstr "Hledat vyladění…"
 
@@ -580,6 +578,50 @@ msgstr "Aby se nastavení projevilo, musí být vaše sezení restartováno"
 #: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Restartovat sezení"
+
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "Instalovat vlastní nebo uživatelský motiv pro gnome-shell"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "Rozšíření s uživatelským motivem shellu je nesprávně nainstalováno"
+
+#~ msgid "Image"
+#~ msgstr "Obrázek"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Klasická záhlaví oken"
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Emulace kliknutí myší"
+
+#~ msgid "Fingers"
+#~ msgstr "Prsty"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Klepněte na touchpad dvěma prsty pro kliknutí pravým tlačítkem a třemi "
+#~ "prsty pro kliknutí prostředním tlačítkem."
+
+#~ msgid "Area"
+#~ msgstr "Oblast"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Klepněte do pravého dolního rohu touchpadu pro kliknutí pravým tlačítkem "
+#~ "a na střed dolního okraje pro kliknutí prostředním tlačítkem."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Nepoužívat emulaci kliknutí myší."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Zablokovat během psaní"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>f"
 
 #~ msgid "Date & Time"
 #~ msgstr "Datum a čas"
