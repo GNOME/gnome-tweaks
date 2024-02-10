@@ -152,7 +152,7 @@ class TickActionRow(Adw.ActionRow):
 
 
 class _GSettingsTweak(Tweak):
-    def __init__(self, title, schema_name, key_name, resettable_to_default=True, **options):
+    def __init__(self, title, schema_name, key_name, schema_id=None, resettable_to_default=True, **options):
         self.schema_name = schema_name
         self.key_name = key_name
         self._extra_info = None
@@ -163,10 +163,10 @@ class _GSettingsTweak(Tweak):
         if 'uid' not in options:
             options['uid'] = key_name
         try:
-            self.settings = GSettingsSetting(schema_name, **options)
+            self.settings = GSettingsSetting(schema_name=schema_name, schema_id=schema_id, **options)
             Tweak.__init__(self,
                 title,
-                options.get("description",self.settings.schema_get_description(key_name)),
+                options.get("description", self.settings.schema_get_description(key_name)),
                 **options)
         except GSettingsMissingError as e:
             self.settings = GSettingsFakeSetting()
@@ -177,7 +177,7 @@ class _GSettingsTweak(Tweak):
             self.settings = GSettingsFakeSetting()
             Tweak.__init__(self, "", "")
             self.loaded = False
-            logging.info("GSettings missing key %s (key %s)" % (schema_name, key_name))
+            logging.info("GSettings missing key %s (key %s)" % (schema_id or schema_name, key_name))
 
         if options.get("logout_required") and self.loaded:
             self.settings.connect("changed::%s" % key_name, self._on_changed_notify_logout)

@@ -21,7 +21,7 @@ class GSettingsMissingError(Exception):
 
 
 class _GSettingsSchema:
-    def __init__(self, schema_name, schema_dir=None, schema_filename=None, **options):
+    def __init__(self, schema_name, child_name=None, schema_dir=None, schema_filename=None, **options):
         if not schema_filename:
             schema_filename = schema_name + ".gschema.xml"
         if not schema_dir:
@@ -37,7 +37,7 @@ class _GSettingsSchema:
             logging.critical("Could not find schema %s" % schema_path)
             assert(False)
 
-        self._schema_name = schema_name
+        self._schema_name = f"{schema_name}.{child_name}" if child_name else schema_name
         self._schema = {}
 
         try:
@@ -52,7 +52,7 @@ class _GSettingsSchema:
                     global_translation = gettext.NullTranslations()
             except IOError:
                 global_translation = None
-                logging.debug("No translated schema for %s (domain: %s)" % (schema_name, global_gettext_domain))
+                logging.debug("No translated schema for %s (domain: %s)" % (self._schema_name, global_gettext_domain))
             for schema in dom.getElementsByTagName("schema"):
                 gettext_domain = schema.getAttribute('gettext-domain')
                 try:
@@ -62,8 +62,8 @@ class _GSettingsSchema:
                         translation = global_translation
                 except IOError:
                     translation = None
-                    logging.debug("Schema not translated %s (domain: %s)" % (schema_name, gettext_domain))
-                if schema_name == schema.getAttribute("id"):
+                    logging.debug("Schema not translated %s (domain: %s)" % (self._schema_name, gettext_domain))
+                if self._schema_name == schema.getAttribute("id"):
                     for key in schema.getElementsByTagName("key"):
                         name = key.getAttribute("name")
                         # summary is 'compulsory', description is optional
@@ -86,7 +86,7 @@ class _GSettingsSchema:
                         )
 
         except:
-            logging.critical("Error parsing schema %s (%s)" % (schema_name, schema_path), exc_info=True)
+            logging.critical("Error parsing schema %s (%s)" % (self._schema_name, schema_path), exc_info=True)
 
     def __repr__(self):
         return "<gtweak.gsettings._GSettingsSchema: %s>" % self._schema_name
@@ -112,17 +112,19 @@ class GSettingsFakeSetting:
 
 
 class GSettingsSetting(Gio.Settings):
-    def __init__(self, schema_name, schema_dir=None, schema_path=None, **options):
+    def __init__(self, schema_name, schema_child_name=None, schema_dir=None, schema_path=None, schema_id=None, **options):
 
         if schema_dir is None:
-            if schema_path is None and schema_name not in _GSETTINGS_SCHEMAS:
+            if schema_path is None and schema_id is None and schema_name not in _GSETTINGS_SCHEMAS:
                 raise GSettingsMissingError(schema_name)
 
             if schema_path is not None and schema_name not in _GSETTINGS_RELOCATABLE_SCHEMAS:
                 raise GSettingsMissingError(schema_name)
 
-            if schema_path is None:
+            if schema_path is None and schema_id is None:
                 Gio.Settings.__init__(self, schema=schema_name)
+            elif schema_id is not None:
+                Gio.Settings.__init__(self, schema_id=schema_id)
             else:
                 Gio.Settings.__init__(self, schema=schema_name, path=schema_path)
         else:
@@ -137,7 +139,7 @@ class GSettingsSetting(Gio.Settings):
             Gio.Settings.__init__(self, None, settings_schema=schema_obj)
 
         if schema_name not in _SCHEMA_CACHE:
-            _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, schema_dir=schema_dir, **options)
+            _SCHEMA_CACHE[schema_name] = _GSettingsSchema(schema_name, child_name=schema_child_name, schema_dir=schema_dir, **options)
             logging.debug("Caching gsettings: %s" % _SCHEMA_CACHE[schema_name])
 
         self._schema = _SCHEMA_CACHE[schema_name]

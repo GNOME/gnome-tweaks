@@ -2,11 +2,9 @@
 # SPDX-License-Identifier: GPL-3.0+
 # License-Filename: LICENSES/GPL-3.0
 
+from gi.repository import GDesktopEnums
 
-
-from gtweak.widgets import (TweakPreferencesPage, GSettingsTweakSwitchRow, GSettingsSwitchTweakValue, TweakPreferencesGroup,
-                           TweaksCheckGroupActionRow)
-
+from gtweak.widgets import (TweakPreferencesPage, GSettingsTweakSwitchRow, GSettingsSwitchTweakValue, TweakPreferencesGroup)
 
 class KeyThemeSwitcher(GSettingsSwitchTweakValue):
     def __init__(self, **options):
@@ -26,27 +24,29 @@ class KeyThemeSwitcher(GSettingsSwitchTweakValue):
         else:
             self.settings.set_string(self.key_name, "Default")
 
-class ClickMethod(TweaksCheckGroupActionRow):
+class ClickMethod(GSettingsSwitchTweakValue):
 
     def __init__(self, **options):
-        title = _("Mouse Click Emulation")
+        title = _("Disable Secondary Click")
+        desc = _("Disables secondary clicks on touchpads which do not have a physical secondary button")
 
-        TweaksCheckGroupActionRow.__init__(self, title=title, setting="org.gnome.desktop.peripherals.touchpad", key_name="click-method", **options)
+        GSettingsSwitchTweakValue.__init__(self,
+                                           title=title,
+                                           schema_name="org.gnome.desktop.peripherals",
+                                           schema_child_name="touchpad",
+                                           schema_id="org.gnome.desktop.peripherals.touchpad",
+                                           key_name="click-method",
+                                           desc=desc,
+                                           **options)
 
-        self.add_row(
-            key_name="fingers", title=_("Fingers"),
-            subtitle=_(
-                "Click the touchpad with two fingers for right-click and three fingers for middle-click."))
-
-        self.add_row(
-            key_name="areas", title=_("Area"),
-            subtitle=_(
-                "Click the bottom right of the touchpad for right-click and the bottom middle for middle-click."))
-
-        self.add_row(
-            key_name="none", title=_("Disabled"),
-            subtitle=_(
-                "Don’t use mouse click emulation."))
+    def get_active(self):
+        return self.settings.get_enum(self.key_name) == GDesktopEnums.TouchpadClickMethod.NONE
+    
+    def set_active(self, v):
+        if v:
+          self.settings.set_enum(self.key_name, GDesktopEnums.TouchpadClickMethod.NONE)
+        else:
+          self.settings.reset(self.key_name)
 
 
 TWEAK_GROUP = TweakPreferencesPage("mouse", _("Mouse & Touchpad"),
