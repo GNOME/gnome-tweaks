@@ -128,12 +128,17 @@ class GSettingsSetting(Gio.Settings):
             else:
                 Gio.Settings.__init__(self, schema=schema_name, path=schema_path)
         else:
-            GioSSS = Gio.SettingsSchemaSource
-            schema_source = GioSSS.new_from_directory(schema_dir,
-                                                      GioSSS.get_default(),
-                                                      False)
-            schema_obj = schema_source.lookup(schema_name, True)
-            if not schema_obj:
+            try:
+                GioSSS = Gio.SettingsSchemaSource
+                schema_source = GioSSS.new_from_directory(schema_dir,
+                                                          GioSSS.get_default(),
+                                                          False)
+                schema_obj = schema_source.lookup(schema_name, True)
+                if not schema_obj:
+                    raise GSettingsMissingError(schema_name)
+            except GLib.GError as e:
+                logging.exception("Failed to load schema from %s" % schema_dir, exc_info=e)
+
                 raise GSettingsMissingError(schema_name)
 
             Gio.Settings.__init__(self, None, settings_schema=schema_obj)

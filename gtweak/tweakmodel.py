@@ -47,7 +47,11 @@ class Tweak(object):
         self._logoutnotification = LogoutNotification()
 
     def notify_information(self, summary, desc=""):
-        self._notification = Notification(summary, desc)
+        try:
+          self._notification = Notification(summary, desc)
+        except:
+          logging.exception("Failed to send notification", exc_info=True)
+          logging.info(f"{summary}: {desc}")
 
 
 class TweakGroup(object):

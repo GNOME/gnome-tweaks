@@ -8,19 +8,15 @@ import logging
 import zipfile
 import tempfile
 import json
-import pprint
 
 from gi.repository import Gtk
 from gi.repository import GLib
+from gtweak.tweakmodel import Tweak
 
 from gtweak.utils import walk_directories, make_combo_list_with_default, extract_zip_file, get_resource_dirs
-from gtweak.tweakmodel import Tweak
 from gtweak.gshellwrapper import GnomeShellFactory
-from gtweak.gsettings import GSettingsSetting
 from gtweak.gtksettings import GtkSettingsManager
-from gtweak.widgets import (TweakPreferencesPage, GSettingsTweakComboRow,TweakPreferencesGroup, build_combo_box_text,
-                            build_label_beside_widget,
-                            GSettingsFileChooserButtonTweak, FileChooserButton)
+from gtweak.widgets import (TweakPreferencesPage, GSettingsTweakComboRow,TweakPreferencesGroup, GSettingsFileChooserButtonTweak, FileChooserButton, build_label_beside_widget)
 
 
 _shell = GnomeShellFactory().get_shell()
@@ -97,8 +93,7 @@ class CursorThemeSwitcher(GSettingsTweakComboRow):
                         os.path.exists(os.path.join(d, "cursors")))
         return set(valid)
 
-class ShellThemeTweak(Gtk.Box, Tweak):
-
+class ShellThemeTweak(GSettingsTweakComboRow):
     THEME_EXT_NAME = "user-theme@gnome-shell-extensions.gcampax.github.com"
     THEME_GSETTINGS_SCHEMA = "org.gnome.shell.extensions.user-theme"
     THEME_GSETTINGS_NAME = "name"
@@ -108,9 +103,6 @@ class ShellThemeTweak(Gtk.Box, Tweak):
     THEME_DIR = os.path.join(GLib.get_user_data_dir(), "themes")
 
     def __init__(self, **options):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
-        Tweak.__init__(self, _("Shell"), _("Install custom or user themes for gnome-shell"), **options)
-
         #check the shell is running and the usertheme extension is present
         error = _("Unknown error")
         self._shell = _shell
@@ -122,24 +114,7 @@ class ShellThemeTweak(Gtk.Box, Tweak):
             try:
                 extensions = self._shell.list_extensions()
                 if ShellThemeTweak.THEME_EXT_NAME in extensions and extensions[ShellThemeTweak.THEME_EXT_NAME]["state"] == 1:
-                    #check the correct gsettings key is present
-                    try:
-                        if os.path.exists(ShellThemeTweak.THEME_GSETTINGS_DIR):
-                            self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA,
-                                                              schema_dir=ShellThemeTweak.THEME_GSETTINGS_DIR)
-                        else:
-                            self._settings = GSettingsSetting(ShellThemeTweak.THEME_GSETTINGS_SCHEMA)
-                        name = self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME)
-
-                        ext = extensions[ShellThemeTweak.THEME_EXT_NAME]
-                        logging.debug("Shell user-theme extension\n%s" % pprint.pformat(ext))
-
-                        error = None
-                    except:
-                        logging.warning(
-                            "Could not find user-theme extension in %s" % ','.join(list(extensions.keys())),
-                            exc_info=True)
-                        error = _("Shell user-theme extension incorrectly installed")
+                    error = None
 
                 else:
                     error = _("Shell user-theme extension not enabled")
@@ -148,11 +123,7 @@ class ShellThemeTweak(Gtk.Box, Tweak):
                 error = _("Could not list shell extensions")
 
         if error:
-            cb = build_combo_box_text(None)
-            build_label_beside_widget(self.title, cb,
-                        warning=error,
-                        hbox=self)
-            self.widget_for_size_group = cb
+            valid = []
         else:
             #include both system, and user themes
             #note: the default theme lives in /system/data/dir/gnome-shell/theme
@@ -172,28 +143,39 @@ class ShellThemeTweak(Gtk.Box, Tweak):
             #the default value to reset the shell is an empty string
             valid.extend( ("",) )
             valid = set(valid)
+        
+        # load the schema from the user installation of User Themes if it exists
+        schema_dir = ShellThemeTweak.THEME_GSETTINGS_DIR if os.path.exists(ShellThemeTweak.THEME_GSETTINGS_DIR) else None
 
-            #build a combo box with all the valid theme options
-            #manually add Adwaita to represent the default
-            cb = build_combo_box_text(
-                    self._settings.get_string(ShellThemeTweak.THEME_GSETTINGS_NAME),
-                    *make_combo_list_with_default(
-                        valid,
-                        "",
-                        default_text=_("<i>Default</i>")))
-            cb.connect('changed', self._on_combo_changed)
-            self._combo = cb
+        # build a combo box with all the valid theme options
+        GSettingsTweakComboRow.__init__(self,
+		  title=_("Shell"),
+          schema_name=ShellThemeTweak.THEME_GSETTINGS_SCHEMA,
+          schema_dir=schema_dir,
+          key_name=ShellThemeTweak.THEME_GSETTINGS_NAME,
+          key_options=make_combo_list_with_default(opts=list(valid), default="", default_text=_("Adwaita (default)")),
+          **options
+        )
 
-            chooser = FileChooserButton(
-                        _("Select a theme"),
-                        ["application/zip"])
-            chooser.connect("notify::file-uri", self._on_file_set)
+class ShellThemeInstallerTweak(Gtk.Box, Tweak):
+    def __init__(self, title, description=None, **options):
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.HORIZONTAL)
+        Tweak.__init__(self, title=title, description=description, **options)
 
-            build_label_beside_widget(self.title, chooser, cb, hbox=self)
-            self.widget_for_size_group = cb
+        chooser = FileChooserButton(
+                    _("Select a theme"),
+                    ["application/zip"])
+        chooser.connect("notify::file-uri", self._on_file_set)
 
-    def _on_file_set(self, chooser):
-        f = chooser.get_filename()
+        build_label_beside_widget(title, chooser, hbox=self)
+
+        self.widget_for_size_group = None
+
+    def _on_file_set(self, chooser: FileChooserButton, _pspec):
+        f = chooser.get_absolute_path()
+
+        if not f:
+            return
 
         with zipfile.ZipFile(f, 'r') as z:
             try:
@@ -236,55 +218,51 @@ class ShellThemeTweak(Gtk.Box, Tweak):
                         self.notify_information(_("%s theme updated successfully") % theme_name)
                     else:
                         self.notify_information(_("%s theme installed successfully") % theme_name)
-
-                    #I suppose I could rely on updated as indicating whether to add the theme
-                    #name to the combo, but just check to see if it is already there
-                    model = self._combo.get_model()
-                    if theme_name not in [r[0] for r in model]:
-                        model.append( (theme_name, theme_name) )
                 else:
                     self.notify_information(_("Error installing theme"))
 
 
             except:
-                #does not look like a valid theme
+                # does not look like a valid theme
                 self.notify_information(_("Invalid theme"))
                 logging.warning("Error parsing theme zip", exc_info=True)
 
-        #set button back to default state
-        chooser.unselect_all()
-
-    def _on_combo_changed(self, combo, _):
-        item = combo.get_selected_item()
-        if item:
-            value = item.value
-
-            self._settings.set_string(ShellThemeTweak.THEME_GSETTINGS_NAME, value)
+        # set button back to default state
+        chooser.props.file_uri = None
 
 
 TWEAK_GROUP = TweakPreferencesPage("appearance", _("Appearance"),
-   TweakPreferencesGroup( _("Styles"), "title-styles",
+  TweakPreferencesGroup( _("Styles"), "title-styles",
     CursorThemeSwitcher(),
     IconThemeSwitcher(),
     ShellThemeTweak(loaded=_shell_loaded),
     GtkThemeSwitcher(),
-   ),
-   TweakPreferencesGroup(
-   _("Background"), "title-backgrounds",
+  ),
+  # TODO: The current installer is brittle and the interaction doesn't make sense
+  # (you select a file and then it is un-selected with notifications informing
+  # you if it installed correctly)
+  #
+  #   ShellThemeInstallerTweak(
+  #     title=_("Install custom shell theme"),
+  #     description=_("Install custom or user themes for GNOME shell"),
+  #     loaded=_shell_loaded,
+  #   ),
+  TweakPreferencesGroup(
+    _("Background"), "title-backgrounds",
     GSettingsFileChooserButtonTweak(
-        _("Default Image"),
-        "org.gnome.desktop.background",
-        "picture-uri",
-        mimetypes=["application/xml", "image/png", "image/jpeg"],
+      _("Default Image"),
+      "org.gnome.desktop.background",
+      "picture-uri",
+      mimetypes=["application/xml", "image/png", "image/jpeg"],
     ),
     GSettingsFileChooserButtonTweak(
-        _("Dark Style Image"),
-        "org.gnome.desktop.background",
-        "picture-uri-dark",
-        mimetypes=["application/xml", "image/png", "image/jpeg"],
+      _("Dark Style Image"),
+      "org.gnome.desktop.background",
+      "picture-uri-dark",
+      mimetypes=["application/xml", "image/png", "image/jpeg"],
     ),
     GSettingsTweakComboRow(
-        _("Adjustment"), "org.gnome.desktop.background", "picture-options"
+      _("Adjustment"), "org.gnome.desktop.background", "picture-options"
     ),
    ),
 )

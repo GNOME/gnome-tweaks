@@ -62,11 +62,6 @@ class Window(Adw.ApplicationWindow):
         self._setup_mainbox()
         self._setup_sizegroups()
 
-
-
-
-
-
         self._load_css()
         self._model = model
 
