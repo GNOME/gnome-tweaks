@@ -29,11 +29,13 @@ The only build-time dependency is [meson](https://mesonbuild.com/).
 - GIR files and libraries from:
 
   - GLib
-  - GTK
+  - GTK 4
   - gnome-desktop
   - libadwaita
   - libnotify
   - Pango
+  - gsettings-desktop-schemas
+  - libgudev
 
 - GSettings Schemas from:
   - gsettings-desktop-schemas
