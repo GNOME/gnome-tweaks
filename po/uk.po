@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-02-10 06:15+0000\n"
-"PO-Revision-Date: 2024-02-10 09:47+0200\n"
+"POT-Creation-Date: 2024-02-10 08:18+0000\n"
+"PO-Revision-Date: 2024-02-11 19:43+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -48,14 +48,13 @@ msgstr ""
 "додавати програми до списку автоматичного запуску і встановлювати нетипові "
 "засоби керування вікнами."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:98
-#: gtweak/tweakview.py:134
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Налаштування"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-#| msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
 "Параметри;Додаткові;Налаштування;Шрифти;Теми;XKB;Клавіатура;Введення;запуск;"
@@ -72,7 +71,7 @@ msgstr "_Про програму"
 msgid "Fonts"
 msgstr "Шрифти"
 
-#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:260
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
 msgid "Appearance"
 msgstr "Зовнішній вигляд"
 
@@ -146,95 +145,88 @@ msgstr "Юрій Чорноіван <yurchor@ukr.net>, 2024"
 msgid "Miscellaneous"
 msgstr "Інше"
 
-#: gtweak/tweaks/tweak_group_appearance.py:35
+#: gtweak/tweaks/tweak_group_appearance.py:31
 msgid "Legacy Applications"
 msgstr "Застарілі програми"
 
-#: gtweak/tweaks/tweak_group_appearance.py:67
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Помилка запису параметрів"
 
-#: gtweak/tweaks/tweak_group_appearance.py:73
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Піктограми"
 
-#: gtweak/tweaks/tweak_group_appearance.py:88
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Курсор"
 
-#: gtweak/tweaks/tweak_group_appearance.py:112
-msgid "Shell"
-msgstr "Оболонка"
-
-#: gtweak/tweaks/tweak_group_appearance.py:112
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Встановлювати власні або користувацькі теми для gnome-shell"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:115
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Невідома помилка"
 
-#: gtweak/tweaks/tweak_group_appearance.py:120
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Оболонку не запущено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:142
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Розширення користувацької теми для оболонки неправильно встановлено"
-
-#: gtweak/tweaks/tweak_group_appearance.py:145
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Розширення користувацької тема для оболонки не ввімкнено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:148
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Не вдалося перелічити розширення для оболонки"
 
-#: gtweak/tweaks/tweak_group_appearance.py:178
-msgid "<i>Default</i>"
-msgstr "<i>Типове</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Оболонка"
 
-#: gtweak/tweaks/tweak_group_appearance.py:183
+#: gtweak/tweaks/tweak_group_appearance.py:156
+#| msgid "%s (default)"
+msgid "Adwaita (default)"
+msgstr "Adwaita (типова)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Select a theme"
 msgstr "Виберіть тему"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:218
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Тему %s успішно оновлено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:220
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Тему %s успішно встановлено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:241
+#: gtweak/tweaks/tweak_group_appearance.py:222
 msgid "Error installing theme"
 msgstr "Помилка встановлення теми"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:246
+#: gtweak/tweaks/tweak_group_appearance.py:227
 msgid "Invalid theme"
 msgstr "Некоректна тема"
 
-#: gtweak/tweaks/tweak_group_appearance.py:261
+#: gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Styles"
 msgstr "Стилі"
 
-#: gtweak/tweaks/tweak_group_appearance.py:268
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Тло"
 
-#: gtweak/tweaks/tweak_group_appearance.py:270
+#: gtweak/tweaks/tweak_group_appearance.py:253
 msgid "Default Image"
 msgstr "Типове зображення"
 
-#: gtweak/tweaks/tweak_group_appearance.py:276
+#: gtweak/tweaks/tweak_group_appearance.py:259
 msgid "Dark Style Image"
 msgstr "Зображення для темного стилю"
 
-#: gtweak/tweaks/tweak_group_appearance.py:282
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Коригування"
 
@@ -255,7 +247,7 @@ msgid "Slight"
 msgstr "Легкий"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:413 gtweak/widgets.py:559
+#: gtweak/widgets.py:418 gtweak/widgets.py:564 gtweak/widgets.py:593
 msgid "None"
 msgstr "Відсутній"
 
@@ -300,7 +292,6 @@ msgid "Scaling Factor"
 msgstr "Коефіцієнт масштабування"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#| msgid "<i>Default</i>"
 msgid "Default"
 msgstr "Типове"
 
@@ -349,7 +340,6 @@ msgid "Layout"
 msgstr "Компонування"
 
 #: gtweak/tweaks/tweak_group_mouse.py:31
-#| msgid "Secondary-Click"
 msgid "Disable Secondary Click"
 msgstr "Вимкнути вторинне клацання"
 
@@ -358,8 +348,8 @@ msgid ""
 "Disables secondary clicks on touchpads which do not have a physical "
 "secondary button"
 msgstr ""
-"Вимикає вторинні клацання на сенсорних панелях, які не мають фізичної"
-" вторинної кнопки"
+"Вимикає вторинні клацання на сенсорних панелях, які не мають фізичної "
+"вторинної кнопки"
 
 #: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
@@ -382,8 +372,8 @@ msgid ""
 "Turning acceleration off can allow faster and more precise movements, but "
 "can also make the touchpad more difficult to use."
 msgstr ""
-"Вимикання прискорення може зробити рухи швидшими та точнішими, але "
-"також може ускладнити користування сенсорною панеллю."
+"Вимикання прискорення може зробити рухи швидшими та точнішими, але також "
+"може ускладнити користування сенсорною панеллю."
 
 #: gtweak/tweaks/tweak_group_mouse.py:97
 msgid "Pointing Stick"
@@ -398,11 +388,10 @@ msgid ""
 "Turning acceleration off can allow faster and more precise movements, but "
 "can also make the pointing stick more difficult to use."
 msgstr ""
-"Вимикання прискорення може зробити рухи швидшими та точнішими, але "
-"також може ускладнити користування тензометричним маніпулятором."
+"Вимикання прискорення може зробити рухи швидшими та точнішими, але також "
+"може ускладнити користування тензометричним маніпулятором."
 
 #: gtweak/tweaks/tweak_group_mouse.py:104
-#| msgid "Scaling Factor"
 msgid "Scrolling Method"
 msgstr "Спосіб гортання"
 
@@ -449,7 +438,6 @@ msgid "No Startup Applications"
 msgstr "Немає програм у автозапуску"
 
 #: gtweak/tweaks/tweak_group_startup.py:258
-#| msgid "Add a statup application"
 msgid "Add a startup application"
 msgstr "Додати програму у автозапуск"
 
@@ -571,7 +559,7 @@ msgstr "Змінити розмір за допомогою правого кл�
 msgid "Raise Windows When Focused"
 msgstr "Показувати вікна під час фокусування"
 
-#: gtweak/tweakview.py:161
+#: gtweak/tweakview.py:156
 msgid "Search Tweaks…"
 msgstr "Пошук налаштувань…"
 
@@ -592,6 +580,15 @@ msgstr "Слід перезапустити сеанс, щоб зміни наб
 #: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Перезапустити сеанс"
+
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "Встановлювати власні або користувацькі теми для gnome-shell"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "Розширення користувацької теми для оболонки неправильно встановлено"
+
+#~ msgid "<i>Default</i>"
+#~ msgstr "<i>Типове</i>"
 
 #~ msgid "Image"
 #~ msgstr "Зображення"
