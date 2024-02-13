@@ -15,13 +15,63 @@ gi.require_version("Gtk", "3.0")
 gi.require_version("Handy", "1")
 
 import gtweak
-from gtweak.defs import VERSION, APP_ID
+from gtweak.defs import VERSION, APP_ID, GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR, \
+                                PKG_DATA_DIR, LOCALE_DIR
 
+def set_internationalization(domain, locale_dir):
+    """
+    Initialize gettext and locale domains
+    """
+
+    try:
+        locale.bindtextdomain(domain, locale_dir)
+        locale.textdomain(domain)
+    except AttributeError as e:
+        # Python built without gettext support does not have
+        # bindtextdomain() and textdomain().
+        logging.error(
+            "Could not bind the gettext translation domain. Some translations will not work.",
+            exc_info=e,
+        )
+
+    gettext.bindtextdomain(domain, locale_dir)
+    gettext.textdomain(domain)
+
+    gettext.install(domain, names=('gettext', 'ngettext'))
+
+def setup_defs_for_prefix(prefix: str):
+    """
+    Setup the directory definitions given a prefix
+    """
+    
+    gtweak.DATA_DIR = os.path.join(prefix, "share")
+    gtweak.LOCALE_DIR = os.path.join(prefix, "share", "locale")
+    gtweak.GSETTINGS_SCHEMA_DIR = os.path.join(prefix, "share", "glib-2.0", "schemas")
+
+    me = os.path.abspath(os.path.dirname(__file__))
+    gtweak.TWEAK_DIR = os.path.join(me, "gtweak", "tweaks")
+    gtweak.PKG_DATA_DIR = os.path.join(me, "data")
+
+
+def setup_defs(prefix: str | None = None):
+    """
+    Setup the directory definitions
+    """
+    
+    gtweak.APP_ID = APP_ID
+
+    if prefix:
+        setup_defs_for_prefix(prefix)
+    else:
+        gtweak.GSETTINGS_SCHEMA_DIR = GSETTINGS_SCHEMA_DIR
+        gtweak.TWEAK_DIR = TWEAK_DIR
+        gtweak.DATA_DIR = DATA_DIR
+        gtweak.PKG_DATA_DIR = PKG_DATA_DIR
+        gtweak.LOCALE_DIR = LOCALE_DIR
+    
 
 if __name__ == '__main__':
     parser = optparse.OptionParser(version=VERSION)
-    parser.add_option("-l", "--load", action="store_true",
-                      help="Load all tweaks")
     parser.add_option("-p", "--prefix",
                       help="Installation prefix (for gsettings schema, themes, etc)",
                       metavar="[/, /usr]")
@@ -31,46 +81,21 @@ if __name__ == '__main__':
                       help="Enable debug output")
     options, args = parser.parse_args()
 
-    try:
-        from gtweak.defs import GSETTINGS_SCHEMA_DIR, TWEAK_DIR, DATA_DIR, \
-                                PKG_DATA_DIR, LOCALE_DIR, LIBEXEC_DIR
-        _defs_present = True
-    except ImportError:
-        GSETTINGS_SCHEMA_DIR = TWEAK_DIR = DATA_DIR = PKG_DATA_DIR = \
-                               LOCALE_DIR = LIBEXEC_DIR = ""
-        _defs_present = False
+    setup_defs(options.prefix or None)
 
-    # the supplied prefix always beats the contents of defs
-    if options.prefix or not _defs_present:
-        _prefix = options.prefix or "/usr"
-        DATA_DIR = os.path.join(_prefix, "share")
-        LOCALE_DIR = os.path.join(_prefix, "share", "locale")
-        GSETTINGS_SCHEMA_DIR = os.path.join(_prefix, "share", "glib-2.0", "schemas")
-        _me = os.path.abspath(os.path.dirname(__file__))
-        TWEAK_DIR = os.path.join(_me, "gtweak", "tweaks")
-        PKG_DATA_DIR = os.path.join(_me, "data")
-
-    gtweak.GSETTINGS_SCHEMA_DIR = GSETTINGS_SCHEMA_DIR
-    gtweak.TWEAK_DIR = TWEAK_DIR
-    gtweak.DATA_DIR = DATA_DIR
-    gtweak.PKG_DATA_DIR = PKG_DATA_DIR
-    gtweak.LOCALE_DIR = LOCALE_DIR
-    gtweak.LIBEXEC_DIR = LIBEXEC_DIR
-    gtweak.ALL_TWEAKS = options.load
-    gtweak.APP_ID = APP_ID
-    gtweak.APP_NAME = "gnome-tweaks"
     gtweak.VERBOSE = options.verbose
 
     if options.debug:
         level = logging.DEBUG
     else:
         level = logging.WARNING
+
     logging.basicConfig(format="%(levelname)-8s: %(message)s", level=level)
 
-    locale.setlocale(locale.LC_ALL, None)
-    gettext.install(gtweak.APP_NAME, LOCALE_DIR, names=('gettext', 'ngettext'))
+    set_internationalization(gtweak.APP_NAME, LOCALE_DIR)
 
     from gtweak.app import GnomeTweaks
+
     app = GnomeTweaks()
     signal.signal(signal.SIGINT, signal.SIG_DFL)
     exit_status = app.run(None)
