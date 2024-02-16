@@ -1,6 +1,6 @@
 project('gnome-tweaks',
   version: '46.beta',
-  meson_version: '>= 0.50.0'
+  meson_version: '>= 0.59.0'
 )
 
 gnome = import('gnome')
@@ -40,5 +40,11 @@ install_data('gnome-tweaks', install_dir: bindir)
 subdir('gtweak')
 subdir('data')
 subdir('po')
+
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+  update_desktop_database: true,
+)
 
 meson.add_install_script('meson-postinstall.py')
