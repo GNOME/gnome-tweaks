@@ -2,88 +2,119 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 #
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014.
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2024 Rūdofls Mazurs <rudolfs.mazurs@gmail.com>
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-03-03 11:48+0000\n"
-"PO-Revision-Date: 2023-03-24 22:42+0200\n"
+"POT-Creation-Date: 2024-02-10 08:18+0000\n"
+"PO-Revision-Date: 2024-03-02 19:18+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "GNOME projekts"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:43 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "GNOME piedare"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
-#| msgid "Tweak advanced GNOME 3 settings"
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "Pieregulēt paplašinātos GNOME iestatījumus"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "GNOME piedare ļauj pielāgot paplašinātas GNOME opcijas."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 #| msgid ""
-#| "It can install and manage themes and extensions, change power settings, "
-#| "manage startup applications, and enable desktop icons among other "
-#| "settings."
+#| "It can install and manage themes, change power settings, manage startup "
+#| "applications, and enable desktop icons among other settings."
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"Tas var instalēt un pārvaldīt motīvus, mainīt barošanas "
-"iestatījumus, pārvaldīt palaišanas lietotnes un aktivēt darbvirsmas ikonas, "
-"kā arī pārvaldīt citus iestatījumus."
+"Tas var pārvaldīt tastatūras kartēšanas pielāgojumus, pārvaldīt palaišanas"
+" lietotnes un iestatīt pielāgotas logu vadīklas, kā arī pārvaldīt citus"
+" iestatījumus."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:109
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Piedares"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "Iestatījumi;Paplašināti;Fonti;Motīvi;XKB;Tastatūra;Rakstīšana;"
+#| msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+msgstr ""
+"Iestatījumi;Paplašināti;Fonti;Motīvi;XKB;Tastatūra;Rakstīšana;Palaišana;"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "Atstatīt uz _noklusējuma parametriem"
 
-#: data/shell.ui:13
+#: data/shell.ui:12
 msgid "_About Tweaks"
 msgstr "P_ar piedari"
 
-#: gtweak/app.py:23
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
+msgid "Fonts"
+msgstr "Fonti"
+
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
+msgid "Appearance"
+msgstr "Izskats"
+
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
+msgid "Sound"
+msgstr "Skaņa"
+
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
+#| msgid "Touchpad"
+msgid "Mouse & Touchpad"
+msgstr "Pele un skārienpaliktnis"
+
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
+msgid "Keyboard"
+msgstr "Tastatūra"
+
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
+msgid "Windows"
+msgstr "Logi"
+
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
+msgid "Startup Applications"
+msgstr "Starta lietotnes"
+
+#: gtweak/app.py:21
 msgid "_Continue"
 msgstr "_Turpināt"
 
-#: gtweak/app.py:25
+#: gtweak/app.py:23
 msgid "Extensions Has Moved"
 msgstr "Paplašinājumi ir pārvietoti"
 
 #. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
-#: gtweak/app.py:30
+#: gtweak/app.py:28
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
 msgstr "Paplašinājumu pārvaldība ir pārvietota uz {0}."
 
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
-#: gtweak/app.py:34
+#: gtweak/app.py:32
 #, python-brace-format
 msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
@@ -92,507 +123,352 @@ msgstr ""
 "Mēs iesakām lejupielādēt GNOME paplašinājumus no {0}, ja tas jau nav "
 "iekļauts jūsu distribūcijā."
 
-#: gtweak/app.py:83
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "Atstatīt uz noklusējuma parametriem"
 
-#: gtweak/app.py:84
-msgid "Reset all tweak settings to the original default state?"
+#: gtweak/app.py:87
+#| msgid "Reset all tweak settings to the original default state?"
+msgid "Reset all tweaks settings to the original default state?"
 msgstr ""
 "Atjaunot visus piedares iestatījumus uz to sākotnējām noklusētajām vērtībām?"
 
-#: gtweak/app.py:101 gtweak/app.py:103
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME čaula"
 
-#: gtweak/app.py:103
-#, python-format
-msgid "(%s mode)"
-msgstr "(%s režīms)"
-
-#: gtweak/app.py:106
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "GNOME čaula nedarbojas"
 
-#: gtweak/app.py:108
-msgid "GTK"
-msgstr "GTK"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr "Rūdolfs Mazurs"
 
-#: gtweak/app.py:115
-msgid "Homepage"
-msgstr "Mājas lapa"
-
-#: gtweak/tweakmodel.py:31
+#: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
 msgstr "Dažādi"
 
-#: gtweak/tweakview.py:143
-msgid "Search Tweaks…"
-msgstr "Meklēt piedares…"
-
-#. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:204 gtweak/tweaks/tweak_group_general.py:53
-msgid "General"
-msgstr "Vispārīgi"
-
-#: gtweak/tweaks/tweak_group_appearance.py:54
+#: gtweak/tweaks/tweak_group_appearance.py:31
 msgid "Legacy Applications"
 msgstr "Mantotās lietotnes"
 
-#: gtweak/tweaks/tweak_group_appearance.py:88
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Kļūda rakstot iestatījumu"
 
-#: gtweak/tweaks/tweak_group_appearance.py:94
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Ikonas"
 
-#: gtweak/tweaks/tweak_group_appearance.py:109
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Kursors"
 
-#: gtweak/tweaks/tweak_group_appearance.py:133
-msgid "Shell"
-msgstr "Čaula"
-
-#: gtweak/tweaks/tweak_group_appearance.py:133
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Instalēt pielāgotu vai lietotāja gnome čaulas motīvu"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:136
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Nezināma kļūda"
 
-#: gtweak/tweaks/tweak_group_appearance.py:141
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Čaula nedarbojas"
 
-#: gtweak/tweaks/tweak_group_appearance.py:163
-msgid "Shell user-theme extension incorrectly installed"
-msgstr ""
-"Čaulas user-theme (lietotāja motīvs) paplašinājums nav pareizi uzinstalēts"
-
-#: gtweak/tweaks/tweak_group_appearance.py:166
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Čaulas user-theme (lietotāja motīvs) paplašinājums nav aktivēts"
 
-#: gtweak/tweaks/tweak_group_appearance.py:169
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Nevarēja uzskaitīt čaulas paplašinājumus"
 
-#: gtweak/tweaks/tweak_group_appearance.py:199
-msgid "<i>Default</i>"
-msgstr "<i>Noklusējuma</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Čaula"
 
-#: gtweak/tweaks/tweak_group_appearance.py:205
+#: gtweak/tweaks/tweak_group_appearance.py:156
+msgid "Adwaita (default)"
+msgstr "Adwaita (noklusējuma)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Select a theme"
 msgstr "Izvēlieties motīvu"
 
-#: gtweak/tweaks/tweak_group_appearance.py:254
+#: gtweak/tweaks/tweak_group_appearance.py:218
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s motīvs ir veiksmīgi atjaunināts"
 
-#: gtweak/tweaks/tweak_group_appearance.py:256
+#: gtweak/tweaks/tweak_group_appearance.py:220
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s motīvs ir veiksmīgi uzinstalēts"
 
-#: gtweak/tweaks/tweak_group_appearance.py:264
+#: gtweak/tweaks/tweak_group_appearance.py:222
 msgid "Error installing theme"
 msgstr "Kļūda, instalējot motīvu"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:227
 msgid "Invalid theme"
 msgstr "Nederīgs motīvs"
 
-#: gtweak/tweaks/tweak_group_appearance.py:281
-msgid "Appearance"
-msgstr "Izskats"
+#: gtweak/tweaks/tweak_group_appearance.py:235
+msgid "Styles"
+msgstr "Stili"
 
-#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:284
-msgid "Themes"
-msgstr "Motīvi"
-
-#: gtweak/tweaks/tweak_group_appearance.py:288
-msgid "Sound"
-msgstr "Skaņa"
-
-#: gtweak/tweaks/tweak_group_appearance.py:289
-msgid "Specifies which sound theme to use for sound events."
-msgstr "Norāda, kurus skaņu motīvus izmantot skaņu notikumiem."
-
-#: gtweak/tweaks/tweak_group_appearance.py:292
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Fons"
 
-#: gtweak/tweaks/tweak_group_appearance.py:293
-msgid "Image"
-msgstr "Attēls"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "Noklusējuma attēls"
 
-#: gtweak/tweaks/tweak_group_appearance.py:295
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "Tumšā stila attēls"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Pielāgojums"
 
-#: gtweak/tweaks/tweak_group_desktop.py:7
-msgid "Show Icons"
-msgstr "Rādīt ikonas"
-
-#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
-#. *work* unless we have a version of Nautilus that still has the ability to
-#. draw the desktop; use one of the settings that was present in that version
-#. to probe for it.
-#: gtweak/tweaks/tweak_group_desktop.py:13
-msgid "Home"
-msgstr "Mājas"
-
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Desktop"
-msgstr "Darbvirsma"
-
-#: gtweak/tweaks/tweak_group_desktop.py:21
-msgid "Icons on Desktop"
-msgstr "Ikonas uz darbvirsmas"
-
-#: gtweak/tweaks/tweak_group_desktop.py:24
-msgid "Network Servers"
-msgstr "Tīkla serveri"
-
-#: gtweak/tweaks/tweak_group_desktop.py:25
-msgid "Trash"
-msgstr "Miskaste"
-
-#: gtweak/tweaks/tweak_group_desktop.py:26
-msgid "Mounted Volumes"
-msgstr "Montētie vienumi"
-
-#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "Norādīšana"
 
-#: gtweak/tweaks/tweak_group_font.py:17 gtweak/tweaks/tweak_group_font.py:63
-msgid "Antialiasing"
-msgstr "Nogludināšana"
-
-#: gtweak/tweaks/tweak_group_font.py:40
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "Pilns"
 
-#: gtweak/tweaks/tweak_group_font.py:46
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "Vidējs"
 
-#: gtweak/tweaks/tweak_group_font.py:52
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "Neliels"
 
-#: gtweak/tweaks/tweak_group_font.py:58 gtweak/tweaks/tweak_group_font.py:83
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:418 gtweak/widgets.py:564 gtweak/widgets.py:593
 msgid "None"
 msgstr "Nav"
 
-#: gtweak/tweaks/tweak_group_font.py:71
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "Nogludināšana"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "Apakšpikseļu (LCD ekrāniem)"
 
-#: gtweak/tweaks/tweak_group_font.py:77
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "Standarta (pelēktoņu)"
 
-#: gtweak/tweaks/tweak_group_font.py:108
-msgid "Fonts"
-msgstr "Fonti"
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "Vēlamie fonti"
 
-#: gtweak/tweaks/tweak_group_font.py:109
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
 msgstr "Saskarnes teksts"
 
-#: gtweak/tweaks/tweak_group_font.py:110
+#: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
 msgstr "Dokumentu teksts"
 
-#: gtweak/tweaks/tweak_group_font.py:111
+#: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
 msgstr "Fiksēta platuma teksts"
 
-#: gtweak/tweaks/tweak_group_font.py:112
-msgid "Legacy Window Titles"
-msgstr "Mantojuma logu virsraksti"
+#: gtweak/tweaks/tweak_group_font.py:45
+msgid "Rendering"
+msgstr "Renderēšana"
 
-#: gtweak/tweaks/tweak_group_font.py:114
+#: gtweak/tweaks/tweak_group_font.py:49
+msgid "Size"
+msgstr "Izmērs"
+
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Mērogs"
 
-#: gtweak/tweaks/tweak_group_general.py:28
-msgid "Suspend when laptop lid is closed"
-msgstr "Iesnaudināt, kad ir aizvērts klēpjdatora vāks"
+#: gtweak/tweaks/tweak_group_keyboard.py:42
+#| msgid "<i>Default</i>"
+msgid "Default"
+msgstr "Noklusējuma"
 
-#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:56
-msgid "Over-Amplification"
-msgstr "Pārmērīga pastiprināšana"
+#: gtweak/tweaks/tweak_group_keyboard.py:167
+msgid "Typing"
+msgstr "Rakstīšana"
 
-#: gtweak/tweaks/tweak_group_general.py:57
-msgid ""
-"Allows raising the volume above 100%. This can result in a loss of audio "
-"quality; it is better to increase application volume settings, if possible."
-msgstr ""
-"Ļauj pacelt skaļumu virs 100%. Tas var samazināt audio kvalitāti; labāk "
-"palielināt lietotnes skaļuma iestatījumus, ja tas ir iespējams."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:21
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Emacs ievade"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:24
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Pārraksta saīsnes, lai izmantot taustiņsasaistes no Emacs redaktora."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:40
+#: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
 msgstr "Pārskatīt saīsnes"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:47
+#: gtweak/tweaks/tweak_group_keyboard.py:210
 msgid "Left Super"
 msgstr "Kreisais super"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:51
+#: gtweak/tweaks/tweak_group_keyboard.py:211
 msgid "Right Super"
 msgstr "Labais super"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:74
-#: gtweak/tweaks/tweak_group_keymouse.py:82
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Papildu izkārtojumu opcijas"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:104
-#: gtweak/tweaks/tweak_group_keymouse.py:241
-msgid "Mouse Click Emulation"
-msgstr "Peles klikšķa simulēšana"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:122
-msgid "Fingers"
-msgstr "Pirksti"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:124
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"Klikšķināt skārienpaliktni ar diviem pirkstiem, lai veiktu labo klikšķi, ar "
-"trīs pirkstiem, lai veiktu vidējo klikšķi."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:148
-msgid "Area"
-msgstr "Laukums"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:150
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Klikšķināt skārienpaliktņa apakšējo labo stūri, lai veiktu labo klikšķi, un "
-"klikšķināt apakšējās malas vidu vidējam klikšķim."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:174
-#: gtweak/tweaks/tweak_group_windows.py:211 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Deaktivēts"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:176
-msgid "Don’t use mouse click emulation."
-msgstr "Neizmantot peles simulēšanu."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:213
-msgid "Keyboard & Mouse"
-msgstr "Tastatūra un pele"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:214
-msgid "Keyboard"
-msgstr "Tastatūra"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:215
+#: gtweak/tweaks/tweak_group_keyboard.py:259
 msgid "Show Extended Input Sources"
 msgstr "Rādīt izvērstos ievades avotus"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:218
+#: gtweak/tweaks/tweak_group_keyboard.py:262
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Palielina ievades avotu izvēles iespējas iestatījumu lietotnē."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "Izkārtojums"
+
+#: gtweak/tweaks/tweak_group_mouse.py:31
+#| msgid "Secondary-Click"
+msgid "Disable Secondary Click"
+msgstr "Izslēgt sekundāro klikšķi"
+
+#: gtweak/tweaks/tweak_group_mouse.py:32
+msgid ""
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
+msgstr ""
+"Izslēdz sekundāros klikšķus uz skārienpaliktņiem, kuriem nav fiziskā"
+" sekundārā poga"
+
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "Pele"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:224
-msgid "Acceleration Profile"
-msgstr "Paātrināšanas profils"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:228
-msgid "Pointer Location"
-msgstr "Rādītāja atrašanās vieta"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:231
-msgid "Press the Ctrl key to highlight the pointer."
-msgstr "Spiediet Ctrl taustiņu, lai izceltu rādītāju."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:232
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
 msgstr "Vidējā klikšķa ievietošana"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:236
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "Skārienpaliktnis"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:237
-msgid "Disable While Typing"
-msgstr "Izslēgt, kad raksta"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Skārienpaliktņa paātrinātājs"
 
-#: gtweak/tweaks/tweak_group_startup.py:30
-msgid "Startup applications are automatically started when you log in."
-msgstr "Starta lietotnes tiek automātiski palaistas, kad ierakstāties sistēmā."
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+"Izslēdzot paātrināšanu, var iegūt ātrāku un precīzāku rādītāja kustību, "
+"bet var padarīt skārienpaliktni grūtāk lietojamu."
 
-#: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:307
-msgid "Startup Applications"
-msgstr "Starta lietotnes"
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Rādīšanas svira"
 
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Lietotnes"
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Rādīšanas sviras paātrināšana"
 
-#: gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications…"
-msgstr "Meklēt lietotnes…"
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+"Izslēdzot paātrināšanu, var iegūt ātrāku un precīzāku rādītāja kustību, "
+"bet var padarīt rādīšanas sviru grūtāk lietojamu."
 
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:58
-msgid "<primary>f"
-msgstr "<primary>f"
+#: gtweak/tweaks/tweak_group_mouse.py:104
+#| msgid "Click Method"
+msgid "Scrolling Method"
+msgstr "Ritināšanas metode"
 
-#: gtweak/tweaks/tweak_group_startup.py:76
+#: gtweak/tweaks/tweak_group_sound.py:44
+msgid "System Sound Theme"
+msgstr "Sistēmas skaņas motīvs"
+
+#: gtweak/tweaks/tweak_group_sound.py:48
+msgid "Specifies which sound theme to use for sound events."
+msgstr "Norāda, kurus skaņu motīvus izmantot skaņu notikumiem."
+
+#: gtweak/tweaks/tweak_group_startup.py:51
 msgid "running"
 msgstr "izpildās"
 
-#: gtweak/tweaks/tweak_group_startup.py:87
+#: gtweak/tweaks/tweak_group_startup.py:61
+#| msgid "Legacy Applications"
+msgid "Select Application"
+msgstr "Izvēlieties lietotni"
+
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
 msgid "_Close"
 msgstr "_Aizvērt"
 
-#: gtweak/tweaks/tweak_group_startup.py:88
+#: gtweak/tweaks/tweak_group_startup.py:68
 msgid "_Add"
 msgstr "_Pievienot"
 
-#: gtweak/tweaks/tweak_group_startup.py:233
+#: gtweak/tweaks/tweak_group_startup.py:72
+msgid "Search Applications…"
+msgstr "Meklēt lietotnes…"
+
+#: gtweak/tweaks/tweak_group_startup.py:194
 msgid "Remove"
 msgstr "Izņemt"
 
+#: gtweak/tweaks/tweak_group_startup.py:220
+msgid "Startup applications are automatically started when you log in."
+msgstr "Starta lietotnes tiek automātiski palaistas, kad ierakstāties sistēmā."
+
 #: gtweak/tweaks/tweak_group_startup.py:257
-msgid "New startup application"
-msgstr "Jauna starta lietotne"
+#| msgid "Startup Applications"
+msgid "No Startup Applications"
+msgstr "Nav starta lietotņu"
 
 #: gtweak/tweaks/tweak_group_startup.py:258
-msgid "Add a new application to be run at startup"
-msgstr "Pievienot jaunu lietotni, ko palaist ierakstīšanās sākumā"
+#| msgid "New startup application"
+msgid "Add a startup application"
+msgstr "Pievienot starta lietotni"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:57
-msgid "Placement"
-msgstr "Novietojums"
-
-#. Translators: For RTL languages, this is the "Right" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_title_bar.py:71
-msgid "Left"
-msgstr "Pa kreisi"
-
-#. Translators: For RTL languages, this is the "Left" direction since the
-#. interface is flipped
-#: gtweak/tweaks/tweak_group_title_bar.py:77
-msgid "Right"
-msgstr "Pa labi"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:108
-msgid "Window Titlebars"
-msgstr "Logu virsrakstu joslas"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:109
-msgid "Titlebar Actions"
-msgstr "Virsraksta joslas darbības"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:110
-msgid "Double-Click"
-msgstr "Dubultklikšķis"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:111
-msgid "Middle-Click"
-msgstr "Vidējais klikšķis"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:112
-#: gtweak/tweaks/tweak_group_windows.py:88
-msgid "Secondary-Click"
-msgstr "Sekundārais klikšķis"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:113
-msgid "Titlebar Buttons"
-msgstr "Virsraksta joslas pogas"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:114
-msgid "Maximize"
-msgstr "Maksimizēt"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:115
-msgid "Minimize"
-msgstr "Minimizēt"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:14
-msgid "Top Bar"
-msgstr "Augšējā josla"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Clock"
-msgstr "Pulkstenis"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Weekday"
-msgstr "Nedēļas diena"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
-msgid "Date"
-msgstr "Datums"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:18
-msgid "Seconds"
-msgstr "Sekundes"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:19
-msgid "Calendar"
-msgstr "Kalendārs"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:20
-msgid "Week Numbers"
-msgstr "Nedēļu numuri"
-
-#: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:212
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Logu fokuss"
 
+#: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:212
 msgid "Click to Focus"
 msgstr "Klikšķināt, lai fokusētu"
 
-#: gtweak/tweaks/tweak_group_windows.py:38
+#: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
 msgstr "Logi tiek fokusēti, kad uz tiem uzklikšķina."
 
-#: gtweak/tweaks/tweak_group_windows.py:62
+#: gtweak/tweaks/tweak_group_windows.py:23
 msgid "Focus on Hover"
 msgstr "Fokusēt, kad pele virs"
 
-#: gtweak/tweaks/tweak_group_windows.py:64
+#: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -600,7 +476,12 @@ msgstr ""
 "Logs tiek fokusēts, kad virs tā tiek novietots rādītājs. Logs paliek "
 "fokusēts, kad rādītājs ir virs darbvirsmas."
 
-#: gtweak/tweaks/tweak_group_windows.py:90
+#: gtweak/tweaks/tweak_group_windows.py:28
+#| msgid "Focus on Hover"
+msgid "Focus Follows Mouse"
+msgstr "Fokuss seko pelei"
+
+#: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -608,47 +489,60 @@ msgstr ""
 "Logs tiek fokusēts, kad virs tā tiek novietots rādītājs. Kad rādītājs ir "
 "virs darbvirsmas, no fokuss iepriekšējā loga pazūd."
 
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Window scaling"
-msgstr "Logu mērogošna"
+#: gtweak/tweaks/tweak_group_windows.py:81
+msgid "Placement"
+msgstr "Novietojums"
 
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Pielāgot GDK loga mērogu HiDPI"
+#. Translators: For RTL languages, this is the "Right" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:97
+msgid "Left"
+msgstr "Pa kreisi"
 
-#: gtweak/tweaks/tweak_group_windows.py:157
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Iestatījumi tiks atgriezti pēc {0} sekundes"
-msgstr[1] "Iestatījumi tiks atgriezti pēc {0} sekundēm"
-msgstr[2] "Iestatījumi tiks atgriezti pēc {0} sekundēm"
+#. Translators: For RTL languages, this is the "Left" direction since the
+#. interface is flipped
+#: gtweak/tweaks/tweak_group_windows.py:100
+msgid "Right"
+msgstr "Pa labi"
 
-#: gtweak/tweaks/tweak_group_windows.py:173
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Vai vēlaties paturēt šos HiDPI iestatījumus?"
+#: gtweak/tweaks/tweak_group_windows.py:135
+msgid "Titlebar Actions"
+msgstr "Virsraksta joslas darbības"
 
-#: gtweak/tweaks/tweak_group_windows.py:180
-msgid "Revert Settings"
-msgstr "Atgriezt iestatījumus"
+#: gtweak/tweaks/tweak_group_windows.py:136
+msgid "Double-Click"
+msgstr "Dubultklikšķis"
 
-#: gtweak/tweaks/tweak_group_windows.py:181
-msgid "Keep Changes"
-msgstr "Paturēt izmaiņas"
+#: gtweak/tweaks/tweak_group_windows.py:137
+msgid "Middle-Click"
+msgstr "Vidējais klikšķis"
 
-#: gtweak/tweaks/tweak_group_windows.py:197
-msgid "HiDPI"
-msgstr "HiDPI"
+#: gtweak/tweaks/tweak_group_windows.py:138
+msgid "Secondary-Click"
+msgstr "Sekundārais klikšķis"
 
-#: gtweak/tweaks/tweak_group_windows.py:203
-msgid "Windows"
-msgstr "Logi"
+#: gtweak/tweaks/tweak_group_windows.py:140
+msgid "Titlebar Buttons"
+msgstr "Virsraksta joslas pogas"
 
-#: gtweak/tweaks/tweak_group_windows.py:204
+#: gtweak/tweaks/tweak_group_windows.py:141
+msgid "Maximize"
+msgstr "Maksimizēt"
+
+#: gtweak/tweaks/tweak_group_windows.py:142
+msgid "Minimize"
+msgstr "Minimizēt"
+
+#: gtweak/tweaks/tweak_group_windows.py:146
+#| msgid "Click to Focus"
+msgid "Click Actions"
+msgstr "Klikšķa darbība"
+
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "Piesaistīt modālos dialoglodziņus"
 
-#: gtweak/tweaks/tweak_group_windows.py:205
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -656,51 +550,217 @@ msgstr ""
 "Kad ieslēgts, modālie dialoglodziņi tiek pievienoti vecāka logam un tos "
 "nevar pārvietot."
 
-#: gtweak/tweaks/tweak_group_windows.py:206
+#: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
 msgstr "Centrēt jaunos logus"
 
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Resize with Secondary-Click"
-msgstr "Mainīt izmēru ar sekundāro klikšķi"
-
-#: gtweak/tweaks/tweak_group_windows.py:208
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "Loga darbības taustiņš"
 
-#: gtweak/tweaks/tweak_group_windows.py:214
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Deaktivēts"
+
+#: gtweak/tweaks/tweak_group_windows.py:156
+msgid "Resize with Secondary-Click"
+msgstr "Mainīt izmēru ar sekundāro klikšķi"
+
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "Pacelt logu, kad ir fokusēts"
 
-#: gtweak/tweaks/tweak_group_xkb.py:167
-msgid "Typing"
-msgstr "Rakstīšana"
-
-#: gtweak/tweaks/tweak_wacom.py:16
-msgid "Device"
-msgstr "Ierīce"
-
-#: gtweak/tweaks/tweak_wacom.py:25
-msgid "Wacom"
-msgstr "Wacom"
+#: gtweak/tweakview.py:156
+msgid "Search Tweaks…"
+msgstr "Meklēt piedares…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(noklusējuma)</i>"
+#| msgid "%s <i>(default)</i>"
+msgid "%s (default)"
+msgstr "%s (noklusējuma)"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "Konfigurācijas izmaiņām nepieciešama pārstartēšana"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Sesija jāpārstartē, lai iestatījumi stātos spēkā"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Pārstartēt sesiju"
+
+#, python-format
+#~ msgid "(%s mode)"
+#~ msgstr "(%s režīms)"
+
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Mājas lapa"
+
+#~ msgid "General"
+#~ msgstr "Vispārīgi"
+
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "Instalēt pielāgotu vai lietotāja gnome čaulas motīvu"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr ""
+#~ "Čaulas user-theme (lietotāja motīvs) paplašinājums nav pareizi uzinstalēts"
+
+#~ msgid "Themes"
+#~ msgstr "Motīvi"
+
+#~ msgid "Image"
+#~ msgstr "Attēls"
+
+#~ msgid "Show Icons"
+#~ msgstr "Rādīt ikonas"
+
+#~ msgid "Home"
+#~ msgstr "Mājas"
+
+#~ msgid "Desktop"
+#~ msgstr "Darbvirsma"
+
+#~ msgid "Icons on Desktop"
+#~ msgstr "Ikonas uz darbvirsmas"
+
+#~ msgid "Network Servers"
+#~ msgstr "Tīkla serveri"
+
+#~ msgid "Trash"
+#~ msgstr "Miskaste"
+
+#~ msgid "Mounted Volumes"
+#~ msgstr "Montētie vienumi"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Mantojuma logu virsraksti"
+
+#~ msgid "Suspend when laptop lid is closed"
+#~ msgstr "Iesnaudināt, kad ir aizvērts klēpjdatora vāks"
+
+#~ msgid "Over-Amplification"
+#~ msgstr "Pārmērīga pastiprināšana"
+
+#~ msgid ""
+#~ "Allows raising the volume above 100%. This can result in a loss of audio "
+#~ "quality; it is better to increase application volume settings, if "
+#~ "possible."
+#~ msgstr ""
+#~ "Ļauj pacelt skaļumu virs 100%. Tas var samazināt audio kvalitāti; labāk "
+#~ "palielināt lietotnes skaļuma iestatījumus, ja tas ir iespējams."
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Peles klikšķa simulēšana"
+
+#~ msgid "Fingers"
+#~ msgstr "Pirksti"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Klikšķināt skārienpaliktni ar diviem pirkstiem, lai veiktu labo klikšķi, "
+#~ "ar trīs pirkstiem, lai veiktu vidējo klikšķi."
+
+#~ msgid "Area"
+#~ msgstr "Laukums"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Klikšķināt skārienpaliktņa apakšējo labo stūri, lai veiktu labo klikšķi, "
+#~ "un klikšķināt apakšējās malas vidu vidējam klikšķim."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Neizmantot peles simulēšanu."
+
+#~ msgid "Keyboard & Mouse"
+#~ msgstr "Tastatūra un pele"
+
+#~ msgid "Acceleration Profile"
+#~ msgstr "Paātrināšanas profils"
+
+#~ msgid "Pointer Location"
+#~ msgstr "Rādītāja atrašanās vieta"
+
+#~ msgid "Press the Ctrl key to highlight the pointer."
+#~ msgstr "Spiediet Ctrl taustiņu, lai izceltu rādītāju."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Izslēgt, kad raksta"
+
+#~ msgid "Applications"
+#~ msgstr "Lietotnes"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>f"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Pievienot jaunu lietotni, ko palaist ierakstīšanās sākumā"
+
+#~ msgid "Window Titlebars"
+#~ msgstr "Logu virsrakstu joslas"
+
+#~ msgid "Top Bar"
+#~ msgstr "Augšējā josla"
+
+#~ msgid "Clock"
+#~ msgstr "Pulkstenis"
+
+#~ msgid "Weekday"
+#~ msgstr "Nedēļas diena"
+
+#~ msgid "Date"
+#~ msgstr "Datums"
+
+#~ msgid "Seconds"
+#~ msgstr "Sekundes"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalendārs"
+
+#~ msgid "Week Numbers"
+#~ msgstr "Nedēļu numuri"
+
+#~ msgid "Window scaling"
+#~ msgstr "Logu mērogošna"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr "Pielāgot GDK loga mērogu HiDPI"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "Iestatījumi tiks atgriezti pēc {0} sekundes"
+#~ msgstr[1] "Iestatījumi tiks atgriezti pēc {0} sekundēm"
+#~ msgstr[2] "Iestatījumi tiks atgriezti pēc {0} sekundēm"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "Vai vēlaties paturēt šos HiDPI iestatījumus?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "Atgriezt iestatījumus"
+
+#~ msgid "Keep Changes"
+#~ msgstr "Paturēt izmaiņas"
+
+#~ msgid "HiDPI"
+#~ msgstr "HiDPI"
+
+#~ msgid "Device"
+#~ msgstr "Ierīce"
+
+#~ msgid "Wacom"
+#~ msgstr "Wacom"
 
 #~ msgid "Animations"
 #~ msgstr "Animācijas"
@@ -845,10 +905,6 @@ msgstr "Pārstartēt sesiju"
 #~ msgid "Sloppy"
 #~ msgstr "Paviršs"
 
-#~| msgid "Click method"
-#~ msgid "Click Method"
-#~ msgstr "Klikšķa metode"
-
 #~ msgid "Enable dark theme for all applications"
 #~ msgstr "Aktivēt tumšu motīvu visām lietotnēm"
 
@@ -948,3 +1004,4 @@ msgstr "Pārstartēt sesiju"
 
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "Par GNOME piedares rīku"
+
