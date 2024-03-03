@@ -1,11 +1,22 @@
 appdata_file = 'org.gnome.tweaks.appdata.xml'
-i18n.merge_file(
+appdata = i18n.merge_file(
   input: appdata_file + '.in',
   output: appdata_file,
   po_dir: '../po',
   install: true,
   install_dir: appdatadir
 )
+
+appstreamcli = find_program('appstreamcli', required: false)
+if appstreamcli.found()
+  test(
+    'validate-metainfo', appstreamcli,
+    args: [
+      'validate', '--no-net', '--explain', appdata,
+    ],
+    depends: appdata,
+  )
+endif
 
 i18n.merge_file(
   input: configure_file(
