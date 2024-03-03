@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool gnome-3-2\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-07-22 13:23+0000\n"
-"PO-Revision-Date: 2023-07-23 15:19+0300\n"
+"POT-Creation-Date: 2024-02-10 08:18+0000\n"
+"PO-Revision-Date: 2024-03-03 21:49+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -18,85 +18,80 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "Gnome-projekti"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "Gnomen lisäasetukset"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "Muokkaa Gnomen lisäasetuksia"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
 "Gnomen lisäasetukset mahdollistaa lukuisten Gnomen asetusten muuttamisen."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"Sen avulla voit asentaa ja hallita teemoja, muuttaa virranhallinnan "
-"asetuksia, muokata käynnistettäviä sovelluksia, ottaa työpöytäkuvakkeet "
-"käyttöön ja paljon muuta."
+"Sen avulla voit hallita näppäimistön määrittelyjä, käynnistettäviä "
+"sovelluksia, ikkunapainikkeiden asettelua ja paljon muuta."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:127
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Lisäasetukset"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
-"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;asetukset;"
-"ominaisuudet;kirjasimet;fontit;teema;näppäimistö;kirjoittaminen;"
+"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+"asetukset;lisäasetukset;fontit;teema;näppäimistö;kirjoittaminen;"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "_Palauta oletukset"
 
-#: data/shell.ui:13
+#: data/shell.ui:12
 msgid "_About Tweaks"
 msgstr "_Tietoja - Lisäasetukset"
 
-#: data/tweaks.ui:63 gtweak/tweaks/tweak_group_font.py:124
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
 msgid "Fonts"
 msgstr "Fontit"
 
-#: data/tweaks.ui:97 gtweak/tweaks/tweak_group_appearance.py:257
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
 msgid "Appearance"
 msgstr "Ulkoasu"
 
-#: data/tweaks.ui:132 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Ääni"
 
-#: data/tweaks.ui:166
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
 msgid "Mouse & Touchpad"
 msgstr "Hiiri ja kosketuslevy"
 
-#: data/tweaks.ui:200 gtweak/tweaks/tweak_group_keyboard.py:377
-#: gtweak/tweaks/tweak_group_keyboard.py:378
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
 msgid "Keyboard"
 msgstr "Näppäimistö"
 
-#: data/tweaks.ui:234 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
 msgid "Windows"
 msgstr "Ikkunat"
 
-#: data/tweaks.ui:268 gtweak/tweaks/tweak_group_datetime.py:8
-msgid "Date & Time"
-msgstr "Päivä ja aika"
-
-#: data/tweaks.ui:304 gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:309
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
 msgid "Startup Applications"
 msgstr "Käynnistettävät sovellukset"
 
@@ -124,34 +119,27 @@ msgstr ""
 "Suosittelemme lataamaan Gnomen laajennukset -sovelluksen {0}-sivustolta, jos "
 "se ei sisälly käyttämääsi jakeluun."
 
-#: gtweak/app.py:81
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "Palauta oletukset"
 
-#: gtweak/app.py:82
-msgid "Reset all tweak settings to the original default state?"
-msgstr "Palautetaanko kaikki lisäasetukset alkuperäisiin arvoihin?"
+#: gtweak/app.py:87
+msgid "Reset all tweaks settings to the original default state?"
+msgstr "Palautetaanko kaikki lisäasetukset alkuperäisiin oletusarvoihin?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:101
-#, python-format
-msgid "(%s mode)"
-msgstr "(%s tila)"
-
-#: gtweak/app.py:104
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "Gnome Shell ei ole käynnissä"
 
-#: gtweak/app.py:106
-msgid "GTK"
-msgstr "GTK"
-
-#: gtweak/app.py:113
-msgid "Homepage"
-msgstr "Verkkosivusto"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr "Jiri Grönroos"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
@@ -161,269 +149,251 @@ msgstr "Muut"
 msgid "Legacy Applications"
 msgstr "Vanhentuneet legacy-sovellukset"
 
-#: gtweak/tweaks/tweak_group_appearance.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Virhe asetuksia kirjoittaessa"
 
-#: gtweak/tweaks/tweak_group_appearance.py:71
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Kuvakkeet"
 
-#: gtweak/tweaks/tweak_group_appearance.py:86
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Kursori"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Shell"
-msgstr "Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Asenna omavalintainen teema gnome-shelliin"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Tuntematon virhe"
 
-#: gtweak/tweaks/tweak_group_appearance.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Shell ei ole käynnissä"
 
-#: gtweak/tweaks/tweak_group_appearance.py:140
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Shellin user-theme-laajennus ei ole kunnolla asennettu"
-
-#: gtweak/tweaks/tweak_group_appearance.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Shellin user-theme-laajennus ei ole käytössä"
 
-#: gtweak/tweaks/tweak_group_appearance.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Shell-laajennusten listaus epäonnistui"
 
-#: gtweak/tweaks/tweak_group_appearance.py:176
-msgid "<i>Default</i>"
-msgstr "<i>Oletus</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:182
+#: gtweak/tweaks/tweak_group_appearance.py:156
+msgid "Adwaita (default)"
+msgstr "Adwaita (oletus)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Select a theme"
 msgstr "Valitse teema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:218
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Teema %s päivitetty onnistuneesti"
 
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:220
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Teema %s asennettu onnistuneesti"
 
-#: gtweak/tweaks/tweak_group_appearance.py:241
+#: gtweak/tweaks/tweak_group_appearance.py:222
 msgid "Error installing theme"
 msgstr "Virhe teemaa asennettaessa"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:246
+#: gtweak/tweaks/tweak_group_appearance.py:227
 msgid "Invalid theme"
 msgstr "Virheellinen teema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:258
+#: gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Styles"
 msgstr "Tyylit"
 
-#: gtweak/tweaks/tweak_group_appearance.py:263
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Taustakuva"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
-msgid "Image"
-msgstr "Kuva"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "Oletuskuva"
 
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "Tumman tyylin kuva"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Sovitus"
 
-#: gtweak/tweaks/tweak_group_datetime.py:9
-msgid "Clock"
-msgstr "Kello"
-
-#: gtweak/tweaks/tweak_group_datetime.py:10
-msgid "Show Weekday"
-msgstr "Näytä viikonpäivä"
-
-#: gtweak/tweaks/tweak_group_datetime.py:11
-msgid "Show Date"
-msgstr "Näytä päivä"
-
-#: gtweak/tweaks/tweak_group_datetime.py:12
-msgid "Show Seconds"
-msgstr "Näytä sekunnit"
-
-#: gtweak/tweaks/tweak_group_datetime.py:13
-msgid "Calendar"
-msgstr "Kalenteri"
-
-#: gtweak/tweaks/tweak_group_datetime.py:14
-msgid "Show Week Numbers"
-msgstr "Näytä viikkonumerot"
-
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "Vihjeistys"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:75
-msgid "Antialiasing"
-msgstr "Antialiasointi"
-
-#: gtweak/tweaks/tweak_group_font.py:52
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "Täysi"
 
-#: gtweak/tweaks/tweak_group_font.py:58
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "Keskikoko"
 
-#: gtweak/tweaks/tweak_group_font.py:64
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "Hieman"
 
-#: gtweak/tweaks/tweak_group_font.py:70 gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:418 gtweak/widgets.py:564 gtweak/widgets.py:593
 msgid "None"
 msgstr "Ei mitään"
 
-#: gtweak/tweaks/tweak_group_font.py:88
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "Antialiasointi"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "Subpixel (LCD-näytöille)"
 
-#: gtweak/tweaks/tweak_group_font.py:94
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "Standardi (harmaasävy)"
 
-#: gtweak/tweaks/tweak_group_font.py:125
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "Ensisijaiset fontit"
+
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
 msgstr "Käyttöliittymän teksti"
 
-#: gtweak/tweaks/tweak_group_font.py:126
+#: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
 msgstr "Asiakirjan teksti"
 
-#: gtweak/tweaks/tweak_group_font.py:127
+#: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
 msgstr "Tasalevyinen teksti"
 
-#: gtweak/tweaks/tweak_group_font.py:128
-msgid "Legacy Window Titles"
-msgstr "Vanhennettujen ikkunanotsikkojen teksti"
+#: gtweak/tweaks/tweak_group_font.py:45
+msgid "Rendering"
+msgstr "Renderöinti"
 
-#: gtweak/tweaks/tweak_group_font.py:130
+#: gtweak/tweaks/tweak_group_font.py:49
+msgid "Size"
+msgstr "Koko"
+
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Skaalauskerroin"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_keyboard.py:339
-#: gtweak/tweaks/tweak_group_mouse.py:137
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Disabled"
-msgstr "Pois käytöstä"
+msgid "Default"
+msgstr "Oletus"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:170
+#: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "Kirjoittaminen"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:18
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Emacs-syöte"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:189
-#: gtweak/tweaks/tweak_group_mouse.py:21
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Korvaa pikanäppäimet Emacs-editorin näppäinsidonnaisuuksilla."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:205
-#: gtweak/tweaks/tweak_group_mouse.py:37
+#: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
 msgstr "Yleisnäkymän pikanäppäin"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:212
-#: gtweak/tweaks/tweak_group_mouse.py:44
+#: gtweak/tweaks/tweak_group_keyboard.py:210
 msgid "Left Super"
 msgstr "Vasen Super"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:216
-#: gtweak/tweaks/tweak_group_mouse.py:48
+#: gtweak/tweaks/tweak_group_keyboard.py:211
 msgid "Right Super"
 msgstr "Oikea Super"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:239
-#: gtweak/tweaks/tweak_group_keyboard.py:247
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Asettelun lisävalinnat"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:269
-#: gtweak/tweaks/tweak_group_mouse.py:67 gtweak/tweaks/tweak_group_mouse.py:185
-msgid "Mouse Click Emulation"
-msgstr "Hiirinapsautuksen jäljittely"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:287
-#: gtweak/tweaks/tweak_group_mouse.py:85
-msgid "Fingers"
-msgstr "Sormet"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:289
-#: gtweak/tweaks/tweak_group_mouse.py:87
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"Napsauta kosketuslevyä kahdella sormella hiiren oikean painikkeen "
-"napsauttamiseksi. Kolmella sormella keskipainikkeen napsautus."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:313
-#: gtweak/tweaks/tweak_group_mouse.py:111
-msgid "Area"
-msgstr "Alue"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:315
-#: gtweak/tweaks/tweak_group_mouse.py:113
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Napsauta kosketuslevyn oikeaa alakulmaa hiiren oikean painikkeen "
-"napsauttamiseksi. Alhaalta keskeltä keskipainikkeen napsautus."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:341
-#: gtweak/tweaks/tweak_group_mouse.py:139
-msgid "Don’t use mouse click emulation."
-msgstr "Älä käytä hiirinapsautuksen jäljittelyä."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:379
+#: gtweak/tweaks/tweak_group_keyboard.py:259
 msgid "Show Extended Input Sources"
 msgstr "Näytä laajennetut syötelähteet"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:382
+#: gtweak/tweaks/tweak_group_keyboard.py:262
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Nostaa syötelähteiden valintojen määrää järjestelmän asetuksissa."
 
-#: gtweak/tweaks/tweak_group_mouse.py:175
-#: gtweak/tweaks/tweak_group_mouse.py:176
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "Asettelu"
+
+#: gtweak/tweaks/tweak_group_mouse.py:31
+msgid "Disable Secondary Click"
+msgstr "Poista toissijainen napsautus käytöstä"
+
+#: gtweak/tweaks/tweak_group_mouse.py:32
+msgid ""
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
+msgstr ""
+"Poistaa hiiren kakkospainikkeen käytöstä niillä kosketuslevyillä, joissa ei "
+"ole fyysistä kakkospainiketta"
+
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "Hiiri"
 
-#: gtweak/tweaks/tweak_group_mouse.py:177
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
 msgstr "Keskipainike liittää"
 
-#: gtweak/tweaks/tweak_group_mouse.py:180
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "Kosketuslevy"
 
-#: gtweak/tweaks/tweak_group_mouse.py:181
-msgid "Disable While Typing"
-msgstr "Poista käytöstä kirjoittaessa"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Kosketuslevyn kiihdytys"
+
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+"Kiihdytyksen poistaminen käytöstä voi mahdollistaa nopeammat ja tarkemmat "
+"liikkeet, mutta samalla se voi tehdä kosketuslevystä aiempaa vaikeammin "
+"käytettävän."
+
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Tappihiiri"
+
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Tappihiiren kiihdytys"
+
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+"Kiihdytyksen poistaminen käytöstä voi mahdollistaa nopeammat ja tarkemmat "
+"liikkeet, mutta samalla se voi tehdä tappihiirestä aiempaa vaikeammin "
+"käytettävän."
+
+#: gtweak/tweaks/tweak_group_mouse.py:104
+msgid "Scrolling Method"
+msgstr "Vieritystapa"
 
 #: gtweak/tweaks/tweak_group_sound.py:44
 msgid "System Sound Theme"
@@ -433,68 +403,64 @@ msgstr "Järjestelmän ääniteema"
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Määrittää mitä ääniteemaa käytetään äänitapahtumien yhteydessä."
 
-#: gtweak/tweaks/tweak_group_startup.py:30
+#: gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "käynnissä"
+
+#: gtweak/tweaks/tweak_group_startup.py:61
+msgid "Select Application"
+msgstr "Valitse sovellus"
+
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
+msgid "_Close"
+msgstr "_Sulje"
+
+#: gtweak/tweaks/tweak_group_startup.py:68
+msgid "_Add"
+msgstr "_Lisää"
+
+#: gtweak/tweaks/tweak_group_startup.py:72
+msgid "Search Applications…"
+msgstr "Etsi sovelluksia…"
+
+#: gtweak/tweaks/tweak_group_startup.py:194
+msgid "Remove"
+msgstr "Poista"
+
+#: gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
 "Käynnistettävät sovellukset käynnistetään automaattisesti, kun kirjaudut "
 "sisään."
 
-#: gtweak/tweaks/tweak_group_startup.py:43
-msgid "Applications"
-msgstr "Sovellukset"
-
-#: gtweak/tweaks/tweak_group_startup.py:49
-msgid "Search Applications…"
-msgstr "Etsi sovelluksia…"
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:59
-msgid "<primary>f"
-msgstr "<primary>f"
-
-#: gtweak/tweaks/tweak_group_startup.py:77
-msgid "running"
-msgstr "käynnissä"
-
-#: gtweak/tweaks/tweak_group_startup.py:88
-msgid "_Close"
-msgstr "_Sulje"
-
-#: gtweak/tweaks/tweak_group_startup.py:89
-msgid "_Add"
-msgstr "_Lisää"
-
-#: gtweak/tweaks/tweak_group_startup.py:234
-msgid "Remove"
-msgstr "Poista"
+#: gtweak/tweaks/tweak_group_startup.py:257
+msgid "No Startup Applications"
+msgstr "Ei käynnistettäviä sovelluksia"
 
 #: gtweak/tweaks/tweak_group_startup.py:258
-msgid "New startup application"
-msgstr "Uusi käynnistettävä sovellus"
+msgid "Add a startup application"
+msgstr "Lisää käynnistettävä sovellus"
 
-#: gtweak/tweaks/tweak_group_startup.py:259
-msgid "Add a new application to be run at startup"
-msgstr "Lisää uusi käynnistyksen yhteydessä suoritettava sovellus"
-
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Ikkunan kohdistus"
 
+#: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Click to Focus"
 msgstr "Napsauta kohdistaaksesi"
 
-#: gtweak/tweaks/tweak_group_windows.py:38
+#: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
 msgstr "Ikkuna kohdistetaan, kun sitä napsautetaan."
 
-#: gtweak/tweaks/tweak_group_windows.py:62
+#: gtweak/tweaks/tweak_group_windows.py:23
 msgid "Focus on Hover"
 msgstr "Kohdista osoittaessa"
 
-#: gtweak/tweaks/tweak_group_windows.py:64
+#: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -502,12 +468,11 @@ msgstr ""
 "Ikkuna kohdistetaan, kun hiiren osoitin on sen päällä. Ikkuna pysyy "
 "kohdistettuna, kun osoitin siirretään työpöydälle."
 
-#: gtweak/tweaks/tweak_group_windows.py:88
-#: gtweak/tweaks/tweak_group_windows.py:300
-msgid "Secondary-Click"
-msgstr "Toissijainen napsautus"
+#: gtweak/tweaks/tweak_group_windows.py:28
+msgid "Focus Follows Mouse"
+msgstr "Kohdistus seuraa hiirtä"
 
-#: gtweak/tweaks/tweak_group_windows.py:90
+#: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -515,86 +480,59 @@ msgstr ""
 "Ikkuna kohdistetaan, kun hiiren osoitin on sen päällä. Ikkunan kohdistus "
 "poistuu, kun osoitin siirretään työpöydälle."
 
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Window scaling"
-msgstr "Ikkunan skaalaus"
-
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Määritä GDK-ikkunaskaalauskerroin HiDPI-näyttöjä varten"
-
-#: gtweak/tweaks/tweak_group_windows.py:157
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Asetukset palautetaan {0} sekunnissa"
-msgstr[1] "Asetukset palautetaan {0} sekunnissa"
-
-#: gtweak/tweaks/tweak_group_windows.py:173
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Haluatko säilyttää nämä HiDPI-asetukset?"
-
-#: gtweak/tweaks/tweak_group_windows.py:180
-msgid "Revert Settings"
-msgstr "Peru asetukset"
-
-#: gtweak/tweaks/tweak_group_windows.py:181
-msgid "Keep Changes"
-msgstr "Säilytä asetukset"
-
-#: gtweak/tweaks/tweak_group_windows.py:197
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:246
+#: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
 msgstr "Sijoittelu"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:260
+#: gtweak/tweaks/tweak_group_windows.py:97
 msgid "Left"
 msgstr "Vasen"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:266
+#: gtweak/tweaks/tweak_group_windows.py:100
 msgid "Right"
 msgstr "Oikea"
 
-#: gtweak/tweaks/tweak_group_windows.py:297
+#: gtweak/tweaks/tweak_group_windows.py:135
 msgid "Titlebar Actions"
 msgstr "Ikkunapalkin toiminnot"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
+#: gtweak/tweaks/tweak_group_windows.py:136
 msgid "Double-Click"
 msgstr "Kaksoisnapsautus"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:137
 msgid "Middle-Click"
 msgstr "Keskimmäinen napsautus"
 
-#: gtweak/tweaks/tweak_group_windows.py:301
+#: gtweak/tweaks/tweak_group_windows.py:138
+msgid "Secondary-Click"
+msgstr "Toissijainen napsautus"
+
+#: gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "Ikkunapalkin painikkeet"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "Suurenna"
 
-#: gtweak/tweaks/tweak_group_windows.py:303
+#: gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "Pienennä"
 
-#: gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_windows.py:146
 msgid "Click Actions"
 msgstr "Napsautustoiminnot"
 
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "Kiinnitä modaali-ikkunat"
 
-#: gtweak/tweaks/tweak_group_windows.py:307
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -602,47 +540,156 @@ msgstr ""
 "Kun käytössä, modaali-ikkunat kiinnitetään ylätason ikkunaan, eikä modaali-"
 "ikkunaa voi liikuttaa."
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
 msgstr "Keskitä uudet ikkunat"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "Ikkunan toimintonäppäin"
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Pois käytöstä"
+
+#: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "Muuta kokoa kakkospainikkeen napsautuksella"
 
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Focusing"
-msgstr "Kohdistaminen"
-
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "Korota ikkunat kohdistuksen yhteydessä"
 
-#: gtweak/tweakview.py:159
+#: gtweak/tweakview.py:156
 msgid "Search Tweaks…"
 msgstr "Etsi lisäasetuksia…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(oletus)</i>"
+#| msgid "%s <i>(default)</i>"
+msgid "%s (default)"
+msgstr "%s (oletus)"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "Määritykset vaativat uudelleenkäynnistyksen"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Istunto tulee käynnistää uudelleen, jotta asetukset tulevat voimaan"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Käynnistä istunto uudelleen"
+
+#~ msgid "Date & Time"
+#~ msgstr "Päivä ja aika"
+
+#, python-format
+#~ msgid "(%s mode)"
+#~ msgstr "(%s tila)"
+
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Verkkosivusto"
+
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "Asenna omavalintainen teema gnome-shelliin"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "Shellin user-theme-laajennus ei ole kunnolla asennettu"
+
+#~ msgid "Image"
+#~ msgstr "Kuva"
+
+#~ msgid "Clock"
+#~ msgstr "Kello"
+
+#~ msgid "Show Weekday"
+#~ msgstr "Näytä viikonpäivä"
+
+#~ msgid "Show Date"
+#~ msgstr "Näytä päivä"
+
+#~ msgid "Show Seconds"
+#~ msgstr "Näytä sekunnit"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalenteri"
+
+#~ msgid "Show Week Numbers"
+#~ msgstr "Näytä viikkonumerot"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Vanhennettujen ikkunanotsikkojen teksti"
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Hiirinapsautuksen jäljittely"
+
+#~ msgid "Fingers"
+#~ msgstr "Sormet"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Napsauta kosketuslevyä kahdella sormella hiiren oikean painikkeen "
+#~ "napsauttamiseksi. Kolmella sormella keskipainikkeen napsautus."
+
+#~ msgid "Area"
+#~ msgstr "Alue"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Napsauta kosketuslevyn oikeaa alakulmaa hiiren oikean painikkeen "
+#~ "napsauttamiseksi. Alhaalta keskeltä keskipainikkeen napsautus."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Älä käytä hiirinapsautuksen jäljittelyä."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Poista käytöstä kirjoittaessa"
+
+#~ msgid "Applications"
+#~ msgstr "Sovellukset"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>f"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Lisää uusi käynnistyksen yhteydessä suoritettava sovellus"
+
+#~ msgid "Window scaling"
+#~ msgstr "Ikkunan skaalaus"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr "Määritä GDK-ikkunaskaalauskerroin HiDPI-näyttöjä varten"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "Asetukset palautetaan {0} sekunnissa"
+#~ msgstr[1] "Asetukset palautetaan {0} sekunnissa"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "Haluatko säilyttää nämä HiDPI-asetukset?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "Peru asetukset"
+
+#~ msgid "Keep Changes"
+#~ msgstr "Säilytä asetukset"
+
+#~ msgid "HiDPI"
+#~ msgstr "HiDPI"
+
+#~ msgid "Focusing"
+#~ msgstr "Kohdistaminen"
 
 #~ msgid "General"
 #~ msgstr "Yleiset"
@@ -855,9 +902,6 @@ msgstr "Käynnistä istunto uudelleen"
 
 #~ msgid "Sloppy"
 #~ msgstr "Väljä"
-
-#~ msgid "Click Method"
-#~ msgstr "Napsautustapa"
 
 #~ msgid "Enable dark theme for all applications"
 #~ msgstr "Käytä tummaa teemaa kaikissa sovelluksissa"
