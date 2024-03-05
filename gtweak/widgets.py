@@ -522,10 +522,22 @@ class GSettingsTweakComboRow(Adw.ComboRow, _GSettingsTweak, _DependableMixin):
         self.settings.connect('changed::'+self.key_name, self._on_setting_changed)
         self._update_combo_for_setting()
 
-        self.set_expression(Gtk.PropertyExpression.new(TweakListStoreItem, None, "title"))
+        factory = Gtk.SignalListItemFactory()
+        factory.connect('setup', self._factory_setup)
+        factory.connect('bind', self._factory_bind)
+        self.set_factory(factory)
+
         self.connect('notify::selected-item', self._on_combo_changed)
 
         self.widget_for_size_group = self
+
+    def _factory_setup(self, factory, item):
+        label = Gtk.Label(xalign=0.0, ellipsize=Pango.EllipsizeMode.END, max_width_chars=20, valign=Gtk.Align.CENTER)
+        item.set_child(label)
+
+    def _factory_bind(self, factory, item):
+        label = item.get_child()
+        label.set_label(item.get_item().title)
 
     def _update_combo_for_setting(self):
         val = self.settings.get_string(self.key_name)
