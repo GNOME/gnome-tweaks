@@ -96,7 +96,7 @@ class GnomeTweaks(Adw.Application):
                 about_comment = f'{_("GNOME Shell")} {_shell.version}'
 
             else:
-                about_comment = (_("GNOME Shell") + " %s " + _StoreAction("(%s mode)")) % \
+                about_comment = (_("GNOME Shell") + " %s " + _("(%s mode)")) % \
                     (_shell.version, _shell.mode)
         else:
             about_comment = _("GNOME Shell is not running")
