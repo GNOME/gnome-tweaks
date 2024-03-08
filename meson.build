@@ -12,6 +12,20 @@ if not python3.found()
     error('No valid python3 installation found!')
 endif
 
+# Tweaks requires at least Python 3.10 for certain type annotations
+if not python3.language_version().version_compare('>= 3.10')
+  error('Python 3.10 or newer is required.')
+endif
+
+# Declare runtime dependency versions here to make packaging more obvious
+dependency('glib-2.0', version: '>= 2.78.0')
+dependency('gobject-introspection-1.0', version: '>= 1.78.0')
+dependency('gtk4', version: '>= 4.10.0')
+dependency('libadwaita-1', version: '>= 1.4.0')
+dependency('pygobject-3.0', version: '>= 3.46.0')
+dependency('gudev-1.0', version: '>= 238')
+dependency('gsettings-desktop-schemas', version: '>= 46.beta')
+
 prefix = get_option('prefix')
 
 bindir = join_paths(prefix, get_option('bindir'))
