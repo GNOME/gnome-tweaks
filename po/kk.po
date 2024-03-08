@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-07-22 13:23+0000\n"
-"PO-Revision-Date: 2023-09-04 21:55+0600\n"
+"POT-Creation-Date: 2024-02-10 08:18+0000\n"
+"PO-Revision-Date: 2024-03-08 10:44+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "Language: kk\n"
@@ -16,85 +16,81 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "GNOME жобасы"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "GNOME қосымша баптаулары"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "GNOME қосымша баптауларын өзгерту"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
 "Қосымша баптаулар көмегімен GNOME жұмыс үстел ортасын дәлдеп баптауға болады."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"Ол темаларды орнату және басқару, эл. қорек баптауларын өзгерту, жүйеге "
-"кірген кезде автожөнелтілетін қолданбаларды басқару, жұмыс үстел "
-"таңбашаларын іске қосу және т.б. баптауларды өзгерте алады."
+"Ол басқа баптауларға қоса пернетақта сәйкестеу баптауларын, іске қосылу "
+"қолданбаларын басқара алады және терезенің басқару батырмаларын қоса алады."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:127
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Қосымша баптаулар"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
-"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Баптаулар;"
-"Кеңейтілген;Қалаулар;Кеңейтулер;Қаріптер;Тема;XKB;Пернетақта;Теру;"
+"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+"Баптаулар;Кеңейтілген;Қалаулар;Кеңейтулер;Қаріптер;Тема;XKB;Пернетақта;Теру;"
+"Іске қосылу;"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "Бастапқы түріне та_стау"
 
-#: data/shell.ui:13
+#: data/shell.ui:12
 msgid "_About Tweaks"
 msgstr "Қосымша баптаулар қолданбасы тур_алы"
 
-#: data/tweaks.ui:63 gtweak/tweaks/tweak_group_font.py:124
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
 msgid "Fonts"
 msgstr "Қаріптер"
 
-#: data/tweaks.ui:97 gtweak/tweaks/tweak_group_appearance.py:257
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
 msgid "Appearance"
 msgstr "Сыртқы түрі"
 
-#: data/tweaks.ui:132 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Дыбыс"
 
-#: data/tweaks.ui:166
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
 msgid "Mouse & Touchpad"
 msgstr "Тышқан және тачпад"
 
-#: data/tweaks.ui:200 gtweak/tweaks/tweak_group_keyboard.py:377
-#: gtweak/tweaks/tweak_group_keyboard.py:378
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
 msgid "Keyboard"
 msgstr "Пернетақта"
 
-#: data/tweaks.ui:234 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
 msgid "Windows"
 msgstr "Терезелер"
 
-#: data/tweaks.ui:268 gtweak/tweaks/tweak_group_datetime.py:8
-msgid "Date & Time"
-msgstr "Күн және уақыт"
-
-#: data/tweaks.ui:304 gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:309
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
 msgid "Startup Applications"
 msgstr "Автожөнелтілетін қолданбалар"
 
@@ -122,34 +118,27 @@ msgstr ""
 "Егер дистрибутивіңізде жоқ болса, GNOME Кеңейтулер қолданбасын {0} ішінен "
 "жүктеп алуды ұсынамыз."
 
-#: gtweak/app.py:81
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "Бастапқы түріне тастау"
 
-#: gtweak/app.py:82
-msgid "Reset all tweak settings to the original default state?"
+#: gtweak/app.py:87
+msgid "Reset all tweaks settings to the original default state?"
 msgstr "Барлық қосымша баптауларды бастапқы мәндеріне тастау керек пе?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:101
-#, python-format
-msgid "(%s mode)"
-msgstr "(%s режимі)"
-
-#: gtweak/app.py:104
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell орындалып тұрған жоқ"
 
-#: gtweak/app.py:106
-msgid "GTK"
-msgstr "GTK"
-
-#: gtweak/app.py:113
-msgid "Homepage"
-msgstr "Үй парағы"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
@@ -159,271 +148,250 @@ msgstr "Әр түрлі"
 msgid "Legacy Applications"
 msgstr "Ескірген қолданбалар"
 
-#: gtweak/tweaks/tweak_group_appearance.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Баптауды жазу қатесі"
 
-#: gtweak/tweaks/tweak_group_appearance.py:71
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Таңбашалар"
 
-#: gtweak/tweaks/tweak_group_appearance.py:86
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Курсор"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Shell"
-msgstr "Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Install custom or user themes for gnome-shell"
-msgstr "GNOME Shell үшін таңдауыңызша немесе пайдаланушы темаларын орнату"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Белгісіз қате"
 
-#: gtweak/tweaks/tweak_group_appearance.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Shell орындалып тұрған жоқ"
 
-#: gtweak/tweaks/tweak_group_appearance.py:140
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Shell user-theme кеңейтуі дұрыс орнатылмаған"
-
-#: gtweak/tweaks/tweak_group_appearance.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell user-theme кеңейтуі іске қосылмаған"
 
-#: gtweak/tweaks/tweak_group_appearance.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Shell кеңейтулерін тізіп шығару мүмкін емес"
 
-#: gtweak/tweaks/tweak_group_appearance.py:176
-msgid "<i>Default</i>"
-msgstr "<i>Бастапқы</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:182
+#: gtweak/tweaks/tweak_group_appearance.py:156
+msgid "Adwaita (default)"
+msgstr "Адвайта (қалыпты)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Select a theme"
 msgstr "Теманы таңдау"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:218
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s темасы сәтті жаңартылды"
 
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:220
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s темасы сәтті орнатылды"
 
-#: gtweak/tweaks/tweak_group_appearance.py:241
+#: gtweak/tweaks/tweak_group_appearance.py:222
 msgid "Error installing theme"
 msgstr "Теманы орнату қатесі"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:246
+#: gtweak/tweaks/tweak_group_appearance.py:227
 msgid "Invalid theme"
 msgstr "Жарамсыз тема"
 
-#: gtweak/tweaks/tweak_group_appearance.py:258
+#: gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Styles"
 msgstr "Стильдер"
 
-#: gtweak/tweaks/tweak_group_appearance.py:263
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Фон"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
-msgid "Image"
-msgstr "Сурет"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "Бастапқы сурет"
 
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "Қараңғы түрдегі сурет"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Келтіру"
 
-#: gtweak/tweaks/tweak_group_datetime.py:9
-msgid "Clock"
-msgstr "Сағат"
-
-#: gtweak/tweaks/tweak_group_datetime.py:10
-msgid "Show Weekday"
-msgstr "Апта күнін көрсету"
-
-#: gtweak/tweaks/tweak_group_datetime.py:11
-msgid "Show Date"
-msgstr "Күнді көрсету"
-
-#: gtweak/tweaks/tweak_group_datetime.py:12
-msgid "Show Seconds"
-msgstr "Секундтарды көрсету"
-
-#: gtweak/tweaks/tweak_group_datetime.py:13
-msgid "Calendar"
-msgstr "Күнтізбе"
-
-#: gtweak/tweaks/tweak_group_datetime.py:14
-msgid "Show Week Numbers"
-msgstr "Апта нөмірлерін көрсету"
-
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "Тегістеу"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:75
-msgid "Antialiasing"
-msgstr "Антиалиасинг"
-
-#: gtweak/tweaks/tweak_group_font.py:52
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "Толық"
 
-#: gtweak/tweaks/tweak_group_font.py:58
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "Орташа"
 
-#: gtweak/tweaks/tweak_group_font.py:64
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "Шағын"
 
-#: gtweak/tweaks/tweak_group_font.py:70 gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:418 gtweak/widgets.py:564 gtweak/widgets.py:593
 msgid "None"
 msgstr "Ешнәрсе"
 
-#: gtweak/tweaks/tweak_group_font.py:88
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "Антиалиасинг"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "Субпиксельдер (LCD мониторлары үшін)"
 
-#: gtweak/tweaks/tweak_group_font.py:94
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "Қалыпты (сұр түстес)"
 
-#: gtweak/tweaks/tweak_group_font.py:125
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "Таңдаулы қаріптер"
+
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
 msgstr "Интерфейс мәтіні"
 
-#: gtweak/tweaks/tweak_group_font.py:126
+#: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
 msgstr "Құжат мәтіні"
 
-#: gtweak/tweaks/tweak_group_font.py:127
+#: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
 msgstr "Тең енді мәтін"
 
-#: gtweak/tweaks/tweak_group_font.py:128
-msgid "Legacy Window Titles"
-msgstr "Ескі терезелер атаулары"
+#: gtweak/tweaks/tweak_group_font.py:45
+msgid "Rendering"
+msgstr "Рендеринг"
 
-#: gtweak/tweaks/tweak_group_font.py:130
+#: gtweak/tweaks/tweak_group_font.py:49
+msgid "Size"
+msgstr "Өлшемі"
+
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Масштаб"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_keyboard.py:339
-#: gtweak/tweaks/tweak_group_mouse.py:137
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Disabled"
-msgstr "Сөндірулі"
+msgid "Default"
+msgstr "Бастапқы"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:170
+#: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "Теру"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:18
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Emacs кірісі"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:189
-#: gtweak/tweaks/tweak_group_mouse.py:21
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr ""
 "Бастапқы жарлықтардың орнына Emacs пернетақта жарлықтарын қолдануды іске "
 "қосады."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:205
-#: gtweak/tweaks/tweak_group_mouse.py:37
+#: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
 msgstr "Шолу көрінісі жарлығы"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:212
-#: gtweak/tweaks/tweak_group_mouse.py:44
+#: gtweak/tweaks/tweak_group_keyboard.py:210
 msgid "Left Super"
 msgstr "Сол жақ супер пернесі"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:216
-#: gtweak/tweaks/tweak_group_mouse.py:48
+#: gtweak/tweaks/tweak_group_keyboard.py:211
 msgid "Right Super"
 msgstr "Оң жақ супер пернесі"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:239
-#: gtweak/tweaks/tweak_group_keyboard.py:247
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Жайманың қосымша опциялары"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:269
-#: gtweak/tweaks/tweak_group_mouse.py:67 gtweak/tweaks/tweak_group_mouse.py:185
-msgid "Mouse Click Emulation"
-msgstr "Тышқан шертуін эмуляциялау"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:287
-#: gtweak/tweaks/tweak_group_mouse.py:85
-msgid "Fingers"
-msgstr "Саусақтар"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:289
-#: gtweak/tweaks/tweak_group_mouse.py:87
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"Оң жақпен шерту үшін тачпадты екі саусақпен, ал орта шерту үшін үш саусақпен "
-"шертіңіз."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:313
-#: gtweak/tweaks/tweak_group_mouse.py:111
-msgid "Area"
-msgstr "Аймақ"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:315
-#: gtweak/tweaks/tweak_group_mouse.py:113
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Оң жақпен шерту үшін тачпадтың төмеңгі оң жағына, ал орта шерту төмеңгі орта "
-"жағына шертіңіз."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:341
-#: gtweak/tweaks/tweak_group_mouse.py:139
-msgid "Don’t use mouse click emulation."
-msgstr "Тышқан шертуі эмуляциясын қолданбау."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:379
+#: gtweak/tweaks/tweak_group_keyboard.py:259
 msgid "Show Extended Input Sources"
 msgstr "Кеңейтілген кіріс қайнар көздерін көрсету"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:382
+#: gtweak/tweaks/tweak_group_keyboard.py:262
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Баптаулар қолданбасында кіріс қайнар көздерінің таңдауын арттыру."
 
-#: gtweak/tweaks/tweak_group_mouse.py:175
-#: gtweak/tweaks/tweak_group_mouse.py:176
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "Жайма"
+
+#: gtweak/tweaks/tweak_group_mouse.py:31
+msgid "Disable Secondary Click"
+msgstr "Екіншілік шертуді сөндіру"
+
+#: gtweak/tweaks/tweak_group_mouse.py:32
+msgid ""
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
+msgstr ""
+"Екінші физикалық батырмасын жоқ тачпадтарда екіншілік шертулерді сөндіреді"
+
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "Тышқан"
 
-#: gtweak/tweaks/tweak_group_mouse.py:177
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
 msgstr "Орта батырмасымен кірістіру"
 
-#: gtweak/tweaks/tweak_group_mouse.py:180
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "Тачпад"
 
-#: gtweak/tweaks/tweak_group_mouse.py:181
-msgid "Disable While Typing"
-msgstr "Теру кезінде сөндіру"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Тачпад үдетуі"
+
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+"Үдетуді сөндіру жылдамырақ және дәлірек қозғалыстарға мүмкіндік береді, "
+"бірақ тачпадты пайдалануды қиындатуы мүмкін."
+
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Көрсету қаламы"
+
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Көрсету қаламы үдетуі"
+
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+"Үдетуді сөндіру жылдамырақ және дәлірек қозғалыстарға мүмкіндік береді, "
+"бірақ көрсету қаламын пайдалануды қиындатуы мүмкін."
+
+#: gtweak/tweaks/tweak_group_mouse.py:104
+msgid "Scrolling Method"
+msgstr "Айналдыру тәсілі"
 
 #: gtweak/tweaks/tweak_group_sound.py:44
 msgid "System Sound Theme"
@@ -433,67 +401,63 @@ msgstr "Жүйелік дыбыс темасы"
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Дыбыстық оқиғалар үшін қай дыбыс темасы қолданылатынын көрсетеді."
 
-#: gtweak/tweaks/tweak_group_startup.py:30
+#: gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "орындалуда"
+
+#: gtweak/tweaks/tweak_group_startup.py:61
+msgid "Select Application"
+msgstr "Қолданбаны таңдау"
+
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
+msgid "_Close"
+msgstr "_Жабу"
+
+#: gtweak/tweaks/tweak_group_startup.py:68
+msgid "_Add"
+msgstr "Қо_су"
+
+#: gtweak/tweaks/tweak_group_startup.py:72
+msgid "Search Applications…"
+msgstr "Қолданбалардан іздеу…"
+
+#: gtweak/tweaks/tweak_group_startup.py:194
+msgid "Remove"
+msgstr "Өшіру"
+
+#: gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
 "Іске автоқосылатын қолданбалар сіз жүйеге кірген кезде, автожөнелтіледі."
 
-#: gtweak/tweaks/tweak_group_startup.py:43
-msgid "Applications"
-msgstr "Қолданбалар"
-
-#: gtweak/tweaks/tweak_group_startup.py:49
-msgid "Search Applications…"
-msgstr "Қолданбалардан іздеу…"
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:59
-msgid "<primary>f"
-msgstr "<primary>f"
-
-#: gtweak/tweaks/tweak_group_startup.py:77
-msgid "running"
-msgstr "орындалуда"
-
-#: gtweak/tweaks/tweak_group_startup.py:88
-msgid "_Close"
-msgstr "_Жабу"
-
-#: gtweak/tweaks/tweak_group_startup.py:89
-msgid "_Add"
-msgstr "Қо_су"
-
-#: gtweak/tweaks/tweak_group_startup.py:234
-msgid "Remove"
-msgstr "Өшіру"
+#: gtweak/tweaks/tweak_group_startup.py:257
+msgid "No Startup Applications"
+msgstr "Іске қосылу қолданбалары жоқ"
 
 #: gtweak/tweaks/tweak_group_startup.py:258
-msgid "New startup application"
-msgstr "Жаңа автожөнелтілетін қолданбасы"
+msgid "Add a startup application"
+msgstr "Автоқосылу қолданбасын қосу"
 
-#: gtweak/tweaks/tweak_group_startup.py:259
-msgid "Add a new application to be run at startup"
-msgstr "Жүйеге кірген кезде автожөнелтілетін қолданбаны қосу"
-
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Терезе фокусы"
 
+#: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Click to Focus"
 msgstr "Фокусты алу үшін шерту"
 
-#: gtweak/tweaks/tweak_group_windows.py:38
+#: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
 msgstr "Терезелерге шерткен кезде, олар фокусты алады."
 
-#: gtweak/tweaks/tweak_group_windows.py:62
+#: gtweak/tweaks/tweak_group_windows.py:23
 msgid "Focus on Hover"
 msgstr "Үстінен өткенде фокус алу"
 
-#: gtweak/tweaks/tweak_group_windows.py:64
+#: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -501,12 +465,11 @@ msgstr ""
 "Терезе оның үстінде курсор өткенде фокусты алады. Курсор жұмыс үстелінде "
 "жүргенде, фокус терезеде қала береді."
 
-#: gtweak/tweaks/tweak_group_windows.py:88
-#: gtweak/tweaks/tweak_group_windows.py:300
-msgid "Secondary-Click"
-msgstr "Екіншілік шерту"
+#: gtweak/tweaks/tweak_group_windows.py:28
+msgid "Focus Follows Mouse"
+msgstr "Фокус тышқан соңынан ереді"
 
-#: gtweak/tweaks/tweak_group_windows.py:90
+#: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -514,85 +477,59 @@ msgstr ""
 "Терезе оның үстінде курсор өткенде фокусты алады. Курсор жұмыс үстелінде "
 "жүргенде, терезе фокусты жоғалтады."
 
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Window scaling"
-msgstr "Терезе масштабы"
-
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "HiDPI үшін GDK терезелер масштабтауын баптау"
-
-#: gtweak/tweaks/tweak_group_windows.py:157
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Баптаулар {0} секундтан кейін кері қайтарылады"
-
-#: gtweak/tweaks/tweak_group_windows.py:173
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Бұл HiDPI баптауларын сақтауды қалайсыз ба?"
-
-#: gtweak/tweaks/tweak_group_windows.py:180
-msgid "Revert Settings"
-msgstr "Баптауларды қайтару"
-
-#: gtweak/tweaks/tweak_group_windows.py:181
-msgid "Keep Changes"
-msgstr "Өзгерістерді сақтау"
-
-#: gtweak/tweaks/tweak_group_windows.py:197
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:246
+#: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
 msgstr "Орналасу"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:260
+#: gtweak/tweaks/tweak_group_windows.py:97
 msgid "Left"
 msgstr "Сол жақ"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:266
+#: gtweak/tweaks/tweak_group_windows.py:100
 msgid "Right"
 msgstr "Оң жақ"
 
-#: gtweak/tweaks/tweak_group_windows.py:297
+#: gtweak/tweaks/tweak_group_windows.py:135
 msgid "Titlebar Actions"
 msgstr "Атау жолағы әрекеттері"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
+#: gtweak/tweaks/tweak_group_windows.py:136
 msgid "Double-Click"
 msgstr "Қос шерту"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:137
 msgid "Middle-Click"
 msgstr "Орта шерту"
 
-#: gtweak/tweaks/tweak_group_windows.py:301
+#: gtweak/tweaks/tweak_group_windows.py:138
+msgid "Secondary-Click"
+msgstr "Екіншілік шерту"
+
+#: gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "Атау жолағы батырмалары"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "Максималды қылу"
 
-#: gtweak/tweaks/tweak_group_windows.py:303
+#: gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "Минималды қылу"
 
-#: gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_windows.py:146
 msgid "Click Actions"
 msgstr "Шерту әрекеттері"
 
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "Жалғанған модальді сұхбаттар"
 
-#: gtweak/tweaks/tweak_group_windows.py:307
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -600,47 +537,155 @@ msgstr ""
 "Іске қосулы кезде, модальді сұхбаттар аталық терезелерге тіркелген, және "
 "оларды бөлек жылжыту мүмкін емес."
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
 msgstr "Жаңа терезелерді ортасымен туралау"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "Терезе әрекеттер пернесі"
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Сөндірулі"
+
+#: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "Екіншілік шертумен өлшемін өзгерту"
 
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Focusing"
-msgstr "Фокус"
-
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "Терезелерді фокус алғанда көтеру"
 
-#: gtweak/tweakview.py:159
+#: gtweak/tweakview.py:156
 msgid "Search Tweaks…"
 msgstr "Қосымша баптауларды іздеу…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(бастапқы)</i>"
+#| msgid "%s <i>(default)</i>"
+msgid "%s (default)"
+msgstr "%s (қалыпты)"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "Жасалған өзгерістер сессияны жаңадан бастауды талап етеді"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Өзгерістер іске асуы үшін сессияны қайта іске қосу керек"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Сессияны қайта қосу"
+
+#~ msgid "Date & Time"
+#~ msgstr "Күн және уақыт"
+
+#, python-format
+#~ msgid "(%s mode)"
+#~ msgstr "(%s режимі)"
+
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Үй парағы"
+
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "GNOME Shell үшін таңдауыңызша немесе пайдаланушы темаларын орнату"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "Shell user-theme кеңейтуі дұрыс орнатылмаған"
+
+#~ msgid "Image"
+#~ msgstr "Сурет"
+
+#~ msgid "Clock"
+#~ msgstr "Сағат"
+
+#~ msgid "Show Weekday"
+#~ msgstr "Апта күнін көрсету"
+
+#~ msgid "Show Date"
+#~ msgstr "Күнді көрсету"
+
+#~ msgid "Show Seconds"
+#~ msgstr "Секундтарды көрсету"
+
+#~ msgid "Calendar"
+#~ msgstr "Күнтізбе"
+
+#~ msgid "Show Week Numbers"
+#~ msgstr "Апта нөмірлерін көрсету"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Ескі терезелер атаулары"
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Тышқан шертуін эмуляциялау"
+
+#~ msgid "Fingers"
+#~ msgstr "Саусақтар"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Оң жақпен шерту үшін тачпадты екі саусақпен, ал орта шерту үшін үш "
+#~ "саусақпен шертіңіз."
+
+#~ msgid "Area"
+#~ msgstr "Аймақ"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Оң жақпен шерту үшін тачпадтың төмеңгі оң жағына, ал орта шерту төмеңгі "
+#~ "орта жағына шертіңіз."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Тышқан шертуі эмуляциясын қолданбау."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Теру кезінде сөндіру"
+
+#~ msgid "Applications"
+#~ msgstr "Қолданбалар"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>f"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Жүйеге кірген кезде автожөнелтілетін қолданбаны қосу"
+
+#~ msgid "Window scaling"
+#~ msgstr "Терезе масштабы"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr "HiDPI үшін GDK терезелер масштабтауын баптау"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "Баптаулар {0} секундтан кейін кері қайтарылады"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "Бұл HiDPI баптауларын сақтауды қалайсыз ба?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "Баптауларды қайтару"
+
+#~ msgid "Keep Changes"
+#~ msgstr "Өзгерістерді сақтау"
+
+#~ msgid "HiDPI"
+#~ msgstr "HiDPI"
+
+#~ msgid "Focusing"
+#~ msgstr "Фокус"
 
 #~ msgid "General"
 #~ msgstr "Жалпы"
@@ -869,9 +914,6 @@ msgstr "Сессияны қайта қосу"
 
 #~ msgid "No Action"
 #~ msgstr "Әрекет жоқ"
-
-#~ msgid "Click Method"
-#~ msgstr "Шерту тәсілі"
 
 #~ msgid "Enable dark theme for all applications"
 #~ msgstr "Барлық қолданбалар үшін қараңғы теманы қолдану"
