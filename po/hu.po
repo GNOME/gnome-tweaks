@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-02-10 08:18+0000\n"
-"PO-Revision-Date: 2024-03-02 12:21+0100\n"
+"POT-Creation-Date: 2024-03-08 07:58+0000\n"
+"PO-Revision-Date: 2024-03-11 00:18+0100\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -55,11 +55,10 @@ msgstr "Finomhangoló"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-#| msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
-"Beállítások;Speciális;Tulajdonságok;Betűkészletek;Téma;XKB;Billentyűzet;Gépelé"
-"s;Indítás;"
+"Beállítások;Speciális;Tulajdonságok;Betűkészletek;Téma;XKB;Billentyűzet;"
+"Gépelés;Indítás;"
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -126,7 +125,6 @@ msgid "Reset to Defaults"
 msgstr "Alapértelmezések visszaállítása"
 
 #: gtweak/app.py:87
-#| msgid "Reset all tweak settings to the original default state?"
 msgid "Reset all tweaks settings to the original default state?"
 msgstr ""
 "Visszaállít minden finomhangolást az eredeti alapértelmezett állapotra?"
@@ -134,6 +132,11 @@ msgstr ""
 #: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
+
+#: gtweak/app.py:99
+#, python-format
+msgid "(%s mode)"
+msgstr "(%s mód)"
 
 #: gtweak/app.py:102
 msgid "GNOME Shell is not running"
@@ -250,7 +253,7 @@ msgid "Slight"
 msgstr "Enyhe"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:418 gtweak/widgets.py:564 gtweak/widgets.py:593
+#: gtweak/widgets.py:418 gtweak/widgets.py:576 gtweak/widgets.py:605
 msgid "None"
 msgstr "Nincs"
 
@@ -295,7 +298,6 @@ msgid "Scaling Factor"
 msgstr "Méretezési faktor"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#| msgid "<i>Default</i>"
 msgid "Default"
 msgstr "Alapértelmezett"
 
@@ -345,7 +347,6 @@ msgid "Layout"
 msgstr "Elrendezés"
 
 #: gtweak/tweaks/tweak_group_mouse.py:31
-#| msgid "Secondary-Click"
 msgid "Disable Secondary Click"
 msgstr "Másodlagos kattintás letiltása"
 
@@ -354,8 +355,8 @@ msgid ""
 "Disables secondary clicks on touchpads which do not have a physical "
 "secondary button"
 msgstr ""
-"Letiltja a másodlagos kattintást olyan érintőtáblákon, amelyek nem"
-" rendelkeznek fizikai másodlagos gombbal"
+"Letiltja a másodlagos kattintást olyan érintőtáblákon, amelyek nem "
+"rendelkeznek fizikai másodlagos gombbal"
 
 #: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
@@ -378,8 +379,8 @@ msgid ""
 "Turning acceleration off can allow faster and more precise movements, but "
 "can also make the touchpad more difficult to use."
 msgstr ""
-"A gyorsítás kikapcsolása gyorsabb és pontosabb mozgatásokat tesz lehetővé, de"
-" nehezebbé is teheti az érintőtábla használatát."
+"A gyorsítás kikapcsolása gyorsabb és pontosabb mozgatásokat tesz lehetővé, "
+"de nehezebbé is teheti az érintőtábla használatát."
 
 #: gtweak/tweaks/tweak_group_mouse.py:97
 msgid "Pointing Stick"
@@ -394,11 +395,10 @@ msgid ""
 "Turning acceleration off can allow faster and more precise movements, but "
 "can also make the pointing stick more difficult to use."
 msgstr ""
-"A gyorsítás kikapcsolása gyorsabb és pontosabb mozgatásokat tesz lehetővé, de"
-" nehezebbé is teheti a mutatópálca használatát."
+"A gyorsítás kikapcsolása gyorsabb és pontosabb mozgatásokat tesz lehetővé, "
+"de nehezebbé is teheti a mutatópálca használatát."
 
 #: gtweak/tweaks/tweak_group_mouse.py:104
-#| msgid "Scaling Factor"
 msgid "Scrolling Method"
 msgstr "Görgetési módszer"
 
@@ -415,7 +415,6 @@ msgid "running"
 msgstr "fut"
 
 #: gtweak/tweaks/tweak_group_startup.py:61
-#| msgid "Legacy Applications"
 msgid "Select Application"
 msgstr "Alkalmazás kiválasztása"
 
@@ -441,12 +440,10 @@ msgid "Startup applications are automatically started when you log in."
 msgstr "Az indítandó alkalmazások automatikusan elindulnak belépéskor."
 
 #: gtweak/tweaks/tweak_group_startup.py:257
-#| msgid "Startup Applications"
 msgid "No Startup Applications"
 msgstr "Nincsenek indítandó alkalmazások"
 
 #: gtweak/tweaks/tweak_group_startup.py:258
-#| msgid "New startup application"
 msgid "Add a startup application"
 msgstr "Indítandó alkalmazás hozzáadása"
 
@@ -477,7 +474,6 @@ msgstr ""
 "amikor az egérmutató az asztalra kerül."
 
 #: gtweak/tweaks/tweak_group_windows.py:28
-#| msgid "Focus on Hover"
 msgid "Focus Follows Mouse"
 msgstr "Fókuszálás kövesse az egeret"
 
@@ -486,8 +482,8 @@ msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
 msgstr ""
-"Az ablak a mutatóval való rámutatáskor kerül fókuszba. Az ablak elveszti a"
-" fókuszt, amikor az egérmutató az asztalra kerül."
+"Az ablak a mutatóval való rámutatáskor kerül fókuszba. Az ablak elveszti a "
+"fókuszt, amikor az egérmutató az asztalra kerül."
 
 #: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
@@ -576,7 +572,6 @@ msgstr "Finomhangolások keresése…"
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-#| msgid "%s <i>(default)</i>"
 msgid "%s (default)"
 msgstr "%s (alapértelmezett)"
 
