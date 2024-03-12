@@ -188,7 +188,8 @@ class _StartupAppRowTweak(Adw.ActionRow, Tweak):
         if icon:
             app_icon = _image_from_gicon(icon)
         else:
-            app_icon = Gtk.Image.new_from_icon_name("image-missing", Gtk.IconSize.LARGE)
+            app_icon = Gtk.Image.new_from_icon_name("image-missing")
+            app_icon.set_icon_size(Gtk.IconSize.LARGE)
 
         self.btn = Gtk.Button(icon_name="edit-delete-symbolic")
         self.btn.set_tooltip_text(_("Remove"))
