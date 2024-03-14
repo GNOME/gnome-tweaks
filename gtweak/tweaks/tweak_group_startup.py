@@ -20,7 +20,7 @@ def _image_from_gicon(gicon):
 
 
 class _AppChooserRow(Gtk.ListBoxRow):
-    """The row in the appchooser to show desktop files """
+    """The row in the appchooser to show desktop files"""
 
     def __init__(self, app_info: Gio.AppInfo, is_running: bool, **kwargs):
         super().__init__(**kwargs)
@@ -42,8 +42,9 @@ class _AppChooserRow(Gtk.ListBoxRow):
             img = Gtk.Image.new_from_icon_name("application-x-executable")
             img.props.icon_size = Gtk.IconSize.LARGE
         app_name = app_info.get_name()
-        lbl = Gtk.Label(label=app_name, hexpand=True,
-                        halign=Gtk.Align.START, wrap=True)
+        lbl = Gtk.Label(
+            label=app_name, hexpand=True, halign=Gtk.Align.START, wrap=True
+        )
         vbox.append(img)
         vbox.append(lbl)
 
@@ -54,11 +55,13 @@ class _AppChooserRow(Gtk.ListBoxRow):
 
 
 class _AppChooser(Gtk.Dialog):
-    """Presents a dialog to select a desktop file """
+    """Presents a dialog to select a desktop file"""
 
     def __init__(self, main_window, running_exes, startup_apps):
         uhb = Gtk.Settings.get_default().props.gtk_dialogs_use_header
-        Gtk.Dialog.__init__(self, title=_("Select Application"), use_header_bar=uhb)
+        Gtk.Dialog.__init__(
+            self, title=_("Select Application"), use_header_bar=uhb
+        )
 
         self._running = {}
         self._all = {}
@@ -69,7 +72,8 @@ class _AppChooser(Gtk.Dialog):
         self.set_default_response(Gtk.ResponseType.OK)
 
         self.entry = Gtk.SearchEntry(
-            placeholder_text=_("Search Applications…"))
+            placeholder_text=_("Search Applications…")
+        )
         self.entry.set_width_chars(30)
         self.entry.props.activates_default = True
         self.entry.connect("search-changed", self._on_search_entry_changed)
@@ -83,12 +87,19 @@ class _AppChooser(Gtk.Dialog):
         lb.set_activate_on_single_click(False)
         lb.set_sort_func(self._list_sort_func, None)
         lb.set_filter_func(self._list_filter_func, self.entry)
-        lb.connect("row-activated",
-                   lambda b, r: self.response(Gtk.ResponseType.OK) if r.get_mapped() else None)
+        lb.connect(
+            "row-activated",
+            lambda b, r: (
+                self.response(Gtk.ResponseType.OK) if r.get_mapped() else None
+            ),
+        )
         lb.connect("row-selected", self._on_row_selected)
 
-        apps = filter(lambda _app: _app.should_show() and _app.get_id() not in startup_apps,
-                      Gio.app_info_get_all())
+        apps = filter(
+            lambda _app: _app.should_show()
+            and _app.get_id() not in startup_apps,
+            Gio.app_info_get_all(),
+        )
 
         for app in apps:
             running = app.get_executable() in running_exes
@@ -98,8 +109,13 @@ class _AppChooser(Gtk.Dialog):
             if w:
                 lb.append(w)
 
-        sw = Gtk.ScrolledWindow(vexpand=True, margin_top=2, margin_bottom=2,
-                                margin_start=2, margin_end=2)
+        sw = Gtk.ScrolledWindow(
+            vexpand=True,
+            margin_top=2,
+            margin_bottom=2,
+            margin_start=2,
+            margin_end=2,
+        )
         sw.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
         sw.set_child(lb)
 
@@ -109,8 +125,11 @@ class _AppChooser(Gtk.Dialog):
             searchbtn.set_icon_name("edit-find-symbolic")
             header_bar.pack_end(searchbtn)
             self._binding = searchbtn.bind_property(
-                "active", self.searchbar,
-                "search-mode-enabled", GObject.BindingFlags.BIDIRECTIONAL)
+                "active",
+                self.searchbar,
+                "search-mode-enabled",
+                GObject.BindingFlags.BIDIRECTIONAL,
+            )
 
         self.get_content_area().append(self.searchbar)
         self.get_content_area().append(sw)
@@ -123,7 +142,9 @@ class _AppChooser(Gtk.Dialog):
 
     def _setup_shortcut(self):
         s_trigger = Gtk.ShortcutTrigger.parse_string("<primary>f")
-        s_action = Gtk.CallbackAction.new(lambda w, a, s: s.set_search_mode(True), self.searchbar)
+        s_action = Gtk.CallbackAction.new(
+            lambda w, a, s: s.set_search_mode(True), self.searchbar
+        )
 
         if s_trigger and s_action:
             shortcut = Gtk.Shortcut(trigger=s_trigger, action=s_action)
@@ -180,7 +201,12 @@ class _StartupAppRowTweak(Adw.ActionRow, Tweak):
 
     def __init__(self, desktop_info: Gio.AppInfo, **options):
         Adw.PreferencesRow.__init__(self)
-        Tweak.__init__(self, desktop_info.get_name(), desktop_info.get_description(), **options)
+        Tweak.__init__(
+            self,
+            desktop_info.get_name(),
+            desktop_info.get_description(),
+            **options
+        )
 
         icon = desktop_info.get_icon()
         if icon:
@@ -216,7 +242,9 @@ class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
 
     def __init__(self, *tweaks, **options):
         name: str = _("Startup Applications")
-        desc: str = _("Startup applications are automatically started when you log in.")
+        desc: str = _(
+            "Startup applications are automatically started when you log in."
+        )
         Adw.PreferencesPage.__init__(self)
         TweakGroup.__init__(self, "startup-applications", name, **options)
 
@@ -261,7 +289,7 @@ class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
         self.stack.add_child(self.pg_startup_apps)
 
     def _setup_startup_app_row(self):
-        """ Add a row for each autostart applications existing"""
+        """Add a row for each autostart applications existing"""
 
         dfiles = self._startup_dapps
         for dfile in dfiles:
@@ -284,7 +312,9 @@ class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
                 if appinfo:
                     AutostartFile(appinfo).update_start_at_login(True)
                     arow_app_row = _StartupAppRowTweak(appinfo)
-                    arow_app_row.btn.connect("clicked", self._on_remove_clicked, arow_app_row)
+                    arow_app_row.btn.connect(
+                        "clicked", self._on_remove_clicked, arow_app_row
+                    )
 
                     self.pg_startup_apps.add(arow_app_row)
                     self._startup_dapps.add(appinfo)
@@ -294,7 +324,9 @@ class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
         startup_app_ids = tuple(map(lambda x: x.get_id(), self._startup_dapps))
 
         Gio.Application.get_default().mark_busy()
-        a = _AppChooser(self.main_window, self._get_running_executables(), startup_app_ids)
+        a = _AppChooser(
+            self.main_window, self._get_running_executables(), startup_app_ids
+        )
         a.connect("response", _on_response_appchooser)
         Gio.Application.get_default().unmark_busy()
         a.present()
@@ -331,10 +363,10 @@ class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
     @staticmethod
     def _get_running_executables() -> Set[str]:
         exes = set()
-        cmd = subprocess.Popen([
-            'ps', '-e', '-w', '-w', '-U',
-            str(os.getuid()), '-o', 'cmd'],
-            stdout=subprocess.PIPE)
+        cmd = subprocess.Popen(
+            ['ps', '-e', '-w', '-w', '-U', str(os.getuid()), '-o', 'cmd'],
+            stdout=subprocess.PIPE,
+        )
         out = cmd.communicate()[0]
         for process in out.decode('utf8').split('\n'):
             exe = process.split(' ')[0]
@@ -342,5 +374,6 @@ class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
                 exes.add(os.path.basename(exe))
 
         return exes
+
 
 TWEAK_GROUP = AutostartTweakGroup()
