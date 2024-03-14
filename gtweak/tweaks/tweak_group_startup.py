@@ -320,7 +320,7 @@ class AutostartTweakGroup(Adw.PreferencesPage, TweakGroup):
             try:
                 dappinfo = Gio.DesktopAppInfo.new_from_filename(file)
             except TypeError:
-                logging.warning(f"Error loading desktop file: {file}")
+                logging.warning("Error loading desktop file: %s", file)
             else:
                 if not AutostartFile(dappinfo).is_start_at_login_enabled():
                     continue
