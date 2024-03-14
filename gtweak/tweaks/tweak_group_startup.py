@@ -7,7 +7,7 @@ import os.path
 import subprocess
 from typing import Set, Optional
 
-from gi.repository import Adw, Gtk, Gdk, Gio, GObject, GLib
+from gi.repository import Adw, Gtk, Gdk, Gio, GObject
 
 from gtweak.tweakmodel import Tweak, TweakGroup
 from gtweak.utils import AutostartManager, AutostartFile
