@@ -136,18 +136,16 @@ class _AppChooser(Gtk.Dialog):
 
         if a_isrunning and not b_isrunning:
             return -1
-        elif not a_isrunning and b_isrunning:
+        if not a_isrunning and b_isrunning:
             return 1
-        else:
-            aname = row_a.app_name
-            bname = row_b.app_name
+        aname = row_a.app_name
+        bname = row_b.app_name
 
-            if aname < bname:
-                return -1
-            elif aname > bname:
-                return 1
-            else:
-                return 0
+        if aname < bname:
+            return -1
+        if aname > bname:
+            return 1
+        return 0
 
     @staticmethod
     def _list_filter_func(row: _AppChooserRow, entry: Gtk.SearchEntry) -> bool:
