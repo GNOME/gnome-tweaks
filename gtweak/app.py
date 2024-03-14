@@ -68,9 +68,12 @@ class GnomeTweaks(Adw.Application):
     def do_startup(self):
         Adw.Application.do_startup(self)
 
-        self._create_action("quit", self.quit, ["<primary>q"])
+        self._create_action("quit", self.quit_app, ["<primary>q"])
         self._create_action("about", self.about_cb)
         self._create_action("reset", self.reset_cb)
+
+    def quit_app(self, *_):
+        self.quit()
 
     def reset_cb(self, action, parameter):
         def _on_dialog_response(_dialog, response_type):
