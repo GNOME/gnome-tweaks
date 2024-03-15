@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-07-22 13:23+0000\n"
-"PO-Revision-Date: 2023-08-16 20:54+0200\n"
+"POT-Creation-Date: 2024-03-14 16:43+0000\n"
+"PO-Revision-Date: 2024-03-15 11:28+0100\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -18,35 +18,35 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:41 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "Vyladění GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "Vylaďte si pokročilá nastavení GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "Vyladění GNOME umožňuje přizpůsobit si pokročilé volby GNOME."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"Umí instalovat a spravovat motivy, měnit nastavení napájení, spravovat "
-"aplikace spouštěné při spuštění systému, povolit ikony na ploše a řadu "
-"dalších nastavení."
+"Mimo jiné umí spravovat přizpůsobení mapování klávesnice, přidávat aplikace "
+"spouštěné při spuštění systému a nastavovat vlastní ovládací prvky oken."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:127
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
 msgid "Tweaks"
 msgstr "Vyladění"
 
@@ -72,28 +72,24 @@ msgstr "Fonty"
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: data/tweaks.ui:132 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Zvuk"
 
-#: data/tweaks.ui:166
+#: data/tweaks.ui:165
 msgid "Mouse & Touchpad"
 msgstr "Myš a touchpad"
 
-#: data/tweaks.ui:200 gtweak/tweaks/tweak_group_keyboard.py:377
+#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
 #: gtweak/tweaks/tweak_group_keyboard.py:378
 msgid "Keyboard"
 msgstr "Klávesnice"
 
-#: data/tweaks.ui:234 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
 msgid "Windows"
 msgstr "Okna"
 
-#: data/tweaks.ui:268 gtweak/tweaks/tweak_group_datetime.py:8
-msgid "Date & Time"
-msgstr "Datum a čas"
-
-#: data/tweaks.ui:304 gtweak/tweaks/tweak_group_startup.py:31
+#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
 #: gtweak/tweaks/tweak_group_startup.py:309
 msgid "Startup Applications"
 msgstr "Aplikace při spuštění"
@@ -130,24 +126,24 @@ msgstr "Vrácení na výchozí"
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Vrátit všechna nastavení na výchozí hodnoty?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:98 gtweak/app.py:100
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:100
 #, python-format
 msgid "(%s mode)"
 msgstr "(režim %s)"
 
-#: gtweak/app.py:104
+#: gtweak/app.py:103
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell neběží"
 
-#: gtweak/app.py:106
+#: gtweak/app.py:105
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:113
+#: gtweak/app.py:112
 msgid "Homepage"
 msgstr "Domovská stránka"
 
@@ -242,30 +238,6 @@ msgstr "Obrázek"
 #: gtweak/tweaks/tweak_group_appearance.py:272
 msgid "Adjustment"
 msgstr "Přizpůsobení"
-
-#: gtweak/tweaks/tweak_group_datetime.py:9
-msgid "Clock"
-msgstr "Hodiny"
-
-#: gtweak/tweaks/tweak_group_datetime.py:10
-msgid "Show Weekday"
-msgstr "Zobrazovat den v týdnu"
-
-#: gtweak/tweaks/tweak_group_datetime.py:11
-msgid "Show Date"
-msgstr "Zobrazovat datum"
-
-#: gtweak/tweaks/tweak_group_datetime.py:12
-msgid "Show Seconds"
-msgstr "Zobrazovat sekundy"
-
-#: gtweak/tweaks/tweak_group_datetime.py:13
-msgid "Calendar"
-msgstr "Kalendář"
-
-#: gtweak/tweaks/tweak_group_datetime.py:14
-msgid "Show Week Numbers"
-msgstr "Zobrazovat čísla týdnů"
 
 #: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
 msgid "Hinting"
@@ -621,7 +593,7 @@ msgstr "Zaměřování"
 msgid "Raise Windows When Focused"
 msgstr "Zaměřené okno přenést do popředí"
 
-#: gtweak/tweakview.py:159
+#: gtweak/tweakview.py:157
 msgid "Search Tweaks…"
 msgstr "Hledat vyladění…"
 
@@ -631,17 +603,38 @@ msgstr "Hledat vyladění…"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(výchozí)</i>"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "Změny nastavení vyžadují restart"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Aby se nastavení projevilo, musí být vaše sezení restartováno"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Restartovat sezení"
+
+#~ msgid "Date & Time"
+#~ msgstr "Datum a čas"
+
+#~ msgid "Clock"
+#~ msgstr "Hodiny"
+
+#~ msgid "Show Weekday"
+#~ msgstr "Zobrazovat den v týdnu"
+
+#~ msgid "Show Date"
+#~ msgstr "Zobrazovat datum"
+
+#~ msgid "Show Seconds"
+#~ msgstr "Zobrazovat sekundy"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalendář"
+
+#~ msgid "Show Week Numbers"
+#~ msgstr "Zobrazovat čísla týdnů"
 
 #~ msgid "General"
 #~ msgstr "Obecné"
