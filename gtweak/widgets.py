@@ -401,10 +401,13 @@ class GSettingsTweakFontRow(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
         row.font_dialog.choose_font(get_window(), row.font_desc, None, row._on_choose_font)
     
     def _on_choose_font(self, font_dialog, result):
-        font_desc = font_dialog.choose_font_finish(result)
+        try:
+            font_desc = font_dialog.choose_font_finish(result)
 
-        self.font_desc = font_desc.copy()
-        self._update_label()
+            self.font_desc = font_desc.copy()
+            self._update_label()
+        except GLib.GError as e:
+            logging.debug("Error dismissing dialog", exc_info=e)
 
     def _font_changed(self, settings, _):
         self._load_font_desc(settings)
@@ -626,7 +629,14 @@ class FileChooserButton(Gtk.Button, GObject.Object):
 
     def _on_response(self, file_dialog: Gtk.FileDialog, result, _user_data):
         main_app = Gtk.Application.get_default()
-        file = file_dialog.open_finish(result)
+
+        file = None
+
+        try:
+            file = file_dialog.open_finish(result)
+        except GLib.GError as e:
+            logging.debug("Error dismissing dialog", exc_info=e)
+
         if file:
             self.props.file_uri = file.get_uri()
 
