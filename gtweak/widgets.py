@@ -121,13 +121,13 @@ def build_tight_button(stock_id):
 
 
 class _GSettingsTweak(Tweak):
-    def __init__(self, title, schema_name, key_name, resettable_to_default=True, **options):
+    def __init__(self, title, schema_name, key_name, schema_dir=None, resettable_to_default=True, loaded=True, **options):
         self.schema_name = schema_name
         self.key_name = key_name
         self._extra_info = None
 
         if resettable_to_default:
-            SchemaList.insert(key_name, schema_name)
+            SchemaList.insert(key_name, schema_name, schema_dir)
 
         if 'uid' not in options:
             options['uid'] = key_name
@@ -135,7 +135,8 @@ class _GSettingsTweak(Tweak):
             self.settings = GSettingsSetting(schema_name, **options)
             Tweak.__init__(self,
                 title,
-                options.get("description",self.settings.schema_get_description(key_name)),
+                options.get("description", self.settings.schema_get_description(key_name)),
+                loaded=loaded,
                 **options)
         except GSettingsMissingError as e:
             self.settings = GSettingsFakeSetting()

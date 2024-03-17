@@ -19,7 +19,7 @@ from gi.repository import Gio
 from gi.repository import Notify
 
 import gtweak
-from gtweak.gsettings import GSettingsSetting
+from gtweak.gsettings import GSettingsMissingError, GSettingsSetting
 
 def singleton(cls):
     """
@@ -241,15 +241,19 @@ class SchemaList:
         return cls.__list
 
     @classmethod
-    def insert(cls, key_name, schema_name):
-        v = [key_name, schema_name]
+    def insert(cls, key_name, schema_name = None, schema_dir = None):
+        v = [key_name, (schema_name, schema_dir)]
         cls.__list.append(v)
 
     @classmethod
     def reset(cls):
-        for i in cls.__list:
-            s = Gio.Settings(i[1])
-            s.reset(i[0])
+        for key_name, (schema_name, schema_dir) in cls.__list:
+            try:
+              s = GSettingsSetting(schema_dir=schema_dir, schema_name=schema_name)
+              s.reset(key_name)
+            except GSettingsMissingError:
+              logging.warn(f"Could not reset {key_name}, {schema_name} is not installed.")
+
 
 SchemaList.setup()
 
