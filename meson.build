@@ -1,5 +1,5 @@
 project('gnome-tweaks',
-  version: '46.beta',
+  version: '46.0',
   meson_version: '>= 0.59.0'
 )
 
@@ -24,7 +24,7 @@ dependency('gtk4', version: '>= 4.10.0')
 dependency('libadwaita-1', version: '>= 1.4.0')
 dependency('pygobject-3.0', version: '>= 3.46.0')
 dependency('gudev-1.0', version: '>= 238')
-dependency('gsettings-desktop-schemas', version: '>= 46.beta')
+dependency('gsettings-desktop-schemas', version: '>= 46.0')
 
 prefix = get_option('prefix')
 
