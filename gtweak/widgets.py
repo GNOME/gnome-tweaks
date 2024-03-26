@@ -163,7 +163,7 @@ class _GSettingsTweak(Tweak):
         if 'uid' not in options:
             options['uid'] = key_name
         try:
-            self.settings = GSettingsSetting(schema_name=schema_name, schema_id=schema_id, **options)
+            self.settings = GSettingsSetting(schema_name=schema_name, schema_dir=schema_dir, schema_id=schema_id, **options)
             Tweak.__init__(self,
                 title,
                 options.get("description", self.settings.schema_get_description(key_name)),
