@@ -404,7 +404,10 @@ class GSettingsTweakFontRow(Adw.ActionRow, _GSettingsTweak, _DependableMixin):
         try:
             font_desc = font_dialog.choose_font_finish(result)
 
+            self.settings.set_string(self.key_name, font_desc.to_string())
+
             self.font_desc = font_desc.copy()
+
             self._update_label()
         except GLib.GError as e:
             logging.debug("Error dismissing dialog", exc_info=e)
