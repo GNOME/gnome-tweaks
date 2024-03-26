@@ -102,7 +102,7 @@ class ShellThemeTweak(GSettingsTweakComboRow):
     LEGACY_THEME_DIR = os.path.join(GLib.get_home_dir(), ".themes")
     THEME_DIR = os.path.join(GLib.get_user_data_dir(), "themes")
 
-    def __init__(self, **options):
+    def __init__(self):
         #check the shell is running and the usertheme extension is present
         error = _("Unknown error")
         self._shell = _shell
@@ -150,11 +150,12 @@ class ShellThemeTweak(GSettingsTweakComboRow):
         # build a combo box with all the valid theme options
         GSettingsTweakComboRow.__init__(self,
 		  title=_("Shell"),
+          subtitle=error if error else None,
           schema_name=ShellThemeTweak.THEME_GSETTINGS_SCHEMA,
           schema_dir=schema_dir,
           key_name=ShellThemeTweak.THEME_GSETTINGS_NAME,
           key_options=make_combo_list_with_default(opts=list(valid), default="", default_text=_("Adwaita (default)")),
-          **options
+          loaded=_shell_loaded,
         )
 
 class ShellThemeInstallerTweak(Gtk.Box, Tweak):
@@ -235,7 +236,7 @@ TWEAK_GROUP = TweakPreferencesPage("appearance", _("Appearance"),
   TweakPreferencesGroup( _("Styles"), "title-styles",
     CursorThemeSwitcher(),
     IconThemeSwitcher(),
-    ShellThemeTweak(loaded=_shell_loaded),
+    ShellThemeTweak(),
     GtkThemeSwitcher(),
   ),
   # TODO: The current installer is brittle and the interaction doesn't make sense
@@ -245,7 +246,6 @@ TWEAK_GROUP = TweakPreferencesPage("appearance", _("Appearance"),
   #   ShellThemeInstallerTweak(
   #     title=_("Install custom shell theme"),
   #     description=_("Install custom or user themes for GNOME shell"),
-  #     loaded=_shell_loaded,
   #   ),
   TweakPreferencesGroup(
     _("Background"), "title-backgrounds",
