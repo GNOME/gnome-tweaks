@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-07-15 12:06+0000\n"
-"PO-Revision-Date: 2023-07-16 07:51+0700\n"
-"Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
+"POT-Creation-Date: 2024-03-14 16:43+0000\n"
+"PO-Revision-Date: 2024-03-28 18:00+0700\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -17,35 +17,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "Proyek GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:41 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "GNOME Oprek"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "Ubah pengaturan tingkat lanjut GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "GNOME Oprek memungkinkan menyetel opsi-opsi tingkat lanjut GNOME."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"Ini bisa memasang dan mengelola tema, mengubah pengaturan daya, mengelola "
-"aplikasi awal mula, dan memfungsikan ikon destop selain pengaturan-"
-"pengaturan lain."
+"Ini bisa mengelola penyesuaian pemetaan papan tik, menambah aplikasi awal "
+"mula, dan menata kendali jendela ubahan, selain pengaturan lain."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:127
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
 msgid "Tweaks"
 msgstr "Oprekan"
 
@@ -71,28 +71,24 @@ msgstr "Fonta"
 msgid "Appearance"
 msgstr "Penampilan"
 
-#: data/tweaks.ui:132 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Suara"
 
-#: data/tweaks.ui:166
+#: data/tweaks.ui:165
 msgid "Mouse & Touchpad"
 msgstr "Tetikus & Touchpad"
 
-#: data/tweaks.ui:200 gtweak/tweaks/tweak_group_keyboard.py:377
+#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
 #: gtweak/tweaks/tweak_group_keyboard.py:378
 msgid "Keyboard"
 msgstr "Papan Tik"
 
-#: data/tweaks.ui:234 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
 msgid "Windows"
 msgstr "Jendela"
 
-#: data/tweaks.ui:268 gtweak/tweaks/tweak_group_datetime.py:8
-msgid "Date & Time"
-msgstr "Tanggal & Waktu"
-
-#: data/tweaks.ui:304 gtweak/tweaks/tweak_group_startup.py:31
+#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
 #: gtweak/tweaks/tweak_group_startup.py:309
 msgid "Startup Applications"
 msgstr "Aplikasi Awal Mula"
@@ -129,24 +125,24 @@ msgstr "Reset ke Bawaan"
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Reset semua pengaturan oprekan ke keadaan bawaan asli?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:98 gtweak/app.py:100
 msgid "GNOME Shell"
 msgstr "Shell GNOME"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:100
 #, python-format
 msgid "(%s mode)"
 msgstr "(mode %s)"
 
-#: gtweak/app.py:104
+#: gtweak/app.py:103
 msgid "GNOME Shell is not running"
 msgstr "Shell GNOME tidak berjalan"
 
-#: gtweak/app.py:106
+#: gtweak/app.py:105
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:113
+#: gtweak/app.py:112
 msgid "Homepage"
 msgstr "Beranda"
 
@@ -241,30 +237,6 @@ msgstr "Gambar"
 #: gtweak/tweaks/tweak_group_appearance.py:272
 msgid "Adjustment"
 msgstr "Penyesuaian"
-
-#: gtweak/tweaks/tweak_group_datetime.py:9
-msgid "Clock"
-msgstr "Jam"
-
-#: gtweak/tweaks/tweak_group_datetime.py:10
-msgid "Show Weekday"
-msgstr "Tampilkan Hari Kerja"
-
-#: gtweak/tweaks/tweak_group_datetime.py:11
-msgid "Show Date"
-msgstr "Tampilkan Tanggal"
-
-#: gtweak/tweaks/tweak_group_datetime.py:12
-msgid "Show Seconds"
-msgstr "Tampilkan Detik"
-
-#: gtweak/tweaks/tweak_group_datetime.py:13
-msgid "Calendar"
-msgstr "Kalender"
-
-#: gtweak/tweaks/tweak_group_datetime.py:14
-msgid "Show Week Numbers"
-msgstr "Tampilkan Nomor Minggu"
 
 #: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
 msgid "Hinting"
@@ -617,7 +589,7 @@ msgstr "Fokus"
 msgid "Raise Windows When Focused"
 msgstr "Naikkan Jendela Saat Fokus"
 
-#: gtweak/tweakview.py:159
+#: gtweak/tweakview.py:157
 msgid "Search Tweaks…"
 msgstr "Oprekan Pencarian…"
 
@@ -627,17 +599,38 @@ msgstr "Oprekan Pencarian…"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(bawaan)</i>"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "Perubahan konfigurasi memerlukan start ulang"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Sesi Anda mesti dimulai ulang agar perubahan berdampak"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Mulai Ulang Sesi"
+
+#~ msgid "Date & Time"
+#~ msgstr "Tanggal & Waktu"
+
+#~ msgid "Clock"
+#~ msgstr "Jam"
+
+#~ msgid "Show Weekday"
+#~ msgstr "Tampilkan Hari Kerja"
+
+#~ msgid "Show Date"
+#~ msgstr "Tampilkan Tanggal"
+
+#~ msgid "Show Seconds"
+#~ msgstr "Tampilkan Detik"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalender"
+
+#~ msgid "Show Week Numbers"
+#~ msgstr "Tampilkan Nomor Minggu"
 
 #~ msgid "General"
 #~ msgstr "Umum"
