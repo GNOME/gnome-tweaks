@@ -3,14 +3,14 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2014, 2015, 2016.
-# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2011, 2019, 2020, 2021, 2022, 2023.
 # Porrumentzio <porrumentzio@riseup.net>, 2023.
+# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2011, 2019, 2020, 2021, 2022, 2023, 2024.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-07-22 13:23+0000\n"
-"PO-Revision-Date: 2023-07-25 19:30+0200\n"
+"POT-Creation-Date: 2024-03-14 16:43+0000\n"
+"PO-Revision-Date: 2024-03-31 19:30+0200\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <Librezale>\n"
 "Language: eu\n"
@@ -19,77 +19,73 @@ msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "GNOME Doikuntzak"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "Doitu GNOMEren ezarpen aurreratuak"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "GNOME Doikuntzak aplikazioak GNOMEren aukera aurreratuak doitzea ahalbidetzen du."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
-msgstr "Beste ezarpen batzuen artean, gaiak instala eta kudea ditzake, energiaren ezarpenak aldatu, abioko aplikazioak kudeatu eta mahaigaineko ikonoak gaitu ditzake."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
+msgstr "Beste ezarpen batzuen artean, teklatuaren mapatze-pertsonalizazioak kudeatu ditzake, abioko aplikazioak gehitu eta leiho-kontrol pertsonalizatuak gaitu ditzake."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:127
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Doikuntzak"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "Ezarpenak;Aurreratua;Hobespenak;Letra-tipoak;Gaia;XKB;Teklatua;Idazketa;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+msgstr "Ezarpenak;Aurreratua;Hobespenak;Letra-tipoak;Gaia;XKB;Teklatua;Idazketa;Abioa;"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "_Berrezarri lehenespenera"
 
-#: data/shell.ui:13
+#: data/shell.ui:12
 msgid "_About Tweaks"
 msgstr "Doikuntzak aplikazioari _buruz"
 
-#: data/tweaks.ui:63 gtweak/tweaks/tweak_group_font.py:124
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
 msgid "Fonts"
 msgstr "Letra-tipoak"
 
-#: data/tweaks.ui:97 gtweak/tweaks/tweak_group_appearance.py:257
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
 msgid "Appearance"
 msgstr "Itxura"
 
-#: data/tweaks.ui:132 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Soinua"
 
-#: data/tweaks.ui:166
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
 msgid "Mouse & Touchpad"
 msgstr "Sagua eta ukipen-panela"
 
-#: data/tweaks.ui:200 gtweak/tweaks/tweak_group_keyboard.py:377
-#: gtweak/tweaks/tweak_group_keyboard.py:378
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
 msgid "Keyboard"
 msgstr "Teklatua"
 
-#: data/tweaks.ui:234 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
 msgid "Windows"
 msgstr "Leihoak"
 
-#: data/tweaks.ui:268 gtweak/tweaks/tweak_group_datetime.py:8
-msgid "Date & Time"
-msgstr "Data eta ordua"
-
-#: data/tweaks.ui:304 gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:309
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
 msgid "Startup Applications"
 msgstr "Abioko aplikazioak"
 
@@ -115,34 +111,32 @@ msgid ""
 "not include it."
 msgstr "GNOME Hedapenak aplikazioa {0} gunetik deskargatzea gomendatzen dizugu, zure banaketak ez badauka."
 
-#: gtweak/app.py:81
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "Berrezarri lehenespenera"
 
-#: gtweak/app.py:82
-msgid "Reset all tweak settings to the original default state?"
-msgstr "Berrezarri doikuntzaren ezarpen guztiak jatorrizko egoera lehenetsira?"
+#: gtweak/app.py:87
+msgid "Reset all tweaks settings to the original default state?"
+msgstr "Berrezarri doikuntza-ezarpen guztiak jatorrizko egoera lehenetsira?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:99
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s modua)"
 
-#: gtweak/app.py:104
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell ez da exekutatzen ari"
 
-#: gtweak/app.py:106
-msgid "GTK"
-msgstr "GTK"
-
-#: gtweak/app.py:113
-msgid "Homepage"
-msgstr "Webgune nagusia"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr "translator-credits"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
@@ -152,265 +146,243 @@ msgstr "Bestelakoak"
 msgid "Legacy Applications"
 msgstr "Aplikazio zaharrak"
 
-#: gtweak/tweaks/tweak_group_appearance.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Errorea ezarpenak idaztean"
 
-#: gtweak/tweaks/tweak_group_appearance.py:71
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Ikonoak"
 
-#: gtweak/tweaks/tweak_group_appearance.py:86
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Kurtsorea"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Shell"
-msgstr "Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Instalatu 'gnome-shell'en gai pertsonalizatuak"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Errore ezezaguna"
 
-#: gtweak/tweaks/tweak_group_appearance.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Shell-a ez da exekutatzen ari"
 
-#: gtweak/tweaks/tweak_group_appearance.py:140
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Shell-en erabiltzaile-gaiaren hedapena gaizki instalatuta dago"
-
-#: gtweak/tweaks/tweak_group_appearance.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Shell-en erabiltzaile-gaiaren hedapena ez dago gaituta"
 
-#: gtweak/tweaks/tweak_group_appearance.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Ezin izan dira shell-aren hedapenak zerrendatu"
 
-#: gtweak/tweaks/tweak_group_appearance.py:176
-msgid "<i>Default</i>"
-msgstr "<i>Lehenetsia</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:182
+#: gtweak/tweaks/tweak_group_appearance.py:156
+msgid "Adwaita (default)"
+msgstr "Adwaita (lehenetsia)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Select a theme"
 msgstr "Hautatu gai bat"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:218
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s gaia ongi eguneratu da"
 
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:220
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s gaia ongi instalatu da"
 
-#: gtweak/tweaks/tweak_group_appearance.py:241
+#: gtweak/tweaks/tweak_group_appearance.py:222
 msgid "Error installing theme"
 msgstr "Errorea gaia instalatzean"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:246
+#: gtweak/tweaks/tweak_group_appearance.py:227
 msgid "Invalid theme"
 msgstr "Gai baliogabea"
 
-#: gtweak/tweaks/tweak_group_appearance.py:258
+#: gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Styles"
 msgstr "Estiloak"
 
-#: gtweak/tweaks/tweak_group_appearance.py:263
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Atzeko planoa"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
-msgid "Image"
-msgstr "Irudia"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "Irudi lehenetsia"
 
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "Estilo ilunaren irudia"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Egokitzea"
 
-#: gtweak/tweaks/tweak_group_datetime.py:9
-msgid "Clock"
-msgstr "Ordularia"
-
-#: gtweak/tweaks/tweak_group_datetime.py:10
-msgid "Show Weekday"
-msgstr "Erakutsi asteguna"
-
-#: gtweak/tweaks/tweak_group_datetime.py:11
-msgid "Show Date"
-msgstr "Erakutsi data"
-
-#: gtweak/tweaks/tweak_group_datetime.py:12
-msgid "Show Seconds"
-msgstr "Erakutsi segundoak"
-
-#: gtweak/tweaks/tweak_group_datetime.py:13
-msgid "Calendar"
-msgstr "Egutegia"
-
-#: gtweak/tweaks/tweak_group_datetime.py:14
-msgid "Show Week Numbers"
-msgstr "Erakutsi asteen zenbakiak"
-
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "Atxikitzea"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:75
-msgid "Antialiasing"
-msgstr "Antialiasing-a"
-
-#: gtweak/tweaks/tweak_group_font.py:52
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "Osoa"
 
-#: gtweak/tweaks/tweak_group_font.py:58
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "Tartekoa"
 
-#: gtweak/tweaks/tweak_group_font.py:64
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "Arina"
 
-#: gtweak/tweaks/tweak_group_font.py:70 gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:418 gtweak/widgets.py:576 gtweak/widgets.py:605
 msgid "None"
 msgstr "Bat ere ez"
 
-#: gtweak/tweaks/tweak_group_font.py:88
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "Antialiasing-a"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "Azpipixela (LCD pantailetarako)"
 
-#: gtweak/tweaks/tweak_group_font.py:94
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "Estandarra (gris-eskala)"
 
-#: gtweak/tweaks/tweak_group_font.py:125
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "Hobetsitako letra-tipoak"
+
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
 msgstr "Interfazearen testua"
 
-#: gtweak/tweaks/tweak_group_font.py:126
+#: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
 msgstr "Dokumentuen testua"
 
-#: gtweak/tweaks/tweak_group_font.py:127
+#: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
 msgstr "Tarte bakarreko testua"
 
-#: gtweak/tweaks/tweak_group_font.py:128
-msgid "Legacy Window Titles"
-msgstr "Leihoen titulu zaharrak"
+#: gtweak/tweaks/tweak_group_font.py:45
+msgid "Rendering"
+msgstr "Errendatzea"
 
-#: gtweak/tweaks/tweak_group_font.py:130
+#: gtweak/tweaks/tweak_group_font.py:49
+msgid "Size"
+msgstr "Tamaina"
+
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Eskala-faktorea"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_keyboard.py:339
-#: gtweak/tweaks/tweak_group_mouse.py:137
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Disabled"
-msgstr "Desgaituta"
+msgid "Default"
+msgstr "Lehenetsia"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:170
+#: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "Idazketa"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:18
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Emacs sarrera"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:189
-#: gtweak/tweaks/tweak_group_mouse.py:21
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Lasterbideak gainidazten ditu Emacs editorearen tekla-loturak erabiltzeko."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:205
-#: gtweak/tweaks/tweak_group_mouse.py:37
+#: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
 msgstr "Ikuspegi orokorraren laster-tekla"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:212
-#: gtweak/tweaks/tweak_group_mouse.py:44
+#: gtweak/tweaks/tweak_group_keyboard.py:210
 msgid "Left Super"
 msgstr "Ezker Super"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:216
-#: gtweak/tweaks/tweak_group_mouse.py:48
+#: gtweak/tweaks/tweak_group_keyboard.py:211
 msgid "Right Super"
 msgstr "Eskuineko Super tekla"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:239
-#: gtweak/tweaks/tweak_group_keyboard.py:247
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Diseinu-aukera gehiago"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:269
-#: gtweak/tweaks/tweak_group_mouse.py:67 gtweak/tweaks/tweak_group_mouse.py:185
-msgid "Mouse Click Emulation"
-msgstr "Saguaren klikaren emulazioa"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:287
-#: gtweak/tweaks/tweak_group_mouse.py:85
-msgid "Fingers"
-msgstr "Finger"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:289
-#: gtweak/tweaks/tweak_group_mouse.py:87
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr "Egin klik ukipen-panelean bi hatzekin eskuineko klik egiteko, eta hiru hatzekin erdiko klik egiteko."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:313
-#: gtweak/tweaks/tweak_group_mouse.py:111
-msgid "Area"
-msgstr "Area"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:315
-#: gtweak/tweaks/tweak_group_mouse.py:113
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr "Egin klik ukipen-panelaren beheko eskuineko aldean eskuineko klik egiteko, eta beheko erdiko aldean erdiko klik egiteko."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:341
-#: gtweak/tweaks/tweak_group_mouse.py:139
-msgid "Don’t use mouse click emulation."
-msgstr "Ez erabili saguaren klikaren emulazioa."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:379
+#: gtweak/tweaks/tweak_group_keyboard.py:259
 msgid "Show Extended Input Sources"
 msgstr "Erakutsi sarrera-iturburu hedatuak"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:382
+#: gtweak/tweaks/tweak_group_keyboard.py:262
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Sarrera-iturburuen multzoa handitzen du ezarpenen aplikazioan."
 
-#: gtweak/tweaks/tweak_group_mouse.py:175
-#: gtweak/tweaks/tweak_group_mouse.py:176
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "Diseinua"
+
+#: gtweak/tweaks/tweak_group_mouse.py:31
+msgid "Disable Secondary Click"
+msgstr "Desgaitu 2. mailako klika"
+
+#: gtweak/tweaks/tweak_group_mouse.py:32
+msgid ""
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
+msgstr "Bigarren mailako klika desgaitzen du bigarren mailako botoi fisikoa ez duten ukipen-paneletan"
+
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "Sagua"
 
-#: gtweak/tweaks/tweak_group_mouse.py:177
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
 msgstr "Erdiko klikaren bidezko itsastea"
 
-#: gtweak/tweaks/tweak_group_mouse.py:180
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "Ukipen-panela"
 
-#: gtweak/tweaks/tweak_group_mouse.py:181
-msgid "Disable While Typing"
-msgstr "Desgaitu idaztean"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Ukipen-panelaren azelerazioa"
+
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr "Azelerazioa desaktibatzen bada, mugimenduak azkarragoak eta zehatzagoak izango dira, baina ukipen-panela erabiltzea zailagoa izan daiteke."
+
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Makila erakuslea"
+
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Makila erakuslearen azelerazioa"
+
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr "Azelerazioa desaktibatzen bada, mugimenduak azkarragoak eta zehatzagoak izango dira, baina makila erakuslea erabiltzea zailagoa izan daiteke."
+
+#: gtweak/tweaks/tweak_group_mouse.py:104
+msgid "Scrolling Method"
+msgstr "Korritze-metodoa"
 
 #: gtweak/tweaks/tweak_group_sound.py:44
 msgid "System Sound Theme"
@@ -420,208 +392,280 @@ msgstr "Sistemaren gaiaren soinua"
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Soinu-gertaeretarako zein soinu-gai erabiliko den zehazten du."
 
-#: gtweak/tweaks/tweak_group_startup.py:30
-msgid "Startup applications are automatically started when you log in."
-msgstr "Abioko aplikazioak automatikoki abiatzen dira saioa hasten denean."
-
-#: gtweak/tweaks/tweak_group_startup.py:43
-msgid "Applications"
-msgstr "Aplikazioak"
-
-#: gtweak/tweaks/tweak_group_startup.py:49
-msgid "Search Applications…"
-msgstr "Bilatu aplikazioak…"
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:59
-msgid "<primary>f"
-msgstr "<primary>b"
-
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:51
 msgid "running"
 msgstr "exekutatzen"
 
-#: gtweak/tweaks/tweak_group_startup.py:88
+#: gtweak/tweaks/tweak_group_startup.py:61
+msgid "Select Application"
+msgstr "Hautatu aplikazioa"
+
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
 msgid "_Close"
 msgstr "It_xi"
 
-#: gtweak/tweaks/tweak_group_startup.py:89
+#: gtweak/tweaks/tweak_group_startup.py:68
 msgid "_Add"
 msgstr "_Gehitu"
 
-#: gtweak/tweaks/tweak_group_startup.py:234
+#: gtweak/tweaks/tweak_group_startup.py:72
+msgid "Search Applications…"
+msgstr "Bilatu aplikazioak…"
+
+#: gtweak/tweaks/tweak_group_startup.py:194
 msgid "Remove"
 msgstr "Kendu"
 
+#: gtweak/tweaks/tweak_group_startup.py:220
+msgid "Startup applications are automatically started when you log in."
+msgstr "Abioko aplikazioak automatikoki abiatzen dira saioa hasten denean."
+
+#: gtweak/tweaks/tweak_group_startup.py:257
+msgid "No Startup Applications"
+msgstr "Ez dago abioko aplikaziorik"
+
 #: gtweak/tweaks/tweak_group_startup.py:258
-msgid "New startup application"
-msgstr "Abioko aplikazio berria"
+msgid "Add a startup application"
+msgstr "Gehitu abioko aplikazioa"
 
-#: gtweak/tweaks/tweak_group_startup.py:259
-msgid "Add a new application to be run at startup"
-msgstr "Gehitu aplikazio berria abioan exekutatzeko"
-
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Leiho-fokua"
 
+#: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Click to Focus"
 msgstr "Klik fokuratzeko"
 
-#: gtweak/tweaks/tweak_group_windows.py:38
+#: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
 msgstr "Leihoak fokuratzen dira haien gainean klik egitean."
 
-#: gtweak/tweaks/tweak_group_windows.py:62
+#: gtweak/tweaks/tweak_group_windows.py:23
 msgid "Focus on Hover"
 msgstr "Fokatu gainetik igarotzean"
 
-#: gtweak/tweaks/tweak_group_windows.py:64
+#: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
 msgstr "Leihoa fokuratzen da erakuslearekin haren gainetik igarotzean. Leihoak fokuratuta jarraitzen du mahaigainaren gainetik igarotzean."
 
-#: gtweak/tweaks/tweak_group_windows.py:88
-#: gtweak/tweaks/tweak_group_windows.py:300
-msgid "Secondary-Click"
-msgstr "Bigarren mailako klika"
+#: gtweak/tweaks/tweak_group_windows.py:28
+msgid "Focus Follows Mouse"
+msgstr "Fokuak sagua jarraitzen du"
 
-#: gtweak/tweaks/tweak_group_windows.py:90
+#: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
 msgstr "Leihoa fokuratzen da erakuslearekin haren gainetik igarotzean. Mahaigainaren gainetik igarotzean, aurreko leihoari fokua kentzen zaio."
 
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Window scaling"
-msgstr "Leihoa eskalatzea"
-
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Doitu GDK leihoa eskalatzearen faktorea HiDPI-rentzako"
-
-#: gtweak/tweaks/tweak_group_windows.py:157
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Ezarpenak {0} segundotan alderantzikatuko dira"
-msgstr[1] "Ezarpenak {0} segundotan alderantzikatuko dira"
-
-#: gtweak/tweaks/tweak_group_windows.py:173
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "HiDPI ezarpen hauek mantendu nahi dituzu?"
-
-#: gtweak/tweaks/tweak_group_windows.py:180
-msgid "Revert Settings"
-msgstr "Alderantzikatu ezarpenak"
-
-#: gtweak/tweaks/tweak_group_windows.py:181
-msgid "Keep Changes"
-msgstr "Mantendu aldaketak"
-
-#: gtweak/tweaks/tweak_group_windows.py:197
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:246
+#: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
 msgstr "Kokapena"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:260
+#: gtweak/tweaks/tweak_group_windows.py:97
 msgid "Left"
 msgstr "Ezkerrera"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:266
+#: gtweak/tweaks/tweak_group_windows.py:100
 msgid "Right"
 msgstr "Eskuinera"
 
-#: gtweak/tweaks/tweak_group_windows.py:297
+#: gtweak/tweaks/tweak_group_windows.py:135
 msgid "Titlebar Actions"
 msgstr "Titulu-barren ekintzak"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
+#: gtweak/tweaks/tweak_group_windows.py:136
 msgid "Double-Click"
 msgstr "Klik bikoitza"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:137
 msgid "Middle-Click"
 msgstr "Erdiko klika"
 
-#: gtweak/tweaks/tweak_group_windows.py:301
+#: gtweak/tweaks/tweak_group_windows.py:138
+msgid "Secondary-Click"
+msgstr "Bigarren mailako klika"
+
+#: gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "Titulu-barren botoiak"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "Maximizatu"
 
-#: gtweak/tweaks/tweak_group_windows.py:303
+#: gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "Minimizatu"
 
-#: gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_windows.py:146
 msgid "Click Actions"
 msgstr "Klik-ekintzak"
 
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "Erantsi elkarrizketa-koadro modalak"
 
-#: gtweak/tweaks/tweak_group_windows.py:307
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
 msgstr "Aktibatuta dagoenean, elkarrizketa-koadro modalak leiho gurasoei eransten zaizkie, eta ezin dira mugitu."
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
 msgstr "Zentratu leiho berriak"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "Leihoen ekintzaren tekla"
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Desgaituta"
+
+#: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "Aldatu tamaina bigarren mailako klikarekin"
 
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Focusing"
-msgstr "Fokuratzea"
-
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "Goratu leihoak fokuratzen direnean"
 
-#: gtweak/tweakview.py:159
+#: gtweak/tweakview.py:156
 msgid "Search Tweaks…"
 msgstr "Bilatu doikuntzak…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(lehenetsia)</i>"
+msgid "%s (default)"
+msgstr "%s (lehenetsia)"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "Konfigurazioaren aldaketak berrabiaraztea eskatzen du"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Zure saioa berrabiarazi behar da ezarpenek eragina jasotzeko"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Berrabiarazi saioa"
+
+#~ msgid "Date & Time"
+#~ msgstr "Data eta ordua"
+
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Webgune nagusia"
+
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "Instalatu 'gnome-shell'en gai pertsonalizatuak"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "Shell-en erabiltzaile-gaiaren hedapena gaizki instalatuta dago"
+
+#~ msgid "Image"
+#~ msgstr "Irudia"
+
+#~ msgid "Clock"
+#~ msgstr "Ordularia"
+
+#~ msgid "Show Weekday"
+#~ msgstr "Erakutsi asteguna"
+
+#~ msgid "Show Date"
+#~ msgstr "Erakutsi data"
+
+#~ msgid "Show Seconds"
+#~ msgstr "Erakutsi segundoak"
+
+#~ msgid "Calendar"
+#~ msgstr "Egutegia"
+
+#~ msgid "Show Week Numbers"
+#~ msgstr "Erakutsi asteen zenbakiak"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Leihoen titulu zaharrak"
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Saguaren klikaren emulazioa"
+
+#~ msgid "Fingers"
+#~ msgstr "Finger"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Egin klik ukipen-panelean bi hatzekin eskuineko klik egiteko, eta hiru "
+#~ "hatzekin erdiko klik egiteko."
+
+#~ msgid "Area"
+#~ msgstr "Area"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Egin klik ukipen-panelaren beheko eskuineko aldean eskuineko klik "
+#~ "egiteko, eta beheko erdiko aldean erdiko klik egiteko."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Ez erabili saguaren klikaren emulazioa."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Desgaitu idaztean"
+
+#~ msgid "Applications"
+#~ msgstr "Aplikazioak"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>b"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Gehitu aplikazio berria abioan exekutatzeko"
+
+#~ msgid "Window scaling"
+#~ msgstr "Leihoa eskalatzea"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr "Doitu GDK leihoa eskalatzearen faktorea HiDPI-rentzako"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "Ezarpenak {0} segundotan alderantzikatuko dira"
+#~ msgstr[1] "Ezarpenak {0} segundotan alderantzikatuko dira"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "HiDPI ezarpen hauek mantendu nahi dituzu?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "Alderantzikatu ezarpenak"
+
+#~ msgid "Keep Changes"
+#~ msgstr "Mantendu aldaketak"
+
+#~ msgid "HiDPI"
+#~ msgstr "HiDPI"
+
+#~ msgid "Focusing"
+#~ msgstr "Fokuratzea"
 
 #~ msgid "General"
 #~ msgstr "Orokorra"
