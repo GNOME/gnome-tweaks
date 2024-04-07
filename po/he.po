@@ -8,15 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-01-18 10:24+0000\n"
-"PO-Revision-Date: 2024-01-22 17:17+0200\n"
+"POT-Creation-Date: 2024-04-07 03:38+0000\n"
+"PO-Revision-Date: 2024-04-07 10:05+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
-"Language-Team: Hebrew <yoseforb@gmail.com>\n"
+"Language-Team: Hebrew\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n>2||n==0) ? 1 : 2\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3)\n"
 "X-Poedit-Language: Hebrew\n"
 "X-Poedit-Country: ISRAEL\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -27,8 +28,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "מיזם GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
-#: gtweak/utils.py:344
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
+#: gtweak/utils.py:348
 msgid "GNOME Tweaks"
 msgstr "כלי התאמת GNOME"
 
@@ -48,15 +49,15 @@ msgstr ""
 "הוא מאפשר  לנהל מיפוי קיצורי מקשים מותאמים אישית, להוסיף יישומי הפעלה, "
 "להגדיר בקרים מותאמים לחלונות, לצד הגדרות נוספות."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:98
-#: gtweak/tweakview.py:134
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "התאמות"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
-msgstr "הגדרות;מתקדם;העדפות;גופנים;ערכת נושא;XKB;מקלדת;הקלדה;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+msgstr "הגדרות;מתקדם;העדפות;גופנים;ערכת נושא;XKB;מקלדת;הקלדה;הפעלה;"
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -70,7 +71,7 @@ msgstr "_על אודות התאמות"
 msgid "Fonts"
 msgstr "גופנים"
 
-#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:260
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Appearance"
 msgstr "מראה"
 
@@ -78,7 +79,7 @@ msgstr "מראה"
 msgid "Sound"
 msgstr "צליל"
 
-#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:52
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
 msgid "Mouse & Touchpad"
 msgstr "עכבר ומשטח מגע"
 
@@ -129,6 +130,11 @@ msgstr "לאפס כל התאמות ההגדרות למצב בררת מחדל ה�
 msgid "GNOME Shell"
 msgstr "מעטפת GNOME"
 
+#: gtweak/app.py:99
+#, python-format
+msgid "(%s mode)"
+msgstr "‏(מצב %s)"
+
 #: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "מעטפת GNOME לא פועלת"
@@ -143,91 +149,87 @@ msgstr "יוסף אור בוצ׳קו <yoseforb@gmail.com>"
 msgid "Miscellaneous"
 msgstr "שונות"
 
-#: gtweak/tweaks/tweak_group_appearance.py:35
+#: gtweak/tweaks/tweak_group_appearance.py:31
 msgid "Legacy Applications"
 msgstr "יישומים ישנים"
 
-#: gtweak/tweaks/tweak_group_appearance.py:67
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "כתיבת ההגדרה נכשלה"
 
-#: gtweak/tweaks/tweak_group_appearance.py:73
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "סמלילים"
 
-#: gtweak/tweaks/tweak_group_appearance.py:88
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "סמן"
 
-#: gtweak/tweaks/tweak_group_appearance.py:112
-msgid "Shell"
-msgstr "מעטפת"
-
-#: gtweak/tweaks/tweak_group_appearance.py:112
-msgid "Install custom or user themes for gnome-shell"
-msgstr "התקנה מותאמת אישית של ערכות נושא עבור gnome-shell"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:115
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "שגיאה בלתי ידועה"
 
-#: gtweak/tweaks/tweak_group_appearance.py:120
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "המעטפת אינה רצה"
 
-#: gtweak/tweaks/tweak_group_appearance.py:142
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "הרחבת ערכת נושא המשתמש של המעטפת לא הותקנה כראוי"
-
-#: gtweak/tweaks/tweak_group_appearance.py:145
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "הרחבת ערכת נושא המשתמש של המעטפת לא הופעלה"
 
-#: gtweak/tweaks/tweak_group_appearance.py:148
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "לא ניתן להציג את הרחבות המעטפת"
 
-#: gtweak/tweaks/tweak_group_appearance.py:178
-msgid "<i>Default</i>"
-msgstr "בררת מחדל"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "מעטפת"
 
-#: gtweak/tweaks/tweak_group_appearance.py:183
+#: gtweak/tweaks/tweak_group_appearance.py:157
+msgid "Adwaita (default)"
+msgstr "‏Adwaita (בררת מחדל)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
 msgstr "נא לבחור בערכת נושא"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "ערכת הנושא %s עודכנה בהצלחה"
 
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "ערכת הנושא %s הותקנה בהצלחה"
 
-#: gtweak/tweaks/tweak_group_appearance.py:241
+#: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
 msgstr "התקנת ערכת הנושא נכשלה"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:246
+#: gtweak/tweaks/tweak_group_appearance.py:228
 msgid "Invalid theme"
 msgstr "ערכת נושא שגויה"
 
-#: gtweak/tweaks/tweak_group_appearance.py:261
+#: gtweak/tweaks/tweak_group_appearance.py:236
 msgid "Styles"
 msgstr "סגנונות"
 
-#: gtweak/tweaks/tweak_group_appearance.py:268
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "רקע"
 
-#: gtweak/tweaks/tweak_group_appearance.py:270
-msgid "Image"
-msgstr "תמונה"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "תמונת בררת מחדל"
 
-#: gtweak/tweaks/tweak_group_appearance.py:276
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "תמונה בסגנון כהה"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "התאמה"
 
@@ -248,7 +250,7 @@ msgid "Slight"
 msgstr "דק"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:413 gtweak/widgets.py:562
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
 msgid "None"
 msgstr "ללא"
 
@@ -280,39 +282,33 @@ msgstr "גופן מסמכים"
 msgid "Monospace Text"
 msgstr "גופן ברוחב אחיד"
 
-#: gtweak/tweaks/tweak_group_font.py:43
-msgid "Legacy Window Titles"
-msgstr "כותרי חלון"
-
-#: gtweak/tweaks/tweak_group_font.py:46
+#: gtweak/tweaks/tweak_group_font.py:45
 msgid "Rendering"
 msgstr "עיבוד"
 
-#: gtweak/tweaks/tweak_group_font.py:50
+#: gtweak/tweaks/tweak_group_font.py:49
 msgid "Size"
 msgstr "גודל"
 
-#: gtweak/tweaks/tweak_group_font.py:51
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "גורם קנה מידה"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_mouse.py:47
-#: gtweak/tweaks/tweak_group_windows.py:153
-msgid "Disabled"
-msgstr "מושבת"
+msgid "Default"
+msgstr "בררת מחדל"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "הקלדה"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:183
-#: gtweak/tweaks/tweak_group_mouse.py:14
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "קלט Emacs"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:17
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "דריסת קיצורי המקשים על מנת להשתמש בצירופי המקשים מעורך הטקסט Emacs."
 
@@ -345,52 +341,55 @@ msgstr "מגדיל את אפשרויות הבריחה במקורות קלט בי
 msgid "Layout"
 msgstr "פריסה"
 
+#: gtweak/tweaks/tweak_group_mouse.py:31
+msgid "Disable Secondary Click"
+msgstr "השבתת לחיצה משנית"
+
 #: gtweak/tweaks/tweak_group_mouse.py:32
-msgid "Mouse Click Emulation"
-msgstr "הדמיית לחיצת עכבר"
-
-#: gtweak/tweaks/tweak_group_mouse.py:37
-msgid "Fingers"
-msgstr "אצבעות"
-
-#: gtweak/tweaks/tweak_group_mouse.py:39
 msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"לחיצה על משטח המגע עם שתי אצבעות ללחיצה כפולה ושלוש אצבעות ללחיצה אמצעית."
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
+msgstr "השבתת לחיצה משנית במשטחי מגע, אשר אין להם כפתור משני פיזי"
 
-#: gtweak/tweaks/tweak_group_mouse.py:42
-msgid "Area"
-msgstr "בחירה"
-
-#: gtweak/tweaks/tweak_group_mouse.py:44
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"לחיצה על הקצה התחתי הימני של מסך המגע ללחיצה ימנית ועל הקצה התחתי האמצעי "
-"ללחיצה אמצעית."
-
-#: gtweak/tweaks/tweak_group_mouse.py:49
-msgid "Don’t use mouse click emulation."
-msgstr "לא להשתמש בהדמיית לחיצת עכבר."
-
-#: gtweak/tweaks/tweak_group_mouse.py:53
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "עכבר"
 
-#: gtweak/tweaks/tweak_group_mouse.py:54
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
 msgstr "הדבקה עם לחיצה אמצעית"
 
-#: gtweak/tweaks/tweak_group_mouse.py:58
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "משטח מגע"
 
-#: gtweak/tweaks/tweak_group_mouse.py:59
-msgid "Disable While Typing"
-msgstr "השבתה בזמן הקלדה"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+
+#: gtweak/tweaks/tweak_group_mouse.py:104
+msgid "Scrolling Method"
+msgstr "שיטת גלילה"
 
 #: gtweak/tweaks/tweak_group_sound.py:44
 msgid "System Sound Theme"
@@ -421,11 +420,6 @@ msgstr "הו_ספה"
 msgid "Search Applications…"
 msgstr "חיפוש יישומים…"
 
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:126 gtweak/tweakview.py:181
-msgid "<primary>f"
-msgstr "<primary>f"
-
 #: gtweak/tweaks/tweak_group_startup.py:195
 msgid "Remove"
 msgstr "הסרה"
@@ -439,7 +433,7 @@ msgid "No Startup Applications"
 msgstr "אין יישומי הפעלה"
 
 #: gtweak/tweaks/tweak_group_startup.py:259
-msgid "Add a statup application"
+msgid "Add a startup application"
 msgstr "הוספת יישום הפעלה"
 
 #: gtweak/tweaks/tweak_group_windows.py:13
@@ -548,6 +542,10 @@ msgstr "מרכוז חלונות חדשים"
 msgid "Window Action Key"
 msgstr "מקש פעולת חלון"
 
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "מושבת"
+
 #: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "שינוי גודל עם לחיצה משנית"
@@ -556,7 +554,7 @@ msgstr "שינוי גודל עם לחיצה משנית"
 msgid "Raise Windows When Focused"
 msgstr "העברת חלונות לחזית עם התמקדות בהם"
 
-#: gtweak/tweakview.py:161
+#: gtweak/tweakview.py:156
 msgid "Search Tweaks…"
 msgstr "חיפוש התאמות…"
 
@@ -566,24 +564,63 @@ msgstr "חיפוש התאמות…"
 msgid "%s (default)"
 msgstr "‏%s (בררת מחדל)"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:350
 msgid "Configuration changes require restart"
 msgstr "ההגדרות ששונו דורשות הפעלה מחדש"
 
-#: gtweak/utils.py:347
+#: gtweak/utils.py:351
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "יש להפעיל מחדש את ההפעלה על מנת שההגדרות תכנסנה לתוקף"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "הפעלה מחדש"
 
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "התקנה מותאמת אישית של ערכות נושא עבור gnome-shell"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "הרחבת ערכת נושא המשתמש של המעטפת לא הותקנה כראוי"
+
+#~ msgid "Image"
+#~ msgstr "תמונה"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "כותרי חלון"
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "הדמיית לחיצת עכבר"
+
+#~ msgid "Fingers"
+#~ msgstr "אצבעות"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "לחיצה על משטח המגע עם שתי אצבעות ללחיצה כפולה ושלוש אצבעות ללחיצה אמצעית."
+
+#~ msgid "Area"
+#~ msgstr "בחירה"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "לחיצה על הקצה התחתי הימני של מסך המגע ללחיצה ימנית ועל הקצה התחתי האמצעי "
+#~ "ללחיצה אמצעית."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "לא להשתמש בהדמיית לחיצת עכבר."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "השבתה בזמן הקלדה"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>f"
+
 #~ msgid "Date & Time"
 #~ msgstr "תאריך ושעה"
-
-#, python-format
-#~ msgid "(%s mode)"
-#~ msgstr "‏(מצב %s)"
 
 #~ msgid "GTK"
 #~ msgstr "GTK"
