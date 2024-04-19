@@ -8,17 +8,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-02-10 08:18+0000\n"
-"PO-Revision-Date: 2024-02-11 19:43+0200\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"POT-Creation-Date: 2024-04-07 07:06+0000\n"
+"PO-Revision-Date: 2024-04-19 11:50+0300\n"
+"Last-Translator: Yevhen Popok <xalt7x.service@gmail.com>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.04.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Project-Style: gnome\n"
 
 #. developer_name tag deprecated with Appstream 1.0
@@ -26,8 +26,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "Проєкт GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
-#: gtweak/utils.py:344
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
+#: gtweak/utils.py:348
 msgid "GNOME Tweaks"
 msgstr "Налаштування GNOME"
 
@@ -71,7 +71,7 @@ msgstr "_Про програму"
 msgid "Fonts"
 msgstr "Шрифти"
 
-#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Appearance"
 msgstr "Зовнішній вигляд"
 
@@ -91,9 +91,9 @@ msgstr "Клавіатура"
 msgid "Windows"
 msgstr "Вікна"
 
-#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup Applications"
-msgstr "Програми у автозапуску"
+msgstr "Програми в автозапуску"
 
 #: gtweak/app.py:21
 msgid "_Continue"
@@ -130,6 +130,11 @@ msgstr "Скинути всі налаштування до початкових
 #: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
+
+#: gtweak/app.py:99
+#, python-format
+msgid "(%s mode)"
+msgstr "(%s mode)"
 
 #: gtweak/app.py:102
 msgid "GNOME Shell is not running"
@@ -182,35 +187,34 @@ msgstr "Не вдалося перелічити розширення для о�
 msgid "Shell"
 msgstr "Оболонка"
 
-#: gtweak/tweaks/tweak_group_appearance.py:156
-#| msgid "%s (default)"
+#: gtweak/tweaks/tweak_group_appearance.py:157
 msgid "Adwaita (default)"
 msgstr "Adwaita (типова)"
 
-#: gtweak/tweaks/tweak_group_appearance.py:166
+#: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
 msgstr "Виберіть тему"
 
-#: gtweak/tweaks/tweak_group_appearance.py:218
+#: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Тему %s успішно оновлено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:220
+#: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Тему %s успішно встановлено"
 
-#: gtweak/tweaks/tweak_group_appearance.py:222
+#: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
 msgstr "Помилка встановлення теми"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:227
+#: gtweak/tweaks/tweak_group_appearance.py:228
 msgid "Invalid theme"
 msgstr "Некоректна тема"
 
-#: gtweak/tweaks/tweak_group_appearance.py:235
+#: gtweak/tweaks/tweak_group_appearance.py:236
 msgid "Styles"
 msgstr "Стилі"
 
@@ -232,7 +236,7 @@ msgstr "Коригування"
 
 #: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
-msgstr "Хінтінг"
+msgstr "Гінтинґ"
 
 #: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
@@ -247,9 +251,9 @@ msgid "Slight"
 msgstr "Легкий"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:418 gtweak/widgets.py:564 gtweak/widgets.py:593
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
 msgid "None"
-msgstr "Відсутній"
+msgstr "Немає"
 
 #: gtweak/tweaks/tweak_group_font.py:27
 msgid "Antialiasing"
@@ -333,7 +337,7 @@ msgstr "Показати всі джерела вводу"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:262
 msgid "Increases the choice of input sources in the Settings application."
-msgstr "Збільшує вибір джерел вхідних даних у додатку Параметри."
+msgstr "Збільшує вибір джерел вхідних даних у програмі Параметри."
 
 #: gtweak/tweaks/tweak_group_keyboard.py:265
 msgid "Layout"
@@ -373,7 +377,7 @@ msgid ""
 "can also make the touchpad more difficult to use."
 msgstr ""
 "Вимикання прискорення може зробити рухи швидшими та точнішими, але також "
-"може ускладнити користування сенсорною панеллю."
+"може ускладнити використання сенсорної панелі."
 
 #: gtweak/tweaks/tweak_group_mouse.py:97
 msgid "Pointing Stick"
@@ -389,7 +393,7 @@ msgid ""
 "can also make the pointing stick more difficult to use."
 msgstr ""
 "Вимикання прискорення може зробити рухи швидшими та точнішими, але також "
-"може ускладнити користування тензометричним маніпулятором."
+"може ускладнити використання тензометричного маніпулятора."
 
 #: gtweak/tweaks/tweak_group_mouse.py:104
 msgid "Scrolling Method"
@@ -424,27 +428,27 @@ msgstr "_Додати"
 msgid "Search Applications…"
 msgstr "Пошук програм…"
 
-#: gtweak/tweaks/tweak_group_startup.py:194
+#: gtweak/tweaks/tweak_group_startup.py:195
 msgid "Remove"
 msgstr "Видалити"
 
-#: gtweak/tweaks/tweak_group_startup.py:220
+#: gtweak/tweaks/tweak_group_startup.py:221
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
-"Програми у автозапуску автоматично запускаються під час входу в систему."
-
-#: gtweak/tweaks/tweak_group_startup.py:257
-msgid "No Startup Applications"
-msgstr "Немає програм у автозапуску"
+"Програми в автозапуску автоматично запускаються під час входу в систему."
 
 #: gtweak/tweaks/tweak_group_startup.py:258
+msgid "No Startup Applications"
+msgstr "Немає програм в автозапуску"
+
+#: gtweak/tweaks/tweak_group_startup.py:259
 msgid "Add a startup application"
-msgstr "Додати програму у автозапуск"
+msgstr "Додати програму до автозапуску"
 
 #: gtweak/tweaks/tweak_group_windows.py:13
 #: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
-msgstr "Фокусування вікна"
+msgstr "Фокусування вікон"
 
 #: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
@@ -464,20 +468,20 @@ msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
 msgstr ""
-"Вікно фокусується при при наведенні. Вікно залишається у фокусі, коли курсор "
-"наведений на робочий стіл."
+"Вікно фокусується при наведенні. Вікно залишається у фокусі, коли курсор "
+"наведений на стільницю."
 
 #: gtweak/tweaks/tweak_group_windows.py:28
 msgid "Focus Follows Mouse"
-msgstr "Фокус йде за мишкою"
+msgstr "Фокус прямує за мишкою"
 
 #: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
 msgstr ""
-"Вікно фокусується при при наведенні. Наведення на робочий стіл знімає фокус "
-"з попереднього вікна."
+"Вікно фокусується при наведенні. Наведення на стільницю знімає фокус з "
+"попереднього вікна."
 
 #: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
@@ -557,7 +561,7 @@ msgstr "Змінити розмір за допомогою правого кл�
 
 #: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
-msgstr "Показувати вікна під час фокусування"
+msgstr "Підіймати вікна під час фокусування"
 
 #: gtweak/tweakview.py:156
 msgid "Search Tweaks…"
@@ -569,15 +573,15 @@ msgstr "Пошук налаштувань…"
 msgid "%s (default)"
 msgstr "%s (типова)"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:350
 msgid "Configuration changes require restart"
 msgstr "Зміна параметрів потребує перезавантаження"
 
-#: gtweak/utils.py:347
+#: gtweak/utils.py:351
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Слід перезапустити сеанс, щоб зміни набули чинності"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "Перезапустити сеанс"
 
@@ -627,10 +631,6 @@ msgstr "Перезапустити сеанс"
 
 #~ msgid "<primary>f"
 #~ msgstr "<primary>f"
-
-#, python-format
-#~ msgid "(%s mode)"
-#~ msgstr "(%s mode)"
 
 #~ msgid "GTK"
 #~ msgstr "GTK"
