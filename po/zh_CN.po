@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-02-10 08:18+0000\n"
-"PO-Revision-Date: 2024-02-20 09:33-0500\n"
+"POT-Creation-Date: 2024-04-20 10:48+0000\n"
+"PO-Revision-Date: 2024-04-24 11:30+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese - China <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -25,15 +25,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.4.3\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. developer_name tag deprecated with Appstream 1.0
 #: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
-#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
-#: gtweak/utils.py:344
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
+#: gtweak/utils.py:348
 msgid "GNOME Tweaks"
 msgstr "GNOME Tweaks"
 
@@ -77,7 +77,7 @@ msgstr "关于 Tweaks(_A)"
 msgid "Fonts"
 msgstr "字体"
 
-#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Appearance"
 msgstr "外观"
 
@@ -97,7 +97,7 @@ msgstr "键盘"
 msgid "Windows"
 msgstr "窗口"
 
-#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup Applications"
 msgstr "开机启动程序"
 
@@ -135,6 +135,11 @@ msgstr "重置所有优化设置到原始默认状态吗？"
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
+#: gtweak/app.py:99
+#, python-format
+msgid "(%s mode)"
+msgstr "（%s 模式）"
+
 #: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell 未在运行"
@@ -143,7 +148,7 @@ msgstr "GNOME Shell 未在运行"
 #. they will be displayed in the "about" dialog
 #: gtweak/app.py:118
 msgid "translator-credits"
-msgstr ""
+msgstr "Boyuan Yang <073plan@gmail.com>, 2023"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
@@ -186,34 +191,34 @@ msgstr "无法显示 Shell 扩展"
 msgid "Shell"
 msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:156
+#: gtweak/tweaks/tweak_group_appearance.py:157
 msgid "Adwaita (default)"
 msgstr "Adwaita（默认）"
 
-#: gtweak/tweaks/tweak_group_appearance.py:166
+#: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
 msgstr "选择主题"
 
-#: gtweak/tweaks/tweak_group_appearance.py:218
+#: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s 主题更新成功"
 
-#: gtweak/tweaks/tweak_group_appearance.py:220
+#: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s 主题安装成功"
 
-#: gtweak/tweaks/tweak_group_appearance.py:222
+#: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
 msgstr "安装主题出错"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:227
+#: gtweak/tweaks/tweak_group_appearance.py:228
 msgid "Invalid theme"
 msgstr "无效主题"
 
-#: gtweak/tweaks/tweak_group_appearance.py:235
+#: gtweak/tweaks/tweak_group_appearance.py:236
 msgid "Styles"
 msgstr "样式"
 
@@ -250,7 +255,7 @@ msgid "Slight"
 msgstr "轻微"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:418 gtweak/widgets.py:564 gtweak/widgets.py:593
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
 msgid "None"
 msgstr "无"
 
@@ -349,7 +354,7 @@ msgstr "禁用副键点击"
 msgid ""
 "Disables secondary clicks on touchpads which do not have a physical "
 "secondary button"
-msgstr ""
+msgstr "在没有物理副键的触摸板上禁用副键单击"
 
 #: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
@@ -371,21 +376,21 @@ msgstr "触摸板加速"
 msgid ""
 "Turning acceleration off can allow faster and more precise movements, but "
 "can also make the touchpad more difficult to use."
-msgstr ""
+msgstr "关闭加速可以实现更快、更精确的移动，但也会使触摸板更难以使用。"
 
 #: gtweak/tweaks/tweak_group_mouse.py:97
 msgid "Pointing Stick"
-msgstr ""
+msgstr "指点杆"
 
 #: gtweak/tweaks/tweak_group_mouse.py:99
 msgid "Pointing Stick Acceleration"
-msgstr ""
+msgstr "指点杆加速"
 
 #: gtweak/tweaks/tweak_group_mouse.py:100
 msgid ""
 "Turning acceleration off can allow faster and more precise movements, but "
 "can also make the pointing stick more difficult to use."
-msgstr ""
+msgstr "关闭加速可以实现更快、更精确的移动，但也会使指点杆更难以使用。"
 
 #: gtweak/tweaks/tweak_group_mouse.py:104
 msgid "Scrolling Method"
@@ -420,19 +425,19 @@ msgstr "添加(_A)"
 msgid "Search Applications…"
 msgstr "搜索应用程序…"
 
-#: gtweak/tweaks/tweak_group_startup.py:194
+#: gtweak/tweaks/tweak_group_startup.py:195
 msgid "Remove"
 msgstr "移除"
 
-#: gtweak/tweaks/tweak_group_startup.py:220
+#: gtweak/tweaks/tweak_group_startup.py:221
 msgid "Startup applications are automatically started when you log in."
 msgstr "“开机启动程序”在您登录系统时自动启动。"
 
-#: gtweak/tweaks/tweak_group_startup.py:257
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "No Startup Applications"
 msgstr "无开机启动程序"
 
-#: gtweak/tweaks/tweak_group_startup.py:258
+#: gtweak/tweaks/tweak_group_startup.py:259
 msgid "Add a startup application"
 msgstr "添加开机启动程序"
 
@@ -558,21 +563,17 @@ msgstr "搜索优化设置…"
 msgid "%s (default)"
 msgstr "%s（默认）"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:350
 msgid "Configuration changes require restart"
 msgstr "配置更改需要重新启动"
 
-#: gtweak/utils.py:347
+#: gtweak/utils.py:351
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "需要重启会话以使设置生效"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "重启会话"
-
-#, python-format
-#~ msgid "(%s mode)"
-#~ msgstr "（%s 模式）"
 
 #~ msgid "GTK"
 #~ msgstr "GTK"
