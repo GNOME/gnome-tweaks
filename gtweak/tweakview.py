@@ -48,6 +48,7 @@ class Window(Adw.ApplicationWindow):
 
     def __init__(self, app: Adw.Application, model: TweakModel):
         super().__init__(application=app, show_menubar=False)
+
         self.set_default_size(980, 640)
         self.set_size_request(-1, 300)
         self.set_icon_name(gtweak.APP_ID)
@@ -67,6 +68,10 @@ class Window(Adw.ApplicationWindow):
 
         self._setup_shortcut()
         self.searchbar.set_key_capture_widget(self)
+
+        row = self.listbox.get_row_at_index(0)
+        if row:
+          self.listbox.select_row(row)
 
 
     def _setup_header(self):
@@ -226,16 +231,22 @@ class Window(Adw.ApplicationWindow):
         group = self._model.search_matches(txt)
         self._on_list_changed(group)
 
+    def _select_tweak(self, tweak):
+        self.main_stack.set_visible_child_name(tweak.name)
+        self.title.set_title(tweak.title)
+
+        self.main_leaflet.set_visible_child_name("content")
+
     def _on_select_row(self, _, row: Gtk.ListBoxRow):
-        if row:
-            group = row.props.tweakname
+        if not row:
+            return
 
-            for tweak in tweaks:
-              if tweak.name == group:
+        group = row.props.tweakname
 
-                self.main_stack.set_visible_child_name(tweak.name)
-                self.title.set_title(tweak.title)
-                self.main_leaflet.set_visible_child_name("content")
+        for tweak in tweaks:
+          if tweak.name == group:
+              self._select_tweak(tweak)
+
 
     def _on_find_toggled(self, _):
         self.searchbar.set_search_mode(not self.searchbar.get_search_mode())
