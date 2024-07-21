@@ -14,26 +14,6 @@ from gtweak.tweakview import Window
 from gtweak.utils import SchemaList
 from gtweak.gshellwrapper import GnomeShellFactory
 
-class ExtensionNotice(Gtk.MessageDialog):
-    def __init__(self, modal, transient_for):
-        Gtk.Dialog.__init__(self, modal=modal, transient_for=transient_for)
-
-        self.add_button(_("_Continue"), Gtk.ResponseType.NONE)
-
-        self.set_markup("<b>{0}</b>".format(_("Extensions Has Moved")))
-
-        self.props.secondary_use_markup = True
-        self.props.secondary_text = "{0}\n\n{1}".format(
-            # Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
-            _("Extensions management has been moved to {0}.").format(
-                '<a href="https://gitlab.gnome.org/GNOME/gnome-shell/-/blob/HEAD/subprojects/extensions-app/README.md">GNOME Extensions</a>',
-            ),
-            # Translators: Placeholder will be replaced with "Flathub" in active link form
-            _("We recommend downloading GNOME Extensions from {0} if your distribution does not include it.").format(
-                '<a href="https://flathub.org/apps/details/org.gnome.Extensions">Flathub</a>'
-            )
-        )
-
 _application = None
 
 def get_application():
@@ -125,15 +105,6 @@ class GnomeTweaks(Adw.Application):
         )
 
         aboutdialog.present()
-
-    def show_extensions_notice(self):
-        extensionsdialog = ExtensionNotice(
-            modal=True,
-            transient_for=self.win
-        )
-
-        extensionsdialog.connect("response", lambda _dialog, _: _dialog.destroy())
-        extensionsdialog.show()
 
     def _create_action(self, name, callback, shortcuts=None):
         """Add an application action.
