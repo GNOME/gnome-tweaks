@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-09-23 05:14+0000\n"
-"PO-Revision-Date: 2023-10-21 15:09+0300\n"
+"POT-Creation-Date: 2024-07-26 10:11+0000\n"
+"PO-Revision-Date: 2024-08-17 16:16+0300\n"
 "Last-Translator: Florentina Mușat <florentina [dot] musat [dot] 28 [at] "
 "gmail [dot] com>\n"
 "Language-Team: Gnome Romanian Translation Team\n"
@@ -20,30 +20,31 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-SourceCharset: windows-1256\n"
 "X-Project-Style: gnome\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "Proiectul GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
+#: gtweak/utils.py:348
 msgid "GNOME Tweaks"
 msgstr "Instrument de ajustare GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "Ajustează configurări GNOME avansate"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
 "Instrument de ajustare GNOME vă permite să personalizați opțiuni GNOME "
 "avansate."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
 "It can manage keyboard mapping customizations, add startup applications, and "
 "set custom window controls among other settings."
@@ -52,52 +53,51 @@ msgstr ""
 "pornire a sistemului și stabili controale de fereastră personalizate, "
 "printre alte configurări."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Ajustări"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
-"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Setări;"
-"Configurări;Avansat;Preferințe;Fonturi;Temă;Tastatură;Tastare;"
+"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+"Configurări;Avansat;Preferințe;Fonturi;Temă;Tastatură;Tastare;Pornire;"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "_Restabilește la valorile implicite"
 
-#: data/shell.ui:13
+#: data/shell.ui:12
 msgid "_About Tweaks"
 msgstr "_Despre Ajustări"
 
-#: data/tweaks.ui:63 gtweak/tweaks/tweak_group_font.py:124
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
 msgid "Fonts"
 msgstr "Fonturi"
 
-#: data/tweaks.ui:97 gtweak/tweaks/tweak_group_appearance.py:257
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Appearance"
 msgstr "Aspect"
 
-#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Sunet"
 
-#: data/tweaks.ui:165
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
 msgid "Mouse & Touchpad"
 msgstr "Maus și touchpad"
 
-#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
-#: gtweak/tweaks/tweak_group_keyboard.py:378
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
 msgid "Keyboard"
 msgstr "Tastatură"
 
-#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
 msgid "Windows"
 msgstr "Ferestre"
 
-#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:309
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup Applications"
 msgstr "Aplicații de pornire"
 
@@ -125,34 +125,34 @@ msgstr ""
 "Recomandăm descărcarea Extensii GNOME de la {0} dacă distribuția nu o "
 "include."
 
-#: gtweak/app.py:81
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "Restabilește la valorile implicite"
 
-#: gtweak/app.py:82
-msgid "Reset all tweak settings to the original default state?"
-msgstr "Restabiliți toate configurările la valorile originale?"
+#: gtweak/app.py:87
+msgid "Reset all tweaks settings to the original default state?"
+msgstr ""
+"Restabiliți toate configurările de ajustări la starea implicită inițială?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "Shell GNOME"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:99
 #, python-format
 msgid "(%s mode)"
 msgstr "(mod %s)"
 
-#: gtweak/app.py:104
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "Shell GNOME nu rulează"
 
-#: gtweak/app.py:106
-msgid "GTK"
-msgstr "GTK"
-
-#: gtweak/app.py:113
-msgid "Homepage"
-msgstr "Acasă"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr ""
+"Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, 2024"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
@@ -162,247 +162,251 @@ msgstr "Diverse"
 msgid "Legacy Applications"
 msgstr "Aplicații moștenite"
 
-#: gtweak/tweaks/tweak_group_appearance.py:65
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Eroare la scrierea configurării"
 
-#: gtweak/tweaks/tweak_group_appearance.py:71
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Iconițe"
 
-#: gtweak/tweaks/tweak_group_appearance.py:86
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Cursor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Shell"
-msgstr "Shell"
-
-#: gtweak/tweaks/tweak_group_appearance.py:110
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Instalează teme personalizate pentru gnome-shell"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:113
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Eroare necunoscută"
 
-#: gtweak/tweaks/tweak_group_appearance.py:118
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Shell-ul nu rulează"
 
-#: gtweak/tweaks/tweak_group_appearance.py:140
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Extensia tema-utilizatorului a fost instalată incorect"
-
-#: gtweak/tweaks/tweak_group_appearance.py:143
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Extensia tema-utilizatorului nu este activată"
 
-#: gtweak/tweaks/tweak_group_appearance.py:146
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Nu s-au putut afișa extensiile"
 
-#: gtweak/tweaks/tweak_group_appearance.py:176
-msgid "<i>Default</i>"
-msgstr "<i>Implicit</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:182
+#: gtweak/tweaks/tweak_group_appearance.py:157
+msgid "Adwaita (default)"
+msgstr "Adwaita (implicit)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
 msgstr "Selectează o temă"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Tema %s a fost actualizată cu succes"
 
-#: gtweak/tweaks/tweak_group_appearance.py:233
+#: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Tema %s a fost instalată cu succes"
 
-#: gtweak/tweaks/tweak_group_appearance.py:241
+#: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
 msgstr "Eroare la instalarea temei"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:246
+#: gtweak/tweaks/tweak_group_appearance.py:228
 msgid "Invalid theme"
 msgstr "Temă nevalidă"
 
-#: gtweak/tweaks/tweak_group_appearance.py:258
+#: gtweak/tweaks/tweak_group_appearance.py:236
 msgid "Styles"
 msgstr "Stiluri"
 
-#: gtweak/tweaks/tweak_group_appearance.py:263
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Fundal"
 
-#: gtweak/tweaks/tweak_group_appearance.py:265
-msgid "Image"
-msgstr "Imagine"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "Imagine implicită"
 
-#: gtweak/tweaks/tweak_group_appearance.py:272
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "Imagine stil întunecat"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Ajustare"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "Hinting"
 
-#: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:75
-msgid "Antialiasing"
-msgstr "Antialiasing"
-
-#: gtweak/tweaks/tweak_group_font.py:52
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "Complet"
 
-#: gtweak/tweaks/tweak_group_font.py:58
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "Mediu"
 
-#: gtweak/tweaks/tweak_group_font.py:64
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "Redus"
 
-#: gtweak/tweaks/tweak_group_font.py:70 gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
 msgid "None"
 msgstr "Nimic"
 
-#: gtweak/tweaks/tweak_group_font.py:88
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "Antialiasing"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "Subpixel (pentru ecrane LCD)"
 
-#: gtweak/tweaks/tweak_group_font.py:94
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "Standard (scală de gri)"
 
-#: gtweak/tweaks/tweak_group_font.py:125
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "Fonturi preferate"
+
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
 msgstr "Textul interfeței"
 
-#: gtweak/tweaks/tweak_group_font.py:126
+#: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
 msgstr "Textul documentului"
 
-#: gtweak/tweaks/tweak_group_font.py:127
+#: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
 msgstr "Text monospațiat"
 
-#: gtweak/tweaks/tweak_group_font.py:128
-msgid "Legacy Window Titles"
-msgstr "Titluri de fereastră veche"
+#: gtweak/tweaks/tweak_group_font.py:45
+msgid "Rendering"
+msgstr "Randare"
 
-#: gtweak/tweaks/tweak_group_font.py:130
+#: gtweak/tweaks/tweak_group_font.py:49
+msgid "Size"
+msgstr "Dimensiune"
+
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Factor de scalare a fontului"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#: gtweak/tweaks/tweak_group_keyboard.py:339
-#: gtweak/tweaks/tweak_group_mouse.py:137
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Disabled"
-msgstr "Dezactivat"
+msgid "Default"
+msgstr "Implicit"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:170
+#: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "Tastare"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:18
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Intrare Emacs"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:189
-#: gtweak/tweaks/tweak_group_mouse.py:21
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr ""
 "Suprascrie scurtăturile pentru a utiliza scurtăturile de tastatură de la "
 "editorul Emacs."
 
-#: gtweak/tweaks/tweak_group_keyboard.py:205
-#: gtweak/tweaks/tweak_group_mouse.py:37
+#: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
 msgstr "Scurtătura prezentării generale"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:212
-#: gtweak/tweaks/tweak_group_mouse.py:44
+#: gtweak/tweaks/tweak_group_keyboard.py:210
 msgid "Left Super"
 msgstr "Super stânga"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:216
-#: gtweak/tweaks/tweak_group_mouse.py:48
+#: gtweak/tweaks/tweak_group_keyboard.py:211
 msgid "Right Super"
 msgstr "Super dreapta"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:239
-#: gtweak/tweaks/tweak_group_keyboard.py:247
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Opțiuni de aranjament adiționale"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:269
-#: gtweak/tweaks/tweak_group_mouse.py:67 gtweak/tweaks/tweak_group_mouse.py:185
-msgid "Mouse Click Emulation"
-msgstr "Emulare clic maus"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:287
-#: gtweak/tweaks/tweak_group_mouse.py:85
-msgid "Fingers"
-msgstr "Degete"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:289
-#: gtweak/tweaks/tweak_group_mouse.py:87
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"Apăsați clic pe touchpad cu două degete pentru clic dreapta și trei degete "
-"pentru clic de mijloc."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:313
-#: gtweak/tweaks/tweak_group_mouse.py:111
-msgid "Area"
-msgstr "Zonă"
-
-#: gtweak/tweaks/tweak_group_keyboard.py:315
-#: gtweak/tweaks/tweak_group_mouse.py:113
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Apăsați clic în dreapta jos pe touchpad pentru clic dreapta și în mijloc jos "
-"pentru clic de mijloc."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:341
-#: gtweak/tweaks/tweak_group_mouse.py:139
-msgid "Don’t use mouse click emulation."
-msgstr "Nu utiliza emularea de clic maus."
-
-#: gtweak/tweaks/tweak_group_keyboard.py:379
+#: gtweak/tweaks/tweak_group_keyboard.py:259
 msgid "Show Extended Input Sources"
 msgstr "Arată sursele de intrare extinse"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:382
+#: gtweak/tweaks/tweak_group_keyboard.py:262
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Mărește selecția de surse de intrare din aplicația Configurări."
 
-#: gtweak/tweaks/tweak_group_mouse.py:175
-#: gtweak/tweaks/tweak_group_mouse.py:176
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "Aranjament"
+
+#: gtweak/tweaks/tweak_group_mouse.py:31
+msgid "Disable Secondary Click"
+msgstr "Dezactivează clic-ul secundar"
+
+#: gtweak/tweaks/tweak_group_mouse.py:32
+msgid ""
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
+msgstr ""
+"Dezactivează clic-urile secundare pe touchpad-uri care nu au un buton "
+"secundar fizic"
+
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "Maus"
 
-#: gtweak/tweaks/tweak_group_mouse.py:177
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
 msgstr "Lipire cu clic de mijloc"
 
-#: gtweak/tweaks/tweak_group_mouse.py:180
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: gtweak/tweaks/tweak_group_mouse.py:181
-msgid "Disable While Typing"
-msgstr "Dezactivează în timpul tastării"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Accelerație touchpad"
+
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+"Oprirea accelerației poate permite mișcări mai rapide și mai precise, dar "
+"poate face și touchpad-ul mai dificil de utilizat."
+
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Stick de indicare"
+
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Accelerație stick de indicare"
+
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+"Oprirea accelerației poate permite mișcări mai rapide și mai precise, dar "
+"poate face și stick-ul de indicare mai dificil de utilizat."
+
+#: gtweak/tweaks/tweak_group_mouse.py:104
+msgid "Scrolling Method"
+msgstr "Metodă de derulare"
 
 #: gtweak/tweaks/tweak_group_sound.py:44
 msgid "System Sound Theme"
@@ -412,68 +416,64 @@ msgstr "Temă de sunet de sistem"
 msgid "Specifies which sound theme to use for sound events."
 msgstr "Specifică ce temă audio să se folosească pentru evenimentele sonore."
 
-#: gtweak/tweaks/tweak_group_startup.py:30
+#: gtweak/tweaks/tweak_group_startup.py:51
+msgid "running"
+msgstr "rulează"
+
+#: gtweak/tweaks/tweak_group_startup.py:61
+msgid "Select Application"
+msgstr "Selectează aplicația"
+
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
+msgid "_Close"
+msgstr "În_chide"
+
+#: gtweak/tweaks/tweak_group_startup.py:68
+msgid "_Add"
+msgstr "_Adaugă"
+
+#: gtweak/tweaks/tweak_group_startup.py:72
+msgid "Search Applications…"
+msgstr "Caută aplicații…"
+
+#: gtweak/tweaks/tweak_group_startup.py:195
+msgid "Remove"
+msgstr "Elimină"
+
+#: gtweak/tweaks/tweak_group_startup.py:221
 msgid "Startup applications are automatically started when you log in."
 msgstr ""
 "Aplicațiile la pornirea sistemului sunt pornite automat când vă "
 "autentificați."
 
-#: gtweak/tweaks/tweak_group_startup.py:43
-msgid "Applications"
-msgstr "Aplicații"
-
-#: gtweak/tweaks/tweak_group_startup.py:49
-msgid "Search Applications…"
-msgstr "Caută aplicații…"
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:59
-msgid "<primary>f"
-msgstr "<primary>f"
-
-#: gtweak/tweaks/tweak_group_startup.py:77
-msgid "running"
-msgstr "rulează"
-
-#: gtweak/tweaks/tweak_group_startup.py:88
-msgid "_Close"
-msgstr "În_chide"
-
-#: gtweak/tweaks/tweak_group_startup.py:89
-msgid "_Add"
-msgstr "_Adaugă"
-
-#: gtweak/tweaks/tweak_group_startup.py:234
-msgid "Remove"
-msgstr "Elimină"
-
 #: gtweak/tweaks/tweak_group_startup.py:258
-msgid "New startup application"
-msgstr "Noi aplicații de pornire"
+msgid "No Startup Applications"
+msgstr "Nu există aplicații de pornire"
 
 #: gtweak/tweaks/tweak_group_startup.py:259
-msgid "Add a new application to be run at startup"
-msgstr "Adaugă o nouă aplicație care să fie rulată la pornire"
+msgid "Add a startup application"
+msgstr "Adaugă o aplicație de pornire"
 
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Focalizare fereastră"
 
+#: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:314
 msgid "Click to Focus"
 msgstr "Clic pentru a focaliza"
 
-#: gtweak/tweaks/tweak_group_windows.py:38
+#: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
 msgstr "Ferestrele sunt focalizate când se apasă clic pe acestea."
 
-#: gtweak/tweaks/tweak_group_windows.py:62
+#: gtweak/tweaks/tweak_group_windows.py:23
 msgid "Focus on Hover"
 msgstr "Focalizează la planare"
 
-#: gtweak/tweaks/tweak_group_windows.py:64
+#: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -481,12 +481,11 @@ msgstr ""
 "Fereastra este focalizată când este planată de cursor. Ferestrele rămân "
 "focalizate când este planat desktopul."
 
-#: gtweak/tweaks/tweak_group_windows.py:88
-#: gtweak/tweaks/tweak_group_windows.py:300
-msgid "Secondary-Click"
-msgstr "Clic secundar"
+#: gtweak/tweaks/tweak_group_windows.py:28
+msgid "Focus Follows Mouse"
+msgstr "Focalizarea urmărește mausul"
 
-#: gtweak/tweaks/tweak_group_windows.py:90
+#: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -494,87 +493,59 @@ msgstr ""
 "Fereastra este focalizată când este planată de cursor. Planarea pe desktop "
 "elimină focalizarea de la fereastra anterioară."
 
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Window scaling"
-msgstr "Scalare fereastră"
-
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Ajustează factorul de scalare GDK pentru HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:157
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Configurările vor fi restaurate în {0} secundă"
-msgstr[1] "Configurările vor fi restaurate în {0} secunde"
-msgstr[2] "Configurările vor fi restaurate în {0} de secunde"
-
-#: gtweak/tweaks/tweak_group_windows.py:173
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Doriți să păstrați aceste configurări HiDPI?"
-
-#: gtweak/tweaks/tweak_group_windows.py:180
-msgid "Revert Settings"
-msgstr "Restaurează configurările"
-
-#: gtweak/tweaks/tweak_group_windows.py:181
-msgid "Keep Changes"
-msgstr "Păstrează modificările"
-
-#: gtweak/tweaks/tweak_group_windows.py:197
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:246
+#: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
 msgstr "Plasare"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:260
+#: gtweak/tweaks/tweak_group_windows.py:97
 msgid "Left"
 msgstr "Stânga"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:266
+#: gtweak/tweaks/tweak_group_windows.py:100
 msgid "Right"
 msgstr "Dreapta"
 
-#: gtweak/tweaks/tweak_group_windows.py:297
+#: gtweak/tweaks/tweak_group_windows.py:135
 msgid "Titlebar Actions"
 msgstr "Acțiunile barei de titlu"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
+#: gtweak/tweaks/tweak_group_windows.py:136
 msgid "Double-Click"
 msgstr "Clic dublu"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:137
 msgid "Middle-Click"
 msgstr "Clic de mijloc"
 
-#: gtweak/tweaks/tweak_group_windows.py:301
+#: gtweak/tweaks/tweak_group_windows.py:138
+msgid "Secondary-Click"
+msgstr "Clic secundar"
+
+#: gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "Butoanele barei de titlu"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "Maximizează"
 
-#: gtweak/tweaks/tweak_group_windows.py:303
+#: gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "Minimizează"
 
-#: gtweak/tweaks/tweak_group_windows.py:305
+#: gtweak/tweaks/tweak_group_windows.py:146
 msgid "Click Actions"
 msgstr "Acțiuni de clic"
 
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "Atașează dialogurile modale"
 
-#: gtweak/tweaks/tweak_group_windows.py:307
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -582,47 +553,131 @@ msgstr ""
 "Când este activat, ferestrele dialogului modal sunt atașate la ferestrele "
 "lor superioare, și nu pot fi mutate."
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
 msgstr "Centrează ferestrele noi"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "Tastă acțiune fereastră"
 
-#: gtweak/tweaks/tweak_group_windows.py:313
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Dezactivat"
+
+#: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
 msgstr "Redimensionează cu clic secundar"
 
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Focusing"
-msgstr "Focalizare"
-
-#: gtweak/tweaks/tweak_group_windows.py:316
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "Ridică ferestrele când sunt focalizate"
 
-#: gtweak/tweakview.py:157
+#: gtweak/tweakview.py:156
 msgid "Search Tweaks…"
 msgstr "Caută ajustări…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(implicit)</i>"
+msgid "%s (default)"
+msgstr "%s (implicit)"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:350
 msgid "Configuration changes require restart"
 msgstr "Modificările configurației necesită o repornire"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:351
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Sesiunea trebuie să fie repornită pentru a lua efect configurările"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "Repornește sesiunea"
+
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Acasă"
+
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "Instalează teme personalizate pentru gnome-shell"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "Extensia tema-utilizatorului a fost instalată incorect"
+
+#~ msgid "Image"
+#~ msgstr "Imagine"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Titluri de fereastră veche"
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Emulare clic maus"
+
+#~ msgid "Fingers"
+#~ msgstr "Degete"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Apăsați clic pe touchpad cu două degete pentru clic dreapta și trei "
+#~ "degete pentru clic de mijloc."
+
+#~ msgid "Area"
+#~ msgstr "Zonă"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Apăsați clic în dreapta jos pe touchpad pentru clic dreapta și în mijloc "
+#~ "jos pentru clic de mijloc."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Nu utiliza emularea de clic maus."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Dezactivează în timpul tastării"
+
+#~ msgid "Applications"
+#~ msgstr "Aplicații"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>f"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Adaugă o nouă aplicație care să fie rulată la pornire"
+
+#~ msgid "Window scaling"
+#~ msgstr "Scalare fereastră"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr "Ajustează factorul de scalare GDK pentru HiDPI"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "Configurările vor fi restaurate în {0} secundă"
+#~ msgstr[1] "Configurările vor fi restaurate în {0} secunde"
+#~ msgstr[2] "Configurările vor fi restaurate în {0} de secunde"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "Doriți să păstrați aceste configurări HiDPI?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "Restaurează configurările"
+
+#~ msgid "Keep Changes"
+#~ msgstr "Păstrează modificările"
+
+#~ msgid "HiDPI"
+#~ msgstr "HiDPI"
+
+#~ msgid "Focusing"
+#~ msgstr "Focalizare"
 
 #~ msgid "General"
 #~ msgstr "Generale"
