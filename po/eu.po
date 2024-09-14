@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the gnome-tweak-tool package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2011, 2014, 2015, 2016.
-# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2011, 2019, 2020, 2021, 2022, 2023.
+# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2011, 2019, 2020, 2021, 2022.
 # Porrumentzio <porrumentzio@riseup.net>, 2023.
+# Asier Sarasua Garmendia <asier.sarasua@gmail.com>, 2023, 2024.
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2023-07-22 13:23+0000\n"
-"PO-Revision-Date: 2023-07-25 19:30+0200\n"
+"POT-Creation-Date: 2024-08-15 04:54+0000\n"
+"PO-Revision-Date: 2024-09-14 19:30+0200\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <Librezale>\n"
 "Language: eu\n"
@@ -19,30 +20,31 @@ msgstr "Project-Id-Version: gnome-tweak-tool master\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "GNOME proiektua"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:41 gtweak/utils.py:326
-#: gtweak/utils.py:343
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:41 gtweak/utils.py:331
+#: gtweak/utils.py:348
 msgid "GNOME Tweaks"
 msgstr "GNOME Doikuntzak"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
 msgstr "Doitu GNOMEren ezarpen aurreratuak"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "GNOME Doikuntzak aplikazioak GNOMEren aukera aurreratuak doitzea ahalbidetzen du."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
-"It can install and manage themes, change power settings, manage startup "
-"applications, and enable desktop icons among other settings."
-msgstr "Beste ezarpen batzuen artean, gaiak instala eta kudea ditzake, energiaren ezarpenak aldatu, abioko aplikazioak kudeatu eta mahaigaineko ikonoak gaitu ditzake."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
+msgstr "Beste ezarpen batzuen artean, teklatuaren mapatze-pertsonalizazioak kudeatu ditzake, abioko aplikazioak gehitu eta leiho-kontrol pertsonalizatuak gaitu ditzake."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:127
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:125
 msgid "Tweaks"
 msgstr "Doikuntzak"
 
@@ -67,28 +69,24 @@ msgstr "Letra-tipoak"
 msgid "Appearance"
 msgstr "Itxura"
 
-#: data/tweaks.ui:132 gtweak/tweaks/tweak_group_sound.py:42
+#: data/tweaks.ui:131 gtweak/tweaks/tweak_group_sound.py:42
 msgid "Sound"
 msgstr "Soinua"
 
-#: data/tweaks.ui:166
+#: data/tweaks.ui:165
 msgid "Mouse & Touchpad"
 msgstr "Sagua eta ukipen-panela"
 
-#: data/tweaks.ui:200 gtweak/tweaks/tweak_group_keyboard.py:377
+#: data/tweaks.ui:199 gtweak/tweaks/tweak_group_keyboard.py:377
 #: gtweak/tweaks/tweak_group_keyboard.py:378
 msgid "Keyboard"
 msgstr "Teklatua"
 
-#: data/tweaks.ui:234 gtweak/tweaks/tweak_group_windows.py:296
+#: data/tweaks.ui:233 gtweak/tweaks/tweak_group_windows.py:296
 msgid "Windows"
 msgstr "Leihoak"
 
-#: data/tweaks.ui:268 gtweak/tweaks/tweak_group_datetime.py:8
-msgid "Date & Time"
-msgstr "Data eta ordua"
-
-#: data/tweaks.ui:304 gtweak/tweaks/tweak_group_startup.py:31
+#: data/tweaks.ui:266 gtweak/tweaks/tweak_group_startup.py:31
 #: gtweak/tweaks/tweak_group_startup.py:309
 msgid "Startup Applications"
 msgstr "Abioko aplikazioak"
@@ -123,24 +121,24 @@ msgstr "Berrezarri lehenespenera"
 msgid "Reset all tweak settings to the original default state?"
 msgstr "Berrezarri doikuntzaren ezarpen guztiak jatorrizko egoera lehenetsira?"
 
-#: gtweak/app.py:99 gtweak/app.py:101
+#: gtweak/app.py:98 gtweak/app.py:100
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
-#: gtweak/app.py:101
+#: gtweak/app.py:100
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s modua)"
 
-#: gtweak/app.py:104
+#: gtweak/app.py:103
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell ez da exekutatzen ari"
 
-#: gtweak/app.py:106
+#: gtweak/app.py:105
 msgid "GTK"
 msgstr "GTK"
 
-#: gtweak/app.py:113
+#: gtweak/app.py:112
 msgid "Homepage"
 msgstr "Webgune nagusia"
 
@@ -234,31 +232,7 @@ msgstr "Irudia"
 
 #: gtweak/tweaks/tweak_group_appearance.py:272
 msgid "Adjustment"
-msgstr "Egokitzea"
-
-#: gtweak/tweaks/tweak_group_datetime.py:9
-msgid "Clock"
-msgstr "Ordularia"
-
-#: gtweak/tweaks/tweak_group_datetime.py:10
-msgid "Show Weekday"
-msgstr "Erakutsi asteguna"
-
-#: gtweak/tweaks/tweak_group_datetime.py:11
-msgid "Show Date"
-msgstr "Erakutsi data"
-
-#: gtweak/tweaks/tweak_group_datetime.py:12
-msgid "Show Seconds"
-msgstr "Erakutsi segundoak"
-
-#: gtweak/tweaks/tweak_group_datetime.py:13
-msgid "Calendar"
-msgstr "Egutegia"
-
-#: gtweak/tweaks/tweak_group_datetime.py:14
-msgid "Show Week Numbers"
-msgstr "Erakutsi asteen zenbakiak"
+msgstr "Doitzea"
 
 #: gtweak/tweaks/tweak_group_font.py:24 gtweak/tweaks/tweak_group_font.py:37
 msgid "Hinting"
@@ -341,7 +315,7 @@ msgstr "Ikuspegi orokorraren laster-tekla"
 #: gtweak/tweaks/tweak_group_keyboard.py:212
 #: gtweak/tweaks/tweak_group_mouse.py:44
 msgid "Left Super"
-msgstr "Ezker Super"
+msgstr "Ezkerreko Super tekla"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:216
 #: gtweak/tweaks/tweak_group_mouse.py:48
@@ -447,7 +421,7 @@ msgstr "It_xi"
 
 #: gtweak/tweaks/tweak_group_startup.py:89
 msgid "_Add"
-msgstr "_Gehitu"
+msgstr "G_ehitu"
 
 #: gtweak/tweaks/tweak_group_startup.py:234
 msgid "Remove"
@@ -529,7 +503,7 @@ msgstr "HiDPI"
 
 #: gtweak/tweaks/tweak_group_windows.py:246
 msgid "Placement"
-msgstr "Kokapena"
+msgstr "Kokalekua"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
@@ -601,7 +575,7 @@ msgstr "Fokuratzea"
 msgid "Raise Windows When Focused"
 msgstr "Goratu leihoak fokuratzen direnean"
 
-#: gtweak/tweakview.py:159
+#: gtweak/tweakview.py:157
 msgid "Search Tweaks…"
 msgstr "Bilatu doikuntzak…"
 
@@ -611,17 +585,38 @@ msgstr "Bilatu doikuntzak…"
 msgid "%s <i>(default)</i>"
 msgstr "%s <i>(lehenetsia)</i>"
 
-#: gtweak/utils.py:345
+#: gtweak/utils.py:350
 msgid "Configuration changes require restart"
 msgstr "Konfigurazioaren aldaketak berrabiaraztea eskatzen du"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:351
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Zure saioa berrabiarazi behar da ezarpenek eragina jasotzeko"
 
-#: gtweak/utils.py:350
+#: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "Berrabiarazi saioa"
+
+#~ msgid "Date & Time"
+#~ msgstr "Data eta ordua"
+
+#~ msgid "Clock"
+#~ msgstr "Ordularia"
+
+#~ msgid "Show Weekday"
+#~ msgstr "Erakutsi asteguna"
+
+#~ msgid "Show Date"
+#~ msgstr "Erakutsi data"
+
+#~ msgid "Show Seconds"
+#~ msgstr "Erakutsi segundoak"
+
+#~ msgid "Calendar"
+#~ msgstr "Egutegia"
+
+#~ msgid "Show Week Numbers"
+#~ msgstr "Erakutsi asteen zenbakiak"
 
 #~ msgid "General"
 #~ msgstr "Orokorra"
