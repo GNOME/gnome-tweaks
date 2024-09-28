@@ -7,46 +7,48 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2019-09-25 11:38+0000\n"
-"PO-Revision-Date: 2020-01-20 10:03+0100\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"POT-Creation-Date: 2024-03-14 16:43+0000\n"
+"PO-Revision-Date: 2024-06-14 21:57+0200\n"
+"Last-Translator: Jozef Gaal <preklady@mayday.sk>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 3.4.2\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:332
-#: gtweak/utils.py:349
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
+#: gtweak/utils.py:344
 msgid "GNOME Tweaks"
 msgstr "Vyladenia prostredia GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Vyladenie pokročilých nastavení prostredia GNOME 3"
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
+msgid "Tweak advanced GNOME settings"
+msgstr "Vyladenie pokročilých nastavení prostredia GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr ""
 "Aplikácia Vyladenia prostredia GNOME umožňuje upravovať pokročilé voľby "
 "prostredia GNOME."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
-"It can install and manage themes and extensions, change power settings, "
-"manage startup applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"Dokáže nainštalovať a spravovať témy a rozšírenia, zmeniť nastavenia "
-"napájania, spravovať aplikácie spúšťané pri štarte systému, povoliť ikony na "
-"pracovnej ploche a mnoho iných nastavení."
+"Okrem iných nastavení dokáže spravovať prispôsobenia mapovania klávesnice, "
+"pridávať aplikácie spúšťané pri štarte a nastavovať vlastné ovládacie prvky "
+"okien."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:108
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Vyladenia"
 
@@ -54,713 +56,497 @@ msgstr "Vyladenia"
 # DK: viem.dal som tam predvolby kvoli tomu ze to su keywords, takze to neuskodi, skor pomoze.vela ludi ma zauzivane slovo predvolby.
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
-"Nastavenia;Pokročilé;Predvoľby;Rozšírenia;Písma;Téma;XKB;Klávesnica;Písanie;"
+"Nastavenia;Pokročilé;Predvoľby;Písma;Téma;XKB;Klávesnica;Písanie;Po spustení;"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "O_bnoviť pôvodné"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Zakázať všetky rozšírenia shellu"
-
-#: data/shell.ui:17
+#: data/shell.ui:12
 msgid "_About Tweaks"
 msgstr "_O aplikácii Vyladenia"
 
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
+msgid "Fonts"
+msgstr "Písma"
+
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
+msgid "Appearance"
+msgstr "Vzhľad"
+
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
+msgid "Sound"
+msgstr "Zvuk"
+
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
+msgid "Mouse & Touchpad"
+msgstr "Myš a touchpad"
+
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
+msgid "Keyboard"
+msgstr "Klávesnica"
+
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
+msgid "Windows"
+msgstr "Okná"
+
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
+msgid "Startup Applications"
+msgstr "Aplikácie po spustení"
+
+#: gtweak/app.py:21
+msgid "_Continue"
+msgstr "_Pokračovať"
+
+#: gtweak/app.py:23
+msgid "Extensions Has Moved"
+msgstr "Rozšírenia sa presunuli"
+
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Správa rozšírení bola presunutá do {0}."
+
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:32
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Ak vaša distribúcia neobsahuje rozšírenia GNOME, odporúčame si ich stiahnuť "
+"zo stránky {0}."
+
 # dialog title
-#: gtweak/app.py:56
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "Znovunastavenie predvolených hodnôt"
 
-#: gtweak/app.py:57
-msgid "Reset all tweak settings to the original default state?"
+#: gtweak/app.py:87
+msgid "Reset all tweaks settings to the original default state?"
 msgstr ""
 "Znovunastaviť všetky vylaďovacie nastavenia na pôvodný predvolený stav?"
 
-#: gtweak/app.py:78 gtweak/app.py:80
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "Shell prostredia GNOME"
 
-#: gtweak/app.py:80
+#: gtweak/app.py:99
 #, python-format
 msgid "(%s mode)"
 msgstr "(režim %s)"
 
-#: gtweak/app.py:83
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "Shell prostredia GNOME nie je spustený"
 
-#: gtweak/app.py:85
-#| msgid "GTK+"
-msgid "GTK"
-msgstr "GTK"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr "Jozef Gaál <preklady@mayday.sk>"
 
-#: gtweak/app.py:92
-msgid "Homepage"
-msgstr "Domovská stránka"
-
-#: gtweak/tweakmodel.py:31
+#: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
 # placeholder text
-#: gtweak/tweakview.py:141
-msgid "Search Tweaks…"
-msgstr "Vyhľadajte vyladenia…"
+#: gtweak/tweaks/tweak_group_appearance.py:31
+msgid "Legacy Applications"
+msgstr "Staršie aplikácie"
 
-#. "General" needs to be first item in sidebar
-#: gtweak/tweakview.py:200 gtweak/tweaks/tweak_group_general.py:53
-msgid "General"
-msgstr "Všeobecné"
-
-#: gtweak/tweaks/tweak_group_appearance.py:54
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Aplikácie"
-
-#: gtweak/tweaks/tweak_group_appearance.py:88
+#: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
 msgstr "Chyba pri zapisovaní nastavení"
 
-#: gtweak/tweaks/tweak_group_appearance.py:94
+#: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
 msgstr "Ikony"
 
-#: gtweak/tweaks/tweak_group_appearance.py:109
+#: gtweak/tweaks/tweak_group_appearance.py:84
 msgid "Cursor"
 msgstr "Kurzor"
 
-#: gtweak/tweaks/tweak_group_appearance.py:133
-msgid "Shell"
-msgstr "Shell"
-
-# PM: kde sa nachádza tento text?
-# DK: nikde som to tam nenasiel..tipujem ze skor to bude label
-#: gtweak/tweaks/tweak_group_appearance.py:133
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Nainštalujte vlastné alebo používateľské témy pre gnome-shell"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:136
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Neznáma chyba"
 
-#: gtweak/tweaks/tweak_group_appearance.py:141
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Shell nie je spustený"
 
-#: gtweak/tweaks/tweak_group_appearance.py:163
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Rozšírenie s používateľskou témou shellu je nesprávne nainštalované"
-
-#: gtweak/tweaks/tweak_group_appearance.py:166
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Rozšírenie s používateľskou témou shellu nie je povolené"
 
-#: gtweak/tweaks/tweak_group_appearance.py:169
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Nepodarilo sa zobraziť rozšírenia shellu"
 
-# tema klavesovych skratiek, druhy vyskyt som nenasiel v programe
-# tyka sa to aj temy gnome-shell (Adwaita == default)
-#: gtweak/tweaks/tweak_group_appearance.py:199
-msgid "<i>Default</i>"
-msgstr "<i>Predvolená</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Shell"
+
+#: gtweak/tweaks/tweak_group_appearance.py:156
+msgid "Adwaita (default)"
+msgstr "Adwaita (predvolená)"
 
 # window title
-#: gtweak/tweaks/tweak_group_appearance.py:205
+#: gtweak/tweaks/tweak_group_appearance.py:166
 msgid "Select a theme"
 msgstr "Výber témy"
 
-#: gtweak/tweaks/tweak_group_appearance.py:254
+#: gtweak/tweaks/tweak_group_appearance.py:218
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Téma %s bola úspešne aktualizovaná"
 
-#: gtweak/tweaks/tweak_group_appearance.py:256
+#: gtweak/tweaks/tweak_group_appearance.py:220
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Téma %s bola úspešne nainštalovaná"
 
-#: gtweak/tweaks/tweak_group_appearance.py:264
+#: gtweak/tweaks/tweak_group_appearance.py:222
 msgid "Error installing theme"
 msgstr "Chyba pri inštalácii témy"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:269
+#: gtweak/tweaks/tweak_group_appearance.py:227
 msgid "Invalid theme"
 msgstr "Neplatná téma"
 
-#: gtweak/tweaks/tweak_group_appearance.py:281
-msgid "Appearance"
-msgstr "Vzhľad"
+#: gtweak/tweaks/tweak_group_appearance.py:235
+msgid "Styles"
+msgstr "Štýly"
 
-#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:284
-msgid "Themes"
-msgstr "Témy"
-
-#: gtweak/tweaks/tweak_group_appearance.py:289
-msgid "Sound"
-msgstr "Zvuk"
-
-#: gtweak/tweaks/tweak_group_appearance.py:290
-msgid "Specifies which sound theme to use for sound events."
-msgstr "Určuje, ktorá téma zvuku sa má použiť pre zvukové udalosti."
-
-#: gtweak/tweaks/tweak_group_appearance.py:292
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Pozadie"
 
-#: gtweak/tweaks/tweak_group_appearance.py:293
-#: gtweak/tweaks/tweak_group_appearance.py:298
-msgid "Image"
-msgstr "Obrázok"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "Predvolený obrázok"
 
-#: gtweak/tweaks/tweak_group_appearance.py:295
-#: gtweak/tweaks/tweak_group_appearance.py:300
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "Tmavý štýl obrázku"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Prispôsobenie"
 
-#: gtweak/tweaks/tweak_group_desktop.py:7
-msgid "Show Icons"
-msgstr "Zobraziť ikony"
-
-#. show-desktop-icons is in gsettings-desktop-schemas, but it won't actually
-#. *work* unless we have a version of Nautilus that still has the ability to
-#. draw the desktop; use one of the settings that was present in that version
-#. to probe for it.
-#: gtweak/tweaks/tweak_group_desktop.py:13
-msgid "Home"
-msgstr "Domovský priečinok"
-
-#: gtweak/tweaks/tweak_group_desktop.py:20
-msgid "Desktop"
-msgstr "Pracovná plocha"
-
-#: gtweak/tweaks/tweak_group_desktop.py:21
-msgid "Icons on Desktop"
-msgstr "Ikony na pracovnej ploche"
-
-#: gtweak/tweaks/tweak_group_desktop.py:24
-msgid "Network Servers"
-msgstr "Sieťové servery"
-
-#: gtweak/tweaks/tweak_group_desktop.py:25
-msgid "Trash"
-msgstr "Kôš"
-
-#: gtweak/tweaks/tweak_group_desktop.py:26
-msgid "Mounted Volumes"
-msgstr "Pripojené zväzky"
-
 # PM: Podľa odporúčania JULS toto prekladáme ako Dolaďovanie
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "Dolaďovanie"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
-msgid "Antialiasing"
-msgstr "Vyhladzovanie"
-
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "Úplné"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "Stredné"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "Jemné"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:418 gtweak/widgets.py:576 gtweak/widgets.py:605
 msgid "None"
 msgstr "Žiadne"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "Vyhladzovanie"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "Subpixelové (pre LCD obrazovky)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "Štandardné (v odtieňoch sivej)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
-msgid "Fonts"
-msgstr "Písma"
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "Uprednostňované písma"
 
-#: gtweak/tweaks/tweak_group_font.py:100
+#: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
 msgstr "Text rozhrania"
 
-#: gtweak/tweaks/tweak_group_font.py:101
+#: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
 msgstr "Text dokumentu"
 
-#: gtweak/tweaks/tweak_group_font.py:102
+#: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
 msgstr "Text s pevnou šírkou"
 
-#: gtweak/tweaks/tweak_group_font.py:103
-msgid "Legacy Window Titles"
-msgstr "Pôvodné titulky okien"
+#: gtweak/tweaks/tweak_group_font.py:45
+msgid "Rendering"
+msgstr "Vykresľovanie"
+
+#: gtweak/tweaks/tweak_group_font.py:49
+msgid "Size"
+msgstr "Veľkosť"
 
 # PM: nestačilo by tu jednoducho mierka?
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Faktor nastavenia mierky"
 
-#: gtweak/tweaks/tweak_group_general.py:28
-msgid "Suspend when laptop lid is closed"
-msgstr "Uspať po zavretí krytu notebooku"
+# tema klavesovych skratiek, druhy vyskyt som nenasiel v programe
+# tyka sa to aj temy gnome-shell (Adwaita == default)
+#: gtweak/tweaks/tweak_group_keyboard.py:42
+msgid "Default"
+msgstr "Predvolené"
 
-#: gtweak/tweaks/tweak_group_general.py:54
-msgid "Animations"
-msgstr "Animácie"
+#: gtweak/tweaks/tweak_group_keyboard.py:167
+msgid "Typing"
+msgstr "Písanie"
 
-#. Don't show this setting in the Ubuntu session since this setting is in gnome-control-center there
-#: gtweak/tweaks/tweak_group_general.py:57
-msgid "Over-Amplification"
-msgstr "Nadmerné zosilnenie"
-
-#: gtweak/tweaks/tweak_group_general.py:58
-msgid ""
-"Allows raising the volume above 100%. This can result in a loss of audio "
-"quality; it is better to increase application volume settings, if possible."
-msgstr ""
-"Umožňuje zvýšenie hlasitosti nad úroveň 100%. Môže to viesť k strate kvality "
-"zvuku. Vhodnejšie je zvýšiť nastavenia hlasitosti v aplikácii, ak je to "
-"možné."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:21
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Vstup Emacs"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:24
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Nahradí klávesové skratky z editora Emacs."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:40
-#: gtweak/tweaks/tweak_group_keymouse.py:108
-msgid "Compose Key"
-msgstr "Kláves Compose"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:96
-#: gtweak/tweaks/tweak_group_keymouse.py:178
-msgid "Scroll Lock"
-msgstr "Scroll Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-msgid "PrtScn"
-msgstr "PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "Menu"
-msgstr "Menu"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Right Alt"
-msgstr "Pravé tlačidlo Alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Ctrl"
-msgstr "Pravé tlačidlo Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-#: gtweak/tweaks/tweak_group_keymouse.py:200
-msgid "Right Super"
-msgstr "Pravé tlačidlo Windows"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-msgid "Caps Lock"
-msgstr "Caps Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:45
-#: gtweak/tweaks/tweak_group_keymouse.py:84
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Left Ctrl"
-msgstr "Ľavé tlačidlo Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:47
-#: gtweak/tweaks/tweak_group_keymouse.py:183
-#: gtweak/tweaks/tweak_group_keymouse.py:323
-#: gtweak/tweaks/tweak_group_windows.py:214 gtweak/tweaks/tweak_group_xkb.py:39
-msgid "Disabled"
-msgstr "Zakázané"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:51
-msgid "Allows entering additional characters."
-msgstr "Umožňuje zadávanie dodatočných znakov."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:126
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_keymouse.py:189
+#: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
 msgstr "Skratka náhľadu"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:196
+#: gtweak/tweaks/tweak_group_keyboard.py:210
 msgid "Left Super"
 msgstr "Ľavé tlačidlo Windows"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:223
-#: gtweak/tweaks/tweak_group_keymouse.py:231
+#: gtweak/tweaks/tweak_group_keyboard.py:211
+msgid "Right Super"
+msgstr "Pravé tlačidlo Windows"
+
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Dodatočné voľby rozloženia"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:253
-#: gtweak/tweaks/tweak_group_keymouse.py:391
-msgid "Mouse Click Emulation"
-msgstr "Emulácia kliknutia myšou"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:271
-msgid "Fingers"
-msgstr "Prsty"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:273
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"Kliknutím na touchpad dvoma prstami sa vykoná kliknutie pravým tlačidlom a "
-"kliknutím troma prstami sa vykoná kliknutie stredným tlačidlom."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:297
-msgid "Area"
-msgstr "Oblasť"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:299
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Kliknutím na dolnú pravú časť touchpadu sa vykoná kliknutie pravým tlačidlom "
-"a kliknutím na dolnú strednú časť sa vykoná kliknutie stredným tlačidlom."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:325
-msgid "Don’t use mouse click emulation."
-msgstr "Emulácia kliknutia myšou nebude použitá."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:362
-msgid "Keyboard & Mouse"
-msgstr "Klávesnica a myš"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:363
-msgid "Keyboard"
-msgstr "Klávesnica"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:364
+#: gtweak/tweaks/tweak_group_keyboard.py:259
 msgid "Show Extended Input Sources"
 msgstr "Zobraziť rozšírené zdroje vstupu"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:367
+#: gtweak/tweaks/tweak_group_keyboard.py:262
 msgid "Increases the choice of input sources in the Settings application."
 msgstr "Zvýši počet zdrojov vstupu v aplikácii Nastavenia."
 
-#: gtweak/tweaks/tweak_group_keymouse.py:373
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "Rozloženie"
+
+#: gtweak/tweaks/tweak_group_mouse.py:31
+msgid "Disable Secondary Click"
+msgstr "Zakázať sekundárne kliknutie"
+
+#: gtweak/tweaks/tweak_group_mouse.py:32
+msgid ""
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
+msgstr ""
+"Zakáže sekundárne kliknutia na touchpadoch, ktoré nemajú fyzické sekundárne "
+"tlačidlo"
+
+#: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
 msgstr "Myš"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:374
-msgid "Acceleration Profile"
-msgstr "Profil zrýchlenia"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:378
-msgid "Pointer Location"
-msgstr "Umiestnenie ukazovateľa"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:381
-msgid "Press the Ctrl key to highlight the pointer."
-msgstr "Stlačením klávesu Ctrl zvýrazníte ukazovateľ."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:382
+#: gtweak/tweaks/tweak_group_mouse.py:77
 msgid "Middle Click Paste"
-msgstr "Prilepenie kliknutím stredného tlačidla"
+msgstr "Vložiť kliknutím stredného tlačidla"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:386
+#: gtweak/tweaks/tweak_group_mouse.py:85
 msgid "Touchpad"
 msgstr "Touchpad"
 
-#: gtweak/tweaks/tweak_group_keymouse.py:387
-msgid "Disable While Typing"
-msgstr "Zakázať počas písania"
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Zrýchlenie touchpadu"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Nie sú nainštalované žiadne rozšírenia"
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+"Vypnutie zrýchlenia môže umožniť rýchlejšie a presnejšie pohyby, ale môže "
+"tiež sťažiť používanie touchpadu."
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Prehliadať v aplikácii Softvér"
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Trackpoint"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:119
-msgid "Extension downloading"
-msgstr "Rozšírenie sa preberá"
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Zrýchlenie trackpointu"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:121
-msgid "Error loading extension"
-msgstr "Chyba počas načítavania rozšírenia"
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+"Vypnutie zrýchlenia môže umožniť rýchlejšie a presnejšie pohyby, ale môže "
+"tiež sťažiť používanie trackpointu."
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:123
-msgid "Extension does not support shell version"
-msgstr "Rozšírenie nepodporuje verziu shellu"
+#: gtweak/tweaks/tweak_group_mouse.py:104
+msgid "Scrolling Method"
+msgstr "Metóda posúvania"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:125
-msgid "Unknown extension error"
-msgstr "Neznáma chyba rozšírenia"
+#: gtweak/tweaks/tweak_group_sound.py:44
+msgid "System Sound Theme"
+msgstr "Zvuková téma systému"
 
-# gtk label
-#: gtweak/tweaks/tweak_group_shell_extensions.py:173
-msgid "Updating"
-msgstr "Aktualizuje sa"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:193
-msgid "Error"
-msgstr "Chyba"
-
-# gtk button
-#: gtweak/tweaks/tweak_group_shell_extensions.py:197
-msgid "Update"
-msgstr "Aktualizovať"
-
-#: gtweak/tweaks/tweak_group_shell_extensions.py:239
-msgid "Extensions"
-msgstr "Rozšírenia"
-
-#: gtweak/tweaks/tweak_group_startup.py:30
-msgid "Startup applications are automatically started when you log in."
-msgstr "Aplikácie po spustení sú automaticky spúšťané po vašom prihlásení."
-
-#: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
-msgid "Startup Applications"
-msgstr "Aplikácie po spustení"
-
-# placeholder text
-#: gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications…"
-msgstr "Vyhľadajte aplikácie…"
-
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:58
-msgid "<primary>f"
-msgstr "<hlavný>f"
+#: gtweak/tweaks/tweak_group_sound.py:48
+msgid "Specifies which sound theme to use for sound events."
+msgstr "Určuje, ktorá téma zvuku sa má použiť pre zvukové udalosti."
 
 # DK: aplikácia
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_startup.py:51
 msgid "running"
 msgstr "spustená"
 
-#: gtweak/tweaks/tweak_group_startup.py:87
+# placeholder text
+#: gtweak/tweaks/tweak_group_startup.py:61
+msgid "Select Application"
+msgstr "Vybrať aplikáciu"
+
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
 msgid "_Close"
 msgstr "_Zavrieť"
 
-#: gtweak/tweaks/tweak_group_startup.py:88
+#: gtweak/tweaks/tweak_group_startup.py:68
 msgid "_Add"
 msgstr "_Pridať"
 
+# placeholder text
+#: gtweak/tweaks/tweak_group_startup.py:72
+msgid "Search Applications…"
+msgstr "Vyhľadajte aplikácie…"
+
 # gtk button
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:194
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
-msgid "New startup application"
-msgstr "Nová aplikácia po spustení"
+#: gtweak/tweaks/tweak_group_startup.py:220
+msgid "Startup applications are automatically started when you log in."
+msgstr "Aplikácie po spustení sú automaticky spúšťané po vašom prihlásení."
 
-#: gtweak/tweaks/tweak_group_startup.py:256
-msgid "Add a new application to be run at startup"
-msgstr "Pridajte novú aplikáciu, ktorá sa spustí po spustení"
+#: gtweak/tweaks/tweak_group_startup.py:257
+msgid "No Startup Applications"
+msgstr "Žiadne aplikácie po spustení"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:57
+#: gtweak/tweaks/tweak_group_startup.py:258
+msgid "Add a startup application"
+msgstr "Pridať aplikáciu po spustení"
+
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
+msgid "Window Focus"
+msgstr "Zameranie okna"
+
+#: gtweak/tweaks/tweak_group_windows.py:14
+#: gtweak/tweaks/tweak_group_windows.py:18
+msgid "Click to Focus"
+msgstr "Zamerať kliknutím"
+
+#: gtweak/tweaks/tweak_group_windows.py:20
+msgid "Windows are focused when they are clicked."
+msgstr "Okná sú zaostrené po kliknutí na ne."
+
+#: gtweak/tweaks/tweak_group_windows.py:23
+msgid "Focus on Hover"
+msgstr "Zaostrenie pri prejdení myšou"
+
+#: gtweak/tweaks/tweak_group_windows.py:25
+msgid ""
+"Window is focused when hovered with the pointer. Windows remain focused when "
+"the desktop is hovered."
+msgstr ""
+"Okno je zaostrené, keď naň prejdete ukazovateľom. Okná zostávajú zaostrené, "
+"keď prejdete ukazovateľom na plochu."
+
+#: gtweak/tweaks/tweak_group_windows.py:28
+msgid "Focus Follows Mouse"
+msgstr "Zaostrenie sleduje myš"
+
+#: gtweak/tweaks/tweak_group_windows.py:30
+msgid ""
+"Window is focused when hovered with the pointer. Hovering the desktop "
+"removes focus from the previous window."
+msgstr ""
+"Okno je zaostrené, keď naň prejdete ukazovateľom. Pri prejdení ukazovateľom "
+"na plochu sa odstráni zaostrenie z predchádzajúceho okna."
+
+#: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
 msgstr "Umiestnenie"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_title_bar.py:71
+#: gtweak/tweaks/tweak_group_windows.py:97
 msgid "Left"
 msgstr "Vľavo"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_title_bar.py:77
+#: gtweak/tweaks/tweak_group_windows.py:100
 msgid "Right"
 msgstr "Vpravo"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:108
-msgid "Window Titlebars"
-msgstr "Záhlavia okien"
-
-#: gtweak/tweaks/tweak_group_title_bar.py:109
+#: gtweak/tweaks/tweak_group_windows.py:135
 msgid "Titlebar Actions"
 msgstr "Akcie v titulku okna"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:110
+#: gtweak/tweaks/tweak_group_windows.py:136
 msgid "Double-Click"
 msgstr "Dvojité kliknutie"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:111
+#: gtweak/tweaks/tweak_group_windows.py:137
 msgid "Middle-Click"
 msgstr "Kliknutie stredným tlačidlom"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:112
-#: gtweak/tweaks/tweak_group_windows.py:88
+#: gtweak/tweaks/tweak_group_windows.py:138
 msgid "Secondary-Click"
-msgstr "Kliknutie vedľajším tlačidlom"
+msgstr "Kliknutie druhým tlačidlom"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:113
+#: gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
 msgstr "Tlačidlá v záhlaví okna"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:114
+#: gtweak/tweaks/tweak_group_windows.py:141
 msgid "Maximize"
 msgstr "Maximalizovať"
 
-#: gtweak/tweaks/tweak_group_title_bar.py:115
+#: gtweak/tweaks/tweak_group_windows.py:142
 msgid "Minimize"
 msgstr "Minimalizovať"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:14
-msgid "Top Bar"
-msgstr "Horná lišta"
+#: gtweak/tweaks/tweak_group_windows.py:146
+msgid "Click Actions"
+msgstr "Akcie kliknutím"
 
-#: gtweak/tweaks/tweak_group_top_bar.py:15
-msgid "Activities Overview Hot Corner"
-msgstr "Aktívny roh prehľadu aktivít"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:16
-msgid "Battery Percentage"
-msgstr "Percento batérie"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:17
-msgid "Clock"
-msgstr "Hodiny"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:18
-msgid "Weekday"
-msgstr "Deň v týždni"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:19
-msgid "Date"
-msgstr "Dátum"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:20
-msgid "Seconds"
-msgstr "Sekundy"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:21
-msgid "Calendar"
-msgstr "Kalendár"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:22
-msgid "Week Numbers"
-msgstr "Čísla týždňov"
-
-#: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:215
-msgid "Window Focus"
-msgstr "Zameranie okna"
-
-#: gtweak/tweaks/tweak_group_windows.py:18
-#: gtweak/tweaks/tweak_group_windows.py:36
-#: gtweak/tweaks/tweak_group_windows.py:215
-msgid "Click to Focus"
-msgstr "Zamerať kliknutím"
-
-#: gtweak/tweaks/tweak_group_windows.py:38
-msgid "Windows are focused when they are clicked."
-msgstr "Okná sú zamerané po kliknutí na okno."
-
-#: gtweak/tweaks/tweak_group_windows.py:62
-msgid "Focus on Hover"
-msgstr "Zameranie pri prejdení myšou"
-
-#: gtweak/tweaks/tweak_group_windows.py:64
-msgid ""
-"Window is focused when hovered with the pointer. Windows remain focused when "
-"the desktop is hovered."
-msgstr ""
-"Okno je zameraní po prejdení ukazovateľom ponad okno. Okná zostávajú "
-"zamerané po prejdení ukazovateľom ponad plochu."
-
-#: gtweak/tweaks/tweak_group_windows.py:90
-msgid ""
-"Window is focused when hovered with the pointer. Hovering the desktop "
-"removes focus from the previous window."
-msgstr ""
-"Okno je zameraná po prejdení ukazovateľom ponad okno. Prejdením ukazovateľa "
-"ponad plochu sa odstráni zameranie na predošlé okno."
-
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Window scaling"
-msgstr "Mierka okien"
-
-#: gtweak/tweaks/tweak_group_windows.py:129
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr "Mení koeficient mierky HiDPI pre okná GDK"
-
-#: gtweak/tweaks/tweak_group_windows.py:157
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Nastavenia budú vrátené o {0} sekundu"
-msgstr[1] "Nastavenia budú vrátené o {0} sekundy"
-msgstr[2] "Nastavenia budú vrátené o {0} sekúnd"
-
-#: gtweak/tweaks/tweak_group_windows.py:173
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Chcete ponechať tieto nastavenia mierky HiDPI?"
-
-#: gtweak/tweaks/tweak_group_windows.py:180
-msgid "Revert Settings"
-msgstr "Vrátiť nastavenia"
-
-#: gtweak/tweaks/tweak_group_windows.py:181
-msgid "Keep Changes"
-msgstr "Ponechať zmeny"
-
-#: gtweak/tweaks/tweak_group_windows.py:197
-msgid "HiDPI"
-msgstr "HiDPI"
-
-#: gtweak/tweaks/tweak_group_windows.py:203
-msgid "Windows"
-msgstr "Okná"
-
-#: gtweak/tweaks/tweak_group_windows.py:204
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "Pripojiť modálne dialógové okná"
 
-#: gtweak/tweaks/tweak_group_windows.py:205
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -768,114 +554,325 @@ msgstr ""
 "Keď je voľba zapnutá, modálne dialógové okná sú pripojené k svojim "
 "rodičovským oknám a nemôžu byť odstránené."
 
-#. https://help.gnome.org/users/gnome-help/stable/shell-windows-tiled.html
-#: gtweak/tweaks/tweak_group_windows.py:207
-msgid "Edge Tiling"
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_windows.py:208
-msgid "When on, windows are tiled when dragged to screen edges."
-msgstr ""
-
-#: gtweak/tweaks/tweak_group_windows.py:209
+#: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
 msgstr "Centrovať nové okná"
-
-#: gtweak/tweaks/tweak_group_windows.py:210
-msgid "Resize with Secondary-Click"
-msgstr "Zmeniť veľkosť kliknutím vedľajšieho tlačidla"
 
 # PM: čo je to za kláves? Nemyslí sa tým akčný kláves Windows? (ten s logom windows)
 # Alebo sú to akčné klávesy pracujúce s oknom?
 # DK: suvisi to s akcnymi klavesmi okna.je tam na vyber moznost "super" a ta je spojena s windows klavesom
-#: gtweak/tweaks/tweak_group_windows.py:211
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "Kláves akcie okna"
 
-#: gtweak/tweaks/tweak_group_windows.py:217
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Zakázané"
+
+#: gtweak/tweaks/tweak_group_windows.py:156
+msgid "Resize with Secondary-Click"
+msgstr "Zmeniť veľkosť kliknutím vedľajšieho tlačidla"
+
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "Preniesť okná do popredia po zameraní"
 
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Dynamické pracovné priestory"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr ""
-"Pracovné priestory môžu byť vytvorené na požiadanie a automaticky "
-"odstránené, keď budú prázdne."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Statické pracovné priestory"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Počet pracovných priestorov je nemenný."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Pracovné priestory"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Ovládanie displejov"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Rozsah pracovných priestorov a displejov"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Pracovné priestory iba na hlavnom displeji"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Dodatočné displeje sú spracované ako nezávislé pracovné priestory."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Aktuálny pracovný priestor obsahuje dodatočné displeje."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Počet pracovných priestorov"
-
-#: gtweak/tweaks/tweak_group_xkb.py:166
-msgid "Typing"
-msgstr "Písanie"
-
-#: gtweak/tweaks/tweak_wacom.py:16
-msgid "Device"
-msgstr "Zariadenie"
-
-#: gtweak/tweaks/tweak_wacom.py:25
-msgid "Wacom"
-msgstr "Wacom"
+# placeholder text
+#: gtweak/tweakview.py:156
+msgid "Search Tweaks…"
+msgstr "Vyhľadajte vyladenia…"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:62
+#: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(predvolená)</i>"
+msgid "%s (default)"
+msgstr "%s (predvolená)"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:346
 msgid "Configuration changes require restart"
 msgstr "Zmeny konfigurácie vyžadujú reštart"
 
-#: gtweak/utils.py:352
+#: gtweak/utils.py:347
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Aby sa prejavili zmeny, musíte reštartovať vašu reláciu"
 
-#: gtweak/utils.py:356
+#: gtweak/utils.py:351
 msgid "Restart Session"
 msgstr "Reštartovať reláciu"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Zakázať všetky rozšírenia shellu"
+
+#~| msgid "GTK+"
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Domovská stránka"
+
+#~ msgid "General"
+#~ msgstr "Všeobecné"
+
+#~ msgid "Applications"
+#~ msgstr "Aplikácie"
+
+# PM: kde sa nachádza tento text?
+# DK: nikde som to tam nenasiel..tipujem ze skor to bude label
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "Nainštalujte vlastné alebo používateľské témy pre gnome-shell"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "Rozšírenie s používateľskou témou shellu je nesprávne nainštalované"
+
+#~ msgid "Themes"
+#~ msgstr "Témy"
+
+#~ msgid "Image"
+#~ msgstr "Obrázok"
+
+#~ msgid "Show Icons"
+#~ msgstr "Zobraziť ikony"
+
+#~ msgid "Home"
+#~ msgstr "Domovský priečinok"
+
+#~ msgid "Desktop"
+#~ msgstr "Pracovná plocha"
+
+#~ msgid "Icons on Desktop"
+#~ msgstr "Ikony na pracovnej ploche"
+
+#~ msgid "Network Servers"
+#~ msgstr "Sieťové servery"
+
+#~ msgid "Trash"
+#~ msgstr "Kôš"
+
+#~ msgid "Mounted Volumes"
+#~ msgstr "Pripojené zväzky"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Pôvodné titulky okien"
+
+#~ msgid "Suspend when laptop lid is closed"
+#~ msgstr "Uspať po zavretí krytu notebooku"
+
+#~ msgid "Animations"
+#~ msgstr "Animácie"
+
+#~ msgid "Over-Amplification"
+#~ msgstr "Nadmerné zosilnenie"
+
+#~ msgid ""
+#~ "Allows raising the volume above 100%. This can result in a loss of audio "
+#~ "quality; it is better to increase application volume settings, if "
+#~ "possible."
+#~ msgstr ""
+#~ "Umožňuje zvýšenie hlasitosti nad úroveň 100%. Môže to viesť k strate "
+#~ "kvality zvuku. Vhodnejšie je zvýšiť nastavenia hlasitosti v aplikácii, ak "
+#~ "je to možné."
+
+#~ msgid "Compose Key"
+#~ msgstr "Kláves Compose"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Scroll Lock"
+
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "Menu"
+
+#~ msgid "Right Alt"
+#~ msgstr "Pravé tlačidlo Alt"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Pravé tlačidlo Ctrl"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Caps Lock"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Ľavé tlačidlo Ctrl"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Umožňuje zadávanie dodatočných znakov."
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Emulácia kliknutia myšou"
+
+#~ msgid "Fingers"
+#~ msgstr "Prsty"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Kliknutím na touchpad dvoma prstami sa vykoná kliknutie pravým tlačidlom "
+#~ "a kliknutím troma prstami sa vykoná kliknutie stredným tlačidlom."
+
+#~ msgid "Area"
+#~ msgstr "Oblasť"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Kliknutím na dolnú pravú časť touchpadu sa vykoná kliknutie pravým "
+#~ "tlačidlom a kliknutím na dolnú strednú časť sa vykoná kliknutie stredným "
+#~ "tlačidlom."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Emulácia kliknutia myšou nebude použitá."
+
+#~ msgid "Keyboard & Mouse"
+#~ msgstr "Klávesnica a myš"
+
+#~ msgid "Acceleration Profile"
+#~ msgstr "Profil zrýchlenia"
+
+#~ msgid "Pointer Location"
+#~ msgstr "Umiestnenie ukazovateľa"
+
+#~ msgid "Press the Ctrl key to highlight the pointer."
+#~ msgstr "Stlačením klávesu Ctrl zvýrazníte ukazovateľ."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Zakázať počas písania"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Nie sú nainštalované žiadne rozšírenia"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Prehliadať v aplikácii Softvér"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Rozšírenie sa preberá"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Chyba počas načítavania rozšírenia"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Rozšírenie nepodporuje verziu shellu"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Neznáma chyba rozšírenia"
+
+# gtk label
+#~ msgid "Updating"
+#~ msgstr "Aktualizuje sa"
+
+#~ msgid "Error"
+#~ msgstr "Chyba"
+
+# gtk button
+#~ msgid "Update"
+#~ msgstr "Aktualizovať"
+
+#~ msgid "<primary>f"
+#~ msgstr "<hlavný>f"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Pridajte novú aplikáciu, ktorá sa spustí po spustení"
+
+#~ msgid "Window Titlebars"
+#~ msgstr "Záhlavia okien"
+
+#~ msgid "Top Bar"
+#~ msgstr "Horná lišta"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "Aktívny roh prehľadu aktivít"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "Percento batérie"
+
+#~ msgid "Clock"
+#~ msgstr "Hodiny"
+
+#~ msgid "Weekday"
+#~ msgstr "Deň v týždni"
+
+#~ msgid "Date"
+#~ msgstr "Dátum"
+
+#~ msgid "Seconds"
+#~ msgstr "Sekundy"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalendár"
+
+#~ msgid "Week Numbers"
+#~ msgstr "Čísla týždňov"
+
+#~ msgid "Window scaling"
+#~ msgstr "Mierka okien"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr "Mení koeficient mierky HiDPI pre okná GDK"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "Nastavenia budú vrátené o {0} sekundu"
+#~ msgstr[1] "Nastavenia budú vrátené o {0} sekundy"
+#~ msgstr[2] "Nastavenia budú vrátené o {0} sekúnd"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "Chcete ponechať tieto nastavenia mierky HiDPI?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "Vrátiť nastavenia"
+
+#~ msgid "Keep Changes"
+#~ msgstr "Ponechať zmeny"
+
+#~ msgid "HiDPI"
+#~ msgstr "HiDPI"
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "Dynamické pracovné priestory"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "Pracovné priestory môžu byť vytvorené na požiadanie a automaticky "
+#~ "odstránené, keď budú prázdne."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "Statické pracovné priestory"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "Počet pracovných priestorov je nemenný."
+
+#~ msgid "Workspaces"
+#~ msgstr "Pracovné priestory"
+
+#~ msgid "Display Handling"
+#~ msgstr "Ovládanie displejov"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "Rozsah pracovných priestorov a displejov"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "Pracovné priestory iba na hlavnom displeji"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "Dodatočné displeje sú spracované ako nezávislé pracovné priestory."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "Aktuálny pracovný priestor obsahuje dodatočné displeje."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Počet pracovných priestorov"
+
+#~ msgid "Device"
+#~ msgstr "Zariadenie"
+
+#~ msgid "Wacom"
+#~ msgstr "Wacom"
 
 #~ msgid "org.gnome.tweaks"
 #~ msgstr "org.gnome.tweaks"
@@ -895,9 +892,6 @@ msgstr "Reštartovať reláciu"
 #, fuzzy
 #~ msgid "Sloppy"
 #~ msgstr "Sloppy"
-
-#~ msgid "Click Method"
-#~ msgstr "Spôsob kliknutia"
 
 #~ msgid "Enable dark theme for all applications"
 #~ msgstr "Povoliť tmavú tému pre všetky aplikácie"
