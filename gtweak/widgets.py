@@ -582,6 +582,7 @@ class FileChooserButton(Gtk.Button, GObject.Object):
         super().__init__()
         self._btn_content = Adw.ButtonContent(label=_("None"),
                                               icon_name="document-open-symbolic")
+        self._btn_content.props.can_shrink = True
         self.set_child(self._btn_content)
 
         self._mimetypes = mimetypes
