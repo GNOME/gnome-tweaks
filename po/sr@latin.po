@@ -4,123 +4,163 @@
 # Miloš Popović <gpopac@gmail.com>.
 # Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012—2016.
 # Borisav Živanović <borisavzivanovic@gmail.com>, 2017.
+# Marko M. Kostić <marko.m.kostic@gmail.com>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2018-02-18 13:01+0000\n"
-"PO-Revision-Date: 2018-02-18 17:41+0100\n"
+"POT-Creation-Date: 2024-09-15 16:27+0000\n"
+"PO-Revision-Date: 2024-11-17 01:08+0100\n"
 "Last-Translator: Marko M. Kostić <marko.m.kostic@gmail.com>\n"
 "Language-Team: srpski <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Gtranslator 46.1\n"
 
-#: data/org.gnome.tweaks.appdata.xml.in:7
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.appdata.xml.in:8
 msgid "The GNOME Project"
 msgstr "Projekat Gnom"
 
-#: data/org.gnome.tweaks.appdata.xml.in:9 gtweak/app.py:23 gtweak/utils.py:315
-#: gtweak/utils.py:331
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
+#: gtweak/utils.py:348
 msgid "GNOME Tweaks"
 msgstr "Gnomov alat za lickanje"
 
-#: data/org.gnome.tweaks.appdata.xml.in:10 data/org.gnome.tweaks.desktop.in:4
-msgid "Tweak advanced GNOME 3 settings"
-msgstr "Nalickajte napredna podešavanja Gnoma 3"
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
+msgid "Tweak advanced GNOME settings"
+msgstr "Nalickajte Gnom naprednim podešavanjima"
 
-#: data/org.gnome.tweaks.appdata.xml.in:12
+#: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "Gnomov alat za lickanje omogućava doterivanje naprednih Gnomovih opcija."
 
-#: data/org.gnome.tweaks.appdata.xml.in:15
+#: data/org.gnome.tweaks.appdata.xml.in:19
 msgid ""
-"It can install and manage themes and extensions, change power settings, "
-"manage startup applications, and enable desktop icons among other settings."
+"It can manage keyboard mapping customizations, add startup applications, and "
+"set custom window controls among other settings."
 msgstr ""
-"On može da instalira i da upravlja temama i proširenjima, da izmeni podešavanja "
-"napajanja, da upravlja početnim programima, i da uključi ikonice radne površi "
-"pored drguih podešavanja."
+"Između ostalog, ovaj program može da mapira tastaturu kako vi želite, doda "
+"početne aplikacije ili podesi proizvoljnu kontrolu prozora."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:89
+#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Lickanja"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.tweaks.desktop.in:6
-msgid "org.gnome.tweaks"
-msgstr "org.gnome.tweaks"
-
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-msgid ""
-"Settings;Advanced;Preferences;Extensions;Fonts;Theme;XKB;Keyboard;Typing;"
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
-"podešavanja;napredno;postavke;proširenja;slovni likovi;fontovi;tema;ikskb;"
-"tastatura;kucanje;"
+"Podešavanja;napredno;postavke;slova;fontovi;tema;ikskb;tastatura;kucanje;"
+"početak;početni;Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;"
+"Typing;Startup;podešavanja;napredno;postavke;proširenja;slova;fontovi;tema;"
+"ikskb;tastatura;kucanje;početni"
 
-#: data/shell.ui:7
+#: data/shell.ui:6
 msgid "_Reset to Defaults"
 msgstr "_Vrati na podrazumevano"
 
-#: data/shell.ui:11
-msgid "Disable All Shell Extensions"
-msgstr "Isključi sva proširenja školjke"
+#: data/shell.ui:12
+msgid "_About Tweaks"
+msgstr "_O Lickanjima"
 
-#: data/shell.ui:17
-msgid "_About"
-msgstr "_O programu"
+#: data/tweaks.ui:58 gtweak/tweaks/tweak_group_font.py:37
+msgid "Fonts"
+msgstr "Fontovi"
 
-#: data/shell.ui:21
-msgid "_Quit"
-msgstr "_Izađi"
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:235
+msgid "Appearance"
+msgstr "Izgled"
 
-#: gtweak/app.py:67
+#: data/tweaks.ui:116 gtweak/tweaks/tweak_group_sound.py:42
+msgid "Sound"
+msgstr "Zvuk"
+
+#: data/tweaks.ui:145 gtweak/tweaks/tweak_group_mouse.py:113
+msgid "Mouse & Touchpad"
+msgstr "Miš i dodirna tabla"
+
+#: data/tweaks.ui:174 gtweak/tweaks/tweak_group_keyboard.py:258
+msgid "Keyboard"
+msgstr "Tastatura"
+
+#: data/tweaks.ui:203 gtweak/tweaks/tweak_group_windows.py:133
+msgid "Windows"
+msgstr "Prozori"
+
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
+msgid "Startup Applications"
+msgstr "Početni programi"
+
+#: gtweak/app.py:21
+msgid "_Continue"
+msgstr "_Nastavi"
+
+#: gtweak/app.py:23
+msgid "Extensions Has Moved"
+msgstr "Proširenja su premeštena"
+
+#. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
+#: gtweak/app.py:28
+#, python-brace-format
+msgid "Extensions management has been moved to {0}."
+msgstr "Upravljanje proširenjima je premešteno u program „{0}“."
+
+#. Translators: Placeholder will be replaced with "Flathub" in active link form
+#: gtweak/app.py:32
+#, python-brace-format
+msgid ""
+"We recommend downloading GNOME Extensions from {0} if your distribution does "
+"not include it."
+msgstr ""
+"Preporučujemo preuzimanje programa „Proširenja“ sa mesta {0} ukoliko ga vaša "
+"distribucija nija isporučila."
+
+#: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "Vrati na podrazumevano"
 
-#: gtweak/app.py:68
-msgid "Reset all tweak settings to the original default state?"
-msgstr "Da vratim sva podešavanja lickanja na izvorno zadato stanje?"
+#: gtweak/app.py:87
+msgid "Reset all tweaks settings to the original default state?"
+msgstr "Da li da vratim sva podešavanja na početne vrednosti?"
 
-#: gtweak/app.py:89 gtweak/app.py:91
+#: gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "Gnomova školjka"
 
-#: gtweak/app.py:91
+#: gtweak/app.py:99
 #, python-format
 msgid "(%s mode)"
 msgstr "(%s mod)"
 
-#: gtweak/app.py:94
+#: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "Gnomova školjka nije pokrenuta"
 
-#: gtweak/app.py:96
-msgid "GTK+"
-msgstr "GTK+"
-
-#: gtweak/app.py:103
-msgid "Homepage"
-msgstr "Veb stranica"
+#. TRANSLATORS: Add your name/nickname here (one name per line),
+#. they will be displayed in the "about" dialog
+#: gtweak/app.py:118
+msgid "translator-credits"
+msgstr ""
+"https://gnom.srb — prevod na srpski jezik\n"
+"Miloš Popović <gpopac@gmail.com>\n"
+"Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
+"Borisav Živanović <borisavzivanovic@gmail.com>"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
 msgstr "Ostalo"
 
-#: gtweak/tweakview.py:105
-msgid "Search Tweaks…"
-msgstr "Traži lickanja…"
-
-#: gtweak/tweaks/tweak_group_appearance.py:29
-#: gtweak/tweaks/tweak_group_startup.py:42
-msgid "Applications"
-msgstr "Programi"
+#: gtweak/tweaks/tweak_group_appearance.py:31
+msgid "Legacy Applications"
+msgstr "Zastareli programi"
 
 #: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
@@ -134,349 +174,301 @@ msgstr "Ikonice"
 msgid "Cursor"
 msgstr "Pokazivač miša"
 
-#: gtweak/tweaks/tweak_group_appearance.py:108
-msgid "Shell"
-msgstr "Školjka"
-
-#: gtweak/tweaks/tweak_group_appearance.py:108
-msgid "Install custom or user themes for gnome-shell"
-msgstr "Instaliraj proizvoljne ili korisničke teme za gnomovu školjku"
-
 #. check the shell is running and the usertheme extension is present
-#: gtweak/tweaks/tweak_group_appearance.py:111
+#: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
 msgstr "Nepoznata greška"
 
-#: gtweak/tweaks/tweak_group_appearance.py:116
+#: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
 msgstr "Školjka nije pokrenuta"
 
-#: gtweak/tweaks/tweak_group_appearance.py:138
-msgid "Shell user-theme extension incorrectly installed"
-msgstr "Proširenje korisničke teme školjke nije ispravno instalirano"
-
-#: gtweak/tweaks/tweak_group_appearance.py:141
+#: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
 msgstr "Proširenje korisničke teme školjke nije omogućeno"
 
-#: gtweak/tweaks/tweak_group_appearance.py:144
+#: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
 msgstr "Ne mogu da ispišem proširenja školjke"
 
-#: gtweak/tweaks/tweak_group_appearance.py:174
-msgid "<i>Default</i>"
-msgstr "<i>Podrazumevano</i>"
+#: gtweak/tweaks/tweak_group_appearance.py:152
+msgid "Shell"
+msgstr "Školjka"
 
-#: gtweak/tweaks/tweak_group_appearance.py:180
+#: gtweak/tweaks/tweak_group_appearance.py:157
+msgid "Adwaita (default)"
+msgstr "Advaita (podrazumevano)"
+
+#: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
 msgstr "Izaberite temu"
 
-#: gtweak/tweaks/tweak_group_appearance.py:229
+#: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "%s tema je uspešno ažurirana"
 
-#: gtweak/tweaks/tweak_group_appearance.py:231
+#: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "%s tema je uspešno instalirana"
 
-#: gtweak/tweaks/tweak_group_appearance.py:239
+#: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
 msgstr "Ne mogu da instaliram temu"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:244
+#: gtweak/tweaks/tweak_group_appearance.py:228
 msgid "Invalid theme"
 msgstr "Neispravna tema"
 
-#: gtweak/tweaks/tweak_group_appearance.py:256
-msgid "Appearance"
-msgstr "Izgled"
+#: gtweak/tweaks/tweak_group_appearance.py:236
+msgid "Styles"
+msgstr "Stilovi"
 
-#. GSettingsSwitchTweak("Buttons Icons","org.gnome.desktop.interface", "buttons-have-icons"),
-#. GSettingsSwitchTweak("Menu Icons","org.gnome.desktop.interface", "menus-have-icons"),
-#: gtweak/tweaks/tweak_group_appearance.py:259
-msgid "Animations"
-msgstr "Animacije"
-
-#: gtweak/tweaks/tweak_group_appearance.py:260
-msgid "Themes"
-msgstr "Tema"
-
-#: gtweak/tweaks/tweak_group_appearance.py:266
+#: gtweak/tweaks/tweak_group_appearance.py:251
 msgid "Background"
 msgstr "Pozadina"
 
-#: gtweak/tweaks/tweak_group_appearance.py:267
-#: gtweak/tweaks/tweak_group_appearance.py:272
-msgid "Image"
-msgstr "Slika"
+#: gtweak/tweaks/tweak_group_appearance.py:253
+msgid "Default Image"
+msgstr "Podrazumevana slika"
 
-#: gtweak/tweaks/tweak_group_appearance.py:269
-#: gtweak/tweaks/tweak_group_appearance.py:274
+#: gtweak/tweaks/tweak_group_appearance.py:259
+msgid "Dark Style Image"
+msgstr "Slika za tamni stil"
+
+#: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
 msgstr "Postavka"
 
-#: gtweak/tweaks/tweak_group_desktop.py:7
-msgid "Show Icons"
-msgstr "Prikaži ikonice"
-
-#: gtweak/tweaks/tweak_group_desktop.py:10
-msgid "Desktop"
-msgstr "Radna površ"
-
-#: gtweak/tweaks/tweak_group_desktop.py:11
-msgid "Icons on Desktop"
-msgstr "Ikonice na radnoj površi"
-
-#: gtweak/tweaks/tweak_group_desktop.py:13
-msgid "Home"
-msgstr "Lično"
-
-#: gtweak/tweaks/tweak_group_desktop.py:14
-msgid "Network Servers"
-msgstr "Mrežni serveri"
-
-#: gtweak/tweaks/tweak_group_desktop.py:15
-msgid "Trash"
-msgstr "Smeće"
-
-#: gtweak/tweaks/tweak_group_desktop.py:16
-msgid "Mounted Volumes"
-msgstr "Prikačeni uređaji"
-
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:22
+#: gtweak/tweaks/tweak_group_font.py:13
 msgid "Hinting"
 msgstr "Uputstva"
 
-#: gtweak/tweaks/tweak_group_font.py:15 gtweak/tweaks/tweak_group_font.py:54
-msgid "Antialiasing"
-msgstr "Umekšavanje"
-
-#: gtweak/tweaks/tweak_group_font.py:31
+#: gtweak/tweaks/tweak_group_font.py:18
 msgid "Full"
 msgstr "Ceo"
 
-#: gtweak/tweaks/tweak_group_font.py:37
+#: gtweak/tweaks/tweak_group_font.py:19
 msgid "Medium"
 msgstr "Osrednji"
 
-#: gtweak/tweaks/tweak_group_font.py:43
+#: gtweak/tweaks/tweak_group_font.py:20
 msgid "Slight"
 msgstr "Laki"
 
-#: gtweak/tweaks/tweak_group_font.py:49 gtweak/tweaks/tweak_group_font.py:74
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
 msgid "None"
 msgstr "Ništa"
 
-#: gtweak/tweaks/tweak_group_font.py:62
+#: gtweak/tweaks/tweak_group_font.py:27
+msgid "Antialiasing"
+msgstr "Umekšavanje"
+
+#: gtweak/tweaks/tweak_group_font.py:32
 msgid "Subpixel (for LCD screens)"
 msgstr "Podpiksel (za LCD ekrane)"
 
-#: gtweak/tweaks/tweak_group_font.py:68
+#: gtweak/tweaks/tweak_group_font.py:33
 msgid "Standard (grayscale)"
 msgstr "Standardno (nijanse sive)"
 
-#: gtweak/tweaks/tweak_group_font.py:99
-msgid "Fonts"
-msgstr "Fontovi"
+#: gtweak/tweaks/tweak_group_font.py:39
+msgid "Preferred Fonts"
+msgstr "Omiljeni fontovi"
 
-#: gtweak/tweaks/tweak_group_font.py:100
-msgid "Window Title"
-msgstr "Naslov prozora"
+#: gtweak/tweaks/tweak_group_font.py:40
+msgid "Interface Text"
+msgstr "Tekst sučelja"
 
-#: gtweak/tweaks/tweak_group_font.py:101
-msgid "Interface"
-msgstr "Sučelje"
+#: gtweak/tweaks/tweak_group_font.py:41
+msgid "Document Text"
+msgstr "Tekst dokumenta"
 
-#: gtweak/tweaks/tweak_group_font.py:102
-msgid "Document"
-msgstr "Dokument"
+#: gtweak/tweaks/tweak_group_font.py:42
+msgid "Monospace Text"
+msgstr "Tekst utvrđene širine"
 
-#: gtweak/tweaks/tweak_group_font.py:103
-msgid "Monospace"
-msgstr "Utvrđena širina"
+#: gtweak/tweaks/tweak_group_font.py:45
+msgid "Rendering"
+msgstr "Iscrtavanje"
 
-#: gtweak/tweaks/tweak_group_font.py:105
+#: gtweak/tweaks/tweak_group_font.py:49
+msgid "Size"
+msgstr "Veličina"
+
+#: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "Činilac srazmeravanja"
 
-#: gtweak/tweaks/tweak_group_xkb.py:39 gtweak/tweaks/tweak_group_windows.py:305
-#: gtweak/tweaks/tweak_group_keymouse.py:48
-#: gtweak/tweaks/tweak_group_keymouse.py:184
-#: gtweak/tweaks/tweak_group_keymouse.py:324
-msgid "Disabled"
-msgstr "Isključeno"
+#: gtweak/tweaks/tweak_group_keyboard.py:42
+msgid "Default"
+msgstr "Podrazumevano"
 
-#: gtweak/tweaks/tweak_group_xkb.py:166
+#: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
 msgstr "Kucanje"
 
-#: gtweak/tweaks/tweak_group_power.py:22
-msgid "Suspend when laptop lid is closed"
-msgstr "Prebaci u stanje spavanja prilikom zatvranja laptopa"
+#: gtweak/tweaks/tweak_group_keyboard.py:183
+#: gtweak/tweaks/tweak_group_mouse.py:13
+msgid "Emacs Input"
+msgstr "Emaksov ulaz"
 
-#: gtweak/tweaks/tweak_group_power.py:46
-msgid "Power"
-msgstr "Napajanje"
+#: gtweak/tweaks/tweak_group_keyboard.py:186
+#: gtweak/tweaks/tweak_group_mouse.py:16
+msgid "Overrides shortcuts to use keybindings from the Emacs editor."
+msgstr "Nadvladava upotrebu prečica okruženja zbog Emaksa."
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:49
-msgid "No Extensions Installed"
-msgstr "Nema instaliranih proširenja"
+#: gtweak/tweaks/tweak_group_keyboard.py:202
+msgid "Overview Shortcut"
+msgstr "Prečica za prikaz"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:56
-msgid "Browse in Software"
-msgstr "Pretraži među Programima"
+#: gtweak/tweaks/tweak_group_keyboard.py:210
+msgid "Left Super"
+msgstr "Levi super"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:118
-msgid "Extension downloading"
-msgstr "Preuzimanje proširenja"
+#: gtweak/tweaks/tweak_group_keyboard.py:211
+msgid "Right Super"
+msgstr "Desni super"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:120
-msgid "Error loading extension"
-msgstr "Ne mogu da učitam proširenje"
+#: gtweak/tweaks/tweak_group_keyboard.py:237
+#: gtweak/tweaks/tweak_group_keyboard.py:243
+msgid "Additional Layout Options"
+msgstr "Dodatne metode unosa"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:122
-msgid "Extension does not support shell version"
-msgstr "Proširenje ne podržava ovo izdanje školjke"
+#: gtweak/tweaks/tweak_group_keyboard.py:259
+msgid "Show Extended Input Sources"
+msgstr "Prikaži proširene izvore ulaza"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:124
-msgid "Unknown extension error"
-msgstr "Nepoznata greška proširenja"
+#: gtweak/tweaks/tweak_group_keyboard.py:262
+msgid "Increases the choice of input sources in the Settings application."
+msgstr "Povećava izbor ulaznih uređaja u Podešavanjima."
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:172
-msgid "Updating"
-msgstr "Ažuriram"
+#: gtweak/tweaks/tweak_group_keyboard.py:265
+msgid "Layout"
+msgstr "Raspored"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:192
-msgid "Error"
-msgstr "Greška"
+#: gtweak/tweaks/tweak_group_mouse.py:31
+msgid "Disable Secondary Click"
+msgstr "Onemogući desni klik"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:196
-msgid "Update"
-msgstr "Ažuriraj"
+#: gtweak/tweaks/tweak_group_mouse.py:32
+msgid ""
+"Disables secondary clicks on touchpads which do not have a physical "
+"secondary button"
+msgstr ""
+"Onemogućava desni klik na dodirnim tablama koje nemaju fizičko dugme za njega"
 
-#: gtweak/tweaks/tweak_group_shell_extensions.py:238
-msgid "Extensions"
-msgstr "Proširenja"
+#: gtweak/tweaks/tweak_group_mouse.py:76
+msgid "Mouse"
+msgstr "Miš"
 
-#: gtweak/tweaks/tweak_group_startup.py:30
-msgid "Startup applications are automatically started when you log in."
-msgstr "Početni programi se pokreću automatski kada se prijavite."
+#: gtweak/tweaks/tweak_group_mouse.py:77
+msgid "Middle Click Paste"
+msgstr "Ubacivanje klikom na srednji klik"
 
-#: gtweak/tweaks/tweak_group_startup.py:31
-#: gtweak/tweaks/tweak_group_startup.py:305
-msgid "Startup Applications"
-msgstr "Početni programi"
+#: gtweak/tweaks/tweak_group_mouse.py:85
+msgid "Touchpad"
+msgstr "Dodirna tabla"
 
-#: gtweak/tweaks/tweak_group_startup.py:48
-msgid "Search Applications…"
-msgstr "Traži programe..."
+#: gtweak/tweaks/tweak_group_mouse.py:87
+msgid "Touchpad Acceleration"
+msgstr "Ubrzanje dodirne table"
 
-#. Translators: This is the accelerator for opening the AppChooser search-bar
-#: gtweak/tweaks/tweak_group_startup.py:58
-msgid "<primary>f"
-msgstr "<primary>f"
+#: gtweak/tweaks/tweak_group_mouse.py:88
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the touchpad more difficult to use."
+msgstr ""
+"Isključivanje ubrzanja može da dozvoli brže i preciznije kretanje, ali može da "
+"učini rad sa dodirnom tablom težim."
 
-#: gtweak/tweaks/tweak_group_startup.py:77
+#: gtweak/tweaks/tweak_group_mouse.py:97
+msgid "Pointing Stick"
+msgstr "Pokazivač"
+
+#: gtweak/tweaks/tweak_group_mouse.py:99
+msgid "Pointing Stick Acceleration"
+msgstr "Ubrzanje pokazivača"
+
+#: gtweak/tweaks/tweak_group_mouse.py:100
+msgid ""
+"Turning acceleration off can allow faster and more precise movements, but "
+"can also make the pointing stick more difficult to use."
+msgstr ""
+"Isključivanje ubrzanja može da dozvoli brže i preciznije kretanje, ali može da "
+"učini rad sa pokazivačem težim."
+
+#: gtweak/tweaks/tweak_group_mouse.py:104
+msgid "Scrolling Method"
+msgstr "Način klizanja"
+
+#: gtweak/tweaks/tweak_group_sound.py:44
+msgid "System Sound Theme"
+msgstr "Tema za zvuk na sistemu"
+
+#: gtweak/tweaks/tweak_group_sound.py:48
+msgid "Specifies which sound theme to use for sound events."
+msgstr "Navodi temu zvukova koju će sistem koristiti za zvučne događaje."
+
+#: gtweak/tweaks/tweak_group_startup.py:51
 msgid "running"
 msgstr "pokrenut"
 
-#: gtweak/tweaks/tweak_group_startup.py:87
+#: gtweak/tweaks/tweak_group_startup.py:61
+msgid "Select Application"
+msgstr "Izaberite programe"
+
+#. Build header bar buttons
+#: gtweak/tweaks/tweak_group_startup.py:67
 msgid "_Close"
 msgstr "_Zatvori"
 
-#: gtweak/tweaks/tweak_group_startup.py:88
+#: gtweak/tweaks/tweak_group_startup.py:68
 msgid "_Add"
 msgstr "Dod_aj"
 
-#: gtweak/tweaks/tweak_group_startup.py:231
+#: gtweak/tweaks/tweak_group_startup.py:72
+msgid "Search Applications…"
+msgstr "Traži programe…"
+
+#: gtweak/tweaks/tweak_group_startup.py:195
 msgid "Remove"
 msgstr "Ukloni"
 
-#: gtweak/tweaks/tweak_group_startup.py:255
-msgid "New startup application"
-msgstr "Novi početni program"
+#: gtweak/tweaks/tweak_group_startup.py:221
+msgid "Startup applications are automatically started when you log in."
+msgstr "Početni programi se pokreću automatski kada se prijavite."
 
-#: gtweak/tweaks/tweak_group_startup.py:256
-msgid "Add a new application to be run at startup"
-msgstr "Dodajte novi program koji će biti pokrenut na početku"
+#: gtweak/tweaks/tweak_group_startup.py:258
+msgid "No Startup Applications"
+msgstr "Nema početnih programa"
 
-#: gtweak/tweaks/tweak_group_sound.py:12
-msgid "Sound"
-msgstr "Zvuk"
+#: gtweak/tweaks/tweak_group_startup.py:259
+msgid "Add a startup application"
+msgstr "Dodaj početni program"
 
-#: gtweak/tweaks/tweak_group_sound.py:13
-msgid "Over-Amplification"
-msgstr "Prekomerno pojačanje"
-
-#: gtweak/tweaks/tweak_group_sound.py:14
-msgid ""
-"Allows raising the volume above 100%. This can result in a loss of audio "
-"quality; it is better to increase application volume settings, if possible."
-msgstr ""
-"Dozvoljava pojačanje zvuka preko 100%. Ovo može izazvati smanjenje kvaliteta "
-"zvuka. Bolje je povećati zvuk u podešavanjima programa, ako je to moguće."
-
-#: gtweak/tweaks/tweak_group_top_bar.py:13
-msgid "Activities Overview Hot Corner"
-msgstr "Prikaz aktivnosti u vrućem ćošku"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:18
-msgid "Application Menu"
-msgstr "Izbornik programa"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:61
-msgid "Top Bar"
-msgstr "Gornja traka"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:63
-msgid "Battery Percentage"
-msgstr "Procenat napunjenosti baterije"
-
-#. Requires patch from https://bugzilla.gnome.org/688320
-#. GSettingsSwitchTweak(_("Activities Overview Hot Corner"),"org.gnome.shell", "enable-hot-corners", loaded=_shell_loaded),
-#: gtweak/tweaks/tweak_group_top_bar.py:66
-msgid "Clock"
-msgstr "Sat"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:67
-msgid "Date"
-msgstr "Datum"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:68
-msgid "Seconds"
-msgstr "Sekunde"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:69
-msgid "Calendar"
-msgstr "Kalendar"
-
-#: gtweak/tweaks/tweak_group_top_bar.py:70
-msgid "Week Numbers"
-msgstr "Brojevi nedelja"
-
-#: gtweak/tweaks/tweak_group_windows.py:19
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:13
+#: gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Fokusiranje prozora"
 
-#: gtweak/tweaks/tweak_group_windows.py:19
-#: gtweak/tweaks/tweak_group_windows.py:37
-#: gtweak/tweaks/tweak_group_windows.py:306
+#: gtweak/tweaks/tweak_group_windows.py:14
+#: gtweak/tweaks/tweak_group_windows.py:18
 msgid "Click to Focus"
 msgstr "Klikni da bi fokusirao"
 
-#: gtweak/tweaks/tweak_group_windows.py:39
+#: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
 msgstr "Prozori su u fokusu kada se klikne na njih."
 
-#: gtweak/tweaks/tweak_group_windows.py:63
-msgid "Sloppy"
-msgstr "Trapavo"
+#: gtweak/tweaks/tweak_group_windows.py:23
+msgid "Focus on Hover"
+msgstr "Usredsredi pri lebdenju"
 
-#: gtweak/tweaks/tweak_group_windows.py:65
+#: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
@@ -484,12 +476,11 @@ msgstr ""
 "Prozor se fokusira kada se preko njega pređe pokazivačem. Prozori ostaju u "
 "fokusu kada se pređe preko radne površi."
 
-#: gtweak/tweaks/tweak_group_windows.py:89
-#: gtweak/tweaks/tweak_group_windows.py:312
-msgid "Secondary-Click"
-msgstr "Sekundarni klik"
+#: gtweak/tweaks/tweak_group_windows.py:28
+msgid "Focus Follows Mouse"
+msgstr "Fokus prati miša"
 
-#: gtweak/tweaks/tweak_group_windows.py:91
+#: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
@@ -497,66 +488,59 @@ msgstr ""
 "Prozor se fokusira kada se preko njega pređe pokazivačem. Prelaskom preko "
 "radne površi prethodni prozor gubi fokus."
 
-#: gtweak/tweaks/tweak_group_windows.py:172
+#: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
 msgstr "Postavljanje"
 
 #. Translators: For RTL languages, this is the "Right" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:186
+#: gtweak/tweaks/tweak_group_windows.py:97
 msgid "Left"
 msgstr "Levo"
 
 #. Translators: For RTL languages, this is the "Left" direction since the
 #. interface is flipped
-#: gtweak/tweaks/tweak_group_windows.py:192
+#: gtweak/tweaks/tweak_group_windows.py:100
 msgid "Right"
 msgstr "Desno"
 
-#: gtweak/tweaks/tweak_group_windows.py:224
-msgid "Window scaling"
-msgstr "Srazmeravanje prozora"
+#: gtweak/tweaks/tweak_group_windows.py:135
+msgid "Titlebar Actions"
+msgstr "Radnje trake naslova"
 
-#: gtweak/tweaks/tweak_group_windows.py:224
-msgid "Adjust GDK window scaling factor for HiDPI"
-msgstr ""
-"Prilagodite činilac srazmeravanja GDK prozora za ekrane visoke rezolucije "
-"(HiDPI)"
+#: gtweak/tweaks/tweak_group_windows.py:136
+msgid "Double-Click"
+msgstr "Dvostruki klik"
 
-#: gtweak/tweaks/tweak_group_windows.py:252
-#, python-brace-format
-msgid "Settings will be reverted in {0} second"
-msgid_plural "Settings will be reverted in {0} seconds"
-msgstr[0] "Podešavanja će biti vraćena za {0} sekundu"
-msgstr[1] "Podešavanja će biti vraćena za {0} sekunde"
-msgstr[2] "Podešavanja će biti vraćena za {0} sekundi"
-msgstr[3] "Podešavanja će biti vraćena za {0} sekundu"
+#: gtweak/tweaks/tweak_group_windows.py:137
+msgid "Middle-Click"
+msgstr "Srednji klik"
 
-#: gtweak/tweaks/tweak_group_windows.py:268
-msgid "Do you want to keep these HiDPI settings?"
-msgstr "Da li želite da zadržite ova podešavanja za ekran visoke rezolucije?"
+#: gtweak/tweaks/tweak_group_windows.py:138
+msgid "Secondary-Click"
+msgstr "Sekundarni klik"
 
-#: gtweak/tweaks/tweak_group_windows.py:275
-msgid "Revert Settings"
-msgstr "Vrati podešavanja"
+#: gtweak/tweaks/tweak_group_windows.py:140
+msgid "Titlebar Buttons"
+msgstr "Dugmad trake naslova"
 
-#: gtweak/tweaks/tweak_group_windows.py:276
-msgid "Keep Changes"
-msgstr "Zadrži izmene"
+#: gtweak/tweaks/tweak_group_windows.py:141
+msgid "Maximize"
+msgstr "Uvećaj"
 
-#: gtweak/tweaks/tweak_group_windows.py:292
-msgid "HiDPI"
-msgstr "Ekran visoke rezolucije"
+#: gtweak/tweaks/tweak_group_windows.py:142
+msgid "Minimize"
+msgstr "Umanji"
 
-#: gtweak/tweaks/tweak_group_windows.py:298
-msgid "Windows"
-msgstr "Prozori"
+#: gtweak/tweaks/tweak_group_windows.py:146
+msgid "Click Actions"
+msgstr "Radnje na klik"
 
-#: gtweak/tweaks/tweak_group_windows.py:299
+#: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
 msgstr "Priloži važno prozorče"
 
-#: gtweak/tweaks/tweak_group_windows.py:300
+#: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
@@ -564,291 +548,355 @@ msgstr ""
 "Kada je ovo podešavanje uključeno važni prozori su vezani za prozor roditelja i "
 "ne mogu se pomerati."
 
-#: gtweak/tweaks/tweak_group_windows.py:301
-msgid "Resize with Secondary-Click"
-msgstr "Menjaj veličinu preko sekundarnog klika"
+#: gtweak/tweaks/tweak_group_windows.py:149
+msgid "Center New Windows"
+msgstr "Stavi nove prozore u sredinu"
 
-#: gtweak/tweaks/tweak_group_windows.py:302
+#: gtweak/tweaks/tweak_group_windows.py:150
 msgid "Window Action Key"
 msgstr "Taster radnje prozora"
 
-#: gtweak/tweaks/tweak_group_windows.py:308
+#: gtweak/tweaks/tweak_group_windows.py:153
+msgid "Disabled"
+msgstr "Isključeno"
+
+#: gtweak/tweaks/tweak_group_windows.py:156
+msgid "Resize with Secondary-Click"
+msgstr "Menjaj veličinu preko sekundarnog klika"
+
+#: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
 msgstr "Podigni prozore kada se nađu u fokusu"
 
-#: gtweak/tweaks/tweak_group_windows.py:309
-msgid "Titlebar Actions"
-msgstr "Radnje trake naslova"
-
-#: gtweak/tweaks/tweak_group_windows.py:310
-msgid "Double-Click"
-msgstr "Dvostruki klik"
-
-#: gtweak/tweaks/tweak_group_windows.py:311
-msgid "Middle-Click"
-msgstr "Srednji klik"
-
-#: gtweak/tweaks/tweak_group_windows.py:313
-msgid "Titlebar Buttons"
-msgstr "Dugmad trake naslova"
-
-#: gtweak/tweaks/tweak_group_windows.py:314
-msgid "Maximize"
-msgstr "Uvećaj"
-
-#: gtweak/tweaks/tweak_group_windows.py:315
-msgid "Minimize"
-msgstr "Umanji"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:19
-msgid "Dynamic Workspaces"
-msgstr "Radni prostori"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:38
-msgid ""
-"Workspaces can be created on demand, and are automatically removed when "
-"empty."
-msgstr ""
-"Radni prostori se mogu napraviti po potrebi, a automatski se uklanjaju kada "
-"su prazni."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:62
-msgid "Static Workspaces"
-msgstr "Stalni radni prostori"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:64
-msgid "Number of workspaces is fixed."
-msgstr "Broj radnih prostora je stalan."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:95
-#: gtweak/tweaks/tweak_group_workspaces.py:174
-msgid "Workspaces"
-msgstr "Radni prostori"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:177
-msgid "Display Handling"
-msgstr "Upravljanje monitorima"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:97
-#: gtweak/tweaks/tweak_group_workspaces.py:139
-msgid "Workspaces span displays"
-msgstr "Radni prostori pripadaju monitorima."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:113
-msgid "Workspaces on primary display only"
-msgstr "Radni prostori na glavnom monitoru"
-
-#: gtweak/tweaks/tweak_group_workspaces.py:115
-msgid "Additional displays are treated as independent workspaces."
-msgstr "Dodatni monitori se tretiraju kao nezavisne radni prostori."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:141
-msgid "The current workspace includes additional displays."
-msgstr "Trenutni radni prostor sadrži dodatne monitore."
-
-#: gtweak/tweaks/tweak_group_workspaces.py:176
-msgid "Number of Workspaces"
-msgstr "Broj radnih prostora"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:22
-msgid "Emacs Input"
-msgstr "Emaksov ulaz"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:25
-msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr "Nadvladava upotrebu prečica okruženja zbog Emaksa."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:41
-#: gtweak/tweaks/tweak_group_keymouse.py:109
-msgid "Compose Key"
-msgstr "Taster za sastavljanje"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:97
-#: gtweak/tweaks/tweak_group_keymouse.py:179
-msgid "Scroll Lock"
-msgstr "Scroll Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:98
-msgid "PrtScn"
-msgstr "PrtScn"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:99
-msgid "Menu"
-msgstr "Meni"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:100
-msgid "Right Alt"
-msgstr "Desni Alt"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:101
-msgid "Right Ctrl"
-msgstr "Desni Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:102
-#: gtweak/tweaks/tweak_group_keymouse.py:201
-msgid "Right Super"
-msgstr "Desni super"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:103
-msgid "Caps Lock"
-msgstr "Caps Lock"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:46
-#: gtweak/tweaks/tweak_group_keymouse.py:85
-#: gtweak/tweaks/tweak_group_keymouse.py:104
-msgid "Left Ctrl"
-msgstr "Levi Ctrl"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:52
-msgid "Allows entering additional characters."
-msgstr "Omogućava unos dodatnih znakova."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:127
-msgid ""
-"The compose key allows a wide variety of characters to be entered. To use "
-"it, press the compose key and then a sequence of characters.\n"
-"\n"
-"Many unusual characters can be entered by combining standard ones. For "
-"example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, "
-"<b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
-msgstr ""
-"Kompoz ki omogućava unos velikog izbora znakova. Da biste ga koristili "
-"potrebno je pritisnuti ga i nakon toga uneti znakove potrebnim redosledom.\n"
-"\n"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:190
-msgid "Overview Shortcut"
-msgstr "Prečica za prikaz"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:197
-msgid "Left Super"
-msgstr "Levi super"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:224
-#: gtweak/tweaks/tweak_group_keymouse.py:232
-msgid "Additional Layout Options"
-msgstr "Dodatne metode unosa"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:254
-#: gtweak/tweaks/tweak_group_keymouse.py:393
-msgid "Mouse Click Emulation"
-msgstr "Oponašanje klikova"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:272
-msgid "Fingers"
-msgstr "Prsti"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:274
-msgid ""
-"Click the touchpad with two fingers for right-click and three fingers for "
-"middle-click."
-msgstr ""
-"Klikni dodirnu tablu sa dva prsta za desni klik i sa tri prsta za srednji "
-"klik."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:298
-msgid "Area"
-msgstr "Površina"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:300
-msgid ""
-"Click the bottom right of the touchpad for right-click and the bottom middle "
-"for middle-click."
-msgstr ""
-"Klikni donji desni deo dodirne table za desni klik i donji srednji deo za "
-"srednji klik."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:326
-msgid "Don’t use mouse click emulation."
-msgstr "Ne koristi oponašanje kliktanja mišem."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:363
-msgid "Keyboard & Mouse"
-msgstr "Tastatura i miš"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:364
-msgid "Keyboard"
-msgstr "Tastatura"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:365
-msgid "Show Extended Input Sources"
-msgstr "Prikaži proširene izvore ulaza"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:368
-msgid "Increases the choice of input sources in the Settings application."
-msgstr "Povećava izbor ulaznih uređaja u Podešavanjima."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:374
-msgid "Mouse"
-msgstr "Miš"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:375
-msgid "Acceleration Profile"
-msgstr "Profil ubrzanja"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:379
-msgid "Pointer Location"
-msgstr "Mesto pokazivača"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:383
-msgid "Press the Ctrl key to highlight the pointer."
-msgstr "Pritisnite Ctrl taster za isticanje pokazivača."
-
-#: gtweak/tweaks/tweak_group_keymouse.py:384
-msgid "Middle Click Paste"
-msgstr "Ubacivanje klikom na srednji klik"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:388
-msgid "Touchpad"
-msgstr "Dodirna tabla"
-
-#: gtweak/tweaks/tweak_group_keymouse.py:389
-msgid "Disable While Typing"
-msgstr "Onemogući za vreme kucanja"
-
-#: gtweak/tweaks/tweak_wacom.py:16
-msgid "Device"
-msgstr "Uređaj"
-
-#: gtweak/tweaks/tweak_wacom.py:25
-msgid "Wacom"
-msgstr "Vakom"
+#: gtweak/tweakview.py:156
+msgid "Search Tweaks…"
+msgstr "Traži lickanja…"
 
 #. indicates the default theme, e.g Adwaita (default)
-#: gtweak/utils.py:60
+#: gtweak/utils.py:63
 #, python-format
-msgid "%s <i>(default)</i>"
-msgstr "%s <i>(podrazumevana)</i>"
+msgid "%s (default)"
+msgstr "%s (podrazumevana)"
 
-#: gtweak/utils.py:333
+#: gtweak/utils.py:350
 msgid "Configuration changes require restart"
 msgstr "Promene podešavanja zahtevaju ponovno pokretanje"
 
-#: gtweak/utils.py:334
+#: gtweak/utils.py:351
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr "Morate ponovo pokrenuti sesiju da bi izmene stupile na snagu"
 
-#: gtweak/utils.py:338
+#: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "Ponovo pokreni sesiju"
 
-#~ msgid "Click Method"
-#~ msgstr "Način kliktanja"
+#~ msgid "GTK"
+#~ msgstr "GTK"
+
+#~ msgid "Homepage"
+#~ msgstr "Veb stranica"
+
+#~ msgid "General"
+#~ msgstr "Opšte"
+
+#~ msgid "Install custom or user themes for gnome-shell"
+#~ msgstr "Instaliraj proizvoljne ili korisničke teme za gnomovu školjku"
+
+#~ msgid "Shell user-theme extension incorrectly installed"
+#~ msgstr "Proširenje korisničke teme školjke nije ispravno instalirano"
+
+#~ msgid "Themes"
+#~ msgstr "Tema"
+
+#~ msgid "Image"
+#~ msgstr "Slika"
+
+#~ msgid "Show Icons"
+#~ msgstr "Prikaži ikonice"
+
+#~ msgid "Home"
+#~ msgstr "Lično"
+
+#~ msgid "Desktop"
+#~ msgstr "Radna površ"
+
+#~ msgid "Icons on Desktop"
+#~ msgstr "Ikonice na radnoj površi"
+
+#~ msgid "Network Servers"
+#~ msgstr "Mrežni serveri"
+
+#~ msgid "Trash"
+#~ msgstr "Smeće"
+
+#~ msgid "Mounted Volumes"
+#~ msgstr "Prikačeni uređaji"
+
+#~ msgid "Legacy Window Titles"
+#~ msgstr "Naslovi zastarelih prozora"
+
+#~ msgid "Suspend when laptop lid is closed"
+#~ msgstr "Prebaci u stanje spavanja prilikom zatvranja laptopa"
+
+#~ msgid "Over-Amplification"
+#~ msgstr "Prekomerno pojačanje"
+
+#~ msgid ""
+#~ "Allows raising the volume above 100%. This can result in a loss of audio "
+#~ "quality; it is better to increase application volume settings, if "
+#~ "possible."
+#~ msgstr ""
+#~ "Dozvoljava pojačanje zvuka preko 100%. Ovo može izazvati smanjenje kvaliteta "
+#~ "zvuka. Bolje je povećati zvuk u podešavanjima programa, ako je to moguće."
+
+#~ msgid "Mouse Click Emulation"
+#~ msgstr "Oponašanje klikova"
+
+#~ msgid "Fingers"
+#~ msgstr "Prsti"
+
+#~ msgid ""
+#~ "Click the touchpad with two fingers for right-click and three fingers for "
+#~ "middle-click."
+#~ msgstr ""
+#~ "Klikni dodirnu tablu sa dva prsta za desni klik i sa tri prsta za srednji "
+#~ "klik."
+
+#~ msgid "Area"
+#~ msgstr "Površina"
+
+#~ msgid ""
+#~ "Click the bottom right of the touchpad for right-click and the bottom "
+#~ "middle for middle-click."
+#~ msgstr ""
+#~ "Klikni donji desni deo dodirne table za desni klik i donji srednji deo za "
+#~ "srednji klik."
+
+#~ msgid "Don’t use mouse click emulation."
+#~ msgstr "Ne koristi oponašanje kliktanja mišem."
+
+#~ msgid "Keyboard & Mouse"
+#~ msgstr "Tastatura i miš"
+
+#~ msgid "Acceleration Profile"
+#~ msgstr "Profil ubrzanja"
+
+#~ msgid "Pointer Location"
+#~ msgstr "Mesto pokazivača"
+
+#~ msgid "Press the Ctrl key to highlight the pointer."
+#~ msgstr "Pritisnite Ctrl taster za isticanje pokazivača."
+
+#~ msgid "Disable While Typing"
+#~ msgstr "Onemogući za vreme kucanja"
+
+#~ msgid "Applications"
+#~ msgstr "Programi"
+
+#~ msgid "<primary>f"
+#~ msgstr "<primary>f"
+
+#~ msgid "Add a new application to be run at startup"
+#~ msgstr "Dodajte novi program koji će biti pokrenut na početku"
+
+#~ msgid "Window Titlebars"
+#~ msgstr "Naslovne trake prozora"
+
+#~ msgid "Top Bar"
+#~ msgstr "Gornja traka"
+
+#~ msgid "Clock"
+#~ msgstr "Sat"
+
+#~ msgid "Weekday"
+#~ msgstr "Dan vikenda"
+
+#~ msgid "Date"
+#~ msgstr "Datum"
+
+#~ msgid "Seconds"
+#~ msgstr "Sekunde"
+
+#~ msgid "Calendar"
+#~ msgstr "Kalendar"
+
+#~ msgid "Week Numbers"
+#~ msgstr "Brojevi nedelja"
+
+#~ msgid "Window scaling"
+#~ msgstr "Srazmeravanje prozora"
+
+#~ msgid "Adjust GDK window scaling factor for HiDPI"
+#~ msgstr ""
+#~ "Prilagodite činilac srazmeravanja GDK prozora za ekrane visoke rezolucije "
+#~ "(HiDPI)"
+
+#, python-brace-format
+#~ msgid "Settings will be reverted in {0} second"
+#~ msgid_plural "Settings will be reverted in {0} seconds"
+#~ msgstr[0] "Podešavanja će biti vraćena za {0} sekundu"
+#~ msgstr[1] "Podešavanja će biti vraćena za {0} sekunde"
+#~ msgstr[2] "Podešavanja će biti vraćena za {0} sekundi"
+#~ msgstr[3] "Podešavanja će biti vraćena za {0} sekundu"
+
+#~ msgid "Do you want to keep these HiDPI settings?"
+#~ msgstr "Da li želite da zadržite ova podešavanja za ekran visoke rezolucije?"
+
+#~ msgid "Revert Settings"
+#~ msgstr "Vrati podešavanja"
+
+#~ msgid "Keep Changes"
+#~ msgstr "Zadrži izmene"
+
+#~ msgid "HiDPI"
+#~ msgstr "Ekran visoke rezolucije"
+
+#~ msgid "Device"
+#~ msgstr "Uređaj"
+
+#~ msgid "Wacom"
+#~ msgstr "Vakom"
+
+#~ msgid "Animations"
+#~ msgstr "Animacije"
+
+#~ msgid "Compose Key"
+#~ msgstr "Taster za sastavljanje"
+
+#~ msgid "Scroll Lock"
+#~ msgstr "Scroll Lock"
+
+#~ msgid "PrtScn"
+#~ msgstr "PrtScn"
+
+#~ msgid "Menu"
+#~ msgstr "Meni"
+
+#~ msgid "Right Alt"
+#~ msgstr "Desni Alt"
+
+#~ msgid "Right Ctrl"
+#~ msgstr "Desni Ctrl"
+
+#~ msgid "Caps Lock"
+#~ msgstr "Caps Lock"
+
+#~ msgid "Left Ctrl"
+#~ msgstr "Levi Ctrl"
+
+#~ msgid "Allows entering additional characters."
+#~ msgstr "Omogućava unos dodatnih znakova."
+
+#~ msgid ""
+#~ "The compose key allows a wide variety of characters to be entered. To use "
+#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "\n"
+#~ "Many unusual characters can be entered by combining standard ones. For "
+#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
+#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ msgstr ""
+#~ "Kompoz ki omogućava unos velikog izbora znakova. Da biste ga koristili "
+#~ "potrebno je pritisnuti ga i nakon toga uneti znakove potrebnim "
+#~ "redosledom.\n"
+#~ "\n"
+
+#~ msgid "Activities Overview Hot Corner"
+#~ msgstr "Prikaz aktivnosti u vrućem uglu"
+
+#~ msgid "Battery Percentage"
+#~ msgstr "Procenat napunjenosti baterije"
+
+#~ msgid "Edge Tiling"
+#~ msgstr "Popločavanje po ivicama"
+
+#~ msgid "When on, windows are tiled when dragged to screen edges."
+#~ msgstr ""
+#~ "Kada je uključeno, prozori se popločavaju kada se prevuku u ugao ekrana."
+
+#~ msgid "Dynamic Workspaces"
+#~ msgstr "Radni prostori"
+
+#~ msgid ""
+#~ "Workspaces can be created on demand, and are automatically removed when "
+#~ "empty."
+#~ msgstr ""
+#~ "Radni prostori se mogu napraviti po potrebi, a automatski se uklanjaju "
+#~ "kada su prazni."
+
+#~ msgid "Static Workspaces"
+#~ msgstr "Stalni radni prostori"
+
+#~ msgid "Number of workspaces is fixed."
+#~ msgstr "Broj radnih prostora je stalan."
+
+#~ msgid "Workspaces"
+#~ msgstr "Radni prostori"
+
+#~ msgid "Display Handling"
+#~ msgstr "Upravljanje ekranima"
+
+#~ msgid "Workspaces span displays"
+#~ msgstr "Radni prostori zauzimaju više ekrana"
+
+#~ msgid "Workspaces on primary display only"
+#~ msgstr "Radni prostori samo na glavnom ekranu"
+
+#~ msgid "Additional displays are treated as independent workspaces."
+#~ msgstr "Dodatni ekrani se smatraju nezavisnim radnim prostorima."
+
+#~ msgid "The current workspace includes additional displays."
+#~ msgstr "Trenutni radni prostor sadrži dodatne ekrane."
+
+#~ msgid "Number of Workspaces"
+#~ msgstr "Broj radnih prostora"
+
+#~ msgid "Disable All Shell Extensions"
+#~ msgstr "Isključi sva proširenja školjke"
+
+#~ msgid "No Extensions Installed"
+#~ msgstr "Nema instaliranih proširenja"
+
+#~ msgid "Browse in Software"
+#~ msgstr "Pretraži među Programima"
+
+#~ msgid "Extension downloading"
+#~ msgstr "Preuzimanje proširenja"
+
+#~ msgid "Error loading extension"
+#~ msgstr "Ne mogu da učitam proširenje"
+
+#~ msgid "Extension does not support shell version"
+#~ msgstr "Proširenje ne podržava ovo izdanje školjke"
+
+#~ msgid "Unknown extension error"
+#~ msgstr "Nepoznata greška proširenja"
+
+#~ msgid "Updating"
+#~ msgstr "Ažuriram"
+
+#~ msgid "Error"
+#~ msgstr "Greška"
+
+#~ msgid "Update"
+#~ msgstr "Ažuriraj"
+
+#~ msgid "org.gnome.tweaks"
+#~ msgstr "org.gnome.tweaks"
+
+#~ msgid "Application Menu"
+#~ msgstr "Izbornik programa"
+
+#~ msgid "_About"
+#~ msgstr "_O programu"
+
+#~ msgid "_Quit"
+#~ msgstr "_Izađi"
+
+#~ msgid "Power"
+#~ msgstr "Napajanje"
+
+#~ msgid "Sloppy"
+#~ msgstr "Trapavo"
 
 #~ msgid "Enable dark theme for all applications"
 #~ msgstr "Uključite tamnu temu za sve programe"
@@ -936,9 +984,6 @@ msgstr "Ponovo pokreni sesiju"
 
 #~ msgid "Automatically Raise Windows"
 #~ msgstr "Samostalno izdigni prozore"
-
-#~ msgid "Focus Mode"
-#~ msgstr "Režim prvog plana"
 
 #~ msgid "Key theme"
 #~ msgstr "Tema tastera"
