@@ -3,17 +3,19 @@
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
-    "command" : "gnome-tweaks",
+    "command" : "start-gnome-tweaks",
     "tags" : [
         "devel"
     ],
     "desktop-file-name-prefix" : "(Development) ",
     "finish-args" : [
         "--device=dri",
+        "--env=GIO_EXTRA_MODULES=/app/lib/gio/modules/",
         "--filesystem=xdg-run/dconf",
         "--filesystem=xdg-config/dconf",
         "--filesystem=xdg-run/gvfsd",
         "--talk-name=ca.desrt.dconf",
+        "--talk-name=org.freedesktop.Flatpak",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf",
         "--filesystem=host",
         "--socket=session-bus",
@@ -38,6 +40,44 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gnome-desktop.git"
+                }
+            ]
+        },
+        {
+            "name" : "dconf",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dbash_completion=false",
+                "-Dman=false"
+            ],
+            "cleanup" : [
+                "/include",
+                "/lib/pkgconfig",
+                "/libexec",
+                "/share/dbus-1"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url" : "https://download.gnome.org/sources/dconf/0.40/dconf-0.40.0.tar.xz",
+                    "sha256" : "cf7f22a4c9200421d8d3325c5c1b8b93a36843650c9f95d6451e20f0bcb24533"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "dconf-override.patch"
+                }
+            ]
+        },
+        {
+            "name" : "scripts",
+            "buildsystem" : "simple",
+            "build-commands" : [
+                "install -Dm 755 start-gnome-tweaks.sh /app/bin/start-gnome-tweaks"
+            ],
+            "sources" : [
+                {
+                    "type" : "file",
+                    "path" : "start-gnome-tweaks.sh"
                 }
             ]
         },
