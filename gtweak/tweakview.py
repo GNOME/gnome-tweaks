@@ -181,7 +181,7 @@ class Window(Adw.ApplicationWindow):
             self.add_shortcut(shortcut)
 
     def _load_css(self):
-        if gtweak.APP_ID.endswith('Devel'):
+        if gtweak.defs.IS_DEVEL:
             self.add_css_class('devel')
         css_provider = Gtk.CssProvider()
         css_provider.load_from_path(

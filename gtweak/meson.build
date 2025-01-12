@@ -7,6 +7,7 @@ defs_conf.set('PKGDATADIR', pkgdatadir)
 defs_conf.set('APPID', pkgappid)
 defs_conf.set('TWEAKDIR', join_paths(gtweakdir, 'tweaks'))
 defs_conf.set('VERSION', meson.project_version())
+defs_conf.set('PROFILE', get_option('profile'))
 
 configure_file(
   input: 'defs.py.in',

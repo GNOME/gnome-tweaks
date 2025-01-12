@@ -12,10 +12,10 @@ include:
       tarball-artifact-path: "${TARBALL_ARTIFACT_PATH}"
 
 variables:
-    BUNDLE: "org.gnome.TweaksDevel.flatpak"
-    MANIFEST_PATH: "org.gnome.Tweaks.json"
+    BUNDLE: "org.gnome.tweaks.flatpak"
+    MANIFEST_PATH: "org.gnome.tweaks.json"
     FLATPAK_MODULE: "gnome-tweaks"
-    APP_ID: "org.gnome.TweaksDevel"
+    APP_ID: "org.gnome.tweaks"
     RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
     TARBALL_ARTIFACT_PATH: ".flatpak-builder/build/${FLATPAK_MODULE}/_flatpak_build/meson-dist/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.xz"
 

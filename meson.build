@@ -39,10 +39,6 @@ pkgdatadir = join_paths(datadir, meson.project_name())
 default_pkgappid = 'org.gnome.tweaks'
 pkgappid = default_pkgappid
 
-if get_option('profile') == 'development'
-  pkgappid = 'org.gnome.TweaksDevel'
-endif
-
 appdatadir = join_paths(datadir, 'metainfo')
 desktopdir = join_paths(datadir, 'applications')
 gtweakdir = python3.get_install_dir(subdir: 'gtweak')
