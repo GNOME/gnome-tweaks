@@ -1,0 +1,38 @@
+stages:
+  - check
+  - build
+  - deploy
+
+include:
+  - project: 'gnome/citemplates'
+    file: 'flatpak/flatpak_ci_initiative.yml'
+  - component: gitlab.gnome.org/GNOME/citemplates/release-service@master
+    inputs:
+      dist-job-name: "flatpak_x86_64"
+      tarball-artifact-path: "${TARBALL_ARTIFACT_PATH}"
+
+variables:
+    BUNDLE: "org.gnome.TweaksDevel.flatpak"
+    MANIFEST_PATH: "org.gnome.Tweaks.json"
+    FLATPAK_MODULE: "gnome-tweaks"
+    APP_ID: "org.gnome.TweaksDevel"
+    RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
+    TARBALL_ARTIFACT_PATH: ".flatpak-builder/build/${FLATPAK_MODULE}/_flatpak_build/meson-dist/${CI_PROJECT_NAME}-${CI_COMMIT_TAG}.tar.xz"
+
+flatpak_x86_64:
+    extends: .flatpak@x86_64
+    stage: build
+
+flatpak_aarch64:
+    extends: .flatpak@aarch64
+    stage: build
+    allow_failure: true
+
+publish-nightly@x86_64:
+  extends: '.publish_nightly'
+  needs: ['flatpak_x86_64']
+
+publish-nightly@aarch64:
+  extends: '.publish_nightly'
+  needs: ['flatpak_aarch64']
+  allow_failure: true
