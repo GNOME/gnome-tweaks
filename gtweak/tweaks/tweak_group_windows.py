@@ -144,7 +144,7 @@ TWEAK_GROUP = TweakPreferencesPage(
     ),
     TweakPreferencesGroup(
         _("Click Actions"), "title-window-behavior",
-        GSettingsTweakSwitchRow(_("Attach Modal Dialogs"),"org.gnome.mutter", "attach-modal-dialogs",
+        GSettingsTweakSwitchRow(_("Attach Modal Dialogs"),"org.gnome.desktop.wm.preferences", "attach-modal-dialogs",
                         desc=_("When on, modal dialog windows are attached to their parent windows, and cannot be moved.")),
         GSettingsTweakSwitchRow(_("Center New Windows"),"org.gnome.mutter", "center-new-windows"),
         GSettingsTweakComboRow(_("Window Action Key"),
