@@ -44,6 +44,7 @@ desktopdir = join_paths(datadir, 'applications')
 gtweakdir = python3.get_install_dir(subdir: 'gtweak')
 icondir = join_paths(datadir, 'icons', 'hicolor')
 schemadir = join_paths(datadir, 'glib-2.0', 'schemas')
+servicedir = join_paths(datadir, 'dbus-1', 'services')
 
 install_data('gnome-tweaks', install_dir: bindir)
 

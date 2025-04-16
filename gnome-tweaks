@@ -81,6 +81,7 @@ if __name__ == '__main__':
                       help="Print the names of settings modified")
     parser.add_option("-d", "--debug", action="store_true",
                       help="Enable debug output")
+    parser.add_option("--gapplication-service", action="store_true")
     options, args = parser.parse_args()
 
     setup_defs(options.prefix or None)
@@ -100,5 +101,5 @@ if __name__ == '__main__':
 
     app = GnomeTweaks()
     signal.signal(signal.SIGINT, signal.SIG_DFL)
-    exit_status = app.run(None)
+    exit_status = app.run(sys.argv)
     sys.exit(exit_status)

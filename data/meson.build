@@ -44,6 +44,14 @@ if desktop_file_validate.found()
   )
 endif
 
+configure_file(
+  input: default_pkgappid + '.service.in',
+  output: pkgappid + '.service',
+  configuration: defs_conf,
+  install: true,
+  install_dir: servicedir
+)
+
 gui_data = [
   'shell.ui',
   'tweaks.ui',
