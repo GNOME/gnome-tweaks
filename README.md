@@ -54,5 +54,5 @@ This program is free software: you can redistribute it and/or modify it under
 the terms of the GNU General Public License as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later version.
 
-data/org.gnome.tweaks.appdata.xml.in is licensed under the [Creative Commons
+data/org.gnome.tweaks.metainfo.xml.in is licensed under the [Creative Commons
 CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode) license.

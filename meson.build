@@ -39,7 +39,7 @@ pkgdatadir = join_paths(datadir, meson.project_name())
 default_pkgappid = 'org.gnome.tweaks'
 pkgappid = default_pkgappid
 
-appdatadir = join_paths(datadir, 'metainfo')
+metainfodir = join_paths(datadir, 'metainfo')
 desktopdir = join_paths(datadir, 'applications')
 gtweakdir = python3.get_install_dir(subdir: 'gtweak')
 icondir = join_paths(datadir, 'icons', 'hicolor')
