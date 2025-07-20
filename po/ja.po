@@ -1,5 +1,5 @@
 # gnome-tweak-tool ja.po.
-# Copyright (C) 2011-2020, 2022 Free Software Foundation, Inc.
+# Copyright (C) 2011-2020, 2022, 2025 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2011.
 # Jiro Matsuzawa <jmatsuzawa@src.gnome.org>, 2011-2017.
@@ -8,20 +8,23 @@
 # sicklylife <translation@sicklylife.jp>, 2019-2020, 2022.
 # Andre Klapper <ak-47@gmx.net>, 2020.
 # Vyasdev <vyasdev217@gmail.com>, 2023.
+# Makoto Sakaguchi <ycco34vx@gmail.com>, 2025.
+# Seiji Iizuka <seiji@iizuka.dev>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-03-26 03:35+0000\n"
-"PO-Revision-Date: 2022-03-12 18:00+0900\n"
-"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
-"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"POT-Creation-Date: 2025-05-27 15:35+0000\n"
+"PO-Revision-Date: 2025-07-04 21:16+0900\n"
+"Last-Translator: Seiji Iizuka <seiji@iizuka.dev>\n"
+"Language-Team: Japanese <https://l10n.gnome.org/teams/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 48.0\n"
 
 #. developer_name tag deprecated with Appstream 1.0
 #: data/org.gnome.tweaks.appdata.xml.in:8
@@ -35,24 +38,19 @@ msgstr "GNOME Tweaks"
 
 #: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
 msgid "Tweak advanced GNOME settings"
-msgstr "GNOME 3 の高度な設定"
+msgstr "GNOME の高度な設定を調整する"
 
 #: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
-msgstr "GNOME Tweaks は GNOME の詳細なオプションを調整するためのツールです。"
+msgstr "GNOME Tweaks は GNOME の高度なオプションの調整を可能にします。"
 
 #: data/org.gnome.tweaks.appdata.xml.in:19
-#, fuzzy
-#| msgid ""
-#| "It can install and manage themes, change power settings, manage startup "
-#| "applications, and enable desktop icons among other settings."
 msgid ""
 "It can manage keyboard mapping customizations, add startup applications, and "
 "set custom window controls among other settings."
 msgstr ""
-"このツールを使うと、テーマや拡張機能のインストールと管理、また電源設定の変更"
-"や、スタートアップアプリケーションの管理、デスクトップアイコンの設定、その他"
-"さまざまな設定を行うことができます。"
+"また、キーボードマッピングのカスタマイズ、起動アプリケーションの追加、カスタ"
+"ムウィンドウコントロールの設定など、その他多くの設定を管理できます。"
 
 #: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
 #: gtweak/tweakview.py:129
@@ -61,13 +59,11 @@ msgstr "Tweaks"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
-#, fuzzy
-#| msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;"
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr ""
-"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;設定;高度;フォ"
-"ント;テーマ;キーボード;タイピング;customize;カスタマイズ;addon;addin;アドオ"
-"ン;アドイン;gnomeshell;TweakTool;"
+"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;設定;高"
+"度;フォント;テーマ;キーボード;タイピング;customize;カスタマイズ;addon;addin;"
+"アドオン;アドイン;gnomeshell;TweakTool;"
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -111,13 +107,13 @@ msgstr "続行(_C)"
 
 #: gtweak/app.py:23
 msgid "Extensions Has Moved"
-msgstr "拡張機能は移行しました"
+msgstr "拡張機能は移動しました"
 
 #. Translators: Placeholder will be replaced with "GNOME Extensions" in active link form
 #: gtweak/app.py:28
 #, python-brace-format
 msgid "Extensions management has been moved to {0}."
-msgstr "拡張機能の管理は {0} で行うようになりました。"
+msgstr "拡張機能の管理は {0} に移動されました。"
 
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
 #: gtweak/app.py:32
@@ -126,18 +122,16 @@ msgid ""
 "We recommend downloading GNOME Extensions from {0} if your distribution does "
 "not include it."
 msgstr ""
-"お使いのディストリビューションが GNOME Extensions を同梱していない場合は {0} "
-"からダウンロードすることをお勧めします。"
+"お使いのディストリビューションに GNOME Extensions が含まれていない場合は、"
+"{0} から GNOME Extensions をダウンロードすることをお勧めします。"
 
 #: gtweak/app.py:86
 msgid "Reset to Defaults"
 msgstr "デフォルト設定に戻す"
 
 #: gtweak/app.py:87
-#, fuzzy
-#| msgid "Reset all tweak settings to the original default state?"
 msgid "Reset all tweaks settings to the original default state?"
-msgstr "Tweaks で変更したすべての設定を、オリジナルのデフォルト値に戻しますか?"
+msgstr "すべての Tweaks 設定を初期状態にリセットしますか?"
 
 #: gtweak/app.py:99
 msgid "GNOME Shell"
@@ -157,6 +151,16 @@ msgstr "GNOME Shell が起動していません"
 #: gtweak/app.py:118
 msgid "translator-credits"
 msgstr ""
+"Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
+"Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
+"Hajime Taira <htaira@redhat.com>\n"
+"Shinichirou Yamada <yamada_strong_yamada_nice_64bit@yahoo.co.jp>\n"
+"sicklylife <translation@sicklylife.jp>\n"
+"Andre Klapper <ak-47@gmx.net>\n"
+"Vyasdev <vyasdev217@gmail.com>\n"
+"Makoto Sakaguchi <ycco34vx@gmail.com>\n"
+"Japanese Translation Team https://l10n.gnome.org/teams/ja/\n"
+"Seiji Iizuka <seiji@iizuka.dev>"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
@@ -164,11 +168,11 @@ msgstr "その他"
 
 #: gtweak/tweaks/tweak_group_appearance.py:31
 msgid "Legacy Applications"
-msgstr "レガシーなアプリケーション"
+msgstr "レガシーアプリケーション"
 
 #: gtweak/tweaks/tweak_group_appearance.py:63
 msgid "Error writing setting"
-msgstr "設定変更エラー"
+msgstr "設定の書き込みエラー"
 
 #: gtweak/tweaks/tweak_group_appearance.py:69
 msgid "Icons"
@@ -181,11 +185,11 @@ msgstr "カーソル"
 #. check the shell is running and the usertheme extension is present
 #: gtweak/tweaks/tweak_group_appearance.py:107
 msgid "Unknown error"
-msgstr "原因不明のエラー"
+msgstr "不明なエラー"
 
 #: gtweak/tweaks/tweak_group_appearance.py:112
 msgid "Shell not running"
-msgstr "GNOME Shell が起動していません"
+msgstr "GNOME Shell が実行されていません"
 
 #: gtweak/tweaks/tweak_group_appearance.py:120
 msgid "Shell user-theme extension not enabled"
@@ -193,7 +197,7 @@ msgstr "GNOME Shell ユーザーテーマ拡張機能が有効ではありませ
 
 #: gtweak/tweaks/tweak_group_appearance.py:123
 msgid "Could not list shell extensions"
-msgstr "Shell 拡張機能を一覧表示できません"
+msgstr "GNOME Shell 拡張機能を一覧表示できません"
 
 #: gtweak/tweaks/tweak_group_appearance.py:152
 msgid "Shell"
@@ -201,7 +205,7 @@ msgstr "GNOME Shell"
 
 #: gtweak/tweaks/tweak_group_appearance.py:157
 msgid "Adwaita (default)"
-msgstr ""
+msgstr "Adwaita (デフォルト)"
 
 #: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
@@ -210,12 +214,12 @@ msgstr "テーマを選択"
 #: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
-msgstr "%s のテーマを更新しました"
+msgstr "%s テーマが正常に更新されました"
 
 #: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
-msgstr "%s のテーマをインストールしました"
+msgstr "%s テーマが正常にインストールされました"
 
 #: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
@@ -236,11 +240,11 @@ msgstr "背景"
 
 #: gtweak/tweaks/tweak_group_appearance.py:253
 msgid "Default Image"
-msgstr ""
+msgstr "デフォルト画像"
 
 #: gtweak/tweaks/tweak_group_appearance.py:259
 msgid "Dark Style Image"
-msgstr ""
+msgstr "ダークスタイル画像"
 
 #: gtweak/tweaks/tweak_group_appearance.py:265
 msgid "Adjustment"
@@ -263,7 +267,7 @@ msgid "Slight"
 msgstr "弱"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:613
 msgid "None"
 msgstr "なし"
 
@@ -281,15 +285,15 @@ msgstr "標準 (グレースケール)"
 
 #: gtweak/tweaks/tweak_group_font.py:39
 msgid "Preferred Fonts"
-msgstr ""
+msgstr "優先フォント"
 
 #: gtweak/tweaks/tweak_group_font.py:40
 msgid "Interface Text"
-msgstr "インターフェースのテキスト"
+msgstr "インターフェーステキスト"
 
 #: gtweak/tweaks/tweak_group_font.py:41
 msgid "Document Text"
-msgstr "ドキュメントのテキスト"
+msgstr "ドキュメントテキスト"
 
 #: gtweak/tweaks/tweak_group_font.py:42
 msgid "Monospace Text"
@@ -297,21 +301,19 @@ msgstr "等幅テキスト"
 
 #: gtweak/tweaks/tweak_group_font.py:45
 msgid "Rendering"
-msgstr ""
+msgstr "レンダリング"
 
 #: gtweak/tweaks/tweak_group_font.py:49
 msgid "Size"
-msgstr ""
+msgstr "サイズ"
 
 #: gtweak/tweaks/tweak_group_font.py:50
 msgid "Scaling Factor"
 msgstr "倍率"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:42
-#, fuzzy
-#| msgid "<i>Default</i>"
 msgid "Default"
-msgstr "<i>デフォルト</i>"
+msgstr "デフォルト"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:167
 msgid "Typing"
@@ -325,7 +327,7 @@ msgstr "Emacs 入力"
 #: gtweak/tweaks/tweak_group_keyboard.py:186
 #: gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr "ショートカットに Emacs エディター由来のキーバインドを割り当てます。"
+msgstr "ショートカットに Emacs エディターのキーバインディングを使用します。"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
@@ -346,28 +348,28 @@ msgstr "追加のレイアウトオプション"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:259
 msgid "Show Extended Input Sources"
-msgstr "入力ソースを追加表示する"
+msgstr "追加の入力ソースを表示"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:262
 msgid "Increases the choice of input sources in the Settings application."
 msgstr ""
-"設定アプリケーションにて、より多くの入力ソースを選択できるようになります。"
+"“設定”アプリケーションでより多くの入力ソースを選択できるようになります。"
 
 #: gtweak/tweaks/tweak_group_keyboard.py:265
 msgid "Layout"
-msgstr ""
+msgstr "レイアウト"
 
 #: gtweak/tweaks/tweak_group_mouse.py:31
-#, fuzzy
-#| msgid "Secondary-Click"
 msgid "Disable Secondary Click"
-msgstr "右クリック"
+msgstr "セカンダリクリックを無効にする"
 
 #: gtweak/tweaks/tweak_group_mouse.py:32
 msgid ""
 "Disables secondary clicks on touchpads which do not have a physical "
 "secondary button"
 msgstr ""
+"物理的なセカンダリボタンがないタッチパッドでは、セカンダリクリックを無効にし"
+"ます"
 
 #: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
@@ -383,33 +385,35 @@ msgstr "タッチパッド"
 
 #: gtweak/tweaks/tweak_group_mouse.py:87
 msgid "Touchpad Acceleration"
-msgstr ""
+msgstr "タッチパッドアクセラレーション"
 
 #: gtweak/tweaks/tweak_group_mouse.py:88
 msgid ""
 "Turning acceleration off can allow faster and more precise movements, but "
 "can also make the touchpad more difficult to use."
 msgstr ""
+"加速度をオフにすると、より高速で正確な動作が可能になりますが、タッチパッドが"
+"使いにくくなる場合もあります。"
 
 #: gtweak/tweaks/tweak_group_mouse.py:97
 msgid "Pointing Stick"
-msgstr ""
+msgstr "ポインティングスティック"
 
 #: gtweak/tweaks/tweak_group_mouse.py:99
 msgid "Pointing Stick Acceleration"
-msgstr ""
+msgstr "ポインティングスティックアクセラレーション"
 
 #: gtweak/tweaks/tweak_group_mouse.py:100
 msgid ""
 "Turning acceleration off can allow faster and more precise movements, but "
 "can also make the pointing stick more difficult to use."
 msgstr ""
+"加速度をオフにすると、より高速で正確な動作が可能になりますが、ポインティング"
+"スティックが使いにくくなる場合もあります。"
 
 #: gtweak/tweaks/tweak_group_mouse.py:104
-#, fuzzy
-#| msgid "Click Method"
 msgid "Scrolling Method"
-msgstr "クリックメソッド"
+msgstr "スクロールメソッド"
 
 #: gtweak/tweaks/tweak_group_sound.py:44
 msgid "System Sound Theme"
@@ -417,17 +421,15 @@ msgstr "システムサウンドテーマ"
 
 #: gtweak/tweaks/tweak_group_sound.py:48
 msgid "Specifies which sound theme to use for sound events."
-msgstr "サウンドイベント用のサウンドテーマを指定します。"
+msgstr "サウンドイベントに使用するサウンドテーマを指定します。"
 
 #: gtweak/tweaks/tweak_group_startup.py:51
 msgid "running"
-msgstr "起動中"
+msgstr "実行中"
 
 #: gtweak/tweaks/tweak_group_startup.py:61
-#, fuzzy
-#| msgid "Legacy Applications"
 msgid "Select Application"
-msgstr "レガシーなアプリケーション"
+msgstr "アプリケーションの選択"
 
 #. Build header bar buttons
 #: gtweak/tweaks/tweak_group_startup.py:67
@@ -448,19 +450,15 @@ msgstr "削除"
 
 #: gtweak/tweaks/tweak_group_startup.py:221
 msgid "Startup applications are automatically started when you log in."
-msgstr "スタートアップアプリケーションは、ログイン時に自動で起動されます。"
+msgstr "スタートアップアプリケーションは、ログイン時に自動的に起動されます。"
 
 #: gtweak/tweaks/tweak_group_startup.py:258
-#, fuzzy
-#| msgid "Startup Applications"
 msgid "No Startup Applications"
-msgstr "スタートアップアプリケーション"
+msgstr "スタートアップアプリケーションがありません"
 
 #: gtweak/tweaks/tweak_group_startup.py:259
-#, fuzzy
-#| msgid "New startup application"
 msgid "Add a startup application"
-msgstr "新しいスタートアップアプリケーション"
+msgstr "スタートアップアプリケーションを追加"
 
 #: gtweak/tweaks/tweak_group_windows.py:13
 #: gtweak/tweaks/tweak_group_windows.py:159
@@ -470,7 +468,7 @@ msgstr "ウィンドウフォーカス"
 #: gtweak/tweaks/tweak_group_windows.py:14
 #: gtweak/tweaks/tweak_group_windows.py:18
 msgid "Click to Focus"
-msgstr "クリックでフォーカスを当てる"
+msgstr "クリックでフォーカスする"
 
 #: gtweak/tweaks/tweak_group_windows.py:20
 msgid "Windows are focused when they are clicked."
@@ -478,29 +476,27 @@ msgstr "ウィンドウをクリックするとフォーカスします。"
 
 #: gtweak/tweaks/tweak_group_windows.py:23
 msgid "Focus on Hover"
-msgstr "ホバーでフォーカスを当てる"
+msgstr "ホバーでフォーカスする"
 
 #: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
 "Window is focused when hovered with the pointer. Windows remain focused when "
 "the desktop is hovered."
 msgstr ""
-"ウィンドウをポインターでホバーリングするとフォーカスします。ポインターがウィ"
-"ンドウからデスクトップに移動しても、フォーカスされたままです。"
+"ポインターでホバーしたときにウィンドウがフォーカスされます。デスクトップをホ"
+"バーしてもウィンドウのフォーカスは維持されます。"
 
 #: gtweak/tweaks/tweak_group_windows.py:28
-#, fuzzy
-#| msgid "Focus on Hover"
 msgid "Focus Follows Mouse"
-msgstr "ホバーでフォーカスを当てる"
+msgstr "フォーカスがマウスに追従する"
 
 #: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
 "Window is focused when hovered with the pointer. Hovering the desktop "
 "removes focus from the previous window."
 msgstr ""
-"ウィンドウをポインターでホバーリングするとフォーカスします。ポインターがウィ"
-"ンドウからデスクトップに移動すると、フォーカスが外れます。"
+"ポインターでホバーしたときにウィンドウがフォーカスされます。デスクトップをホ"
+"バーすると前のウィンドウからフォーカスが外れます。"
 
 #: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
@@ -520,7 +516,7 @@ msgstr "右"
 
 #: gtweak/tweaks/tweak_group_windows.py:135
 msgid "Titlebar Actions"
-msgstr "タイトルバーの挙動"
+msgstr "タイトルバーアクション"
 
 #: gtweak/tweaks/tweak_group_windows.py:136
 msgid "Double-Click"
@@ -532,7 +528,7 @@ msgstr "中クリック"
 
 #: gtweak/tweaks/tweak_group_windows.py:138
 msgid "Secondary-Click"
-msgstr "右クリック"
+msgstr "セカンダリクリック"
 
 #: gtweak/tweaks/tweak_group_windows.py:140
 msgid "Titlebar Buttons"
@@ -548,19 +544,19 @@ msgstr "最小化"
 
 #: gtweak/tweaks/tweak_group_windows.py:146
 msgid "Click Actions"
-msgstr "クリックの挙動"
+msgstr "クリックアクション"
 
 #: gtweak/tweaks/tweak_group_windows.py:147
 msgid "Attach Modal Dialogs"
-msgstr "モーダルダイアログを親ウィンドウに結び付ける"
+msgstr "モーダルダイアログを結合"
 
 #: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
 "When on, modal dialog windows are attached to their parent windows, and "
 "cannot be moved."
 msgstr ""
-"有効にするとモーダルダイアログウィンドウは親ウィンドウに貼り付けられ、単体で"
-"は移動できなくなります。"
+"オンにすると、モーダルダイアログウィンドウが親ウィンドウに結合され、移動でき"
+"なくなります。"
 
 #: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
@@ -576,7 +572,7 @@ msgstr "無効"
 
 #: gtweak/tweaks/tweak_group_windows.py:156
 msgid "Resize with Secondary-Click"
-msgstr "マウスの右ボタンでサイズを変更する"
+msgstr "セカンダリクリックでサイズを変更する"
 
 #: gtweak/tweaks/tweak_group_windows.py:161
 msgid "Raise Windows When Focused"
@@ -588,10 +584,9 @@ msgstr "設定項目を検索…"
 
 #. indicates the default theme, e.g Adwaita (default)
 #: gtweak/utils.py:63
-#, fuzzy, python-format
-#| msgid "%s <i>(default)</i>"
+#, python-format
 msgid "%s (default)"
-msgstr "%s <i>(デフォルト)</i>"
+msgstr "%s (デフォルト)"
 
 #: gtweak/utils.py:350
 msgid "Configuration changes require restart"
@@ -599,7 +594,7 @@ msgstr "設定を変更するには再起動が必要です"
 
 #: gtweak/utils.py:351
 msgid "Your session needs to be restarted for settings to take effect"
-msgstr "設定内容を反映させるにはセッションを再起動する必要があります"
+msgstr "設定を反映するにはセッションの再起動が必要です"
 
 #: gtweak/utils.py:355
 msgid "Restart Session"
