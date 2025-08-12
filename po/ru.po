@@ -13,17 +13,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-03-08 07:58+0000\n"
-"PO-Revision-Date: 2024-03-09 19:03+0300\n"
+"POT-Creation-Date: 2025-08-10 20:01+0000\n"
+"PO-Revision-Date: 2025-08-12 14:42+0300\n"
 "Last-Translator: Artur So <arturios2005@mail.ru>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.4.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.6\n"
 
 #. developer_name tag deprecated with Appstream 1.0
 #: data/org.gnome.tweaks.appdata.xml.in:8
@@ -31,42 +30,33 @@ msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
 # сокращение, потому как не влазит под названием значка в меню Обзор и тогда не ясно что это вообще
-#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
-#: gtweak/utils.py:344
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331 gtweak/utils.py:348
 msgid "GNOME Tweaks"
 msgstr "Доп. настройки GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:3
 msgid "Tweak advanced GNOME settings"
 msgstr "Настройка дополнительных параметров GNOME"
 
 # тут дословный перевод не годится, получится масло масленое
 #: data/org.gnome.tweaks.appdata.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
-msgstr ""
-"Дополнительные настройки GNOME позволяют точнее настроить среду рабочего "
-"стола GNOME."
+msgstr "Дополнительные настройки GNOME позволяют точнее настроить среду рабочего стола GNOME."
 
 #: data/org.gnome.tweaks.appdata.xml.in:19
-msgid ""
-"It can manage keyboard mapping customizations, add startup applications, and "
-"set custom window controls among other settings."
+msgid "It can manage keyboard mapping customizations, add startup applications, and set custom window controls among other settings."
 msgstr ""
-"С помощью приложения можно управлять настройками отображения клавиатуры, "
-"добавлять запускаемые приложения, устанавливать пользовательские элементы "
-"управления окнами и т.д."
+"С помощью приложения можно управлять настройками отображения клавиатуры, добавлять запускаемые приложения, устанавливать пользовательские "
+"элементы управления окнами и т.д."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
-#: gtweak/tweakview.py:129
+#: data/org.gnome.tweaks.desktop.in:2 gtweak/tweakview.py:93 gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Дополнительные настройки"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.tweaks.desktop.in:14
+#: data/org.gnome.tweaks.desktop.in:13
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
-msgstr ""
-"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Настройки;"
-"Дополнительные;Параметры;Шрифты;Тема;Клавиатура;Ввод;Автозапуск;"
+msgstr "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Настройки;Дополнительные;Параметры;Шрифты;Тема;Клавиатура;Ввод;Автозапуск;"
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -80,7 +70,7 @@ msgstr "_О приложении"
 msgid "Fonts"
 msgstr "Шрифты"
 
-#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Appearance"
 msgstr "Внешний вид"
 
@@ -100,7 +90,7 @@ msgstr "Клавиатура"
 msgid "Windows"
 msgstr "Окна"
 
-#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup Applications"
 msgstr "Автозапуск приложений"
 
@@ -121,12 +111,8 @@ msgstr "Управление расширениями перенесено в {0
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
 #: gtweak/app.py:32
 #, python-brace-format
-msgid ""
-"We recommend downloading GNOME Extensions from {0} if your distribution does "
-"not include it."
-msgstr ""
-"Рекомендуем загрузить Расширения GNOME из {0}, если оно не включено в Ваш "
-"дистрибутив."
+msgid "We recommend downloading GNOME Extensions from {0} if your distribution does not include it."
+msgstr "Рекомендуем загрузить Расширения GNOME из {0}, если оно не включено в Ваш дистрибутив."
 
 #: gtweak/app.py:86
 msgid "Reset to Defaults"
@@ -136,7 +122,7 @@ msgstr "Сбросить на настройки по умолчанию"
 msgid "Reset all tweaks settings to the original default state?"
 msgstr "Сбросить все параметры на настройки по умолчанию?"
 
-#: gtweak/app.py:99
+#: gtweak/app.py:96 gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
@@ -148,6 +134,10 @@ msgstr "(режим %s)"
 #: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell не запущен"
+
+#: gtweak/app.py:104
+msgid "GTK"
+msgstr "GTK"
 
 #. TRANSLATORS: Add your name/nickname here (one name per line),
 #. they will be displayed in the "about" dialog
@@ -199,34 +189,34 @@ msgstr "Не удалось получить список расширений"
 msgid "Shell"
 msgstr "Тема Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:156
+#: gtweak/tweaks/tweak_group_appearance.py:157
 msgid "Adwaita (default)"
 msgstr "Adwaita (по умолчанию)"
 
-#: gtweak/tweaks/tweak_group_appearance.py:166
+#: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
 msgstr "Выберите тему"
 
-#: gtweak/tweaks/tweak_group_appearance.py:218
+#: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Тема %s успешно обновлена"
 
-#: gtweak/tweaks/tweak_group_appearance.py:220
+#: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Тема %s успешно установлена"
 
-#: gtweak/tweaks/tweak_group_appearance.py:222
+#: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
 msgstr "Ошибка установки темы"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:227
+#: gtweak/tweaks/tweak_group_appearance.py:228
 msgid "Invalid theme"
 msgstr "Недопустимая тема"
 
-#: gtweak/tweaks/tweak_group_appearance.py:235
+#: gtweak/tweaks/tweak_group_appearance.py:236
 msgid "Styles"
 msgstr "Стили"
 
@@ -262,8 +252,7 @@ msgstr "Средний"
 msgid "Slight"
 msgstr "Незначительный"
 
-#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:418 gtweak/widgets.py:576 gtweak/widgets.py:605
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34 gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:613
 msgid "None"
 msgstr "Нет"
 
@@ -315,17 +304,13 @@ msgstr "По умолчанию"
 msgid "Typing"
 msgstr "Набор текста"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:183
-#: gtweak/tweaks/tweak_group_mouse.py:13
+#: gtweak/tweaks/tweak_group_keyboard.py:183 gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Ввод Emacs"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:16
+#: gtweak/tweaks/tweak_group_keyboard.py:186 gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
-msgstr ""
-"Переопределяет комбинации клавиш для использования комбинаций из приложения "
-"Emacs."
+msgstr "Переопределяет комбинации клавиш для использования комбинаций из приложения Emacs."
 
 #: gtweak/tweaks/tweak_group_keyboard.py:202
 msgid "Overview Shortcut"
@@ -339,8 +324,7 @@ msgstr "Левый Super"
 msgid "Right Super"
 msgstr "Правый Super"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:237
-#: gtweak/tweaks/tweak_group_keyboard.py:243
+#: gtweak/tweaks/tweak_group_keyboard.py:237 gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Дополнительные параметры раскладки"
 
@@ -361,12 +345,8 @@ msgid "Disable Secondary Click"
 msgstr "Отключить нажатие вторичной кнопки мыши"
 
 #: gtweak/tweaks/tweak_group_mouse.py:32
-msgid ""
-"Disables secondary clicks on touchpads which do not have a physical "
-"secondary button"
-msgstr ""
-"Отключает нажатия вторичной кнопки мыши на сенсорных панелях, не имеющих "
-"физической вторичной кнопки"
+msgid "Disables secondary clicks on touchpads which do not have a physical secondary button"
+msgstr "Отключает нажатия вторичной кнопки мыши на сенсорных панелях, не имеющих физической вторичной кнопки"
 
 #: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
@@ -385,12 +365,8 @@ msgid "Touchpad Acceleration"
 msgstr "Ускорение сенсорной панели"
 
 #: gtweak/tweaks/tweak_group_mouse.py:88
-msgid ""
-"Turning acceleration off can allow faster and more precise movements, but "
-"can also make the touchpad more difficult to use."
-msgstr ""
-"Отключение ускорения может обеспечить более быстрые и точные движения, но "
-"также может усложнить использование сенсорной панели."
+msgid "Turning acceleration off can allow faster and more precise movements, but can also make the touchpad more difficult to use."
+msgstr "Отключение ускорения может обеспечить более быстрые и точные движения, но также может усложнить использование сенсорной панели."
 
 #: gtweak/tweaks/tweak_group_mouse.py:97
 msgid "Pointing Stick"
@@ -401,12 +377,9 @@ msgid "Pointing Stick Acceleration"
 msgstr "Ускорение тензометрического джойстика"
 
 #: gtweak/tweaks/tweak_group_mouse.py:100
-msgid ""
-"Turning acceleration off can allow faster and more precise movements, but "
-"can also make the pointing stick more difficult to use."
+msgid "Turning acceleration off can allow faster and more precise movements, but can also make the pointing stick more difficult to use."
 msgstr ""
-"Отключение ускорения может обеспечить более быстрые и точные движения, но "
-"также может затруднить использование тензометрического джойстика."
+"Отключение ускорения может обеспечить более быстрые и точные движения, но также может затруднить использование тензометрического джойстика."
 
 #: gtweak/tweaks/tweak_group_mouse.py:104
 msgid "Scrolling Method"
@@ -441,29 +414,27 @@ msgstr "_Добавить"
 msgid "Search Applications…"
 msgstr "Поиск приложений…"
 
-#: gtweak/tweaks/tweak_group_startup.py:194
+#: gtweak/tweaks/tweak_group_startup.py:195
 msgid "Remove"
 msgstr "Удалить"
 
-#: gtweak/tweaks/tweak_group_startup.py:220
+#: gtweak/tweaks/tweak_group_startup.py:221
 msgid "Startup applications are automatically started when you log in."
 msgstr "Приложения будут автоматически запускаться при входе в систему."
 
-#: gtweak/tweaks/tweak_group_startup.py:257
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "No Startup Applications"
 msgstr "Нет приложений для автозапуска"
 
-#: gtweak/tweaks/tweak_group_startup.py:258
+#: gtweak/tweaks/tweak_group_startup.py:259
 msgid "Add a startup application"
 msgstr "Добавить приложение в автозапуск"
 
-#: gtweak/tweaks/tweak_group_windows.py:13
-#: gtweak/tweaks/tweak_group_windows.py:159
+#: gtweak/tweaks/tweak_group_windows.py:13 gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Фокус окна"
 
-#: gtweak/tweaks/tweak_group_windows.py:14
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:14 gtweak/tweaks/tweak_group_windows.py:18
 msgid "Click to Focus"
 msgstr "Срабатывает при нажатии"
 
@@ -476,24 +447,16 @@ msgid "Focus on Hover"
 msgstr "Срабатывает при наведении"
 
 #: gtweak/tweaks/tweak_group_windows.py:25
-msgid ""
-"Window is focused when hovered with the pointer. Windows remain focused when "
-"the desktop is hovered."
-msgstr ""
-"Окна становятся активными, когда вы перемещаете курсор над ними. Наведение "
-"на рабочий стол не меняет активность."
+msgid "Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered."
+msgstr "Окна становятся активными, когда вы перемещаете курсор над ними. Наведение на рабочий стол не меняет активность."
 
 #: gtweak/tweaks/tweak_group_windows.py:28
 msgid "Focus Follows Mouse"
 msgstr "Фокус следует за мышью"
 
 #: gtweak/tweaks/tweak_group_windows.py:30
-msgid ""
-"Window is focused when hovered with the pointer. Hovering the desktop "
-"removes focus from the previous window."
-msgstr ""
-"Окна становятся активными, когда вы перемещаете курсор над ними. Наведение "
-"на рабочий стол деактивирует предыдущее окно."
+msgid "Window is focused when hovered with the pointer. Hovering the desktop removes focus from the previous window."
+msgstr "Окна становятся активными, когда вы перемещаете курсор над ними. Наведение на рабочий стол деактивирует предыдущее окно."
 
 #: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
@@ -548,12 +511,9 @@ msgid "Attach Modal Dialogs"
 msgstr "Прикреплённые модальные диалоговые окна"
 
 #: gtweak/tweaks/tweak_group_windows.py:148
-msgid ""
-"When on, modal dialog windows are attached to their parent windows, and "
-"cannot be moved."
+msgid "When on, modal dialog windows are attached to their parent windows, and cannot be moved."
 msgstr ""
-"Когда включено, модальные диалоговые окна будут прикреплены к родительскому "
-"окну без возможности их смещения относительно родительского окна."
+"Когда включено, модальные диалоговые окна будут прикреплены к родительскому окну без возможности их смещения относительно родительского окна."
 
 #: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
@@ -585,16 +545,15 @@ msgstr "Поиск настроек…"
 msgid "%s (default)"
 msgstr "%s (по умолчанию)"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:350
 msgid "Configuration changes require restart"
 msgstr "Изменения конфигурации требуют перезагрузки"
 
-#: gtweak/utils.py:347
-msgid "Your session needs to be restarted for settings to take effect"
-msgstr ""
-"Сеанс пользователя необходимо перезапустить, чтобы изменения вступили в силу"
-
 #: gtweak/utils.py:351
+msgid "Your session needs to be restarted for settings to take effect"
+msgstr "Сеанс пользователя необходимо перезапустить, чтобы изменения вступили в силу"
+
+#: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "Перезапустить сеанс"
 
@@ -616,22 +575,15 @@ msgstr "Перезапустить сеанс"
 #~ msgid "Fingers"
 #~ msgstr "Пальцы"
 
-#~ msgid ""
-#~ "Click the touchpad with two fingers for right-click and three fingers for "
-#~ "middle-click."
-#~ msgstr ""
-#~ "Нажмите на сенсорную панель двумя пальцами для эмуляции нажатия правой "
-#~ "кнопки мыши и тремя пальцами для средней."
+#~ msgid "Click the touchpad with two fingers for right-click and three fingers for middle-click."
+#~ msgstr "Нажмите на сенсорную панель двумя пальцами для эмуляции нажатия правой кнопки мыши и тремя пальцами для средней."
 
 #~ msgid "Area"
 #~ msgstr "Область"
 
-#~ msgid ""
-#~ "Click the bottom right of the touchpad for right-click and the bottom "
-#~ "middle for middle-click."
+#~ msgid "Click the bottom right of the touchpad for right-click and the bottom middle for middle-click."
 #~ msgstr ""
-#~ "Нажмите на правую нижнюю часть сенсорной панели для эмуляции нажатия "
-#~ "правой кнопки мыши и на середину нижней части для эмуляции нажатия "
+#~ "Нажмите на правую нижнюю часть сенсорной панели для эмуляции нажатия правой кнопки мыши и на середину нижней части для эмуляции нажатия "
 #~ "средней кнопки мыши."
 
 #~ msgid "Don’t use mouse click emulation."
@@ -642,9 +594,6 @@ msgstr "Перезапустить сеанс"
 
 #~ msgid "<primary>f"
 #~ msgstr "<primary>f"
-
-#~ msgid "GTK"
-#~ msgstr "GTK"
 
 #~ msgid "Homepage"
 #~ msgstr "Домашняя страница"
@@ -735,13 +684,11 @@ msgstr "Перезапустить сеанс"
 #~ msgstr "Сверх усиление"
 
 #~ msgid ""
-#~ "Allows raising the volume above 100%. This can result in a loss of audio "
-#~ "quality; it is better to increase application volume settings, if "
+#~ "Allows raising the volume above 100%. This can result in a loss of audio quality; it is better to increase application volume settings, if "
 #~ "possible."
 #~ msgstr ""
-#~ "Позволяет увеличить громкость выше 100%. Это может привести к потере "
-#~ "качества звука; лучше увеличить громкость в настройках приложения, если "
-#~ "это возможно."
+#~ "Позволяет увеличить громкость выше 100%. Это может привести к потере качества звука; лучше увеличить громкость в настройках приложения, "
+#~ "если это возможно."
 
 #~ msgid "Keyboard & Mouse"
 #~ msgstr "Клавиатура и мышь"
