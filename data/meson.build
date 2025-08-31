@@ -56,6 +56,16 @@ install_data(
   'org.gnome.tweaks.gschema.xml',
   install_dir: 'share/glib-2.0/schemas'
 )
+# Validate GSchema
+glib_compile_schemas = find_program('glib-compile-schemas', required: true)
+if glib_compile_schemas.found()
+  test(
+    'validate-gschema', glib_compile_schemas,
+    args: [
+      '--strict', '--dry-run', meson.current_build_dir()
+    ],
+  )
+endif
 
 install_data (pkgappid + '.svg',
   install_dir: join_paths(datadir, 'icons', 'hicolor', 'scalable', 'apps'))
