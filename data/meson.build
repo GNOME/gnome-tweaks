@@ -18,7 +18,7 @@ if appstreamcli.found()
   )
 endif
 
-i18n.merge_file(
+desktop_file = i18n.merge_file(
   input: configure_file(
     input: default_pkgappid + '.desktop.in',
     output: pkgappid + '.desktop.temp',
@@ -31,6 +31,18 @@ i18n.merge_file(
   install_dir: desktopdir,
   type: 'desktop'
 )
+# Validate Desktop file
+desktop_file_validate = find_program('desktop-file-validate', required: false)
+if desktop_file_validate.found()
+  test(
+    'desktop-file-validate',
+    desktop_file_validate,
+    args: [
+      desktop_file,
+    ],
+    depends: desktop_file,
+  )
+endif
 
 gui_data = [
   'shell.ui',
