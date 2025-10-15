@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-03-08 07:58+0000\n"
+"POT-Creation-Date: 2025-10-10 22:58+0000\n"
 "PO-Revision-Date: 2024-03-09 19:03+0300\n"
 "Last-Translator: Artur So <arturios2005@mail.ru>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
@@ -31,12 +31,12 @@ msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
 # сокращение, потому как не влазит под названием значка в меню Обзор и тогда не ясно что это вообще
-#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:327
-#: gtweak/utils.py:344
+#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
+#: gtweak/utils.py:348
 msgid "GNOME Tweaks"
 msgstr "Доп. настройки GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:3
 msgid "Tweak advanced GNOME settings"
 msgstr "Настройка дополнительных параметров GNOME"
 
@@ -56,17 +56,15 @@ msgstr ""
 "добавлять запускаемые приложения, устанавливать пользовательские элементы "
 "управления окнами и т.д."
 
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
+#: data/org.gnome.tweaks.desktop.in:2 gtweak/tweakview.py:93
 #: gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Дополнительные настройки"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.tweaks.desktop.in:14
+#: data/org.gnome.tweaks.desktop.in:13
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
-msgstr ""
-"Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Настройки;"
-"Дополнительные;Параметры;Шрифты;Тема;Клавиатура;Ввод;Автозапуск;"
+msgstr "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Настройки;Дополнительные;Параметры;Шрифты;Тема;Клавиатура;Ввод;Автозапуск;"
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -80,7 +78,7 @@ msgstr "_О приложении"
 msgid "Fonts"
 msgstr "Шрифты"
 
-#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Appearance"
 msgstr "Внешний вид"
 
@@ -100,7 +98,7 @@ msgstr "Клавиатура"
 msgid "Windows"
 msgstr "Окна"
 
-#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:219
+#: data/tweaks.ui:232 gtweak/tweaks/tweak_group_startup.py:220
 msgid "Startup Applications"
 msgstr "Автозапуск приложений"
 
@@ -136,7 +134,7 @@ msgstr "Сбросить на настройки по умолчанию"
 msgid "Reset all tweaks settings to the original default state?"
 msgstr "Сбросить все параметры на настройки по умолчанию?"
 
-#: gtweak/app.py:99
+#: gtweak/app.py:96 gtweak/app.py:99
 msgid "GNOME Shell"
 msgstr "GNOME Shell"
 
@@ -148,6 +146,10 @@ msgstr "(режим %s)"
 #: gtweak/app.py:102
 msgid "GNOME Shell is not running"
 msgstr "GNOME Shell не запущен"
+
+#: gtweak/app.py:104
+msgid "GTK"
+msgstr "GTK"
 
 #. TRANSLATORS: Add your name/nickname here (one name per line),
 #. they will be displayed in the "about" dialog
@@ -199,34 +201,34 @@ msgstr "Не удалось получить список расширений"
 msgid "Shell"
 msgstr "Тема Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:156
+#: gtweak/tweaks/tweak_group_appearance.py:157
 msgid "Adwaita (default)"
 msgstr "Adwaita (по умолчанию)"
 
-#: gtweak/tweaks/tweak_group_appearance.py:166
+#: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
 msgstr "Выберите тему"
 
-#: gtweak/tweaks/tweak_group_appearance.py:218
+#: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Тема %s успешно обновлена"
 
-#: gtweak/tweaks/tweak_group_appearance.py:220
+#: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Тема %s успешно установлена"
 
-#: gtweak/tweaks/tweak_group_appearance.py:222
+#: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
 msgstr "Ошибка установки темы"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:227
+#: gtweak/tweaks/tweak_group_appearance.py:228
 msgid "Invalid theme"
 msgstr "Недопустимая тема"
 
-#: gtweak/tweaks/tweak_group_appearance.py:235
+#: gtweak/tweaks/tweak_group_appearance.py:236
 msgid "Styles"
 msgstr "Стили"
 
@@ -263,7 +265,7 @@ msgid "Slight"
 msgstr "Незначительный"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:418 gtweak/widgets.py:576 gtweak/widgets.py:605
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
 msgid "None"
 msgstr "Нет"
 
@@ -441,19 +443,19 @@ msgstr "_Добавить"
 msgid "Search Applications…"
 msgstr "Поиск приложений…"
 
-#: gtweak/tweaks/tweak_group_startup.py:194
+#: gtweak/tweaks/tweak_group_startup.py:195
 msgid "Remove"
 msgstr "Удалить"
 
-#: gtweak/tweaks/tweak_group_startup.py:220
+#: gtweak/tweaks/tweak_group_startup.py:221
 msgid "Startup applications are automatically started when you log in."
 msgstr "Приложения будут автоматически запускаться при входе в систему."
 
-#: gtweak/tweaks/tweak_group_startup.py:257
+#: gtweak/tweaks/tweak_group_startup.py:258
 msgid "No Startup Applications"
 msgstr "Нет приложений для автозапуска"
 
-#: gtweak/tweaks/tweak_group_startup.py:258
+#: gtweak/tweaks/tweak_group_startup.py:259
 msgid "Add a startup application"
 msgstr "Добавить приложение в автозапуск"
 
@@ -585,16 +587,16 @@ msgstr "Поиск настроек…"
 msgid "%s (default)"
 msgstr "%s (по умолчанию)"
 
-#: gtweak/utils.py:346
+#: gtweak/utils.py:350
 msgid "Configuration changes require restart"
 msgstr "Изменения конфигурации требуют перезагрузки"
 
-#: gtweak/utils.py:347
+#: gtweak/utils.py:351
 msgid "Your session needs to be restarted for settings to take effect"
 msgstr ""
 "Сеанс пользователя необходимо перезапустить, чтобы изменения вступили в силу"
 
-#: gtweak/utils.py:351
+#: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "Перезапустить сеанс"
 
@@ -642,9 +644,6 @@ msgstr "Перезапустить сеанс"
 
 #~ msgid "<primary>f"
 #~ msgstr "<primary>f"
-
-#~ msgid "GTK"
-#~ msgstr "GTK"
 
 #~ msgid "Homepage"
 #~ msgstr "Домашняя страница"
