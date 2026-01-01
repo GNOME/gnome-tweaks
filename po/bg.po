@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2025-02-21 21:12+0000\n"
-"PO-Revision-Date: 2025-03-07 18:52+0100\n"
+"POT-Creation-Date: 2025-11-21 20:30+0000\n"
+"PO-Revision-Date: 2026-01-01 17:55+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -21,46 +21,37 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
-#. developer_name tag deprecated with Appstream 1.0
-#: data/org.gnome.tweaks.appdata.xml.in:8
-msgid "The GNOME Project"
-msgstr "Проектът GNOME"
-
-#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
-#: gtweak/utils.py:348
-msgid "GNOME Tweaks"
+#: data/org.gnome.tweaks.desktop.in:2 gtweak/tweakview.py:93 gtweak/tweakview.py:129
+msgid "Tweaks"
 msgstr "Натаманяване на GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.desktop.in:3 data/org.gnome.tweaks.metainfo.xml.in:14
 msgid "Tweak advanced GNOME settings"
 msgstr "Нагласяне на разширените настройки на GNOME"
-
-#: data/org.gnome.tweaks.appdata.xml.in:16
-msgid "GNOME Tweaks allows adjusting advanced GNOME options."
-msgstr ""
-"„Натаманяване на GNOME“ позволява нагласянето на разширените настройки на "
-"GNOME."
-
-#: data/org.gnome.tweaks.appdata.xml.in:19
-msgid ""
-"It can manage keyboard mapping customizations, add startup applications, and "
-"set custom window controls among other settings."
-msgstr ""
-"Може да управлява настройките на клавиатурата, да добавя програми за "
-"стартиране и да задава собствени контроли на прозорците наред с други "
-"настройки."
-
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
-#: gtweak/tweakview.py:129
-msgid "Tweaks"
-msgstr "Настройки"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
 msgstr "настройки;разширени;предпочитания;шрифтове;тема;клавиатура;въвеждане;таман;натаманяване;стартиране;зареждане;settings;advanced;preferences;fonts;theme;xkb;keyboard;startup;"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.metainfo.xml.in:8
+msgid "The GNOME Project"
+msgstr "Проектът GNOME"
+
+#: data/org.gnome.tweaks.metainfo.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331 gtweak/utils.py:348
+msgid "GNOME Tweaks"
+msgstr "Натаманяване на GNOME"
+
+#: data/org.gnome.tweaks.metainfo.xml.in:16
+msgid "GNOME Tweaks allows adjusting advanced GNOME options."
+msgstr "„Натаманяване на GNOME“ позволява нагласянето на разширените настройки на GNOME."
+
+#: data/org.gnome.tweaks.metainfo.xml.in:19
+msgid "It can manage keyboard mapping customizations, add startup applications, and set custom window controls among other settings."
+msgstr "Може да управлява настройките на клавиатурата, да добавя програми за стартиране и да задава собствени контроли на прозорците наред с други настройки."
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -115,55 +106,49 @@ msgstr "Управлението на разширенията е прехвър
 #. Translators: Placeholder will be replaced with "Flathub" in active link form
 #: gtweak/app.py:32
 #, python-brace-format
-msgid ""
-"We recommend downloading GNOME Extensions from {0} if your distribution does "
-"not include it."
-msgstr ""
-"Ако дистрибуцията ви не предоставя разширението, пробвайте да го свалите от "
-"„{0}“."
+msgid "We recommend downloading GNOME Extensions from {0} if your distribution does not include it."
+msgstr "Ако дистрибуцията ви не предоставя разширението, пробвайте да го свалите от „{0}“."
 
-#: gtweak/app.py:86
+#: gtweak/app.py:90
 msgid "Reset to Defaults"
 msgstr "Връщане на стандартните настройки"
 
-#: gtweak/app.py:87
+#: gtweak/app.py:91
 msgid "Reset all tweaks settings to the original default state?"
-msgstr ""
-"Да се върнат ли всички „натаманени“ настройки към стандартните си стойности?"
+msgstr "Да се върнат ли всички „натаманени“ настройки към стандартните си стойности?"
 
-#: gtweak/app.py:99
+#: gtweak/app.py:100 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "Обвивка на GNOME"
 
-#: gtweak/app.py:99
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(режим: %s)"
 
-#: gtweak/app.py:102
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "Обвивката на GNOME не е стартирана"
 
+#: gtweak/app.py:108
+msgid "GTK"
+msgstr "GTK"
+
 #. TRANSLATORS: Add your name/nickname here (one name per line),
 #. they will be displayed in the "about" dialog
-#: gtweak/app.py:118
+#: gtweak/app.py:122
 msgid "translator-credits"
 msgstr ""
-"Ивайло Вълков &lt;<a href='mailto:ivaylo@e-valkov.org'>ivaylo@e-valkov.org</"
-"a>&gt;\n"
-"Любомир Василев &lt;<a href='mailto:lyubomirv@abv.bg'>lyubomirv@abv.bg</"
-"a>&gt;\n"
-"Александър Шопов &lt;<a href='mailto:ash@kambanaria.org'>ash@kambanaria.org</"
-"a>&gt;\n"
-"Twlvnn Kraftwerk &lt;<a "
-"href='mailto:kraft_werk@tutanota.com'>kraft_werk@tutanota.com</a>&gt;\n"
+"Ивайло Вълков &lt;<a href='mailto:ivaylo@e-valkov.org'>ivaylo@e-valkov.org</a>&gt;\n"
+"Любомир Василев &lt;<a href='mailto:lyubomirv@abv.bg'>lyubomirv@abv.bg</a>&gt;\n"
+"Александър Шопов &lt;<a href='mailto:ash@kambanaria.org'>ash@kambanaria.org</a>&gt;\n"
+"Twlvnn Kraftwerk &lt;<a href='mailto:kraft_werk@tutanota.com'>kraft_werk@tutanota.com</a>&gt;\n"
+"\n"
 "\n"
 "\n"
 "Проектът за превод на GNOME има нужда от подкрепа.\n"
-"Научете повече за нас на <a href='http://gnome.cult.bg'>http://"
-"gnome.cult.bg</a>\n"
-"Докладвайте за грешки на <a href='http://gnome.cult.bg/bugs'>http://"
-"gnome.cult.bg/bugs</a>"
+"Научете повече за нас на <a href='http://gnome.cult.bg'>http://gnome.cult.bg</a>\n"
+"Докладвайте за грешки на <a href='http://gnome.cult.bg/bugs'>http://gnome.cult.bg/bugs</a>"
 
 #: gtweak/tweakmodel.py:30
 msgid "Miscellaneous"
@@ -269,8 +254,7 @@ msgstr "Средно"
 msgid "Slight"
 msgstr "Леко"
 
-#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
+#: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34 gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:613
 msgid "None"
 msgstr "Никакво"
 
@@ -322,13 +306,11 @@ msgstr "Стандартно"
 msgid "Typing"
 msgstr "Клавиатура"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:183
-#: gtweak/tweaks/tweak_group_mouse.py:13
+#: gtweak/tweaks/tweak_group_keyboard.py:183 gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Клавишни комбинации на Emacs"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:16
+#: gtweak/tweaks/tweak_group_keyboard.py:186 gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Да се използват клавишните комбинации на Emacs."
 
@@ -344,8 +326,7 @@ msgstr "Ляв Super"
 msgid "Right Super"
 msgstr "Десен Super"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:237
-#: gtweak/tweaks/tweak_group_keyboard.py:243
+#: gtweak/tweaks/tweak_group_keyboard.py:237 gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Допълнителни настройки на подредбата"
 
@@ -366,12 +347,8 @@ msgid "Disable Secondary Click"
 msgstr "Изключване на натискане на втория бутон"
 
 #: gtweak/tweaks/tweak_group_mouse.py:32
-msgid ""
-"Disables secondary clicks on touchpads which do not have a physical "
-"secondary button"
-msgstr ""
-"Изключва натискания на втория бутон при сензорни панели, които нямат "
-"физически бутон за натискане на втория бутон"
+msgid "Disables secondary clicks on touchpads which do not have a physical secondary button"
+msgstr "Изключва натискания на втория бутон при сензорни панели, които нямат физически бутон за натискане на втория бутон"
 
 #: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
@@ -390,12 +367,8 @@ msgid "Touchpad Acceleration"
 msgstr "Ускорeние на сензорния панел"
 
 #: gtweak/tweaks/tweak_group_mouse.py:88
-msgid ""
-"Turning acceleration off can allow faster and more precise movements, but "
-"can also make the touchpad more difficult to use."
-msgstr ""
-"Изключването на ускорението може да позволи по-бързи и по-прецизни движения, "
-"но също така може да затрудни използването на сензорния панел."
+msgid "Turning acceleration off can allow faster and more precise movements, but can also make the touchpad more difficult to use."
+msgstr "Изключването на ускорението може да позволи по-бързи и по-прецизни движения, но също така може да затрудни използването на сензорния панел."
 
 #: gtweak/tweaks/tweak_group_mouse.py:97
 msgid "Pointing Stick"
@@ -407,12 +380,8 @@ msgid "Pointing Stick Acceleration"
 msgstr "Ускорение на посочващото устройство"
 
 #: gtweak/tweaks/tweak_group_mouse.py:100
-msgid ""
-"Turning acceleration off can allow faster and more precise movements, but "
-"can also make the pointing stick more difficult to use."
-msgstr ""
-"Изключването на ускорението може да позволи по-бързи и по-прецизни движения, "
-"но също така може да затрудни използването на посочващото устройство."
+msgid "Turning acceleration off can allow faster and more precise movements, but can also make the pointing stick more difficult to use."
+msgstr "Изключването на ускорението може да позволи по-бързи и по-прецизни движения, но също така може да затрудни използването на посочващото устройство."
 
 #: gtweak/tweaks/tweak_group_mouse.py:104
 msgid "Scrolling Method"
@@ -453,8 +422,7 @@ msgstr "Премахване"
 
 #: gtweak/tweaks/tweak_group_startup.py:221
 msgid "Startup applications are automatically started when you log in."
-msgstr ""
-"Началните програми се стартират автоматично при влизането в графичната среда."
+msgstr "Началните програми се стартират автоматично при влизането в графичната среда."
 
 #: gtweak/tweaks/tweak_group_startup.py:258
 msgid "No Startup Applications"
@@ -464,13 +432,11 @@ msgstr "Няма начални програми"
 msgid "Add a startup application"
 msgstr "Добавяне на програма за стартиране"
 
-#: gtweak/tweaks/tweak_group_windows.py:13
-#: gtweak/tweaks/tweak_group_windows.py:159
+#: gtweak/tweaks/tweak_group_windows.py:13 gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Фокусиране на прозорци"
 
-#: gtweak/tweaks/tweak_group_windows.py:14
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:14 gtweak/tweaks/tweak_group_windows.py:18
 msgid "Click to Focus"
 msgstr "При натискане"
 
@@ -483,24 +449,16 @@ msgid "Focus on Hover"
 msgstr "Фокусиране при посочване"
 
 #: gtweak/tweaks/tweak_group_windows.py:25
-msgid ""
-"Window is focused when hovered with the pointer. Windows remain focused when "
-"the desktop is hovered."
-msgstr ""
-"Прозорците се фокусират при посочване с показалеца на мишката и остават така "
-"дори той да е върху работния плот."
+msgid "Window is focused when hovered with the pointer. Windows remain focused when the desktop is hovered."
+msgstr "Прозорците се фокусират при посочване с показалеца на мишката и остават така дори той да е върху работния плот."
 
 #: gtweak/tweaks/tweak_group_windows.py:28
 msgid "Focus Follows Mouse"
 msgstr "Фокусът следи мишката"
 
 #: gtweak/tweaks/tweak_group_windows.py:30
-msgid ""
-"Window is focused when hovered with the pointer. Hovering the desktop "
-"removes focus from the previous window."
-msgstr ""
-"Прозорците се фокусират при посочване с показалеца на мишката, но ако той е "
-"върху работния плот — фокусът се маха."
+msgid "Window is focused when hovered with the pointer. Hovering the desktop removes focus from the previous window."
+msgstr "Прозорците се фокусират при посочване с показалеца на мишката, но ако той е върху работния плот — фокусът се маха."
 
 #: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
@@ -555,12 +513,8 @@ msgid "Attach Modal Dialogs"
 msgstr "Прикрепени модални прозорци"
 
 #: gtweak/tweaks/tweak_group_windows.py:148
-msgid ""
-"When on, modal dialog windows are attached to their parent windows, and "
-"cannot be moved."
-msgstr ""
-"Модалните прозорци да са прикрепени към създалите ги прозорци и да не може "
-"да се мърдат."
+msgid "When on, modal dialog windows are attached to their parent windows, and cannot be moved."
+msgstr "Модалните прозорци да са прикрепени към създалите ги прозорци и да не може да се мърдат."
 
 #: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
