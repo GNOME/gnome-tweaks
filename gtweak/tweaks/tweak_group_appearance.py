@@ -13,7 +13,7 @@ from gi.repository import Gtk
 from gi.repository import GLib
 from gtweak.tweakmodel import Tweak
 
-from gtweak.utils import walk_directories, make_combo_list_with_default, extract_zip_file, get_resource_dirs
+from gtweak.utils import walk_directories, make_combo_list_with_default, extract_zip_file, get_resource_dirs, assert_zip_member_safe
 from gtweak.gshellwrapper import GnomeShellFactory
 from gtweak.gtksettings import GtkSettingsManager
 from gtweak.widgets import (TweakPreferencesPage, GSettingsTweakComboRow,TweakPreferencesGroup, GSettingsFileChooserButtonTweak, FileChooserButton, build_label_beside_widget)
@@ -188,13 +188,14 @@ class ShellThemeInstallerTweak(Gtk.Box, Tweak):
                     if n.endswith("gnome-shell/theme.json"):
                         logging.info("New style theme detected (theme.json)")
                         #new style theme - extract the name from the json file
-                        tmp = tempfile.mkdtemp()
-                        z.extract(n, tmp)
-                        with open(os.path.join(tmp,n)) as f:
-                            try:
-                                theme_name = json.load(f)["shell-theme"]["name"]
-                            except:
-                                logging.warning("Invalid theme format", exc_info=True)
+                        with tempfile.TemporaryDirectory() as tmp:
+                            assert_zip_member_safe(z.getinfo(n), tmp)
+                            z.extract(n, tmp)
+                            with open(os.path.join(tmp, n)) as f:
+                                try:
+                                    theme_name = json.load(f)["shell-theme"]["name"]
+                                except (ValueError, KeyError, TypeError):
+                                    logging.warning("Invalid theme format", exc_info=True)
 
                 if not fragment:
                     raise Exception("Could not find gnome-shell.css")

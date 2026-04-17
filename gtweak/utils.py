@@ -4,6 +4,7 @@
 
 import os.path
 import logging
+import stat
 import tempfile
 import shutil
 import subprocess
@@ -79,6 +80,30 @@ def walk_directories(dirs, filter_func):
     return valid
 
 
+def is_zip_symlink(member):
+    # Unix mode bits only live in external_attr when the entry was produced on
+    # a Unix-like system (create_system == 3). Windows-produced zips have no
+    # mode bits, so treat them as non-symlinks.
+    if member.create_system != 3:
+        return False
+    mode = (member.external_attr >> 16) & 0xFFFF
+    return stat.S_ISLNK(mode)
+
+
+def assert_zip_member_safe(member, dest_root):
+    if is_zip_symlink(member):
+        raise ValueError("Refusing symlink entry in zip: %r" % member.filename)
+    target = os.path.realpath(os.path.join(dest_root, member.filename))
+    root = os.path.realpath(dest_root)
+    try:
+        common = os.path.commonpath([target, root])
+    except ValueError as e:
+        # commonpath raises for mixed absolute/relative or different drives
+        raise ValueError("Zip entry escapes destination: %r" % member.filename) from e
+    if common != root:
+        raise ValueError("Zip entry escapes destination: %r" % member.filename)
+
+
 def extract_zip_file(z, members_path, dest):
     """ returns (true_if_extracted_ok, true_if_updated) """
     tmp = tempfile.mkdtemp()
@@ -87,14 +112,19 @@ def extract_zip_file(z, members_path, dest):
     ok = True
     updated = False
     try:
+        members = z.infolist()
+        for m in members:
+            assert_zip_member_safe(m, tmp)
         if os.path.exists(dest):
             shutil.rmtree(dest)
             updated = True
-        z.extractall(tmp)
-        shutil.copytree(tmpdest, dest)
-    except OSError:
+        z.extractall(tmp, members=members)
+        shutil.copytree(tmpdest, dest, symlinks=False)
+    except (OSError, ValueError):
         ok = False
         logging.warning("Error extracting zip", exc_info=True)
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
 
     if ok:
         logging.info("Extracted zip to %s, copied to %s" % (tmpdest, dest))
