@@ -11,46 +11,57 @@
 # Charles Monzat <charles.monzat@free.fr>, 2018-2019.
 # Irénée THIRION <irenee.thirion@e.email>, 2023.
 # Jean-Marc Tissières <jmetissieres@gmail.com>, 2024.
+# Julien Humbert <julroy67@gmail.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweaks.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-03-17 12:46+0000\n"
-"PO-Revision-Date: 2024-03-16 19:16+0100\n"
-"Last-Translator: Jean-Marc Tissières <jmetissieres@gmail.com>\n"
-"Language-Team: French - France <gnomefr@traduc.org>\n"
+"POT-Creation-Date: 2025-11-21 20:30+0000\n"
+"PO-Revision-Date: 2026-05-14 22:23+0900\n"
+"Last-Translator: Julien Humbert <julroy67@gmail.com>\n"
+"Language-Team: French <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-DL-Team: fr\n"
 "X-DL-Module: gnome-tweaks\n"
 "X-DL-Branch: master\n"
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
-"X-Generator: Gtranslator 45.3\n"
+"X-Generator: Gtranslator 50.0\n"
 
-#. developer_name tag deprecated with Appstream 1.0
-#: data/org.gnome.tweaks.appdata.xml.in:8
-msgid "The GNOME Project"
-msgstr "Le projet GNOME"
+#: data/org.gnome.tweaks.desktop.in:2 gtweak/tweakview.py:93
+#: gtweak/tweakview.py:129
+msgid "Tweaks"
+msgstr "Ajustements"
 
-#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
-#: gtweak/utils.py:348
-msgid "GNOME Tweaks"
-msgstr "Ajustements de GNOME"
-
-#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
+#: data/org.gnome.tweaks.desktop.in:3 data/org.gnome.tweaks.metainfo.xml.in:14
 msgid "Tweak advanced GNOME settings"
 msgstr "Ajuster les paramètres avancés de GNOME"
 
-#: data/org.gnome.tweaks.appdata.xml.in:16
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.tweaks.desktop.in:14
+msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+msgstr "paramètres;avancés;préférences;polices;thème;xkb;clavier;saisie;démarrage;"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.metainfo.xml.in:8
+msgid "The GNOME Project"
+msgstr "Le projet GNOME"
+
+#: data/org.gnome.tweaks.metainfo.xml.in:13 gtweak/app.py:52
+#: gtweak/utils.py:331 gtweak/utils.py:348
+msgid "GNOME Tweaks"
+msgstr "Ajustements de GNOME"
+
+#: data/org.gnome.tweaks.metainfo.xml.in:16
 msgid "GNOME Tweaks allows adjusting advanced GNOME options."
 msgstr "Ajustements de GNOME permet d’ajuster les options avancées de GNOME."
 
-#: data/org.gnome.tweaks.appdata.xml.in:19
+#: data/org.gnome.tweaks.metainfo.xml.in:19
 msgid ""
 "It can manage keyboard mapping customizations, add startup applications, and "
 "set custom window controls among other settings."
@@ -58,17 +69,6 @@ msgstr ""
 "Il peut gérer différentes dispositions du clavier, ajouter des applications "
 "au démarrage et définir des contrôles personnalisés des fenêtres, entre "
 "autres."
-
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
-#: gtweak/tweakview.py:129
-msgid "Tweaks"
-msgstr "Ajustements"
-
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.tweaks.desktop.in:14
-msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
-msgstr ""
-"paramètres;avancés;préférences;polices;thème;xkb;clavier;saisie;démarrage;"
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -82,7 +82,7 @@ msgstr "À _propos d’Ajustements"
 msgid "Fonts"
 msgstr "Polices"
 
-#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:234
+#: data/tweaks.ui:87 gtweak/tweaks/tweak_group_appearance.py:235
 msgid "Appearance"
 msgstr "Apparence"
 
@@ -130,30 +130,34 @@ msgstr ""
 "Il est recommandé de télécharger Extensions de GNOME depuis {0} si votre "
 "distribution ne l’inclut pas."
 
-#: gtweak/app.py:86
+#: gtweak/app.py:90
 msgid "Reset to Defaults"
 msgstr "Réinitialiser aux valeurs par défaut"
 
-#: gtweak/app.py:87
+#: gtweak/app.py:91
 msgid "Reset all tweaks settings to the original default state?"
 msgstr "Réinitialiser tous les ajustements aux valeurs par défaut ?"
 
-#: gtweak/app.py:99
+#: gtweak/app.py:100 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "Shell de GNOME"
 
-#: gtweak/app.py:99
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(mode %s)"
 
-#: gtweak/app.py:102
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "Le shell de GNOME n’est pas actif"
 
+#: gtweak/app.py:108
+msgid "GTK"
+msgstr "GTK"
+
 #. TRANSLATORS: Add your name/nickname here (one name per line),
 #. they will be displayed in the "about" dialog
-#: gtweak/app.py:118
+#: gtweak/app.py:122
 msgid "translator-credits"
 msgstr ""
 "Alain Lojewski <allomervan@gmail.com>\n"
@@ -207,34 +211,34 @@ msgstr "Impossible de lister les extensions du shell"
 msgid "Shell"
 msgstr "Shell"
 
-#: gtweak/tweaks/tweak_group_appearance.py:156
+#: gtweak/tweaks/tweak_group_appearance.py:157
 msgid "Adwaita (default)"
 msgstr "Adwaita (par défaut)"
 
-#: gtweak/tweaks/tweak_group_appearance.py:166
+#: gtweak/tweaks/tweak_group_appearance.py:167
 msgid "Select a theme"
 msgstr "Sélectionner un thème"
 
-#: gtweak/tweaks/tweak_group_appearance.py:218
+#: gtweak/tweaks/tweak_group_appearance.py:219
 #, python-format
 msgid "%s theme updated successfully"
 msgstr "Le thème %s a été mis à jour avec succès"
 
-#: gtweak/tweaks/tweak_group_appearance.py:220
+#: gtweak/tweaks/tweak_group_appearance.py:221
 #, python-format
 msgid "%s theme installed successfully"
 msgstr "Le thème %s a été installé avec succès"
 
-#: gtweak/tweaks/tweak_group_appearance.py:222
+#: gtweak/tweaks/tweak_group_appearance.py:223
 msgid "Error installing theme"
 msgstr "Erreur d’installation du thème"
 
 #. does not look like a valid theme
-#: gtweak/tweaks/tweak_group_appearance.py:227
+#: gtweak/tweaks/tweak_group_appearance.py:228
 msgid "Invalid theme"
 msgstr "Thème non valide"
 
-#: gtweak/tweaks/tweak_group_appearance.py:235
+#: gtweak/tweaks/tweak_group_appearance.py:236
 msgid "Styles"
 msgstr "Styles"
 
@@ -271,7 +275,7 @@ msgid "Slight"
 msgstr "Légère"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:422 gtweak/widgets.py:580 gtweak/widgets.py:609
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:613
 msgid "None"
 msgstr "Sans"
 
@@ -607,170 +611,3 @@ msgstr ""
 #: gtweak/utils.py:355
 msgid "Restart Session"
 msgstr "Redémarrer la session"
-
-#~ msgid "GTK"
-#~ msgstr "GTK"
-
-#~ msgid "Homepage"
-#~ msgstr "Page d’accueil"
-
-#~ msgid "General"
-#~ msgstr "Général"
-
-#~ msgid "Install custom or user themes for gnome-shell"
-#~ msgstr ""
-#~ "Installer des thèmes spéciaux ou personnalisés pour le shell de GNOME"
-
-#~ msgid "Shell user-theme extension incorrectly installed"
-#~ msgstr "L’extension shell du thème personnalisé a été mal installée"
-
-#~ msgid "Themes"
-#~ msgstr "Thèmes"
-
-#~ msgid "Image"
-#~ msgstr "Image"
-
-#~ msgid "Show Icons"
-#~ msgstr "Afficher les icônes"
-
-#~ msgid "Home"
-#~ msgstr "Accueil"
-
-#~ msgid "Desktop"
-#~ msgstr "Bureau"
-
-#~ msgid "Icons on Desktop"
-#~ msgstr "Icônes sur le bureau"
-
-#~ msgid "Network Servers"
-#~ msgstr "Serveurs réseaux"
-
-#~ msgid "Trash"
-#~ msgstr "Corbeille"
-
-#~ msgid "Mounted Volumes"
-#~ msgstr "Volumes montés"
-
-#~ msgid "Legacy Window Titles"
-#~ msgstr "Anciens titres de fenêtres"
-
-#~ msgid "Suspend when laptop lid is closed"
-#~ msgstr "Mettre en veille lorsque l’écran du portable est rabattu"
-
-#~ msgid "Over-Amplification"
-#~ msgstr "Sur-amplification"
-
-#~ msgid ""
-#~ "Allows raising the volume above 100%. This can result in a loss of audio "
-#~ "quality; it is better to increase application volume settings, if "
-#~ "possible."
-#~ msgstr ""
-#~ "Permet d’augmenter le volume au-dessus de 100 %. Cela peut entraîner une "
-#~ "baisse de qualité audio ; il est préférable d’augmenter le paramètre de "
-#~ "volume de l’application, si possible."
-
-#~ msgid "Mouse Click Emulation"
-#~ msgstr "Émulation du clic de souris"
-
-#~ msgid "Fingers"
-#~ msgstr "Doigts"
-
-#~ msgid ""
-#~ "Click the touchpad with two fingers for right-click and three fingers for "
-#~ "middle-click."
-#~ msgstr ""
-#~ "Cliquer sur le pavé tactile avec deux doigts pour un clic droit et trois "
-#~ "doigts pour un clic avec le bouton du milieu."
-
-#~ msgid "Area"
-#~ msgstr "Surface"
-
-#~ msgid ""
-#~ "Click the bottom right of the touchpad for right-click and the bottom "
-#~ "middle for middle-click."
-#~ msgstr ""
-#~ "Cliquer en bas à droite du pavé tactile pour un clic droit et en bas au "
-#~ "milieu pour un clic avec le bouton du milieu."
-
-#~ msgid "Don’t use mouse click emulation."
-#~ msgstr "Ne pas utiliser l’émulation du clic de souris."
-
-#~ msgid "Keyboard & Mouse"
-#~ msgstr "Clavier et souris"
-
-#~ msgid "Acceleration Profile"
-#~ msgstr "Profil d’accélération"
-
-#~ msgid "Pointer Location"
-#~ msgstr "Emplacement du pointeur"
-
-#~ msgid "Press the Ctrl key to highlight the pointer."
-#~ msgstr "Appuyez sur la touche Ctrl pour mettre en évidence le pointeur."
-
-#~ msgid "Disable While Typing"
-#~ msgstr "Désactiver pendant la saisie"
-
-#~ msgid "Applications"
-#~ msgstr "Applications"
-
-#~ msgid "<primary>f"
-#~ msgstr "<primary>f"
-
-#~ msgid "Add a new application to be run at startup"
-#~ msgstr "Ajouter une application qui se lance au démarrage"
-
-#~ msgid "Window Titlebars"
-#~ msgstr "Barre de titre des fenêtres"
-
-#~ msgid "Top Bar"
-#~ msgstr "Barre supérieure"
-
-#~ msgid "Clock"
-#~ msgstr "Horloge"
-
-#~ msgid "Weekday"
-#~ msgstr "Jour de semaine"
-
-#~ msgid "Date"
-#~ msgstr "Date"
-
-#~ msgid "Seconds"
-#~ msgstr "Secondes"
-
-#~ msgid "Calendar"
-#~ msgstr "Calendrier"
-
-#~ msgid "Week Numbers"
-#~ msgstr "Numéro des semaines"
-
-#~ msgid "Window scaling"
-#~ msgstr "Mise à l’échelle de la fenêtre"
-
-#~ msgid "Adjust GDK window scaling factor for HiDPI"
-#~ msgstr ""
-#~ "Ajuster le facteur de mise à l’échelle GDK pour les hautes densités de "
-#~ "pixels (HiDPI)"
-
-#, python-brace-format
-#~ msgid "Settings will be reverted in {0} second"
-#~ msgid_plural "Settings will be reverted in {0} seconds"
-#~ msgstr[0] "Les paramètres vont être annulés dans {0} seconde"
-#~ msgstr[1] "Les paramètres vont être annulés dans {0} secondes"
-
-#~ msgid "Do you want to keep these HiDPI settings?"
-#~ msgstr "Souhaitez-vous conserver ces paramètres haute densité ?"
-
-#~ msgid "Revert Settings"
-#~ msgstr "Annuler les paramètres"
-
-#~ msgid "Keep Changes"
-#~ msgstr "Conserver les changements"
-
-#~ msgid "HiDPI"
-#~ msgstr "Haute densité de pixels"
-
-#~ msgid "Device"
-#~ msgstr "Périphérique"
-
-#~ msgid "Wacom"
-#~ msgstr "Wacom"
