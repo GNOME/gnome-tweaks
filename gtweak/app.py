@@ -123,7 +123,7 @@ class GnomeTweaks(Adw.Application):
             developers=AUTHORS,
             transient_for=self.win,
             version=VERSION,
-            website="https://wiki.gnome.org/Apps/Tweaks",
+            website="https://gitlab.gnome.org/GNOME/gnome-tweaks",
             issue_url="https://gitlab.gnome.org/GNOME/gnome-tweaks/-/issues",
             license_type=Gtk.License.GPL_3_0
         )
