@@ -1,19 +1,19 @@
 # Portuguese translation for gnome-tweaks.
-# Copyright © 2011-2024 gnome-tweaks
+# Copyright © 2011-2026 gnome-tweaks
 # This file is distributed under the same license as the gnome-tweak-tool package.
 # Tiago Santos <tiagofsantos81@sapo.pt>, 2014 - 2016.
 # António Lima <amrlima@gmail.com>, 2011, 2012, 2013, 2015.
 # Sérgio Cardeira <cardeira dot sergio at gmail dot com>, 2016.
 # João Nuno Matos <joaonmatos@gmail.com>, 2019.
 # José Vieira <jvieira33@sapo.pt>, 2020.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2020, 2021, 2022, 2023, 2024.
+# Hugo Carvalho <hugokarvalho@hotmail.com>, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-tweak-tool master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-tweaks/issues\n"
-"POT-Creation-Date: 2024-09-21 23:58+0000\n"
-"PO-Revision-Date: 2024-10-29 19:37+0000\n"
+"POT-Creation-Date: 2026-10-08 11:19+0000\n"
+"PO-Revision-Date: 2026-11-18 22:09+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: https://l10n.gnome.org/teams/pt/\n"
 "Language: pt\n"
@@ -21,47 +21,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.9\n"
 "X-Project-Style: gnome\n"
 
-#. developer_name tag deprecated with Appstream 1.0
-#: data/org.gnome.tweaks.appdata.xml.in:8
-msgid "The GNOME Project"
-msgstr "O Projeto GNOME"
-
-#: data/org.gnome.tweaks.appdata.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
-#: gtweak/utils.py:348
-msgid "GNOME Tweaks"
-msgstr "Ajustes do GNOME"
-
-#: data/org.gnome.tweaks.appdata.xml.in:14 data/org.gnome.tweaks.desktop.in:4
-msgid "Tweak advanced GNOME settings"
-msgstr "Ajustar definições avançadas do GNOME"
-
-#: data/org.gnome.tweaks.appdata.xml.in:16
-msgid "GNOME Tweaks allows adjusting advanced GNOME options."
-msgstr "Os Ajustes do GNOME permitem-lhe ajustar opções avançadas do GNOME."
-
-#: data/org.gnome.tweaks.appdata.xml.in:19
-msgid ""
-"It can manage keyboard mapping customizations, add startup applications, and "
-"set custom window controls among other settings."
-msgstr ""
-"Pode gerir personalizações de mapeamento do teclado, adicionar aplicações de "
-"arranque e definir controlos de janela personalizados, entre outras "
-"definições."
-
-#: data/org.gnome.tweaks.desktop.in:3 gtweak/tweakview.py:93
-#: gtweak/tweakview.py:129
+#: data/org.gnome.tweaks.desktop.in:2 gtweak/tweakview.py:93 gtweak/tweakview.py:129
 msgid "Tweaks"
 msgstr "Ajustes"
+
+#: data/org.gnome.tweaks.desktop.in:3 data/org.gnome.tweaks.metainfo.xml.in:14
+msgid "Tweak advanced GNOME settings"
+msgstr "Ajustar definições avançadas do GNOME"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.tweaks.desktop.in:14
 msgid "Settings;Advanced;Preferences;Fonts;Theme;XKB;Keyboard;Typing;Startup;"
+msgstr "Definições;Avançadas;Preferências;Letras;Fontes;Tema;XKB;Teclado;Escrita;Arranque;"
+
+#. developer_name tag deprecated with Appstream 1.0
+#: data/org.gnome.tweaks.metainfo.xml.in:8 data/org.gnome.tweaks.metainfo.xml.in:10
+msgid "The GNOME Project"
+msgstr "O Projeto GNOME"
+
+#: data/org.gnome.tweaks.metainfo.xml.in:13 gtweak/app.py:52 gtweak/utils.py:331
+#: gtweak/utils.py:348
+msgid "GNOME Tweaks"
+msgstr "Ajustes do GNOME"
+
+#: data/org.gnome.tweaks.metainfo.xml.in:16
+msgid "GNOME Tweaks allows adjusting advanced GNOME options."
+msgstr "Os Ajustes do GNOME permitem-lhe ajustar opções avançadas do GNOME."
+
+#: data/org.gnome.tweaks.metainfo.xml.in:19
+msgid ""
+"It can manage keyboard mapping customizations, add startup applications, and set custom "
+"window controls among other settings."
 msgstr ""
-"Definições;Avançadas;Preferências;;Letras;Fontes;Tema;XKB;Teclado;Escrita;"
-"Arranque;"
+"Pode gerir personalizações de mapeamento do teclado, adicionar aplicações de arranque e "
+"definir controlos de janela personalizados, entre outras definições."
 
 #: data/shell.ui:6
 msgid "_Reset to Defaults"
@@ -117,37 +113,40 @@ msgstr "A gestão das extensões foi movida para {0}."
 #: gtweak/app.py:32
 #, python-brace-format
 msgid ""
-"We recommend downloading GNOME Extensions from {0} if your distribution does "
-"not include it."
+"We recommend downloading GNOME Extensions from {0} if your distribution does not include "
+"it."
 msgstr ""
-"Recomendamos que transfira Extensões GNOME a partir de {0} se a sua "
-"distribuição não o incluir."
+"Recomendamos que transfira Extensões GNOME a partir de {0} se a sua distribuição não o "
+"incluir."
 
-#: gtweak/app.py:86
+#: gtweak/app.py:90
 msgid "Reset to Defaults"
 msgstr "Repor predefinições"
 
-#: gtweak/app.py:87
+#: gtweak/app.py:91
 msgid "Reset all tweaks settings to the original default state?"
-msgstr ""
-"Repor todas as definições de ajustes para o estado predefinido original?"
+msgstr "Repor todas as definições de ajustes para o estado predefinido original?"
 
-#: gtweak/app.py:99
+#: gtweak/app.py:100 gtweak/app.py:103
 msgid "GNOME Shell"
 msgstr "A shell do GNOME não está em execução"
 
-#: gtweak/app.py:99
+#: gtweak/app.py:103
 #, python-format
 msgid "(%s mode)"
 msgstr "(modo %s)"
 
-#: gtweak/app.py:102
+#: gtweak/app.py:106
 msgid "GNOME Shell is not running"
 msgstr "A shell do GNOME não está em execução"
 
+#: gtweak/app.py:108
+msgid "GTK"
+msgstr "GTK"
+
 #. TRANSLATORS: Add your name/nickname here (one name per line),
 #. they will be displayed in the "about" dialog
-#: gtweak/app.py:118
+#: gtweak/app.py:122
 msgid "translator-credits"
 msgstr "Hugo Carvalho <hugokarvalho@hotmail.com>"
 
@@ -256,7 +255,7 @@ msgid "Slight"
 msgstr "Ligeira"
 
 #: gtweak/tweaks/tweak_group_font.py:21 gtweak/tweaks/tweak_group_font.py:34
-#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:612
+#: gtweak/widgets.py:425 gtweak/widgets.py:583 gtweak/widgets.py:613
 msgid "None"
 msgstr "Nenhuma"
 
@@ -308,13 +307,11 @@ msgstr "Predefinido"
 msgid "Typing"
 msgstr "Escrita"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:183
-#: gtweak/tweaks/tweak_group_mouse.py:13
+#: gtweak/tweaks/tweak_group_keyboard.py:183 gtweak/tweaks/tweak_group_mouse.py:13
 msgid "Emacs Input"
 msgstr "Entrada Emacs"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:186
-#: gtweak/tweaks/tweak_group_mouse.py:16
+#: gtweak/tweaks/tweak_group_keyboard.py:186 gtweak/tweaks/tweak_group_mouse.py:16
 msgid "Overrides shortcuts to use keybindings from the Emacs editor."
 msgstr "Ignora os atalhos de teclado para usar os atalhos do editor Emacs."
 
@@ -330,8 +327,7 @@ msgstr "Tecla Super esquerda"
 msgid "Right Super"
 msgstr "Tecla Super direita"
 
-#: gtweak/tweaks/tweak_group_keyboard.py:237
-#: gtweak/tweaks/tweak_group_keyboard.py:243
+#: gtweak/tweaks/tweak_group_keyboard.py:237 gtweak/tweaks/tweak_group_keyboard.py:243
 msgid "Additional Layout Options"
 msgstr "Opções de disposição adicionais"
 
@@ -353,11 +349,9 @@ msgstr "Desativar clique secundário"
 
 #: gtweak/tweaks/tweak_group_mouse.py:32
 msgid ""
-"Disables secondary clicks on touchpads which do not have a physical "
-"secondary button"
+"Disables secondary clicks on touchpads which do not have a physical secondary button"
 msgstr ""
-"Desativa os cliques secundários nos painéis táteis que não têm um botão "
-"secundário físico"
+"Desativa os cliques secundários nos painéis táteis que não têm um botão secundário físico"
 
 #: gtweak/tweaks/tweak_group_mouse.py:76
 msgid "Mouse"
@@ -377,11 +371,11 @@ msgstr "Aceleração do painel tátil"
 
 #: gtweak/tweaks/tweak_group_mouse.py:88
 msgid ""
-"Turning acceleration off can allow faster and more precise movements, but "
-"can also make the touchpad more difficult to use."
+"Turning acceleration off can allow faster and more precise movements, but can also make "
+"the touchpad more difficult to use."
 msgstr ""
-"Desativar a aceleração pode permitir movimentos mais rápidos e precisos, mas "
-"também pode tornar o painel tátil mais difícil de utilizar."
+"Desativar a aceleração pode permitir movimentos mais rápidos e precisos, mas também pode "
+"tornar o painel tátil mais difícil de utilizar."
 
 #: gtweak/tweaks/tweak_group_mouse.py:97
 msgid "Pointing Stick"
@@ -393,11 +387,11 @@ msgstr "Aceleração do manípulo apontador"
 
 #: gtweak/tweaks/tweak_group_mouse.py:100
 msgid ""
-"Turning acceleration off can allow faster and more precise movements, but "
-"can also make the pointing stick more difficult to use."
+"Turning acceleration off can allow faster and more precise movements, but can also make "
+"the pointing stick more difficult to use."
 msgstr ""
-"Desativar a aceleração pode permitir movimentos mais rápidos e precisos, mas "
-"também pode tornar o manípulo apontador mais difícil de utilizar."
+"Desativar a aceleração pode permitir movimentos mais rápidos e precisos, mas também pode "
+"tornar o manípulo apontador mais difícil de utilizar."
 
 #: gtweak/tweaks/tweak_group_mouse.py:104
 msgid "Scrolling Method"
@@ -438,8 +432,7 @@ msgstr "Remover"
 
 #: gtweak/tweaks/tweak_group_startup.py:221
 msgid "Startup applications are automatically started when you log in."
-msgstr ""
-"As aplicações de arranque iniciam automaticamente quando inicia sessão."
+msgstr "As aplicações de arranque iniciam automaticamente quando inicia sessão."
 
 #: gtweak/tweaks/tweak_group_startup.py:258
 msgid "No Startup Applications"
@@ -449,13 +442,11 @@ msgstr "Sem aplicações de arranque"
 msgid "Add a startup application"
 msgstr "Adicionar uma aplicação de arranque"
 
-#: gtweak/tweaks/tweak_group_windows.py:13
-#: gtweak/tweaks/tweak_group_windows.py:159
+#: gtweak/tweaks/tweak_group_windows.py:13 gtweak/tweaks/tweak_group_windows.py:159
 msgid "Window Focus"
 msgstr "Foco das Janelas"
 
-#: gtweak/tweaks/tweak_group_windows.py:14
-#: gtweak/tweaks/tweak_group_windows.py:18
+#: gtweak/tweaks/tweak_group_windows.py:14 gtweak/tweaks/tweak_group_windows.py:18
 msgid "Click to Focus"
 msgstr "Clicar para focar"
 
@@ -469,11 +460,11 @@ msgstr "Pairar para focar"
 
 #: gtweak/tweaks/tweak_group_windows.py:25
 msgid ""
-"Window is focused when hovered with the pointer. Windows remain focused when "
-"the desktop is hovered."
+"Window is focused when hovered with the pointer. Windows remain focused when the desktop "
+"is hovered."
 msgstr ""
-"As janelas são focadas quando o ponteiro passa por cima. Continuam focadas "
-"quando o ponteiro passa para o ambiente de trabalho."
+"As janelas são focadas quando o ponteiro passa por cima. Continuam focadas quando o "
+"ponteiro passa para o ambiente de trabalho."
 
 #: gtweak/tweaks/tweak_group_windows.py:28
 msgid "Focus Follows Mouse"
@@ -481,11 +472,11 @@ msgstr "O foco segue o rato"
 
 #: gtweak/tweaks/tweak_group_windows.py:30
 msgid ""
-"Window is focused when hovered with the pointer. Hovering the desktop "
-"removes focus from the previous window."
+"Window is focused when hovered with the pointer. Hovering the desktop removes focus from "
+"the previous window."
 msgstr ""
-"As janelas são focadas quando o ponteiro passa por cima. Quando o cursor "
-"passa para o ambiente de trabalho, a janela anterior perde o foco."
+"As janelas são focadas quando o ponteiro passa por cima. Quando o cursor passa para o "
+"ambiente de trabalho, a janela anterior perde o foco."
 
 #: gtweak/tweaks/tweak_group_windows.py:81
 msgid "Placement"
@@ -541,11 +532,10 @@ msgstr "Anexar diálogos modais"
 
 #: gtweak/tweaks/tweak_group_windows.py:148
 msgid ""
-"When on, modal dialog windows are attached to their parent windows, and "
-"cannot be moved."
+"When on, modal dialog windows are attached to their parent windows, and cannot be moved."
 msgstr ""
-"Quando ligado, as janelas de diálogo modal são anexadas às suas janelas-mãe "
-"e não podem ser movidas."
+"Quando ligado, as janelas de diálogo modal são anexadas às suas janelas-mãe e não podem "
+"ser movidas."
 
 #: gtweak/tweaks/tweak_group_windows.py:149
 msgid "Center New Windows"
@@ -592,9 +582,6 @@ msgstr "Reiniciar sessão"
 #~ msgid "Date & Time"
 #~ msgstr "Data e Hora"
 
-#~ msgid "GTK"
-#~ msgstr "GTK"
-
 #~ msgid "Homepage"
 #~ msgstr "Página principal"
 
@@ -635,21 +622,21 @@ msgstr "Reiniciar sessão"
 #~ msgstr "Dedos"
 
 #~ msgid ""
-#~ "Click the touchpad with two fingers for right-click and three fingers for "
-#~ "middle-click."
+#~ "Click the touchpad with two fingers for right-click and three fingers for middle-"
+#~ "click."
 #~ msgstr ""
-#~ "Clicar no painel tátil com dois dedos para emular o botão direito e com "
-#~ "três dedos para o botão do meio."
+#~ "Clicar no painel tátil com dois dedos para emular o botão direito e com três dedos "
+#~ "para o botão do meio."
 
 #~ msgid "Area"
 #~ msgstr "Área"
 
 #~ msgid ""
-#~ "Click the bottom right of the touchpad for right-click and the bottom "
-#~ "middle for middle-click."
+#~ "Click the bottom right of the touchpad for right-click and the bottom middle for "
+#~ "middle-click."
 #~ msgstr ""
-#~ "Clicar na parte inferior direita do painel tátil para emular o botão "
-#~ "direito, e no centro inferior para o botão do meio."
+#~ "Clicar na parte inferior direita do painel tátil para emular o botão direito, e no "
+#~ "centro inferior para o botão do meio."
 
 #~ msgid "Don’t use mouse click emulation."
 #~ msgstr "Não usar a emulação do clique do rato."
@@ -724,13 +711,12 @@ msgstr "Reiniciar sessão"
 #~ msgstr "Sobre-amplificação"
 
 #~ msgid ""
-#~ "Allows raising the volume above 100%. This can result in a loss of audio "
-#~ "quality; it is better to increase application volume settings, if "
-#~ "possible."
+#~ "Allows raising the volume above 100%. This can result in a loss of audio quality; it "
+#~ "is better to increase application volume settings, if possible."
 #~ msgstr ""
-#~ "Permite aumentar o volume para lá dos 100%. Isto pode resultar numa perda "
-#~ "da qualidade do áudio; é melhor aumentar o volume nas definições das "
-#~ "aplicações, se tal for possível."
+#~ "Permite aumentar o volume para lá dos 100%. Isto pode resultar numa perda da "
+#~ "qualidade do áudio; é melhor aumentar o volume nas definições das aplicações, se tal "
+#~ "for possível."
 
 #~ msgid "Keyboard & Mouse"
 #~ msgstr "Teclado e rato"
@@ -793,21 +779,19 @@ msgstr "Reiniciar sessão"
 #~ msgstr "Permitir a introdução de carateres adicionais."
 
 #~ msgid ""
-#~ "The compose key allows a wide variety of characters to be entered. To use "
-#~ "it, press the compose key and then a sequence of characters.\n"
+#~ "The compose key allows a wide variety of characters to be entered. To use it, press "
+#~ "the compose key and then a sequence of characters.\n"
 #~ "\n"
-#~ "Many unusual characters can be entered by combining standard ones. For "
-#~ "example, compose key followed by <b>C</b> and <b>o</b> will enter <b>©</"
-#~ "b>, <b>a</b> followed by <b>'</b> will enter <b>á</b>.\n"
+#~ "Many unusual characters can be entered by combining standard ones. For example, "
+#~ "compose key followed by <b>C</b> and <b>o</b> will enter <b>©</b>, <b>a</b> followed "
+#~ "by <b>'</b> will enter <b>á</b>.\n"
 #~ msgstr ""
-#~ "A tecla de composição permite a introdução de um vasto leque de "
-#~ "carateres. Para usá-la, prima a tecla de composição, e de seguida uma "
-#~ "sequência de carateres.\n"
+#~ "A tecla de composição permite a introdução de um vasto leque de carateres. Para usá-"
+#~ "la, prima a tecla de composição, e de seguida uma sequência de carateres.\n"
 #~ "\n"
-#~ "Muitos carateres incomuns podem ser introduzidos combinando carateres "
-#~ "padrão. Por exemplo, a tecla de composição, seguida de <b>C</b> e <b>o</"
-#~ "b>, introduz <b>©</b>, e, seguida por <b>a</b> e <b>'</b>, introduz <b>á</"
-#~ "b>.\n"
+#~ "Muitos carateres incomuns podem ser introduzidos combinando carateres padrão. Por "
+#~ "exemplo, a tecla de composição, seguida de <b>C</b> e <b>o</b>, introduz <b>©</b>, e, "
+#~ "seguida por <b>a</b> e <b>'</b>, introduz <b>á</b>.\n"
 
 #~ msgid "Activities Overview Hot Corner"
 #~ msgstr "Hot corner da Vista geral das Atividades"
@@ -820,18 +804,16 @@ msgstr "Reiniciar sessão"
 
 #~ msgid "When on, windows are tiled when dragged to screen edges."
 #~ msgstr ""
-#~ "Quando ligado, as janelas são dispostas num mosaico quando arrastadas "
-#~ "para os bordos do ecrã."
+#~ "Quando ligado, as janelas são dispostas num mosaico quando arrastadas para os bordos "
+#~ "do ecrã."
 
 #~ msgid "Dynamic Workspaces"
 #~ msgstr "Áreas de trabalho dinâmicas"
 
-#~ msgid ""
-#~ "Workspaces can be created on demand, and are automatically removed when "
-#~ "empty."
+#~ msgid "Workspaces can be created on demand, and are automatically removed when empty."
 #~ msgstr ""
-#~ "As áreas de trabalho podem ser criadas à vontade, e são removidas "
-#~ "automaticamente quando esvaziadas."
+#~ "As áreas de trabalho podem ser criadas à vontade, e são removidas automaticamente "
+#~ "quando esvaziadas."
 
 #~ msgid "Static Workspaces"
 #~ msgstr "Áreas de trabalho estáticas"
@@ -993,8 +975,7 @@ msgstr "Reiniciar sessão"
 #~ msgstr "Tema global escuro"
 
 #~ msgid "Applications need to be restarted for change to take effect"
-#~ msgstr ""
-#~ "As aplicações têm de ser reiniciadas para as alterações terem efeito"
+#~ msgstr "As aplicações têm de ser reiniciadas para as alterações terem efeito"
 
 #~ msgid "About GNOME Tweak Tool"
 #~ msgstr "Sobre a Ferramenta de ajuste do GNOME"
